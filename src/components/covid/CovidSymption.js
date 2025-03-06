@@ -47,7 +47,7 @@ const CovidSymption = () => {
               <div key={index} className=" mt-8">
                 <div className="flex  open-sans text-[16px] leading-relaxed font-normal">
                   <div>
-                    <Image
+                    <img
                       src={symptom?.img}
                       alt=""
                       className="rounded-full"
@@ -69,7 +69,7 @@ const CovidSymption = () => {
         </div>
 
         <div data-aos-duration="2000" data-aos="fade-left">
-          <Image
+          <img
             src={"/assets/Covid-19/gfx-b.png"}
             alt="COVID-19 Symptoms Graphic"
             style={{ width: "100%", height: "auto" }}

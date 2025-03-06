@@ -247,7 +247,7 @@ const personalPayService = () => {
               {/* banner start  */}
 
               <div className="lg:h-[500px] 2xl:h-[550px] overflow-hidden ">
-                <Image
+                <img
                   className=" h-fit w-full object-cover"
                   src={"/assets/PrivatePay/private-pay-cover.webp"}
                   alt={"cover-image"}

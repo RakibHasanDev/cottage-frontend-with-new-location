@@ -276,7 +276,7 @@ const hha = () => {
           data-aos="fade-down"
           data-aos-duration="2000"
         >
-          <Image
+          <img
             src={"/assets/hha.webp"}
             alt="HHA-BANNER"
             className="shadow-md md:h-[380px] "
@@ -332,7 +332,7 @@ const hha = () => {
           >
             <div>
               <div className="h-56 overflow-hidden">
-                <Image
+                <img
                   src={train?.img}
                   alt={`{train?.img}`}
                   className="h-full object-cover w-full"
@@ -370,7 +370,7 @@ const hha = () => {
           >
             <div>
               <div className="h-56 overflow-hidden">
-                <Image
+                <img
                   src={train?.img}
                   alt={`{train?.img}`}
                   className="h-full object-cover w-full"

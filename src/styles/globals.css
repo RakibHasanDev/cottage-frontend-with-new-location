@@ -2494,3 +2494,66 @@ button.slick-arrow.slick-prev::before {
 }
 
 /* upcoming css end  */
+
+/* blog css start  */
+
+.blog-cover {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.322) 0%,
+      rgba(0, 0, 0, 0.356) 100%
+    ),
+    url("/assets/Main Banner/blog_banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  background-position: center;
+}
+
+@media only screen and (max-width: 688px) {
+  .blog-cover {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.148) 0%,
+        rgba(0, 0, 0, 0.187) 100%
+      ),
+      url("/assets/Main Banner/mobile_blog_banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vh;
+    background-position: center;
+  }
+}
+
+.custom-zoom {
+  transition: transform 0.5s ease-out;
+}
+
+.custom-zoom:hover {
+  transform: scale(1.2);
+}
+
+.blog-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.blog-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0ed7e6;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.blog-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* blog css end */

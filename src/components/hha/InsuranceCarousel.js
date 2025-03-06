@@ -50,7 +50,7 @@ const InsuranceCarousel = () => {
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="outline-none focus:outline-none">
-            <Image
+            <img
               src={image}
               alt={`carousel-item-${index}`}
               className="w-full h-auto"
