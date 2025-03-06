@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import navLogo from "../../src/assets/vector-logo.png";
 import { ThemeContext, ThemeProvider } from "@/context/ThemeContext";
 import ToggleButton from "./shared/ToogleButton";
@@ -264,11 +264,11 @@ const NavBar = () => {
       transition-opacity duration-300 z-50"
                 >
                   {/* Community Outreach Links */}
-                  <Link href="/videos">
+                  {/* <Link href="/videos">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Video Gallery
                     </p>
-                  </Link>
+                  </Link> */}
 
                   <Link href="/pastEvent">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">

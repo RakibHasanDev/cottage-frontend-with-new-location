@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { IoIosArrowForward } from "react-icons/io";
 import { TbFileTypePdf } from "react-icons/tb";
 import { FaPlayCircle } from "react-icons/fa";
 import { RiArrowRightDoubleFill } from "react-icons/ri";

@@ -3,6 +3,7 @@ import callReader from "../../../src/assets/social-media-lottie/call.json";
 import { FaPlayCircle, FaRegCalendar } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import ModalBody from "../shared/ModalBody";
+import Image from "next/image";
 
 const optimizedImage = (url, width = 1080) =>
   url.replace("/upload/", `/upload/f_auto,q_auto,dpr_auto,w_${width}/`);

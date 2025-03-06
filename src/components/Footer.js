@@ -1,11 +1,11 @@
 import React from "react";
 import { FaFacebookF, FaTiktok } from "react-icons/fa";
 
-import footerLogo from "../assets/Cottage-Home.webp";
 import { BsTwitter, BsYoutube } from "react-icons/bs";
 import { GrInstagram } from "react-icons/gr";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -124,8 +124,8 @@ const Footer = () => {
                 className="flex justify-center space-x-3 lg:justify-start"
               >
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-xl border-2 border-[#00A6B2]">
-                  <img
-                    src={footerLogo}
+                  <Image
+                    src="/assets/Cottage-Home.webp"
                     alt="Cottage Home Care Services Logo"
                     className="p-2"
                     width="64"

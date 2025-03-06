@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
@@ -6,7 +7,7 @@ const AboutCovid = () => {
     <div className="my-16 lg:w-[80%] mx-auto" id="about-covid">
       <div className="grid lg:grid-cols-2 items-center gap-7">
         <div data-aos-duration="2000" data-aos="fade-right">
-          <img
+          <Image
             src={"/assets/Covid-19/gfx-a.png"}
             alt={"covid-banner"}
             className="h-96 md:h-[450px] md:ml-auto mr-10 hidden lg:block"

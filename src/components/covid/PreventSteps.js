@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { BsCheck } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
@@ -65,7 +66,7 @@ const PreventSteps = () => {
             >
               <div className="flex gap-4 items-center dark:text-gray-100  ">
                 <div className="relative w-24 md:w-fit ">
-                  <img
+                  <Image
                     src={right.img}
                     className="w-16 h-16 rounded-full border-2 border-[#00A6B2]  circle"
                     alt={right?.img}
@@ -93,7 +94,7 @@ const PreventSteps = () => {
             >
               <div className="flex gap-4 items-center dark:text-gray-100  ">
                 <div className="relative w-24 md:w-fit ">
-                  <img
+                  <Image
                     src={wrong?.img}
                     className="w-16 h-16 rounded-full border-2 border-[#00A6B2] circle"
                     alt={wrong?.img}

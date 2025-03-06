@@ -3,6 +3,7 @@
 import React, { useState, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { FaLocationDot } from "react-icons/fa6";
+import Image from "next/image";
 
 // ✅ Dynamically Import react-photo-view for Next.js Optimization
 const PhotoProvider = dynamic(

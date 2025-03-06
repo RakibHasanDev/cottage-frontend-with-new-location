@@ -3,10 +3,15 @@ import Layout from "@/components/Layout";
 import LoadingScreen from "@/components/shared/LoadingScreen";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
+
+  // Ensure QueryClient is created only once
+  const [queryClient] = useState(() => new QueryClient());
 
   useEffect(() => {
     const handleStart = () => setLoading(true);
@@ -24,9 +29,12 @@ export default function App({ Component, pageProps }) {
   }, [router]);
 
   return (
-    <Layout>
-      {loading && <LoadingScreen />}
-      <Component {...pageProps} />
-    </Layout>
+    <QueryClientProvider client={queryClient}>
+      <Layout>
+        <Toaster />
+        {loading && <LoadingScreen />}
+        <Component {...pageProps} />
+      </Layout>
+    </QueryClientProvider>
   );
 }

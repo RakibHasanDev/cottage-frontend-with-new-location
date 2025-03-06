@@ -3,6 +3,7 @@ import { FaHandHoldingMedical } from "react-icons/fa6";
 import { MdOutlinePersonalInjury } from "react-icons/md";
 import Link from "next/link";
 import LazyLoadVideo from "@/components/shared/LazyLoadVideo";
+import Image from "next/image";
 
 const Cdpap = () => {
   const consumer = [
@@ -284,7 +285,7 @@ const Cdpap = () => {
                   <div className="flex items-center">
                     <div className="bg-[#00A6B2] rounded-full h-[120px] w-[120px] flex justify-center items-center z-10 mx-auto">
                       <div className="flex justify-center rounded-full bg-white w-[100px] h-[100px] overflow-hidden">
-                        <img
+                        <Image
                           src={eligible?.img}
                           alt={eligible?.description}
                           className={`object-cover h-fit flex justify-center items-center p-2 ${

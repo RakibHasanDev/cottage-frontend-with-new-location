@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const InsuranceCarousel = () => {
   const images = [
@@ -49,7 +50,7 @@ const InsuranceCarousel = () => {
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="outline-none focus:outline-none">
-            <img
+            <Image
               src={image}
               alt={`carousel-item-${index}`}
               className="w-full h-auto"

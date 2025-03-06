@@ -8,6 +8,7 @@ import Link from "next/link";
 import HhaRequirement from "@/components/hha/HhaRequirement";
 import InsuranceCarousel from "@/components/hha/InsuranceCarousel";
 import Head from "next/head";
+import Image from "next/image";
 
 const hha = () => {
   const requirements = [
@@ -275,7 +276,7 @@ const hha = () => {
           data-aos="fade-down"
           data-aos-duration="2000"
         >
-          <img
+          <Image
             src={"/assets/hha.webp"}
             alt="HHA-BANNER"
             className="shadow-md md:h-[380px] "
@@ -331,7 +332,7 @@ const hha = () => {
           >
             <div>
               <div className="h-56 overflow-hidden">
-                <img
+                <Image
                   src={train?.img}
                   alt={`{train?.img}`}
                   className="h-full object-cover w-full"
@@ -369,7 +370,7 @@ const hha = () => {
           >
             <div>
               <div className="h-56 overflow-hidden">
-                <img
+                <Image
                   src={train?.img}
                   alt={`{train?.img}`}
                   className="h-full object-cover w-full"

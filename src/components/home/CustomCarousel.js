@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import SkeletonLoading from "../shared/SkeletonLoading";
-import NextImage from "next/image"; // Renamed import
 
 const optimizedImage = (url, width = 1920) =>
   url.replace("/upload/", `/upload/f_auto,q_auto,dpr_auto,w_${width}/`);

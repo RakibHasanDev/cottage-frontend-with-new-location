@@ -7,6 +7,7 @@ import OverlayLoading from "../shared/OverlayLoading";
 import toast from "react-hot-toast";
 
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 const MedicaidApply = () => {
   const Lottie = React.lazy(() => import("lottie-react"));

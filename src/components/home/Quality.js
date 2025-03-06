@@ -33,8 +33,7 @@ const Quality = () => {
         </h3>
         <hr className="border-[#00a6b2] border-t-2 w-12 mt-2 mb-8 mx-auto" />
         <h6 className="text-center md:text-2xl text-gray-700 px-4 md:px-0 league-spartan font-semibold dark:text-gray-100">
-          HHA/PCA, CDPAP, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK
-          CITY{" "}
+          HHA/PCA, CDPAP, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY{" "}
         </h6>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:w-[90%] w-[95%] mx-auto pb-14 pt-9 gap-7  ">
           {/* cdpap start  */}
@@ -57,7 +56,7 @@ const Quality = () => {
               <div className="pl-4 lg:pl-8 p-4">
                 {/* Icon */}
                 <div className="flex mb-2 lg:mb-4">
-                  <Image
+                  <img
                     src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733331148/cizbhlw9lwxwrgeub6dh.png"
                     alt="heart"
                     width={imageSize.width}
@@ -208,7 +207,7 @@ const Quality = () => {
               <div className="pl-4 lg:pl-8 p-4">
                 {/* Icon */}
                 <div className="flex mb-2 md:mb-4">
-                  <Image
+                  <img
                     src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733331399/umxyti4kgaszmnrf3ksg.png"
                     alt="heart"
                     width={imageSize.width}
@@ -360,7 +359,7 @@ const Quality = () => {
               <div className="pl-4 lg:pl-8 p4">
                 {/* Icon */}
                 <div className="flex mb-2 md:mb-4">
-                  <Image
+                  <img
                     src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733330846/reezaleumat1eptaefyz.png"
                     alt="heart"
                     width={imageSize.width}
@@ -512,7 +511,7 @@ const Quality = () => {
               <div className="pl-4 lg:pl-8 p-4">
                 {/* Icon */}
                 <div className="flex mb-2 md:mb-4">
-                  <Image
+                  <img
                     src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733330991/t7ibxztn9jaoqkzfc5z4.png"
                     alt="heart"
                     width={imageSize.width}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -47,7 +48,7 @@ const Banner = () => {
       </div>
 
       <div className=" " data-aos="fade-left" data-aos-duration="2000">
-        <img
+        <Image
           src={"/assets/Covid-19/header-b.png"}
           className="md:h-[30vh] lg:h-[75vh] mx-auto"
           alt={"hero-section"}
