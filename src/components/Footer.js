@@ -188,14 +188,14 @@ const Footer = () => {
                   </li>
 
                   <li style={{ listStyle: "none" }}>
-                    <a
-                      href="https://cottagehomecare.com/nhtd-services.html"
+                    <Link
+                      href="/nhtd"
                       rel="noopener noreferrer"
                       className="hover:text-[#00A6B2]"
                       title="Learn more about the NHTD Program at Cottage Home Care"
                     >
                       NHTD Program
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

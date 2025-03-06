@@ -87,6 +87,8 @@ const Team = () => {
     },
   });
 
+  console.log(employees);
+
   const employeesByDepartment = {};
   const employeesByOffice = {};
 
@@ -168,7 +170,7 @@ const Team = () => {
                               </PhotoProvider>
 
                               <Link
-                                href={`${employee?._id}`}
+                                href={`/team/${employee?._id}`}
                                 className="text-center font-semibold text-gray-500 pt-6 md:pt-9 text-sm md:text-lg hover:underline block"
                               >
                                 {employee?.name}
@@ -268,7 +270,7 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`${employeesByDepartment?.Administrator?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.Administrator?.[0]?._id}`}
                           className=" hover:underline text-center block font-semibold text-gray-500 pt-6 md:pt-7 lg:pt-9 text-[10px] md:text-lg"
                         >
                           {employeesByDepartment?.Administrator?.[0]?.name}
@@ -345,7 +347,7 @@ const Team = () => {
 
                               <div>
                                 <Link
-                                  href={`${employee?._id}`}
+                                  href={`/team/${employee?._id}`}
                                   className=" hover:underline text-center block font-semibold text-gray-500 pt-6 md:pt-7 lg:pt-9 text-[10px] md:text-lg"
                                 >
                                   {employee?.name}
@@ -439,7 +441,7 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`${employeesByDepartment?.OfficeManager?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.OfficeManager?.[0]?._id}`}
                           className=" hover:underline block text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                         >
                           {employeesByDepartment?.OfficeManager?.[0]?.name}
@@ -515,7 +517,7 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`${employeesByDepartment?.CdpapSuperVisor?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.CdpapSuperVisor?.[0]?._id}`}
                           className=" hover:underline block text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                         >
                           {employeesByDepartment?.CdpapSuperVisor?.[0]?.name}
@@ -591,7 +593,7 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`${employeesByDepartment?.AdminSuperVisor?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.AdminSuperVisor?.[0]?._id}`}
                           className="block hover:underline text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                         >
                           {employeesByDepartment?.AdminSuperVisor?.[0]?.name}
@@ -667,7 +669,7 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`${employeesByDepartment?.HHA_MANAGER?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.HHA_MANAGER?.[0]?._id}`}
                           className=" block hover:underline text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                         >
                           {employeesByDepartment?.HHA_MANAGER?.[0]?.name}
@@ -741,7 +743,7 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`${employeesByDepartment?.HrSuperVisor?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.HrSuperVisor?.[0]?._id}`}
                           className=" hover:underline block text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                         >
                           {employeesByDepartment?.HrSuperVisor?.[0]?.name}
@@ -820,7 +822,7 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`${employeesByDepartment?.BillingSuperVisor?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.BillingSuperVisor?.[0]?._id}`}
                           className="block hover:underline text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                         >
                           {employeesByDepartment?.BillingSuperVisor?.[0]?.name}
@@ -897,7 +899,7 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`${employeesByDepartment?.Administrative?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.Administrative?.[0]?._id}`}
                           className=" block hover:underline text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                         >
                           {employeesByDepartment?.Administrative?.[0]?.name}
@@ -1256,7 +1258,7 @@ const Team = () => {
                                 </PhotoProvider>
                                 <div>
                                   <Link
-                                    href={`${tm?._id}`}
+                                    href={`/team/${tm?._id}`}
                                     className="block hover:underline text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                                   >
                                     {tm?.name}
