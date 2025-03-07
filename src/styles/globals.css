@@ -2628,3 +2628,59 @@ button.slick-arrow.slick-prev::before {
 }
 
 /* blog card css end  */
+
+/* translate css start  */
+
+.goog-logo-link {
+  display: none !important;
+}
+.goog-te-gadget {
+  font-size: 0px !important;
+}
+.goog-logo-link,
+.goog-te-gadget span a {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: #00a6b2 !important;
+  display: flex !important;
+}
+
+.translated-ltr {
+  margin-top: -40px;
+}
+
+.dark .goog-te-combo {
+  background-color: #475569 !important;
+  outline: 2px solid white !important;
+  color: white !important;
+  padding: 2px !important;
+  border-radius: 3px !important;
+}
+.goog-te-combo {
+  outline: 2px solid #00a6b2 !important;
+  padding: 2px !important;
+  border-radius: 3px !important;
+}
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .goog-te-combo {
+    width: 140px !important;
+  }
+}
+
+@media only screen and (min-width: 1px) and (max-width: 999px) {
+  .goog-te-gadget {
+    color: #00a6b2 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* translate css end  */

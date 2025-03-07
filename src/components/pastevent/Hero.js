@@ -34,7 +34,7 @@ const Hero = () => {
 
             objectFit: "cover",
           }}
-          className="md:h-[82vh] h-[40vh]"
+          className="md:h-[83vh] h-[40vh]"
           w="100"
           h="100"
         />

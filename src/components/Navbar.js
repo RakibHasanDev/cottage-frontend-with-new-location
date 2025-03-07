@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import navLogo from "../../src/assets/vector-logo.png";
 import { ThemeContext, ThemeProvider } from "@/context/ThemeContext";
 import ToggleButton from "./shared/ToogleButton";
+import SideNav from "./nav/SideNav";
 
 const NavBar = () => {
   const [customShadow, setCustomShadow] = useState("shadow-none");
@@ -319,7 +320,7 @@ const NavBar = () => {
 
             <div className="lg:hidden">
               <div className="  transition duration-200 rounded focus:outline-none focus:shadow-outline z-50 absolute right-5 top-5 ">
-                {/* <SideNav /> */}
+                <SideNav />
               </div>
             </div>
           </div>

@@ -40,7 +40,7 @@ const CustomCarousel = () => {
     return <SkeletonLoading />;
   }
   return (
-    <div className="custom-wave-section h-[84vh] relative">
+    <div className="custom-wave-section h-[84.04vh] relative">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
@@ -48,7 +48,7 @@ const CustomCarousel = () => {
       >
         <path
           d="M0,224C480,400,960,150,1440,256L1440,320L0,320Z"
-          className="fill-white dark:fill-gray-600"
+          className="fill-white dark:fill-slate-600"
         ></path>
       </svg>
 

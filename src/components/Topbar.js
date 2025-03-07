@@ -1,8 +1,18 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { BsFacebook, BsFillTelephoneFill, BsInstagram } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 import { FaXTwitter } from "react-icons/fa6";
+import Loading from "./shared/Loading";
+import dynamic from "next/dynamic";
+
+const GoogleTranslate = dynamic(
+  () => import("@/components/nav/GoogleTranslate"),
+  {
+    suspense: true,
+    ssr: false,
+  }
+);
 
 const TopBar = () => {
   return (
@@ -93,11 +103,11 @@ const TopBar = () => {
           </div>
 
           {/* Lazy Load Google Translate */}
-          {/* <div className="md:w-[260px] w-[140px]">
-            <Suspense fallback={<Placeholder />}>
+          <div className="md:w-[260px] w-[140px]">
+            <Suspense fallback={<Loading />}>
               <GoogleTranslate />
             </Suspense>
-          </div> */}
+          </div>
         </div>
       </div>
       <hr className="border-0 h-[1px] bg-gray-200" />
