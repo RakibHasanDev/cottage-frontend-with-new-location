@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "react-photo-view/dist/react-photo-view.css";
 import Layout from "@/components/Layout";
 import LoadingScreen from "@/components/shared/LoadingScreen";
 import { useRouter } from "next/router";
