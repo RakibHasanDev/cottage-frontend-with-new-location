@@ -2557,3 +2557,74 @@ button.slick-arrow.slick-prev::before {
 }
 
 /* blog css end */
+
+/* blog card css start  */
+
+.play-btn3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #00a6b2;
+  color: #fff;
+  font-size: 40px;
+  z-index: 2;
+  border-radius: 100%;
+  position: relative;
+}
+.play-btn3:before {
+  content: "";
+  position: absolute;
+  border: 15px solid #fff;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom1 1.5s linear infinite;
+  opacity: 0;
+  z-index: 1;
+}
+.play-btn3:after {
+  content: "";
+  position: absolute;
+  border: 15px solid #fff;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  animation: bloom2 1.5s linear infinite;
+  opacity: 0;
+  animation-delay: 0.4s;
+  z-index: 1;
+}
+
+@keyframes bloom1 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes bloom2 {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.category-style:hover img {
+  background-color: white;
+  transition: background-color 0.5s ease;
+}
+
+/* blog card css end  */

@@ -121,7 +121,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://cottagehomecare.com/logo.png"
+          content="https://cottagehomecare.com/hero.webp"
         />
         <script
           type="application/ld+json"

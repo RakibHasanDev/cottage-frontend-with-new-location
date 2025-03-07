@@ -66,7 +66,7 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
         style={style}
         onMouseEnter={() => setStyle(cardStyle2)}
         onMouseLeave={() => setStyle(cardStyle)}
-        href={`/blog/${slug}`}
+        href={`/blog/${_id}`}
         className="block w-full bg-white dark:bg-slate-200 poppins relative group rounded-md"
       >
         {/* Image section */}
@@ -141,7 +141,7 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
         )} */}
 
         <div className="absolute top-[175px] left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-          <Link className="" href={`/blog/${slug}`}>
+          <Link className="" href={`/blog/${_id}`}>
             <button
               type="button"
               className=" rounded-full bg-[#00A6B2]  w-[55px] h-[55px] text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg flex justify-center items-center play-btn3"
