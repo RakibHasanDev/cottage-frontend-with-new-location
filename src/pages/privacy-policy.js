@@ -21,13 +21,16 @@ const PrivacyPolicy = () => {
               style={{ fontSize: 15 }}
             >
               This Privacy Notice for{" "}
-              <strong>Cottage Home Care Services, Inc</strong>
-              ("<strong>we</strong>", "<strong>us</strong>", or "
-              <strong>our</strong>"), describes how and why we might access,
-              collect, store, use, and/or share ("<strong>process</strong>")
-              your personal information when you use our services ("
-              <strong>Services</strong>"), including when you:
+              <strong>Cottage Home Care Services, Inc</strong>(
+              <strong>&quot;we&quot;</strong>, <strong>&quot;us&quot;</strong>,
+              or
+              <strong>&quot;our&quot;</strong>), describes how and why we might
+              access, collect, store, use, and/or share (
+              <strong>&quot;process&quot;</strong>) your personal information
+              when you use our services (<strong>&quot;Services&quot;</strong>),
+              including when you:
             </p>
+
             <ul>
               <li>
                 Visit our website at{" "}
@@ -50,8 +53,8 @@ const PrivacyPolicy = () => {
               By providing your phone number and checking the box to receive SMS
               messages, you are agreeing to receive informational or promotional
               text messages from Cottage Home Care Services. You can opt-out of
-              receiving SMS messages at any time by replying 'STOP' to any SMS
-              message. Standard messaging rates may apply.
+              receiving SMS messages at any time by replying &quot;STOP&quot; to
+              any SMS message. Standard messaging rates may apply.
             </p>
             <p>
               We take your privacy seriously, the privacy policy must state that

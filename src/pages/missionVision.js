@@ -24,8 +24,8 @@ const MissionVision = () => {
 
             <p className="text-justify mt-3 dark:text-gray-100">
               We strive to deliver individualized care plans tailored to each
-              patient's unique needs and preferences. We are also committed to
-              establishing lasting bonds of respect, confidence, and open
+              patient&apos;s unique needs and preferences. We are also committed
+              to establishing lasting bonds of respect, confidence, and open
               communication with our patients and their families.
             </p>
           </div>

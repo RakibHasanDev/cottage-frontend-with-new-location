@@ -182,10 +182,10 @@ const Values = () => {
                   Quality of life:
                 </h6>
                 <p className="text-sm text-gray-900 dark:text-gray-100">
-                  Cottage Home care services can improve an individual's quality
-                  of life by providing assistance with daily living activities,
-                  reducing isolation and loneliness, and improving overall
-                  well-being.
+                  Cottage Home care services can improve an individual&apos;s
+                  quality of life by providing assistance with daily living
+                  activities, reducing isolation and loneliness, and improving
+                  overall well-being.
                 </p>
               </div>
             </div>
