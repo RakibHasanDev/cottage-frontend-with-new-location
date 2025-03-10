@@ -2,6 +2,7 @@ import Head from "next/head";
 import React, { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
+import WeAre from "@/components/home/WeAre";
 
 // ✅ Import Components Dynamically
 const CustomCarousel = dynamic(
@@ -25,10 +26,10 @@ const Overwhelmed = dynamic(() => import("@/components/home/OverwHelmed"), {
   ssr: false, // ✅ Lazy-loaded for better performance
 });
 
-const WeAre = dynamic(() => import("@/components/home/WeAre"), {
-  suspense: true,
-  ssr: false,
-});
+// const WeAre = dynamic(() => import("@/components/home/WeAre"), {
+//   suspense: true,
+//   ssr: false,
+// });
 const Quality = dynamic(() => import("@/components/home/Quality"), {
   suspense: true,
   ssr: false,
@@ -66,33 +67,99 @@ export default function Home() {
   const title = "Cottage Home Care Services - NHTD, HHA & Private Pay in NYC";
   const description =
     "Cottage Home Care provides top-quality home care services in NYC, including NHTD, HHA, Private Pay, CDPAP, and senior care support. Contact us today!";
+  const keywords =
+    "Cottage, Cottage Care, Cottage Agency, Cottage Home Care, Cottage Home Care Services, NHTD Program, Home Health Aide NYC, Private Pay Home Care, Senior Care NYC, Medicaid Home Care, Nursing Home Transition, Diversion Services, Independent Living Support, HHA Certification, Personal Care Services, Home Care, Home Health Care, Home Care Services, Home Care Agencies, In-Home Care, Senior Home Care, Elderly Care Services, Non-Medical Home Care, Home Care Assistance, Home Care Providers, Home Care for Seniors";
 
-  // ✅ Structured Data for SEO
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Cottage Home Care Services",
-    url: "https://cottagehomecare.com",
-    logo: "https://cottagehomecare.com/logo.png",
-    description: description,
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+1516-367-2266",
-      contactType: "Customer Service",
-      areaServed: "US",
-      availableLanguage: ["English", "Spanish"],
+  // ✅ Optimized JSON-LD Structured Data
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Cottage Home Care Services",
+      url: "https://cottagehomecare.com",
+      logo: "https://cottagehomecare.com/logo.png",
+      description:
+        "Cottage Home Care Services provides NHTD, Home Health Aide, and Private Pay home care services in NYC, Nassau, and Suffolk, ensuring high-quality care for seniors and individuals transitioning from nursing homes.",
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1516-367-2266",
+        contactType: "Customer Service",
+        areaServed: "US",
+        availableLanguage: ["English", "Spanish"],
+      },
+      sameAs: [
+        "https://www.facebook.com/cottageHC",
+        "https://x.com/cottagecanery",
+        "https://www.linkedin.com/company/cottage-homecare/",
+      ],
     },
-    sameAs: [
-      "https://www.facebook.com/cottageHC",
-      "https://x.com/cottagecanery",
-      "https://www.linkedin.com/company/cottage-homecare/",
-    ],
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Home - Cottage Home Care Services",
+      url: "https://cottagehomecare.com",
+      description: description,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://cottagehomecare.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "NHTD",
+          item: "https://cottagehomecare.com/nhtd",
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is Cottage Home Care Services?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Cottage Home Care Services is a trusted provider of home care solutions in NYC, Nassau, and Suffolk, offering compassionate support through programs like NHTD, CDPAP, and Home Health Aide (HHA) services.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What home care services does Cottage Home Care provide?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Cottage Home Care Services offers NHTD, Home Health Aide (HHA), and Private Pay home care. We ensure high-quality, personalized care for seniors and individuals with disabilities, helping them live comfortably in their homes.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the NHTD program at Cottage Home Care?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The NHTD (Nursing Home Transition and Diversion) program by Cottage Home Care Services helps Medicaid-eligible seniors and individuals with disabilities transition from nursing homes to independent living, providing personalized care and support.",
+          },
+        },
+      ],
+    },
+  ];
 
-  // ✅ Preload Hero Section Image for Faster LCP
+  // ✅ Preload Hero Images for Improved LCP Performance
   const preloadLinks = [
     {
-      href: "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728479602/tyfxpgbtpv364idxhn4g.webp",
+      href: "https://res.cloudinary.com/dlw7u1u5p/image/upload/q_auto,f_auto,w_1920/v1728479602/tyfxpgbtpv364idxhn4g.webp",
+      as: "image",
+      type: "image/webp",
+      fetchPriority: "high",
+    },
+    {
+      href: "https://res.cloudinary.com/dlw7u1u5p/image/upload/q_auto,f_auto,w_720/v1728479674/pa2vvqc61tvi4ctyqed9.webp",
       as: "image",
       type: "image/webp",
       fetchPriority: "high",
@@ -108,37 +175,50 @@ export default function Home() {
   return (
     <>
       <Head>
+        {/* ✅ Basic Meta Tags */}
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta
-          name="keywords"
-          content="home care, CDPAP, HHA, NHTD, senior care, private pay, NYC home care"
-        />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content="Cottage Home Care Services" />
         <meta name="robots" content="index, follow" />
+
+        {/* ✅ Open Graph Meta Tags (Facebook, LinkedIn) */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://cottagehomecare.com" />
+        <meta property="og:url" content="https://cottagehomecare.com/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://cottagehomecare.com/hero.webp"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
 
-        {/* ✅ Preload Hero Image */}
+        {/* ✅ Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/hero.webp"
+        />
+        <meta name="twitter:site" content="@cottagecareny" />
+
+        {/* ✅ Preloading Images */}
         {preloadLinks.map((link, index) => (
           <link
             key={index}
             rel="preload"
-            as={link.as}
             href={link.href}
+            as={link.as}
             type={link.type}
             fetchPriority={link.fetchPriority}
           />
         ))}
+
+        {/* ✅ Structured Data (Schema.org JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </Head>
 
       <div className="dark:bg-slate-600">
@@ -155,9 +235,7 @@ export default function Home() {
           <Overwhelmed />
         </Suspense>
 
-        <Suspense fallback={<SkeletonLoading />}>
-          <WeAre />
-        </Suspense>
+        <WeAre />
 
         <Suspense fallback={<SkeletonLoading />}>
           <Quality />

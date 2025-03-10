@@ -86,6 +86,7 @@ const hha = () => {
   const keywords =
     "HHA, PCA, Home Health Aides, Personal Care Aides, senior care, bathing assistance, dressing assistance, meal preparation, feeding assistance, medication reminders, home care services, New York City, Nassau, Suffolk County, Westchester, Albany";
 
+  // ✅ JSON-LD Structured Data
   const schemaData = [
     {
       "@context": "https://schema.org",
@@ -106,12 +107,6 @@ const hha = () => {
         {
           "@type": "ListItem",
           position: 3,
-          name: "NHTD",
-          item: "https://cottagehomecare.com/nhtd",
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
           name: "HHA/PCA",
           item: "https://cottagehomecare.com/hha",
         },
@@ -178,236 +173,259 @@ const hha = () => {
     },
   ];
 
+  // ✅ Preload Hero Images for Better LCP
+  const preloadLinks = [
+    {
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_1920/v1739904083/hha-hero.webp",
+      fetchPriority: "high",
+      type: "image/webp",
+    },
+    {
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_1080/v1739904168/hha-mobile.webp",
+      fetchPriority: "high",
+      type: "image/webp",
+      media: "(max-width: 688px)",
+    },
+  ];
+
   return (
-    <div className="min-h-screen dark:bg-slate-600">
+    <>
       <Head>
-        {/* Meta Tags */}
+        {/* ✅ Basic SEO Meta Tags */}
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        <meta name="author" content="Cottage Home Care Services" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://cottagehomecare.com/hha" />
 
-        {/* Open Graph for Social Media */}
-        <meta property="og:type" content="website" />
+        {/* ✅ Open Graph Meta Tags (For Facebook & LinkedIn) */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://cottagehomecare.com/hha" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://cottagehomecare.com/logo.png"
+          content="https://cottagehomecare.com/assets/hha.webp"
         />
-        <meta property="og:site_name" content="Cottage Home Care Services" />
 
-        {/* Twitter Card */}
+        {/* ✅ Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://cottagehomecare.com/logo.png"
+          content="https://cottagehomecare.com/assets/hha.webp"
         />
-        <meta name="twitter:site" content="@cottagehomecare" />
 
-        {/* ✅ JSON-LD Structured Data */}
+        {/* ✅ Preloading Hero Images for Faster Load */}
+        {preloadLinks.map((link, index) => (
+          <link
+            key={index}
+            rel="preload"
+            href={link.href}
+            as="image"
+            type={link.type}
+          />
+        ))}
+
+        {/* ✅ Structured Data (Schema.org JSON-LD) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </Head>
-      <div className="singleService-banner min-h-[40vh]">
-        <h1 className="ml-5 md:ml-0  text-center text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[15vh] mb-5 font-bold text-shadow league-spartan">
-          HHA / PCA
-        </h1>
-        <div className="flex justify-center pl-5 my-2">
-          <Link
-            href="/contacts"
-            className="cursor-pointer  md:text-lg font-medium md:font-semibold px-2.5 py-1.5 md:px-4  border-b-4 border-r-4 border-white md:py-3 bg-[#00A6B2] text-white shadow-md rounded-md text-base  league-spartan"
-          >
-            Contact Us
-          </Link>
+
+      <main className="min-h-screen dark:bg-slate-600">
+        <div className="singleService-banner min-h-[40vh]">
+          <h1 className="ml-5 md:ml-0  text-center text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[15vh] mb-5 font-bold text-shadow league-spartan">
+            HHA / PCA
+          </h1>
+          <div className="flex justify-center pl-5 my-2">
+            <Link
+              href="/contacts"
+              className="cursor-pointer  md:text-lg font-medium md:font-semibold px-2.5 py-1.5 md:px-4  border-b-4 border-r-4 border-white md:py-3 bg-[#00A6B2] text-white shadow-md rounded-md text-base  league-spartan"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
-      </div>
 
-      {/* new section start "Eligible for hha/pca"  */}
+        {/* new section start "Eligible for hha/pca"  */}
 
-      <div className="w-[95%]  lg:w-[70%] mx-auto">
-        <h1 className="text-center mt-4  text-2xl md:text-2xl  2xl:text-4xl font-bold dark:text-gray-100 league-spartan text-[#00A6B2]">
-          Requirements to be eligible for HHA/PCA Program
+        <div className="w-[95%]  lg:w-[70%] mx-auto">
+          <h1 className="text-center mt-4  text-2xl md:text-2xl  2xl:text-4xl font-bold dark:text-gray-100 league-spartan text-[#00A6B2]">
+            Requirements to be eligible for HHA/PCA Program
+          </h1>
+          <div className="flex justify-center ">
+            <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
+          </div>
+
+          <p className="text-justify lg:text-center md:text-xl text-base auto-hyphen mt-2 md:mt-3 dark:text-gray-100 open-sans">
+            To be eligible for Home Health Aide (HHA) or Personal Care Aide
+            (PCA) services as a patient, certain criteria typically need to be
+            met. Keep in mind that eligibility requirements can vary based on
+            the specific program, location, and healthcare policies. Here are
+            common eligibility criteria:
+          </p>
+        </div>
+
+        {/* grid system start  */}
+
+        <div
+          className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-7 w-[95%] md:w-[80%] mx-auto md:py-10 py-3 items-center"
+          id="hha-pca"
+        >
+          <div data-aos="fade-up" data-aos-duration="2000">
+            {requirements?.map((req, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-2 my-4 bg-[#00A6B2] px-3 py-2 shadow-md text-white rounded-md open-sans"
+              >
+                <p className="md:text-2xl text-lg">{req?.icon}</p>
+
+                <div className="w-[95%] mx-auto ">
+                  <p className="text-lg font-semibold">{req?.title}:</p>
+
+                  <p className="mt-1 md:text-lg">{req?.des}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div
+            className="lg:order-none order-first"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+          >
+            <img
+              src={"/assets/hha.webp"}
+              alt="HHA-BANNER"
+              className="shadow-md md:h-[380px] "
+              w="380"
+              h="380"
+            />
+          </div>
+        </div>
+
+        {/* grid system end */}
+
+        {/* new section end "Eligible for hha/pca"  */}
+
+        {/* Aid train section start  */}
+
+        {/* hha application requirement */}
+
+        <HhaRequirement></HhaRequirement>
+
+        {/* close hha application requirement  */}
+
+        <div className="w-[80%] mx-auto py-5">
+          <h1 className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
+            How the aides are trained and Examined
+          </h1>
+
+          <div className="flex justify-center ">
+            <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
+          </div>
+
+          <p className=" text-justify auto-hyphen md:text-center my-5 text-base md:text-xl  md:w-[70%] mx-auto dark:text-gray-100 open-sans">
+            The training and vetting processes for HHAs may vary by location and
+            employer, but there are common practices in place. Here&apos;s a
+            general overview:
+          </p>
+        </div>
+
+        <h1 className="text-center league-spartan text-xl md:text-3xl dark:text-gray-100 font-semibold">
+          {" "}
+          Training Process
         </h1>
         <div className="flex justify-center ">
           <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
         </div>
 
-        <p className="text-justify lg:text-center md:text-xl text-base auto-hyphen mt-2 md:mt-3 dark:text-gray-100 open-sans">
-          To be eligible for Home Health Aide (HHA) or Personal Care Aide (PCA)
-          services as a patient, certain criteria typically need to be met. Keep
-          in mind that eligibility requirements can vary based on the specific
-          program, location, and healthcare policies. Here are common
-          eligibility criteria:
-        </p>
-      </div>
-
-      {/* grid system start  */}
-
-      <div
-        className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-7 w-[95%] md:w-[80%] mx-auto md:py-10 py-3 items-center"
-        id="hha-pca"
-      >
-        <div data-aos="fade-up" data-aos-duration="2000">
-          {requirements?.map((req, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 py-8 w-[95%] lg:w-[75%] mx-auto gap-7">
+          {training?.map((train, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 my-4 bg-[#00A6B2] px-3 py-2 shadow-md text-white rounded-md open-sans"
+              className="shadow-md dark:border-[1px] dark:border-white"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
             >
-              <p className="md:text-2xl text-lg">{req?.icon}</p>
+              <div>
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={train?.img}
+                    alt={`{train?.img}`}
+                    className="h-full object-cover w-full"
+                    w="100"
+                    h="100"
+                  />
+                </div>
+                <div className="px-2 pb-3">
+                  <h3 className="text-xl my-1 font-medium dark:text-gray-100">
+                    {train?.title}
+                  </h3>
+                  <p className="text-justify auto-hyphen dark:text-gray-100">
+                    {train?.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <h1 className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
+          {" "}
+          Examining and Screening{" "}
+        </h1>
+        <div className="flex justify-center ">
+          <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
+        </div>
 
-              <div className="w-[95%] mx-auto ">
-                <p className="text-lg font-semibold">{req?.title}:</p>
-
-                <p className="mt-1 md:text-lg">{req?.des}</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 py-8 w-[95%] lg:w-[75%] mx-auto gap-7">
+          {vetting?.map((train, index) => (
+            <div
+              key={index}
+              className="shadow-md dark:border-[1px] dark:border-white"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              <div>
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={train?.img}
+                    alt={`{train?.img}`}
+                    className="h-full object-cover w-full"
+                    w="100"
+                    h="100"
+                  />
+                </div>
+                <div className="px-2 pb-3">
+                  <h3 className="text-xl my-1 font-medium dark:text-gray-100 league-spartan ">
+                    {train?.title}
+                  </h3>
+                  <p className="text-justify auto-hyphen dark:text-gray-100 open-sans text-[16px] leading-relaxed open-sans font-normal">
+                    {train?.des}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div
-          className="lg:order-none order-first"
-          data-aos="fade-down"
-          data-aos-duration="2000"
-        >
-          <img
-            src={"/assets/hha.webp"}
-            alt="HHA-BANNER"
-            className="shadow-md md:h-[380px] "
-            w="380"
-            h="380"
-          />
-        </div>
-      </div>
+        {/* insurance we work with start  */}
 
-      {/* grid system end */}
-
-      {/* new section end "Eligible for hha/pca"  */}
-
-      {/* Aid train section start  */}
-
-      {/* hha application requirement */}
-
-      <HhaRequirement></HhaRequirement>
-
-      {/* close hha application requirement  */}
-
-      <div className="w-[80%] mx-auto py-5">
-        <h1 className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
-          How the aides are trained and Examined
-        </h1>
-
-        <div className="flex justify-center ">
-          <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
-        </div>
-
-        <p className=" text-justify auto-hyphen md:text-center my-5 text-base md:text-xl  md:w-[70%] mx-auto dark:text-gray-100 open-sans">
-          The training and vetting processes for HHAs may vary by location and
-          employer, but there are common practices in place. Here&apos;s a
-          general overview:
-        </p>
-      </div>
-
-      <h1 className="text-center league-spartan text-xl md:text-3xl dark:text-gray-100 font-semibold">
-        {" "}
-        Training Process
-      </h1>
-      <div className="flex justify-center ">
-        <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 py-8 w-[95%] lg:w-[75%] mx-auto gap-7">
-        {training?.map((train, index) => (
-          <div
-            key={index}
-            className="shadow-md dark:border-[1px] dark:border-white"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-          >
-            <div>
-              <div className="h-56 overflow-hidden">
-                <img
-                  src={train?.img}
-                  alt={`{train?.img}`}
-                  className="h-full object-cover w-full"
-                  w="100"
-                  h="100"
-                />
-              </div>
-              <div className="px-2 pb-3">
-                <h3 className="text-xl my-1 font-medium dark:text-gray-100">
-                  {train?.title}
-                </h3>
-                <p className="text-justify auto-hyphen dark:text-gray-100">
-                  {train?.description}
-                </p>
-              </div>
-            </div>
+        <div className="w-[80%] md:w-[85%] lg:w-[90%] mx-auto py-5">
+          <h1 className="text-center text-xl  md:text-xl lg:text-2xl xl:text-4xl dark:text-gray-100 league-spartan font-bold text-[#00A6B2]">
+            Insurance We Work With For HHA/PCA
+          </h1>
+          <div className="flex justify-center ">
+            <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
           </div>
-        ))}
-      </div>
-      <h1 className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
-        {" "}
-        Examining and Screening{" "}
-      </h1>
-      <div className="flex justify-center ">
-        <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
-      </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 py-8 w-[95%] lg:w-[75%] mx-auto gap-7">
-        {vetting?.map((train, index) => (
-          <div
-            key={index}
-            className="shadow-md dark:border-[1px] dark:border-white"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-          >
-            <div>
-              <div className="h-56 overflow-hidden">
-                <img
-                  src={train?.img}
-                  alt={`{train?.img}`}
-                  className="h-full object-cover w-full"
-                  w="100"
-                  h="100"
-                />
-              </div>
-              <div className="px-2 pb-3">
-                <h3 className="text-xl my-1 font-medium dark:text-gray-100 league-spartan ">
-                  {train?.title}
-                </h3>
-                <p className="text-justify auto-hyphen dark:text-gray-100 open-sans text-[16px] leading-relaxed open-sans font-normal">
-                  {train?.des}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* insurance we work with start  */}
-
-      <div className="w-[80%] md:w-[85%] lg:w-[90%] mx-auto py-5">
-        <h1 className="text-center text-xl  md:text-xl lg:text-2xl xl:text-4xl dark:text-gray-100 league-spartan font-bold text-[#00A6B2]">
-          Insurance We Work With For HHA/PCA
-        </h1>
-        <div className="flex justify-center ">
-          <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
+          <InsuranceCarousel />
         </div>
-
-        <InsuranceCarousel />
-      </div>
-
-      {/* insurance we work with end  */}
-
-      {/* <Chat /> */}
-    </div>
+      </main>
+    </>
   );
 };
 

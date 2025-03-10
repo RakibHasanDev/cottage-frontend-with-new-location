@@ -161,7 +161,7 @@ const schemaData = [
 
 const Resources = () => {
   return (
-    <div>
+    <div className="dark:bg-slate-600 min-h-screen">
       <Head>
         <title>Resources - Cottage Home Care Services</title>
         <meta

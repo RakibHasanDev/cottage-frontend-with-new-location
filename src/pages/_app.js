@@ -3,18 +3,46 @@ import "react-photo-view/dist/react-photo-view.css";
 import Layout from "@/components/Layout";
 import LoadingScreen from "@/components/shared/LoadingScreen";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import dynamic from "next/dynamic";
+import Script from "next/script";
+
+// ✅ Lazy Load TawkTo for better performance
+const TawkTo = dynamic(() => import("@/components/shared/TawkTo"), {
+  suspense: true,
+  ssr: false,
+});
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
-  // Ensure QueryClient is created only once
+  // ✅ Ensure QueryClient is created only once
   const [queryClient] = useState(() => new QueryClient());
 
   useEffect(() => {
+    // ✅ Initialize AOS for animations
+    AOS.init();
+    AOS.refresh();
+
+    // ✅ Track session-based API call (only once per session)
+    const localCount = sessionStorage.getItem("count");
+    if (!localCount) {
+      fetch("https://cottage-backend-voilerplate.vercel.app/count", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ count: 1 }),
+      })
+        .then((res) => res.json())
+        .then(() => sessionStorage.setItem("count", "true"))
+        .catch((err) => console.error("API Error:", err));
+    }
+
+    // ✅ Page Loading Animation Setup
     const handleStart = () => setLoading(true);
     const handleStop = () => setLoading(false);
 
@@ -31,9 +59,31 @@ export default function App({ Component, pageProps }) {
 
   return (
     <QueryClientProvider client={queryClient}>
+      {/* ✅ Google Analytics with Delayed Execution */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-X3W2KFKTS2"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          setTimeout(() => {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag("js", new Date());
+            gtag("config", "G-X3W2KFKTS2", { send_page_view: false });
+          }, 3000); // ✅ Delayed by 3 seconds for better performance
+        `}
+      </Script>
+
       <Layout>
         <Toaster />
         {loading && <LoadingScreen />}
+
+        {/* ✅ Lazy Load Live Chat Widget */}
+        <Suspense fallback={null}>
+          <TawkTo />
+        </Suspense>
+
         <Component {...pageProps} />
       </Layout>
     </QueryClientProvider>
