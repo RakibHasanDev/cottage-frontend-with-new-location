@@ -184,7 +184,7 @@ const SideNav = () => {
           {services?.map((item) => (
             <li
               key={item.id}
-              className={`py-1 shadow-lg list-none ${
+              className={`py-1  list-none ${
                 tab === item.id
                   ? "bg-[#435670f5] px-4 -ml-4 -mr-4"
                   : "bg-transparent"
@@ -195,7 +195,7 @@ const SideNav = () => {
                 className="w-full focus:outline-none flex justify-between items-center "
               >
                 <div className="flex items-center gap-3">
-                  <MdOutlineMedicalServices className="text-xl flex-shrink-0" />
+                  <MdOutlineMedicalServices className="text-base flex-shrink-0" />
                   <span className="uppercase font-medium tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
                     {item?.question}
                   </span>
@@ -242,7 +242,7 @@ const SideNav = () => {
           {community?.map((item) => (
             <li
               key={item.id}
-              className={`py-1 shadow-lg list-none ${
+              className={`py-1  list-none ${
                 tab === item.id
                   ? "bg-[#435670f5] px-4 -ml-4 -mr-4"
                   : "bg-transparent"
@@ -253,7 +253,7 @@ const SideNav = () => {
                 className="w-full flex justify-between items-center  focus:outline-none"
               >
                 <div className="flex items-center gap-3">
-                  <RiCommunityFill className="text-xl flex-shrink-0" />
+                  <RiCommunityFill className="text-base flex-shrink-0" />
                   <span className="uppercase font-medium tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
                     {item?.question}
                   </span>

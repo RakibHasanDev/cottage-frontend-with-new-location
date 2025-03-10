@@ -150,7 +150,7 @@ const Contacts = () => {
         />
         <meta
           property="og:image"
-          content="https://cottagehomecare.com/logo.png"
+          content="https://cottagehomecare.com/hero.webp"
         />
 
         {/* ✅ Twitter Meta Tags */}

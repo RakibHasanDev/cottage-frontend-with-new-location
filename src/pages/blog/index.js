@@ -4,6 +4,7 @@ import OverlayLoading from "@/components/shared/OverlayLoading";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
 import dynamic from "next/dynamic";
 import SpinerLoading from "@/components/shared/SpinerLoading";
+import Head from "next/head";
 
 const HeroSection = dynamic(() => import("@/components/Blog/Herosection"), {
   suspense: true,
@@ -70,52 +71,66 @@ const Blog = () => {
   };
 
   return (
-    <div className="min-h-screen dark:bg-slate-500">
-      <Suspense fallback={<SkeletonLoading />}>
-        <HeroSection />
-      </Suspense>
+    <>
+      <Head>
+        <title>Blog - Cottage Home Care Services</title>
+        <meta
+          name="description"
+          content="Stay informed with the latest news, trends, and insights in the home care industry through our Cottage Home Care blog. Explore expert tips on caregiving, health and wellness, and senior care, along with success stories from our team and clients. Our blog is your go-to resource for understanding the importance of compassionate home care and staying connected to industry developments."
+        />
+        <meta
+          name="keywords"
+          content="home care blog, caregiving tips, senior care insights, health and wellness blog, Cottage Home Care news, home care industry updates, caregiver resources, home care trends, compassionate care stories, Cottage Home Care blog articles"
+        />
+      </Head>
 
-      {queryLoading ? (
-        <div className="py-5">
-          <SpinerLoading />
-        </div>
-      ) : (
-        <div>
-          <div className="grid grid-cols-5 ">
-            <div className="lg:col-span-3 col-span-full relative">
-              <Suspense fallback={<SkeletonLoading />}>
-                <AllBlog
-                  blogs={blogs}
-                  //   isAdmin={isAdmin}
-                  //   isEditor={isEditor}
-                  refetch={refetch}
-                  handleSearch={handleSearch}
-                  loading={loading}
-                  searchTerm={searchTerm}
-                  pages={pages}
-                  page={page}
-                  size={size}
-                  setSize={setSize}
-                  setPage={setPage}
-                  handleButtonClick={handleButtonClick}
-                />
-              </Suspense>
-            </div>
+      <main className="min-h-screen dark:bg-slate-500">
+        <Suspense fallback={<SkeletonLoading />}>
+          <HeroSection />
+        </Suspense>
 
-            <div className="bg-[#EBF5F5] dark:bg-slate-600 lg:col-span-2 col-span-full pb-20">
-              <Suspense fallback={<SkeletonLoading />}>
-                <Categories
-                  blogs={blogs}
-                  handleSearch={handleSearch}
-                  loading={loading}
-                  handleButtonClick={handleButtonClick}
-                />
-              </Suspense>
+        {queryLoading ? (
+          <div className="py-5">
+            <SpinerLoading />
+          </div>
+        ) : (
+          <div>
+            <div className="grid grid-cols-5 ">
+              <div className="lg:col-span-3 col-span-full relative">
+                <Suspense fallback={<SkeletonLoading />}>
+                  <AllBlog
+                    blogs={blogs}
+                    //   isAdmin={isAdmin}
+                    //   isEditor={isEditor}
+                    refetch={refetch}
+                    handleSearch={handleSearch}
+                    loading={loading}
+                    searchTerm={searchTerm}
+                    pages={pages}
+                    page={page}
+                    size={size}
+                    setSize={setSize}
+                    setPage={setPage}
+                    handleButtonClick={handleButtonClick}
+                  />
+                </Suspense>
+              </div>
+
+              <div className="bg-[#EBF5F5] dark:bg-slate-600 lg:col-span-2 col-span-full pb-20">
+                <Suspense fallback={<SkeletonLoading />}>
+                  <Categories
+                    blogs={blogs}
+                    handleSearch={handleSearch}
+                    loading={loading}
+                    handleButtonClick={handleButtonClick}
+                  />
+                </Suspense>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </main>
+    </>
   );
 };
 

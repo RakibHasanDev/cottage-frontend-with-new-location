@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import TopBar from "./Topbar";
+import ScrollButton from "./shared/ScrollButton";
 
 const Layout = ({ children }) => {
   return (
@@ -9,6 +10,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
+      <ScrollButton />
     </div>
   );
 };
