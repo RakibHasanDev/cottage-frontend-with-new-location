@@ -16,7 +16,14 @@ const ResourcesCard = dynamic(
   }
 );
 
+const title = "Resources - Cottage Home Care Services";
+const description =
+  "Explore a wide range of resources at Cottage Home Care Services, including timesheets, Department of Health (DOH) guidelines, TIME-OFF forms, Direct Deposit Authorization forms, Physical Examination forms, and specialized timesheets like Daily and Celestial. These tools are designed to support our staff and ensure compliance with industry standards.";
+const keywords =
+  "Cottage Home Care resources, timesheet downloads, DOH guidelines, TIME-OFF form, direct deposit authorization, physical examination form, daily timesheet, celestial timesheet, healthcare compliance, employee support tools";
+
 const schemaData = [
+  // ✅ Organization Schema
   {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -44,29 +51,21 @@ const schemaData = [
       "https://www.linkedin.com/company/cottage-homecare/",
     ],
   },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Cottage Home Care Services",
-    url: "https://cottagehomecare.com",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://cottagehomecare.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
-  },
+
+  // ✅ WebPage Schema (Resources Page)
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Resources | Cottage Home Care",
+    name: title,
     url: "https://cottagehomecare.com/resources",
-    description:
-      "Access important resources at Cottage Home Care Services, including timesheets, DOH guidelines, Direct Deposit Authorization, and other essential forms.",
+    description: description,
     isPartOf: {
       "@type": "WebSite",
       url: "https://cottagehomecare.com",
     },
   },
+
+  // ✅ Breadcrumb Schema
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -127,6 +126,8 @@ const schemaData = [
       },
     ],
   },
+
+  // ✅ FAQ Schema (Resources Page)
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -161,31 +162,33 @@ const schemaData = [
 
 const Resources = () => {
   return (
-    <div className="dark:bg-slate-600 min-h-screen">
+    <>
       <Head>
-        <title>Resources - Cottage Home Care Services</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta
-          name="description"
-          content="Explore a wide range of resources at Cottage Home Care Services, including timesheets, Department of Health (DOH) guidelines, TIME-OFF forms, Direct Deposit Authorization forms, Physical Examination forms, and specialized timesheets like Daily and Celestial. These tools are designed to support our staff and ensure compliance with industry standards."
+          property="og:url"
+          content="https://cottagehomecare.com/resources"
         />
+        <meta property="og:type" content="website" />
         <meta
-          name="keywords"
-          content="Cottage Home Care resources, timesheet downloads, DOH guidelines, TIME-OFF form, direct deposit authorization, physical examination form, daily timesheet, celestial timesheet, healthcare compliance, employee support tools"
+          property="og:image"
+          content="https://cottagehomecare.com/logo.png"
         />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
-
-      <Suspense fallback={<SkeletonLoading />}>
-        <LazyBanner />
-      </Suspense>
-      <Suspense fallback={<SkeletonLoading />}>
-        <ResourcesCard />
-      </Suspense>
-    </div>
+      <main className="dark:bg-slate-600 min-h-screen">
+        <Suspense fallback={<SkeletonLoading />}>
+          <LazyBanner />
+        </Suspense>
+        <Suspense fallback={<SkeletonLoading />}>
+          <ResourcesCard />
+        </Suspense>
+      </main>
+    </>
   );
 };
 

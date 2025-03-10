@@ -130,244 +130,236 @@ const SideNav = () => {
         }}
       >
         <ul id="nav-text" className="space-y-5">
-          <li
-            className="flex items-center justify-between"
-            style={{ listStyle: "none" }}
-          >
-            <div className="w-[75%] rounded-md  p-2 flex justify-evenly items-center border-[1px] border-gray-100 shadow-2xl">
+          {/* Close Button & Theme Switcher */}
+          <li className="flex items-center justify-between list-none">
+            <div className="w-[75%] rounded-md p-2 flex justify-evenly items-center border-[1px] border-gray-100 shadow-2xl">
               {options.map((opt, index) => (
                 <button
                   key={index}
                   onClick={() => handleThemeChange(opt.text)}
                   className={`h-7 w-7 text-xl flex items-center justify-center transition-all 
-                    ${
-                      theme === opt.text
-                        ? "text-sky-600 scale-125" // Highlight selected theme
-                        : "text-gray-400"
-                    }`}
+            ${theme === opt.text ? "text-sky-600 scale-125" : "text-gray-400"}`}
                 >
                   {opt.icon}
                 </button>
               ))}
             </div>
-            <div>
-              <button
-                className=" bg-[#00A6B2]  w-10 h-10 shadow-xl rounded-full text-white flex justify-center items-center text-2xl "
-                onClick={toggleCloser}
-              >
-                <RxCross2 />
-              </button>
-            </div>
+            <button
+              className="bg-[#00A6B2] w-10 h-10 shadow-xl rounded-full text-white flex justify-center items-center text-2xl"
+              onClick={toggleCloser}
+            >
+              <RxCross2 />
+            </button>
           </li>
-          <li style={{ listStyle: "none" }}>
+
+          {/* Home Link */}
+          <li className="list-none">
             <Link
               onClick={toggleCloser}
               href="/"
               aria-label="Home"
               title="Home"
-              className={`font-medium    tracking-wide  transition-colors duration-200 uppercase nav-text hover-underline-animation  text-gray-100 flex gap-2`}
+              className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <ImHome className="font-medium mt-[1.5px]" /> Home
+              <ImHome className="text-base flex-shrink-0" />
+              <span>Home</span>
             </Link>
           </li>
 
-          {services?.map((item) => (
-            <li
-              key={item.id}
-              className={` py-1 shadow-lg ${
-                tab === item.id
-                  ? "bg-[#435670f5] px-4 -ml-4 -mr-4"
-                  : "bg-transparent "
-              }`}
-              style={{ listStyle: "none" }}
-            >
-              <button
-                onClick={() => handleClick(item.id)}
-                className="w-full focus:outline-none  "
-              >
-                <h3 className="flex items-center justify-between">
-                  <p className="flex items-center gap-2">
-                    <MdOutlineMedicalServices />{" "}
-                    <span className="uppercase font-medium    tracking-wide  transition-colors duration-200 nav-text hover-underline-animation  text-gray-100">
-                      {item?.question}{" "}
-                    </span>
-                  </p>
-
-                  <span>
-                    <svg
-                      className={`fill-current   h-6 w-6 transform transition-transform duration-500  ${handleRotate(
-                        item.id
-                      )}`}
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                    </svg>
-                  </span>
-                </h3>
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-500  ${handleToggle(
-                  item.id
-                )}`}
-              >
-                {item?.answer?.map((ans, index) => (
-                  <Link
-                    key={index}
-                    onClick={toggleCloser}
-                    href={`/${ans?.path}`}
-                    aria-label="Contact US"
-                    title="Contact US"
-                    className={`font-medium  tracking-wide  transition-colors duration-200  
-                                         uppercase nav-text hover-underline-animation text-gray-100 block my-4 `}
-                  >
-                    {ans?.property}
-                  </Link>
-                ))}
-              </div>
-            </li>
-          ))}
-
-          <li style={{ listStyle: "none" }}>
+          {/* Contact Us */}
+          <li className="list-none">
             <Link
               onClick={toggleCloser}
               href="/contacts"
-              aria-label="Contact US"
-              title="Contact US"
-              className={`font-medium  tracking-wide  transition-colors duration-200  
-                                uppercase nav-text hover-underline-animation text-gray-100 flex gap-2 `}
+              aria-label="Contact Us"
+              title="Contact Us"
+              className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <BsFillTelephoneFill className="font-medium mt-[1.5px]" /> Contact
-              US
+              <BsFillTelephoneFill className="text-base flex-shrink-0" />
+              <span>Contact Us</span>
             </Link>
           </li>
 
-          <li style={{ listStyle: "none" }} onClick={toggleCloser}>
-            <Link
-              href="/hhaCertification"
-              aria-label="HHA Certification"
-              title="HHA Certification"
-              className={`font-medium    tracking-wide  transition-colors duration-200  
-                                uppercase nav-text hover-underline-animation text-gray-100 flex gap-2 items-center`}
-            >
-              <TbCertificate className="text-lg" /> HHA Certification
-            </Link>
-          </li>
-          <li style={{ listStyle: "none" }}>
-            <Link
-              onClick={toggleCloser}
-              href="/covid"
-              aria-label="covid"
-              title="covid"
-              className={`font-medium    tracking-wide  transition-colors duration-200  
-                                uppercase nav-text hover-underline-animation text-gray-100 flex gap-2 items-center`}
-            >
-              <BsVirus className="text-md" onClick={toggleCloser} /> Covid-19
-            </Link>
-          </li>
-          <li style={{ listStyle: "none" }}>
-            <Link
-              onClick={toggleCloser}
-              href="/resources"
-              aria-label="Resources"
-              title="Resources"
-              className={`font-medium    tracking-wide  transition-colors duration-200  
-                                uppercase nav-text hover-underline-animation text-gray-100 flex gap-2 items-center`}
-            >
-              <BsFiles className="text-md" /> Resources
-            </Link>
-          </li>
-          <li style={{ listStyle: "none" }}>
-            <Link
-              onClick={toggleCloser}
-              href="/helpDesk"
-              aria-label="helpDesk"
-              title="helpDesk"
-              className={`font-medium    tracking-wide  transition-colors duration-200  
-                                uppercase nav-text hover-underline-animation text-gray-100 flex gap-2 items-center`}
-            >
-              <GoDesktopDownload className="text-md" /> Help Desk
-            </Link>
-          </li>
-
-          <li style={{ listStyle: "none" }}>
-            <Link
-              onClick={toggleCloser}
-              href="/faqs"
-              aria-label="FAQs"
-              title="FAQs"
-              className={`font-medium    tracking-wide  transition-colors duration-200  
-                                uppercase nav-text hover-underline-animation text-gray-100 flex gap-2 items-center`}
-            >
-              <FaQuestionCircle className="text-md" /> FAQs
-            </Link>
-          </li>
-
-          {community?.map((item) => (
+          {/* Services Dropdown */}
+          {services?.map((item) => (
             <li
               key={item.id}
-              style={{ listStyle: "none" }}
-              className={` py-1 shadow-lg ${
+              className={`py-1 shadow-lg list-none ${
                 tab === item.id
-                  ? "bg-[#435670f5] px-4  -ml-4 -mr-4"
+                  ? "bg-[#435670f5] px-4 -ml-4 -mr-4"
                   : "bg-transparent"
               }`}
             >
               <button
                 onClick={() => handleClick(item.id)}
-                className="w-full focus:outline-none  "
+                className="w-full focus:outline-none flex justify-between items-center "
               >
-                <h3 className="flex items-center justify-between">
-                  <p className="flex items-center gap-2">
-                    <RiCommunityFill />{" "}
-                    <span className="uppercase font-medium    tracking-wide  transition-colors duration-200 nav-text hover-underline-animation  text-gray-100">
-                      {item?.question}{" "}
-                    </span>
-                  </p>
-
-                  <span>
-                    <svg
-                      className={`fill-current   h-6 w-6 transform transition-transform duration-500  ${handleRotate(
-                        item.id
-                      )}`}
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                    </svg>
+                <div className="flex items-center gap-3">
+                  <MdOutlineMedicalServices className="text-xl flex-shrink-0" />
+                  <span className="uppercase font-medium tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
+                    {item?.question}
                   </span>
-                </h3>
-              </button>
-              <div
-                className={`overflow-hidden transition-all duration-500  ${handleToggle(
-                  item.id
-                )}`}
-              >
-                {item?.answer?.map((ans, index) => (
-                  <Link
-                    key={index}
-                    onClick={toggleCloser}
-                    href={`/${ans?.path}`}
-                    aria-label="Contact US"
-                    title="Contact US"
-                    className={`font-medium  tracking-wide  transition-colors duration-200  
-                                         uppercase nav-text hover-underline-animation text-gray-100 block my-4 `}
+                </div>
+
+                {/* ✅ Dropdown button only appears if there are sub-items */}
+                {item?.answer?.length > 0 && (
+                  <svg
+                    className={`fill-current h-6 w-6 transform transition-transform duration-500 ${
+                      tab === item.id
+                        ? "rotate-180 text-[#00A6B2]"
+                        : "text-gray-300"
+                    }`}
+                    viewBox="0 0 20 20"
                   >
-                    {ans?.property}
-                  </Link>
-                ))}
-              </div>
+                    <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                  </svg>
+                )}
+              </button>
+
+              {/* ✅ Only show dropdown content if item has answers */}
+              {item?.answer?.length > 0 && (
+                <div
+                  className={`overflow-hidden transition-all duration-500 ${
+                    tab === item.id ? "max-h-screen " : "max-h-0"
+                  }`}
+                >
+                  {item?.answer?.map((ans, index) => (
+                    <Link
+                      key={index}
+                      onClick={toggleCloser}
+                      href={`/${ans?.path}`}
+                      className="block font-medium tracking-wide transition-colors duration-200 uppercase text-gray-100 hover:text-[#00A6B2] py-2.5"
+                    >
+                      {ans?.property}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </li>
           ))}
 
-          <li style={{ listStyle: "none" }}>
+          {/* Community Outreach Dropdown */}
+          {community?.map((item) => (
+            <li
+              key={item.id}
+              className={`py-1 shadow-lg list-none ${
+                tab === item.id
+                  ? "bg-[#435670f5] px-4 -ml-4 -mr-4"
+                  : "bg-transparent"
+              }`}
+            >
+              <button
+                onClick={() => handleClick(item.id)}
+                className="w-full flex justify-between items-center  focus:outline-none"
+              >
+                <div className="flex items-center gap-3">
+                  <RiCommunityFill className="text-xl flex-shrink-0" />
+                  <span className="uppercase font-medium tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
+                    {item?.question}
+                  </span>
+                </div>
+
+                {/* ✅ Dropdown button only appears if there are sub-items */}
+                {item?.answer?.length > 0 && (
+                  <svg
+                    className={`fill-current h-6 w-6 transform transition-transform duration-500 ${
+                      tab === item.id
+                        ? "rotate-180 text-[#00A6B2]"
+                        : "text-gray-300"
+                    }`}
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                  </svg>
+                )}
+              </button>
+
+              {/* ✅ Only show dropdown content if item has answers */}
+              {item?.answer?.length > 0 && (
+                <div
+                  className={`overflow-hidden transition-all duration-500 ${
+                    tab === item.id ? "max-h-screen " : "max-h-0"
+                  }`}
+                >
+                  {item?.answer?.map((ans, index) => (
+                    <Link
+                      key={index}
+                      onClick={toggleCloser}
+                      href={`/${ans?.path}`}
+                      className="block font-medium tracking-wide transition-colors duration-200 uppercase text-gray-100 hover:text-[#00A6B2] py-2.5 "
+                    >
+                      {ans?.property}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </li>
+          ))}
+
+          {/* Other Links */}
+          <li className="list-none">
+            <Link
+              onClick={toggleCloser}
+              href="/hhaCertification"
+              className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
+            >
+              <TbCertificate className="text-lg flex-shrink-0" />
+              <span>HHA Certification</span>
+            </Link>
+          </li>
+
+          <li className="list-none">
+            <Link
+              onClick={toggleCloser}
+              href="/covid"
+              className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
+            >
+              <BsVirus className="text-lg flex-shrink-0" />
+              <span>Covid-19</span>
+            </Link>
+          </li>
+
+          <li className="list-none">
+            <Link
+              onClick={toggleCloser}
+              href="/resources"
+              className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
+            >
+              <BsFiles className="text-lg flex-shrink-0" />
+              <span>Resources</span>
+            </Link>
+          </li>
+
+          <li className="list-none">
+            <Link
+              onClick={toggleCloser}
+              href="/helpDesk"
+              className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
+            >
+              <GoDesktopDownload className="text-lg flex-shrink-0" />
+              <span>Help Desk</span>
+            </Link>
+          </li>
+
+          <li className="list-none">
+            <Link
+              onClick={toggleCloser}
+              href="/faqs"
+              className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
+            >
+              <FaQuestionCircle className="text-lg flex-shrink-0" />
+              <span>FAQs</span>
+            </Link>
+          </li>
+
+          <li className="list-none">
             <Link
               onClick={toggleCloser}
               href="/blog"
-              aria-label="Blog"
-              title="Blog"
-              className={`font-medium    tracking-wide  transition-colors duration-200  
-                                uppercase nav-text hover-underline-animation text-gray-100 flex gap-2 items-center `}
+              className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <ImBlog className="text-md" /> Blog
+              <ImBlog className="text-lg flex-shrink-0" />
+              <span>Blog</span>
             </Link>
           </li>
         </ul>

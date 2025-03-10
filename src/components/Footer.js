@@ -170,7 +170,7 @@ const Footer = () => {
               </div>
               <div className="space-y-3">
                 <Link
-                  href="/services"
+                  href="/nhtd"
                   className="tracking-wide uppercase text-gray-50 hover:text-[#00A6B2]"
                   style={{ listStyle: "none" }}
                 >
@@ -189,12 +189,12 @@ const Footer = () => {
 
                   <li style={{ listStyle: "none" }}>
                     <Link
-                      href="/nhtd"
+                      href="/contacts"
                       rel="noopener noreferrer"
                       className="hover:text-[#00A6B2]"
                       title="Learn more about the NHTD Program at Cottage Home Care"
                     >
-                      NHTD Program
+                      Contact Us
                     </Link>
                   </li>
                 </ul>

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { useEffect, useState } from "react";
 
 import { FaRegQuestionCircle } from "react-icons/fa";
@@ -244,565 +245,579 @@ const Faqs = () => {
     `transition-max-height ${tab === id ? "open" : ""}`;
 
   return (
-    <div className="min-h-screen dark:bg-slate-600 bg-blue-50">
-      <div className="relative bg-cover bg-center text-center h-[40vh] md:min-h-[82vh] faqs-Banner "></div>
+    <>
+      <Head>
+        <title>Faqs - Cottage Home Care Services</title>
+        <meta
+          name="description"
+          content="Find answers to frequently asked questions about our home care services, COVID-19 safety measures, pricing, policies, and more. Get the information you need to make informed decisions about home care solutions."
+        />
+        <meta
+          name="keywords"
+          content="home care FAQs, Cottage Home Care services, COVID-19 safety FAQ, home care pricing questions, home care policies, senior care solutions, healthcare FAQs, Cottage Home Care information"
+        />
+      </Head>
+      <main className="min-h-screen dark:bg-slate-600 bg-blue-50">
+        <div className="relative bg-cover bg-center text-center h-[40vh] md:min-h-[82vh] faqs-Banner "></div>
 
-      <div className="">
-        <h1 className=" mt-5 md:mt-8 text-center font-bold text-2xl md:text-2xl  2xl:text-4xl  dark:text-gray-100 text-[#00A6B2] league-spartan">
-          What is your #1 question today?
-        </h1>
+        <div className="">
+          <h1 className=" mt-5 md:mt-8 text-center font-bold text-2xl md:text-2xl  2xl:text-4xl  dark:text-gray-100 text-[#00A6B2] league-spartan">
+            What is your #1 question today?
+          </h1>
 
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 w-[90%] lg:w-[60%] mx-auto gap-8 my-8"
-          id="faqs"
-        >
-          {questions1?.map((qus, index) => (
-            <div key={index}>
-              <a
-                className="bg-[#00A6B2] px-4 py-10 shadow-md cursor-pointer text-white block h-44"
-                href={`#${qus?.path}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  const targetElement = document.getElementById(qus?.path);
-                  const navbarHeight = 120;
-                  if (targetElement) {
-                    const offsetTop = targetElement.offsetTop - navbarHeight;
-                    window.scrollTo({ top: offsetTop });
-                  }
-                }}
-              >
-                <h1 className="text-center text-xl md:text-2xl league-spartan font-semibold">
-                  {qus?.title}
-                </h1>
-                <p className="text-center md:text-lg mt-3 open-sans">
-                  {qus?.description}
-                </p>
-              </a>
-            </div>
-          ))}
-        </div>
-        <div
-          className="grid grid-cols-1 md:grid-cols-2  w-[90%] lg:w-[45%] mx-auto gap-8 my-8"
-          id="faqs2"
-        >
-          {questions2?.map((qus, index) => (
-            <div key={index}>
-              <a
-                className="bg-[#00A6B2] px-4 py-10 shadow-md cursor-pointer text-white block h-44"
-                href={`#${qus?.path}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  const targetElement = document.getElementById(qus?.path);
-                  const navbarHeight = 120;
-                  if (targetElement) {
-                    const offsetTop = targetElement.offsetTop - navbarHeight;
-                    window.scrollTo({ top: offsetTop });
-                  }
-                }}
-              >
-                <h1 className="text-center text-xl md:text-2xl league-spartan font-semibold">
-                  {qus?.title}
-                </h1>
-                <p className="text-center md:text-lg mt-3 open-sans">
-                  {qus?.description}
-                </p>
-              </a>
-            </div>
-          ))}
-        </div>
-
-        {/* 1st section  */}
-
-        <div className="p-5" id="get-paid">
-          <div className="flex justify-center items-start my-2">
-            <div className="w-full md:w-[65%] mx-auto my-1 ">
-              <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2  dark:text-gray-100 text-[#00A6B2] league-spartan">
-                {" "}
-                How much will I get paid?
-              </h2>
-              <h2 className="text-lg md:text-2xl font-semibold text-center mb-2  dark:text-gray-100 text-[#00A6B2] league-spartan">
-                {" "}
-                Questions about Payment
-              </h2>
-              <h2 className="text-base md:text-xl font-bold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                {" "}
-                Caregiver Pay Rate
-              </h2>
-
-              <ul className="flex flex-col">
-                {paidItems.map((item) => (
-                  <li
-                    key={item.id}
-                    className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
-                      tab === item.id
-                        ? "border-open dark:text-gray-100"
-                        : " border-l-[2px] border-white dark:border-slate-400 "
-                    }`}
-                  >
-                    <button
-                      onClick={() => handleClick(item.id)}
-                      className="w-full focus:outline-none"
-                    >
-                      <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
-                        <p className="flex md:text-lg items-center gap-2 font-medium question dark:text-gray-100 ">
-                          {" "}
-                          <span>
-                            <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
-                          </span>
-                          <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] leading-relaxed open-sans font-semibold">
-                            {item.question}
-                          </span>{" "}
-                        </p>
-                        <span>
-                          <svg
-                            className={` fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform  transition-transform duration-100  ${handleRotate(
-                              item.id
-                            )}`}
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                          </svg>
-                        </span>
-                      </h2>
-                    </button>
-                    <div
-                      className={`overflow-hidden transition-all duration-500 ${handleToggle(
-                        item.id
-                      )}`}
-                    >
-                      {item?.answer && (
-                        <h1 className="p-3 text-gray-900 dark:text-gray-100 text-[16px] leading-relaxed open-sans">
-                          {item?.answer}
-                        </h1>
-                      )}
-                      {item?.answer2 && (
-                        <div className="p-3 text-gray-900 dark:text-gray-100 my-1">
-                          <p>{item?.answer2?.des1}</p>
-
-                          <ul className="list-disc ml-4">
-                            {item?.answer2?.des2?.map((ds, index) => (
-                              <li key={index} className="my-1">
-                                {ds}
-                              </li>
-                            ))}
-                          </ul>
-                          <p>{item?.answer2?.des3}</p>
-                        </div>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div
+            className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 w-[90%] lg:w-[60%] mx-auto gap-8 my-8"
+            id="faqs"
+          >
+            {questions1?.map((qus, index) => (
+              <div key={index}>
+                <a
+                  className="bg-[#00A6B2] px-4 py-10 shadow-md cursor-pointer text-white block h-44"
+                  href={`#${qus?.path}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const targetElement = document.getElementById(qus?.path);
+                    const navbarHeight = 120;
+                    if (targetElement) {
+                      const offsetTop = targetElement.offsetTop - navbarHeight;
+                      window.scrollTo({ top: offsetTop });
+                    }
+                  }}
+                >
+                  <h1 className="text-center text-xl md:text-2xl league-spartan font-semibold">
+                    {qus?.title}
+                  </h1>
+                  <p className="text-center md:text-lg mt-3 open-sans">
+                    {qus?.description}
+                  </p>
+                </a>
+              </div>
+            ))}
           </div>
-        </div>
+          <div
+            className="grid grid-cols-1 md:grid-cols-2  w-[90%] lg:w-[45%] mx-auto gap-8 my-8"
+            id="faqs2"
+          >
+            {questions2?.map((qus, index) => (
+              <div key={index}>
+                <a
+                  className="bg-[#00A6B2] px-4 py-10 shadow-md cursor-pointer text-white block h-44"
+                  href={`#${qus?.path}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const targetElement = document.getElementById(qus?.path);
+                    const navbarHeight = 120;
+                    if (targetElement) {
+                      const offsetTop = targetElement.offsetTop - navbarHeight;
+                      window.scrollTo({ top: offsetTop });
+                    }
+                  }}
+                >
+                  <h1 className="text-center text-xl md:text-2xl league-spartan font-semibold">
+                    {qus?.title}
+                  </h1>
+                  <p className="text-center md:text-lg mt-3 open-sans">
+                    {qus?.description}
+                  </p>
+                </a>
+              </div>
+            ))}
+          </div>
 
-        {/* 1st section end */}
+          {/* 1st section  */}
 
-        {/* 2ns section start  */}
+          <div className="p-5" id="get-paid">
+            <div className="flex justify-center items-start my-2">
+              <div className="w-full md:w-[65%] mx-auto my-1 ">
+                <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2  dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  {" "}
+                  How much will I get paid?
+                </h2>
+                <h2 className="text-lg md:text-2xl font-semibold text-center mb-2  dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  {" "}
+                  Questions about Payment
+                </h2>
+                <h2 className="text-base md:text-xl font-bold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  {" "}
+                  Caregiver Pay Rate
+                </h2>
 
-        <div className="p-5" id="eligible">
-          <div className="flex justify-center items-start my-2">
-            <div className="w-full md:w-[65%] mx-auto my-1 ">
-              <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                Am I eligible ?
-              </h2>
-              <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                Questions about Medicaid, Medicare & Insurance
-              </h3>
-              <h3 className="text-base md:text-xl font-bold text-center mb-2 md:mb-5 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                Medicaid and Medicare
-              </h3>
-              <ul className="flex flex-col">
-                {faqItems.map((item) => (
-                  <li
-                    key={item.id}
-                    className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
-                      tab === item.id
-                        ? "border-open dark:text-gray-100"
-                        : "border-l-[2px] border-white dark:border-slate-400 "
-                    }`}
-                  >
-                    <button
-                      onClick={() => handleClick(item.id)}
-                      className="w-full focus:outline-none"
+                <ul className="flex flex-col">
+                  {paidItems.map((item) => (
+                    <li
+                      key={item.id}
+                      className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
+                        tab === item.id
+                          ? "border-open dark:text-gray-100"
+                          : " border-l-[2px] border-white dark:border-slate-400 "
+                      }`}
                     >
-                      <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
-                        <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
-                          {" "}
+                      <button
+                        onClick={() => handleClick(item.id)}
+                        className="w-full focus:outline-none"
+                      >
+                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                          <p className="flex md:text-lg items-center gap-2 font-medium question dark:text-gray-100 ">
+                            {" "}
+                            <span>
+                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
+                            </span>
+                            <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] leading-relaxed open-sans font-semibold">
+                              {item.question}
+                            </span>{" "}
+                          </p>
                           <span>
-                            <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
-                          </span>{" "}
-                          <span className="w-[95%] md:w-full font-semibold mx-auto px-2 md:px-0 text-[16px] leading-relaxed open-sans">
-                            {item.question}
-                          </span>
-                        </p>
-                        <span>
-                          <svg
-                            className={`fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform transition-transform duration-500  ${handleRotate(
-                              item.id
-                            )}`}
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                          </svg>
-                        </span>
-                      </h2>
-                    </button>
-                    <div
-                      className={`overflow-hidden transition-all duration-500  text-[16px] leading-relaxed open-sans ${handleToggle(
-                        item.id
-                      )}`}
-                    >
-                      {item?.answer2 === true ? (
-                        <>
-                          <p className="p-3 text-gray-900 dark:text-gray-100">
-                            Home Health Aides are required to be certified by
-                            the Department of Education hence they all go
-                            through a multi-week rigorous training course.
-                          </p>
-                          <p className="p-3 text-gray-900 dark:text-gray-100">
-                            CDPAP Personal Assistant on the other hand does not
-                            need to be certified as the responsibility for
-                            training and managing the PA falls upon the patient.
-                          </p>
-
-                          <p className="p-3 text-gray-900 dark:text-gray-100">
-                            Furthermore, if you do not have any friends or
-                            family that can take care of you, we can assist you
-                            in locating someone to fill the Personal Assistant
-                            position. Just give us a call at{" "}
-                            <a
-                              href="tel:516-367-2266"
-                              className="text-[#00A6B2] font-bold dark:text-[#ff1818]"
+                            <svg
+                              className={` fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform  transition-transform duration-100  ${handleRotate(
+                                item.id
+                              )}`}
+                              viewBox="0 0 20 20"
                             >
-                              516-367-2266
+                              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            </svg>
+                          </span>
+                        </h2>
+                      </button>
+                      <div
+                        className={`overflow-hidden transition-all duration-500 ${handleToggle(
+                          item.id
+                        )}`}
+                      >
+                        {item?.answer && (
+                          <h1 className="p-3 text-gray-900 dark:text-gray-100 text-[16px] leading-relaxed open-sans">
+                            {item?.answer}
+                          </h1>
+                        )}
+                        {item?.answer2 && (
+                          <div className="p-3 text-gray-900 dark:text-gray-100 my-1">
+                            <p>{item?.answer2?.des1}</p>
+
+                            <ul className="list-disc ml-4">
+                              {item?.answer2?.des2?.map((ds, index) => (
+                                <li key={index} className="my-1">
+                                  {ds}
+                                </li>
+                              ))}
+                            </ul>
+                            <p>{item?.answer2?.des3}</p>
+                          </div>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 1st section end */}
+
+          {/* 2ns section start  */}
+
+          <div className="p-5" id="eligible">
+            <div className="flex justify-center items-start my-2">
+              <div className="w-full md:w-[65%] mx-auto my-1 ">
+                <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  Am I eligible ?
+                </h2>
+                <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  Questions about Medicaid, Medicare & Insurance
+                </h3>
+                <h3 className="text-base md:text-xl font-bold text-center mb-2 md:mb-5 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  Medicaid and Medicare
+                </h3>
+                <ul className="flex flex-col">
+                  {faqItems.map((item) => (
+                    <li
+                      key={item.id}
+                      className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
+                        tab === item.id
+                          ? "border-open dark:text-gray-100"
+                          : "border-l-[2px] border-white dark:border-slate-400 "
+                      }`}
+                    >
+                      <button
+                        onClick={() => handleClick(item.id)}
+                        className="w-full focus:outline-none"
+                      >
+                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                          <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
+                            {" "}
+                            <span>
+                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
+                            </span>{" "}
+                            <span className="w-[95%] md:w-full font-semibold mx-auto px-2 md:px-0 text-[16px] leading-relaxed open-sans">
+                              {item.question}
+                            </span>
+                          </p>
+                          <span>
+                            <svg
+                              className={`fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform transition-transform duration-500  ${handleRotate(
+                                item.id
+                              )}`}
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            </svg>
+                          </span>
+                        </h2>
+                      </button>
+                      <div
+                        className={`overflow-hidden transition-all duration-500  text-[16px] leading-relaxed open-sans ${handleToggle(
+                          item.id
+                        )}`}
+                      >
+                        {item?.answer2 === true ? (
+                          <>
+                            <p className="p-3 text-gray-900 dark:text-gray-100">
+                              Home Health Aides are required to be certified by
+                              the Department of Education hence they all go
+                              through a multi-week rigorous training course.
+                            </p>
+                            <p className="p-3 text-gray-900 dark:text-gray-100">
+                              CDPAP Personal Assistant on the other hand does
+                              not need to be certified as the responsibility for
+                              training and managing the PA falls upon the
+                              patient.
+                            </p>
+
+                            <p className="p-3 text-gray-900 dark:text-gray-100">
+                              Furthermore, if you do not have any friends or
+                              family that can take care of you, we can assist
+                              you in locating someone to fill the Personal
+                              Assistant position. Just give us a call at{" "}
+                              <a
+                                href="tel:516-367-2266"
+                                className="text-[#00A6B2] font-bold dark:text-[#ff1818]"
+                              >
+                                516-367-2266
+                              </a>{" "}
+                              !
+                            </p>
+                          </>
+                        ) : (
+                          <>
+                            {item?.answer.includes("516-367-2266") ? (
+                              <p
+                                className="p-3 text-gray-900 dark:text-gray-100"
+                                dangerouslySetInnerHTML={{
+                                  __html: item.answer.replace(
+                                    /(516-367-2266)/,
+                                    '<a href="tel:516-367-2266" className="text-[#00A6B2] dark:text-[#ff1818] font-bold">$1</a>'
+                                  ),
+                                }}
+                              ></p>
+                            ) : (
+                              <p className="p-3 text-gray-900 dark:text-gray-100">
+                                {item.answer}
+                              </p>
+                            )}
+                          </>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 2nd section end */}
+          {/* 3rd section start  */}
+
+          <div className="p-5" id="caregiver">
+            <div className="flex justify-center items-start my-2">
+              <div className="w-full md:w-[65%] mx-auto my-1 ">
+                <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  Can I be a caregiver?
+                </h2>
+                <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  Questions for caregivers
+                </h3>
+                <h3 className="text-base md:text-xl font-bold text-center mb-2 md:mb-5 dark:text-gray-100 text-[#00A6B2] league-spartan ">
+                  Who can be a caregiver?
+                </h3>
+                <ul className="flex flex-col">
+                  {careItems.map((item) => (
+                    <li
+                      key={item.id}
+                      className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
+                        tab === item.id
+                          ? "border-open dark:text-gray-100"
+                          : "border-l-[2px] border-white dark:border-slate-400 "
+                      }`}
+                    >
+                      <button
+                        onClick={() => handleClick(item.id)}
+                        className="w-full focus:outline-none"
+                      >
+                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                          <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
+                            {" "}
+                            <span>
+                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
+                            </span>{" "}
+                            <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] font-semibold leading-relaxed open-sans">
+                              {item.question}
+                            </span>
+                          </p>
+                          <span>
+                            {" "}
+                            <svg
+                              className={`fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform transition-transform duration-500  ${handleRotate(
+                                item.id
+                              )}`}
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            </svg>
+                          </span>
+                        </h2>
+                      </button>
+                      <div
+                        className={`overflow-hidden transition-all duration-500 text-[16px] leading-relaxed open-sans ${handleToggle(
+                          item.id
+                        )}`}
+                      >
+                        {item?.answer2 ? (
+                          <>
+                            <p className="p-3 text-gray-900 dark:text-gray-100">
+                              {item?.answer2?.des1}
+                            </p>
+
+                            <ul className="list-disc ml-7">
+                              {item?.answer2?.des2?.map((ds, index) => (
+                                <li key={index} className="my-1">
+                                  {ds}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        ) : (
+                          <>
+                            {item?.answer.includes("516-367-2266") ? (
+                              <p
+                                className="p-3 text-gray-900 dark:text-gray-100"
+                                dangerouslySetInnerHTML={{
+                                  __html: item.answer.replace(
+                                    /(516-367-2266)/,
+                                    '<a href="tel:516-367-2266" className="text-[#00A6B2] dark:text-[#ff1818] font-bold">$1</a>'
+                                  ),
+                                }}
+                              ></p>
+                            ) : (
+                              <p className="p-3 text-gray-900 dark:text-gray-100">
+                                {item.answer}
+                              </p>
+                            )}
+                          </>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* 3rd section end */}
+          {/* fourth section start  */}
+
+          <div className="p-5" id="sign-up">
+            <div className="flex justify-center items-start my-2">
+              <div className="w-full md:w-[65%] mx-auto my-1 ">
+                <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  What are the steps to Sign up ?
+                </h2>
+                <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  Questions about the Enrollment Process
+                </h3>
+                <h3 className="text-base md:text-xl font-bold text-center mb-2 md:mb-5 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                  What is the process of signing up ?
+                </h3>
+                <ul className="flex flex-col">
+                  {enrollmentItems.map((item) => (
+                    <li
+                      key={item.id}
+                      className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
+                        tab === item.id
+                          ? "border-open dark:text-gray-100"
+                          : "border-l-[2px] border-white dark:border-slate-400 "
+                      }`}
+                    >
+                      <button
+                        onClick={() => handleClick(item.id)}
+                        className="w-full focus:outline-none"
+                      >
+                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                          <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
+                            {" "}
+                            <span>
+                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />{" "}
+                            </span>
+                            <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] leading-relaxed font-sans font-semibold">
+                              {item.question}
+                            </span>
+                          </p>
+                          <span>
+                            <svg
+                              className={`fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform transition-transform duration-500  ${handleRotate(
+                                item.id
+                              )}`}
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            </svg>
+                          </span>
+                        </h2>
+                      </button>
+                      <div
+                        className={`overflow-hidden transition-all duration-500 text-[16px] leading-relaxed open-sans ${handleToggle(
+                          item.id
+                        )}`}
+                      >
+                        {item?.answer && (
+                          <p className="p-3 text-gray-900 dark:text-gray-100">
+                            {item.answer}
+                          </p>
+                        )}
+
+                        {item?.answer2 && (
+                          <>
+                            <p className="p-3 text-gray-900 dark:text-gray-100">
+                              {item?.answer2?.des1}
+                            </p>
+                            <ul className="list-disc ml-6 mb-5">
+                              {item?.answer2?.des2?.map((ans, index) => (
+                                <li key={index} className="my-1">
+                                  {ans}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                        {item?.answer3 && (
+                          <>
+                            <p className="p-3 text-gray-900 dark:text-gray-100">
+                              {item?.answer3?.des1}
+                            </p>
+                            <ul className="list-disc ml-6 pb-4">
+                              {item?.answer3?.des2?.map((ans, index) => (
+                                <li key={index} className="my-1">
+                                  {ans}
+                                </li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+
+                        {item?.answer4 && (
+                          <p className="p-3 text-gray-900 dark:text-gray-100">
+                            You can email them to:{" "}
+                            <a
+                              href="mailto:info@cottagehomecare.com"
+                              className="text-[#00A6B2] font-semibold dark:text-[#ff1818]"
+                            >
+                              info@cottagehomecare.com
                             </a>{" "}
-                            !
+                            or fax them to:{" "}
+                            <a
+                              href="tel:+15163671067"
+                              className="text-[#00A6B2] font-semibold dark:text-[#ff1818]"
+                            >
+                              516-367-1067
+                            </a>
                           </p>
-                        </>
-                      ) : (
-                        <>
-                          {item?.answer.includes("516-367-2266") ? (
-                            <p
-                              className="p-3 text-gray-900 dark:text-gray-100"
-                              dangerouslySetInnerHTML={{
-                                __html: item.answer.replace(
-                                  /(516-367-2266)/,
-                                  '<a href="tel:516-367-2266" className="text-[#00A6B2] dark:text-[#ff1818] font-bold">$1</a>'
-                                ),
-                              }}
-                            ></p>
-                          ) : (
-                            <p className="p-3 text-gray-900 dark:text-gray-100">
-                              {item.answer}
-                            </p>
-                          )}
-                        </>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* 2nd section end */}
-        {/* 3rd section start  */}
+          {/* fourth section end */}
+          {/* fourth section start  */}
 
-        <div className="p-5" id="caregiver">
-          <div className="flex justify-center items-start my-2">
-            <div className="w-full md:w-[65%] mx-auto my-1 ">
-              <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                Can I be a caregiver?
-              </h2>
-              <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                Questions for caregivers
-              </h3>
-              <h3 className="text-base md:text-xl font-bold text-center mb-2 md:mb-5 dark:text-gray-100 text-[#00A6B2] league-spartan ">
-                Who can be a caregiver?
-              </h3>
-              <ul className="flex flex-col">
-                {careItems.map((item) => (
-                  <li
-                    key={item.id}
-                    className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
-                      tab === item.id
-                        ? "border-open dark:text-gray-100"
-                        : "border-l-[2px] border-white dark:border-slate-400 "
-                    }`}
-                  >
-                    <button
-                      onClick={() => handleClick(item.id)}
-                      className="w-full focus:outline-none"
+          <div className="p-5" id="program">
+            <div className="flex justify-center items-start my-2">
+              <div className="w-full md:w-[65%] mx-auto my-1 ">
+                <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan ">
+                  How does this program work?
+                </h2>
+                <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2]  league-spartan">
+                  General Questions about Cottage Home Care
+                </h3>
+                <ul className="flex flex-col">
+                  {programItems?.map((item) => (
+                    <li
+                      key={item.id}
+                      className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
+                        tab === item.id
+                          ? "border-open dark:text-gray-100"
+                          : "border-l-[2px] border-white dark:border-slate-400 "
+                      }`}
                     >
-                      <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
-                        <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
-                          {" "}
+                      <button
+                        onClick={() => handleClick(item.id)}
+                        className="w-full focus:outline-none"
+                      >
+                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                          <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
+                            {" "}
+                            <span>
+                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
+                            </span>{" "}
+                            <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] leading-relaxed open-sans font-semibold">
+                              {item.question}
+                            </span>
+                          </p>
                           <span>
-                            <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
-                          </span>{" "}
-                          <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] font-semibold leading-relaxed open-sans">
-                            {item.question}
+                            <svg
+                              className={`fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform transition-transform duration-500  ${handleRotate(
+                                item.id
+                              )}`}
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                            </svg>
                           </span>
-                        </p>
-                        <span>
-                          {" "}
-                          <svg
-                            className={`fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform transition-transform duration-500  ${handleRotate(
-                              item.id
-                            )}`}
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                          </svg>
-                        </span>
-                      </h2>
-                    </button>
-                    <div
-                      className={`overflow-hidden transition-all duration-500 text-[16px] leading-relaxed open-sans ${handleToggle(
-                        item.id
-                      )}`}
-                    >
-                      {item?.answer2 ? (
-                        <>
+                        </h2>
+                      </button>
+                      <div
+                        className={`overflow-hidden transition-all duration-500 text-[16px] leading-relaxed open-sans ${handleToggle(
+                          item.id
+                        )}`}
+                      >
+                        {item?.answer.includes("516-367-2266") ? (
+                          <p
+                            className="p-3 text-gray-900 dark:text-gray-100"
+                            dangerouslySetInnerHTML={{
+                              __html: item.answer.replace(
+                                /(516-367-2266)/,
+                                '<a href="tel:516-367-2266" className="text-[#00A6B2] dark:text-[#ff1818] font-bold">$1</a>'
+                              ),
+                            }}
+                          ></p>
+                        ) : (
                           <p className="p-3 text-gray-900 dark:text-gray-100">
-                            {item?.answer2?.des1}
+                            {item.answer}
                           </p>
-
-                          <ul className="list-disc ml-7">
-                            {item?.answer2?.des2?.map((ds, index) => (
-                              <li key={index} className="my-1">
-                                {ds}
-                              </li>
-                            ))}
-                          </ul>
-                        </>
-                      ) : (
-                        <>
-                          {item?.answer.includes("516-367-2266") ? (
-                            <p
-                              className="p-3 text-gray-900 dark:text-gray-100"
-                              dangerouslySetInnerHTML={{
-                                __html: item.answer.replace(
-                                  /(516-367-2266)/,
-                                  '<a href="tel:516-367-2266" className="text-[#00A6B2] dark:text-[#ff1818] font-bold">$1</a>'
-                                ),
-                              }}
-                            ></p>
-                          ) : (
-                            <p className="p-3 text-gray-900 dark:text-gray-100">
-                              {item.answer}
-                            </p>
-                          )}
-                        </>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
+                        )}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
+
+          {/* fourth section end */}
         </div>
-
-        {/* 3rd section end */}
-        {/* fourth section start  */}
-
-        <div className="p-5" id="sign-up">
-          <div className="flex justify-center items-start my-2">
-            <div className="w-full md:w-[65%] mx-auto my-1 ">
-              <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                What are the steps to Sign up ?
-              </h2>
-              <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                Questions about the Enrollment Process
-              </h3>
-              <h3 className="text-base md:text-xl font-bold text-center mb-2 md:mb-5 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                What is the process of signing up ?
-              </h3>
-              <ul className="flex flex-col">
-                {enrollmentItems.map((item) => (
-                  <li
-                    key={item.id}
-                    className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
-                      tab === item.id
-                        ? "border-open dark:text-gray-100"
-                        : "border-l-[2px] border-white dark:border-slate-400 "
-                    }`}
-                  >
-                    <button
-                      onClick={() => handleClick(item.id)}
-                      className="w-full focus:outline-none"
-                    >
-                      <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
-                        <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
-                          {" "}
-                          <span>
-                            <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />{" "}
-                          </span>
-                          <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] leading-relaxed font-sans font-semibold">
-                            {item.question}
-                          </span>
-                        </p>
-                        <span>
-                          <svg
-                            className={`fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform transition-transform duration-500  ${handleRotate(
-                              item.id
-                            )}`}
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                          </svg>
-                        </span>
-                      </h2>
-                    </button>
-                    <div
-                      className={`overflow-hidden transition-all duration-500 text-[16px] leading-relaxed open-sans ${handleToggle(
-                        item.id
-                      )}`}
-                    >
-                      {item?.answer && (
-                        <p className="p-3 text-gray-900 dark:text-gray-100">
-                          {item.answer}
-                        </p>
-                      )}
-
-                      {item?.answer2 && (
-                        <>
-                          <p className="p-3 text-gray-900 dark:text-gray-100">
-                            {item?.answer2?.des1}
-                          </p>
-                          <ul className="list-disc ml-6 mb-5">
-                            {item?.answer2?.des2?.map((ans, index) => (
-                              <li key={index} className="my-1">
-                                {ans}
-                              </li>
-                            ))}
-                          </ul>
-                        </>
-                      )}
-                      {item?.answer3 && (
-                        <>
-                          <p className="p-3 text-gray-900 dark:text-gray-100">
-                            {item?.answer3?.des1}
-                          </p>
-                          <ul className="list-disc ml-6 pb-4">
-                            {item?.answer3?.des2?.map((ans, index) => (
-                              <li key={index} className="my-1">
-                                {ans}
-                              </li>
-                            ))}
-                          </ul>
-                        </>
-                      )}
-
-                      {item?.answer4 && (
-                        <p className="p-3 text-gray-900 dark:text-gray-100">
-                          You can email them to:{" "}
-                          <a
-                            href="mailto:info@cottagehomecare.com"
-                            className="text-[#00A6B2] font-semibold dark:text-[#ff1818]"
-                          >
-                            info@cottagehomecare.com
-                          </a>{" "}
-                          or fax them to:{" "}
-                          <a
-                            href="tel:+15163671067"
-                            className="text-[#00A6B2] font-semibold dark:text-[#ff1818]"
-                          >
-                            516-367-1067
-                          </a>
-                        </p>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* fourth section end */}
-        {/* fourth section start  */}
-
-        <div className="p-5" id="program">
-          <div className="flex justify-center items-start my-2">
-            <div className="w-full md:w-[65%] mx-auto my-1 ">
-              <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan ">
-                How does this program work?
-              </h2>
-              <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2]  league-spartan">
-                General Questions about Cottage Home Care
-              </h3>
-              <ul className="flex flex-col">
-                {programItems?.map((item) => (
-                  <li
-                    key={item.id}
-                    className={`bg-white dark:bg-slate-400 my-2 shadow-lg ${
-                      tab === item.id
-                        ? "border-open dark:text-gray-100"
-                        : "border-l-[2px] border-white dark:border-slate-400 "
-                    }`}
-                  >
-                    <button
-                      onClick={() => handleClick(item.id)}
-                      className="w-full focus:outline-none"
-                    >
-                      <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
-                        <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
-                          {" "}
-                          <span>
-                            <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
-                          </span>{" "}
-                          <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] leading-relaxed open-sans font-semibold">
-                            {item.question}
-                          </span>
-                        </p>
-                        <span>
-                          <svg
-                            className={`fill-current text-[#00A6B2] dark:text-gray-100 h-6 w-6 transform transition-transform duration-500  ${handleRotate(
-                              item.id
-                            )}`}
-                            viewBox="0 0 20 20"
-                          >
-                            <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                          </svg>
-                        </span>
-                      </h2>
-                    </button>
-                    <div
-                      className={`overflow-hidden transition-all duration-500 text-[16px] leading-relaxed open-sans ${handleToggle(
-                        item.id
-                      )}`}
-                    >
-                      {item?.answer.includes("516-367-2266") ? (
-                        <p
-                          className="p-3 text-gray-900 dark:text-gray-100"
-                          dangerouslySetInnerHTML={{
-                            __html: item.answer.replace(
-                              /(516-367-2266)/,
-                              '<a href="tel:516-367-2266" className="text-[#00A6B2] dark:text-[#ff1818] font-bold">$1</a>'
-                            ),
-                          }}
-                        ></p>
-                      ) : (
-                        <p className="p-3 text-gray-900 dark:text-gray-100">
-                          {item.answer}
-                        </p>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        {/* fourth section end */}
-      </div>
-      {/* <Chat /> */}
-    </div>
+        {/* <Chat /> */}
+      </main>
+    </>
   );
 };
 

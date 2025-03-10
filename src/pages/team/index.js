@@ -6,6 +6,7 @@ import "react-photo-view/dist/react-photo-view.css";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/shared/Loading";
 import Link from "next/link";
+import Head from "next/head";
 
 const Team = () => {
   const [rotate, setRotate] = useState(false);
@@ -123,7 +124,19 @@ const Team = () => {
   console.log("Employees by Office:", employeesByOffice);
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>Team Members - Cottage Home Care Services</title>
+        <meta
+          name="description"
+          content="Meet the dedicated team behind Cottage Home Care Services. Our compassionate and professional staff are committed to providing exceptional care and support to our clients. Learn more about our team members, their qualifications, and their passion for home care."
+        />
+        <meta
+          name="keywords"
+          content="Cottage Home Care team, home care staff, dedicated caregivers, professional healthcare team, compassionate home care providers, team member qualifications, home care experts, meet our team, Cottage Home Care professionals, healthcare staff profiles"
+        />
+      </Head>
+
       <div className="min-h-screen dark:bg-slate-600 relative">
         <div className="md:container md:flex md:justify-center md:mx-auto pt-10 ">
           <div>
@@ -1339,7 +1352,7 @@ const Team = () => {
         </div>
       </div>
       {/* <Chat /> */}
-    </div>
+    </>
   );
 };
 

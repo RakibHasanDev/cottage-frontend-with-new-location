@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 
 // import img2 from "../../../src/assets/toy-giveaway/IMG-5.jpg";
@@ -45,12 +46,24 @@ const UpcomingEvent = () => {
 
   // const targetDate = '2023-12-23T00:00:00';
   return (
-    <div className="min-h-screen dark:bg-slate-600 bg-[#F5F5F7]">
-      <div className="relative  bg-cover bg-center text-center h-[40vh] md:min-h-[80vh] upcoming-cover "></div>
+    <>
+      <Head>
+        <title>Upcoming Events - Cottage Home Care Services</title>
+        <meta
+          name="description"
+          content="Stay informed about our upcoming events at Cottage Home Care Services. From health and wellness workshops to community engagement activities, find out what's happening next. Join us to learn, connect, and support our community through our scheduled events."
+        />
+        <meta
+          name="keywords"
+          content="Cottage Home Care upcoming events, health and wellness workshops, community engagement activities, future home care events, scheduled events, community support events, learn and connect, upcoming healthcare events, Cottage Home Care activities"
+        />
+      </Head>
+      <main className="min-h-screen dark:bg-slate-600 bg-[#F5F5F7]">
+        <div className="relative  bg-cover bg-center text-center h-[40vh] md:min-h-[80vh] upcoming-cover "></div>
 
-      {/* start coutdown section  */}
+        {/* start coutdown section  */}
 
-      {/* <div className=" py-10 ">
+        {/* <div className=" py-10 ">
 
         
         <div className="text-3xl lg:text-4xl relative font-bold  mb-5 text-center px-5   space-y-3 lobster text-red-600 border-[2px] border-red-600 dark:text-gray-100 dark:border-gray-100 py-5 lg:max-w-6xl mx-auto shadow-md rounded-sm">
@@ -74,9 +87,9 @@ const UpcomingEvent = () => {
 
       </div> */}
 
-      {/* end countdown section  */}
+        {/* end countdown section  */}
 
-      {/* <div className="w-[80%] mx-auto pb-10" id="toy-giveaway">
+        {/* <div className="w-[80%] mx-auto pb-10" id="toy-giveaway">
 
         <h3 className="text-xl md:text-2xl text-red-600 font-semibold mb-5 uppercase underline ">Upcoming Event</h3>
 
@@ -123,8 +136,9 @@ const UpcomingEvent = () => {
 
       </div> */}
 
-      {/* start card section  */}
-    </div>
+        {/* start card section  */}
+      </main>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
 import dynamic from "next/dynamic";
 import React, { Suspense } from "react";
+import Head from "next/head";
 
 const LazyBanner = dynamic(
   () => import("@/components/hhacertification/heroSection"),
@@ -46,6 +47,12 @@ const Placeholder = () => (
 );
 
 const HhhaCertification = () => {
+  const title = "HHA Certification - Cottage Home Care Services";
+  const description =
+    "Earn your Home Health Aide (HHA) certification through the Brooklyn Institute of Vocational Training. Our comprehensive training programs equip you with the skills necessary to provide exceptional care in the home care industry. Enroll today and start your career in healthcare services with Cottage Home Care Services.";
+  const keywords =
+    "HHA Certification, Home Health Aide Training, Brooklyn Institute of Vocational Training, healthcare training, home care industry training, Cottage Home Care Services, healthcare careers, vocational training in Brooklyn";
+
   const schemaData = [
     // ✅ Organization Schema
     {
@@ -76,27 +83,13 @@ const HhhaCertification = () => {
       ],
     },
 
-    // ✅ WebSite Schema (Boosts Domain-wide SEO & Indexing)
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Cottage Home Care Services",
-      url: "https://cottagehomecare.com",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: "https://cottagehomecare.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string",
-      },
-    },
-
-    // ✅ WebPage Schema (For the HHA Certification Page)
+    // ✅ WebPage Schema (HHA Certification)
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      name: "HHA Certification Program | Cottage Home Care",
+      name: title,
       url: "https://cottagehomecare.com/hhaCertification",
-      description:
-        "Get certified as a Home Health Aide (HHA) through Cottage Home Care. Learn how to enroll, eligibility requirements, and career opportunities in home care.",
+      description: description,
       isPartOf: {
         "@type": "WebSite",
         url: "https://cottagehomecare.com",
@@ -135,31 +128,13 @@ const HhhaCertification = () => {
         {
           "@type": "ListItem",
           position: 5,
-          name: "Private Pay",
-          item: "https://cottagehomecare.com/personalPayService",
-        },
-        {
-          "@type": "ListItem",
-          position: 6,
-          name: "CDPAP",
-          item: "https://cottagehomecare.com/cdpap",
-        },
-        {
-          "@type": "ListItem",
-          position: 7,
-          name: "Contact Us",
-          item: "https://cottagehomecare.com/contacts",
-        },
-        {
-          "@type": "ListItem",
-          position: 8,
           name: "HHA Certification",
           item: "https://cottagehomecare.com/hhaCertification",
         },
       ],
     },
 
-    // ✅ FAQ Schema for Better Search Visibility
+    // ✅ FAQ Schema
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -193,23 +168,43 @@ const HhhaCertification = () => {
   ];
 
   return (
-    <div className="dark:bg-slate-600">
-      <Suspense fallback={<Placeholder />}>
-        <LazyBanner />
-      </Suspense>
-      <Suspense fallback={<Placeholder />}>
-        <WelcomeMessage />
-      </Suspense>
-      <Suspense fallback={<Placeholder />}>
-        <HhhaCertificationAbout></HhhaCertificationAbout>
-      </Suspense>
-      <Suspense fallback={<Placeholder />}>
-        <HhhaSchoolMap></HhhaSchoolMap>
-      </Suspense>
-      <Suspense fallback={<Placeholder />}>
-        <HhhaContactForm></HhhaContactForm>
-      </Suspense>
-    </div>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/hhaCertification"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/logo.png"
+        />
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
+      </Head>
+
+      <main className="dark:bg-slate-600 min-h-screen">
+        <Suspense fallback={<Placeholder />}>
+          <LazyBanner />
+        </Suspense>
+        <Suspense fallback={<Placeholder />}>
+          <WelcomeMessage />
+        </Suspense>
+        <Suspense fallback={<Placeholder />}>
+          <HhhaCertificationAbout></HhhaCertificationAbout>
+        </Suspense>
+        <Suspense fallback={<Placeholder />}>
+          <HhhaSchoolMap></HhhaSchoolMap>
+        </Suspense>
+        <Suspense fallback={<Placeholder />}>
+          <HhhaContactForm></HhhaContactForm>
+        </Suspense>
+      </main>
+    </>
   );
 };
 
