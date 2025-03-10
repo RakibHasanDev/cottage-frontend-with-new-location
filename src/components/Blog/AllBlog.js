@@ -7,7 +7,7 @@ import {
 } from "react-icons/md";
 
 import BlogCard from "./BlogCard";
-import Loading from "../shared/Loading";
+import SpinerLoading from "../shared/SpinerLoading";
 
 const AllBlog = ({
   blogs,
@@ -86,7 +86,7 @@ const AllBlog = ({
   return (
     <div className="min-h-screen">
       {loading ? (
-        <Loading />
+        <SpinerLoading />
       ) : (
         <div>
           {!blogs || blogs?.length === 0 ? (

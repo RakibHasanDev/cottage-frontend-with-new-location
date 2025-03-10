@@ -173,7 +173,7 @@ const schoolSupply = () => {
             </div>
           </div>
         </div>
-        {/* <div className="grid md:grid-cols-2 gap-7 mt-[28px]">
+        <div className="grid md:grid-cols-2 gap-7 mt-[28px]">
           <div className="grid grid-rows-3 grid-flow-col gap-7">
             <div
               className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
@@ -181,9 +181,9 @@ const schoolSupply = () => {
               data-aos-duration="1000"
             >
               <PhotoProvider>
-                <PhotoView src={img10}>
+                <PhotoView src={"/assets/new-school-giveaway/img11.jpg"}>
                   <img
-                    src={img10}
+                    src={"/assets/new-school-giveaway/img11.jpg"}
                     alt="img-1"
                     className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
                   />
@@ -196,9 +196,9 @@ const schoolSupply = () => {
               data-aos-duration="1200"
             >
               <PhotoProvider>
-                <PhotoView src={img11}>
+                <PhotoView src={"/assets/new-school-giveaway/img-12.jpg"}>
                   <img
-                    src={img11}
+                    src={"/assets/new-school-giveaway/img-12.jpg"}
                     alt="img2"
                     className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
                   ></img>
@@ -211,9 +211,9 @@ const schoolSupply = () => {
               data-aos-duration="1400"
             >
               <PhotoProvider>
-                <PhotoView src={img12}>
+                <PhotoView src={"/assets/new-school-giveaway/img-13.jpg"}>
                   <img
-                    src={img12}
+                    src={"/assets/new-school-giveaway/img-13.jpg"}
                     alt="img3"
                     className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
                   />
@@ -226,9 +226,9 @@ const schoolSupply = () => {
               data-aos-duration="1600"
             >
               <PhotoProvider>
-                <PhotoView src={img13}>
+                <PhotoView src={"/assets/new-school-giveaway/img-14.jpg"}>
                   <img
-                    src={img13}
+                    src={"/assets/new-school-giveaway/img-14.jpg"}
                     alt=""
                     className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
                   />
@@ -244,9 +244,9 @@ const schoolSupply = () => {
               data-aos-duration="1000"
             >
               <PhotoProvider>
-                <PhotoView src={img15}>
+                <PhotoView src={"/assets/new-school-giveaway/img-16.jpg"}>
                   <img
-                    src={img15}
+                    src={"/assets/new-school-giveaway/img-16.jpg"}
                     alt="img-1"
                     className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
                   />
@@ -259,9 +259,9 @@ const schoolSupply = () => {
               data-aos-duration="1200"
             >
               <PhotoProvider>
-                <PhotoView src={img16}>
+                <PhotoView src={"/assets/new-school-giveaway/img-17.jpg"}>
                   <img
-                    src={img16}
+                    src={"/assets/new-school-giveaway/img-17.jpg"}
                     alt="img-1"
                     className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer  "
                   />
@@ -274,9 +274,9 @@ const schoolSupply = () => {
               data-aos-duration="1400"
             >
               <PhotoProvider>
-                <PhotoView src={img14}>
+                <PhotoView src={"/assets/new-school-giveaway/img-15.jpg"}>
                   <img
-                    src={img14}
+                    src={"/assets/new-school-giveaway/img-15.jpg"}
                     alt="img-1"
                     className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer "
                   />
@@ -289,9 +289,9 @@ const schoolSupply = () => {
               data-aos-duration="1400"
             >
               <PhotoProvider>
-                <PhotoView src={img12}>
+                <PhotoView src={"/assets/new-school-giveaway/img-13.jpg"}>
                   <img
-                    src={img12}
+                    src={"/assets/new-school-giveaway/img-13.jpg"}
                     alt="img-1"
                     className="w-full  h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
                   />
@@ -304,9 +304,9 @@ const schoolSupply = () => {
               data-aos-duration="1600"
             >
               <PhotoProvider>
-                <PhotoView src={img18}>
+                <PhotoView src={"/assets/new-school-giveaway/img-19.jpg"}>
                   <img
-                    src={img18}
+                    src={"/assets/new-school-giveaway/img-19.jpg"}
                     alt="img-1"
                     className=" h-[100%] w-full shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
                   />
@@ -314,7 +314,7 @@ const schoolSupply = () => {
               </PhotoProvider>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

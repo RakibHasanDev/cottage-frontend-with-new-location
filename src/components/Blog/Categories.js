@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import createSlug from "../shared/slugify";
 import Link from "next/link";
 import OverlayLoading from "../shared/OverlayLoading";
+import SpinerLoading from "../shared/SpinerLoading";
 
 const cardStyle = {
   boxShadow:
@@ -132,7 +133,7 @@ const Categories = ({ handleSearch, handleButtonClick }) => {
         <hr className="w-[50px] border-t-[2px] border-[#00A6B2] mx-auto" />
 
         <div className="mt-5">
-          {queryLoading && <OverlayLoading />}
+          {queryLoading && <SpinerLoading />}
           {blogs
             ?.filter(
               (blog) =>

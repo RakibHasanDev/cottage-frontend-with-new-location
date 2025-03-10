@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import OverlayLoading from "@/components/shared/OverlayLoading";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
 import dynamic from "next/dynamic";
+import SpinerLoading from "@/components/shared/SpinerLoading";
 
 const HeroSection = dynamic(() => import("@/components/Blog/Herosection"), {
   suspense: true,
@@ -76,7 +77,7 @@ const Blog = () => {
 
       {queryLoading ? (
         <div className="py-5">
-          <OverlayLoading />
+          <SpinerLoading />
         </div>
       ) : (
         <div>
