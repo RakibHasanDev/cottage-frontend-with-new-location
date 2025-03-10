@@ -23,12 +23,12 @@ const toysGiveaway = () => {
 
       <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
         <div className="lg:mb-8  py-5">
-          <h1 className=" text-center  text-xl font-bold text-primary md:text-xl lg:text-2xl xl:text-4xl  dark:text-gray-100 text-shadow league-spartan">
+          <h1 className=" text-center  text-xl font-bold text-[#00A6B2] md:text-xl lg:text-2xl xl:text-4xl  dark:text-gray-100 text-shadow league-spartan">
             {" "}
             Christmas Toys Giveaway{" "}
           </h1>
           <div className="flex justify-center ">
-            <hr className="bg-primary px-5 md:mt-2 mt-2 py-[1px] w-[100px]" />
+            <hr className="bg-[#00A6B2] px-5 md:mt-2 mt-2 py-[1px] w-[100px]" />
           </div>
         </div>
         <div className="grid md:grid-cols-2 gap-7">
@@ -43,7 +43,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img1.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%]  center shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -58,7 +58,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img2.jpg"}
                     alt="img2"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   ></img>
                 </PhotoView>
               </PhotoProvider>
@@ -73,7 +73,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img3.jpg"}
                     alt="img3"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -88,7 +88,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img4.jpg"}
                     alt=""
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -106,7 +106,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img5.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom "
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -121,7 +121,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img1.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -136,7 +136,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img7.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom "
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -151,7 +151,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img8.jpg"}
                     alt="img-1"
-                    className="w-full  h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -166,7 +166,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img9.jpg"}
                     alt="img-1"
-                    className=" h-[100%] w-full shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -185,7 +185,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img11.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -200,7 +200,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img10.jpg"}
                     alt="img2"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   ></img>
                 </PhotoView>
               </PhotoProvider>
@@ -215,7 +215,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img12.jpg"}
                     alt="img3"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -230,7 +230,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img13.jpg"}
                     alt=""
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -248,7 +248,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img15.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -263,7 +263,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img1.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer  "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -278,7 +278,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img16.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -293,7 +293,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img17.jpg"}
                     alt="img-1"
-                    className="w-full  h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -308,7 +308,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img18.jpg"}
                     alt="img-1"
-                    className=" h-[100%] w-full shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -327,7 +327,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img19.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -342,7 +342,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img20.jpg"}
                     alt="img2"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   ></img>
                 </PhotoView>
               </PhotoProvider>
@@ -357,7 +357,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img21.jpg"}
                     alt="img3"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -372,7 +372,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img22.jpg"}
                     alt=""
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -390,7 +390,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img23.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -405,7 +405,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img25.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer  "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -420,7 +420,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img2.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -435,7 +435,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img26.jpg"}
                     alt="img-1"
-                    className="w-full  h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -450,7 +450,7 @@ const toysGiveaway = () => {
                   <img
                     src={"/assets/christmas-toy/img27.jpg"}
                     alt="img-1"
-                    className=" h-[100%] w-full shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>

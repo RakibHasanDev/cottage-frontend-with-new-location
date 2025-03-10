@@ -23,12 +23,12 @@ const breastCancerAwareness = () => {
 
       <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
         <div className="lg:mb-8  py-5">
-          <h1 className=" text-center  text-xl  md:text-xl lg:text-2xl xl:text-4xl font-bold text-primary dark:text-gray-100 text-shadow league-spartan">
+          <h1 className=" text-center  text-xl  md:text-xl lg:text-2xl xl:text-4xl font-bold text-[#00A6B2] dark:text-gray-100 text-shadow league-spartan">
             {" "}
             Breast Cancer Awareness Month - 2024
           </h1>
           <div className="flex justify-center ">
-            <hr className="bg-primary px-5 md:mt-2 mt-2 py-[1px] w-[100px]" />
+            <hr className="bg-[#00A6B2] px-5 md:mt-2 mt-2 py-[1px] w-[100px]" />
           </div>
         </div>
         <div className="grid md:grid-cols-2 gap-7">
@@ -43,7 +43,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img1.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%]  center shadow-md border-[1px] border-primary  object-cover custom-zoom "
+                    className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -58,7 +58,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/mobile.webp"}
                     alt="img-1"
-                    className="w-full h-[100%]  center shadow-md border-[1px] border-primary  object-cover custom-zoom "
+                    className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -73,7 +73,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img3.jpg"}
                     alt="img2"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   ></img>
                 </PhotoView>
               </PhotoProvider>
@@ -88,7 +88,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img4.jpg"}
                     alt="img3"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -103,7 +103,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img15.jpg"}
                     alt=""
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -121,7 +121,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img9.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom "
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -136,7 +136,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img2.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -151,7 +151,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img5.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom "
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -166,7 +166,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img8.jpg"}
                     alt="img-1"
-                    className="w-full  h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -181,7 +181,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img13.jpg"}
                     alt="img-1"
-                    className=" h-[100%] w-full shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -200,7 +200,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/cover.webp"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -215,7 +215,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img14.jpg"}
                     alt="img2"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   ></img>
                 </PhotoView>
               </PhotoProvider>
@@ -230,7 +230,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img11.jpg"}
                     alt="img3"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -245,7 +245,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img17.jpg"}
                     alt=""
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -263,7 +263,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img10.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -278,7 +278,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img8.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer  "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -293,7 +293,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img6.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -308,7 +308,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img12.jpg"}
                     alt="img-1"
-                    className="w-full  h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -323,7 +323,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img18.jpg"}
                     alt="img-18"
-                    className=" h-[100%] w-full shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -342,7 +342,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img27.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -357,7 +357,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img24.jpg"}
                     alt="img2"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   ></img>
                 </PhotoView>
               </PhotoProvider>
@@ -372,7 +372,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img21.jpg"}
                     alt="img3"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary  object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -387,7 +387,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img19.jpg"}
                     alt=""
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -405,7 +405,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img25.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -420,7 +420,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img28.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer  "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -435,7 +435,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img26.jpg"}
                     alt="img-1"
-                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-primary cursor-pointer "
+                    className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -450,7 +450,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img20.jpg"}
                     alt="img-1"
-                    className="w-full  h-[100%] shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>
@@ -465,7 +465,7 @@ const breastCancerAwareness = () => {
                   <img
                     src={"/assets/Breast_Cancer_Awarencess/img29.jpg"}
                     alt="img-18"
-                    className=" h-[100%] w-full shadow-md border-[1px] border-primary cursor-pointer object-cover custom-zoom"
+                    className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                   />
                 </PhotoView>
               </PhotoProvider>

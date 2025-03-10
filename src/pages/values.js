@@ -46,7 +46,7 @@ const Values = () => {
               </span>{" "}
               Values, Of Cottage Home Care Services
             </h2>
-            <hr className="mt-3 border-t-[1px] border-primary w-16 mx-auto " />
+            <hr className="mt-3 border-t-[1px] border-[#00A6B2] w-16 mx-auto " />
             <p className="text-base text-gray-700 md:text-lg font-medium mt-5 py-2 dark:text-gray-200">
               “HHA/PCA & CDPAP SERVICES THROUGHOUT NEW YORK CITY, NASSAU &
               SUFFOLK COUNTY, WESTCHESTER & ALBANY”
@@ -58,7 +58,7 @@ const Values = () => {
                 <div className="mb-4 mr-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
                     <svg
-                      className="w-8 h-8 text-primary sm:w-10 sm:h-10"
+                      className="w-8 h-8 text-[#00A6B2] sm:w-10 sm:h-10"
                       stroke="currentColor"
                       viewBox="0 0 52 52"
                     >
@@ -87,7 +87,7 @@ const Values = () => {
                 <div className="mb-4 mr-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
                     <svg
-                      className="w-8 h-8 text-primary sm:w-10 sm:h-10"
+                      className="w-8 h-8 text-[#00A6B2] sm:w-10 sm:h-10"
                       stroke="currentColor"
                       viewBox="0 0 52 52"
                     >
@@ -116,7 +116,7 @@ const Values = () => {
                 <div className="mb-4 mr-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
                     <svg
-                      className="w-8 h-8 text-primary sm:w-10 sm:h-10"
+                      className="w-8 h-8 text-[#00A6B2] sm:w-10 sm:h-10"
                       stroke="currentColor"
                       viewBox="0 0 52 52"
                     >
@@ -147,7 +147,7 @@ const Values = () => {
                 <div className="mb-4 mr-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
                     <svg
-                      className="w-8 h-8 text-primary sm:w-10 sm:h-10"
+                      className="w-8 h-8 text-[#00A6B2] sm:w-10 sm:h-10"
                       stroke="currentColor"
                       viewBox="0 0 52 52"
                     >
@@ -176,7 +176,7 @@ const Values = () => {
                 <div className="mb-4 mr-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
                     <svg
-                      className="w-8 h-8 text-primary sm:w-10 sm:h-10"
+                      className="w-8 h-8 text-[#00A6B2] sm:w-10 sm:h-10"
                       stroke="currentColor"
                       viewBox="0 0 52 52"
                     >
@@ -206,7 +206,7 @@ const Values = () => {
                 <div className="mb-4 mr-4">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
                     <svg
-                      className="w-8 h-8 text-primary sm:w-10 sm:h-10"
+                      className="w-8 h-8 text-[#00A6B2] sm:w-10 sm:h-10"
                       stroke="currentColor"
                       viewBox="0 0 52 52"
                     >

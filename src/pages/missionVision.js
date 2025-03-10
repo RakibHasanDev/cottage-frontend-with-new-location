@@ -21,7 +21,7 @@ const MissionVision = () => {
             {" "}
             Mission And Vision Of Cottage Care{" "}
           </h1>
-          <hr className="mt-2 border-t-[1px] border-primary w-16 mx-auto " />
+          <hr className="mt-2 border-t-[1px] border-[#00A6B2] w-16 mx-auto " />
           <div className="grid md:grid-cols-8  gap-8 items-center mt-2">
             <div
               className="md:col-span-4 lg:col-span-2 text-gray-600 mt-5"
