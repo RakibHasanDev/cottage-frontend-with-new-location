@@ -57,6 +57,11 @@ const UpcomingEvent = () => {
           name="keywords"
           content="Cottage Home Care upcoming events, health and wellness workshops, community engagement activities, future home care events, scheduled events, community support events, learn and connect, upcoming healthcare events, Cottage Home Care activities"
         />
+
+        <link
+          rel="canonical"
+          href="https://cottagehomecare.com/UpcomingEvent/"
+        />
       </Head>
       <main className="min-h-screen dark:bg-slate-600 bg-[#F5F5F7]">
         <div className="relative  bg-cover bg-center text-center h-[40vh] md:min-h-[80vh] upcoming-cover "></div>

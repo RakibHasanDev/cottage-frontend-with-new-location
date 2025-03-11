@@ -6,13 +6,15 @@ import PopUp from "./shared/PopUp";
 
 const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden dark:bg-slate-600">
+    <div className="flex flex-col min-h-screen  dark:bg-slate-600">
       <TopBar />
       <Navbar />
-      <PopUp />
-      <main className="flex-1">{children}</main>
-      <Footer />
-      <ScrollButton />
+      <div className="overflow-hidden">
+        <PopUp />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <ScrollButton />
+      </div>
     </div>
   );
 };

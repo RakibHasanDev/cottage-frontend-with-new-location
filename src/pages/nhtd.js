@@ -156,7 +156,7 @@ const NHTD = () => {
         {/* ✅ Open Graph Meta Tags (Facebook & LinkedIn) */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://cottagehomecare.com/nhtd" />
+        <meta property="og:url" content="https://cottagehomecare.com/nhtd/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
@@ -171,6 +171,8 @@ const NHTD = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/hero.webp"
         />
+
+        <link rel="canonical" href="https://cottagehomecare.com/nhtd/" />
 
         {/* ✅ Preloading Images for Faster Load Times */}
         {preloadLinks.map((link, index) => (

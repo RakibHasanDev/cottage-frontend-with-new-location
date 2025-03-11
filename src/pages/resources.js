@@ -171,13 +171,14 @@ const Resources = () => {
         <meta property="og:description" content={description} />
         <meta
           property="og:url"
-          content="https://cottagehomecare.com/resources"
+          content="https://cottagehomecare.com/resources/"
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://cottagehomecare.com/logo.png"
         />
+        <link rel="canonical" href="https://cottagehomecare.com/resources/" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
       <main className="dark:bg-slate-600 min-h-screen">

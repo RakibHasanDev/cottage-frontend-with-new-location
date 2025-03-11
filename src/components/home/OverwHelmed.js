@@ -4,6 +4,7 @@ import { FaPlayCircle, FaRegCalendar } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import ModalBody from "../shared/ModalBody";
 import Image from "next/image";
+import IconLoading from "../shared/IconLoading";
 
 const optimizedImage = (url, width = 1080) =>
   url.replace("/upload/", `/upload/f_auto,q_auto,dpr_auto,w_${width}/`);
@@ -43,7 +44,7 @@ const OverwHelmed = () => {
           <img
             className="absolute w-[400px] md:w-[530px] md:h-[530px] top-2 md:top-4 z-0 rotate-3 md:-left-[10px] -left-[10px] dark:opacity-75"
             src={optimizedImage(
-              "https://res.cloudinary.com/di3wwp9s0/image/upload/v1732629154/zj5lkpregydcomckn7fc.png"
+              "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711490/overhelmed/overhelmed_kvgwuz.png"
             )}
             alt="bg-shape"
           />
@@ -163,7 +164,7 @@ const OverwHelmed = () => {
               {/* <FaPhone className="mr-2 " /> */}
               <span ref={ref} className="h-[17px] ">
                 {inView && (
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <Suspense fallback={<IconLoading />}>
                     <Lottie
                       animationData={callReader}
                       loop={true}

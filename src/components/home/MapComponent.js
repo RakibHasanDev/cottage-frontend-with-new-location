@@ -34,7 +34,7 @@ const MapComponent = () => {
         sunday: "08:30 AM - 05:00 PM",
       },
       picture:
-        "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728484306/u8nzwc9uojf5izbvnzu5.webp",
+        "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711276/map/map-1_fyhqtk.webp",
     },
     {
       officeName: "Long Island Office",
@@ -52,7 +52,7 @@ const MapComponent = () => {
         sunday: "Closed",
       },
       picture:
-        "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728484372/ogcu72ifm9dg0hz63nog.webp",
+        "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711276/map/map-1_fyhqtk.webp",
     },
     {
       officeName: "Albany Office",
@@ -70,7 +70,7 @@ const MapComponent = () => {
         sunday: "Closed",
       },
       picture:
-        "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728484337/wsydgxthgxzakjlvkmku.webp",
+        "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711326/map/map-3_gtzqqu.webp",
     },
     {
       officeName: "Bronx Office",
@@ -88,7 +88,7 @@ const MapComponent = () => {
         sunday: "Closed",
       },
       picture:
-        "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728484402/jrolh15l8ynngyerxtat.webp",
+        "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711356/map/map-4_sizzac.webp",
     },
   ];
   const [selectedOffice, setSelectedOffice] = useState(offices[0]);

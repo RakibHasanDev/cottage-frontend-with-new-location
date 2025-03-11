@@ -172,7 +172,7 @@ const Cdpap = () => {
         {/* ✅ Open Graph Meta Tags (For Facebook & LinkedIn) */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://cottagehomecare.com/cdpap" />
+        <meta property="og:url" content="https://cottagehomecare.com/cdpap/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
@@ -187,6 +187,7 @@ const Cdpap = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/hero.webp"
         />
+        <link rel="canonical" href="https://cottagehomecare.com/cdpap/" />
 
         {/* ✅ Structured Data (Schema.org JSON-LD) */}
         <script

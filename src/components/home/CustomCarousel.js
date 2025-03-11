@@ -6,16 +6,16 @@ const optimizedImage = (url, width = 1920) =>
 
 const images = [
   {
-    lg: "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728479602/tyfxpgbtpv364idxhn4g.webp",
-    sm: "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728479674/pa2vvqc61tvi4ctyqed9.webp",
+    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710684/Website%20Hero%20Images/hero-1_y7msil.webp",
+    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710747/Website%20Hero%20Images/hero-1-sm_b5yp9m.webp",
   },
   {
-    lg: "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728479703/njxbsug6feitm1blsjbu.webp",
-    sm: "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728479733/yuzajymfp9auat0tc8bq.webp",
+    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710796/Website%20Hero%20Images/hero-2_bsnmsg.webp",
+    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710842/Website%20Hero%20Images/hero-2-sm_ijl8he.webp",
   },
   {
-    lg: "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728479755/kjzfcqxb4yzgo7itgrqw.webp",
-    sm: "https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728479819/x7ujkz3bnbq3itp7ylpv.webp",
+    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710873/Website%20Hero%20Images/hero-3_qtouim.webp",
+    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710910/Website%20Hero%20Images/hero-3-sm_lp8ejg.webp",
   },
 ];
 

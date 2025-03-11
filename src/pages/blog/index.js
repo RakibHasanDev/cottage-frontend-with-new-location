@@ -82,6 +82,7 @@ const Blog = () => {
           name="keywords"
           content="home care blog, caregiving tips, senior care insights, health and wellness blog, Cottage Home Care news, home care industry updates, caregiver resources, home care trends, compassionate care stories, Cottage Home Care blog articles"
         />
+        <link rel="canonical" href="https://cottagehomecare.com/blog/" />
       </Head>
 
       <main className="min-h-screen dark:bg-slate-500">

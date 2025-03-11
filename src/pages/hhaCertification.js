@@ -177,13 +177,18 @@ const HhhaCertification = () => {
         <meta property="og:description" content={description} />
         <meta
           property="og:url"
-          content="https://cottagehomecare.com/hhaCertification"
+          content="https://cottagehomecare.com/hhaCertification/"
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
           content="https://cottagehomecare.com/logo.png"
         />
+        <link
+          rel="canonical"
+          href="https://cottagehomecare.com/hhaCertification/"
+        />
+
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
 

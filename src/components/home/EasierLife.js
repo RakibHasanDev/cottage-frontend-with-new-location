@@ -255,7 +255,7 @@ const EasierLife = () => {
                             message: "Please enter a valid US phone number",
                           },
                           // Custom validation: stop submission if the phone number is already in the existing numbers array
-                          // validate: validatePhoneNumber,
+                          validate: validatePhoneNumber,
                         })}
                         id="phone"
                         placeholder="Phone"

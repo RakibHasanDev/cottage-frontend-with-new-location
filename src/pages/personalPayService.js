@@ -135,7 +135,7 @@ const personalPayService = () => {
         <meta property="og:description" content={description} />
         <meta
           property="og:url"
-          content="https://cottagehomecare.com/privatePayService"
+          content="https://cottagehomecare.com/privatePayService/"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -150,6 +150,11 @@ const personalPayService = () => {
         <meta
           name="twitter:image"
           content="https://cottagehomecare.com/assets/PrivatePay/private-pay-cover.webp"
+        />
+
+        <link
+          rel="canonical"
+          href="https://cottagehomecare.com/personalPayService/"
         />
 
         {/* ✅ Preloading Hero Images for Faster Load */}

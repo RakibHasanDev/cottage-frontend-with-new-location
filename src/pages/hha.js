@@ -176,15 +176,9 @@ const hha = () => {
   // ✅ Preload Hero Images for Better LCP
   const preloadLinks = [
     {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_1920/v1739904083/hha-hero.webp",
+      href: "https://cottagehomecare.com/assets/hha.webp",
       fetchPriority: "high",
       type: "image/webp",
-    },
-    {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_1080/v1739904168/hha-mobile.webp",
-      fetchPriority: "high",
-      type: "image/webp",
-      media: "(max-width: 688px)",
     },
   ];
 
@@ -201,7 +195,7 @@ const hha = () => {
         {/* ✅ Open Graph Meta Tags (For Facebook & LinkedIn) */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://cottagehomecare.com/hha" />
+        <meta property="og:url" content="https://cottagehomecare.com/hha/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
@@ -216,6 +210,8 @@ const hha = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/assets/hha.webp"
         />
+
+        <link rel="canonical" href="https://cottagehomecare.com/hha/" />
 
         {/* ✅ Preloading Hero Images for Faster Load */}
         {preloadLinks.map((link, index) => (

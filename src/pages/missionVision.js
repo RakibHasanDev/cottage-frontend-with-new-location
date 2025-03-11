@@ -14,6 +14,10 @@ const MissionVision = () => {
           name="keywords"
           content="Cottage Home Care mission, Cottage Home Care vision, home care core values, exceptional home care commitment, long-term goals, quality of life improvement, community impact, home care dedication, client-centered care, Cottage Home Care philosophy"
         />
+        <link
+          rel="canonical"
+          href="https://cottagehomecare.com/missionVision/"
+        />
       </Head>
       <main className="min-h-screen dark:bg-slate-600">
         <div className="md:w-[85%] w-[95%] mx-auto pt-5 pb-20">

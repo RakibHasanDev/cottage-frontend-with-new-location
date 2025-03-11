@@ -146,7 +146,7 @@ const Contacts = () => {
         <meta property="og:description" content={description} />
         <meta
           property="og:url"
-          content="https://cottagehomecare.com/contacts"
+          content="https://cottagehomecare.com/contacts/"
         />
         <meta
           property="og:image"
@@ -161,6 +161,7 @@ const Contacts = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/logo.png"
         />
+        <link rel="canonical" href="https://cottagehomecare.com/contacts/" />
 
         {/* ✅ Structured Data */}
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>

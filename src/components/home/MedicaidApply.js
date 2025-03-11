@@ -133,7 +133,7 @@ const MedicaidApply = () => {
             <div className="order-first sm:order-none ml-4 lg:ml-0">
               <img
                 className=" w-[95%] md:w-[350px] lg:w-[550px] xl:w-[600px] image-infinity "
-                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733772316/dqzldqhgufothljj8bqn.webp"
+                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711429/medicaid/medicaid_hk0ln3.webp"
                 alt="medicaid-apply"
               />
             </div>

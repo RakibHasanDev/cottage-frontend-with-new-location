@@ -3,6 +3,7 @@ import React, { useEffect, useState, Suspense } from "react";
 import dynamic from "next/dynamic";
 import { useInView } from "react-intersection-observer";
 import callReader from "../../assets/iUponBYPYB.json";
+import IconLoading from "../shared/IconLoading";
 
 // ✅ Dynamically import Lottie only on the client side
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
@@ -76,7 +77,7 @@ const HhaRequirement = () => {
           <div className="md:col-span-3 order-first sm:order-none">
             <div ref={ref} className="mx-auto  -mt-8">
               {inView && (
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<IconLoading />}>
                   <Lottie
                     animationData={callReader}
                     loop={true}

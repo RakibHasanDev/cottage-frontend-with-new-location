@@ -1,14 +1,15 @@
 import React, { Suspense, useEffect } from "react";
 import callReader from "../../assets/social-media-lottie/call.json";
 import { useInView } from "react-intersection-observer";
-import Loading from "../shared/Loading";
+import IconLoading from "../shared/IconLoading";
+
 const HeroSection = () => {
   const Lottie = React.lazy(() => import("lottie-react"));
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   const Placeholder = () => (
     <div>
-      <Loading />
+      <IconLoading />
     </div>
   );
 

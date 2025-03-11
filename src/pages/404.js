@@ -24,7 +24,7 @@ const ErrorPage = () => {
           </div>
           <div>
             <img
-              src="https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728484183/ntu4eblziau5sfpapxpb.png"
+              src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711636/404/404_ydze7z.png"
               alt="404-first"
               style={{ width: "100%", height: "auto" }}
             />
@@ -33,7 +33,7 @@ const ErrorPage = () => {
       </div>
       <div>
         <img
-          src="https://res.cloudinary.com/dlw7u1u5p/image/upload/v1728484233/y54gghnn72v5nrvr039j.png"
+          src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711663/404/404-1_czfgmz.png"
           alt="404-second"
           style={{ width: "100%", height: "auto" }}
         />

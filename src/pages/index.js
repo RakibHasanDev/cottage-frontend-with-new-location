@@ -2,7 +2,12 @@ import Head from "next/head";
 import React, { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
-import WeAre from "@/components/home/WeAre";
+
+// ✅ Ensure it's included in the static build (SSG)
+const WeAre = dynamic(() => import("@/components/home/WeAre"), {
+  suspense: false, // ❌ Avoid Suspense (it doesn't work well with SSG)
+  ssr: true, // ✅ Ensures it's rendered in the SSG output
+});
 
 // ✅ Import Components Dynamically
 const CustomCarousel = dynamic(
@@ -150,16 +155,15 @@ export default function Home() {
     },
   ];
 
-  // ✅ Preload Hero Images for Improved LCP Performance
   const preloadLinks = [
     {
-      href: "https://res.cloudinary.com/dlw7u1u5p/image/upload/q_auto,f_auto,w_1920/v1728479602/tyfxpgbtpv364idxhn4g.webp",
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_1920/v1741710264/Website%20Hero%20Images/tyfxpgbtpv364idxhn4g_tsecxu.webp",
       as: "image",
       type: "image/webp",
       fetchPriority: "high",
     },
     {
-      href: "https://res.cloudinary.com/dlw7u1u5p/image/upload/q_auto,f_auto,w_720/v1728479674/pa2vvqc61tvi4ctyqed9.webp",
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_720/v1741710346/Website%20Hero%20Images/pa2vvqc61tvi4ctyqed9_xz2bhj.webp",
       as: "image",
       type: "image/webp",
       fetchPriority: "high",
@@ -221,7 +225,7 @@ export default function Home() {
         />
       </Head>
 
-      <div className="dark:bg-slate-600">
+      <div className="dark:bg-slate-600 min-h-screen">
         {/* ✅ Hero Section (Fast LCP) */}
         <CustomCarousel />
 
@@ -235,7 +239,7 @@ export default function Home() {
           <Overwhelmed />
         </Suspense>
 
-        <WeAre />
+        {isMounted ? <WeAre /> : <SkeletonLoading />}
 
         <Suspense fallback={<SkeletonLoading />}>
           <Quality />

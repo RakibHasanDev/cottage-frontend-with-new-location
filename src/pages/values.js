@@ -14,6 +14,7 @@ const Values = () => {
           name="keywords"
           content="Cottage Home Care values, core values, compassion in home care, integrity in home care, respect in home care, excellence in home care, home care quality, client-centered values, home care principles, Cottage Home Care commitment"
         />
+        <link rel="canonical" href="https://cottagehomecare.com/values/" />
       </Head>
       <main className="dark:bg-slate-600">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20 ">

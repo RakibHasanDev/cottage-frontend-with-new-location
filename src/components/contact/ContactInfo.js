@@ -12,6 +12,7 @@ import emailReader from "../../assets/button-lottie/email.json";
 import { IoLocationSharp } from "react-icons/io5";
 import { GrInstagram } from "react-icons/gr";
 import Loading from "../shared/Loading";
+import IconLoading from "../shared/IconLoading";
 
 const Lottie = React.lazy(() => import("lottie-react"));
 
@@ -20,7 +21,7 @@ const ContactInfo = () => {
 
   const Placeholder = () => (
     <div>
-      <Loading />
+      <IconLoading />
     </div>
   );
 
@@ -173,7 +174,7 @@ const ContactInfo = () => {
             <a href="mailto:info@cottagehomecare.com">
               <div ref={ref}>
                 {inView && (
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <Suspense fallback={<IconLoading />}>
                     <Lottie
                       animationData={emailReader}
                       loop={true}

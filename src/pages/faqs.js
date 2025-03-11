@@ -256,6 +256,7 @@ const Faqs = () => {
           name="keywords"
           content="home care FAQs, Cottage Home Care services, COVID-19 safety FAQ, home care pricing questions, home care policies, senior care solutions, healthcare FAQs, Cottage Home Care information"
         />
+        <link rel="canonical" href="https://cottagehomecare.com/faqs/" />
       </Head>
       <main className="min-h-screen dark:bg-slate-600 bg-blue-50">
         <div className="relative bg-cover bg-center text-center h-[40vh] md:min-h-[82vh] faqs-Banner "></div>
