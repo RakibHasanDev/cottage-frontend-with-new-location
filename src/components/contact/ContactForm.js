@@ -14,6 +14,8 @@ const ContactForm = () => {
 
   const apiKey = process.env.NEXT_PUBLIC_secureApiKey;
 
+  console.log(apiKey);
+
   const {
     register,
     handleSubmit,
@@ -196,7 +198,7 @@ const ContactForm = () => {
                       message: "Please enter a valid US phone number",
                     },
                     // Custom validation: stop submission if the phone number is already in the existing numbers array
-                    validate: validatePhoneNumber, // Custom function to check existing numbers
+                    // validate: validatePhoneNumber
                   })}
                   id="phone"
                   placeholder="Phone"

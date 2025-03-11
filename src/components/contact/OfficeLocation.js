@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Queens from "./OfficeLocation/Queens";
 import Bronx from "./OfficeLocation/Bronx";
+import OfficeModal from "../shared/OfficeModal";
 
 const OfficeLocation = () => {
   const now = new Date().toLocaleDateString("en-US", { weekday: "long" });
@@ -59,12 +60,12 @@ const OfficeLocation = () => {
   const all = [{ selectedText, selectedDay, selectedVal }];
   //   console.log(all);
 
-  const [office, setOffice] = useState("");
-  const [modalData, setModalData] = useState(false);
+  const [office, setOffice] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const officeHandler = (office) => {
-    setOffice(office);
-    setModalData(true);
+  const officeHandler = (selectedOffice) => {
+    setOffice(selectedOffice);
+    setIsModalOpen(true);
   };
 
   const offices = [
@@ -175,7 +176,6 @@ const OfficeLocation = () => {
               <div className="mt-5 bg-hov2">
                 <label
                   onClick={() => officeHandler(office)}
-                  htmlFor="booking-modal"
                   className="bg-[#00A6B2] px-4 py-3 rounded-md shadow-md text-white text-sm  lg:text-xs 2xl:text-sm cursor-pointer open-sans"
                 >
                   Contact the {office.name}
@@ -186,9 +186,10 @@ const OfficeLocation = () => {
 
           <Bronx officeHandler={officeHandler}> </Bronx>
         </div>
-        {/* {modalData && (
-          <Modal office={office} setModalData={setModalData}></Modal>
-        )} */}
+
+        {isModalOpen && (
+          <OfficeModal office={office} onClose={() => setIsModalOpen(false)} />
+        )}
       </div>
     </div>
   );

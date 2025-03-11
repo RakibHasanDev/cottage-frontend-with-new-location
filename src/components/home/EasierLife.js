@@ -14,7 +14,7 @@ const EasierLife = () => {
   const [showProperty, setShowProperty] = useState("");
 
   const pathname = usePathname(); // ✅ Correct Next.js way to get pathname
-  const apiKey = process.env.NEXT_PUBLIC_SECURE_API_KEY; // ✅ Use NEXT_PUBLIC_ prefix for env variables
+  const apiKey = process.env.NEXT_PUBLIC_secureApiKey; // ✅ Use NEXT_PUBLIC_ prefix for env variables
 
   useEffect(() => {
     if (
@@ -152,7 +152,7 @@ const EasierLife = () => {
       .then((data) => {
         if (data.acknowledged) {
           // toast.success("Message Send Successfully");
-          //   smsHandler(contactInfo);
+          smsHandler(contactInfo);
           saveUser(name, email);
           updateTime(userMessage, email, name);
         }
@@ -255,7 +255,7 @@ const EasierLife = () => {
                             message: "Please enter a valid US phone number",
                           },
                           // Custom validation: stop submission if the phone number is already in the existing numbers array
-                          validate: validatePhoneNumber, // Custom function to check existing numbers
+                          // validate: validatePhoneNumber,
                         })}
                         id="phone"
                         placeholder="Phone"
