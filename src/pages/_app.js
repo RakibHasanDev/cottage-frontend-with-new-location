@@ -1,27 +1,31 @@
 import "@/styles/globals.css";
 import "react-photo-view/dist/react-photo-view.css";
-import Layout from "@/components/Layout";
-import LoadingScreen from "@/components/shared/LoadingScreen";
+import "aos/dist/aos.css";
+import "@/components/shared/LoadingScreen"; // ✅ Ensure this is imported
+import "@/context/AuthProvider"; // ✅ Ensure Auth is applied globally
+
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import dynamic from "next/dynamic";
 import Script from "next/script";
-import AuthProvider from "@/context/AuthProvider";
+import AOS from "aos";
 
-// ✅ Lazy Load TawkTo for better performance
+// ✅ Lazy load TawkTo (chat widget)
 const TawkTo = dynamic(() => import("@/components/shared/TawkTo"), {
   ssr: false,
 });
 
+// ✅ Import Layouts
+import Layout from "@/components/Layout";
+import DashboardLayout from "@/pages/dashboard/layout";
+import AuthProvider from "@/context/AuthProvider";
+import LoadingScreen from "@/components/shared/LoadingScreen";
+
 export default function App({ Component, pageProps }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-
-  // ✅ Create QueryClient only once
   const [queryClient] = useState(() => new QueryClient());
 
   // ✅ Avoid `window` usage during SSR
@@ -64,9 +68,13 @@ export default function App({ Component, pageProps }) {
     };
   }, [router]);
 
+  // ✅ Use DashboardLayout for `/dashboard/*` pages
+  const isDashboard = router.pathname.startsWith("/dashboard");
+  const LayoutComponent = isDashboard ? DashboardLayout : Layout;
+
   return (
     <QueryClientProvider client={queryClient}>
-      {/* ✅ Google Analytics with Delayed Execution */}
+      {/* ✅ Google Analytics */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-X3W2KFKTS2"
         strategy="afterInteractive"
@@ -82,15 +90,12 @@ export default function App({ Component, pageProps }) {
         `}
       </Script>
       <AuthProvider>
-        <Layout>
+        <LayoutComponent>
           <Toaster />
           {loading && <LoadingScreen />}
-
-          {/* ✅ Only render chat widget on client-side */}
           {isClient && <TawkTo />}
-
           <Component {...pageProps} />
-        </Layout>
+        </LayoutComponent>
       </AuthProvider>
     </QueryClientProvider>
   );

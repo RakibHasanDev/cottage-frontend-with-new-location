@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { AiOutlineHome, AiOutlineUser, AiOutlineLogout } from "react-icons/ai";
 import { MdDashboard, MdPersonAdd, MdPostAdd } from "react-icons/md";
 import { FiSettings } from "react-icons/fi";
+import { FaFileSignature } from "react-icons/fa";
 
 const Sidebar = ({ handleLogout }) => {
   const router = useRouter();
@@ -30,8 +31,8 @@ const Sidebar = ({ handleLogout }) => {
           label="Add Blog"
         />
         <SidebarLink
-          href="/dashboard/add-blog"
-          icon={<MdPostAdd />}
+          href="/dashboard/email-signature"
+          icon={<FaFileSignature />}
           label="Generate Email Signature"
         />
       </nav>
@@ -51,7 +52,7 @@ const SidebarLink = ({ href, icon, label }) => {
           ${
             isActive
               ? "bg-gray-600 dark:bg-[#00A6B2] text-gray-100 "
-              : "hover:bg-gray-700 hover:text-gray-100 dark:bg-slate-400 dark:text-white "
+              : "hover:bg-gray-700 hover:text-gray-100 dark:bg-slate-400 bg-slate-300 dark:text-white "
           }`}
       >
         <span className="mr-3 text-xl">{icon}</span>
