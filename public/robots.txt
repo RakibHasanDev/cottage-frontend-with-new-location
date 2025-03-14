@@ -2,7 +2,7 @@ User-agent: *
 Disallow: /admin
 Disallow: /login
 Disallow: /register
-Disallow: /dashBoard 
+Disallow: /dashboard 
 
 # Allow all bots to crawl everything else
 Allow: /

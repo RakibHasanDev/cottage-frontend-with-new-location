@@ -8,6 +8,7 @@ import Link from "next/link";
 import { AuthContext } from "@/context/AuthProvider";
 import SpinerLoading from "@/components/shared/SpinerLoading";
 import OverlayLoading from "@/components/shared/OverlayLoading";
+import { useRouter } from "next/router";
 
 const Lottie = React.lazy(() => import("lottie-react"));
 
@@ -15,6 +16,7 @@ const Register = () => {
   const [regError, setRegError] = useState("");
   const [loading, setLoading] = useState(null);
   const [showPass, setShowPass] = useState(false);
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -56,7 +58,7 @@ const Register = () => {
                   saveUser(data.name, data.email, imgData.data.url);
 
                   reset();
-                  //   navigate("/");
+                  router.push("/");
                 })
                 .catch((err) => console.log(err));
             })
