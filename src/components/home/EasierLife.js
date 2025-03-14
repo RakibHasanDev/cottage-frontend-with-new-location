@@ -28,7 +28,6 @@ const EasierLife = () => {
       setShowProperty(""); // Reset to default value if pathname is not matched
     }
   }, [pathname]);
-  const date = Date.now();
 
   const {
     register,
@@ -37,7 +36,7 @@ const EasierLife = () => {
     reset,
   } = useForm();
 
-  const updateTime = (userMessage, email, name) => {
+  const updateTime = (userMessage, email, name, date = Date.now()) => {
     const info = {
       date,
       name,
@@ -101,7 +100,7 @@ const EasierLife = () => {
     email,
     verify = "false",
     chat = "active",
-    time = date
+    time = Date.now()
   ) => {
     const newUser = { name, email, verify, chat, time };
     fetch("https://cottage-backend-voilerplate.vercel.app/users", {
@@ -138,7 +137,7 @@ const EasierLife = () => {
       service: data.service,
       inquiry: data.inquiry,
       messages: data.subject.replace(/<br>/g, "\n"),
-      time: date,
+      time: Date.now(),
     };
 
     fetch("https://cottage-backend-voilerplate.vercel.app/chats", {

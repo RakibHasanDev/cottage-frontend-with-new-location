@@ -62,7 +62,7 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
       data-aos="zoom-in"
       data-aos-duration="2000"
     >
-      <Link
+      <div
         style={style}
         onMouseEnter={() => setStyle(cardStyle2)}
         onMouseLeave={() => setStyle(cardStyle)}
@@ -150,7 +150,7 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
             </button>
           </Link>
         </div>
-      </Link>
+      </div>
     </div>
   );
 };

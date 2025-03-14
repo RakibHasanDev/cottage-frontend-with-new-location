@@ -45,7 +45,7 @@ const Covid = () => {
         />
         <link rel="canonical" href="https://cottagehomecare.com/covid/" />
       </Head>
-      <main className=" px-5  dark:bg-slate-600">
+      <main className=" px-5  dark:bg-slate-600 min-h-screen">
         <div className="w-[95%] md:w-[80%] mx-auto">
           <Suspense fallback={<SkeletonLoading />}>
             <Banner />

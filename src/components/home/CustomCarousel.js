@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from "react";
 import SkeletonLoading from "../shared/SkeletonLoading";
-
-const optimizedImage = (url, width = 1920) =>
-  url.replace("/upload/", `/upload/f_auto,q_auto,dpr_auto,w_${width}/`);
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+import reader2 from "../../../src/assets/Lotty File/holi.json";
+import dynamic from "next/dynamic";
 
 const images = [
   {
-    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710684/Website%20Hero%20Images/hero-1_y7msil.webp",
-    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710747/Website%20Hero%20Images/hero-1-sm_b5yp9m.webp",
+    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710684/Website%20Hero%20Images/hero-1_y7msil.webp",
+    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710747/Website%20Hero%20Images/hero-1-sm_b5yp9m.webp",
   },
   {
-    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710796/Website%20Hero%20Images/hero-2_bsnmsg.webp",
-    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710842/Website%20Hero%20Images/hero-2-sm_ijl8he.webp",
+    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710796/Website%20Hero%20Images/hero-2_bsnmsg.webp",
+    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710842/Website%20Hero%20Images/hero-2-sm_ijl8he.webp",
   },
   {
-    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710873/Website%20Hero%20Images/hero-3_qtouim.webp",
-    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741710910/Website%20Hero%20Images/hero-3-sm_lp8ejg.webp",
+    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710873/Website%20Hero%20Images/hero-3_qtouim.webp",
+    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710910/Website%20Hero%20Images/hero-3-sm_lp8ejg.webp",
   },
 ];
 
 const CustomCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [shouldDisplay, setShouldDisplay] = useState(false);
+  const [isClient, setIsClient] = useState(false); //
   const interval = 5000;
 
   useEffect(() => {
@@ -36,11 +38,37 @@ const CustomCarousel = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    setIsClient(true);
+
+    const today = new Date();
+    const deadline = new Date("March 15, 2025 23:59:59");
+    const startOfToday = new Date(today);
+    startOfToday.setHours(0, 0, 0, 0);
+
+    setShouldDisplay(today >= startOfToday && today <= deadline);
+  }, []);
+
   if (isLoading) {
     return <SkeletonLoading />;
   }
+
+  // Determine if today is within the range from today to the deadline
+
+  // console.log(shouldDisplay, today);
+
   return (
     <div className="custom-wave-section h-[84.04vh] relative">
+      {isClient && shouldDisplay && (
+        <div className="w-36 h-36 md:h-52 md:w-52 absolute -top-7 md:-top-10 right-3 md:right-8 z-20">
+          <Lottie
+            animationData={reader2}
+            loop={true}
+            className="h-fit object-cover"
+          />
+        </div>
+      )}
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
@@ -90,15 +118,15 @@ const CustomCarousel = () => {
             <picture className={index === currentIndex ? "current" : ""}>
               <source
                 media="(min-width: 768px)"
-                srcSet={optimizedImage(img.lg)}
+                srcSet={img.lg} // ✅ Now matches preload
               />
               <img
-                src={optimizedImage(img.sm, 720)}
+                src={img.sm} // ✅ Matches preload for sm
                 alt="Hero"
                 className={index === currentIndex ? "current bg-center" : ""}
-                width={img.naturalWidth}
-                height={img.naturalHeight}
-                loading={index === 0 ? "eager" : "lazy"} // Eager load first image
+                width="720"
+                height="405"
+                loading={index === 0 ? "eager" : "lazy"}
               />
             </picture>
           </div>

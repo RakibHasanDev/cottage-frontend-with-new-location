@@ -3,8 +3,6 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
 const PayrollInquiries = ({ loading, setLoading }) => {
-  const date = Date.now();
-
   const {
     register,
     handleSubmit,
@@ -21,7 +19,7 @@ const PayrollInquiries = ({ loading, setLoading }) => {
       employeeId: data?.employeeId,
       phone: data?.phone,
       subject: data?.subject,
-      today: date,
+      today: Date.now(),
     };
 
     // console.log(info)

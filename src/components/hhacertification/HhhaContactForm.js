@@ -15,9 +15,8 @@ const HhhaContactForm = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const date = Date.now();
 
-  const updateTime = (userMessage, email, name) => {
+  const updateTime = (userMessage, email, name, date = Date.now()) => {
     const info = {
       date,
       name,
@@ -53,7 +52,7 @@ const HhhaContactForm = () => {
     email,
     verify = "false",
     chat = "active",
-    time = date
+    time = Date.now()
   ) => {
     const newUser = { name, email, verify, chat, time };
     fetch("https://cottage-backend-voilerplate.vercel.app/users", {
@@ -86,7 +85,7 @@ const HhhaContactForm = () => {
       email: data.email,
       messages: data.subject.replace(/<br>/g, "\n"),
       institute: "Brooklyn Institute",
-      time: date,
+      time: Date.now(),
     };
 
     fetch("https://cottage-backend-voilerplate.vercel.app/chats", {

@@ -10,11 +10,9 @@ const ContactForm = () => {
 
   const [isChecked, setIsChecked] = useState(false);
 
-  const date = Date.now();
-
   const apiKey = process.env.NEXT_PUBLIC_secureApiKey;
 
-  console.log(apiKey);
+  // console.log(apiKey);
 
   const {
     register,
@@ -29,7 +27,7 @@ const ContactForm = () => {
     localStorage.setItem("chatLength", 1);
   };
 
-  const updateTime = (userMessage, email, name) => {
+  const updateTime = (userMessage, email, name, date = Date.now()) => {
     const info = {
       date,
       name,
@@ -85,7 +83,7 @@ const ContactForm = () => {
     email,
     verify = "false",
     chat = "active",
-    time = date
+    time = Date.now()
   ) => {
     const newUser = { name, email, verify, chat, time };
     fetch("https://cottage-backend-voilerplate.vercel.app/users", {
@@ -121,7 +119,7 @@ const ContactForm = () => {
       service: data.service,
       inquiry: data.inquiry,
       messages: data.subject.replace(/<br>/g, "\n"),
-      time: date,
+      time: Date.now(),
     };
 
     fetch("https://cottage-backend-voilerplate.vercel.app/chats", {

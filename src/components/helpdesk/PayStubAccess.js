@@ -4,8 +4,6 @@ import toast from "react-hot-toast";
 import { IoKeyOutline } from "react-icons/io5";
 
 const PayStubAccess = ({ loading, setLoading }) => {
-  const date = Date.now();
-
   const {
     register,
     handleSubmit,
@@ -23,7 +21,7 @@ const PayStubAccess = ({ loading, setLoading }) => {
       phone: data?.phone,
       email: data?.email,
       subject: data?.subject,
-      today: date,
+      today: Date.now(),
     };
 
     fetch(`https://cottage-backend-voilerplate.vercel.app/helpDesk`, {

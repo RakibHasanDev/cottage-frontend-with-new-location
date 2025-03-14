@@ -13,15 +13,13 @@ const Modal = ({ office, onClose }) => {
     reset,
   } = useForm();
 
-  const date = Date.now();
-
   const emailStorage = (email, name) => {
     localStorage.setItem("email", `${email}`);
     localStorage.setItem("name", `${name}`);
     localStorage.setItem("chatLength", 1);
   };
 
-  const updateTime = (userMessage, email, name) => {
+  const updateTime = (userMessage, email, name, date = Date.now()) => {
     const info = {
       date,
       name,
@@ -52,7 +50,7 @@ const Modal = ({ office, onClose }) => {
     email,
     verify = "false",
     chat = "active",
-    time = date
+    time = Date.now()
   ) => {
     const newUser = { name, email, verify, chat, time };
     fetch("https://cottage-backend-voilerplate.vercel.app/users", {
@@ -86,7 +84,7 @@ const Modal = ({ office, onClose }) => {
       phone: data.phone,
       messages: data.message.replace(/<br>/g, "\n"),
       officeName: office?.name,
-      time: date,
+      time: Date.now(),
     };
 
     fetch("https://cottage-backend-voilerplate.vercel.app/chats", {

@@ -54,12 +54,24 @@ const HeroSection = dynamic(() => import("@/components/Blog/Herosection"), {
 
 const BlogDetails = ({ blog }) => {
   const [currentPageUrl, setCurrentPageUrl] = useState("");
+  const [formattedDate, setFormattedDate] = useState("");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setCurrentPageUrl(window.location.href);
     }
-  }, []);
+    if (blog?.newDate) {
+      setFormattedDate(
+        new Date(blog.newDate).toLocaleString(undefined, {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      );
+    } else {
+      setFormattedDate(blog?.date || ""); // Use fallback date
+    }
+  }, [blog]);
 
   // Extract first 150 characters for description
   const metaDescription = blog?.description
@@ -76,7 +88,6 @@ const BlogDetails = ({ blog }) => {
     formState: { errors },
     reset,
   } = useForm();
-  const newDate = Date.now();
 
   const url = `https://cottage-backend-voilerplate.vercel.app/comments/${blog?._id}`;
 
@@ -96,7 +107,7 @@ const BlogDetails = ({ blog }) => {
       name: data?.fullName,
       email: data?.email,
       message: data?.comment,
-      date: newDate,
+      date: Date.now(),
       blogId: blog?._id,
     };
 
@@ -132,6 +143,10 @@ const BlogDetails = ({ blog }) => {
       {text}
     </a>
   );
+
+  <p className="text-[#8c8a98] font-semibold dark:text-gray-100 text-xs md:text-base">
+    {formattedDate}
+  </p>;
 
   return (
     <>
@@ -191,11 +206,7 @@ const BlogDetails = ({ blog }) => {
                     <div>
                       {blog?.newDate ? (
                         <p className="  text-[#8c8a98]  font-semibold dark:text-gray-100 text-xs md:text-base">
-                          {new Date(blog?.newDate).toLocaleString(undefined, {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })}
+                          {formattedDate}
                         </p>
                       ) : (
                         <p className="  text-[#8c8a98]  font-semibold dark:text-gray-100 text-sm md:text-base">

@@ -78,10 +78,6 @@ const SideNav = () => {
       question: "Community Outreach",
       answer: [
         {
-          property: "Video Gallery",
-          path: "videos",
-        },
-        {
           property: "Past Event",
           path: "pastEvent",
         },
@@ -195,8 +191,8 @@ const SideNav = () => {
                 className="w-full focus:outline-none flex justify-between items-center "
               >
                 <div className="flex items-center gap-3">
-                  <MdOutlineMedicalServices className="text-base flex-shrink-0" />
-                  <span className="uppercase font-medium tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
+                  <MdOutlineMedicalServices className="text-sm flex-shrink-0" />
+                  <span className="uppercase tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
                     {item?.question}
                   </span>
                 </div>
@@ -228,7 +224,7 @@ const SideNav = () => {
                       key={index}
                       onClick={toggleCloser}
                       href={`/${ans?.path}`}
-                      className="block font-medium tracking-wide transition-colors duration-200 uppercase text-gray-100 hover:text-[#00A6B2] py-2.5"
+                      className="block  tracking-wide transition-colors duration-200 uppercase text-gray-100 hover:text-[#00A6B2] py-2.5"
                     >
                       {ans?.property}
                     </Link>
@@ -253,8 +249,8 @@ const SideNav = () => {
                 className="w-full flex justify-between items-center  focus:outline-none"
               >
                 <div className="flex items-center gap-3">
-                  <RiCommunityFill className="text-base flex-shrink-0" />
-                  <span className="uppercase font-medium tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
+                  <RiCommunityFill className="text-sm flex-shrink-0" />
+                  <span className="uppercase  tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
                     {item?.question}
                   </span>
                 </div>
@@ -286,7 +282,7 @@ const SideNav = () => {
                       key={index}
                       onClick={toggleCloser}
                       href={`/${ans?.path}`}
-                      className="block font-medium tracking-wide transition-colors duration-200 uppercase text-gray-100 hover:text-[#00A6B2] py-2.5 "
+                      className="block  tracking-wide transition-colors duration-200 uppercase text-gray-100 hover:text-[#00A6B2] py-2.5 "
                     >
                       {ans?.property}
                     </Link>

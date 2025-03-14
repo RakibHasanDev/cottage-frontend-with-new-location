@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Queens from "./OfficeLocation/Queens";
 import Bronx from "./OfficeLocation/Bronx";
 import OfficeModal from "../shared/OfficeModal";
 
 const OfficeLocation = () => {
-  const now = new Date().toLocaleDateString("en-US", { weekday: "long" });
   //   console.log(now);
+
+  const [now, setCurrentDate] = useState("");
+
+  useEffect(() => {
+    // Ensure the date is set only on client-side
+    setCurrentDate(
+      new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(new Date())
+    );
+  }, []);
 
   let val;
   let day;

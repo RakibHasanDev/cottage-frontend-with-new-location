@@ -30,12 +30,14 @@ const Team = () => {
   };
   const rnTeam = {
     img: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1724690186/i5s7nmpqrrnisafsnacn.jpg",
-    name: "RN/DPS Team",
+    name: "Nursing Department",
   };
 
   // rotate-180
 
   const handleRotate = (team, department, leader, id) => {
+    document.documentElement.style.scrollBehavior = "smooth";
+
     // console.log("Clicked ID:", id);
     // console.log("Previous Rotations:", rotations);
 
@@ -88,7 +90,7 @@ const Team = () => {
     },
   });
 
-  console.log(employees);
+  // console.log(employees);
 
   const employeesByDepartment = {};
   const employeesByOffice = {};
@@ -120,8 +122,8 @@ const Team = () => {
   });
 
   // Log the final groups
-  console.log("Employees by Department:", employeesByDepartment);
-  console.log("Employees by Office:", employeesByOffice);
+  // console.log("Employees by Department:", employeesByDepartment);
+  // console.log("Employees by Office:", employeesByOffice);
 
   return (
     <>
@@ -315,15 +317,11 @@ const Team = () => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       {/* <!-- Vertical lines at the bottom --> */}
-                      <path d="M 1,19 L 1,15" stroke-width="0.2" fill="none" />
-                      <path
-                        d="M 99,19 L 99,15"
-                        stroke-width="0.2"
-                        fill="none"
-                      />
+                      <path d="M 1,19 L 1,15" strokeWidth="0.2" fill="none" />
+                      <path d="M 99,19 L 99,15" strokeWidth="0.2" fill="none" />
 
                       {/* <!-- Horizontal line at the bottom --> */}
-                      <path d="M 1,19 L 99,19" stroke-width="0.2" fill="none" />
+                      <path d="M 1,19 L 99,19" strokeWidth="0.2" fill="none" />
                     </svg>
                   </div>
 
@@ -1171,7 +1169,7 @@ const Team = () => {
                           ))}
                         </div>
                         <h1 className="text-start  font-semibold text-gray-500 text-sm md:text-lg pt-1 md:pt-2">
-                          RN Team
+                          Nursing Department
                         </h1>
                         <h5 className="text-start  pt-1 text-xs md:text-sm font-semibold text-gray-500">
                           {employeesByDepartment?.RnDps?.length} Members

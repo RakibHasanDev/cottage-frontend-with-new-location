@@ -85,7 +85,7 @@ const ResourcesCard = () => {
           filteredDocuments?.map((doc, index) => (
             <div
               key={index}
-              className="card w-80 lg:w-96 bg-base-100 shadow-xl mx-auto 2xl:mt-5 bg-hov3 dark:bg-slate-800 hover:bg-[#00A6B2] hover:text-white main-card bg-hov2 dark:hover:bg-[#00A6B2] relative rounded-lg py-8 px-4"
+              className="card w-80 lg:w-96 bg-base-100 shadow-xl mx-auto 2xl:mt-5 bg-hov3 bg-white dark:bg-slate-800 hover:bg-[#00A6B2] hover:text-white main-card bg-hov2 dark:hover:bg-[#00A6B2] relative rounded-lg py-8 px-4"
             >
               <div className="card-body mb-5">
                 <h2 className="text-xl font-normal text-center open-sans dark:text-gray-100">

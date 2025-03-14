@@ -65,7 +65,7 @@ const Hero = () => {
         id="video"
         preload="none"
         loading="eager|lazy"
-        src="https://res.cloudinary.com/dlw7u1u5p/video/upload/v1728484453/bpixjws01syclsqptgqp.mp4"
+        src="https://res.cloudinary.com/di3wwp9s0/video/upload/v1741789037/pastevent_banner/bpixjws01syclsqptgqp_gmktik.mp4"
         muted={false}
         ref={videoRef}
         loop

@@ -4,8 +4,6 @@ import toast from "react-hot-toast";
 import { TfiEmail } from "react-icons/tfi";
 
 const GeneralRequest = ({ loading, setLoading }) => {
-  const date = Date.now();
-
   const {
     register,
     handleSubmit,
@@ -23,7 +21,7 @@ const GeneralRequest = ({ loading, setLoading }) => {
       phone: data?.phone,
       email: data?.email,
       subject: data?.subject,
-      today: date,
+      today: Date.now(),
     };
 
     //  console.log(info)

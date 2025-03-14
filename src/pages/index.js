@@ -157,13 +157,14 @@ export default function Home() {
 
   const preloadLinks = [
     {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_1920/v1741710264/Website%20Hero%20Images/tyfxpgbtpv364idxhn4g_tsecxu.webp",
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710684/Website%20Hero%20Images/hero-1_y7msil.webp",
+      // ✅ Matches first large image
       as: "image",
       type: "image/webp",
       fetchPriority: "high",
     },
     {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_720/v1741710346/Website%20Hero%20Images/pa2vvqc61tvi4ctyqed9_xz2bhj.webp",
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710747/Website%20Hero%20Images/hero-1-sm_b5yp9m.webp", // ✅ Matches first small image
       as: "image",
       type: "image/webp",
       fetchPriority: "high",

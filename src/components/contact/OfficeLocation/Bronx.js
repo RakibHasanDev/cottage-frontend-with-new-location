@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Bronx = ({ officeHandler }) => {
-  const now = new Date().toLocaleDateString("en-US", { weekday: "long" });
   //   console.log(now);
+  const [now, setCurrentDate] = useState("");
+
+  useEffect(() => {
+    // Ensure the date is set only on client-side
+    setCurrentDate(
+      new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(new Date())
+    );
+  }, []);
 
   let val;
   let day;

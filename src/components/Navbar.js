@@ -1,16 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import navLogo from "../../src/assets/vector-logo.png";
 import { ThemeContext, ThemeProvider } from "@/context/ThemeContext";
 import ToggleButton from "./shared/ToogleButton";
 import SideNav from "./nav/SideNav";
+import { AuthContext } from "@/context/AuthProvider";
+import { MdLogin, MdLogout } from "react-icons/md";
+import DropdownMenu from "./nav/DropdownMenu";
 
 const NavBar = () => {
   const [customShadow, setCustomShadow] = useState("shadow-none");
   const [isSticky, setIsSticky] = useState(false);
   const [navColor] = useState(false);
   const [mounted, setMounted] = useState(false); // ✅ Fix: Define mounted state
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((err) => console.log(err));
+  };
 
   useEffect(() => {
     setMounted(true); // ✅ Ensure the component is mounted (fix SSR issues)
@@ -309,13 +319,7 @@ const NavBar = () => {
                 <ToggleButton />
               </li>
 
-              {/* <DropdownMenu
-              user={user}
-              isAdmin={isAdmin}
-              isEditor={isEditor}
-              navColor={navColor}
-              handleLogOut={handleLogOut}
-            /> */}
+              <DropdownMenu user={user} handleLogOut={handleLogOut} />
             </ul>
 
             <div className="lg:hidden">

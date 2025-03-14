@@ -3,8 +3,6 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
 const RequestPto = ({ loading, setLoading }) => {
-  const date = Date.now();
-
   const {
     register,
     handleSubmit,
@@ -21,7 +19,7 @@ const RequestPto = ({ loading, setLoading }) => {
       employeeId: data?.employeeId,
       phone: data?.phone,
       subject: data?.subject,
-      today: date,
+      today: Date.now(),
     };
 
     fetch(`https://cottage-backend-voilerplate.vercel.app/helpDesk`, {
