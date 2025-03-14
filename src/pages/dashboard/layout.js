@@ -1,5 +1,6 @@
 // src/pages/dashboard/layout.js
 import AdminRoute from "@/components/AdminRoute";
+import Sidebar from "@/components/navbar/Sidebar";
 const DashboardLayout = ({ children }) => {
   return (
     <AdminRoute>
@@ -7,11 +8,11 @@ const DashboardLayout = ({ children }) => {
       <div className="grid grid-cols-7 min-h-screen">
         {/* Sidebar */}
 
-        <div className="col-span-2 border-2 border-red-500">
-          <h1>side BAR</h1>
+        <div className="col-span-2 border-2 border-gray-100">
+          <Sidebar />
         </div>
 
-        <div className="flex flex-col col-span-5 border-2 border-blue-500">
+        <div className="flex flex-col col-span-5 ">
           {/* Header */}
 
           {/* Main Dashboard Content */}
