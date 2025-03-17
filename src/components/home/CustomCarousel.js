@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SkeletonLoading from "../shared/SkeletonLoading";
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-import reader2 from "../../../src/assets/Lotty File/holi.json";
+// const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+// import reader2 from "../../../src/assets/Lotty File/holi.json";
 import dynamic from "next/dynamic";
 
 const images = [
@@ -22,8 +22,8 @@ const images = [
 const CustomCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-  const [shouldDisplay, setShouldDisplay] = useState(false);
-  const [isClient, setIsClient] = useState(false); //
+  // const [shouldDisplay, setShouldDisplay] = useState(false);
+  // const [isClient, setIsClient] = useState(false);
   const interval = 5000;
 
   useEffect(() => {
@@ -38,16 +38,16 @@ const CustomCarousel = () => {
     return () => clearInterval(intervalId);
   }, []);
 
-  useEffect(() => {
-    setIsClient(true);
+  // useEffect(() => {
+  //   setIsClient(true);
 
-    const today = new Date();
-    const deadline = new Date("March 15, 2025 23:59:59");
-    const startOfToday = new Date(today);
-    startOfToday.setHours(0, 0, 0, 0);
+  //   const today = new Date();
+  //   const deadline = new Date("March 15, 2025 23:59:59");
+  //   const startOfToday = new Date(today);
+  //   startOfToday.setHours(0, 0, 0, 0);
 
-    setShouldDisplay(today >= startOfToday && today <= deadline);
-  }, []);
+  //   setShouldDisplay(today >= startOfToday && today <= deadline);
+  // }, []);
 
   if (isLoading) {
     return <SkeletonLoading />;
@@ -59,7 +59,7 @@ const CustomCarousel = () => {
 
   return (
     <div className="custom-wave-section h-[84.04vh] relative">
-      {isClient && shouldDisplay && (
+      {/* {isClient && shouldDisplay && (
         <div className="w-36 h-36 md:h-52 md:w-52 absolute -top-7 md:-top-10 right-3 md:right-8 z-20">
           <Lottie
             animationData={reader2}
@@ -67,7 +67,7 @@ const CustomCarousel = () => {
             className="h-fit object-cover"
           />
         </div>
-      )}
+      )} */}
 
       <svg
         xmlns="http://www.w3.org/2000/svg"

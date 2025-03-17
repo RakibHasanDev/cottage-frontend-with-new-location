@@ -1168,7 +1168,7 @@ const Team = () => {
                             </div>
                           ))}
                         </div>
-                        <h1 className="text-start  font-semibold text-gray-500 text-sm md:text-lg pt-1 md:pt-2">
+                        <h1 className="text-start  font-semibold text-gray-500 text-xs md:text-lg pt-1 md:pt-2">
                           Nursing Department
                         </h1>
                         <h5 className="text-start  pt-1 text-xs md:text-sm font-semibold text-gray-500">
