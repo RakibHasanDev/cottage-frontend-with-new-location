@@ -29,12 +29,6 @@ const PayStub = () => {
 
   const pages = Math.ceil(count / size);
 
-  // ✅ Handle Message Modal
-  const openModal = (userMessage) => {
-    setMessage(userMessage);
-    setModalOpen(true);
-  };
-
   const closeModal = () => setModalOpen(false);
 
   // ✅ Handle Review Approve/Reject

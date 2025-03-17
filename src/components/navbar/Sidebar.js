@@ -43,6 +43,11 @@ const Sidebar = ({ handleLogout }) => {
           icon={<LuFileSearch2 />}
           label="Pay Stub Access"
         />
+        <SidebarLink
+          href="/dashboard/pay-roll"
+          icon={<LuFileSearch2 />}
+          label="Pay Roll Queries"
+        />
       </nav>
     </aside>
   );
