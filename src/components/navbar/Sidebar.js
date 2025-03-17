@@ -37,6 +37,12 @@ const Sidebar = ({ handleLogout }) => {
           icon={<LuFileSearch2 />}
           label="All General Request"
         />
+
+        <SidebarLink
+          href="/dashboard/pay-stub"
+          icon={<LuFileSearch2 />}
+          label="Pay Stub Access"
+        />
       </nav>
     </aside>
   );
