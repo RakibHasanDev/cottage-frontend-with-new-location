@@ -9,12 +9,15 @@ import { BsSearch } from "react-icons/bs";
 import Loading from "@/components/shared/Loading";
 import Link from "next/link";
 import Head from "next/head";
+import { AuthContext } from "@/context/AuthProvider";
+import useAdmin from "@/hooks/useAdmin";
 
 const AllTeamMembers = () => {
   const apiKey = process.env.NEXT_PUBLIC_secureApiKey;
 
-  //   const { user } = useContext(AuthContext);
-  //   const [isAdmin] = useAdmin(user?.email);
+  const { user } = useContext(AuthContext);
+  const { isAdmin, isAdminLoading } = useAdmin(user?.email);
+
   const [searchQuery, setSearchQuery] = useState("");
 
   const url = "https://cottage-backend-voilerplate.vercel.app/employee";
@@ -152,24 +155,24 @@ const AllTeamMembers = () => {
                           {employer?.description}
                         </p>
 
-                        {/* {isAdmin && (
-                        <div className=" mt-16">
-                          <div className="flex items-center justify-evenly  absolute w-full right-0 left-0 bottom-12">
-                            <Link href={`/employee/${employer?._id}`}>
-                              <button className="btn btn-sm bg-secondary px-4 py-2 rounded-md  my-5 text-white font-semibold uppercase">
-                                Update
-                              </button>
-                            </Link>
+                        {!isAdminLoading && isAdmin && user?.uid && (
+                          <div className=" mt-16">
+                            <div className="flex items-center justify-evenly  absolute w-full right-0 left-0 bottom-12">
+                              <Link href={`/employee/${employer?._id}`}>
+                                <button className="btn btn-sm bg-[#1D93AE] px-4 py-2 rounded-md  my-5 text-white font-semibold uppercase">
+                                  Update
+                                </button>
+                              </Link>
 
-                            <button
-                              onClick={() => deleteHandler(employer)}
-                              className="bg-red-500 px-4 py-2 rounded-md  my-5 text-white font-semibold uppercase btn btn-sm"
-                            >
-                              Delete
-                            </button>
+                              <button
+                                onClick={() => deleteHandler(employer)}
+                                className="bg-red-500 px-4 py-2 rounded-md  my-5 text-white font-semibold uppercase btn btn-sm"
+                              >
+                                Delete
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                      )} */}
+                        )}
                         <div className="pb-6">
                           <div className="w-full flex justify-center   absolute bottom-0  right-0 left-0 my-5">
                             {employer?.facebook == null ||

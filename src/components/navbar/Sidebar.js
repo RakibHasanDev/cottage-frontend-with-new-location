@@ -12,7 +12,7 @@ const Sidebar = ({ handleLogout }) => {
   const isActive = (path) => router.pathname === path;
 
   return (
-    <aside className="bg-[#EBF8F9] dark:bg-slate-800 text-gray-700 w-full min-h-screen p-4 shadow-lg">
+    <aside className="bg-[#EBF8F9] dark:bg-slate-800 text-gray-700 w-full h-full p-4 shadow-lg">
       <nav className="flex flex-col gap-y-3">
         <SidebarLink href="/" icon={<AiOutlineHome />} label="Home" />
         <SidebarLink
@@ -25,11 +25,7 @@ const Sidebar = ({ handleLogout }) => {
           icon={<MdPersonAdd />}
           label="Add Employee"
         />
-        <SidebarLink
-          href="/dashboard/add-blog"
-          icon={<MdPostAdd />}
-          label="Add Blog"
-        />
+
         <SidebarLink
           href="/dashboard/email-signature"
           icon={<FaFileSignature />}
