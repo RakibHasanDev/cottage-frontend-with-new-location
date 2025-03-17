@@ -98,161 +98,103 @@ const GeneralQuery = () => {
   if (isLoading) return <Loading />;
 
   return (
-    <div className="border-t-2">
-      <div className="overflow-x-auto">
-        <table className="table w-full">
-          <thead>
-            <tr className="dark:bg-slate-800 dark:text-gray-200">
-              <th>Serial</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Last 4 SSN / DOB</th>
-              <th>Message</th>
-              <th>Date & Time</th>
-              <th>Check</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            {allInfo?.map((user, index) => (
-              <tr className="hover" key={user._id}>
-                <th className="dark:bg-slate-500 dark:text-gray-100">
-                  {index + 1}
-                </th>
-                <td className="dark:bg-slate-500 dark:text-gray-100">
-                  {user?.name}
-                </td>
-                <td className="dark:bg-slate-500 dark:text-gray-100">
-                  <a
-                    href={`mailto:${user?.email}`}
-                    className="text-[#00A6B2] dark:text-gray-300"
-                  >
-                    {user?.email}
-                  </a>
-                </td>
-                <td className="dark:bg-slate-500 dark:text-gray-100">
-                  <a
-                    href={`tel:+1${user?.phone}`}
-                    className="text-[#00A6B2] dark:text-gray-300"
-                  >
-                    {user?.phone}
-                  </a>
-                </td>
-                <td className="dark:bg-slate-500 dark:text-gray-100">
-                  {user?.employeeId}
-                </td>
+    <div className="border-t-2 overflow-x-auto">
+      <table className="table-auto w-full border-collapse">
+        {/* ✅ Table Header */}
+        <thead>
+          <tr className="bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 text-left text-sm font-semibold">
+            <th className="p-3 border dark:border-gray-600">#</th>
+            <th className="p-3 border dark:border-gray-600">Name</th>
+            <th className="p-3 border dark:border-gray-600">Email</th>
+            <th className="p-3 border dark:border-gray-600">Phone</th>
+            <th className="p-3 border dark:border-gray-600">SSN / DOB</th>
+            <th className="p-3 border dark:border-gray-600">Message</th>
+            <th className="p-3 border dark:border-gray-600">Date & Time</th>
+            <th className="p-3 border dark:border-gray-600">Status</th>
+            <th className="p-3 border dark:border-gray-600">Actions</th>
+          </tr>
+        </thead>
 
-                <td className="dark:bg-slate-500 dark:text-gray-100">
-                  <button
-                    onClick={() => openModal(user?.message)}
-                    htmlFor="register-details"
-                    className="text-sm bg-[#00A6B2] py-2 px-2 rounded-md text-white shadow-lg cursor-pointer"
-                  >
-                    See Message
-                  </button>
-                </td>
-
-                <td className="dark:bg-slate-500 dark:text-gray-100">
-                  <p className="text-[#00A6B2] dark:text-gray-300 text-sm font-medium">
-                    {new Date(user?.today).toLocaleString()}
-                  </p>
-                </td>
-
-                {/* ✅ Checkbox for Review Status */}
-
-                <td className="dark:bg-slate-500 dark:text-gray-100 cursor-pointer">
-                  {user?.review === "true" ? (
-                    <td className="dark:bg-slate-500 dark:text-gray-100 cursor-pointer">
-                      <div
-                        className="form-control"
-                        onClick={() => reverseHandler(user)}
-                      >
-                        <label className="cursor-pointer label">
-                          <input
-                            type="checkbox"
-                            className="peer hidden"
-                            checked
-                          />
-                          <div className="w-5 h-5 bg-red-500 peer-checked:bg-green-500 rounded-md"></div>
-                        </label>
-                      </div>
-                    </td>
-                  ) : (
-                    <td className="dark:bg-slate-500 dark:text-gray-100 cursor-pointer">
-                      <div
-                        className="form-control"
-                        onClick={() => reviewHandler(user)}
-                      >
-                        <label className="cursor-pointer label">
-                          <input
-                            type="checkbox"
-                            className="peer hidden"
-                            checked
-                          />
-                          <div className="w-5 h-5 bg-gray-500 peer-checked:bg-blue-500 rounded-md"></div>
-                        </label>
-                      </div>
-                    </td>
-                  )}
-                </td>
-
-                {/* ✅ Delete Button */}
-                <td className="dark:bg-slate-500 dark:text-gray-100">
-                  <button
-                    onClick={() => deleteHandler(user)}
-                    className="px-2 py-1 rounded-md text-sm bg-red-600 uppercase text-white"
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        <MessageModal
-          isOpen={isModalOpen}
-          closeModal={closeModal}
-          message={message}
-        />
-      </div>
-
-      {/* ✅ Pagination Section */}
-      <div>
-        <p className="text-center mt-10 text-lg font-semibold dark:text-gray-100">
-          Currently Selected Page:{" "}
-          <span className="text-[#00A6B2]">{page + 1}</span>
-        </p>
-        <div className="pagination my-3 flex justify-center">
-          {[...Array(pages).keys()].map((number) => (
-            <button
-              key={number}
-              className={
-                page === number
-                  ? "selected px-3 py-1 text-white ml-3 cursor-pointer custom-shadow"
-                  : "px-3 py-1 text-gray-500 ml-3 cursor-pointer border border-gray-300 hover:bg-gray-700 hover:text-white custom-shadow"
-              }
-              onClick={() => setPage(number)}
+        {/* ✅ Table Body */}
+        <tbody>
+          {allInfo?.map((user, index) => (
+            <tr
+              key={user._id}
+              className="hover:bg-gray-100 dark:hover:bg-gray-700"
             >
-              {number + 1}
-            </button>
-          ))}
+              <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 text-center">
+                {index + 1}
+              </td>
+              <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
+                {user?.name}
+              </td>
+              <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
+                <a href={`mailto:${user?.email}`} className="text-[#00A6B2]">
+                  {user?.email}
+                </a>
+              </td>
+              <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
+                <a href={`tel:+1${user?.phone}`} className="text-[#00A6B2]">
+                  {user?.phone}
+                </a>
+              </td>
+              <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
+                {user?.employeeId}
+              </td>
+              <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 text-center">
+                <button
+                  onClick={() => openModal(user?.message)}
+                  className="text-sm bg-[#00A6B2] py-2 px-3 rounded-md text-white shadow-md hover:opacity-80 transition"
+                >
+                  View Message
+                </button>
+              </td>
+              <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
+                <p className="text-sm font-medium">
+                  {new Date(user?.today).toLocaleString()}
+                </p>
+              </td>
 
-          {/* ✅ Page Size Dropdown */}
-          <select
-            className="ml-3 bg-white text-gray-500 border border-gray-300 rounded-md focus:outline-none px-2"
-            onChange={(event) => setSize(Number(event.target.value))}
-          >
-            <option disabled className="hidden">{`Page Size ${size}`}</option>
-            {[7, 10, 15, 20].map((sizeOption) => (
-              <option key={sizeOption} value={sizeOption}>
-                Page Size {sizeOption}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
+              {/* ✅ Review Checkbox */}
+              <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 text-center">
+                <div
+                  className="form-control"
+                  onClick={() =>
+                    user?.review === "true"
+                      ? reverseHandler(user)
+                      : reviewHandler(user)
+                  }
+                >
+                  <label className="cursor-pointer">
+                    <input
+                      type="checkbox"
+                      className="peer hidden"
+                      checked={user?.review === "true"}
+                    />
+                    <div
+                      className={`w-5 h-5 rounded-md transition ${
+                        user?.review === "true"
+                          ? "bg-green-500"
+                          : "bg-gray-400 hover:bg-blue-500"
+                      }`}
+                    ></div>
+                  </label>
+                </div>
+              </td>
+
+              {/* ✅ Delete Button */}
+              <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 text-center">
+                <button
+                  onClick={() => deleteHandler(user)}
+                  className="px-3 py-1 bg-red-600 text-white text-sm rounded-md shadow-md hover:bg-red-700 transition"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
