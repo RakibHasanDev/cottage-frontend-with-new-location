@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { AiOutlineHome, AiOutlineUser, AiOutlineLogout } from "react-icons/ai";
 import { MdDashboard, MdPersonAdd, MdPostAdd } from "react-icons/md";
-import { FiSettings } from "react-icons/fi";
+import { LuFileSearch2 } from "react-icons/lu";
 import { FaFileSignature } from "react-icons/fa";
 
 const Sidebar = ({ handleLogout }) => {
@@ -30,6 +30,12 @@ const Sidebar = ({ handleLogout }) => {
           href="/dashboard/email-signature"
           icon={<FaFileSignature />}
           label="Generate Email Signature"
+        />
+
+        <SidebarLink
+          href="/dashboard/general-request"
+          icon={<LuFileSearch2 />}
+          label="All General Request"
         />
       </nav>
     </aside>
