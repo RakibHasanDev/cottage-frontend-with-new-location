@@ -184,6 +184,7 @@ const OverwHelmed = () => {
               href="#contact-form"
               onClick={(e) => {
                 e.preventDefault();
+                document.documentElement.style.scrollBehavior = "smooth";
                 const targetElement = document.getElementById("contact-form");
                 const navbarHeight = 120;
                 if (targetElement) {

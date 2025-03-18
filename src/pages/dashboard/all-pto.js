@@ -1,32 +1,26 @@
 "use client"; // ✅ Ensures this runs only on the client side
 
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import { toast } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/shared/Loading";
-import MessageModal from "./MessageModal";
+import MessageModal from "./MessageModal"; // Ensure this is imported correctly
 
-const PayRoll = () => {
-  const [message, setMessage] = useState("");
-  const [isModalOpen, setModalOpen] = useState(false); // ✅ Modal state
+const Pto = () => {
+  const [message, setMessage] = useState(null);
+  const [isModalOpen, setModalOpen] = useState(false);
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(7);
 
-  const url = `https://cottage-backend-voilerplate.vercel.app/helpDesk/inquiry/payroll?page=${page}&size=${size}`;
+  const url = `https://cottage-backend-voilerplate.vercel.app/helpDesk/inquiry/requestPto?page=${page}&size=${size}`;
 
   const { data, isLoading, refetch, isError } = useQuery({
-    queryKey: ["payroll", page, size],
+    queryKey: ["requestPto", page, size],
     queryFn: async () => {
-      try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error("Failed to fetch data");
-        return res.json();
-      } catch (error) {
-        toast.error("Error fetching data. Please try again.");
-        throw error;
-      }
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Failed to fetch data");
+      return res.json();
     },
-    staleTime: 5000, // Cache data for 5 seconds
   });
 
   const allInfo = data?.allInfo || [];
@@ -37,7 +31,7 @@ const PayRoll = () => {
   if (isError)
     return <p className="text-center text-red-500">Error loading data.</p>;
 
-  // ✅ Handle Review Approve/Reject
+  // ✅ Handle Review Status Toggle
   const handleReview = async (user, action) => {
     const endpoint =
       action === "approve"
@@ -77,20 +71,18 @@ const PayRoll = () => {
     }
   };
 
-  // ✅ Handle Message Modal
+  // ✅ Open Modal with Message
   const openModal = (userMessage) => {
     setMessage(userMessage);
     setModalOpen(true);
   };
 
-  const closeModal = () => setModalOpen(false);
-
   return (
     <div className="border-t-2">
       <div className="overflow-x-auto">
-        <table className="table w-full border border-gray-300 border-collapse">
-          <thead className="bg-gray-100 dark:bg-slate-800 dark:text-gray-200">
-            <tr>
+        <table className="table w-full border-separate border-spacing-y-3">
+          <thead>
+            <tr className="bg-gray-100 dark:bg-slate-800 dark:text-gray-200">
               {[
                 "Serial",
                 "Name",
@@ -101,7 +93,7 @@ const PayRoll = () => {
                 "Check",
                 "Delete",
               ].map((header, index) => (
-                <th key={index} className="border border-gray-300 px-4 py-3">
+                <th key={index} className="border-b border-gray-300 py-3">
                   {header}
                 </th>
               ))}
@@ -110,26 +102,14 @@ const PayRoll = () => {
           <tbody>
             {allInfo.map((user, index) => (
               <tr
-                className="hover:bg-gray-100 dark:bg-slate-500 dark:text-gray-100"
                 key={user._id}
+                className="hover dark:bg-slate-500 dark:text-gray-100 border-b border-gray-300"
               >
-                <td className="border border-gray-300 px-4 py-2">
-                  {index + 1}
-                </td>
-                <td className="border border-gray-300 px-4 py-2">
-                  {user?.name || "N/A"}
-                </td>
-                <td className="border border-gray-300 px-4 py-2">
-                  {user?.phone || "No data"}
-                </td>
-                <td className="border border-gray-300 px-4 py-2 text-[#00A6B2]">
-                  {user?.employeeId}
-                </td>
-
-                <td className="border border-gray-300 px-4 py-2 text-[#00A6B2] text-sm font-medium">
-                  {user?.today ? new Date(user?.today).toLocaleString() : "N/A"}
-                </td>
-                <td className="p-3 border dark:bg-slate-500 dark:text-gray-100 text-center">
+                <td>{index + 1}</td>
+                <td>{user?.name || "N/A"}</td>
+                <td>{user?.phone || "No data"}</td>
+                <td className="text-[#00A6B2]">{user?.employeeId}</td>
+                <td className="p-3  dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 text-center">
                   <button
                     onClick={() => openModal(user?.subject)}
                     className="text-sm bg-[#00A6B2] py-2 px-3 rounded-md text-white shadow-md hover:opacity-80 transition"
@@ -137,7 +117,10 @@ const PayRoll = () => {
                     View Message
                   </button>
                 </td>
-                <td className="border border-gray-300 px-4 py-2">
+                <td className="text-[#00A6B2] text-sm font-medium">
+                  {user?.today ? new Date(user?.today).toLocaleString() : "N/A"}
+                </td>
+                <td>
                   <div
                     className="form-control cursor-pointer"
                     onClick={() =>
@@ -151,16 +134,16 @@ const PayRoll = () => {
                       <input
                         type="checkbox"
                         checked={user?.review === "true"}
-                        className="checkbox w-4 h-4"
+                        className="checkbox w-6 h-6 checkbox-[#00A6B2]"
                         readOnly
                       />
                     </label>
                   </div>
                 </td>
-                <td className="border border-gray-300 px-4 py-2">
+                <td>
                   <button
                     onClick={() => handleDelete(user)}
-                    className="px-3 py-1 bg-red-600 text-white rounded-md"
+                    className="btn text-sm bg-red-600 uppercase text-white px-2 py-1.5 rounded-md"
                   >
                     Delete
                   </button>
@@ -169,9 +152,11 @@ const PayRoll = () => {
             ))}
           </tbody>
         </table>
+
+        {/* ✅ Modal Component for Message */}
         <MessageModal
           isOpen={isModalOpen}
-          closeModal={closeModal}
+          closeModal={() => setModalOpen(false)}
           message={message}
         />
       </div>
@@ -190,7 +175,7 @@ const PayRoll = () => {
               className={`px-3 py-1 ml-3 cursor-pointer ${
                 page === number
                   ? "text-white bg-[#00A6B2] custom-shadow"
-                  : "text-gray-500 border border-gray-300 hover:bg-gray-700 hover:text-white custom-shadow"
+                  : "text-gray-500 border border-gray-300 hover:bg-gray-600 hover:text-white custom-shadow"
               }`}
               onClick={() => setPage(number)}
             >
@@ -214,4 +199,4 @@ const PayRoll = () => {
   );
 };
 
-export default PayRoll;
+export default Pto;

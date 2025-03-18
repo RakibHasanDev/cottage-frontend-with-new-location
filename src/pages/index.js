@@ -2,12 +2,7 @@ import Head from "next/head";
 import React, { Suspense, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
-
-// ✅ Ensure it's included in the static build (SSG)
-const WeAre = dynamic(() => import("@/components/home/WeAre"), {
-  suspense: false, // ❌ Avoid Suspense (it doesn't work well with SSG)
-  ssr: true, // ✅ Ensures it's rendered in the SSG output
-});
+import WeAre from "@/components/home/WeAre";
 
 // ✅ Import Components Dynamically
 const CustomCarousel = dynamic(
@@ -240,7 +235,7 @@ export default function Home() {
           <Overwhelmed />
         </Suspense>
 
-        {isMounted ? <WeAre /> : <SkeletonLoading />}
+        <WeAre />
 
         <Suspense fallback={<SkeletonLoading />}>
           <Quality />

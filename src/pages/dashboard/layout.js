@@ -7,14 +7,14 @@ const DashboardLayout = ({ children }) => {
     <AdminRoute>
       <NavBar />
       {/* ✅ Wrapping the entire layout inside AdminRoute */}
-      <div className="grid grid-cols-7 min-h-screen dark:bg-slate-600">
+      <div className="flex min-h-screen dark:bg-slate-600">
         {/* Sidebar */}
 
-        <div className="col-span-2 border-2 border-gray-100">
+        <div className="w-[480px] border-2 border-gray-100">
           <Sidebar />
         </div>
 
-        <div className="flex flex-col col-span-5 ">
+        <div className="flex flex-col w-full ">
           {/* Header */}
 
           {/* Main Dashboard Content */}

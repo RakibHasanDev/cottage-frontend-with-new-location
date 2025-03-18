@@ -7,6 +7,8 @@ import Loading from "@/components/shared/Loading";
 import MessageModal from "./MessageModal";
 
 const PayStub = () => {
+  const [message, setMessage] = useState("");
+  const [isModalOpen, setModalOpen] = useState(false); // ✅ Modal state
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(7);
 
@@ -28,6 +30,11 @@ const PayStub = () => {
   //   console.log(allInfo);
 
   const pages = Math.ceil(count / size);
+  // ✅ Handle Message Modal
+  const openModal = (userMessage) => {
+    setMessage(userMessage);
+    setModalOpen(true);
+  };
 
   const closeModal = () => setModalOpen(false);
 
@@ -99,6 +106,7 @@ const PayStub = () => {
               <th className="border-b border-t py-3">Email</th>
               <th className="border-b border-t py-3">Phone</th>
               <th className="border-b border-t py-3">Last 4 SSN / DOB</th>
+              <th className="border-b border-t py-3">Message</th>
               <th className="border-b border-t py-3">Date & Time</th>
               <th className="border-b border-t py-3">Check</th>
               <th className="border-b border-t py-3">Delete</th>
@@ -135,6 +143,14 @@ const PayStub = () => {
                 <td className="border-b border-t  py-2 dark:bg-slate-500 dark:text-gray-100">
                   {user?.employeeId}
                 </td>
+                <td className="p-3 border-b border-t  dark:bg-slate-500 dark:text-gray-100 text-center">
+                  <button
+                    onClick={() => openModal(user?.subject)}
+                    className="text-sm bg-[#00A6B2] py-2 px-3 rounded-md text-white shadow-md hover:opacity-80 transition"
+                  >
+                    View Message
+                  </button>
+                </td>
 
                 <td className="border-b border-t  py-2 dark:bg-slate-500 dark:text-gray-100">
                   <p className="text-[#00A6B2] dark:text-gray-300 text-sm font-medium">
@@ -149,13 +165,13 @@ const PayStub = () => {
                       className="form-control"
                       onClick={() => reverseHandler(user)}
                     >
-                      <label className="cursor-pointer label">
+                      <label className="cursor-pointer label ">
                         <input
                           type="checkbox"
-                          className="peer hidden"
-                          checked
+                          checked={user?.review === "true"}
+                          className="checkbox w-4 h-4 "
+                          readOnly
                         />
-                        <div className="w-5 h-5 bg-red-500 peer-checked:bg-green-500 rounded-md"></div>
                       </label>
                     </div>
                   ) : (
@@ -166,10 +182,10 @@ const PayStub = () => {
                       <label className="cursor-pointer label">
                         <input
                           type="checkbox"
-                          className="peer hidden"
-                          checked
+                          checked={user?.review === "true"}
+                          className="checkbox  w-4 h-4"
+                          readOnly
                         />
-                        <div className="w-5 h-5 bg-gray-500 peer-checked:bg-blue-500 rounded-md"></div>
                       </label>
                     </div>
                   )}
@@ -188,6 +204,11 @@ const PayStub = () => {
             ))}
           </tbody>
         </table>
+        <MessageModal
+          isOpen={isModalOpen}
+          closeModal={closeModal}
+          message={message}
+        />
       </div>
 
       {/* ✅ Pagination Section */}
@@ -202,7 +223,7 @@ const PayStub = () => {
               key={number}
               className={
                 page === number
-                  ? "selected px-3 py-1 text-white ml-3 cursor-pointer custom-shadow"
+                  ? "selected px-3 py-1 bg-[#00A6B2] text-white ml-3 cursor-pointer custom-shadow"
                   : "px-3 py-1 text-gray-500 ml-3 cursor-pointer border border-gray-300 hover:bg-gray-700 hover:text-white custom-shadow"
               }
               onClick={() => setPage(number)}

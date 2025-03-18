@@ -101,9 +101,9 @@ const Faq = () => {
                     <svg
                       className={` ${
                         tab === item.id
-                          ? "text-white "
+                          ? "text-white  "
                           : "text-[#00A6B2] dark:text-[#00A6B2]"
-                      } fill-current dark:text-gray-100 h-6 w-6 transform transition-transform duration-100 ${handleRotate(
+                      } fill-current  h-6 w-6 transform transition-transform duration-100 ${handleRotate(
                         item.id
                       )}`}
                       viewBox="0 0 20 20"

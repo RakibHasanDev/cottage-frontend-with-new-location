@@ -27,6 +27,8 @@ const GeneralQuery = () => {
     },
   });
 
+  console.log(allInfo);
+
   const pages = Math.ceil(count / size);
 
   // ✅ Handle Message Modal
@@ -36,8 +38,8 @@ const GeneralQuery = () => {
   };
 
   const closeModal = () => setModalOpen(false);
-  // ✅ Handle Review Approve/Reject
 
+  // ✅ Handle Review Approve/Reject
   const reviewHandler = (user) => {
     fetch(
       `https://cottage-backend-voilerplate.vercel.app/helpDesk/${user._id}`,
@@ -143,7 +145,7 @@ const GeneralQuery = () => {
               </td>
               <td className="p-3 border dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 text-center">
                 <button
-                  onClick={() => openModal(user?.message)}
+                  onClick={() => openModal(user?.subject)}
                   className="text-sm bg-[#00A6B2] py-2 px-3 rounded-md text-white shadow-md hover:opacity-80 transition"
                 >
                   View Message
@@ -165,19 +167,13 @@ const GeneralQuery = () => {
                       : reviewHandler(user)
                   }
                 >
-                  <label className="cursor-pointer">
+                  <label className="cursor-pointer label">
                     <input
                       type="checkbox"
-                      className="peer hidden"
                       checked={user?.review === "true"}
+                      className="checkbox w-4 h-4 "
+                      readOnly
                     />
-                    <div
-                      className={`w-5 h-5 rounded-md transition ${
-                        user?.review === "true"
-                          ? "bg-green-500"
-                          : "bg-gray-400 hover:bg-blue-500"
-                      }`}
-                    ></div>
                   </label>
                 </div>
               </td>
@@ -195,6 +191,47 @@ const GeneralQuery = () => {
           ))}
         </tbody>
       </table>
+      <MessageModal
+        isOpen={isModalOpen}
+        closeModal={closeModal}
+        message={message}
+      />
+
+      {/* pagination section  */}
+
+      <div>
+        <p className="text-center mt-10 text-lg font-semibold dark:text-gray-100">
+          Currently Selected Page:{" "}
+          <span className="text-[#00A6B2]">{page + 1}</span>
+        </p>
+
+        <div className="pagination my-3 flex justify-center">
+          {[...Array(pages).keys()].map((number) => (
+            <button
+              key={number}
+              className={`px-3 py-1 ml-3 cursor-pointer ${
+                page === number
+                  ? "text-white bg-[#00A6B2] custom-shadow"
+                  : "text-gray-500 border border-gray-300 hover:bg-gray-700 hover:text-white custom-shadow"
+              }`}
+              onClick={() => setPage(number)}
+            >
+              {number + 1}
+            </button>
+          ))}
+          <select
+            className="ml-3 bg-white text-gray-500 border border-gray-300 rounded-md focus:outline-none px-2"
+            value={size}
+            onChange={(event) => setSize(Number(event.target.value))}
+          >
+            {[7, 10, 15, 20].map((s) => (
+              <option key={s} value={s}>
+                Page Size {s}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
     </div>
   );
 };
