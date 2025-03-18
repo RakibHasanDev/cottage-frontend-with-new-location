@@ -147,39 +147,53 @@ const Sidebar = () => {
           icon={<LuFileSearch2 />}
           label="All General Request"
           count={getRemainingCount("generalRequest")}
+          activePath={pathname}
         />
         <SidebarLink
           href="/dashboard/pay-stub"
           icon={<LuFileSearch2 />}
           label="Pay Stub Access"
           count={getRemainingCount("payStub")}
+          activePath={pathname}
         />
         <SidebarLink
           href="/dashboard/pay-roll"
           icon={<LuFileSearch2 />}
           label="Pay Roll Queries"
           count={getRemainingCount("payroll")}
+          activePath={pathname}
         />
         <SidebarLink
           href="/dashboard/supplies"
           icon={<LuFileSearch2 />}
           label="Request Supplies"
           count={getRemainingCount("requestSupply")}
+          activePath={pathname}
         />
         <SidebarLink
           href="/dashboard/all-pto"
           icon={<LuFileSearch2 />}
           label="PTO Request"
           count={getRemainingCount("requestPto")}
+          activePath={pathname}
         />
       </nav>
     </aside>
   );
 };
 
-// ✅ Sidebar Link Component (Fixed Click Issue)
-const SidebarLink = ({ href, icon, label, count, activePath, onClick }) => {
-  const isActive = activePath === href;
+const SidebarLink = ({ href, icon, label, count, onClick }) => {
+  const pathname = usePathname();
+
+  let isActive = false;
+
+  if (href === "/") {
+    isActive = pathname === "/";
+  } else if (href === "/dashboard") {
+    isActive = pathname === "/dashboard" || pathname === "/dashboard/"; // ✅ Fixes the issue
+  } else {
+    isActive = pathname.startsWith(href); // ✅ Matches all other paths correctly
+  }
 
   return (
     <Link href={href} onClick={onClick}>
@@ -187,14 +201,14 @@ const SidebarLink = ({ href, icon, label, count, activePath, onClick }) => {
         className={`flex items-center px-4 py-3 rounded-md text-lg font-medium cursor-pointer transition-all
           ${
             isActive
-              ? "bg-gray-600 dark:bg-[#00A6B2] text-gray-100"
+              ? "bg-[#00A6B2] text-white dark:bg-[#00A6B2] dark:text-white" // ✅ Active color
               : "hover:bg-gray-700 hover:text-gray-100 dark:bg-slate-400 bg-slate-300 dark:text-white"
           }`}
       >
         <span className="mr-3 text-xl">{icon}</span>
         <span>{label}</span>
 
-        {/* ✅ Instantly Removes Number When Clicked */}
+        {/* ✅ Notification Badge (only if count > 0) */}
         {count > 0 && (
           <span className="ml-auto bg-red-500 text-white text-xs px-2 py-1 rounded-full">
             {count}
