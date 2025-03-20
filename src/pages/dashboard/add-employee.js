@@ -164,7 +164,7 @@ const EmployeeForm = () => {
                   <button
                     type="button"
                     onClick={openCloudinaryWidget}
-                    className="file-input file-input-secondary  text-gray-700 w-full px-4 py-3 rounded-md border focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                    className="file-input file-input-[#1D93AE]  text-gray-700 w-full px-4 py-3 rounded-md border focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                   >
                     Upload an Image
                   </button>
@@ -407,7 +407,7 @@ const EmployeeForm = () => {
                 />
               </div>
 
-              <button className="block w-full p-3 text-center rounded-sm bg-[#00A6B2] hover:bg-secondary text-white mt-6">
+              <button className="block w-full p-3 text-center rounded-sm bg-[#00A6B2] hover:bg-[#1D93AE] text-white mt-6">
                 Upload
               </button>
             </form>

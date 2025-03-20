@@ -191,7 +191,7 @@ const Login = () => {
                 </div>
               </div>
 
-              <button className="w-full px-8 py-3  rounded-md sign-button text-white h-14 bg-gradient-to-r bg-[#00A6B2] hover:bg-secondary">
+              <button className="w-full px-8 py-3  rounded-md sign-button text-white h-14 bg-gradient-to-r bg-[#00A6B2] hover:bg-[#1D93AE]">
                 Sign in
               </button>
             </form>
@@ -214,7 +214,7 @@ const Login = () => {
                 onClick={googleSignInHandler}
                 aria-label="Login with Google"
                 type="button"
-                className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400  text-white   bg-[#00A6B2] hover:bg-secondary shadow-2xl font-semibold"
+                className="flex items-center justify-center w-full p-4 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 dark:border-gray-400  text-white   bg-[#00A6B2] hover:bg-[#1D93AE] shadow-2xl font-semibold"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -144,7 +144,7 @@ const PayrollInquiries = ({ loading, setLoading }) => {
               <p className="text-red-600">{errors.subject.message}</p>
             )}
           </div>
-          <button className="block w-full p-3 text-center rounded-md bg-[#00A6B2] hover:bg-secondary text-white mt-6 uppercase league-spartan">
+          <button className="block w-full p-3 text-center rounded-md bg-[#00A6B2] hover:bg-[#1D93AE] text-white mt-6 uppercase league-spartan">
             Submit
           </button>
         </form>

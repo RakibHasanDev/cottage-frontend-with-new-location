@@ -101,7 +101,7 @@ const AllUsers = () => {
                                   <img
                                     src={user?.photoURL}
                                     alt={user?.photoURL}
-                                    className=" w-8 2xl:w-10  h-8 2xl:h-10 border-2 border-primary rounded-full"
+                                    className=" w-8 2xl:w-10  h-8 2xl:h-10 border-2 border-[#00A6B2] rounded-full"
                                     w="32"
                                     h="32"
                                   />
@@ -135,7 +135,7 @@ const AllUsers = () => {
                                           deleteHandler(user);
                                           setIsOpen(false);
                                         }}
-                                        className="text-sm w-full px-4 py-2 bg-red-500  hover:bg-primary text-white block text-left rounded-md dark:text-gray-300 dark:hover:bg-primary"
+                                        className="text-sm w-full px-4 py-2 bg-red-500  hover:bg-[#00A6B2] text-white block text-left rounded-md dark:text-gray-300 dark:hover:bg-[#00A6B2]"
                                       >
                                         Delete
                                       </button>
@@ -209,7 +209,7 @@ const AllUsers = () => {
                                   <img
                                     src={user?.photoURL}
                                     alt={user?.photoURL}
-                                    className=" w-8 h-8 2xl:w-10 2xl:h-10 border-2 border-primary rounded-full"
+                                    className=" w-8 h-8 2xl:w-10 2xl:h-10 border-2 border-[#00A6B2] rounded-full"
                                   />
                                 )}
                                 {!user?.photoURL && (
@@ -233,7 +233,7 @@ const AllUsers = () => {
                                   </summary>
                                   <ul className="px-4 py-6  menu dropdown-content z-[1] bg-gray-200 pr-10 rounded-md shadow-lg  dark:bg-slate-700 mt-3 duration-500">
                                     <li onClick={() => deleteHandler(user)}>
-                                      <button className="text-sm w-full px-8  hover:bg-primary btn-sm border-[1px] border-primary font-semibold hover:text-white dark:bg-slate-300 dark:hover:bg-primary">
+                                      <button className="text-sm w-full px-8  hover:bg-[#00A6B2] btn-sm border-[1px] border-[#00A6B2] font-semibold hover:text-white dark:bg-slate-300 dark:hover:bg-[#00A6B2]">
                                         Delete
                                       </button>
                                     </li>

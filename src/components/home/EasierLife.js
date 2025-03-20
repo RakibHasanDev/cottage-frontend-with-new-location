@@ -400,7 +400,7 @@ const EasierLife = () => {
 
                   <button
                     type="submit"
-                    className={`block w-full p-3 text-center rounded-md bg-[#00A6B2] dark:bg-slate-600 hover:bg-secondary text-white mt-6 cursor-pointer `}
+                    className={`block w-full p-3 text-center rounded-md bg-[#00A6B2] dark:bg-slate-600 hover:bg-[#1D93AE] text-white mt-6 cursor-pointer `}
                   >
                     Send
                   </button>

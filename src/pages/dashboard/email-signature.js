@@ -91,7 +91,7 @@ const EmployeeSignature = () => {
               <button
                 type="button"
                 onClick={openCloudinaryWidget}
-                className="file-input file-input-secondary border-0 w-full bg-[#EBF8F9] dark:bg-gray-400 dark:text-gray-200 shadow-md py-2.5"
+                className="file-input file-input-[#1D93AE] border-0 w-full bg-[#EBF8F9] dark:bg-gray-400 dark:text-gray-200 shadow-md py-2.5"
               >
                 Upload an Image
               </button>

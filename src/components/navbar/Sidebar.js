@@ -11,6 +11,7 @@ import { MdDashboard, MdPersonAdd } from "react-icons/md";
 import { LuFileSearch2 } from "react-icons/lu";
 import { FaFileSignature } from "react-icons/fa";
 import { SiGooglemessages } from "react-icons/si";
+import { ImBlog } from "react-icons/im";
 
 const Sidebar = () => {
   const pathname = usePathname();
@@ -134,6 +135,13 @@ const Sidebar = () => {
           href="/dashboard/add-employee"
           icon={<MdPersonAdd />}
           label="Add Employee"
+          activePath={pathname}
+        />
+
+        <SidebarLink
+          href="/dashboard/blog-form"
+          icon={<ImBlog />}
+          label="Add A Blog"
           activePath={pathname}
         />
         <SidebarLink

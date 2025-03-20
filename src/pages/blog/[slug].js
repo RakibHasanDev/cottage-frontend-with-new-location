@@ -1,15 +1,17 @@
-import { useQuery } from "@tanstack/react-query";
-import { useForm } from "react-hook-form";
-import { FaCircleUser } from "react-icons/fa6";
-import { PiLineVerticalBold } from "react-icons/pi";
-import { React, Suspense, useEffect, useState } from "react";
-import Link from "next/link";
-import SkeletonLoading from "@/components/shared/SkeletonLoading";
-import dynamic from "next/dynamic";
+import Head from "next/head";
 import ReactLinkify from "react-linkify";
 import Loading from "@/components/shared/Loading";
+import Link from "next/link";
+import { FaCircleUser } from "react-icons/fa6";
+import { PiLineVerticalBold } from "react-icons/pi";
+import { Suspense, useContext, useEffect, useState } from "react";
+import SkeletonLoading from "@/components/shared/SkeletonLoading";
+import dynamic from "next/dynamic";
+import { useForm } from "react-hook-form";
+import { useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
-import Head from "next/head";
+import { AuthContext } from "@/context/AuthProvider";
+import useAdmin from "@/hooks/useAdmin";
 
 export async function getStaticPaths() {
   const res = await fetch(
@@ -17,28 +19,38 @@ export async function getStaticPaths() {
   );
   let data = await res.json();
 
+  console.log("Fetched blogs data:", data);
+
   if (!Array.isArray(data.blogs)) {
-    console.error("employees is not an array:", blogs);
-    data = [];
+    // ✅ Fix: Access `data.blogs` instead of `data`
+    console.error("Error: Blogs data is not an array");
+    return { paths: [], fallback: false };
   }
 
-  const paths = data?.blogs.map((blog) => ({
-    params: { id: blog._id.toString() },
+  const paths = data.blogs.map((blog) => ({
+    params: { slug: blog.slug }, // ✅ Using slug from `blogs`
   }));
+
+  console.log("Generated paths:", paths);
 
   return {
     paths,
-    fallback: false, // No fallback, all pages must be pre-built
+    fallback: false, // ✅ Ensure only known paths are built
   };
 }
 
 export async function getStaticProps({ params }) {
+  console.log("Fetching blog with slug:", params.slug);
+
   const res = await fetch(
-    `https://cottage-backend-voilerplate.vercel.app/blogs/${params.id}`
+    `https://cottage-backend-voilerplate.vercel.app/blogs/single/${params.slug}`
   );
   const blog = await res.json();
 
+  console.log("Fetched blog data:", blog);
+
   if (!blog || Object.keys(blog).length === 0) {
+    console.log("Blog not found, returning 404");
     return { notFound: true };
   }
 
@@ -55,6 +67,10 @@ const HeroSection = dynamic(() => import("@/components/Blog/Herosection"), {
 const BlogDetails = ({ blog }) => {
   const [currentPageUrl, setCurrentPageUrl] = useState("");
   const [formattedDate, setFormattedDate] = useState("");
+  const [views, setViews] = useState(blog?.views || 0);
+
+  const { user } = useContext(AuthContext);
+  const { isAdmin, isAdminLoading } = useAdmin(user?.email);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -126,6 +142,24 @@ const BlogDetails = ({ blog }) => {
           if (data.acknowledged) {
             toast.success("Comment Send Successfully");
             reset();
+            refetch();
+          }
+        });
+    }
+  };
+
+  const deleteHandler = (id) => {
+    const proceed = window.confirm(
+      "Are you sure, you want to delete this comment"
+    );
+    if (proceed) {
+      fetch(`https://cottage-backend-voilerplate.vercel.app/comments/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount) {
+            toast.success("Comment Delete SuccessFully");
             refetch();
           }
         });
@@ -224,20 +258,6 @@ const BlogDetails = ({ blog }) => {
                         <span>{comments?.length}</span>
                         <span>
                           {comments?.length > 1 ? "Comments" : "Comment"}
-                        </span>
-                      </p>
-                    </div>
-
-                    <p>
-                      <PiLineVerticalBold className=" text-lg md:text-xl text-gray-600 dark:text-gray-100" />
-                    </p>
-
-                    <div>
-                      <p className="text-[#8c8a98]  font-semibold dark:text-gray-100 md:text-base text-xs md:text-bas">
-                        <span>{blog?.views}</span>{" "}
-                        <span className="ml-1">
-                          {" "}
-                          {blog?.views > 1 ? "Views" : "View"}{" "}
                         </span>
                       </p>
                     </div>
@@ -419,16 +439,16 @@ const BlogDetails = ({ blog }) => {
                         {comment?.message}
                       </p>
 
-                      {/* {user && isAdmin && (
-                  <div className="mt-2">
-                    <button
-                      className="btn btn-sm bg-red-500 rounded-md shadow-md"
-                      onClick={() => deleteHandler(comment?._id)}
-                    >
-                      Delete
-                    </button>
-                  </div>
-                )} */}
+                      {!isAdminLoading && isAdmin && user?.uid && (
+                        <div className="mt-2">
+                          <button
+                            className="btn px-4 py-1.5 text-sm text-white bg-red-500 rounded-md shadow-md"
+                            onClick={() => deleteHandler(comment?._id)}
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}

@@ -166,7 +166,7 @@ const Register = () => {
                       {...register("url", {
                         required: "Image is required",
                       })}
-                      className=" px-4  py-2 shadow-xl file-input-secondary border-0  w-full dark:border-gray-700 bg-white dark:text-gray-100 focus:outline-none rounded-md dark:bg-gray-400 dark:placeholder:text-gray-100"
+                      className=" px-4  py-2 shadow-xl file-input-[#1D93AE] border-0  w-full dark:border-gray-700 bg-white dark:text-gray-100 focus:outline-none rounded-md dark:bg-gray-400 dark:placeholder:text-gray-100"
                     />
 
                     {errors.url && (
@@ -233,7 +233,7 @@ const Register = () => {
 
                   <button
                     // disabled={!accepted}
-                    className="block  shadow-md w-full p-3 text-center rounded-lg bg-[#00A6B2] hover:bg-secondary sign-button text-white"
+                    className="block  shadow-md w-full p-3 text-center rounded-lg bg-[#00A6B2] hover:bg-[#1D93AE] sign-button text-white"
                   >
                     Register
                   </button>

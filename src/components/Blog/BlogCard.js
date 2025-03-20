@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { toast } from "react-hot-toast";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import Link from "next/link";
 import createSlug from "../shared/slugify";
+import { AuthContext } from "@/context/AuthProvider";
+import useAdmin from "@/hooks/useAdmin";
 
 const cardStyle = {
   padding: "20px",
@@ -25,6 +27,9 @@ const cardStyle2 = {
 const BlogCard = ({ blog, refetch, buttonData }) => {
   const [style, setStyle] = useState(cardStyle);
   const { title, img, _id } = blog;
+
+  const { user } = useContext(AuthContext);
+  const { isAdmin, isAdminLoading } = useAdmin(user?.email);
 
   // Initial style
   const options = { year: "numeric", month: "long", day: "numeric" };
@@ -101,7 +106,8 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
         {/* Conditional rendering based on isAdmin or isEditor */}
 
         {/* Admin/Editor Buttons */}
-        {/* {(isAdmin || isEditor) && user?.uid ? (
+
+        {!isAdminLoading && isAdmin && user?.uid ? (
           <div className="absolute bottom-0 left-0 w-full p-4 flex gap-3 justify-center opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-5 transition-all duration-300 ease-in-out">
             <Link className="" href={`/blog/${slug}`}>
               <button
@@ -111,10 +117,10 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
                 Read More
               </button>
             </Link>
-            <Link href={`/singleBlogs/${_id}`}>
+            <Link href={`/blog/${slug}`}>
               <button
                 type="button"
-                className="inline-block rounded bg-secondary px-6 pt-2.5 pb-2 text-xs font-medium leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-secondary-600"
+                className="inline-block rounded bg-[#1D93AE] px-6 pt-2.5 pb-2 text-xs font-medium leading-normal text-white shadow-md transition duration-150 ease-in-out hover:bg-[#1D93AE]-600"
               >
                 Update
               </button>
@@ -132,24 +138,13 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
             <Link className="" href={`/blog/${slug}`}>
               <button
                 type="button"
-                className=" rounded-full bg-[#00A6B2]  w-[55px] h-[55px] text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg flex justify-center items-center play-btn3"
+                className="rounded-full bg-[#00A6B2] w-[55px] h-[55px] text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg flex justify-center items-center play-btn3"
               >
                 <HiOutlineArrowSmRight className="text-2xl" />
               </button>
             </Link>
           </div>
-        )} */}
-
-        <div className="absolute top-[175px] left-1/2 transform -translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
-          <Link className="" href={`/blog/${_id}`}>
-            <button
-              type="button"
-              className=" rounded-full bg-[#00A6B2]  w-[55px] h-[55px] text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg flex justify-center items-center play-btn3"
-            >
-              <HiOutlineArrowSmRight className="text-2xl" />
-            </button>
-          </Link>
-        </div>
+        )}
       </div>
     </div>
   );

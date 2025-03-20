@@ -138,21 +138,16 @@ const AllBlog = ({
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:gap-x-8 mt-5 w-full lg:mt-20 lg:w-[95%] 2xl:w-[80%]  mx-auto lg:ml-auto lg:mr-5 pb-3 ">
-              {blogs
-                ?.filter(
-                  (blog) =>
-                    blog?.status !== "pending" && blog?.status !== "rejected"
-                )
-                .map((blog) => (
-                  <BlogCard
-                    key={blog?._id}
-                    blog={blog}
-                    // isAdmin={isAdmin}
-                    // isEditor={isEditor}
-                    refetch={refetch}
-                    loading={loading}
-                  />
-                ))}
+              {blogs?.map((blog) => (
+                <BlogCard
+                  key={blog?._id}
+                  blog={blog}
+                  // isAdmin={isAdmin}
+                  // isEditor={isEditor}
+                  refetch={refetch}
+                  loading={loading}
+                />
+              ))}
             </div>
           )}
 
