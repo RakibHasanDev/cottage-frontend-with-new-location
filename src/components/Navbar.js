@@ -6,7 +6,6 @@ import { ThemeContext, ThemeProvider } from "@/context/ThemeContext";
 import ToggleButton from "./shared/ToogleButton";
 import SideNav from "./nav/SideNav";
 import { AuthContext } from "@/context/AuthProvider";
-import { MdLogin, MdLogout } from "react-icons/md";
 import DropdownMenu from "./nav/DropdownMenu";
 
 const NavBar = () => {
@@ -56,7 +55,7 @@ const NavBar = () => {
         className={`  ${navbarClasses}  md:z-50 dark:bg-slate-800  ${customShadow}  `}
       >
         <div
-          className="px-4 pt-2 pb-4 md:mx-auto nav-size ml-auto"
+          className="px-4 pt-2 pb-4 md:mx-auto nav-size ml-auto roboto-regular"
           id="nav-shape"
         >
           <div className=" flex items-center md:justify-between md:w-full w-[95%] ">

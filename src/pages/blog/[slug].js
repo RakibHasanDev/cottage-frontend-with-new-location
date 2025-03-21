@@ -19,57 +19,69 @@ const HeroSection = dynamic(() => import("@/components/Blog/Herosection"), {
 });
 
 export async function getStaticPaths() {
-  const res = await fetch(
-    "https://cottage-backend-voilerplate.vercel.app/blogs"
-  );
-  let data = await res.json();
+  try {
+    const res = await fetch(
+      "https://cottage-backend-voilerplate.vercel.app/blogs"
+    );
+    const data = await res.json();
 
-  // console.log("Fetched blogs data:", data);
+    if (!Array.isArray(data.blogs)) {
+      console.error("Error: Blogs data is not an array");
+      return { paths: [], fallback: false };
+    }
 
-  if (!Array.isArray(data.blogs)) {
-    console.error("Error: Blogs data is not an array");
-    return { paths: [], fallback: false };
+    const paths = data.blogs.map((blog) => ({
+      params: { slug: blog.slug },
+    }));
+
+    return {
+      paths,
+      fallback: false, // ✅ Allows new pages to be generated at runtime
+    };
+  } catch (error) {
+    console.error("Error fetching paths:", error);
+    return { paths: [], fallback: "blocking" };
   }
-
-  const paths = data.blogs.map((blog) => ({
-    params: { slug: blog.slug }, // ✅ Ensure `slug` is used, NOT `_id`
-  }));
-
-  // console.log("Generated paths:", JSON.stringify(paths, null, 2));
-
-  return {
-    paths,
-    fallback: false, // ❌ Prevents errors from missing pages
-  };
 }
 
+// ✅ Fetch blog details at build time or on demand
 export async function getStaticProps({ params }) {
-  console.log("Fetching blog with slug:", params.slug);
+  try {
+    const res = await fetch(
+      `https://cottage-backend-voilerplate.vercel.app/blogs/single/${params.slug}`
+    );
 
-  const res = await fetch(
-    `https://cottage-backend-voilerplate.vercel.app/blogs/single/${params.slug}`
-  );
+    if (!res.ok) {
+      console.error(`Error fetching blog: ${params.slug}`);
+      return { notFound: true };
+    }
 
-  if (!res.ok) {
-    console.error(`Error fetching blog: ${params.slug}`);
+    const blog = await res.json();
+
+    if (!blog || Object.keys(blog).length === 0) {
+      console.log("Blog not found, returning 404");
+      return { notFound: true };
+    }
+
+    // ✅ Generate metadata at build time
+    const metaDescription = blog?.description
+      ?.map((desc) => desc?.content)
+      .join(" ")
+      .substring(0, 150);
+
+    const metaKeywords = `${blog?.title}, home care blog, caregiving tips, senior care insights, health & wellness, Cottage Home Care blog, home care news`;
+    const metaTitle = `${blog?.title} - Cottage Home Care Services`;
+
+    return {
+      props: { blog, metaDescription, metaKeywords, metaTitle },
+    };
+  } catch (error) {
+    console.error("Error fetching blog:", error);
     return { notFound: true };
   }
-
-  const blog = await res.json();
-
-  // console.log("Fetched blog data:", blog);
-
-  if (!blog || Object.keys(blog).length === 0) {
-    console.log("Blog not found, returning 404");
-    return { notFound: true };
-  }
-
-  return {
-    props: { blog },
-  };
 }
 
-const BlogDetails = ({ blog }) => {
+const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
   const [currentPageUrl, setCurrentPageUrl] = useState("");
   const [formattedDate, setFormattedDate] = useState("");
   const { user } = useContext(AuthContext);
@@ -91,15 +103,6 @@ const BlogDetails = ({ blog }) => {
       setFormattedDate(blog?.date || ""); // Use fallback date
     }
   }, [blog]);
-
-  // Extract first 150 characters for description
-  const metaDescription = blog?.description
-    ?.map((desc) => desc?.content)
-    .join(" ")
-    .substring(0, 150);
-
-  // Generate keywords from title & description
-  const metaKeywords = `${blog?.title}, home care blog, caregiving tips, senior care insights, health & wellness, Cottage Home Care blog, home care news`;
 
   const {
     register,
@@ -188,7 +191,7 @@ const BlogDetails = ({ blog }) => {
   return (
     <>
       <Head>
-        <title>{blog?.title} - Cottage Home Care Services</title>
+        <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
         <meta name="author" content="Cottage Home Care Services" />
@@ -198,7 +201,10 @@ const BlogDetails = ({ blog }) => {
         />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={blog?.img} />
-        <meta property="og:url" content={currentPageUrl} />
+        <meta
+          property="og:url"
+          content={`https://cottagehomecare.com/blogs/${blog?.slug}`}
+        />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={blog?.date} />
         <meta name="twitter:card" content="summary_large_image" />

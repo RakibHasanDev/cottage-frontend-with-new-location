@@ -13,8 +13,6 @@ const Faqs = () => {
     setMounted(true); // ✅ Runs only in the browser
   }, []);
 
-  if (!mounted) return null; // ✅ Prevents SSR from rendering problematic code
-
   const paidItems = [
     {
       id: 1,
@@ -247,7 +245,7 @@ const Faqs = () => {
   return (
     <>
       <Head>
-        <title>Faqs - Cottage Home Care Services</title>
+        <title>FAQs - Cottage Home Care Services</title>
         <meta
           name="description"
           content="Find answers to frequently asked questions about our home care services, COVID-19 safety measures, pricing, policies, and more. Get the information you need to make informed decisions about home care solutions."
@@ -258,6 +256,7 @@ const Faqs = () => {
         />
         <link rel="canonical" href="https://cottagehomecare.com/faqs/" />
       </Head>
+
       <main className="min-h-screen dark:bg-slate-600 bg-blue-50">
         <div className="relative bg-cover bg-center text-center h-[40vh] md:min-h-[82vh] faqs-Banner "></div>
 
