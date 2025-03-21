@@ -144,7 +144,7 @@ const Categories = ({ handleSearch, handleButtonClick }) => {
               return (
                 <div key={blog?._id}>
                   <Link
-                    href={`/blog/${blog?._id}`}
+                    href={`/blog/${blog?.slug}`}
                     target="_blank" // This will open the link in a new tab
                     rel="noopener noreferrer"
                     className="flex gap-5 py-5 border-b-2 border-gray-300 border-dotted"

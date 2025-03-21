@@ -13,29 +13,33 @@ import toast from "react-hot-toast";
 import { AuthContext } from "@/context/AuthProvider";
 import useAdmin from "@/hooks/useAdmin";
 
+const HeroSection = dynamic(() => import("@/components/Blog/Herosection"), {
+  suspense: true,
+  ssr: false,
+});
+
 export async function getStaticPaths() {
   const res = await fetch(
     "https://cottage-backend-voilerplate.vercel.app/blogs"
   );
   let data = await res.json();
 
-  console.log("Fetched blogs data:", data);
+  // console.log("Fetched blogs data:", data);
 
   if (!Array.isArray(data.blogs)) {
-    // ✅ Fix: Access `data.blogs` instead of `data`
     console.error("Error: Blogs data is not an array");
     return { paths: [], fallback: false };
   }
 
   const paths = data.blogs.map((blog) => ({
-    params: { slug: blog.slug }, // ✅ Using slug from `blogs`
+    params: { slug: blog.slug }, // ✅ Ensure `slug` is used, NOT `_id`
   }));
 
-  console.log("Generated paths:", paths);
+  // console.log("Generated paths:", JSON.stringify(paths, null, 2));
 
   return {
     paths,
-    fallback: false, // ✅ Ensure only known paths are built
+    fallback: false, // ❌ Prevents errors from missing pages
   };
 }
 
@@ -45,9 +49,15 @@ export async function getStaticProps({ params }) {
   const res = await fetch(
     `https://cottage-backend-voilerplate.vercel.app/blogs/single/${params.slug}`
   );
+
+  if (!res.ok) {
+    console.error(`Error fetching blog: ${params.slug}`);
+    return { notFound: true };
+  }
+
   const blog = await res.json();
 
-  console.log("Fetched blog data:", blog);
+  // console.log("Fetched blog data:", blog);
 
   if (!blog || Object.keys(blog).length === 0) {
     console.log("Blog not found, returning 404");
@@ -59,16 +69,9 @@ export async function getStaticProps({ params }) {
   };
 }
 
-const HeroSection = dynamic(() => import("@/components/Blog/Herosection"), {
-  suspense: true,
-  ssr: false,
-});
-
 const BlogDetails = ({ blog }) => {
   const [currentPageUrl, setCurrentPageUrl] = useState("");
   const [formattedDate, setFormattedDate] = useState("");
-  const [views, setViews] = useState(blog?.views || 0);
-
   const { user } = useContext(AuthContext);
   const { isAdmin, isAdminLoading } = useAdmin(user?.email);
 

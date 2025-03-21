@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import { toast } from "react-hot-toast";
 import { HiOutlineArrowSmRight } from "react-icons/hi";
 import Link from "next/link";
-import createSlug from "../shared/slugify";
 import { AuthContext } from "@/context/AuthProvider";
 import useAdmin from "@/hooks/useAdmin";
 
@@ -26,14 +25,13 @@ const cardStyle2 = {
 
 const BlogCard = ({ blog, refetch, buttonData }) => {
   const [style, setStyle] = useState(cardStyle);
-  const { title, img, _id } = blog;
+  const { title, img, _id, slug } = blog;
 
   const { user } = useContext(AuthContext);
   const { isAdmin, isAdminLoading } = useAdmin(user?.email);
 
   // Initial style
   const options = { year: "numeric", month: "long", day: "numeric" };
-  const slug = createSlug(title);
 
   const apiKey = process.env.NEXT_PUBLIC_secureApiKey;
 
@@ -71,7 +69,6 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
         style={style}
         onMouseEnter={() => setStyle(cardStyle2)}
         onMouseLeave={() => setStyle(cardStyle)}
-        href={`/blog/${_id}`}
         className="block w-full bg-white dark:bg-slate-200 poppins relative group rounded-md"
       >
         {/* Image section */}

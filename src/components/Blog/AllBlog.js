@@ -182,7 +182,7 @@ const AllBlog = ({
                   window.scrollTo(0, 0);
                 }}
               >
-                <option selected disabled className="hidden">
+                <option disabled className="hidden">
                   {`Page Size ${size}`}
                 </option>
                 <option value="6">Page Size 6</option>

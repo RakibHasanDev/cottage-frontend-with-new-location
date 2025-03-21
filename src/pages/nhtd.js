@@ -297,7 +297,7 @@ const NHTD = () => {
                   <div className="my-5 open-sans">
                     <button
                       onClick={() =>
-                        handleOpenPdfClick("assets/Brochures/NHTD/allNHTD.pdf")
+                        handleOpenPdfClick("/assets/Brochures/NHTD/allNHTD.pdf")
                       }
                       className=" my-3 bg-[#00A6B2] text-white px-4 py-2 rounded-md flex gap-1 items-center"
                     >

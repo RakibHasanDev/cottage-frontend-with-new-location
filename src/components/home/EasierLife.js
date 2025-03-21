@@ -151,7 +151,7 @@ const EasierLife = () => {
       .then((data) => {
         if (data.acknowledged) {
           // toast.success("Message Send Successfully");
-          // smsHandler(contactInfo);
+          smsHandler(contactInfo);
           saveUser(name, email);
           updateTime(userMessage, email, name);
         }

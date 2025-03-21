@@ -72,4 +72,20 @@
         <loc>https://cottagehomecare.com/values/</loc>
         <priority>0.5</priority>
     </url>
+    <url>
+        <loc>https://cottagehomecare.com/blog/compassionate-home-care-in-nyc-with-cottage-home-care-services/</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cottagehomecare.com/blog/hhapca-services-compassionate-home-care-with-cottage-home-care-services/</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cottagehomecare.com/blog/nhtd-program-personalized-home-care-with-cottage-home-care-services/</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://cottagehomecare.com/blog/five-tips-for-a-restful-night/</loc>
+        <priority>0.8</priority>
+    </url>
 </urlset>
