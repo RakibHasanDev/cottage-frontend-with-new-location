@@ -10,6 +10,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import app from "@/Firebase/Firebase.config";
+import { useQuery } from "@tanstack/react-query";
 
 export const AuthContext = createContext();
 const auth = typeof window !== "undefined" ? getAuth(app) : null; // ✅ Fix: Ensure Firebase runs only on client
@@ -17,6 +18,18 @@ const auth = typeof window !== "undefined" ? getAuth(app) : null; // ✅ Fix: En
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const previousVisitors = 672;
+
+  const url = "https://cottage-backend-voilerplate.vercel.app/count";
+
+  const { data: visitors = [] } = useQuery({
+    queryKey: ["count"],
+    queryFn: async () => {
+      const res = await fetch(url);
+      const data = await res.json();
+      return data;
+    },
+  });
 
   // ✅ Fix: Ensure Firebase runs only on the client
   useEffect(() => {
@@ -64,8 +77,9 @@ const AuthProvider = ({ children }) => {
     providerLogin,
     user,
     loading,
-
+    visitors,
     resetPassword,
+    previousVisitors,
   };
 
   return (

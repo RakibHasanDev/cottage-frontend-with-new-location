@@ -173,7 +173,7 @@ const NHTD = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://cottagehomecare.com/hero.webp"
+          content="https://res.cloudinary.com/di3wwp9s0/v1739298895/clfasecrrmzcsn9vacze.webp"
         />
 
         {/* ✅ Twitter Meta Tags */}
