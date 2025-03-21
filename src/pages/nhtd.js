@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { TbFileTypePdf } from "react-icons/tb";
 import { FaPlayCircle } from "react-icons/fa";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
@@ -12,6 +12,18 @@ import Image from "next/image";
 
 const NHTD = () => {
   const [showModal, setShowModal] = useState(false);
+
+  const [imageSrc, setImageSrc] = useState(""); // Dynamically choose image
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setImageSrc(
+        window.innerWidth <= 688
+          ? "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_1080/v1739904168/ayaemn0p3ldnjpq6bmau.webp"
+          : "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_2580/v1739904083/cvy7kdo0ixxwltvunnam.webp"
+      );
+    }
+  }, []);
 
   const openModal = () => {
     setShowModal(true);
@@ -127,19 +139,20 @@ const NHTD = () => {
   ];
 
   // ✅ Preload Hero Images for Improved LCP Performance
-  const preloadLinks = [
-    {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_2580/v1739904083/cvy7kdo0ixxwltvunnam.webp",
-      fetchPriority: "high",
-      type: "image/webp",
-    },
-    {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_1080/v1739904168/ayaemn0p3ldnjpq6bmau.webp",
-      fetchPriority: "high",
-      type: "image/webp",
-      media: "(max-width: 688px)",
-    },
-  ];
+  // const preloadLinks = [
+  //   {
+  //     href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_2580/v1739904083/cvy7kdo0ixxwltvunnam.webp",
+  //     as: "image",
+  //     type: "image/webp",
+  //     fetchPriority: "high",
+  //   },
+  //   {
+  //     href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_1080/v1739904168/ayaemn0p3ldnjpq6bmau.webp",
+  //     as: "image",
+  //     type: "image/webp",
+  //     fetchPriority: "high",
+  //   },
+  // ];
 
   return (
     <>
@@ -175,16 +188,9 @@ const NHTD = () => {
         <link rel="canonical" href="https://cottagehomecare.com/nhtd/" />
 
         {/* ✅ Preloading Images for Faster Load Times */}
-        {preloadLinks.map((link, index) => (
-          <link
-            key={index}
-            rel="preload"
-            href={link.href}
-            as="image"
-            type={link.type}
-          />
-        ))}
-
+        {imageSrc && (
+          <link rel="preload" href={imageSrc} as="image" fetchPriority="high" />
+        )}
         {/* ✅ Structured Data (Schema.org JSON-LD) */}
         <script
           type="application/ld+json"
@@ -195,19 +201,16 @@ const NHTD = () => {
       <main className="min-h-screen dark:bg-gray-600">
         <div className="relative min-h-[40vh]  league-spartan">
           <picture>
-            {/* Mobile Image (for screens smaller than 688px) */}
             <source
               srcSet="https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_1080/v1739904168/ayaemn0p3ldnjpq6bmau.webp"
               media="(max-width: 688px)"
             />
-            {/* Desktop Image (default) */}
             <Image
-              src="https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto/v1739904083/cvy7kdo0ixxwltvunnam.webp"
+              src="https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_2580/v1739904083/cvy7kdo0ixxwltvunnam.webp"
               alt="NHTD - Nursing Home Transition and Diversion"
-              width="2580"
-              height="795"
-              loading="eager"
-              fetchPriority="high"
+              width={2580}
+              height={795}
+              priority // ✅ LCP Fix: Boost Loading Priority
               className="absolute inset-0 w-full h-full object-cover"
             />
           </picture>
