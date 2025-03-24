@@ -169,7 +169,10 @@ const NHTD = () => {
         {/* ✅ Open Graph Meta Tags (Facebook & LinkedIn) */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:url" content="https://cottagehomecare.com/nhtd/" />
+        <meta
+          property="og:url"
+          content="https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_1080/v1739298895/clfasecrrmzcsn9vacze.webp"
+        />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"

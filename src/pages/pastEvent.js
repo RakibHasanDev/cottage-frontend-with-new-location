@@ -98,10 +98,8 @@ const PastEvent = () => {
       </Head>
 
       <main className="dark:bg-slate-600">
-        <Suspense fallback={<SkeletonLoading />}>
-          {/* Lazy-loaded banner */}
-          <HeroBanner />
-        </Suspense>
+        {/* Lazy-loaded banner */}
+        <HeroBanner />
 
         <div>
           <div className="md:flex justify-between  items-center dark:bg-slate-800 ">
