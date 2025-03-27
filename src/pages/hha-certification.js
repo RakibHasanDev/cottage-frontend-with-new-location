@@ -88,7 +88,7 @@ const HhhaCertification = () => {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: title,
-      url: "https://cottagehomecare.com/hhaCertification",
+      url: "https://cottagehomecare.com/hha-certification",
       description: description,
       isPartOf: {
         "@type": "WebSite",
@@ -129,7 +129,7 @@ const HhhaCertification = () => {
           "@type": "ListItem",
           position: 5,
           name: "HHA Certification",
-          item: "https://cottagehomecare.com/hhaCertification",
+          item: "https://cottagehomecare.com/hha-certification",
         },
       ],
     },
@@ -177,7 +177,7 @@ const HhhaCertification = () => {
         <meta property="og:description" content={description} />
         <meta
           property="og:url"
-          content="https://cottagehomecare.com/hhaCertification/"
+          content="https://cottagehomecare.com/hha-certification/"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -186,7 +186,7 @@ const HhhaCertification = () => {
         />
         <link
           rel="canonical"
-          href="https://cottagehomecare.com/hhaCertification/"
+          href="https://cottagehomecare.com/hha-certification/"
         />
 
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>

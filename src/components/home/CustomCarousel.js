@@ -90,15 +90,15 @@ const CustomCarousel = () => {
             id="lower-medium-device"
           >
             <div className="bg-simple px-5 pt-4 pb-8">
-              <h1 className="text-white text-sm md:text-base text-center font-medium text-shadow open-sans">
+              <h2 className="text-white text-sm md:text-base text-center font-medium text-shadow open-sans">
                 Cottage Home Care Services provides care to seniors in need and
                 has taken on some of the most challenging cases in New York.
-              </h1>
+              </h2>
               <p className="w-[18px] h-[2px] bg-gray-300 rounded-md mx-auto my-2.5"></p>
-              <h2 className="text-center md:text-xl text-[15px] font-medium md:font-semibold text-[#dbf2f4] mb-5 px-5 md:px-0 mt-2 open-sans custom-font text-shadow">
+              <h1 className="text-center md:text-xl text-[15px] font-medium md:font-semibold text-[#dbf2f4] mb-5 px-5 md:px-0 mt-2 open-sans custom-font text-shadow">
                 HHA/PCA, CDPAP, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK
                 CITY, NASSAU & SUFFOLK COUNTY, WESTCHESTER & ALBANY.
-              </h2>
+              </h1>
               <div className="flex justify-center text-white font-semibold second-text">
                 <a
                   href="tel:+1516-367-2266"

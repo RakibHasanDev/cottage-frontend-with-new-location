@@ -44,9 +44,9 @@ const WeAre = () => {
   return (
     <div className="bg-[#F5F5F7] pb-16 dark:bg-slate-600">
       <div className=" pt-10 2xl:w-[80%] md:w-[90%] w-[95%] mx-auto">
-        <h1 className=" text-2xl xl:text-4xl font-bold text-center league-spartan  dark:text-gray-200 text-[#00A6B2]">
+        <p className=" text-2xl xl:text-4xl font-bold text-center league-spartan  dark:text-gray-200 text-[#00A6B2]">
           Who We Are
-        </h1>
+        </p>
         <hr className="border-[#00a6b2] border-t-2 w-12 mt-2 mx-auto mb-5  " />
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 shadow-xl ">
@@ -69,10 +69,10 @@ const WeAre = () => {
                     index === 0
                       ? "bg-[#00A6B2] dark:bg-slate-400"
                       : index === 1
-                        ? "bg-white dark:bg-slate-300"
-                        : index === 2
-                          ? "bg-[#EBF8F9] dark:bg-slate-200"
-                          : "bg-[#00A6B2]" // Default background
+                      ? "bg-white dark:bg-slate-300"
+                      : index === 2
+                      ? "bg-[#EBF8F9] dark:bg-slate-200"
+                      : "bg-[#00A6B2]" // Default background
                   }`}
                 >
                   <div className="  " id="front-part">
@@ -83,15 +83,15 @@ const WeAre = () => {
                       width="80"
                       height="80"
                     />
-                    <h1
+                    <h5
                       className={`lg:text-xl md:text-lg text-[19px] ${
                         index === 0
                           ? "text-white border-white"
                           : index === 1
-                            ? "text-gray-700 border-gray-700"
-                            : index === 2
-                              ? "text-gray-700"
-                              : "bg-[#00A6B2]" // Default background
+                          ? "text-gray-700 border-gray-700"
+                          : index === 2
+                          ? "text-gray-700"
+                          : "bg-[#00A6B2]" // Default background
                       } font-medium md:font-semibold mt-5 league-spartan   flex items-center justify-between  w-[95%]`}
                     >
                       {info.title}{" "}
@@ -100,15 +100,15 @@ const WeAre = () => {
                           index === 0
                             ? "text-white border-white"
                             : index === 1
-                              ? "text-gray-700 border-gray-700"
-                              : index === 2
-                                ? " text-gray-700 border-gray-700"
-                                : "bg-[#00A6B2]" // Default background
+                            ? "text-gray-700 border-gray-700"
+                            : index === 2
+                            ? " text-gray-700 border-gray-700"
+                            : "bg-[#00A6B2]" // Default background
                         } font-bold`}
                       >
                         <IoIosArrowRoundForward className="text-3xl flex justify-center items-center arrow-animation" />
                       </p>
-                    </h1>
+                    </h5>
                   </div>
                 </div>
                 <div
@@ -116,10 +116,10 @@ const WeAre = () => {
                     index === 0
                       ? "bg-[#00A6B2] dark:bg-slate-400"
                       : index === 1
-                        ? "bg-white dark:bg-slate-300"
-                        : index === 2
-                          ? "bg-[#EBF8F9] dark:bg-slate-200"
-                          : "bg-[#00A6B2]" // Default background
+                      ? "bg-white dark:bg-slate-300"
+                      : index === 2
+                      ? "bg-[#EBF8F9] dark:bg-slate-200"
+                      : "bg-[#00A6B2]" // Default background
                   }`}
                 >
                   <span className="content"> </span>
@@ -129,21 +129,21 @@ const WeAre = () => {
                     index === 0
                       ? "bg-[#00A6B2] dark:bg-slate-400"
                       : index === 1
-                        ? "bg-white dark:bg-slate-300"
-                        : index === 2
-                          ? "bg-[#EBF8F9] dark:bg-slate-200"
-                          : "bg-[#00A6B2]" // Default background
+                      ? "bg-white dark:bg-slate-300"
+                      : index === 2
+                      ? "bg-[#EBF8F9] dark:bg-slate-200"
+                      : "bg-[#00A6B2]" // Default background
                   }`}
                 >
-                  <h1
+                  <h6
                     className={`content  ld:pr-6 md:p-4 p-3 2xl:leading-6 text-justify font-sans ${
                       index === 0
                         ? "text-white"
                         : index === 1
-                          ? "text-gray-700"
-                          : index === 2
-                            ? "text-gray-700"
-                            : "text-white"
+                        ? "text-gray-700"
+                        : index === 2
+                        ? "text-gray-700"
+                        : "text-white"
                     }`}
                     style={{
                       fontSmooth: "always", // For smoother rendering
@@ -156,7 +156,7 @@ const WeAre = () => {
                       {info?.title}
                     </p>
                     <p className="text-[15px]">{info?.description}</p>
-                  </h1>
+                  </h6>
                 </div>
 
                 <div
@@ -164,10 +164,10 @@ const WeAre = () => {
                     index === 0
                       ? "bg-[#23b2bd] dark:bg-slate-400"
                       : index === 1
-                        ? "bg-gray-100 dark:bg-slate-300"
-                        : index === 2
-                          ? "bg-[#ebf5f5] dark:bg-slate-200"
-                          : "bg-[#00A6B2]" // Default background
+                      ? "bg-gray-100 dark:bg-slate-300"
+                      : index === 2
+                      ? "bg-[#ebf5f5] dark:bg-slate-200"
+                      : "bg-[#00A6B2]" // Default background
                   }`}
                 >
                   <span className="content"> </span>

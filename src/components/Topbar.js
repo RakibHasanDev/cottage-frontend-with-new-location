@@ -23,7 +23,7 @@ const TopBar = () => {
             <div className="lg:flex gap-8 hidden">
               <div className="flex gap-4 items-center md:text-lg topbar-text">
                 <BsFillTelephoneFill />
-                <h1>
+                <p>
                   Call{" "}
                   <a
                     href="tel:+1516-367-2266"
@@ -32,11 +32,11 @@ const TopBar = () => {
                   >
                     516-367-2266
                   </a>
-                </h1>
+                </p>
               </div>
               <div className="flex gap-4 items-center md:text-lg topbar-text">
                 <TfiEmail />
-                <h1>
+                <p>
                   Email{" "}
                   <a
                     href="mailto:info@cottagehomecare.com"
@@ -45,7 +45,7 @@ const TopBar = () => {
                   >
                     info@cottagehomecare.com
                   </a>
-                </h1>
+                </p>
               </div>
             </div>
             <div className="flex items-center gap-4 md:gap-5 md:text-lg font-medium text-[#00A6B2]">

@@ -33,16 +33,16 @@ const ContactInfo = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <h1 className="league-spartan my-5 text-2xl md:text-xl lg:text-2xl xl:text-4xl font-bold dark:text-gray-100 text-[#00A6B2]">
+          <p className="league-spartan my-5 text-2xl md:text-xl lg:text-2xl xl:text-4xl font-bold dark:text-gray-100 text-[#00A6B2]">
             Cottage Home Care Services
-          </h1>
-          <p className="Poppins dark:text-gray-100 text-[16px] leading-relaxed open-sans font-normal">
+          </p>
+          <h1 className="Poppins dark:text-gray-100 text-[16px] leading-relaxed open-sans font-normal">
             {" "}
             Cottage Home Care Services is open to any feedback. Have questions?
             Unsure whether you can be covered by your insurance for Home Care
             Services? Need assessment? We would love to speak to you. Please
             call or email us! Thank you!{" "}
-          </p>
+          </h1>
         </div>
       </div>
 

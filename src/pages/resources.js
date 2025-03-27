@@ -98,7 +98,7 @@ const schemaData = [
         "@type": "ListItem",
         position: 5,
         name: "Private Pay",
-        item: "https://cottagehomecare.com/personalPayService",
+        item: "https://cottagehomecare.com/personal-pay-service",
       },
       {
         "@type": "ListItem",
@@ -110,13 +110,13 @@ const schemaData = [
         "@type": "ListItem",
         position: 7,
         name: "Contact Us",
-        item: "https://cottagehomecare.com/contacts",
+        item: "https://cottagehomecare.com/contact",
       },
       {
         "@type": "ListItem",
         position: 8,
         name: "HHA Certification",
-        item: "https://cottagehomecare.com/hhaCertification",
+        item: "https://cottagehomecare.com/hha-certification",
       },
       {
         "@type": "ListItem",

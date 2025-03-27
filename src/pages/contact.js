@@ -33,7 +33,8 @@ const Placeholder = () => (
 const Contacts = () => {
   const title = "Contact Us - Cottage Home Care Services";
   const description =
-    "Get in touch with Cottage Home Care Services. Call us at 516-367-2266 or email info@cottagehomecare.com. Visit us at our offices in South Richmond Hill Queens, Hicksville, Jamaica, and Washington. We are here to provide support and answer any questions you may have about our home care services.";
+    "Contact Cottage Home Care Services at 516-367-2266 or info@cottagehomecare.com. We're here to assist with your home care needs and questions.";
+
   const keywords =
     "contact Cottage Home Care, home care services contact, South Richmond Hill Queens, Hicksville office, Jamaica office, Washington office, home care support, Cottage Home Care Services contact, 516-367-2266, info@cottagehomecare.com";
 
@@ -72,7 +73,7 @@ const Contacts = () => {
       {
         "@type": "WebPage",
         name: "Contact Us - Cottage Home Care Services",
-        url: "https://cottagehomecare.com/contacts",
+        url: "https://cottagehomecare.com/contact",
         description:
           "Get in touch with Cottage Home Care Services. Call us at 516-367-2266, email info@cottagehomecare.com, or visit our offices in Queens, Hicksville, Jamaica, and Washington for home care support.",
         isPartOf: {
@@ -93,7 +94,7 @@ const Contacts = () => {
             "@type": "ListItem",
             position: 2,
             name: "Contact Us",
-            item: "https://cottagehomecare.com/contacts",
+            item: "https://cottagehomecare.com/contact",
           },
         ],
       },
@@ -146,7 +147,7 @@ const Contacts = () => {
         <meta property="og:description" content={description} />
         <meta
           property="og:url"
-          content="https://cottagehomecare.com/contacts/"
+          content="https://cottagehomecare.com/contact/"
         />
         <meta
           property="og:image"
@@ -161,7 +162,7 @@ const Contacts = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/logo.png"
         />
-        <link rel="canonical" href="https://cottagehomecare.com/contacts/" />
+        <link rel="canonical" href="https://cottagehomecare.com/contact/" />
 
         {/* ✅ Structured Data */}
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
@@ -170,9 +171,8 @@ const Contacts = () => {
       <main className="dark:bg-slate-600 min-h-screen">
         {/* ✅ Set Canonical to Prevent Duplicate Canonical Issues */}
 
-        <Suspense fallback={<Placeholder />}>
-          <LazyBanner />
-        </Suspense>
+        <LazyBanner />
+
         <Suspense fallback={<Placeholder />}>
           <ContactInfo />
         </Suspense>

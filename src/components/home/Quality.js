@@ -65,9 +65,9 @@ const Quality = () => {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-xl lg:text-2xl font-semibold text-white mb-2 md:mb-4 ">
+                <p className="text-xl lg:text-2xl font-semibold text-white mb-2 md:mb-4 ">
                   CDPAP
-                </h1>
+                </p>
 
                 {/* List */}
                 <ul className="space-y-1 xl:space-y-3 lg:space-y-2">
@@ -216,9 +216,9 @@ const Quality = () => {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4 ">
+                <p className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4 ">
                   HHA/PCA
-                </h1>
+                </p>
 
                 {/* List */}
                 <ul className="space-y-1 xl:space-y-3 lg:space-y-2">
@@ -368,9 +368,9 @@ const Quality = () => {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4 ">
+                <p className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4 ">
                   NHTD
-                </h1>
+                </p>
 
                 {/* List */}
                 <ul className="space-y-1 xl:space-y-3 lg:space-y-2">
@@ -520,9 +520,9 @@ const Quality = () => {
                 </div>
 
                 {/* Title */}
-                <h1 className="text-xl md::text-2xl font-semibold text-white mb-2 md:mb-4 ">
+                <p className="text-xl md::text-2xl font-semibold text-white mb-2 md:mb-4 ">
                   PRIVATE PAY
-                </h1>
+                </p>
 
                 {/* List */}
                 <ul className="space-y-1 xl:space-y-3 lg:space-y-2">
@@ -628,7 +628,7 @@ const Quality = () => {
                     </span>
                   </li>
                 </ul>
-                <Link className="mt-2 block " href="/personalPayService">
+                <Link className="mt-2 block " href="/personal-pay-service">
                   <button className="animated-button cursor-pointer">
                     <RiArrowRightDoubleFill className="text-2xl arrow-icon text-white" />
                     <span className="animated-text">

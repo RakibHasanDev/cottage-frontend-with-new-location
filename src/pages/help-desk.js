@@ -58,7 +58,7 @@ const HelpDesk = () => {
       icon: <GiSandsOfTime />,
       name: "EVV Clock In/Out",
       description: "Instructions to clock in and out of EVV",
-      path: "clockInOut",
+      path: "clock-in-out",
     },
     {
       icon: <BsTable />,
@@ -86,7 +86,7 @@ const HelpDesk = () => {
           name="keywords"
           content="Cottage Home Care Help Desk, employee support, clock in, clock out, PayStub access, PTO management, general requests, payroll information, request supplies, administrative help, healthcare staff support"
         />
-        <link rel="canonical" href="https://cottagehomecare.com/helpDesk/" />
+        <link rel="canonical" href="https://cottagehomecare.com/help-desk/" />
       </Head>
 
       <main className="min-h-screen dark:bg-slate-600 ">

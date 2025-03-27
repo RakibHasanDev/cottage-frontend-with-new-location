@@ -8,15 +8,16 @@ const MissionVision = () => {
         <title>Mission & Vision - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Discover the mission and vision that drive Cottage Home Care Services. Learn about our commitment to providing exceptional home care, our core values, and our long-term goals. See how we strive to improve the quality of life for our clients and make a positive impact in the community."
+          content="Discover the mission and vision behind Cottage Home Care Services. Learn about our values, goals, and dedication to exceptional home care."
         />
+
         <meta
           name="keywords"
           content="Cottage Home Care mission, Cottage Home Care vision, home care core values, exceptional home care commitment, long-term goals, quality of life improvement, community impact, home care dedication, client-centered care, Cottage Home Care philosophy"
         />
         <link
           rel="canonical"
-          href="https://cottagehomecare.com/missionVision/"
+          href="https://cottagehomecare.com/mission-vision/"
         />
       </Head>
       <main className="min-h-screen dark:bg-slate-600">
@@ -32,12 +33,12 @@ const MissionVision = () => {
               data-aos="fade-right"
               data-aos-duration="2000"
             >
-              <p className="text-justify dark:text-gray-100">
+              <h2 className="text-justify dark:text-gray-100">
                 Our mission is to provide personalized, compassionate, and
                 high-quality home care services that enable our patients to
                 maintain their independence and improve their overall health and
                 well-being.
-              </p>
+              </h2>
 
               <p className="text-justify mt-3 dark:text-gray-100">
                 We strive to deliver individualized care plans tailored to each
@@ -46,47 +47,59 @@ const MissionVision = () => {
                 and open communication with our patients and their families.
               </p>
             </div>
-            <div className="lg:col-span-2 md:col-span-4  mt-5 order-first sm:order-none md:h-96 overflow-hidden">
+            <div
+              className="lg:col-span-2 md:col-span-4  mt-5 order-first sm:order-none md:h-96 overflow-hidden"
+              data-aos="fade-down"
+              data-aos-duration="2000"
+            >
               <img
                 src={"/assets/mission-vision/sova.webp"}
                 alt="pic1"
-                className="w-full  rounded-md h-fit"
-                data-aos="fade-down"
-                data-aos-duration="2000"
-                style={{ width: "100%", height: "auto" }}
+                className="w-full  rounded-md h-auto"
+                width={694}
+                height={810}
               />
             </div>
-            <div className="lg:col-span-4 mt-5 hidden lg:block md:h-96 overflow-hidden">
+            <div
+              className="lg:col-span-4 mt-5 hidden lg:block md:h-96 overflow-hidden"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+            >
               <img
                 src={"/assets/mission-vision/group-photo.webp"}
                 alt="pic2"
-                className="w-full  rounded-md h-fit"
-                data-aos="fade-left"
-                data-aos-duration="2000"
-                style={{ width: "100%", height: "auto" }}
+                className="w-full  rounded-md h-auto"
+                width={1080}
+                height={686}
               />
             </div>
           </div>
 
           <div className="grid md:grid-cols-8  gap-8 items-center mt-3">
-            <div className="lg:col-span-4 mt-5 hidden lg:block md:h-96 overflow-hidden">
+            <div
+              className="lg:col-span-4 mt-5 hidden lg:block md:h-96 overflow-hidden"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+            >
               <img
                 src={"/assets/mission-vision/group-cover2.webp"}
                 alt="pic4"
-                className="w-full h-fit rounded-md"
-                data-aos="fade-right"
-                data-aos-duration="2000"
-                style={{ width: "100%", height: "auto" }}
+                className="w-full h-auto rounded-md"
+                width={1001}
+                height={561}
               />
             </div>
-            <div className="lg:col-span-2 md:col-span-4  mt-5 md:h-96 overflow-hidden">
+            <div
+              className="lg:col-span-2 md:col-span-4  mt-5 md:h-96 overflow-hidden"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <img
-                src={"/assets/priya.jpg"}
+                src={"/assets/priya.webp"}
                 alt="pic3"
-                className="w-full rounded-md h-fit"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                width={{ with: "100%", height: "auto" }}
+                className="w-full rounded-md h-auto"
+                widtht={1200}
+                height={1569}
               />
             </div>
             <div

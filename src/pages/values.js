@@ -8,8 +8,9 @@ const Values = () => {
         <title>Values - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Learn about the core values that define Cottage Home Care Services. Discover our dedication to compassion, integrity, respect, and excellence in providing home care. See how our values guide our actions and decisions, ensuring the highest quality of care for our clients."
+          content="Discover the core values of Cottage Home Care Services — compassion, integrity, and excellence in delivering high-quality home care."
         />
+
         <meta
           name="keywords"
           content="Cottage Home Care values, core values, compassion in home care, integrity in home care, respect in home care, excellence in home care, home care quality, client-centered values, home care principles, Cottage Home Care commitment"
@@ -48,10 +49,10 @@ const Values = () => {
               Values, Of Cottage Home Care Services
             </h2>
             <hr className="mt-3 border-t-[1px] border-[#00A6B2] w-16 mx-auto " />
-            <p className="text-base text-gray-700 md:text-lg font-medium mt-5 py-2 dark:text-gray-200">
+            <h1 className="text-base text-gray-700 md:text-lg font-medium mt-5 py-2 dark:text-gray-200">
               “HHA/PCA & CDPAP SERVICES THROUGHOUT NEW YORK CITY, NASSAU &
               SUFFOLK COUNTY, WESTCHESTER & ALBANY”
-            </p>
+            </h1>
           </div>
           <div className="grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x">
             <div className="space-y-6 sm:px-16">
@@ -74,14 +75,14 @@ const Values = () => {
                   </div>
                 </div>
                 <div className="dark:text-gray-100">
-                  <h6 className="mb-3 text-xl font-bold leading-5 ">
+                  <p className="mb-3 text-xl font-bold leading-5 ">
                     Personalized care:
-                  </h6>
-                  <p className="text-sm text-gray-900 dark:text-gray-100">
+                  </p>
+                  <h4 className="text-sm text-gray-900 dark:text-gray-100">
                     Cottage Home care services are tailored to the specific
                     needs and preferences of the individual, allowing them to
                     receive the personalized care they require.
-                  </p>
+                  </h4>
                 </div>
               </div>
               <div className="flex flex-col max-w-md sm:flex-row">
@@ -103,14 +104,14 @@ const Values = () => {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
+                  <p className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
                     Comfort:
-                  </h6>
-                  <p className="text-sm text-gray-900 dark:text-gray-100">
+                  </p>
+                  <h3 className="text-sm text-gray-900 dark:text-gray-100">
                     Many individuals feel more comfortable receiving care in the
                     familiar surroundings of their own home, rather than in an
                     unfamiliar setting such as a hospital or care facility.
-                  </p>
+                  </h3>
                 </div>
               </div>
               <div className="flex flex-col max-w-md sm:flex-row">
@@ -132,14 +133,14 @@ const Values = () => {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
+                  <p className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
                     Independence:
-                  </h6>
-                  <p className="text-sm text-gray-900 dark:text-gray-100">
+                  </p>
+                  <h4 className="text-sm text-gray-900 dark:text-gray-100">
                     Cottage Home care services can help individuals maintain
                     their independence and continue living in their own homes
                     for as long as possible.
-                  </p>
+                  </h4>
                 </div>
               </div>
             </div>
@@ -163,9 +164,9 @@ const Values = () => {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
+                  <p className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
                     Cost-effective:
-                  </h6>
+                  </p>
                   <p className="text-sm text-gray-900 dark:text-gray-100">
                     Cottage Home care services can be more cost-effective than
                     other forms of care, such as hospitalization or nursing home
@@ -192,9 +193,9 @@ const Values = () => {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
+                  <p className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
                     Quality of life:
-                  </h6>
+                  </p>
                   <p className="text-sm text-gray-900 dark:text-gray-100">
                     Cottage Home care services can improve an individual&apos;s
                     quality of life by providing assistance with daily living
@@ -222,9 +223,9 @@ const Values = () => {
                   </div>
                 </div>
                 <div>
-                  <h6 className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
+                  <p className="mb-3 text-xl font-bold leading-5 dark:text-gray-100">
                     Peace of mind:
-                  </h6>
+                  </p>
                   <p className="text-sm text-gray-900 dark:text-gray-100">
                     Cottage Home care services can provide peace of mind for
                     both the individual receiving care and their loved ones,

@@ -26,7 +26,8 @@ const personalPayService = () => {
 
   const title = "Private Pay Home Care Services | Cottage Home Care";
   const description =
-    "Private Pay at Cottage Home Care Services offers a flexible payment option for individuals and families seeking personalized home care without relying on insurance or government assistance. Our dedicated team of Home Health Aides (HHA) and Personal Care Aides (PCA) provide comprehensive support tailored to meet the unique needs of each client. Services include but are not limited to assistance with daily living activities, medication management, and specialized care for individuals with disabilities and seniors. We prioritize privacy and autonomy, ensuring our clients receive the highest quality care in the comfort of their own homes across New York City, Nassau, Suffolk County, Westchester, and Albany.";
+    "Private Pay at Cottage Home Care offers flexible, personalized home care services without insurance — available across NYC, Nassau, Suffolk & beyond.";
+
   const keywords =
     "Private Pay Home Care, Personalized Home Care Services, Home Health Aides, Personal Care Aides, Flexible Payment Home Care, Customized Care Plans, Disability Support, Senior Care, Home Care Privacy, Direct Client Billing, New York City, Nassau, Suffolk County, Westchester, Albany";
 
@@ -154,7 +155,7 @@ const personalPayService = () => {
 
         <link
           rel="canonical"
-          href="https://cottagehomecare.com/personalPayService/"
+          href="https://cottagehomecare.com/personal-pay-service/"
         />
 
         {/* ✅ Preloading Hero Images for Faster Load */}
@@ -179,14 +180,14 @@ const personalPayService = () => {
 
       <main className="min-h-screen dark:bg-gray-600">
         <div className="singleService-banner min-h-[40vh] league-spartan">
-          <h1 className="ml-5 md:ml-0   text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[10vh] mb-5 font-bold text-shadow text-center md:max-w-md  lg:ml-[5%]">
+          <h5 className="ml-5 md:ml-0   text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[10vh] mb-5 font-bold text-shadow text-center md:max-w-md  lg:ml-[5%]">
             Private Pay
             <p className="mt-1 md:mt-3 ">In</p>
             <p className="mt-1 md:mt-3 ">Cottage Home Care </p>
-          </h1>
+          </h5>
           <div className="flex justify-center pl-5 my-2 md:max-w-md lg:ml-[5%]">
             <Link
-              href="/contacts"
+              href="/contact"
               className="cursor-pointer  md:text-lg font-medium md:font-semibold px-2.5 py-1.5 md:px-4  border-b-4 border-r-4 border-white md:py-3 bg-[#00A6B2] text-white shadow-md rounded-md text-base league-spartan "
             >
               Contact Us
@@ -205,9 +206,9 @@ const personalPayService = () => {
             <div className="md:col-span-2  ">
               <div className="bg-[#F8F9FA]  rounded-md py-8 dark:bg-slate-800">
                 <div className="w-[90%] mx-auto">
-                  <h1 className="txt-lg md:text-2xl font-semibold dark:text-gray-100 league-spartan">
+                  <p className="txt-lg md:text-2xl font-semibold dark:text-gray-100 league-spartan">
                     All Services
-                  </h1>
+                  </p>
 
                   <div className="mt-3 nhtd-section league-spartan">
                     <ServicesComponent />
@@ -228,12 +229,12 @@ const personalPayService = () => {
                     backgroundPosition: "center",
                   }}
                 >
-                  <h1
+                  <p
                     className="text-white text-2xl lg:text-4xl text-center playrify  w-[full]  flex justify-center items-center
                  pt-[120px]"
                   >
                     Need Any Help ?
-                  </h1>
+                  </p>
                   <a
                     href="tel:+1516-367-2266"
                     className="text-white text-center playrify text-2xl lg:text-4xl mt-2 block"
@@ -242,7 +243,7 @@ const personalPayService = () => {
                   </a>
                   <div className="flex justify-center mt-5">
                     <Link
-                      href="/contacts"
+                      href="/contact"
                       className="bg-[#00A6B2] text-white px-4 lg:py-4 py-2 rounded-md  text-lg lg:text-2xl playrify "
                     >
                       Contact Us
@@ -253,13 +254,13 @@ const personalPayService = () => {
 
               <div className=" my-5 rounded-md bg-[#f1f1f1] lg:h-[300px] dark:bg-slate-800">
                 <div className="  px-4 py-8 ">
-                  <h1 className="playrify font-bold text-gray-600 text-lg lg:text-2xl dark:text-gray-100 league-spartan">
+                  <p className="playrify font-bold text-gray-600 text-lg lg:text-2xl dark:text-gray-100 league-spartan">
                     Downloads
-                  </h1>
-                  <h3 className="mt-3 dark:text-gray-100 text-[16px] leading-relaxed open-sans font-normal">
+                  </p>
+                  <p className="mt-3 dark:text-gray-100 text-[16px] leading-relaxed open-sans font-normal">
                     To download all the important documents regarding the needs
                     of home healthcare, please click the buttons.
-                  </h3>
+                  </p>
 
                   <div className="my-5 open-sans">
                     <button
@@ -304,23 +305,23 @@ const personalPayService = () => {
                   <img
                     className=" h-fit w-full object-cover"
                     src={"/assets/PrivatePay/private-pay-cover.webp"}
-                    alt={"cover-image"}
-                    w="500"
-                    h="500"
+                    alt={"private-pay-cover-image"}
+                    width={1600}
+                    height={1067}
                   />
                 </div>
 
                 {/* banner end  */}
 
-                <h1 className="mt-5  text-xl lg:text-4xl font-semibold dark:text-gray-100 league-spartan text-[#00A6B2]">
+                <h3 className="mt-5  text-xl lg:text-4xl font-semibold dark:text-gray-100 league-spartan text-[#00A6B2]">
                   What Is Private Pay In Home Care ?
-                </h1>
-                <p className="mt-3 lg:text-lg dark:text-white space-y-2 md:space-y-0 text-[16px] leading-relaxed open-sans font-normal ">
+                </h3>
+                <h1 className="mt-3 lg:text-lg dark:text-white space-y-2 md:space-y-0 text-[16px] leading-relaxed open-sans font-normal ">
                   Private pay in home health care refers to a payment
                   arrangement where services are paid for directly by the client
                   or their family, rather than through insurance or government
                   assistance programs.
-                </p>
+                </h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 md:gap-7 mt-5 ">
                   {stuffs?.map((stuff, index) => (
@@ -339,9 +340,9 @@ const personalPayService = () => {
                 </div>
 
                 <div className="my-5">
-                  <h1 className="pt-3 playrify text-xl lg:text-3xl font-semibold dark:text-gray-100 league-spartan text-[#00A6B2]">
+                  <p className="pt-3 playrify text-xl lg:text-3xl font-semibold dark:text-gray-100 league-spartan text-[#00A6B2]">
                     Why Choose Us?
-                  </h1>
+                  </p>
 
                   <ul className=" mt-3 lg:text-lg dark:text-white md:space-y-0 text-[16px] leading-relaxed open-sans font-normal">
                     <li className="font-semibold">Experience and Expertise:</li>
@@ -385,9 +386,9 @@ const personalPayService = () => {
                   </div>
 
                   <div className="w-full">
-                    <h1 className="playrify text-xl lg:text-3xl tracking-wider font-semibold dark:text-gray-100 mt-3 md:mt-0 league-spartan text-[#00A6B2]">
+                    <p className="playrify text-xl lg:text-3xl tracking-wider font-semibold dark:text-gray-100 mt-3 md:mt-0 league-spartan text-[#00A6B2]">
                       Benefit of Private Pay Services
-                    </h1>
+                    </p>
 
                     <ul className=" mt-3  dark:text-white md:space-y-0 text-[16px] leading-relaxed open-sans font-normal">
                       <li className="font-semibold text-lg">
@@ -426,9 +427,9 @@ const personalPayService = () => {
                 </div>
 
                 <div className="my-5">
-                  <h1 className="pt-3  text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-3 league-spartan text-[#00A6B2]">
+                  <h4 className="pt-3  text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-3 league-spartan text-[#00A6B2]">
                     Frequently Asked Questions
-                  </h1>
+                  </h4>
 
                   <PrivatePayFaqs />
                 </div>

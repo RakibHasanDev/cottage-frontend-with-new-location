@@ -23,7 +23,10 @@ const Cdpap = () => {
 
   const eligibilities = [
     {
-      img: "/assets/benefit-card.jpg",
+      img: "/assets/cdpap/benefit-card.jpg",
+
+      width: "1080",
+      height: "663",
       type: "card",
       description2: [
         "You must have Medicaid.",
@@ -31,24 +34,30 @@ const Cdpap = () => {
       ],
     },
     {
-      img: "/assets/medical-condition.png",
+      img: "/assets/cdpap/medical-condition.png",
+      width: "1080",
+      height: "975",
       description: "You have a present medical condition.",
     },
     {
-      img: "/assets/living-assistance.png",
+      img: "/assets/cdpap/living-assistance.png",
+      width: "1080",
+      height: "1039",
       description:
         "You require some/full assistance with daily living situations.",
     },
     {
-      img: "/assets/new-york-logo.png",
+      img: "/assets/cdpap/new-york-logo.png",
+      width: "1080",
+      height: "1086",
       description: "You live in New York State",
     },
   ];
 
-  const title =
-    "CDPAP Program - Get Paid as a Caregiver in NYC | Cottage Home Care";
+  const title = "CDPAP Program – Get Paid as a Caregiver in NYC ";
   const description =
-    "Join the CDPAP program in New York City and earn up to $21.09 per hour as a caregiver for family or friends. Learn about eligibility and how to apply today.";
+    "Join the CDPAP program in NYC and earn up to $21.09/hr caring for family or friends. Learn about eligibility and how to apply today.";
+
   const keywords =
     "CDPAP NYC, Consumer Directed Personal Assistance Program, home care jobs NYC, caregiver salary NYC, Medicaid personal assistance, senior care NYC, hire family caregiver";
 
@@ -200,23 +209,23 @@ const Cdpap = () => {
         <div className="cdpapService-banner min-h-[40vh]">
           <div className="pt-[5vh] md:pt-[50px] md:max-w-lg lg:ml-[3%] 2xl:ml-[1%] ">
             <div className="space-y-2 pl-2 md:pl-0 league-spartan ">
-              <h1 className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow">
+              <p className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow">
                 CDPAP
-              </h1>
-              <h1 className="text-center text-2xl text-white font-bold text-shadow block md:hidden">
+              </p>
+              <p className="text-center text-2xl text-white font-bold text-shadow block md:hidden">
                 Get Optimum Pay Rates
-              </h1>
-              <h1 className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow hidden md:block">
+              </p>
+              <p className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow hidden md:block">
                 Get Optimum Pay Rates
-              </h1>
-              <h1 className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow">
+              </p>
+              <p className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow">
                 (New York City)
-              </h1>
+              </p>
             </div>
           </div>
           <div className="flex justify-center md:justify-start pl-2 my-2 lg:ml-[17%] 2xl:ml-[9%] md:mt-5">
             <Link
-              href="/contacts"
+              href="/contact"
               className="cursor-pointer 2xl:text-lg font-medium md:font-semibold px-2.5 py-1.5 2xl:px-4 2xl:py-3 bg-[#00A6B2] border-b-4 border-r-4 border-white text-white shadow-md rounded-md text-base league-spartan"
             >
               Contact Us
@@ -233,13 +242,13 @@ const Cdpap = () => {
             Consumer Directed Personal Assistant Program (CDPAP) and help you to
             start earning at optimum pay rates in New York City!
           </h1>
-          <p className="mt-5 leading-relaxed open-sans md:text-lg text-justify auto-hyphen">
+          <h2 className="mt-5 leading-relaxed open-sans md:text-lg text-justify auto-hyphen">
             This unique program allows the consumer to administer and assume
             responsibility for their own care. The flexibility of this program
             and the way in which it is administered is what makes it so unique.
             It promotes independence and gives the consumer a true sense of
             involvement in the decision making process with his/her own care.
-          </p>
+          </h2>
         </div>
 
         <div className="w-[95%] lg:w-[70%] mx-auto mt-10">
@@ -306,12 +315,15 @@ const Cdpap = () => {
                         <div className="flex justify-center rounded-full bg-white w-[100px] h-[100px] overflow-hidden">
                           <img
                             src={eligible?.img}
-                            alt={eligible?.description}
+                            alt={
+                              eligible?.description ||
+                              "Image from Cottage Home Care"
+                            }
                             className={`object-cover h-fit flex justify-center items-center p-2 ${
                               eligible?.type ? "mt-5" : ""
                             }`}
-                            w="100"
-                            h="100"
+                            width={eligible?.width}
+                            height={eligible?.height}
                           />
                         </div>
                       </div>

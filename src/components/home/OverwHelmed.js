@@ -116,15 +116,15 @@ const OverwHelmed = () => {
           data-aos="fade-left"
           data-aos-duration="2000"
         >
-          <h1 className="league-spartan md:text-3xl text-2xl lg:text-4xl text-[#00A6B2] font-bold md:pt-5 md:px-0 md:leading-loose dark:text-gray-200">
+          <h4 className="league-spartan md:text-3xl text-2xl lg:text-4xl text-[#00A6B2] font-bold md:pt-5 md:px-0 md:leading-loose dark:text-gray-200">
             When you&apos;re getting the right help,{" "}
             <br className="hidden md:block" /> you live healthier and happier!
-          </h1>
+          </h4>
 
           <div className="text-[16px] leading-relaxed open-sans w-full font-medium mt-5">
-            <h2 className="text-2xl lg:text-4xl font-bold mb-4 dark:text-gray-100 league-spartan text-[#00A6B2]">
+            <p className="text-2xl lg:text-4xl font-bold mb-4 dark:text-gray-100 league-spartan text-[#00A6B2]">
               We Believe...
-            </h2>
+            </p>
 
             <ul className="space-y-4">
               {[

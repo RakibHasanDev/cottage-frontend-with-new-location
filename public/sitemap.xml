@@ -13,7 +13,7 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cottagehomecare.com/personalPayService/</loc>
+        <loc>https://cottagehomecare.com/personal-pay-service/</loc>
         <priority>0.9</priority>
     </url>
     <url>
@@ -21,11 +21,11 @@
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://cottagehomecare.com/contacts/</loc>
+        <loc>https://cottagehomecare.com/contact/</loc>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cottagehomecare.com/hhaCertification/</loc>
+        <loc>https://cottagehomecare.com/hha-certification/</loc>
         <priority>0.8</priority>
     </url>
     <url>
@@ -33,7 +33,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cottagehomecare.com/helpDesk/</loc>
+        <loc>https://cottagehomecare.com/help-desk/</loc>
         <priority>0.8</priority>
     </url>
     <url>
@@ -45,11 +45,11 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cottagehomecare.com/pastEvent/</loc>
+        <loc>https://cottagehomecare.com/past-event/</loc>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://cottagehomecare.com/upcomingEvent/</loc>
+        <loc>https://cottagehomecare.com/upcoming-event/</loc>
         <priority>0.6</priority>
     </url>
     <url>
@@ -65,11 +65,27 @@
         <priority>0.4</priority>
     </url>
     <url>
-        <loc>https://cottagehomecare.com/missionVision/</loc>
+        <loc>https://cottagehomecare.com/mission-vision/</loc>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://cottagehomecare.com/values/</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://cottagehomecare.com/terms-and-conditions/</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://cottagehomecare.com/disclaimer/</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://cottagehomecare.com/sitemap/</loc>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://cottagehomecare.com/clock-in-out/</loc>
         <priority>0.5</priority>
     </url>
     <url>

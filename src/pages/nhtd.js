@@ -20,7 +20,7 @@ const NHTD = () => {
       setImageSrc(
         window.innerWidth <= 688
           ? "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_1080/v1739904168/ayaemn0p3ldnjpq6bmau.webp"
-          : "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_2580/v1739904083/cvy7kdo0ixxwltvunnam.webp"
+          : "https://res.cloudinary.com/di3wwp9s0/image/upload/v1742930345/Optimize%20Banner/nhtd_cover_vdei4n.webp"
       );
     }
   }, []);
@@ -53,8 +53,7 @@ const NHTD = () => {
     window.open(pdf, "_blank");
   };
 
-  const title =
-    "NHTD Program NYC | Nursing Home Transition & Diversion | Cottage Home Care";
+  const title = "NHTD Program NYC – Cottage Home Care Services";
   const description =
     "Looking for NHTD home care services in NYC? We help seniors transition from nursing homes to independent living with Medicaid support. Learn more!";
   const keywords =
@@ -95,7 +94,7 @@ const NHTD = () => {
         "Learn about the NHTD Program in NYC, Brooklyn, Nassau, and Suffolk. Find out how seniors and individuals with disabilities can transition from nursing homes to independent living with Medicaid support.",
       primaryImageOfPage: {
         "@type": "ImageObject",
-        url: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_2580/v1739904083/cvy7kdo0ixxwltvunnam.webp",
+        url: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1742930345/Optimize%20Banner/nhtd_cover_vdei4n.webp",
         width: "2580",
         height: "795",
       },
@@ -171,7 +170,7 @@ const NHTD = () => {
         <meta property="og:description" content={description} />
         <meta
           property="og:url"
-          content="https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto,f_auto,w_1080/v1739298895/clfasecrrmzcsn9vacze.webp"
+          content="https://res.cloudinary.com/di3wwp9s0/image/upload/v1742930345/Optimize%20Banner/nhtd_cover_vdei4n.webp"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -209,7 +208,7 @@ const NHTD = () => {
               media="(max-width: 688px)"
             />
             <Image
-              src="https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_2580/v1739904083/cvy7kdo0ixxwltvunnam.webp"
+              src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1742930345/Optimize%20Banner/nhtd_cover_vdei4n.webp"
               alt="NHTD - Nursing Home Transition and Diversion"
               width={2580}
               height={795}
@@ -236,7 +235,7 @@ const NHTD = () => {
 
             <div className="flex justify-center pl-5 my-2 md:max-w-md lg:ml-[5%]">
               <Link
-                href="/contacts"
+                href="/contact"
                 className="cursor-pointer md:text-lg font-medium md:font-semibold px-2.5 py-1.5 md:px-4 border-b-4 border-r-4 border-white md:py-3 bg-[#00A6B2] text-white shadow-md rounded-md text-base "
               >
                 Contact Us
@@ -256,9 +255,9 @@ const NHTD = () => {
             <div className="md:col-span-2 ">
               <div className="bg-[#F8F9FA] rounded-md py-8 dark:bg-slate-800">
                 <div className="w-[90%] mx-auto league-spartan">
-                  <h1 className="txt-lg md:text-2xl font-semibold dark:text-gray-100">
+                  <h3 className="txt-lg md:text-2xl font-semibold dark:text-gray-100">
                     All Services
-                  </h1>
+                  </h3>
 
                   <div className="mt-3 nhtd-section">
                     <ServicesComponent />
@@ -270,9 +269,9 @@ const NHTD = () => {
 
               <div className=" my-5">
                 <div className="rounded-md league-spartan nhtd-banner">
-                  <h1 className="text-white text-2xl lg:text-4xl text-center playrify  w-[full]  flex justify-center items-center pt-[120px]">
+                  <h5 className="text-white text-2xl lg:text-4xl text-center playrify  w-[full]  flex justify-center items-center pt-[120px]">
                     Need Any Help ?
-                  </h1>
+                  </h5>
                   <a
                     href="tel:+1516-367-2266"
                     className="text-white text-center playrify text-2xl lg:text-4xl mt-2 block"
@@ -292,9 +291,9 @@ const NHTD = () => {
 
               <div className=" my-5 rounded-md bg-[#f1f1f1] lg:h-[300px] dark:bg-slate-800">
                 <div className="  px-4 py-8 ">
-                  <h1 className="playrify font-bold text-gray-600 text-lg lg:text-2xl dark:text-gray-100 league-spartan">
+                  <p className="playrify font-bold text-gray-600 text-lg lg:text-2xl dark:text-gray-100 league-spartan">
                     Downloads
-                  </h1>
+                  </p>
                   <h3 className="mt-3 dark:text-gray-100 text-[16px] leading-relaxed open-sans font-normal">
                     To download all the important documents regarding the needs
                     of home healthcare, please click the buttons.
@@ -349,9 +348,9 @@ const NHTD = () => {
 
                 {/* banner end */}
 
-                <h2 className="mt-5 league-spartan text-xl lg:text-4xl font-semibold dark:text-gray-100 text-[#00A6B2]">
+                <p className="mt-5 league-spartan text-xl lg:text-4xl font-semibold dark:text-gray-100 text-[#00A6B2]">
                   What Is NHTD ?
-                </h2>
+                </p>
 
                 <p className="mt-3 lg:text-lg dark:text-white open-sans">
                   The{" "}
@@ -398,9 +397,9 @@ const NHTD = () => {
                       }}
                     >
                       {stuff?.value && stuff?.content && (
-                        <h1 className="lg:text-5xl text-4xl text-[#00A6B2] text-center font-semibold ">
+                        <p className="lg:text-5xl text-4xl text-[#00A6B2] text-center font-semibold ">
                           {stuff?.value}+
-                        </h1>
+                        </p>
                       )}
                       {!stuff?.value && stuff?.content && (
                         <h3 className=" text-center text-xl lg:text-2xl font-semibold mt-3">
@@ -408,9 +407,9 @@ const NHTD = () => {
                         </h3>
                       )}
                       {stuff?.value && stuff?.content && (
-                        <h3 className=" text-center text-xl lg:text-xl font-semibold mt-3">
+                        <p className=" text-center text-xl lg:text-xl font-semibold mt-3">
                           {stuff?.content}
-                        </h3>
+                        </p>
                       )}
                     </div>
                   ))}
@@ -449,9 +448,9 @@ const NHTD = () => {
               </div>
 
               <div className="w-full">
-                <h2 className="playrify text-xl lg:text-2xl tracking-wider font-semibold dark:text-gray-100 mt-3 md:mt-0 league-spartan text-[#00A6B2]">
+                <p className="playrify text-xl lg:text-2xl tracking-wider font-semibold dark:text-gray-100 mt-3 md:mt-0 league-spartan text-[#00A6B2]">
                   Eligibility for NHTD
-                </h2>
+                </p>
 
                 <ul className="list-disc ml-5 mt-3 lg:text-lg dark:text-white space-y-2 md:space-y-1 open-sans">
                   <li>Must be Medicaid-eligible.</li>
@@ -478,9 +477,9 @@ const NHTD = () => {
               </div>
             </div>
             <div className="lg:col-span-2">
-              <h2 className="pt-3 playrify text-xl lg:text-2xl font-semibold dark:text-gray-100 league-spartan text-[#00A6B2]">
+              <p className="pt-3 playrify text-xl lg:text-2xl font-semibold dark:text-gray-100 league-spartan text-[#00A6B2]">
                 Why Choose NHTD ?
-              </h2>
+              </p>
 
               <ul className="list-disc ml-5 mt-3 lg:text-lg dark:text-white space-y-2 md:space-y-0 open-sans">
                 <li>
@@ -523,9 +522,9 @@ const NHTD = () => {
           </div>
 
           <div className="w-[95%] mx-auto py-5 -ml-1">
-            <h2 className="text-xl lg:text-2xl font-semibold dark:text-gray-100 text-[#00A6B2]">
+            <p className="text-xl lg:text-2xl font-semibold dark:text-gray-100 text-[#00A6B2]">
               How to Apply for NHTD?
-            </h2>
+            </p>
 
             <ul className="list-disc ml-5 mt-3 lg:text-lg dark:text-white space-y-2 open-sans">
               <li>
@@ -562,9 +561,9 @@ const NHTD = () => {
             </Link>
           </div>
           <div className="my-5">
-            <h2 className="pt-3 playrify text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-3 league-spartan text-[#00A6B2]">
+            <p className="pt-3 playrify text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-3 league-spartan text-[#00A6B2]">
               Frequently Asked Questions
-            </h2>
+            </p>
 
             <Faq />
           </div>

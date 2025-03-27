@@ -8,7 +8,6 @@ import Link from "next/link";
 import HhaRequirement from "@/components/hha/HhaRequirement";
 import InsuranceCarousel from "@/components/hha/InsuranceCarousel";
 import Head from "next/head";
-import Image from "next/image";
 
 const hha = () => {
   const requirements = [
@@ -82,7 +81,8 @@ const hha = () => {
 
   const title = "HHA/PCA - Cottage Home Care Services";
   const description =
-    "Our Home Health Aides (HHA) and Personal Care Aides (PCA) provide compassionate and professional care to support seniors and individuals in need. Our services include bathing, dressing assistance, meal preparation, feeding assistance, and medication reminders. We serve clients across New York City, Nassau, Suffolk County, Westchester, and Albany.";
+    "Compassionate HHA & PCA care including bathing, meals, and meds. Serving NYC, Nassau, Suffolk, Westchester & Albany with professional support.";
+
   const keywords =
     "HHA, PCA, Home Health Aides, Personal Care Aides, senior care, bathing assistance, dressing assistance, meal preparation, feeding assistance, medication reminders, home care services, New York City, Nassau, Suffolk County, Westchester, Albany";
 
@@ -233,9 +233,9 @@ const hha = () => {
 
       <main className="min-h-screen dark:bg-slate-600">
         <div className="singleService-banner min-h-[40vh]">
-          <h1 className="ml-5 md:ml-0  text-center text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[15vh] mb-5 font-bold text-shadow league-spartan">
+          <p className="ml-5 md:ml-0  text-center text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[15vh] mb-5 font-bold text-shadow league-spartan">
             HHA / PCA
-          </h1>
+          </p>
           <div className="flex justify-center pl-5 my-2">
             <Link
               href="/contacts"
@@ -249,9 +249,9 @@ const hha = () => {
         {/* new section start "Eligible for hha/pca"  */}
 
         <div className="w-[95%]  lg:w-[70%] mx-auto">
-          <h1 className="text-center mt-4  text-2xl md:text-2xl  2xl:text-4xl font-bold dark:text-gray-100 league-spartan text-[#00A6B2]">
+          <h3 className="text-center mt-4  text-2xl md:text-2xl  2xl:text-4xl font-bold dark:text-gray-100 league-spartan text-[#00A6B2]">
             Requirements to be eligible for HHA/PCA Program
-          </h1>
+          </h3>
           <div className="flex justify-center ">
             <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
           </div>
@@ -297,8 +297,8 @@ const hha = () => {
               src={"/assets/hha.webp"}
               alt="HHA-BANNER"
               className="shadow-md md:h-[380px] "
-              w="380"
-              h="380"
+              width={1600}
+              height={900}
             />
           </div>
         </div>
@@ -331,10 +331,10 @@ const hha = () => {
           </p>
         </div>
 
-        <h1 className="text-center league-spartan text-xl md:text-3xl dark:text-gray-100 font-semibold">
+        <p className="text-center league-spartan text-xl md:text-3xl dark:text-gray-100 font-semibold">
           {" "}
           Training Process
-        </h1>
+        </p>
         <div className="flex justify-center ">
           <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
         </div>
@@ -351,10 +351,10 @@ const hha = () => {
                 <div className="h-56 overflow-hidden">
                   <img
                     src={train?.img}
-                    alt={`{train?.img}`}
+                    alt={`Image of ${train?.img}`}
                     className="h-full object-cover w-full"
-                    w="100"
-                    h="100"
+                    width={1080}
+                    height={620}
                   />
                 </div>
                 <div className="px-2 pb-3">
@@ -369,10 +369,10 @@ const hha = () => {
             </div>
           ))}
         </div>
-        <h1 className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
+        <p className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
           {" "}
           Examining and Screening{" "}
-        </h1>
+        </p>
         <div className="flex justify-center ">
           <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
         </div>
@@ -391,8 +391,8 @@ const hha = () => {
                     src={train?.img}
                     alt={`{train?.img}`}
                     className="h-full object-cover w-full"
-                    w="100"
-                    h="100"
+                    width={1080}
+                    height={620}
                   />
                 </div>
                 <div className="px-2 pb-3">
@@ -411,9 +411,9 @@ const hha = () => {
         {/* insurance we work with start  */}
 
         <div className="w-[80%] md:w-[85%] lg:w-[90%] mx-auto py-5">
-          <h1 className="text-center text-xl  md:text-xl lg:text-2xl xl:text-4xl dark:text-gray-100 league-spartan font-bold text-[#00A6B2]">
+          <h2 className="text-center text-xl  md:text-xl lg:text-2xl xl:text-4xl dark:text-gray-100 league-spartan font-bold text-[#00A6B2]">
             Insurance We Work With For HHA/PCA
-          </h1>
+          </h2>
           <div className="flex justify-center ">
             <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
           </div>

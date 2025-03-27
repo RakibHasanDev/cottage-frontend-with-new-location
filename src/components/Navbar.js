@@ -167,7 +167,7 @@ const NavBar = () => {
                     </p>
                   </Link>
 
-                  <Link href="/personalPayService">
+                  <Link href="/personal-pay-service">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Private Pay
                     </p>
@@ -183,7 +183,7 @@ const NavBar = () => {
 
               <li style={{ listStyle: "none" }}>
                 <Link
-                  href="/contacts"
+                  href="/contact"
                   aria-label="Contact US"
                   title="Contact US"
                   className={`font-semibold    tracking-wide text-[#49465D] transition-colors duration-200  
@@ -197,7 +197,7 @@ const NavBar = () => {
 
               <li style={{ listStyle: "none" }}>
                 <Link
-                  href="/hhaCertification"
+                  href="/hha-certification"
                   aria-label="HHA Certification"
                   title="HHA Certification"
                   className={`font-semibold    tracking-wide text-[#49465D] transition-colors duration-200  
@@ -233,7 +233,7 @@ const NavBar = () => {
                     </p>
                   </Link>
 
-                  <Link href="/helpDesk">
+                  <Link href="/help-desk">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Help Desk
                     </p>
@@ -280,13 +280,13 @@ const NavBar = () => {
                     </p>
                   </Link> */}
 
-                  <Link href="/pastEvent">
+                  <Link href="/past-event">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Past Events
                     </p>
                   </Link>
 
-                  <Link href="/UpcomingEvent">
+                  <Link href="/upcoming-event">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Upcoming Events
                     </p>

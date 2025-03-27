@@ -149,52 +149,49 @@ const Footer = () => {
                 <ul className="space-y-1">
                   <li style={{ listStyle: "none" }}>
                     <Link
-                      href="/missionVision"
-                      className=" hover:text-[#00A6B2]"
-                      rel="noopener noreferrer"
-                    >
-                      Mission & Vision{" "}
-                    </Link>
-                  </li>
-                  <li style={{ listStyle: "none" }}>
-                    <Link
-                      href="/values"
+                      href="/terms-and-conditions"
                       rel="noopener noreferrer"
                       className=" hover:text-[#00A6B2]"
                     >
                       {" "}
-                      Values
+                      Terms and Conditions
+                    </Link>
+                  </li>
+                  <li style={{ listStyle: "none" }}>
+                    <Link
+                      href="/disclaimer"
+                      rel="noopener noreferrer"
+                      className=" hover:text-[#00A6B2]"
+                    >
+                      {" "}
+                      Disclaimer
                     </Link>
                   </li>
                 </ul>
               </div>
               <div className="space-y-3">
-                <Link
-                  href="/nhtd"
-                  className="tracking-wide uppercase text-gray-50 hover:text-[#00A6B2]"
-                  style={{ listStyle: "none" }}
-                >
-                  Service Area
-                </Link>
+                <p className="tracking-wide uppercase text-gray-50 hover:text-[#00A6B2]">
+                  About US
+                </p>
                 <ul className="space-y-1">
                   <li style={{ listStyle: "none" }}>
                     <Link
-                      href="/team"
+                      href="/mission-vision"
                       className="hover:text-[#00A6B2]"
                       rel="noopener noreferrer"
                     >
-                      Team Members
+                      Mission Vision
                     </Link>
                   </li>
 
                   <li style={{ listStyle: "none" }}>
                     <Link
-                      href="/contacts"
+                      href="/sitemap"
                       rel="noopener noreferrer"
                       className="hover:text-[#00A6B2]"
                       title="Learn more about the NHTD Program at Cottage Home Care"
                     >
-                      Contact Us
+                      Site Map
                     </Link>
                   </li>
                 </ul>

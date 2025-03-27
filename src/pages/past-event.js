@@ -94,7 +94,7 @@ const PastEvent = () => {
           name="keywords"
           content="Cottage Home Care past events, community outreach programs, healthcare webinars, event highlights, home care activities, community support events, past event photos, event key takeaways, Cottage Home Care community engagement"
         />
-        <link rel="canonical" href="https://cottagehomecare.com/pastEvent/" />
+        <link rel="canonical" href="https://cottagehomecare.com/past-event/" />
       </Head>
 
       <main className="dark:bg-slate-600">

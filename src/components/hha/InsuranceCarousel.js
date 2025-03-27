@@ -2,11 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 
 const InsuranceCarousel = () => {
   const images = [
-    "/assets/insurance/40507361449.png",
+    "/assets/insurance/40507361449.webp",
     "/assets/insurance/riverspring.jpg",
     "/assets/insurance/blue-cross-shield.jpg",
     "/assets/insurance/eldersplan.jpg",
@@ -15,7 +14,7 @@ const InsuranceCarousel = () => {
     "/assets/insurance/centerlight.jpg",
     "/assets/insurance/seniorHolwHealth.jpg",
     "/assets/insurance/vns.jpg",
-    "/assets/insurance/40507361449.png",
+    "/assets/insurance/40507361449.webp",
     "/assets/insurance/riverspring.jpg",
     "/assets/insurance/blue-cross-shield.jpg",
   ];
@@ -49,13 +48,14 @@ const InsuranceCarousel = () => {
     <div className="w-full mx-auto my-8">
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="outline-none focus:outline-none">
+          <div key={index} className="outline-none focus:outline-none ">
             <img
               src={image}
               alt={`carousel-item-${index}`}
-              className="w-full h-auto"
-              w="100"
-              h="100"
+              width={1080}
+              height={530}
+              className="w-full h-auto object-contain"
+              loading="lazy"
             />
           </div>
         ))}

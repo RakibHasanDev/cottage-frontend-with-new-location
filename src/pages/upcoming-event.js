@@ -60,7 +60,7 @@ const UpcomingEvent = () => {
 
         <link
           rel="canonical"
-          href="https://cottagehomecare.com/UpcomingEvent/"
+          href="https://cottagehomecare.com/upcoming-event/"
         />
       </Head>
       <main className="min-h-screen dark:bg-slate-600 bg-[#F5F5F7]">

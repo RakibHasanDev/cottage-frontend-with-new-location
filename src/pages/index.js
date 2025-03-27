@@ -64,7 +64,7 @@ const CottageVideoSlider = dynamic(
 );
 
 export default function Home() {
-  const title = "Cottage Home Care Services - NHTD, HHA & Private Pay in NYC";
+  const title = "Cottage Home Care Services – NHTD, HHA & Private Pay";
   const description =
     "Cottage Home Care provides top-quality home care services in NYC, including NHTD, HHA, Private Pay, CDPAP, and senior care support. Contact us today!";
 
@@ -220,6 +220,7 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
+        <link rel="canonical" href="https://cottagehomecare.com/" />
       </Head>
 
       <div className="dark:bg-slate-600 min-h-screen">

@@ -15,9 +15,9 @@ const WhyChoose = () => {
           data-aos="fade-left"
           data-aos-duration="2000"
         >
-          <h1 className="text-2xl md:text-2xl 2xl:text-4xl font-bold mb-4 dark:text-gray-100 text-[#00A6B2]">
+          <p className="text-2xl md:text-2xl 2xl:text-4xl font-bold mb-4 dark:text-gray-100 text-[#00A6B2]">
             Why choose Cottage Home Care Services?
-          </h1>
+          </p>
 
           {/* Key Features */}
           {[

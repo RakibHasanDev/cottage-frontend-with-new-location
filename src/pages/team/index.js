@@ -131,7 +131,7 @@ const Team = () => {
         <title>Team Members - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Meet the dedicated team behind Cottage Home Care Services. Our compassionate and professional staff are committed to providing exceptional care and support to our clients. Learn more about our team members, their qualifications, and their passion for home care."
+          content="Meet the team at Cottage Home Care Services—compassionate, professional staff dedicated to delivering exceptional care and support across New York."
         />
         <meta
           name="keywords"
@@ -143,9 +143,9 @@ const Team = () => {
       <div className="min-h-screen dark:bg-slate-600 relative">
         <div className="md:container md:flex md:justify-center md:mx-auto pt-10 ">
           <div>
-            <p className="text-gray-500 text-lg text-center  open-sans font-semibold pb-3 dark:text-gray-400 mt-5 md:mt-0">
+            <h2 className="text-gray-500 text-lg text-center  open-sans font-semibold pb-3 dark:text-gray-400 mt-5 md:mt-0">
               Meet our Team
-            </p>
+            </h2>
             <h1 className="xl:text-3xl text-2xl text-center text-gray-700 font-bold  sm:w-4/6 w-5/6 mx-auto playrify dark:text-gray-200 league-spartan">
               The Talented People Behind the Success of the Organization
             </h1>
@@ -951,9 +951,9 @@ const Team = () => {
                             )
                           )}
                         </div>
-                        <h1 className="text-start  font-semibold text-gray-500 text-xs md:text-lg pt-1 md:pt-2">
+                        <p className="text-start  font-semibold text-gray-500 text-xs md:text-lg pt-1 md:pt-2">
                           SOFTWARE & IT Team
-                        </h1>
+                        </p>
                         <h5 className="text-start  pt-1 text-xs md:text-sm font-semibold text-gray-500">
                           {employeesByDepartment?.ItSoftware?.length} Members
                         </h5>
@@ -1096,9 +1096,9 @@ const Team = () => {
                             </div>
                           ))}
                         </div>
-                        <h1 className="text-start  font-semibold text-gray-500 text-[10px]  md:text-sm pt-1 md:pt-2 ">
+                        <p className="text-start  font-semibold text-gray-500 text-[10px]  md:text-sm pt-1 md:pt-2 ">
                           Receptionist Coordinators
-                        </h1>
+                        </p>
 
                         <h5 className="text-start  pt-0.5 md:pt-1 text-xs md:text-sm font-semibold text-gray-500">
                           {employeesByDepartment?.FrontDesk?.length} Members
@@ -1168,9 +1168,9 @@ const Team = () => {
                             </div>
                           ))}
                         </div>
-                        <h1 className="text-start  font-semibold text-gray-500 text-xs md:text-lg pt-1 md:pt-2">
+                        <p className="text-start  font-semibold text-gray-500 text-xs md:text-lg pt-1 md:pt-2">
                           Nursing Department
-                        </h1>
+                        </p>
                         <h5 className="text-start  pt-1 text-xs md:text-sm font-semibold text-gray-500">
                           {employeesByDepartment?.RnDps?.length} Members
                         </h5>
@@ -1334,7 +1334,7 @@ const Team = () => {
             )}
 
             <Link
-              href="/AllTeamMembers"
+              href="/all-team-members"
               className=" dark:text-gray-100 text-gray-100 text-center block pb-10 md:pt-5 open-sans font-semibold md:text-base text-sm "
             >
               <p className=" w-[200px] md:w-[240px] mx-auto bg-[#00A6B2] flex justify-center items-center gap-1 py-2 rounded-lg shadow-lg">

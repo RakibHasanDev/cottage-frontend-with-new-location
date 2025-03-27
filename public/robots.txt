@@ -1,11 +1,36 @@
 User-agent: *
-Disallow: /admin
-Disallow: /login
-Disallow: /register
-Disallow: /dashboard 
+Disallow: /
 
-# Allow all bots to crawl everything else
-Allow: /
+Allow: /$
+Allow: /nhtd/
+Allow: /hha/
+Allow: /personal-pay-service/
+Allow: /cdpap/
+Allow: /contact/
+Allow: /hha-certification/
+Allow: /resources/
+Allow: /help-desk/
+Allow: /covid/
+Allow: /faqs/
+Allow: /past-event/
+Allow: /upcoming-event/
+Allow: /team/
+Disallow: /team/*
 
-# Specify the location of the sitemap
+Allow: /blog/
+Disallow: /blog/*
+
+Allow: /blog/compassionate-home-care-in-nyc-with-cottage-home-care-services/
+Allow: /blog/hhapca-services-compassionate-home-care-with-cottage-home-care-services/
+Allow: /blog/nhtd-program-personalized-home-care-with-cottage-home-care-services/
+Allow: /blog/five-tips-for-a-restful-night/
+
+Allow: /privacy-policy/
+Allow: /mission-vision/
+Allow: /values/
+Allow: /terms-and-conditions/
+Allow: /disclaimer/
+Allow: /sitemap/
+Allow: /clock-in-out/
+
 Sitemap: https://cottagehomecare.com/sitemap.xml

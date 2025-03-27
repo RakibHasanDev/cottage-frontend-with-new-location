@@ -69,20 +69,25 @@ const AllTeamMembers = () => {
         <title>All Team Members - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Meet all the dedicated team members of Cottage Home Care Services. Our experienced professionals are committed to delivering high-quality home care with compassion and excellence. Learn more about our team and their expertise in providing exceptional care."
+          content="Meet the experienced team members of Cottage Home Care Services. Our compassionate caregivers are committed to delivering quality home care."
         />
+
         <meta
           name="keywords"
           content="Cottage Home Care team members, all team members, home care staff, experienced caregivers, healthcare professionals, dedicated team, compassionate care providers, expert home care, meet our staff, Cottage Home Care professionals"
+        />
+        <link
+          rel="canonical"
+          href="https://cottagehomecare.com/all-team-members/"
         />
       </Head>
       <main id="all-team">
         <div className="min-h-screen dark:bg-slate-600 relative">
           <div className="md:container md:flex md:justify-center md:mx-auto pt-10 ">
             <div>
-              <p className="text-gray-500 text-lg text-center  pb-3 dark:text-gray-400 mt-5 md:mt-0 open-sans font-semibold">
+              <h2 className="text-gray-500 text-lg text-center  pb-3 dark:text-gray-400 mt-5 md:mt-0 open-sans font-semibold">
                 Meet our Team
-              </p>
+              </h2>
               <h1 className="xl:text-3xl text-2xl text-center text-gray-700 font-extrabold  sm:w-4/6 w-5/6 mx-auto playrify dark:text-gray-200 league-spartan">
                 The Talented People Behind the Success of the Organization
               </h1>

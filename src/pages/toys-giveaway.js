@@ -27,7 +27,7 @@ const toysGiveaway = () => {
           content="Join us as we spread cheer through our Christmas Toys Giveaway. Explore photos of joyful families and happy children during the holiday season."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.cottagehomecare.com" />
+        <meta property="og:url" content="https://www.cottagehomecare.com/assets/christmas-toy/christmas-cover.webp" />
         <meta
           property="og:image"
           content="https://www.cottagehomecare.com/assets/christmas-toy/img1.jpg"

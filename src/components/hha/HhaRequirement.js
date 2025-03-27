@@ -15,9 +15,9 @@ const HhaRequirement = () => {
     <div className="bg-[#EBF8F9] py-16 dark:bg-slate-600">
       <div className="bg-white md:w-[80%] w-[95%] mx-auto dark:bg-slate-800 shadow-lg">
         <div className="pt-10">
-          <h1 className="text-center dark:text-gray-200 md:text-xl lg:text-2xl xl:text-4xl text-2xl league-spartan font-bold text-[#00A6B2]">
+          <h5 className="text-center dark:text-gray-200 md:text-xl lg:text-2xl xl:text-4xl text-2xl league-spartan font-bold text-[#00A6B2]">
             HHA Application Requirements:
-          </h1>
+          </h5>
           <div className="flex justify-center ">
             <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
           </div>

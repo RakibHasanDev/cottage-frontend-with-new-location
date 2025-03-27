@@ -21,7 +21,7 @@ const EasierLife = () => {
       pathname === "/cdpap" ||
       pathname === "/hha" ||
       pathname === "/nhtd" ||
-      pathname === "/personalPayService"
+      pathname === "/personal-pay-service"
     ) {
       setShowProperty("hidden");
     } else {
@@ -190,12 +190,12 @@ const EasierLife = () => {
                 // data-aos="fade-right"
                 // data-aos-duration="2000"
               >
-                <MyImageComponent
+                <img
                   src={"/assets/priya.webp"}
                   alt="contact-cottage-home-care"
-                  width="1200"
-                  height="1569"
-                  className="w-full shadow-lg md:md:max-w-2xl lg:max-w-[85%] rounded-lg"
+                  className="w-full shadow-lg md:md:max-w-2xl lg:max-w-[85%] rounded-lg "
+                  width={800}
+                  height={1046}
                 />
               </div>
 

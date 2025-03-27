@@ -8,8 +8,9 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Read the Privacy Policy of Cottage Home Care Services to understand how we collect, use, store, and protect your personal information. Learn about your privacy rights, data security measures, and how we process your information when you use our services."
+          content="Read Cottage Home Care’s Privacy Policy to learn how we collect, use, and protect your personal information when you use our services."
         />
+
         <meta
           name="keywords"
           content="Cottage Home Care Privacy Policy, data protection, personal information processing, privacy rights, SMS consent, secure data handling, information security, user privacy, data collection policy, privacy compliance"
@@ -34,7 +35,7 @@ const PrivacyPolicy = () => {
 
             {/* Privacy Policy Content */}
             <div style={{ lineHeight: "1.5" }}>
-              <p
+              <h1
                 className="text-[#595959] dark:text-white"
                 style={{ fontSize: 15 }}
               >
@@ -47,7 +48,7 @@ const PrivacyPolicy = () => {
                 <strong>&quot;process&quot;</strong>) your personal information
                 when you use our services (<strong>&quot;Services&quot;</strong>
                 ), including when you:
-              </p>
+              </h1>
 
               <ul>
                 <li>
@@ -69,7 +70,7 @@ const PrivacyPolicy = () => {
 
             {/* SMS Consent Section */}
             <div className="my-3" id="smsConsent" style={{ lineHeight: "1.5" }}>
-              <h2 className="font-bold text-xl">SMS Consent</h2>
+              <p className="font-bold text-xl">SMS Consent</p>
               <p className="font-medium">
                 By providing your phone number and checking the box to receive
                 SMS messages, you are agreeing to receive informational or
@@ -92,7 +93,7 @@ const PrivacyPolicy = () => {
               className="my-3"
               style={{ lineHeight: "1.5" }}
             >
-              <h2 className="font-bold text-xl">Summary of Key Points</h2>
+              <h3 className="font-bold text-xl">Summary of Key Points</h3>
               <p>
                 This summary provides key points from our Privacy Notice, but
                 you can find out more details by visiting the{" "}
@@ -150,7 +151,7 @@ const PrivacyPolicy = () => {
 
             {/* Table of Contents */}
             <div id="toc" style={{ lineHeight: "1.5" }}>
-              <h2 className="font-bold text-xl">Table of Contents</h2>
+              <p className="font-bold text-xl">Table of Contents</p>
               <ul>
                 <li>
                   <a href="#infocollect" className="text-blue-600">
@@ -171,9 +172,9 @@ const PrivacyPolicy = () => {
               id="infocollect"
               style={{ lineHeight: "1.5" }}
             >
-              <h2 className="font-bold text-xl">
+              <p className="font-bold text-xl">
                 1. What Information Do We Collect?
-              </h2>
+              </p>
               <p>
                 We collect personal information that you voluntarily provide to
                 us when registering on our services or expressing an interest in
@@ -188,9 +189,9 @@ const PrivacyPolicy = () => {
             </div>
 
             <div className="my-3" id="infouse" style={{ lineHeight: "1.5" }}>
-              <h2 className="font-bold text-xl">
+              <p className="font-bold text-xl">
                 2. How Do We Process Your Information?
-              </h2>
+              </p>
               <p>
                 We process your personal information to provide, improve, and
                 administer our services, communicate with you, and to comply

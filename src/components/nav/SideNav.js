@@ -62,7 +62,7 @@ const SideNav = () => {
         },
         {
           property: "PRIVATE PAY",
-          path: "personalPayService",
+          path: "personal-pay-service",
         },
         {
           property: "CDPAP",
@@ -79,7 +79,7 @@ const SideNav = () => {
       answer: [
         {
           property: "Past Event",
-          path: "pastEvent",
+          path: "past-event",
         },
         {
           property: "Upcoming Events",
@@ -166,7 +166,7 @@ const SideNav = () => {
           <li className="list-none">
             <Link
               onClick={toggleCloser}
-              href="/contacts"
+              href="/contact"
               aria-label="Contact Us"
               title="Contact Us"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
@@ -296,7 +296,7 @@ const SideNav = () => {
           <li className="list-none">
             <Link
               onClick={toggleCloser}
-              href="/hhaCertification"
+              href="/hha-certification"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
               <TbCertificate className="text-lg flex-shrink-0" />
@@ -329,7 +329,7 @@ const SideNav = () => {
           <li className="list-none">
             <Link
               onClick={toggleCloser}
-              href="/helpDesk"
+              href="/help-desk"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
               <GoDesktopDownload className="text-lg flex-shrink-0" />
