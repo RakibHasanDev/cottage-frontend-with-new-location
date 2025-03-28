@@ -6,12 +6,13 @@ import { GrInstagram } from "react-icons/gr";
 
 import Link from "next/link";
 import Image from "next/image";
+import TrustpilotWidget from "./TrustpolotWidget/TrustpilotWidget";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="footer-bg">
+    <div className="footer-bg relative">
       <div className=" py-6">
         <div className="grid grid-cols-5 lg:grid-cols-5 w-[97%] mx-auto shadow-sm open-sans">
           {/* facebook  */}
@@ -196,35 +197,40 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="space-y-3">
-                <h3 className="uppercase dark:text-gray-50">Contact Info</h3>
-                <ul className="space-y-1">
-                  <li style={{ listStyle: "none" }}>
-                    <a
-                      href="tel:+1516-367-2266"
-                      rel="noreferrer"
-                      aria-label="Call us on 516-367-2266"
-                    >
-                      Phone:{" "}
-                      <span className="hover:text-[#00A6B2] ">
-                        {" "}
-                        516-367-2266
-                      </span>
-                    </a>
-                  </li>
+              <div className="space-y-3 flex gap-10">
+                <div>
+                  <h3 className="uppercase dark:text-gray-50">Contact Info</h3>
+                  <ul className="space-y-1">
+                    <li style={{ listStyle: "none" }}>
+                      <a
+                        href="tel:+1516-367-2266"
+                        rel="noreferrer"
+                        aria-label="Call us on 516-367-2266"
+                      >
+                        Phone:{" "}
+                        <span className="hover:text-[#00A6B2] ">
+                          {" "}
+                          516-367-2266
+                        </span>
+                      </a>
+                    </li>
 
-                  <li style={{ listStyle: "none" }}>
-                    <a
-                      href="mailto:info@cottagehomecare.com"
-                      className="hover:text-[#00A6B2] "
-                      rel="noreferrer"
-                      aria-label="Email us on info@cottagehomecare.com"
-                    >
-                      {" "}
-                      info@cottagehomecare.com
-                    </a>
-                  </li>
-                </ul>
+                    <li>
+                      <a
+                        href="mailto:info@cottagehomecare.com"
+                        className="hover:text-[#00A6B2] "
+                        rel="noreferrer"
+                        aria-label="Email us on info@cottagehomecare.com"
+                      >
+                        {" "}
+                        info@cottagehomecare.com
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <TrustpilotWidget />
+                </div>
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /
 
 Allow: /$
 Allow: /nhtd/
@@ -31,6 +30,7 @@ Allow: /values/
 Allow: /terms-and-conditions/
 Allow: /disclaimer/
 Allow: /sitemap/
+Allow: /sitemap-index.xml
 Allow: /clock-in-out/
 
-Sitemap: https://cottagehomecare.com/sitemap.xml
+Sitemap: https://cottagehomecare.com/sitemap-index.xml

@@ -161,10 +161,10 @@ const PastEvent = () => {
               data-aos-duration="2000"
             >
               <img
-                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733848759/zupp2mqhxggoj6schik0.png"
-                alt="nurse"
-                w="100"
-                h="100"
+                src="/assets/pst_event-cover.webp"
+                alt="past_event-cover"
+                width={918}
+                height={612}
               />
             </div>
           </div>
