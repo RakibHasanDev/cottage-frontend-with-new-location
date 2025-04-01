@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
@@ -60,9 +59,9 @@ const WhyChoose = () => {
           <img
             className="absolute w-[340px] md:w-[590px] md:rotate-6 top-4 md:-top-2 z-0 -ml-2 dark:opacity-25"
             src={optimizedImage(
-              "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733425449/zxmjdq2new6dyt0j4sar.png"
+              "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733425449/why-chose/why-chose-background.webp"
             )}
-            alt="bg-shape"
+            alt="why-chose-background"
           />
 
           {/* Masked Image */}
@@ -70,33 +69,33 @@ const WhyChoose = () => {
             <picture>
               <source
                 srcSet={optimizedImage(
-                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733428120/eptolp6pc1b3wmulr3sr.jpg",
+                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733428120/why-chose/why-chose.webp",
                   1920
                 )}
                 media="(min-width: 1200px)"
               />
               <source
                 srcSet={optimizedImage(
-                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733428120/eptolp6pc1b3wmulr3sr.jpg",
+                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733428120/why-chose/why-chose.webp",
                   1080
                 )}
                 media="(min-width: 768px)"
               />
               <source
                 srcSet={optimizedImage(
-                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733428120/eptolp6pc1b3wmulr3sr.jpg",
+                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733428120/why-chose/why-chose.webp",
                   720
                 )}
                 media="(max-width: 767px)"
               />
               <img
                 src={optimizedImage(
-                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733428120/eptolp6pc1b3wmulr3sr.jpg",
+                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733428120/why-chose/why-chose.webp",
                   480
                 )}
-                alt="Cinque Terre"
-                width="100%"
-                height="auto"
+                alt="why-chose-image"
+                width="480"
+                height="480"
                 className="whyChose-img"
                 loading="lazy"
               />

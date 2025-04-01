@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
-import Image from "next/image";
 import Link from "next/link";
 
 const Quality = () => {
@@ -45,9 +44,11 @@ const Quality = () => {
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
               <img
-                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733323820/aqbj7sp4qnahnicltgde.webp"
-                alt="cdpap"
+                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743522283/Services/cdpap-service.webp"
+                alt="cdpap-service"
                 className="w-full h-full object-cover"
+                width={1176}
+                height={784}
               />
             </div>
 
@@ -57,8 +58,8 @@ const Quality = () => {
                 {/* Icon */}
                 <div className="flex mb-2 lg:mb-4">
                   <img
-                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733331148/cizbhlw9lwxwrgeub6dh.png"
-                    alt="heart"
+                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743522542/Services/cdpap-icon.png"
+                    alt="cdpap-icon"
                     width={imageSize.width}
                     height={imageSize.height}
                   />
@@ -196,9 +197,11 @@ const Quality = () => {
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
               <img
-                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733323108/hwdmnzzhf0y2zbfe3u7h.webp"
-                alt="hha"
+                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733323108/Services/hha-service.webp"
+                alt="hha-service"
                 className="w-full h-full object-cover"
+                width={1065}
+                height={593}
               />
             </div>
 
@@ -208,7 +211,7 @@ const Quality = () => {
                 {/* Icon */}
                 <div className="flex mb-2 md:mb-4">
                   <img
-                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733331399/umxyti4kgaszmnrf3ksg.png"
+                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733331399/Services/hha-icon.png"
                     alt="heart"
                     width={imageSize.width}
                     height={imageSize.height}
@@ -348,9 +351,11 @@ const Quality = () => {
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
               <img
-                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733324501/pgzdo6o8npyad41s0ci8.webp"
-                alt=""
+                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743522907/Services/nhtd-service.webp"
+                alt="nhtd-service"
                 className="w-full h-full object-cover"
+                width={1344}
+                height={896}
               />
             </div>
 
@@ -360,8 +365,8 @@ const Quality = () => {
                 {/* Icon */}
                 <div className="flex mb-2 md:mb-4">
                   <img
-                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733330846/reezaleumat1eptaefyz.png"
-                    alt="heart"
+                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/Services/nhtd-service-icon.png"
+                    alt="nhtd-service-icon"
                     width={imageSize.width}
                     height={imageSize.height}
                   />
@@ -500,9 +505,11 @@ const Quality = () => {
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
               <img
-                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733325400/oqja1jbqkekmml5wxa3b.webp"
+                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733325400/Services/private-pay-service.webp"
                 alt=""
                 className="w-full lg:h-full h-full object-cover"
+                width={1133}
+                height={755}
               />
             </div>
 
@@ -512,7 +519,7 @@ const Quality = () => {
                 {/* Icon */}
                 <div className="flex mb-2 md:mb-4">
                   <img
-                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733330991/t7ibxztn9jaoqkzfc5z4.png"
+                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733330991/Services/private-pay-icon.png"
                     alt="heart"
                     width={imageSize.width}
                     height={imageSize.height}
