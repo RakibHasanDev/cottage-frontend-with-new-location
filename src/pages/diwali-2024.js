@@ -1,3 +1,4 @@
+import GalleryImage from "@/components/GalleryImage/GalleryImage";
 import Head from "next/head";
 import React from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -18,6 +19,8 @@ const diwali2024 = () => {
           content="Diwali 2024, Diwali celebration NYC, Liberty Avenue events, Cottage Home Care, Diwali photos, Festival of Lights, Diwali party Queens, cultural celebration, Diwali community event"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="canonical" href="https://cottagehomecare.com/diwali-2024/" />
       </Head>
       <div className="min-h-screen dark:bg-slate-600">
         <div>
@@ -54,60 +57,44 @@ const diwali2024 = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img1.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img1.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img1.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img2.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img2.jpg"}
-                      alt="img2"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    ></img>
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img2.webp"}
+                  alt="img2"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                ></GalleryImage>
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img10.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img2.jpg"}
-                      alt="img3"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img2.webp"}
+                  alt="img3"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img4.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img4.jpg"}
-                      alt=""
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img4.webp"}
+                  alt="img3"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
 
@@ -117,75 +104,55 @@ const diwali2024 = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img5.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img5.jpg"}
-                      alt="img-5"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img5.webp"}
+                  alt="img-5"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
+                />
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
                 data-aos="fade-left"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img6.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img6.jpg"}
-                      alt="img-6"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img6.webp"}
+                  alt="img-6"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-up"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img7.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img7.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img7.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
                 data-aos="fade-down"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img8.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img8.jpg"}
-                      alt="img-8"
-                      className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img8.webp"}
+                  alt="img-8"
+                  className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img9.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img9.jpg"}
-                      alt="img-9"
-                      className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img9.webp"}
+                  alt="img-9"
+                  className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
           </div>
@@ -196,60 +163,44 @@ const diwali2024 = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img10.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img10.jpg"}
-                      alt="img-10"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img10.webp"}
+                  alt="img-10"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img11.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img11.jpg"}
-                      alt="img11"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    ></img>
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img11.webp"}
+                  alt="img11"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                ></GalleryImage>
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img12.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img12.jpg"}
-                      alt="img12"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img12.webp"}
+                  alt="img12"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img15.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img10.jpg"}
-                      alt="img15"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img10.webp"}
+                  alt="img15"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
 
@@ -259,75 +210,55 @@ const diwali2024 = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img14.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img14.jpg"}
-                      alt="img-14"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img14.webp"}
+                  alt="img-14"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-left"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img17.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img17.jpg"}
-                      alt="img-16"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img17.webp"}
+                  alt="img-16"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-up"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img16.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img16.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img16.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
                 data-aos="fade-down"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img18.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img18.jpg"}
-                      alt="img-1"
-                      className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img18.webp"}
+                  alt="img-1"
+                  className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img19.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img19.jpg"}
-                      alt="img-18"
-                      className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img19.webp"}
+                  alt="img-18"
+                  className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
           </div>
@@ -338,60 +269,44 @@ const diwali2024 = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img20.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img20.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img20.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img21.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img21.jpg"}
-                      alt="img2"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    ></img>
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img21.webp"}
+                  alt="img2"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                ></GalleryImage>
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img22.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img22.jpg"}
-                      alt="img3"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img22.webp"}
+                  alt="img3"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img23.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img23.jpg"}
-                      alt=""
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img23.webp"}
+                  alt=""
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
 
@@ -401,75 +316,55 @@ const diwali2024 = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img24.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img24.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img24.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-left"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img10.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img10.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img10.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-up"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img26.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img26.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img26.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
                 data-aos="fade-down"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img27.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img27.jpg"}
-                      alt="img-1"
-                      className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img27.webp"}
+                  alt="img-1"
+                  className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Diwali2024/img28.jpg"}>
-                    <img
-                      src={"/assets/Diwali2024/img28.jpg"}
-                      alt="img-18"
-                      className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Diwali2024/img28.webp"}
+                  alt="img-18"
+                  className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
           </div>

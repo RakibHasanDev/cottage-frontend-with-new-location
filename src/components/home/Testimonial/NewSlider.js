@@ -5,9 +5,6 @@ import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import img1 from "../../../assets/testimonial/1.webp";
-import img2 from "../../../assets/testimonial/2.webp";
-import img3 from "../../../assets/testimonial/3.webp";
 // ✅ Dynamic Imports
 const Slider = dynamic(() => import("react-slick"), { ssr: false });
 const TestimonialCard = dynamic(() => import("./TestimonialCard"), {
@@ -27,7 +24,8 @@ const NewSlider = () => {
   const allData = [
     { src: "https://www.youtube.com/embed/cruhtClBx_I?rel=0" },
     {
-      image: img1,
+      image:
+        "/assets/testimonial/cottage-home-care-review-Cinthya_Almendarez.webp",
       name: "Cinthya Almendarez",
       designation: "Patient",
       description:
@@ -37,7 +35,8 @@ const NewSlider = () => {
     },
     { src: "https://www.youtube.com/embed/NKOzRc6sJBE?rel=0" },
     {
-      image: img2,
+      image:
+        "/assets/testimonial/cottage-home-care-review-Sherry_Fiedtkou.webp",
       name: "Sherry Fiedtkou",
       designation: "Patient",
       description:
@@ -47,7 +46,8 @@ const NewSlider = () => {
     },
     { src: "https://www.youtube.com/embed/7xb2ChJBhh8?rel=0" },
     {
-      image: img3,
+      image:
+        "/assets/testimonial/cottage-home-care-review-Natividad_Mateo.webp",
       name: "Natividad Mateo",
       designation: "Patient",
       description:

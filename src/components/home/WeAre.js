@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import benifit from "../../../src/assets/TRUST.png";
-import day from "../../../src/assets/day.png";
-import match from "../../src/../assets/match.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import MyImageComponent from "../shared/MyImageComponent";
 import Image from "next/image";
 
 const WeAre = () => {
@@ -23,19 +19,19 @@ const WeAre = () => {
 
   const informations = [
     {
-      img: benifit,
+      img: "/assets/we-are/caregiver_you_can_trust.webp",
       title: " Caregivers You Can Trust",
       description:
         "At Cottage Home Care Services, we provide daily or weekly assistance tailored to your needs, whether due to aging, illness, recovery, or rehabilitation. Through the CDPAP program, your family can care for you without special certifications. Our in-house Registered Nurse ensures your safety and wellbeing with regular visits, offering peace of mind for you and your loved ones. Dedicated to quality care and support, we’re always here to answer your questions—just give us a call!",
     },
     {
-      img: day,
+      img: "/assets/we-are/Experienced_and_Supportive.webp",
       title: "Experienced and Supportive",
       description:
         " We understand that not one care plan fits all, CDPAP or Home Health Care. Daily services can include anything from meal preparation, hygiene, cleaning, and supervision. We at Cottage Home Care Services will take the time to get to know you and develop an individualized care plan that fits your specific needs. ",
     },
     {
-      img: match,
+      img: "/assets/we-are/Experienced Home Health Aids.webp",
       title: "Experienced Home Health Aids",
       description:
         "Companionship is key to a trusted relationship with our caregivers at Cottage Home Care Services. We not only strive to help you with everyday tasks but want to develop a caring relationship with you. We provide one-on-one attention and care that cannot compare in other settings for both patients in Home Health Care and CDPAP. All our Home Health Aides are strictly trained under New York City guidelines, and all have Certification from a specialized training school.",

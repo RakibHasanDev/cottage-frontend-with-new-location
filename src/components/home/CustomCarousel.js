@@ -6,16 +6,19 @@ import dynamic from "next/dynamic";
 
 const images = [
   {
-    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710684/Website%20Hero%20Images/hero-1_y7msil.webp",
-    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710747/Website%20Hero%20Images/hero-1-sm_b5yp9m.webp",
+    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710684/Website%20Hero%20Images/Cottage-Home-Care-Slider-1.webp",
+    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710747/Website%20Hero%20Images/cottage-home-care-slider-1-sm.webp",
+    alt: "Cottage Home Care Slider-1",
   },
   {
-    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710796/Website%20Hero%20Images/hero-2_bsnmsg.webp",
-    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710842/Website%20Hero%20Images/hero-2-sm_ijl8he.webp",
+    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710796/Website%20Hero%20Images/Cottage-Home-Care-Slider-2.webp",
+    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710842/Website%20Hero%20Images/Cottage-Home-Care-slider-2-sm.webp",
+    alt: "Cottage Home Care Slider-2",
   },
   {
-    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710873/Website%20Hero%20Images/hero-3_qtouim.webp",
-    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710910/Website%20Hero%20Images/hero-3-sm_lp8ejg.webp",
+    lg: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710873/Website%20Hero%20Images/Cottage-Home-Care-Slider-3.webp",
+    sm: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710910/Website%20Hero%20Images/Cottage-Home-Care-slider-3-sm.webp",
+    alt: "Cottage Home Care Slider-3",
   },
 ];
 
@@ -122,7 +125,7 @@ const CustomCarousel = () => {
               />
               <img
                 src={img.sm} // ✅ Matches preload for sm
-                alt="Hero"
+                alt={img?.alt}
                 className={index === currentIndex ? "current bg-center" : ""}
                 width="720"
                 height="405"

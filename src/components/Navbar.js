@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
-import navLogo from "../../src/assets/vector-logo.png";
+
 import { ThemeContext, ThemeProvider } from "@/context/ThemeContext";
 import ToggleButton from "./shared/ToogleButton";
 import SideNav from "./nav/SideNav";
@@ -68,9 +68,9 @@ const NavBar = () => {
               <div>
                 <div className="md:flex items-center hidden ">
                   <Image
-                    src={navLogo}
+                    src={"/assets/cottage-home-care-logo.webp"}
                     className="nav-img shadow-2xl p-2 border-2 border-[#00A6B2] rounded-full dark:bg-gray-300"
-                    alt="Cottage Home Care Services Logo"
+                    alt="cottage-home-care-logo"
                     width="100" // Set an appropriate width
                     height="100" // Set an appropriate height
                   />
@@ -89,7 +89,7 @@ const NavBar = () => {
 
                 <div className="header-container flex items-center md:hidden  ">
                   <Image
-                    src={navLogo}
+                    src={"/assets/cottage-home-care-logo.webp"}
                     className="logo shadow-2xl border-2 border-[#00A6B2] rounded-full dark:bg-gray-300"
                     alt="Cottage Home Care Services Logo"
                     width="70"

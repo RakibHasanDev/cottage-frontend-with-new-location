@@ -52,6 +52,11 @@ const breastCancerAwareness = () => {
           name="twitter:image"
           content="https://www.cottagehomecare.com/assets/Breast_Cancer_Awarencess/cover.webp"
         />
+
+        <link
+          rel="canonical"
+          href="https://cottagehomecare.com/breast-cancer-awareness/"
+        />
       </Head>
 
       <div className="min-h-screen dark:bg-slate-600">

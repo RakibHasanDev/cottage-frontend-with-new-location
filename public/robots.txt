@@ -1,5 +1,6 @@
 User-agent: *
 
+# Allow main pages
 Allow: /$
 Allow: /nhtd/
 Allow: /hha/
@@ -14,16 +15,7 @@ Allow: /faqs/
 Allow: /past-event/
 Allow: /upcoming-event/
 Allow: /team/
-Disallow: /team/*
-
 Allow: /blog/
-Disallow: /blog/*
-
-Allow: /blog/compassionate-home-care-in-nyc-with-cottage-home-care-services/
-Allow: /blog/hhapca-services-compassionate-home-care-with-cottage-home-care-services/
-Allow: /blog/nhtd-program-personalized-home-care-with-cottage-home-care-services/
-Allow: /blog/five-tips-for-a-restful-night/
-
 Allow: /privacy-policy/
 Allow: /mission-vision/
 Allow: /values/
@@ -33,4 +25,17 @@ Allow: /sitemap/
 Allow: /sitemap-index.xml
 Allow: /clock-in-out/
 
+# Block dynamic sub-paths under team and blog
+Disallow: /team/*
+Disallow: /blog/*
+Disallow: /dashboard/
+
+
+# Re-allow specific blog posts
+Allow: /blog/compassionate-home-care-in-nyc-with-cottage-home-care-services/
+Allow: /blog/hhapca-services-compassionate-home-care-with-cottage-home-care-services/
+Allow: /blog/nhtd-program-personalized-home-care-with-cottage-home-care-services/
+Allow: /blog/five-tips-for-a-restful-night/
+
+# Sitemap
 Sitemap: https://cottagehomecare.com/sitemap-index.xml

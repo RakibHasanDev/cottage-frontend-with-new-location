@@ -43,9 +43,9 @@ const OverwHelmed = () => {
           <img
             className="absolute w-[400px] md:w-[530px] md:h-[530px] top-2 md:top-4 z-0 rotate-3 md:-left-[10px] -left-[10px] dark:opacity-75"
             src={optimizedImage(
-              "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711490/overhelmed/overhelmed_kvgwuz.png"
+              "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711490/overhelmed/cottage-home-care-we-believe-bg.png"
             )}
-            alt="bg-shape"
+            alt="cottage-home-care-we-believe-background"
           />
 
           {/* 🔹 Masked Image - Responsive */}
@@ -53,33 +53,33 @@ const OverwHelmed = () => {
             <picture>
               <source
                 srcSet={optimizedImage(
-                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733429229/olq1biriqenliholyuyu.webp",
+                  "https://res.cloudinary.com/di3wwp9s0/image/upload/overhelmed/cottage-home-care-we-believe.webp",
                   1920
                 )}
                 media="(min-width: 1200px)"
               />
               <source
                 srcSet={optimizedImage(
-                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733429229/olq1biriqenliholyuyu.webp",
+                  "https://res.cloudinary.com/di3wwp9s0/image/upload/overhelmed/cottage-home-care-we-believe.webp",
                   1080
                 )}
                 media="(min-width: 768px)"
               />
               <source
                 srcSet={optimizedImage(
-                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733429229/olq1biriqenliholyuyu.webp",
+                  "https://res.cloudinary.com/di3wwp9s0/image/upload/overhelmed/cottage-home-care-we-believe.webp",
                   720
                 )}
                 media="(max-width: 767px)"
               />
               <img
                 src={optimizedImage(
-                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733429229/olq1biriqenliholyuyu.webp",
+                  "https://res.cloudinary.com/di3wwp9s0/image/upload/overhelmed/cottage-home-care-we-believe.webp",
                   480
                 )}
-                alt="Cinque Terre"
-                width="100%"
-                height="auto"
+                alt="cottage-home-care-we-believe-image"
+                width="480"
+                height="480"
                 className="masked-img"
                 loading="lazy"
               />

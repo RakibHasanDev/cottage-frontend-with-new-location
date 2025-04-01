@@ -29,8 +29,8 @@ const TrustpilotWidget = () => {
         data-locale="en-US"
         data-template-id="56278e9abfbbba0bdcd568bc"
         data-businessunit-id="67e6bd58e3692dd8cf651bd3"
-        data-style-height="40"
-        data-style-width="100"
+        data-style-height="80"
+        data-style-width="180"
       >
         <a
           href="https://www.trustpilot.com/review/cottagehomecare.com"
