@@ -16,42 +16,48 @@ const allVideos = [
   {
     des: "🔥💰 New Year...$300 on the line, AND there’s a catch! Fail to finish, and you face the penalty! 🌶️",
     duration: "4:51",
-    img: "/allVideos/new_year.webp",
+    img: "/assets/allVideos/cottage-new-year-food-challenge.webp",
+    alt: "Cottage Home Care New Year Food Challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/G7F1DKSty18?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "The Spicy Wings Challenge: Who Will Cry First? 🌶️👀 | Sponsored By Cottage Home Care | Friday Fun Day",
     duration: "6:01",
-    img: "/allVideos/img16.webp",
+    img: "/assets/allVideos/cottage-home-care-spicy-wings-challenge.webp",
+    alt: "cottage home care spicy wings challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/MBCTyo9OmCE?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "🔥 TRIPLE S Threat Takes on the Hot Spicy Wings Challenge! 🔥 | Friday Fun Day Food Challenge | Cottage Home Care",
     duration: "4:37",
-    img: "/allVideos/triple_wings.webp",
+    img: "/assets/allVideos/cottage_triple_wings_food_challenge.webp",
+    alt: "cottage_triple_wings_food_challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/WWth0ITKe8M?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "She ALMOST had it, OMG | Taco Challenge | Friday Fun Day Food Challenge | Cottage Home Care",
     duration: "3:33",
-    img: "/allVideos/img12.webp",
+    img: "/assets/allVideos/cottage-taco-food-challenge.webp",
+    alt: "cottage taco food challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/12vz6yxxGSU?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "ফুচকা চ্যালেঞ্জ! প্রতিযোগিতার উত্তেজনা তুঙ্গে – দুই প্রতিযোগী, একটি বড় পুরস্কার! এখনই দেখুন!",
     duration: "3:47",
-    img: "/allVideos/fuska.webp",
+    img: "/assets/allVideos/cottage-fuska-challenge.webp",
+    alt: "cottage-fuska-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/HGRmMKus4rc?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "Pizza Pie Challenge l Loser Gets Penalty | Friday Fun Day Food Challenge | Cottage Home Care",
     duration: "4:19",
-    img: "/allVideos/img8.webp",
+    img: "/assets/allVideos/cottage-pizza-pie-challenge.webp",
+    alt: "cottage-pizza-pie-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/dV6t9P00voE?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
@@ -59,35 +65,40 @@ const allVideos = [
   {
     des: "Risk or Reward Challenge! | India vs Guyana | $300 On the Line! Sponsored by Cottage Home Care",
     duration: "9:26",
-    img: "/allVideos/img14.webp",
+    img: "/assets/allVideos/brooklyn-indian-vs-guyana-food-challenge.webp",
+    alt: "brooklyn-indian-vs-guyana-food-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/ZdJE8sCJFbM?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: " 'Gwaan, give up nuh bredda' | Friday Fun Day Food Challenge |  Brooklyn Institute of Vocational Training ",
     duration: "5:17",
-    img: "/allVideos/IMG13.webp",
+    img: "/assets/allVideos/brooklyn-pizza-challenge.webp",
+    alt: "brooklyn-pizza-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/2q65v3R-YHA?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "Guess the Chocolate Blindfolded & Separation Anxiety | Friday Fun Day Food Challenge | Cottage Home Care",
     duration: "6:02",
-    img: "/allVideos/img10.webp",
+    img: "/assets/allVideos/cottage-chocolates-challenge.webp",
+    alt: "cottage-chocolates-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/VCQJliEFxy8?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "OMG - Don't pick THAT cup! | Friday Fun Day Challenge | Cottage Home Care",
     duration: "6:02",
-    img: "/allVideos/img11.webp",
+    img: "/assets/allVideos/cottage-cup-challenge.webp",
+    alt: "cottage-cup-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/mauJBeWAjvM?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "Balloon Challenge, Best Out of 3 Rounds | $300 Prize | Friday Fun Day Food Challenge | Cottage Home Care",
     duration: "2:20",
-    img: "/allVideos/img9.webp",
+    img: "/assets/allVideos/cottage-balloon-challenge.webp",
+    alt: "cottage-balloon-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/RWeQ3cz2YW0?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
@@ -108,78 +119,81 @@ const allVideos = [
   {
     des: "Who can eat the most? Friday Funday Food Challenge ",
     duration: "2:39",
-    img: "/allVideos/img6.webp",
+    img: "/assets/allVideos/cottage-who-can-eat-the-most.webp",
+    alt: "cottage-who-can-eat-the-most.webp",
     youtubeUrl:
       "https://www.youtube.com/embed/rmL7mpbjDNM?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "Behind the scenes - Who can eat the most? Friday Funday Food Challenge",
     duration: "0:35",
-    img: "/allVideos/img17.webp",
+    img: "/assets/allVideos/behind_the-scenes-who-can-eat-most.webp",
+    alt: "behind_the-scenes-who-can-eat-most",
     youtubeUrl:
       "https://www.youtube.com/embed/qWMiLZpoHK8?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "Chow Challenge, Friday Funday Food Challenge ",
     duration: "0:56",
-    img: "/allVideos/img5.webp",
+    img: "/assets/allVideos/cottage-chow-challenge.webp",
+    alt: "cottage-chow-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/YJ-9CiyKj0I?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "WHAT JUST HAPPENED! No Way! - Taco Challenge | Sponsored by Cottage Home Care Services | Friday Fun!",
     duration: "5:18",
-    img: "/allVideos/img15.webp",
+    img: "/assets/allVideos/brooklyn-taco-challenge.webp",
+    alt: "brooklyn-taco-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/kxZTjxCb5Os?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
 
   {
-    des: " 'Gwaan, give up nuh bredda' | Friday Fun Day Food Challenge |  Brooklyn Institute of Vocational Training ",
-    duration: "5:17",
-    img: "/allVideos/IMG13.webp",
-    youtubeUrl:
-      "https://www.youtube.com/embed/2q65v3R-YHA?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
-  },
-  {
     des: "Spicy Wings Challenge | Friday Fun Day Food Challenge | Ft. Singer Vanita aka Poowah | Collaboration",
     duration: "3:51",
-    img: "/allVideos/spicy_wings.webp",
+    img: "/assets/allVideos/brooklyn-spicy_wings-challenge.webp",
+    alt: "brooklyn-spicy_wings-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/1AlkjRTfHYY?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "🌶️🔥 Jamaican Jerk Chicken Challenge | Sponsored By Cottage Home Care | Friday Fun Day 🔥🌶️",
     duration: "4:15",
-    img: "/allVideos/img17.webp",
+    img: "/assets/allVideos/Jamaican-Jerk-Chicken-Challenge.webp",
+    alt: "Jamaican-Jerk-Chicken-Challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/rrA72WpBAwY?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "🎥 Omardath Maraj & Vanita Willie Judge Trinidadian Doubles Challenge Sponsored by Cottage Home Care🍛",
     duration: "6:18",
-    img: "/allVideos/img18.webp",
+    img: "/assets/allVideos/Trinidadian-Doubles-Challenge.webp",
+    alt: "Trinidadian-Doubles-Challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/43qCfiNI5Xs?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "Pani Puri Challenge Alert! | Sponsored by Cottage Home Care Services | Friday Fun! 🔥",
     duration: "4:29",
-    img: "/allVideos/img19.webp",
+    img: "/assets/allVideos/Pani-Puri-Challenge.webp",
+    alt: "Pani-Puri-Challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/XzCEv810gI4?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "$300 SPICY DOUBLES CHALLENGE: 3 CONTESTANTS, 5 DOUBLES, ONE WINNER! | Sponsored by Cottage Home Care",
     duration: "4:16",
-    img: "/allVideos/spicy_bouble.webp",
+    img: "/assets/allVideos/brooklyn-double-challenge.webp",
+    alt: "brooklyn-double-challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/gZXCPT8dIas?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
     des: "🔥 $300 BBQ Chicken Chow Mein Challenge! 🍜💰 | Sponsored by Cottage Home Care",
     duration: "3:31",
-    img: "/allVideos/bbq_chiken.webp",
+    img: "/assets/allVideos/BBQ-Chicken-Chow-Mein-Challenge.webp",
+    alt: "BBQ-Chicken-Chow-Mein-Challenge",
     youtubeUrl:
       "https://www.youtube.com/embed/vFG9kGmzXaE?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
