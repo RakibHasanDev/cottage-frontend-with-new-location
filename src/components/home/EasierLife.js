@@ -191,8 +191,8 @@ const EasierLife = () => {
                 // data-aos-duration="2000"
               >
                 <img
-                  src={"/assets/priya.webp"}
-                  alt="contact-cottage-home-care"
+                  src={"/assets/cottage-home-care-contact-image.webp"}
+                  alt="cottage-home-care-contact-image"
                   className="w-full shadow-lg md:md:max-w-2xl lg:max-w-[85%] rounded-lg "
                   width={800}
                   height={1046}

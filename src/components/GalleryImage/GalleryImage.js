@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const GalleryImage = ({ src, alt, className = "" }) => {
-  const [size, setSize] = useState({ width: 0, height: 0 });
+  const [size, setSize] = useState({ width: 50, height: 50 });
 
   useEffect(() => {
     const img = new Image();
@@ -22,8 +22,8 @@ const GalleryImage = ({ src, alt, className = "" }) => {
         <img
           src={src}
           alt={alt}
-          width={size.width || undefined}
-          height={size.height || undefined}
+          width={size.width}
+          height={size.height}
           loading="lazy"
           className={`w-full h-full object-cover shadow-md border-[1px] border-[#00A6B2] custom-zoom ${className}`}
         />

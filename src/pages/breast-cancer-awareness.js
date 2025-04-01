@@ -1,3 +1,4 @@
+import GalleryImage from "@/components/GalleryImage/GalleryImage";
 import Head from "next/head";
 import React from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -94,77 +95,55 @@ const breastCancerAwareness = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img1.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img1.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img1.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom "
+                />
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer block md:hidden"
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView
-                    src={"/assets/Breast_Cancer_Awarencess/mobile.webp"}
-                  >
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/mobile.webp"}
-                      alt="img-1"
-                      className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/mobile.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom "
+                />
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img3.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img3.jpg"}
-                      alt="img2"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    ></img>
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img3.webp"}
+                  alt="img2"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                ></GalleryImage>
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img4.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img4.jpg"}
-                      alt="img3"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img4.webp"}
+                  alt="img3"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img15.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img15.jpg"}
-                      alt=""
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img15.webp"}
+                  alt=""
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
 
@@ -174,75 +153,55 @@ const breastCancerAwareness = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img9.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img9.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img9.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
+                />
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
                 data-aos="fade-left"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img2.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img2.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img2.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-up"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img5.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img5.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img5.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
                 data-aos="fade-down"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img8.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img8.jpg"}
-                      alt="img-1"
-                      className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img8.webp"}
+                  alt="img-1"
+                  className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img13.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img13.jpg"}
-                      alt="img-1"
-                      className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img13.webp"}
+                  alt="img-1"
+                  className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
           </div>
@@ -253,62 +212,44 @@ const breastCancerAwareness = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView
-                    src={"/assets/Breast_Cancer_Awarencess/cover.webp"}
-                  >
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/cover.webp"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/cover.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img14.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img14.jpg"}
-                      alt="img2"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    ></img>
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img14.webp"}
+                  alt="img2"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                ></GalleryImage>
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img11.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img11.jpg"}
-                      alt="img3"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img11.webp"}
+                  alt="img3"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img17.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img17.jpg"}
-                      alt=""
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img17.webp"}
+                  alt=""
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
 
@@ -318,75 +259,55 @@ const breastCancerAwareness = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img10.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img10.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img10.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-left"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img8.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img8.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img8.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-up"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img6.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img6.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img6.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
                 data-aos="fade-down"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img12.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img12.jpg"}
-                      alt="img-1"
-                      className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img12.webp"}
+                  alt="img-1"
+                  className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img18.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img18.jpg"}
-                      alt="img-18"
-                      className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img18.webp"}
+                  alt="img-18"
+                  className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
           </div>
@@ -397,60 +318,44 @@ const breastCancerAwareness = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img27.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img27.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img27.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img24.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img24.jpg"}
-                      alt="img2"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    ></img>
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img24.webp"}
+                  alt="img2"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img21.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img21.jpg"}
-                      alt="img3"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img21.webp"}
+                  alt="img3"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img19.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img19.jpg"}
-                      alt=""
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img19.webp"}
+                  alt=""
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
 
@@ -460,75 +365,55 @@ const breastCancerAwareness = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img25.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img25.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img25.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-left"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img28.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img28.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img28.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-up"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img26.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img26.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img26.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
                 data-aos="fade-down"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img20.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img20.jpg"}
-                      alt="img-1"
-                      className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img20.webp"}
+                  alt="img-1"
+                  className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/Breast_Cancer_Awarencess/img29.jpg"}>
-                    <img
-                      src={"/assets/Breast_Cancer_Awarencess/img29.jpg"}
-                      alt="img-18"
-                      className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/Breast_Cancer_Awarencess/img29.webp"}
+                  alt="img-18"
+                  className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
           </div>
