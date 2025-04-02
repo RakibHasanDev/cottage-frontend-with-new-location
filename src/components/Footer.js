@@ -7,6 +7,7 @@ import { GrInstagram } from "react-icons/gr";
 import Link from "next/link";
 import Image from "next/image";
 import TrustpilotWidget from "./TrustpolotWidget/TrustpilotWidget";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -57,19 +58,19 @@ const Footer = () => {
 
           {/* start twitter */}
           <a
-            className="flex justify-center md:justify-center bg-[#59C8FF] py-3 cursor-pointer"
+            className="flex justify-center md:justify-center bg-[#0f0f0f] py-3 cursor-pointer"
             href="https://x.com/cottagecareny"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="Visit our Twitter page"
           >
             <div className="flex items-center gap-3 md:gap-5">
-              <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-[#4CB3DB] border-[1px] border-[#55afd2] shadow-md">
-                <BsTwitter className="text-white md:text-2xl"></BsTwitter>
+              <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-[#0f0f0f] border-[1px] border-white shadow-md">
+                <FaXTwitter className="text-white md:text-2xl" />
               </div>
               <div className="text-white text-sm md:text-base hidden lg:block">
-                <p>Twitter</p>
-                <p>Follow us on Twitter</p>
+                <p>X</p>
+                <p>Follow us on X</p>
               </div>
             </div>
           </a>
@@ -109,7 +110,7 @@ const Footer = () => {
               </div>
               <div className="text-white text-sm md:text-base hidden lg:block">
                 <p>YouTube</p>
-                <p>Subscribe to our YouTube channel</p>
+                <p>Watch on YouTube</p>
               </div>
             </div>
           </a>
