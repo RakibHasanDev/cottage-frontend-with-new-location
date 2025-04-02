@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { useQuery } from "@tanstack/react-query";
-import createSlug from "../shared/slugify";
 import Link from "next/link";
-import OverlayLoading from "../shared/OverlayLoading";
 import SpinerLoading from "../shared/SpinerLoading";
 
 const cardStyle = {
@@ -19,23 +17,48 @@ const Categories = ({ handleSearch, handleButtonClick }) => {
   const categories = [
     {
       serviceName: "HHA/PCA",
-      icon: "/assets/nurse-icon-1.1.png",
+      icon: "/assets/blogs/hha.webp",
       category: "HHA",
     },
     {
       serviceName: "NHTD",
-      icon: "/assets/nhtd-vector.png",
+      icon: "/assets/blogs/nhtd.webp",
       category: "NHTD",
     },
     {
       serviceName: "Private Pay",
-      icon: "/assets/two-heart-icons-large.png",
+      icon: "/assets/blogs/private-pay.webp",
       category: "PRIVATEPAY",
     },
     {
       serviceName: "CDPAP",
-      icon: "/assets/privatePay.png",
+      icon: "/assets/blogs/cdpap.webp",
       category: "CDPAP",
+    },
+    {
+      serviceName: "News",
+      icon: "/assets/blogs/news.webp",
+      category: "NEWS",
+    },
+    {
+      serviceName: "Blog",
+      icon: "/assets/blogs/blog.webp",
+      category: "BLOG",
+    },
+    {
+      serviceName: "Event",
+      icon: "/assets/blogs/event.webp",
+      category: "EVENT",
+    },
+    {
+      serviceName: "Offer",
+      icon: "/assets/blogs/offer.webp",
+      category: "OFFER",
+    },
+    {
+      serviceName: "Others",
+      icon: "/assets/blogs/others.webp",
+      category: "OTHERS",
     },
   ];
 
@@ -62,23 +85,21 @@ const Categories = ({ handleSearch, handleButtonClick }) => {
         <hr className="w-[50px] border-t-[2px] border-[#00A6B2] mx-auto" />
       </div>
 
-      <div className="grid grid-cols-2 bg-white mt-8" style={cardStyle}>
+      <div className="grid grid-cols-3 bg-white mt-8 p-1 " style={cardStyle}>
         {categories?.map((category, index) => (
           <div
             onClick={() => handleButtonClick(category?.category)}
             key={index}
-            className={`p-4 flex justify-center text-center ${
-              index < 2 ? "border-b" : ""
-            } ${
-              index % 2 === 1 ? "border-l" : ""
-            } border-gray-300 cursor-pointer hover:bg-[#a2f9ff]  category-style`}
+            className={`p-4 flex justify-center text-center border border-gray-300 cursor-pointer hover:bg-[#a2f9ff]  category-style`}
           >
             <div>
               <div>
                 <img
-                  className="w-24 h-24 rounded-full border-[1px] p-4"
+                  className="w-16 h-16 rounded-full border-[1px] p-4"
                   src={category?.icon}
                   alt={category?.serviceName}
+                  width={64}
+                  height={64}
                 />
               </div>
               <h1 className="mt-2 font-semibold league-spartan">
@@ -88,13 +109,6 @@ const Categories = ({ handleSearch, handleButtonClick }) => {
           </div>
         ))}
       </div>
-
-      <h1
-        className="text-center mt-3 uppercase font-semibold dark:text-gray-100 text-[#00A6B2] cursor-pointer league-spartan"
-        onClick={() => handleButtonClick("OTHERS")}
-      >
-        Others
-      </h1>
 
       {/* Search Option Start */}
       <div>

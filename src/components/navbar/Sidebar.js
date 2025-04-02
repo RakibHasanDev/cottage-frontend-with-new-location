@@ -139,7 +139,7 @@ const Sidebar = () => {
         />
 
         <SidebarLink
-          href="/dashboard/blog-form"
+          href="/dashboard/blog/add-blog"
           icon={<ImBlog />}
           label="Add A Blog"
           activePath={pathname}

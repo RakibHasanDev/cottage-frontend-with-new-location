@@ -36,6 +36,7 @@ Allow: /blog/compassionate-home-care-in-nyc-with-cottage-home-care-services/
 Allow: /blog/hhapca-services-compassionate-home-care-with-cottage-home-care-services/
 Allow: /blog/nhtd-program-personalized-home-care-with-cottage-home-care-services/
 Allow: /blog/five-tips-for-a-restful-night/
+Allow: /blog/blog/nhtd-medicaid-waiver-eligibility-services-and-benefits-for-independent-living/
 
 # Sitemap
 Sitemap: https://cottagehomecare.com/sitemap-index.xml

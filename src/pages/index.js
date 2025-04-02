@@ -50,6 +50,7 @@ const EasierLife = dynamic(() => import("@/components/home/EasierLife"), {
   suspense: true,
   ssr: false,
 });
+
 const NewsLetter = dynamic(() => import("@/components/home/NewsLetter"), {
   suspense: true,
   ssr: false,

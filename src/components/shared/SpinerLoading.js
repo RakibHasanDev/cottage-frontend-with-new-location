@@ -3,7 +3,7 @@ import React from "react";
 const SpinerLoading = () => {
   return (
     <div>
-      <div className="flex justify-center">
+      <div className="flex justify-center my-3">
         <svg
           aria-hidden="true"
           className="w-8 h-8  text-gray-200 animate-spin  dark:text-gray-100 fill-blue-600 "

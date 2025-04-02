@@ -1,15 +1,13 @@
 import React, { Suspense, useContext, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import OverlayLoading from "@/components/shared/OverlayLoading";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
 import dynamic from "next/dynamic";
 import SpinerLoading from "@/components/shared/SpinerLoading";
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 
-const HeroSection = dynamic(() => import("@/components/Blog/Herosection"), {
-  suspense: true,
-  ssr: false,
-});
 const AllBlog = dynamic(() => import("@/components/Blog/AllBlog"), {
   suspense: true,
   ssr: false,
@@ -86,9 +84,50 @@ const Blog = () => {
       </Head>
 
       <main className="min-h-screen dark:bg-slate-500">
-        <Suspense fallback={<SkeletonLoading />}>
-          <HeroSection />
-        </Suspense>
+        <div className="relative min-h-[40vh]  league-spartan ">
+          <picture>
+            <source
+              srcSet="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743624112/blogs/mobile_blog_banner.webp"
+              media="(max-width: 688px)"
+            />
+            <Image
+              src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743623965/blogs/blog_banner.webp"
+              alt="Cottage Home Care Blog Banner"
+              width={2580}
+              height={795}
+              priority // ✅ LCP Fix: Boost Loading Priority
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </picture>
+
+          {/* Overlay Effect */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#00A6B2]/10 to-[#00A6B2]/10 blog-cover "></div>
+
+          {/* Text Content */}
+          <div className="relative   h-[40vh] w-full ">
+            <div className="text-white flex flex-col md:flex-row md:w-[90%] 2xl:w-[70%] lg:w-[70%] mx-auto gap-y-3 md:gap-y-0 h-full items-center md:justify-between justify-end poppins text-shadow pb-5 md:pb-0">
+              <h1 className="text-2xl lg:text-4xl font-bold  league-spartan ">
+                Cottage Care Blog
+              </h1>
+
+              <div className=" flex items-center text-lg gap-1 font-semibold">
+                <Link
+                  href="/"
+                  className="blog-underline-animation  league-spartan text-xl "
+                >
+                  Home
+                </Link>
+                <MdOutlineArrowForwardIos className="text-lg font-bold" />
+                <Link
+                  href="/blog"
+                  className="blog-underline-animation   league-spartan text-xl"
+                >
+                  Blog
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {queryLoading ? (
           <div className="py-5">

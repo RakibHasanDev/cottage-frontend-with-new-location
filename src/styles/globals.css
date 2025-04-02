@@ -2499,30 +2499,10 @@ button.slick-arrow.slick-prev::before {
 
 .blog-cover {
   background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.322) 0%,
-      rgba(0, 0, 0, 0.356) 100%
-    ),
-    url("/assets/Main Banner/blog_banner.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 30vh;
-  background-position: center;
-}
-
-@media only screen and (max-width: 688px) {
-  .blog-cover {
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.148) 0%,
-        rgba(0, 0, 0, 0.187) 100%
-      ),
-      url("/assets/Main Banner/mobile_blog_banner.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 30vh;
-    background-position: center;
-  }
+    180deg,
+    rgba(0, 0, 0, 0.322) 0%,
+    rgba(0, 0, 0, 0.356) 100%
+  );
 }
 
 .custom-zoom {

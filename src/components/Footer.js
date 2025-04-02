@@ -29,7 +29,7 @@ const Footer = () => {
               </div>
               <div className="text-white text-sm md:text-base hidden lg:block">
                 <p>Facebook</p>
-                <p>Join us on Facebook</p>
+                <p>Follow us on Facebook</p>
               </div>
             </div>
           </a>
@@ -49,7 +49,7 @@ const Footer = () => {
               </div>
               <div className="text-white text-sm md:text-base hidden lg:block">
                 <p>Instagram</p>
-                <p>Join us on Instagram</p>
+                <p>Follow us on Instagram</p>
               </div>
             </div>
           </a>
@@ -69,7 +69,7 @@ const Footer = () => {
               </div>
               <div className="text-white text-sm md:text-base hidden lg:block">
                 <p>Twitter</p>
-                <p>Join us on Twitter</p>
+                <p>Follow us on Twitter</p>
               </div>
             </div>
           </a>
@@ -89,7 +89,7 @@ const Footer = () => {
               </div>
               <div className="text-white text-sm md:text-base hidden lg:block">
                 <p>TikTok</p>
-                <p>Join us on TikTok</p>
+                <p>Follow us on TikTok</p>
               </div>
             </div>
           </a>
@@ -109,7 +109,7 @@ const Footer = () => {
               </div>
               <div className="text-white text-sm md:text-base hidden lg:block">
                 <p>YouTube</p>
-                <p>Join us on YouTube</p>
+                <p>Subscribe to our YouTube channel</p>
               </div>
             </div>
           </a>

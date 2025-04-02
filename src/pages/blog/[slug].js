@@ -12,11 +12,10 @@ import { useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 import { AuthContext } from "@/context/AuthProvider";
 import useAdmin from "@/hooks/useAdmin";
-
-const HeroSection = dynamic(() => import("@/components/Blog/Herosection"), {
-  suspense: true,
-  ssr: false,
-});
+import { encode } from "html-entities";
+import BlogSidebar from "@/components/Blog/BlogSideBar";
+import Image from "next/image";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 export async function getStaticPaths() {
   try {
@@ -64,10 +63,9 @@ export async function getStaticProps({ params }) {
     }
 
     // ✅ Generate metadata at build time
-    const metaDescription = blog?.description
-      ?.map((desc) => desc?.content)
-      .join(" ")
-      .substring(0, 150);
+    const raw = blog?.description?.map((desc) => desc?.content).join(" ");
+    const encoded = encode(raw);
+    const metaDescription = encoded.substring(0, 150);
 
     const metaKeywords = `${blog?.title}, home care blog, caregiving tips, senior care insights, health & wellness, Cottage Home Care blog, home care news`;
     const metaTitle = `${blog?.title} - Cottage Home Care Services`;
@@ -86,6 +84,9 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
   const [formattedDate, setFormattedDate] = useState("");
   const { user } = useContext(AuthContext);
   const { isAdmin, isAdminLoading } = useAdmin(user?.email);
+  const [imageSrc, setImageSrc] = useState(""); // Dynamically choose image
+
+  // console.log(blog?.kywords, blog);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -103,6 +104,16 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
       setFormattedDate(blog?.date || ""); // Use fallback date
     }
   }, [blog]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setImageSrc(
+        window.innerWidth <= 688
+          ? "https://res.cloudinary.com/di3wwp9s0/image/upload/v1743624112/blogs/mobile_blog_banner.webp"
+          : "https://res.cloudinary.com/di3wwp9s0/image/upload/v1743623965/blogs/blog_banner.webp"
+      );
+    }
+  }, []);
 
   const {
     register,
@@ -211,12 +222,59 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
         <meta name="twitter:title" content={blog?.title} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={blog?.img} />
+
+        {imageSrc && (
+          <link rel="preload" href={imageSrc} as="image" fetchPriority="high" />
+        )}
       </Head>
 
       <div className="min-h-screen dark:bg-gray-800">
-        <Suspense fallback={<SkeletonLoading />}>
-          <HeroSection />
-        </Suspense>
+        {/* banner start  */}
+        <div className="relative min-h-[40vh]  league-spartan ">
+          <picture>
+            <source
+              srcSet="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743624112/blogs/mobile_blog_banner.webp"
+              media="(max-width: 688px)"
+            />
+            <Image
+              src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743623965/blogs/blog_banner.webp"
+              alt="Cottage Home Care Blog Banner"
+              width={2580}
+              height={795}
+              priority // ✅ LCP Fix: Boost Loading Priority
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </picture>
+
+          {/* Overlay Effect */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#00A6B2]/10 to-[#00A6B2]/10 blog-cover "></div>
+
+          {/* Text Content */}
+          <div className="relative   h-[40vh] w-full ">
+            <div className="text-white flex flex-col md:flex-row md:w-[90%] 2xl:w-[70%] lg:w-[70%] mx-auto gap-y-3 md:gap-y-0 h-full items-center md:justify-between justify-end poppins text-shadow pb-5 md:pb-0">
+              <h1 className="text-2xl lg:text-4xl font-bold  league-spartan ">
+                Cottage Care Blog
+              </h1>
+
+              <div className=" flex items-center text-lg gap-1 font-semibold">
+                <Link
+                  href="/"
+                  className="blog-underline-animation  league-spartan text-xl "
+                >
+                  Home
+                </Link>
+                <MdOutlineArrowForwardIos className="text-lg font-bold" />
+                <Link
+                  href="/blog"
+                  className="blog-underline-animation   league-spartan text-xl"
+                >
+                  Blog
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* banner end?\ */}
 
         {blog ? (
           <>
@@ -237,7 +295,7 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
                       <p className="text-gray-500 font-semibold dark:text-gray-100 text-xs md:text-base md:hidden block lg:block">
                         By{" "}
                         <span className="text-gray-800 dark:text-gray-300">
-                          Admin
+                          Cottage Home Care
                         </span>{" "}
                       </p>
                     </div>
@@ -304,105 +362,26 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
                 </div>
 
                 <div className="lg:col-span-3 md:col-span-4 mt-[5vh]">
-                  <div className="border-[1.5px] min-h-[30rem] lg:w-[90%] w-[95%] mx-auto border-t-[#00A6B2] hidden md:block">
-                    <p className="text-center font-semibold py-3 border-b-[1.5px] text-sm dark:text-gray-100">
-                      ABOUT
-                    </p>
+                  <BlogSidebar />
 
-                    <div className="w-[70%] mx-auto bg-[#EBF8F9] mt-8 py-8 rounded-md">
-                      <div className="flex justify-center">
-                        <img
-                          src={"/assets/Cottage Home.png"}
-                          alt=""
-                          className="w-[50%] h-[50%]"
-                          w="100"
-                          h="100"
-                        />
-                      </div>
-                    </div>
-                    <div className="mx-auto px-2 text-lg mt-3 text-center w-[80%] text-[#6c6262]">
-                      <p className="font-medium dark:text-gray-100 text-[16px] leading-relaxed open-sans">
-                        Cottage Home Care Services. 516.367.2266. The Right Home
-                        Care for You . HHA/PCA, NHTD, Private PAY & CDPAP
-                        Services throughout New York City
+                  {blog?.keywords && (
+                    <div className="mt-14 border-[1.5px] lg:w-[90%] w-[95%] mx-auto border-t-[#00A6B2] bg-[#f2f4f6de] py-3 pb-14 dark:bg-slate-800">
+                      <p className="text-center font-semibold mt-8 text-lg   dark:text-gray-100  league-spartan">
+                        Related Topic
+                      </p>
+                      <hr className="border-[#00a6b2] border-t-[1.5px] w-12 mt-1 mx-auto" />
+                      <p className="p-3 px-5">
+                        {blog?.keywords?.map((keyword, index) => (
+                          <span
+                            key={index}
+                            className="bg-white px-3 py-1.5 text-sm rounded mr-2 mb-2 inline-block"
+                          >
+                            {keyword}
+                          </span>
+                        ))}
                       </p>
                     </div>
-
-                    <div className="text-center mt-4">
-                      <Link href="/">
-                        <button className="bg-gray-50 px-3 py-3 shadow-md text-lg text-[#00A6B2] uppercase font-semibold bg-hov2 league-spartan">
-                          Read More
-                        </button>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="mt-14 border-[1.5px] lg:w-[90%] w-[95%] mx-auto border-t-[#00A6B2] bg-[#f2f4f6de] py-3 pb-14 dark:bg-slate-800">
-                    <p className="text-center font-semibold mt-8 text-lg   dark:text-gray-100  league-spartan">
-                      COMMENT SECTION
-                    </p>
-                    <hr className="border-[#00a6b2] border-t-[1.5px] w-12 mt-1 mx-auto" />
-
-                    <div className="w-[90%] mx-auto mt-10 open-sans">
-                      <form onSubmit={handleSubmit(commentHandler)}>
-                        <div className="space-y-3">
-                          <div>
-                            <input
-                              type="text"
-                              {...register("fullName", {
-                                required: "FullName is required",
-                              })}
-                              id="fullName"
-                              placeholder="Your Name"
-                              className="input w-full focus:outline-none input-bordered input-[#00A6B2] dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100 rounded-md px-5 py-2.5 outline outline-1 outline-[#00A6B2] focus:outline-[#00A6B2]  focus:ring-[#00A6B2]  "
-                            />
-                            {errors.fullName && (
-                              <p className="text-red-600">
-                                {errors.fullName.message}
-                              </p>
-                            )}
-                          </div>
-
-                          <div>
-                            <input
-                              type="email"
-                              {...register("email", {
-                                required: "email is required",
-                              })}
-                              placeholder="Your Email"
-                              className="input w-full focus:outline-none input-bordered input-[#00A6B2] dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100  rounded-md px-5 py-2.5 outline outline-1 outline-[#00A6B2] focus:outline-[#00A6B2]  focus:ring-[#00A6B2]"
-                            />
-
-                            {errors.email && (
-                              <p className="text-red-600">
-                                {errors.email.message}
-                              </p>
-                            )}
-                          </div>
-
-                          <div>
-                            <textarea
-                              type="text"
-                              {...register("comment", {
-                                required: "Message is required",
-                              })}
-                              className="textarea textarea-[#00A6B2] w-full focus:outline-none dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100  rounded-md px-5 py-2.5 outline outline-1 outline-[#00A6B2] focus:outline-[#00A6B2]  focus:ring-[#00A6B2]"
-                              placeholder="Your Message"
-                            ></textarea>
-
-                            {errors.comment && (
-                              <p className="text-red-600">
-                                {errors.comment.message}
-                              </p>
-                            )}
-                          </div>
-
-                          <button className="input w-full focus:outline-none bg-[#00A6B2] hover:bg-secondary text-white uppercase text-lg font-medium rounded-md px-4 py-3">
-                            Submit
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
 
@@ -424,6 +403,75 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
                     <hr className="border-t-[1px]" />
                   </div>
                 </div>
+
+                <div className="mt-14 border-[1.5px] lg:w-full w-[95%] mx-auto border-t-[#00A6B2] bg-[#f2f4f6de] py-3 pb-14 dark:bg-slate-800">
+                  <p className="text-center font-semibold mt-8 text-lg   dark:text-gray-100  league-spartan">
+                    COMMENT SECTION
+                  </p>
+                  <hr className="border-[#00a6b2] border-t-[1.5px] w-12 mt-1 mx-auto" />
+
+                  <div className="w-[90%] mx-auto mt-10 open-sans">
+                    <form onSubmit={handleSubmit(commentHandler)}>
+                      <div className="space-y-3">
+                        <div>
+                          <input
+                            type="text"
+                            {...register("fullName", {
+                              required: "FullName is required",
+                            })}
+                            id="fullName"
+                            placeholder="Your Name"
+                            className="input w-full focus:outline-none input-bordered input-[#00A6B2] dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100 rounded-md px-5 py-2.5 outline outline-1 outline-[#00A6B2] focus:outline-[#00A6B2]  focus:ring-[#00A6B2]  "
+                          />
+                          {errors.fullName && (
+                            <p className="text-red-600">
+                              {errors.fullName.message}
+                            </p>
+                          )}
+                        </div>
+
+                        <div>
+                          <input
+                            type="email"
+                            {...register("email", {
+                              required: "email is required",
+                            })}
+                            placeholder="Your Email"
+                            className="input w-full focus:outline-none input-bordered input-[#00A6B2] dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100  rounded-md px-5 py-2.5 outline outline-1 outline-[#00A6B2] focus:outline-[#00A6B2]  focus:ring-[#00A6B2]"
+                          />
+
+                          {errors.email && (
+                            <p className="text-red-600">
+                              {errors.email.message}
+                            </p>
+                          )}
+                        </div>
+
+                        <div>
+                          <textarea
+                            type="text"
+                            {...register("comment", {
+                              required: "Message is required",
+                            })}
+                            className="textarea textarea-[#00A6B2] w-full focus:outline-none dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100  rounded-md px-5 py-2.5 outline outline-1 outline-[#00A6B2] focus:outline-[#00A6B2]  focus:ring-[#00A6B2]"
+                            placeholder="Your Message"
+                          ></textarea>
+
+                          {errors.comment && (
+                            <p className="text-red-600">
+                              {errors.comment.message}
+                            </p>
+                          )}
+                        </div>
+
+                        <button className="input w-full focus:outline-none bg-[#00A6B2] hover:bg-secondary text-white uppercase text-lg font-medium rounded-md px-4 py-3">
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+
                 {comments?.map((comment) => (
                   <div key={comment?._id}>
                     <div className="mt-5 text-[#6c6262] py-5 border-[1px] rounded p-5 border-[#00A6B2] dark:border-gray-100">

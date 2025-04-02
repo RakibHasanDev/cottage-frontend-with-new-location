@@ -8,7 +8,7 @@ import Script from "next/script";
 import OverlayLoading from "@/components/shared/OverlayLoading";
 import slugify from "slugify";
 
-const BlogForm = () => {
+const AddBlog = () => {
   const [loading, setLoading] = useState(false);
   const [paragraphs, setParagraphs] = useState([
     { title: "", description: "" },
@@ -93,6 +93,7 @@ const BlogForm = () => {
     const blog = {
       title: data.title,
       slug: slug,
+      keywords: data.keywords.split(",").map((kw) => kw.trim()),
       category: data.category,
       newDate: new Date().toISOString(),
       img: imageUrl,
@@ -212,7 +213,11 @@ const BlogForm = () => {
                     <option value="NHTD">NHTD</option>
                     <option value="PRIVATEPAY">PRIVATEPAY</option>
                     <option value="CDPAP">CDPAP</option>
-                    <option value="OTHERS">OTHERS</option>
+                    <option value="NEWS">News</option>
+                    <option value="BLOG">Blog</option>
+                    <option value="EVENT">Event</option>
+                    <option value="OFFER">Offer</option>
+                    <option value="OTHERS">Others</option>
                   </select>
                   {errors.category && (
                     <p className="text-red-600">{errors.category.message}</p>
@@ -274,6 +279,22 @@ const BlogForm = () => {
                 Add Paragraph
               </button>
 
+              <div className="space-y-0.5 text-sm mt-5">
+                <label htmlFor="keywords">Keywords (comma separated)</label>
+                <textarea
+                  {...register("keywords", {
+                    required: "Keywords is required",
+                  })}
+                  id={`keywords`}
+                  rows={3}
+                  placeholder="e.g. sleep, senior care, night routine"
+                  className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
+                />
+                {errors.keywords && (
+                  <p className="text-red-600">{errors.keywords.message}</p>
+                )}
+              </div>
+
               <button
                 type="submit"
                 className="block w-full p-3 text-center rounded-sm bg-[#00A6B2] hover:bg-[#1D93AE] text-white mt-6"
@@ -288,4 +309,4 @@ const BlogForm = () => {
   );
 };
 
-export default BlogForm;
+export default AddBlog;
