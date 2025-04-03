@@ -88,7 +88,7 @@ const PastEvent = () => {
         <title>Past Events - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Explore our past events and activities at Cottage Home Care Services. From community outreach programs to informative webinars, see how we engage and support our community. Discover highlights, photos, and key takeaways from our past events."
+          content="Discover past events at Cottage Home Care—community programs, webinars, photos, and highlights that show how we support and engage our community."
         />
         <meta
           name="keywords"
@@ -111,7 +111,7 @@ const PastEvent = () => {
               <div className="w-[90%] mx-auto ">
                 <div className="rounded-md  mr-auto ">
                   <div className=" pb-8 pt-5 md:mt-0">
-                    <h4
+                    <h1
                       className=" text-start md:text-5xl text-[26px] font-medium md:font-bold text-gray-600   md:px-0 mt-2  league-spartan  dark:text-gray-300 lg:max-w-[620px] medium-device inline-block "
                       id="empowering"
                     >
@@ -131,11 +131,11 @@ const PastEvent = () => {
                           fill="none"
                         ></path>
                       </svg>
-                    </h4>
-                    <h4 className=" text-start md:text-5xl text-[20px] font-medium md:font-bold text-gray-600 league-spartan dark:text-gray-300 medium-device ">
+                    </h1>
+                    <h2 className=" text-start md:text-5xl text-[20px] font-medium md:font-bold text-gray-600 league-spartan dark:text-gray-300 medium-device ">
                       {" "}
                       Building stronger Communities
-                    </h4>
+                    </h2>
                   </div>
                 </div>
                 <p className="text-2xl font-semibold text-[#00A6B2] league-spartan">
@@ -222,9 +222,9 @@ const PastEvent = () => {
 
         {/* event cards start */}
 
-        <h1 className="text-center  text-xl  league-spartan md:text-xl lg:text-2xl xl:text-4xl font-semibold dark:text-gray-100 mt-12 text-[#00A6B2] ">
+        <p className="text-center  text-xl  league-spartan md:text-xl lg:text-2xl xl:text-4xl font-semibold dark:text-gray-100 mt-12 text-[#00A6B2] ">
           Cottage Photo Album
-        </h1>
+        </p>
         <hr className="border-[#00a6b2] border-t-2 w-12 mt-2 md:mb-3  mx-auto mb-3 " />
         <div className="lg:w-[75%] mx-auto py-8 w-[95%] " id="event-card">
           <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 md:gap-10 gap-7 ">
@@ -252,7 +252,7 @@ const PastEvent = () => {
                                     {eve?.title}
                                 </h3> */}
 
-                  <h1
+                  <p
                     className={`${
                       eve?.title?.length > 32
                         ? "uppercase text-center mt-1 font-medium tracking-widest dark:text-gray-100 text-gray-600 text-base open-sans font-semibold"
@@ -260,7 +260,7 @@ const PastEvent = () => {
                     }`}
                   >
                     {eve?.title || "Default Title"}
-                  </h1>
+                  </p>
                 </div>
               </Link>
             ))}

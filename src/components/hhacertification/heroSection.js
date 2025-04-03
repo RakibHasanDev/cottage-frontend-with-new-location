@@ -16,7 +16,7 @@ const heroSection = () => {
       <div className="relative  max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-5/6 lg:items-center lg:px-8 justify-start ml-[3%]">
         <div className="md:max-w-2xl w-[95%]  sm:text-left mt-[25vh] md:mt-[50vh] hha-banner-shadow md:p-6 p-3 ">
           <div className="flex  items-center gap-8 mb-3">
-            <h1 className="text-xl md:text-3xl w-[400px] md:w-[600px] font-extrabold sm:text-5xl text-white league-spartan text-shadow">
+            <h5 className="text-xl md:text-3xl w-[400px] md:w-[600px] font-extrabold sm:text-5xl text-white league-spartan text-shadow">
               <Typewriter
                 words={["Become HHA  Certified Today!"]}
                 loop={1000}
@@ -28,12 +28,12 @@ const heroSection = () => {
                 onLoopDone={handleDone}
                 onType={handleType}
               />
-            </h1>
+            </h5>
           </div>
 
-          <p className="mt-4 text-start text-2xl md:text-2xl  2xl:text-4xl sm:leading-relaxed text-white font-medium  text-shadow league-spartan">
+          <h1 className="mt-4 text-start text-2xl md:text-2xl  2xl:text-4xl sm:leading-relaxed text-white font-medium  text-shadow league-spartan">
             Brooklyn Institute of Vocational Training
-          </p>
+          </h1>
 
           <div></div>
 

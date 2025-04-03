@@ -361,7 +361,7 @@ const NHTD = () => {
                   <Link
                     href="https://www.health.ny.gov/facilities/long_term_care/nhtd/"
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="nofollow"
                     className="text-blue-500 hover:underline ml-1"
                   >
                     New York State Medicaid initiative
@@ -469,7 +469,7 @@ const NHTD = () => {
                   className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-[280px] rounded-md text-white shadow-md"
                   href="https://www.health.ny.gov/facilities/long_term_care/nhtd/eligibility.htm"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow"
                 >
                   <RiArrowRightDoubleFill className="text-2xl   text-white " />
                   <span className="">Official NHTD Eligibility Criteria</span>
@@ -513,7 +513,7 @@ const NHTD = () => {
                 className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-[290px] rounded-md text-white shadow-md"
                 href="https://www.health.ny.gov/facilities/long_term_care/nhtd/services.htm"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow"
               >
                 <RiArrowRightDoubleFill className="text-2xl   text-white " />
                 <span className="">Learn About the NHTD Program</span>
@@ -533,7 +533,7 @@ const NHTD = () => {
                 <Link
                   href="https://www.health.ny.gov/facilities/long_term_care/nhtd/rrdc.htm"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow"
                   className="text-blue-500 hover:underline"
                 >
                   Regional Resource Development Center (RRDC)
@@ -554,7 +554,7 @@ const NHTD = () => {
               className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-56 rounded-md text-white shadow-md"
               href="https://www.health.ny.gov/facilities/long_term_care/nhtd/rrdc.htm"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow"
             >
               <RiArrowRightDoubleFill className="text-2xl   text-white " />
               <span className="">Find an RRDC Near You</span>

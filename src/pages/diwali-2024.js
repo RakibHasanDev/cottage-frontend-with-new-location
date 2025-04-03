@@ -1,18 +1,15 @@
 import GalleryImage from "@/components/GalleryImage/GalleryImage";
 import Head from "next/head";
 import React from "react";
-import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const diwali2024 = () => {
   return (
     <>
       <Head>
-        <title>
-          Diwali 2024 - Liberty Avenue Celebration | Cottage Home Care Services
-        </title>
+        <title>Diwali 2024 - Cottage Liberty Avenue Celebration</title>
         <meta
           name="description"
-          content="Experience the vibrant Diwali 2024 celebration on Liberty Avenue hosted by Cottage Home Care Services. Explore colorful moments, joyful gatherings, and a photo gallery capturing the spirit of the festival."
+          content="Experience Diwali 2024 on Liberty Avenue with Cottage Home Care. Enjoy colorful moments, joyful gatherings, and photos capturing the festive spirit."
         />
         <meta
           name="keywords"
@@ -32,20 +29,20 @@ const diwali2024 = () => {
             </h1>
           </div>
           <div className="diwali-2024  md:hidden block">
-            <h1 className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">
+            <p className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">
               <span className=" px-4 py-2">
                 Diwali 2024 - Liberty Avenue Celebration
               </span>
-            </h1>
+            </p>
           </div>
         </div>
 
         <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8  py-5">
-            <h1 className=" text-center  text-xl  md:text-xl lg:text-2xl xl:text-4xl font-bold text-[#00A6B2] dark:text-gray-100 text-shadow league-spartan">
+            <p className=" text-center  text-xl  md:text-xl lg:text-2xl xl:text-4xl font-bold text-[#00A6B2] dark:text-gray-100 text-shadow league-spartan">
               {" "}
               Diwali 2024 - Liberty Avenue Celebration
-            </h1>
+            </p>
             <div className="flex justify-center ">
               <hr className="bg-[#00A6B2] px-5 md:mt-2 mt-2 py-[1px] w-[100px]" />
             </div>
@@ -304,7 +301,7 @@ const diwali2024 = () => {
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img23.webp"}
-                  alt=""
+                  alt="diwali-event-picture"
                   className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                 />
               </div>

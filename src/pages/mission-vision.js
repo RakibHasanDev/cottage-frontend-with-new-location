@@ -24,7 +24,7 @@ const MissionVision = () => {
         <div className="md:w-[85%] w-[95%] mx-auto pt-5 pb-20">
           <h1 className="text-center mt-5 playrify font-semibold text-gray-700 md:text-3xl text-2xl dark:text-gray-200">
             {" "}
-            Mission And Vision Of Cottage Care{" "}
+            Our Mission: Delivering Compassionate Home Care
           </h1>
           <hr className="mt-2 border-t-[1px] border-[#00A6B2] w-16 mx-auto " />
           <div className="grid md:grid-cols-8  gap-8 items-center mt-2">
@@ -33,12 +33,12 @@ const MissionVision = () => {
               data-aos="fade-right"
               data-aos-duration="2000"
             >
-              <h2 className="text-justify dark:text-gray-100">
+              <p className="text-justify dark:text-gray-100">
                 Our mission is to provide personalized, compassionate, and
                 high-quality home care services that enable our patients to
                 maintain their independence and improve their overall health and
                 well-being.
-              </h2>
+              </p>
 
               <p className="text-justify mt-3 dark:text-gray-100">
                 We strive to deliver individualized care plans tailored to each
@@ -95,7 +95,7 @@ const MissionVision = () => {
               data-aos-duration="2000"
             >
               <img
-                src={"/assets/priya.webp"}
+                src={"/assets/cottage-home-care-contact-image.webp"}
                 alt="pic3"
                 className="w-full rounded-md h-auto"
                 widtht={1200}
@@ -107,6 +107,10 @@ const MissionVision = () => {
               data-aos="fade-left"
               data-aos-duration="2000"
             >
+              <h2 className=" mt-5 mb-2 playrify font-semibold text-gray-700 md:text-xl text-xl dark:text-gray-200">
+                {" "}
+                Our Vision: Shaping the Future of Community Health
+              </h2>
               <p className="text-justify dark:text-gray-100">
                 Our team of highly qualified and dedicated caregivers is
                 passionate about improving the lives of those we serve. Cottage

@@ -179,7 +179,6 @@ const AllBlog = ({
                    border-gray-300 rounded-md focus:outline-none px-1 text-xs 2xl:text-sm leading-tight font-medium hidden md:block"
                 onChange={(event) => {
                   setSize(event.target.value);
-                  window.scrollTo(0, 0);
                 }}
               >
                 <option disabled className="hidden">

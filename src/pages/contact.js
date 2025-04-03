@@ -171,6 +171,11 @@ const Contacts = () => {
       <main className="dark:bg-slate-600 min-h-screen">
         {/* ✅ Set Canonical to Prevent Duplicate Canonical Issues */}
 
+        <h1 className="sr-only">
+          Contact Cottage Home Care Services – Locations, Phone, Email, and
+          Social Media
+        </h1>
+
         <LazyBanner />
 
         <Suspense fallback={<Placeholder />}>

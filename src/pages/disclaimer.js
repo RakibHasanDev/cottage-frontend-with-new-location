@@ -22,11 +22,9 @@ const Disclaimer = () => {
         suppressHydrationWarning
       >
         <h1 className="text-xl font-semibold">Disclaimer</h1>
-        <p>Last updated: March 27, 2025</p>
+        <h2>Last updated: March 27, 2025</h2>
 
-        <h2 className="text-lg font-semibold">
-          Interpretation and Definitions
-        </h2>
+        <p className="text-lg font-semibold">Interpretation and Definitions</p>
         <h3 className="text-lg font-semibold">Interpretation</h3>
         <p>
           The words of which the initial letter is capitalized have meanings
@@ -57,7 +55,7 @@ const Disclaimer = () => {
             accessible from{" "}
             <a
               href="https://cottagehomecare.com/"
-              rel="external nofollow noopener"
+              rel="nofollow"
               target="_blank"
             >
               https://cottagehomecare.com/
@@ -65,7 +63,7 @@ const Disclaimer = () => {
           </li>
         </ul>
 
-        <h2 className="text-lg font-semibold">Disclaimer</h2>
+        <p className="text-lg font-semibold">Disclaimer</p>
         <p>
           The information contained on the Service is for general information
           purposes only.
@@ -85,6 +83,7 @@ const Disclaimer = () => {
           with the help of the{" "}
           <a
             href="https://www.termsfeed.com/disclaimer-generator/"
+            rel="nofollow"
             target="_blank"
           >
             Disclaimer Generator
@@ -96,7 +95,7 @@ const Disclaimer = () => {
           other harmful components.
         </p>
 
-        <h2 className="text-lg font-semibold">External Links Disclaimer</h2>
+        <p className="text-lg font-semibold">External Links Disclaimer</p>
         <p>
           The Service may contain links to external websites that are not
           provided or maintained by or in any way affiliated with the Company.
@@ -107,9 +106,7 @@ const Disclaimer = () => {
           external websites.
         </p>
 
-        <h2 className="text-lg font-semibold">
-          Errors and Omissions Disclaimer
-        </h2>
+        <p className="text-lg font-semibold">Errors and Omissions Disclaimer</p>
         <p>
           The information given by the Service is for general guidance on
           matters of interest only. Even if the Company takes every precaution
@@ -123,7 +120,7 @@ const Disclaimer = () => {
           results obtained from the use of this information.
         </p>
 
-        <h2 className="text-lg font-semibold">Fair Use Disclaimer</h2>
+        <p className="text-lg font-semibold">Fair Use Disclaimer</p>
         <p>
           The Company may use copyrighted material which has not always been
           specifically authorized by the copyright owner. The Company is making
@@ -141,7 +138,7 @@ const Disclaimer = () => {
           copyright owner.
         </p>
 
-        <h2 className="text-lg font-semibold">Views Expressed Disclaimer</h2>
+        <p className="text-lg font-semibold">Views Expressed Disclaimer</p>
         <p>
           The Service may contain views and opinions which are those of the
           authors and do not necessarily reflect the official policy or position
@@ -157,7 +154,7 @@ const Disclaimer = () => {
           any comment for any reason whatsoever.
         </p>
 
-        <h2 className="text-lg font-semibold">No Responsibility Disclaimer</h2>
+        <p className="text-lg font-semibold">No Responsibility Disclaimer</p>
         <p>
           The information on the Service is provided with the understanding that
           the Company is not herein engaged in rendering legal, accounting, tax,
@@ -172,9 +169,9 @@ const Disclaimer = () => {
           to access or use the Service.
         </p>
 
-        <h2 className="text-lg font-semibold">
+        <p className="text-lg font-semibold">
           &quot;Use at Your Own Risk&quot; Disclaimer
-        </h2>
+        </p>
         <p>
           All information in the Service is provided &quot;as is&quot;, with no
           guarantee of completeness, accuracy, timeliness or of the results
@@ -189,7 +186,7 @@ const Disclaimer = () => {
           advised of the possibility of such damages.
         </p>
 
-        <h2 className="text-lg font-semibold">Contact Us</h2>
+        <p className="text-lg font-semibold">Contact Us</p>
         <p>
           If you have any questions about this Disclaimer, You can contact Us:
         </p>
@@ -199,7 +196,7 @@ const Disclaimer = () => {
             By visiting this page on our website:{" "}
             <a
               href="https://cottagehomecare.com/contact/"
-              rel="external nofollow noopener"
+              rel="nofollow"
               target="_blank"
             >
               https://cottagehomecare.com/contact/

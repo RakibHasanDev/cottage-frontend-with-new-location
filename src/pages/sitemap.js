@@ -42,9 +42,7 @@ const Sitemap = () => {
           </ul>
         </div>
         <div>
-          <h2 className="text-xl font-semibold text-[#00A6B2] mb-3">
-            Services
-          </h2>
+          <p className="text-xl font-semibold text-[#00A6B2] mb-3">Services</p>
           <ul className="space-y-1 text-gray-800 dark:text-gray-100">
             <li>
               <Link href="/nhtd" className="hover:text-[#00A6B2]">
@@ -73,9 +71,7 @@ const Sitemap = () => {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-[#00A6B2] mb-3">
-            Resources
-          </h2>
+          <p className="text-xl font-semibold text-[#00A6B2] mb-3">Resources</p>
           <ul className="space-y-1 text-gray-800 dark:text-gray-100">
             <li>
               <Link href="/resources" className="hover:text-[#00A6B2]">
@@ -101,9 +97,9 @@ const Sitemap = () => {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-[#00A6B2] mb-3">
+          <p className="text-xl font-semibold text-[#00A6B2] mb-3">
             Community Outreach
-          </h2>
+          </p>
           <ul className="space-y-1 text-gray-800 dark:text-gray-100">
             <li>
               <Link href="/past-event" className="hover:text-[#00A6B2]">
@@ -124,9 +120,9 @@ const Sitemap = () => {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-[#00A6B2] mb-3">
+          <p className="text-xl font-semibold text-[#00A6B2] mb-3">
             Other Pages
-          </h2>
+          </p>
           <ul className="space-y-1 text-gray-800 dark:text-gray-100">
             <li>
               <Link href="/blog" className="hover:text-[#00A6B2]">
@@ -152,7 +148,7 @@ const Sitemap = () => {
         </div>
 
         <div>
-          <h2 className="text-xl font-semibold text-[#00A6B2] mb-3">Legal</h2>
+          <p className="text-xl font-semibold text-[#00A6B2] mb-3">Legal</p>
           <ul className="space-y-1 text-gray-800 dark:text-gray-100">
             <li>
               <Link

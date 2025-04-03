@@ -225,6 +225,10 @@ export default function Home() {
       </Head>
 
       <div className="dark:bg-slate-600 min-h-screen">
+        <h1 className="sr-only">
+          Cottage Home Care – Home Health Aide, Private Pay, and NHTD Services
+        </h1>
+
         {/* ✅ Hero Section (Fast LCP) */}
         <CustomCarousel />
 

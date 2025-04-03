@@ -209,12 +209,12 @@ const Cdpap = () => {
         <div className="cdpapService-banner min-h-[40vh]">
           <div className="pt-[5vh] md:pt-[50px] md:max-w-lg lg:ml-[3%] 2xl:ml-[1%] ">
             <div className="space-y-2 pl-2 md:pl-0 league-spartan ">
-              <p className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow">
+              <h1 className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow">
                 CDPAP
-              </p>
-              <p className="text-center text-2xl text-white font-bold text-shadow block md:hidden">
+              </h1>
+              <h2 className="text-center text-2xl text-white font-bold text-shadow block md:hidden">
                 Get Optimum Pay Rates
-              </p>
+              </h2>
               <p className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow hidden md:block">
                 Get Optimum Pay Rates
               </p>
@@ -237,18 +237,18 @@ const Cdpap = () => {
           className="w-[95%] lg:w-[60%] mx-auto mt-10 dark:text-gray-100"
           id="cdpap-section"
         >
-          <h1 className="league-spartan text-xl font-medium md:text-3xl md:leading-10 text-justify auto-hyphen">
+          <h5 className="league-spartan text-xl font-medium md:text-3xl md:leading-10 text-justify auto-hyphen">
             Cottage Home Care Services is approved to assist you with the
             Consumer Directed Personal Assistant Program (CDPAP) and help you to
             start earning at optimum pay rates in New York City!
-          </h1>
-          <h2 className="mt-5 leading-relaxed open-sans md:text-lg text-justify auto-hyphen">
+          </h5>
+          <p className="mt-5 leading-relaxed open-sans md:text-lg text-justify auto-hyphen">
             This unique program allows the consumer to administer and assume
             responsibility for their own care. The flexibility of this program
             and the way in which it is administered is what makes it so unique.
             It promotes independence and gives the consumer a true sense of
             involvement in the decision making process with his/her own care.
-          </h2>
+          </p>
         </div>
 
         <div className="w-[95%] lg:w-[70%] mx-auto mt-10">
@@ -290,9 +290,9 @@ const Cdpap = () => {
         </div>
 
         <div>
-          <h3 className="dark:text-gray-100 w-full text-lg md:text-xl lg:text-2xl xl:text-4xl text-center league-spartan font-bold mt-5 text-[#00A6B2]">
+          <p className="dark:text-gray-100 w-full text-lg md:text-xl lg:text-2xl xl:text-4xl text-center league-spartan font-bold mt-5 text-[#00A6B2]">
             Eligibility for a CDPAP program
-          </h3>
+          </p>
           <div className="flex justify-center">
             <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
           </div>

@@ -9,7 +9,7 @@ const toysGiveaway = () => {
         <title>Christmas Toys Giveaway | Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Experience the joy of giving with Cottage Home Care Services' Christmas Toys Giveaway event. See heartwarming moments and happy smiles through our photo gallery."
+          content="Experience the joy of giving at Cottage Home Care's Christmas Toys Giveaway. View heartwarming moments and smiles in our festive photo gallery."
         />
         <meta
           name="keywords"
@@ -67,20 +67,20 @@ const toysGiveaway = () => {
             </h1>
           </div>
           <div className="toys-banner    md:hidden block">
-            <h1 className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">
+            <p className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">
               <span className="graduation-title px-4 py-2">
                 Christmas Toys Giveaway
               </span>
-            </h1>
+            </p>
           </div>
         </div>
 
         <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8  py-5">
-            <h1 className=" text-center  text-xl font-bold text-[#00A6B2] md:text-xl lg:text-2xl xl:text-4xl  dark:text-gray-100 text-shadow league-spartan">
+            <p className=" text-center  text-xl font-bold text-[#00A6B2] md:text-xl lg:text-2xl xl:text-4xl  dark:text-gray-100 text-shadow league-spartan">
               {" "}
               Christmas Toys Giveaway{" "}
-            </h1>
+            </p>
             <div className="flex justify-center ">
               <hr className="bg-[#00A6B2] px-5 md:mt-2 mt-2 py-[1px] w-[100px]" />
             </div>
@@ -127,7 +127,7 @@ const toysGiveaway = () => {
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img4.webp"}
-                  alt=""
+                  alt="Christmas toy giveaway event"
                   className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                 />
               </div>
@@ -233,7 +233,7 @@ const toysGiveaway = () => {
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img13.webp"}
-                  alt=""
+                  alt="cottage home care toy giveaway event"
                   className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                 />
               </div>
@@ -339,7 +339,7 @@ const toysGiveaway = () => {
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img22.webp"}
-                  alt=""
+                  alt="cottage Christmas toy giveaway event"
                   className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                 />
               </div>

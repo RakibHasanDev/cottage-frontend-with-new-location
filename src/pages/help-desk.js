@@ -80,7 +80,7 @@ const HelpDesk = () => {
         <title>Help Desk - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="The Help Desk at Cottage Home Care Services provides comprehensive support for our staff. Easily manage your work-related tasks including Clock In/Out, access PayStubs, manage Paid Time Off (PTO), submit General Requests, view Payroll details, and Request Supplies. Our goal is to streamline administrative processes to ensure a smooth operational flow."
+          content="Access the Help Desk at Cottage Home Care to manage Clock In/Out, PayStubs, PTO, requests, payroll info, and supplies—all in one place."
         />
         <meta
           name="keywords"
@@ -123,7 +123,7 @@ const HelpDesk = () => {
                       href={stuff?.link}
                       target="_blank"
                       className="px-7 p-3.5 rounded-full font-semibold uppercase bg-[#00A6B2] text-white shadow-md stuff-button "
-                      rel="noreferrer"
+                      rel="nofollow"
                     >
                       {" "}
                       view

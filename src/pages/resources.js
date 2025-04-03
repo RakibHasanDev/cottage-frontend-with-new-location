@@ -18,7 +18,7 @@ const ResourcesCard = dynamic(
 
 const title = "Resources - Cottage Home Care Services";
 const description =
-  "Explore a wide range of resources at Cottage Home Care Services, including timesheets, Department of Health (DOH) guidelines, TIME-OFF forms, Direct Deposit Authorization forms, Physical Examination forms, and specialized timesheets like Daily and Celestial. These tools are designed to support our staff and ensure compliance with industry standards.";
+  "Access timesheets, DOH guidelines, time-off forms, deposit and physical forms, and more at Cottage Home Care to support staff and compliance.";
 const keywords =
   "Cottage Home Care resources, timesheet downloads, DOH guidelines, TIME-OFF form, direct deposit authorization, physical examination form, daily timesheet, celestial timesheet, healthcare compliance, employee support tools";
 
@@ -182,6 +182,11 @@ const Resources = () => {
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
       <main className="dark:bg-slate-600 min-h-screen">
+        <h1 className="sr-only">
+          Cottage Home Care Services Resources – Forms, Timesheets, and Internal
+          Documents
+        </h1>
+
         <Suspense fallback={<SkeletonLoading />}>
           <LazyBanner />
         </Suspense>

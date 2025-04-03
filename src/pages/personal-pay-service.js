@@ -180,11 +180,11 @@ const personalPayService = () => {
 
       <main className="min-h-screen dark:bg-gray-600">
         <div className="singleService-banner min-h-[40vh] league-spartan">
-          <h5 className="ml-5 md:ml-0   text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[10vh] mb-5 font-bold text-shadow text-center md:max-w-md  lg:ml-[5%]">
+          <h1 className="ml-5 md:ml-0   text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[10vh] mb-5 font-bold text-shadow text-center md:max-w-md  lg:ml-[5%]">
             Private Pay
             <p className="mt-1 md:mt-3 ">In</p>
             <p className="mt-1 md:mt-3 ">Cottage Home Care </p>
-          </h5>
+          </h1>
           <div className="flex justify-center pl-5 my-2 md:max-w-md lg:ml-[5%]">
             <Link
               href="/contact"
@@ -316,12 +316,12 @@ const personalPayService = () => {
                 <h3 className="mt-5  text-xl lg:text-4xl font-semibold dark:text-gray-100 league-spartan text-[#00A6B2]">
                   What Is Private Pay In Home Care ?
                 </h3>
-                <h1 className="mt-3 lg:text-lg dark:text-white space-y-2 md:space-y-0 text-[16px] leading-relaxed open-sans font-normal ">
+                <p className="mt-3 lg:text-lg dark:text-white space-y-2 md:space-y-0 text-[16px] leading-relaxed open-sans font-normal ">
                   Private pay in home health care refers to a payment
                   arrangement where services are paid for directly by the client
                   or their family, rather than through insurance or government
                   assistance programs.
-                </h1>
+                </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 md:gap-7 mt-5 ">
                   {stuffs?.map((stuff, index) => (

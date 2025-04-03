@@ -248,7 +248,7 @@ const Faqs = () => {
         <title>FAQs - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Find answers to frequently asked questions about our home care services, COVID-19 safety measures, pricing, policies, and more. Get the information you need to make informed decisions about home care solutions."
+          content="Find answers to FAQs about home care, COVID-19 safety, pricing, and policies. Get the info you need to make smart decisions about your care options."
         />
         <meta
           name="keywords"
@@ -333,14 +333,14 @@ const Faqs = () => {
                   {" "}
                   How much will I get paid?
                 </h2>
-                <h2 className="text-lg md:text-2xl font-semibold text-center mb-2  dark:text-gray-100 text-[#00A6B2] league-spartan">
+                <p className="text-lg md:text-2xl font-semibold text-center mb-2  dark:text-gray-100 text-[#00A6B2] league-spartan">
                   {" "}
                   Questions about Payment
-                </h2>
-                <h2 className="text-base md:text-xl font-bold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                </p>
+                <p className="text-base md:text-xl font-bold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
                   {" "}
                   Caregiver Pay Rate
-                </h2>
+                </p>
 
                 <ul className="flex flex-col">
                   {paidItems.map((item) => (
@@ -356,7 +356,7 @@ const Faqs = () => {
                         onClick={() => handleClick(item.id)}
                         className="w-full focus:outline-none"
                       >
-                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                        <h3 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
                           <p className="flex md:text-lg items-center gap-2 font-medium question dark:text-gray-100 ">
                             {" "}
                             <span>
@@ -376,7 +376,7 @@ const Faqs = () => {
                               <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
                             </svg>
                           </span>
-                        </h2>
+                        </h3>
                       </button>
                       <div
                         className={`overflow-hidden transition-all duration-500 ${handleToggle(
@@ -417,9 +417,9 @@ const Faqs = () => {
           <div className="p-5" id="eligible">
             <div className="flex justify-center items-start my-2">
               <div className="w-full md:w-[65%] mx-auto my-1 ">
-                <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                <p className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
                   Am I eligible ?
-                </h2>
+                </p>
                 <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
                   Questions about Medicaid, Medicare & Insurance
                 </h3>
@@ -440,7 +440,7 @@ const Faqs = () => {
                         onClick={() => handleClick(item.id)}
                         className="w-full focus:outline-none"
                       >
-                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                        <h5 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
                           <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
                             {" "}
                             <span>
@@ -460,7 +460,7 @@ const Faqs = () => {
                               <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
                             </svg>
                           </span>
-                        </h2>
+                        </h5>
                       </button>
                       <div
                         className={`overflow-hidden transition-all duration-500  text-[16px] leading-relaxed open-sans ${handleToggle(
@@ -528,9 +528,9 @@ const Faqs = () => {
           <div className="p-5" id="caregiver">
             <div className="flex justify-center items-start my-2">
               <div className="w-full md:w-[65%] mx-auto my-1 ">
-                <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                <p className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
                   Can I be a caregiver?
-                </h2>
+                </p>
                 <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
                   Questions for caregivers
                 </h3>
@@ -551,7 +551,7 @@ const Faqs = () => {
                         onClick={() => handleClick(item.id)}
                         className="w-full focus:outline-none"
                       >
-                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                        <h4 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
                           <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
                             {" "}
                             <span>
@@ -572,7 +572,7 @@ const Faqs = () => {
                               <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
                             </svg>
                           </span>
-                        </h2>
+                        </h4>
                       </button>
                       <div
                         className={`overflow-hidden transition-all duration-500 text-[16px] leading-relaxed open-sans ${handleToggle(
@@ -626,9 +626,9 @@ const Faqs = () => {
           <div className="p-5" id="sign-up">
             <div className="flex justify-center items-start my-2">
               <div className="w-full md:w-[65%] mx-auto my-1 ">
-                <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
+                <p className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
                   What are the steps to Sign up ?
-                </h2>
+                </p>
                 <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
                   Questions about the Enrollment Process
                 </h3>
@@ -649,7 +649,7 @@ const Faqs = () => {
                         onClick={() => handleClick(item.id)}
                         className="w-full focus:outline-none"
                       >
-                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                        <h6 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
                           <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
                             {" "}
                             <span>
@@ -669,7 +669,7 @@ const Faqs = () => {
                               <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
                             </svg>
                           </span>
-                        </h2>
+                        </h6>
                       </button>
                       <div
                         className={`overflow-hidden transition-all duration-500 text-[16px] leading-relaxed open-sans ${handleToggle(
@@ -743,9 +743,9 @@ const Faqs = () => {
           <div className="p-5" id="program">
             <div className="flex justify-center items-start my-2">
               <div className="w-full md:w-[65%] mx-auto my-1 ">
-                <h2 className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan ">
+                <p className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan ">
                   How does this program work?
-                </h2>
+                </p>
                 <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2]  league-spartan">
                   General Questions about Cottage Home Care
                 </h3>
@@ -763,7 +763,7 @@ const Faqs = () => {
                         onClick={() => handleClick(item.id)}
                         className="w-full focus:outline-none"
                       >
-                        <h2 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
+                        <h6 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box dark:text-gray-100 text-start md:text-center">
                           <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
                             {" "}
                             <span>
@@ -783,7 +783,7 @@ const Faqs = () => {
                               <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
                             </svg>
                           </span>
-                        </h2>
+                        </h6>
                       </button>
                       <div
                         className={`overflow-hidden transition-all duration-500 text-[16px] leading-relaxed open-sans ${handleToggle(

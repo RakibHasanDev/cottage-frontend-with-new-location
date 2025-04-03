@@ -37,7 +37,7 @@ const Covid = () => {
         <title>COVID-19 - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Stay updated with the latest COVID-19 safety measures and health services provided by Cottage Home Care. Learn more about our response to the coronavirus pandemic and how we ensure the safety and health of our community."
+          content="Stay updated on COVID-19 safety and health services from Cottage Home Care. Learn how we protect our community during the coronavirus pandemic."
         />
         <meta
           name="keywords"
@@ -46,6 +46,11 @@ const Covid = () => {
         <link rel="canonical" href="https://cottagehomecare.com/covid/" />
       </Head>
       <main className=" px-5  dark:bg-slate-600 min-h-screen">
+        <h1 className="sr-only">
+          COVID-19 Awareness – Stay at Home, Stay Safe | Cottage Home Care
+          Services
+        </h1>
+
         <div className="w-[95%] md:w-[80%] mx-auto">
           <Suspense fallback={<SkeletonLoading />}>
             <Banner />

@@ -9,7 +9,7 @@ const christmasParty = () => {
         <title>Christmas Party 2023 | Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Celebrate the joy of Christmas 2023 with Cottage Home Care Services. View highlights and photos from our festive party filled with laughter, love, and community spirit."
+          content="Celebrate Christmas 2023 with Cottage Home Care Services. Enjoy highlights and photos from our joyful party filled with love and community spirit."
         />
         <meta
           name="keywords"
@@ -66,20 +66,20 @@ const christmasParty = () => {
             </h1>
           </div>
           <div className="christmas-banner   md:hidden block">
-            <h1 className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">
+            <p className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">
               <span className="graduation-title px-4 py-2">
                 Christmas Party 2023
               </span>
-            </h1>
+            </p>
           </div>
         </div>
 
         <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8  py-5">
-            <h1 className="text-center  text-xl text-[#00A6B2] md:text-xl lg:text-2xl xl:text-4xl font-bold league-spartan dark:text-gray-100 text-shadow">
+            <p className="text-center  text-xl text-[#00A6B2] md:text-xl lg:text-2xl xl:text-4xl font-bold league-spartan dark:text-gray-100 text-shadow">
               {" "}
               Christmas Party 2023{" "}
-            </h1>
+            </p>
             <div className="flex justify-center ">
               <hr className="bg-[#00A6B2] px-5 md:mt-2 mt-2 py-[1px] w-[100px]" />
             </div>
@@ -140,7 +140,7 @@ const christmasParty = () => {
                   <PhotoView src={"/assets/christmas-party/img22.jpg"}>
                     <img
                       src={"/assets/christmas-party/img22.jpg"}
-                      alt=""
+                      alt="christmas party event at cottage home care"
                       className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                     />
                   </PhotoView>
@@ -282,7 +282,7 @@ const christmasParty = () => {
                   <PhotoView src={"/assets/christmas-party/img13.jpg"}>
                     <img
                       src={"/assets/christmas-party/img13.jpg"}
-                      alt=""
+                      alt="chrismas party event"
                       className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                     />
                   </PhotoView>
@@ -424,7 +424,7 @@ const christmasParty = () => {
                   <PhotoView src={"/assets/christmas-party/img22.jpg"}>
                     <img
                       src={"/assets/christmas-party/img22.jpg"}
-                      alt=""
+                      alt="cottage christmas party"
                       className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                     />
                   </PhotoView>

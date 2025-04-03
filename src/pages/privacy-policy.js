@@ -25,9 +25,9 @@ const PrivacyPolicy = () => {
         <div className="lg:w-[85%] w-[95%] mx-auto pb-5">
           <div data-custom-className="term-condition">
             <div className="pt-5 md:pb-8 pb-5">
-              <p className="text-center text-lg md:text-2xl font-bold text-gray-700 dark:text-gray-100">
+              <h1 className="text-center text-lg md:text-2xl font-bold text-gray-700 dark:text-gray-100">
                 PRIVACY POLICY
-              </p>
+              </h1>
               <p className="text-center text-[#7F7F7F] text-base md:lg font-bold mt-3 dark:text-gray-100">
                 Last updated October 22, 2024
               </p>
@@ -35,7 +35,7 @@ const PrivacyPolicy = () => {
 
             {/* Privacy Policy Content */}
             <div style={{ lineHeight: "1.5" }}>
-              <h1
+              <p
                 className="text-[#595959] dark:text-white"
                 style={{ fontSize: 15 }}
               >
@@ -48,7 +48,7 @@ const PrivacyPolicy = () => {
                 <strong>&quot;process&quot;</strong>) your personal information
                 when you use our services (<strong>&quot;Services&quot;</strong>
                 ), including when you:
-              </h1>
+              </p>
 
               <ul>
                 <li>

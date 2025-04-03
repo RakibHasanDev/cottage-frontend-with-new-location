@@ -249,9 +249,9 @@ const hha = () => {
         {/* new section start "Eligible for hha/pca"  */}
 
         <div className="w-[95%]  lg:w-[70%] mx-auto">
-          <h3 className="text-center mt-4  text-2xl md:text-2xl  2xl:text-4xl font-bold dark:text-gray-100 league-spartan text-[#00A6B2]">
+          <h1 className="text-center mt-4  text-2xl md:text-2xl  2xl:text-4xl font-bold dark:text-gray-100 league-spartan text-[#00A6B2]">
             Requirements to be eligible for HHA/PCA Program
-          </h3>
+          </h1>
           <div className="flex justify-center ">
             <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
           </div>
@@ -316,9 +316,9 @@ const hha = () => {
         {/* close hha application requirement  */}
 
         <div className="w-[80%] mx-auto py-5">
-          <h1 className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
+          <p className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
             How the aides are trained and Examined
-          </h1>
+          </p>
 
           <div className="flex justify-center ">
             <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
@@ -331,10 +331,10 @@ const hha = () => {
           </p>
         </div>
 
-        <p className="text-center league-spartan text-xl md:text-3xl dark:text-gray-100 font-semibold">
+        <h2 className="text-center league-spartan text-xl md:text-3xl dark:text-gray-100 font-semibold">
           {" "}
           Training Process
-        </p>
+        </h2>
         <div className="flex justify-center ">
           <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
         </div>
@@ -411,9 +411,9 @@ const hha = () => {
         {/* insurance we work with start  */}
 
         <div className="w-[80%] md:w-[85%] lg:w-[90%] mx-auto py-5">
-          <h2 className="text-center text-xl  md:text-xl lg:text-2xl xl:text-4xl dark:text-gray-100 league-spartan font-bold text-[#00A6B2]">
+          <p className="text-center text-xl  md:text-xl lg:text-2xl xl:text-4xl dark:text-gray-100 league-spartan font-bold text-[#00A6B2]">
             Insurance We Work With For HHA/PCA
-          </h2>
+          </p>
           <div className="flex justify-center ">
             <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
           </div>

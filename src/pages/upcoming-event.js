@@ -51,7 +51,7 @@ const UpcomingEvent = () => {
         <title>Upcoming Events - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Stay informed about our upcoming events at Cottage Home Care Services. From health and wellness workshops to community engagement activities, find out what's happening next. Join us to learn, connect, and support our community through our scheduled events."
+          content="Stay updated on events at Cottage Home Care Services—join us for workshops and activities to learn, connect, and support your community."
         />
         <meta
           name="keywords"
@@ -65,6 +65,10 @@ const UpcomingEvent = () => {
       </Head>
       <main className="min-h-screen dark:bg-slate-600 bg-[#F5F5F7]">
         <div className="relative  bg-cover bg-center text-center h-[40vh] md:min-h-[80vh] upcoming-cover "></div>
+
+        <h1 className="md:text-3xl text-lg text-[#00A6B2] font-bold text-center my-5">
+          Grand Opening of Cottage Social Adult Day Care – Coming Soon!
+        </h1>
 
         {/* start coutdown section  */}
 

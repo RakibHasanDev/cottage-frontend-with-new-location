@@ -7,12 +7,10 @@ const breastCancerAwareness = () => {
   return (
     <>
       <Head>
-        <title>
-          Breast Cancer Awareness Month 2024 | Cottage Home Care Services
-        </title>
+        <title>Breast Cancer Awareness Month 2024 | Cottage Home Care</title>
         <meta
           name="description"
-          content="Join Cottage Home Care Services in raising awareness during Breast Cancer Awareness Month 2024. Explore our community event highlights and heartfelt moments through our photo gallery."
+          content="Join Cottage Home Care for Breast Cancer Awareness Month 2024. Explore event highlights and touching moments in our community photo gallery."
         />
         <meta
           name="keywords"
@@ -70,20 +68,20 @@ const breastCancerAwareness = () => {
             </h1>
           </div>
           <div className="breast-cancer-awarencess md:hidden block">
-            <h1 className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">
+            <p className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">
               <span className=" px-4 py-2">
                 Breast Cancer Awareness Month - 2024
               </span>
-            </h1>
+            </p>
           </div>
         </div>
 
         <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8  py-5">
-            <h1 className=" text-center  text-xl  md:text-xl lg:text-2xl xl:text-4xl font-bold text-[#00A6B2] dark:text-gray-100 text-shadow league-spartan">
+            <p className=" text-center  text-xl  md:text-xl lg:text-2xl xl:text-4xl font-bold text-[#00A6B2] dark:text-gray-100 text-shadow league-spartan">
               {" "}
               Breast Cancer Awareness Month - 2024
-            </h1>
+            </p>
             <div className="flex justify-center ">
               <hr className="bg-[#00A6B2] px-5 md:mt-2 mt-2 py-[1px] w-[100px]" />
             </div>
@@ -141,7 +139,7 @@ const breastCancerAwareness = () => {
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img15.webp"}
-                  alt=""
+                  alt="breast cancer event 2025"
                   className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                 />
               </div>
@@ -247,7 +245,7 @@ const breastCancerAwareness = () => {
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img17.webp"}
-                  alt=""
+                  alt="cottage breast cancer event"
                   className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                 />
               </div>
@@ -353,7 +351,7 @@ const breastCancerAwareness = () => {
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img19.webp"}
-                  alt=""
+                  alt="breast cancer awareness month 2025"
                   className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                 />
               </div>

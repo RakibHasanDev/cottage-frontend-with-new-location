@@ -49,7 +49,7 @@ const Placeholder = () => (
 const HhhaCertification = () => {
   const title = "HHA Certification - Cottage Home Care Services";
   const description =
-    "Earn your Home Health Aide (HHA) certification through the Brooklyn Institute of Vocational Training. Our comprehensive training programs equip you with the skills necessary to provide exceptional care in the home care industry. Enroll today and start your career in healthcare services with Cottage Home Care Services.";
+    "Get your HHA certification at Brooklyn Institute. Gain skills for a career in home care with Cottage Home Care Services. Enroll today!";
   const keywords =
     "HHA Certification, Home Health Aide Training, Brooklyn Institute of Vocational Training, healthcare training, home care industry training, Cottage Home Care Services, healthcare careers, vocational training in Brooklyn";
 
@@ -193,6 +193,10 @@ const HhhaCertification = () => {
       </Head>
 
       <main className="dark:bg-slate-600 min-h-screen">
+        <h1 className="sr-only">
+          Become HHA Certified at Brooklyn Institute of Vocational Training
+        </h1>
+
         <Suspense fallback={<Placeholder />}>
           <LazyBanner />
         </Suspense>

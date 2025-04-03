@@ -8,7 +8,7 @@ const TermsAndConditions = () => {
         <title>Terms & Conditions - Cottage Home Care</title>
         <meta
           name="description"
-          content="Review our terms and conditions for using Cottage Home Care."
+          content="Review the terms and conditions for using Cottage Home Care Services. Learn about user responsibilities, service guidelines, and our privacy policies."
         />
         <meta
           name="keywords"
@@ -26,15 +26,13 @@ const TermsAndConditions = () => {
         suppressHydrationWarning
       >
         <h1 className="text-xl font-semibold">Terms and Conditions</h1>
-        <p>Last updated: March 27, 2025</p>
+        <h2>Last updated: March 27, 2025</h2>
         <p>
           Please read these terms and conditions carefully before using Our
           Service.
         </p>
 
-        <h2 className="text-lg font-semibold">
-          Interpretation and Definitions
-        </h2>
+        <p className="text-lg font-semibold">Interpretation and Definitions</p>
         <h3>Interpretation</h3>
         <p>
           The words of which the initial letter is capitalized have meanings
@@ -100,7 +98,7 @@ const TermsAndConditions = () => {
               accessible from{" "}
               <a
                 href="https://cottagehomecare.com/"
-                rel="external nofollow noopener"
+                rel="noreferrer"
                 target="_blank"
               >
                 https://cottagehomecare.com/
@@ -116,7 +114,7 @@ const TermsAndConditions = () => {
           </li>
         </ul>
 
-        <h2 className="text-lg font-semibold">Acknowledgment</h2>
+        <h3 className="text-lg font-semibold">Acknowledgment</h3>
         <p>
           These are the Terms and Conditions governing the use of this Service
           and the agreement that operates between You and the Company. These
@@ -148,7 +146,7 @@ const TermsAndConditions = () => {
           carefully before using Our Service.
         </p>
 
-        <h2 className="text-lg font-semibold">Links to Other Websites</h2>
+        <p className="text-lg font-semibold">Links to Other Websites</p>
         <p>
           Our Service may contain links to third-party web sites or services
           that are not owned or controlled by the Company.
@@ -167,7 +165,7 @@ const TermsAndConditions = () => {
           policies of any third-party web sites or services that You visit.
         </p>
 
-        <h2 className="text-lg font-semibold">Termination</h2>
+        <h4 className="text-lg font-semibold">Termination</h4>
         <p>
           We may terminate or suspend Your access immediately, without prior
           notice or liability, for any reason whatsoever, including without
@@ -178,7 +176,7 @@ const TermsAndConditions = () => {
           immediately.
         </p>
 
-        <h2 className="text-lg font-semibold">Limitation of Liability</h2>
+        <h5 className="text-lg font-semibold">Limitation of Liability</h5>
         <p>
           Notwithstanding any damages that You might incur, the entire liability
           of the Company and any of its suppliers under any provision of this
@@ -207,9 +205,9 @@ const TermsAndConditions = () => {
           extent permitted by law.
         </p>
 
-        <h2 className="text-lg font-semibold">
+        <p className="text-lg font-semibold">
           &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; Disclaimer
-        </h2>
+        </p>
 
         <p>
           The Service is provided to You AS IS and AS AVAILABLE and with all
@@ -224,7 +222,7 @@ const TermsAndConditions = () => {
           trade practice...
         </p>
 
-        <h2 className="text-lg font-semibold">Governing Law</h2>
+        <p className="text-lg font-semibold">Governing Law</p>
         <p>
           The laws of the Country, excluding its conflicts of law rules, shall
           govern this Terms and Your use of the Service. Your use of the
@@ -232,22 +230,20 @@ const TermsAndConditions = () => {
           international laws.
         </p>
 
-        <h2 className="text-lg font-semibold">Disputes Resolution</h2>
+        <p className="text-lg font-semibold">Disputes Resolution</p>
         <p>
           If You have any concern or dispute about the Service, You agree to
           first try to resolve the dispute informally by contacting the Company.
         </p>
 
-        <h2 className="text-lg font-semibold">For European Union (EU) Users</h2>
+        <p className="text-lg font-semibold">For European Union (EU) Users</p>
         <p>
           If You are a European Union consumer, you will benefit from any
           mandatory provisions of the law of the country in which You are
           resident.
         </p>
 
-        <h2 className="text-lg font-semibold">
-          United States Legal Compliance
-        </h2>
+        <p className="text-lg font-semibold">United States Legal Compliance</p>
         <p>
           You represent and warrant that (i) You are not located in a country
           that is subject to the United States government embargo, or that has
@@ -256,7 +252,7 @@ const TermsAndConditions = () => {
           government list of prohibited or restricted parties.
         </p>
 
-        <h2 className="text-lg font-semibold">Severability and Waiver</h2>
+        <p className="text-lg font-semibold">Severability and Waiver</p>
         <h3>Severability</h3>
         <p>
           If any provision of these Terms is held to be unenforceable or
@@ -274,16 +270,16 @@ const TermsAndConditions = () => {
           constitute a waiver of any subsequent breach.
         </p>
 
-        <h2 className="text-lg font-semibold">Translation Interpretation</h2>
+        <p className="text-lg font-semibold">Translation Interpretation</p>
         <p>
           These Terms and Conditions may have been translated if We have made
           them available to You on our Service. You agree that the original
           English text shall prevail in the case of a dispute.
         </p>
 
-        <h2 className="text-lg font-semibold">
+        <p className="text-lg font-semibold">
           Changes to These Terms and Conditions
-        </h2>
+        </p>
         <p>
           We reserve the right, at Our sole discretion, to modify or replace
           these Terms at any time. If a revision is material We will make
@@ -298,7 +294,7 @@ const TermsAndConditions = () => {
           the website and the Service.
         </p>
 
-        <h2 className="text-lg font-semibold">Contact Us</h2>
+        <p className="text-lg font-semibold">Contact Us</p>
         <p>
           If you have any questions about these Terms and Conditions, You can
           contact us:
@@ -309,7 +305,7 @@ const TermsAndConditions = () => {
             By visiting this page on our website:{" "}
             <a
               href="https://cottagehomecare.com/contact/"
-              rel="external nofollow noopener"
+              rel="noreferrer"
               target="_blank"
             >
               https://cottagehomecare.com/contact/

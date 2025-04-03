@@ -11,10 +11,10 @@ const HeroSection = () => {
   return (
     <div className="resource-Banner h-[20vh] lg:h-[45vh] flex justify-end  pr-[5%] 2xl:pr-[20%] ">
       <div className="w-[220px] md:w-[400px] lg:w-[700px] md: mt-3 md:mt-5 lg:mt-[10vh]">
-        <h3 className="text-2xl  lg:text-4xl   text-white md:font-bold font-medium  text-shadow league-spartan text-left mt-2">
+        <h1 className="text-2xl  lg:text-4xl   text-white md:font-bold font-medium  text-shadow league-spartan text-left mt-2">
           Resources
-        </h3>
-        <h1
+        </h1>
+        <h5
           className="md:text-2xl lg:text-4xl text-lg  md:px-0 text-white league-spartan font-semibold  text-shadow  text-left md:mt-5 lg:mt-10 hidden md:block "
           style={{ whiteSpace: "pre-line" }}
         >
@@ -29,8 +29,8 @@ const HeroSection = () => {
             onLoopDone={handleDone}
             onType={handleType}
           />
-        </h1>
-        <h1
+        </h5>
+        <h5
           className="md:text-2xl lg:text-4xl text-lg  md:px-0 text-white league-spartan font-semibold  text-shadow  text-left md:mt-5 lg:mt-10 block md:hidden "
           style={{ whiteSpace: "pre-line" }}
         >
@@ -45,7 +45,7 @@ const HeroSection = () => {
             onLoopDone={handleDone}
             onType={handleType}
           />
-        </h1>
+        </h5>
       </div>
     </div>
   );

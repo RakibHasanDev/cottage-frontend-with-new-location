@@ -9,7 +9,7 @@ const schoolSupply = () => {
         <title>School Supplies Giveaway | Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Join us for our School Supplies Giveaway hosted by Cottage Home Care Services. Explore highlights and heartwarming moments from the event through our photo gallery."
+          content="Join Cottage Home Care’s School Supplies Giveaway. Explore event highlights and heartwarming moments in our back-to-school photo gallery."
         />
         <meta
           name="keywords"
@@ -65,20 +65,20 @@ const schoolSupply = () => {
             </h1>
           </div>
           <div className="school-supply block md:hidden  ">
-            <h1 className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold">
+            <p className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold">
               <span className="graduation-title px-4 py-2  text-shadow advertise">
                 School Supplies Giveaway
               </span>
-            </h1>
+            </p>
           </div>
         </div>
 
         <div className="md:py-10 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8 lg:pt-12 py-5">
-            <h1 className=" text-center  text-xl  league-spartan font-bold md:text-xl lg:text-2xl xl:text-4xl  dark:text-gray-100 text-[#00A6B2]">
+            <p className=" text-center  text-xl  league-spartan font-bold md:text-xl lg:text-2xl xl:text-4xl  dark:text-gray-100 text-[#00A6B2]">
               {" "}
               School Supplies Giveaway{" "}
-            </h1>
+            </p>
             <div className="flex justify-center ">
               <hr className="bg-[#00A6B2] px-5 md:mt-5 mt-2 py-[1px] w-[100px]" />
             </div>
@@ -139,7 +139,7 @@ const schoolSupply = () => {
                   <PhotoView src={"/assets/new-school-giveaway/img-4.jpg"}>
                     <img
                       src={"/assets/new-school-giveaway/img-4.jpg"}
-                      alt=""
+                      alt="school supply"
                       className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                     />
                   </PhotoView>
@@ -281,7 +281,7 @@ const schoolSupply = () => {
                   <PhotoView src={"/assets/new-school-giveaway/img-14.jpg"}>
                     <img
                       src={"/assets/new-school-giveaway/img-14.jpg"}
-                      alt=""
+                      alt="cottage school supply giveaway"
                       className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
                     />
                   </PhotoView>
