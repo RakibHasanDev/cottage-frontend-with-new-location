@@ -28,7 +28,7 @@ const Footer = () => {
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-[#46619A] border-[1px] border-[#40598d] shadow-md">
                 <FaFacebookF className="text-white md:text-2xl"></FaFacebookF>
               </div>
-              <div className="text-white text-sm md:text-base hidden lg:block">
+              <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>Facebook</p>
                 <p>Follow us on Facebook</p>
               </div>
@@ -48,7 +48,7 @@ const Footer = () => {
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-gradient-to-t from-[#F08535] via-[#D63573] to-[#7135B0] border-[1px] border-[#7135B0] shadow-md">
                 <GrInstagram className="text-white md:text-2xl"></GrInstagram>
               </div>
-              <div className="text-white text-sm md:text-base hidden lg:block">
+              <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>Instagram</p>
                 <p>Follow us on Instagram</p>
               </div>
@@ -68,7 +68,7 @@ const Footer = () => {
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-[#0f0f0f] border-[1px] border-white shadow-md">
                 <FaXTwitter className="text-white md:text-2xl" />
               </div>
-              <div className="text-white text-sm md:text-base hidden lg:block">
+              <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>X</p>
                 <p>Follow us on X</p>
               </div>
@@ -88,7 +88,7 @@ const Footer = () => {
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-gradient-to-t from-pink-400 via-[#65C7CD] to-gray-800 border-[1px] border-pink-300 shadow-md">
                 <FaTiktok className="text-white md:text-2xl"></FaTiktok>
               </div>
-              <div className="text-white text-sm md:text-base hidden lg:block">
+              <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>TikTok</p>
                 <p>Follow us on TikTok</p>
               </div>
@@ -108,7 +108,7 @@ const Footer = () => {
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-[#b008] border-[1px] border-[#880000b7] shadow-md">
                 <BsYoutube className="text-white md:text-2xl"></BsYoutube>
               </div>
-              <div className="text-white text-sm md:text-base hidden lg:block">
+              <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>YouTube</p>
                 <p>Watch on YouTube</p>
               </div>
@@ -140,7 +140,7 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3 ">
+            <div className="grid grid-cols-2 text-sm lg:text-base gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3 ">
               <div className="space-y-3">
                 <Link
                   href="/privacy-policy"
@@ -236,14 +236,14 @@ const Footer = () => {
             </div>
           </div>
 
-          <span className="text-center my-4 uppercase text-xs md:text-sm border-[1px] border-[#00A6B2] flex justify-center lg:w-[550px] mx-auto p-2">
+          <span className="text-center my-4 uppercase text-xs md:text-sm  border-[1px] border-[#00A6B2] flex justify-center lg:w-[550px] mx-auto p-2">
             {" "}
             sms consent or phone numbers for the purpose of sms aren&apos;t
             shared
           </span>
         </div>
 
-        <div className="py-6 md:text-sm text-xs text-center text-gray-50 open-sans">
+        <div className="py-6 md:text-sm  text-xs text-center text-gray-50 open-sans">
           Copyright © {currentYear} Cottage Home Care - All Rights Reserved.{" "}
           <br></br>
         </div>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
 const GalleryImage = ({ src, alt, className = "" }) => {
-  const [size, setSize] = useState({ width: 50, height: 50 });
+  const [size, setSize] = useState({ width: 100, height: 100 });
 
   useEffect(() => {
     const img = new Image();

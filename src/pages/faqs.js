@@ -284,9 +284,9 @@ const Faqs = () => {
                     }
                   }}
                 >
-                  <h1 className="text-center text-xl md:text-2xl league-spartan font-semibold">
+                  <p className="text-center text-xl md:text-2xl league-spartan font-semibold">
                     {qus?.title}
-                  </h1>
+                  </p>
                   <p className="text-center md:text-lg mt-3 open-sans">
                     {qus?.description}
                   </p>
@@ -313,9 +313,9 @@ const Faqs = () => {
                     }
                   }}
                 >
-                  <h1 className="text-center text-xl md:text-2xl league-spartan font-semibold">
+                  <p className="text-center text-xl md:text-2xl league-spartan font-semibold">
                     {qus?.title}
-                  </h1>
+                  </p>
                   <p className="text-center md:text-lg mt-3 open-sans">
                     {qus?.description}
                   </p>

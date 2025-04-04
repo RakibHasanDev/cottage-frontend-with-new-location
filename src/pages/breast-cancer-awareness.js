@@ -82,6 +82,10 @@ const breastCancerAwareness = () => {
               {" "}
               Breast Cancer Awareness Month - 2024
             </p>
+            <h2 className="sr-only">
+              Breast Cancer Awareness with Cottage Home Care
+            </h2>
+
             <div className="flex justify-center ">
               <hr className="bg-[#00A6B2] px-5 md:mt-2 mt-2 py-[1px] w-[100px]" />
             </div>

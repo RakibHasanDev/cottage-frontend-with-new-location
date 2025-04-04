@@ -196,6 +196,9 @@ const HhhaCertification = () => {
         <h1 className="sr-only">
           Become HHA Certified at Brooklyn Institute of Vocational Training
         </h1>
+        <h2 className="sr-only">
+          Get Certified as a Home Health Aide at Cottage Home Care
+        </h2>
 
         <Suspense fallback={<Placeholder />}>
           <LazyBanner />

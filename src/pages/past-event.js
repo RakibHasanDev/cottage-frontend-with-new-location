@@ -44,29 +44,45 @@ const PastEvent = () => {
 
   const events = [
     {
-      img: "/assets/Diwali2024/card-cover.jpg",
+      img: "/assets/Diwali2024/card-cover.webp",
       title: "Diwali 2024 - Liberty Avenue Celebration",
       path: "diwali-2024",
+      alt: "Diwali event 2024 cottage home care",
+      height: "1200",
+      width: "800",
     },
     {
-      img: "/assets/Breast_Cancer_Awarencess/img1.jpg",
+      img: "/assets/Breast_Cancer_Awarencess/img1.webp",
       title: "Breast Cancer Awareness Month 2024",
+      alt: "breast cancer awareness event 2024 cottage home care",
       path: "breast-cancer-awareness",
+      width: "1200",
+      height: "675",
     },
     {
-      img: "/assets/christmas-toy/card-cover.jpg",
+      img: "/assets/christmas-toy/card-cover.webp",
       title: "Christmas Toys Giveaway",
       path: "toys-giveaway",
+      alt: "toys giveaway event 2024",
+      width: "720",
+      window: "480",
     },
     {
-      img: "/assets/christmas-party/christmas-cover.webp",
+      img: "/assets/christmas-party/christmas-card-cover.webp",
       title: "Christmas Party 2023",
       path: "christmas-party",
+      alt: "cottage christmas party event",
+      alt: "christmas party event",
+      width: "720",
+      height: "445",
     },
     {
-      img: "/assets/Backpack School GIveway/backPack-cover.jpg",
+      img: "/assets/Backpack School GIveway/backPack-cover.webp",
       title: "School Supplies Giveaway",
       path: "school-supply",
+      alt: "back-pack-giveaway",
+      width: "720",
+      height: "528",
     },
     // {
     //   img: celebrityBrunch,
@@ -234,10 +250,10 @@ const PastEvent = () => {
                   <div className="relative overflow-hidden h-64 md:h-48 xl:h-64">
                     <img
                       src={eve?.img}
-                      alt={eve?.img}
+                      alt={eve?.alt}
                       className="w-full object-cover h-fit transition duration-500 transform hover:scale-105"
-                      w="100"
-                      h="100"
+                      width={eve?.width}
+                      height={eve?.height}
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-black opacity-0 hover:opacity-50 transition duration-300 flex items-center justify-center">

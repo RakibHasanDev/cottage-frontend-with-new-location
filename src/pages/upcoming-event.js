@@ -69,6 +69,10 @@ const UpcomingEvent = () => {
         <h1 className="md:text-3xl text-lg text-[#00A6B2] font-bold text-center my-5">
           Grand Opening of Cottage Social Adult Day Care – Coming Soon!
         </h1>
+        <h2 className="sr-only">
+          Upcoming Events at Cottage Home Care – Social Adult Day Care Grand
+          Opening
+        </h2>
 
         {/* start coutdown section  */}
 

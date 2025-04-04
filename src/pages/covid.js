@@ -47,9 +47,11 @@ const Covid = () => {
       </Head>
       <main className=" px-5  dark:bg-slate-600 min-h-screen">
         <h1 className="sr-only">
-          COVID-19 Awareness – Stay at Home, Stay Safe | Cottage Home Care
-          Services
+          COVID-19 Awareness—Stay at Home, Stay Safe | Cottage Care
         </h1>
+        <h2 className="sr-only">
+          COVID-19 Safety and Health Updates from Cottage Home Care
+        </h2>
 
         <div className="w-[95%] md:w-[80%] mx-auto">
           <Suspense fallback={<SkeletonLoading />}>

@@ -28,9 +28,9 @@ const PrivacyPolicy = () => {
               <h1 className="text-center text-lg md:text-2xl font-bold text-gray-700 dark:text-gray-100">
                 PRIVACY POLICY
               </h1>
-              <p className="text-center text-[#7F7F7F] text-base md:lg font-bold mt-3 dark:text-gray-100">
+              <h2 className="text-center text-[#7F7F7F] text-base md:lg font-bold mt-3 dark:text-gray-100">
                 Last updated October 22, 2024
-              </p>
+              </h2>
             </div>
 
             {/* Privacy Policy Content */}

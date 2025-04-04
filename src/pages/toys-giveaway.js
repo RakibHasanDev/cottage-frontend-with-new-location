@@ -65,6 +65,9 @@ const toysGiveaway = () => {
                 Christmas Toys Giveaway
               </span>
             </h1>
+            <h2 className="sr-only">
+              Toys Giveaway Event – Cottage Home Care Community Outreach
+            </h2>
           </div>
           <div className="toys-banner    md:hidden block">
             <p className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">

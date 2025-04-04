@@ -316,9 +316,9 @@ const hha = () => {
         {/* close hha application requirement  */}
 
         <div className="w-[80%] mx-auto py-5">
-          <p className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
+          <h2 className="text-center league-spartan text-2xl md:text-2xl  2xl:text-4xl dark:text-gray-100 font-bold text-[#00A6B2]">
             How the aides are trained and Examined
-          </p>
+          </h2>
 
           <div className="flex justify-center ">
             <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
@@ -331,10 +331,10 @@ const hha = () => {
           </p>
         </div>
 
-        <h2 className="text-center league-spartan text-xl md:text-3xl dark:text-gray-100 font-semibold">
+        <p className="text-center league-spartan text-xl md:text-3xl dark:text-gray-100 font-semibold">
           {" "}
           Training Process
-        </h2>
+        </p>
         <div className="flex justify-center ">
           <hr className="bg-[#00A6B2] px-5 mt-2 py-[1px] w-[100px]" />
         </div>

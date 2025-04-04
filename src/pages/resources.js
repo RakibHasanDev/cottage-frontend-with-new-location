@@ -183,8 +183,7 @@ const Resources = () => {
       </Head>
       <main className="dark:bg-slate-600 min-h-screen">
         <h1 className="sr-only">
-          Cottage Home Care Services Resources – Forms, Timesheets, and Internal
-          Documents
+          Cottage Home Care Services – Forms, Timesheets & Internal Documents
         </h1>
 
         <Suspense fallback={<SkeletonLoading />}>

@@ -37,6 +37,9 @@ const ClockInOut = () => {
             <h1 className="text-lg lg:text-2xl  font-semibold dark:text-gray-100">
               Clock-In Instructions (Cottage):
             </h1>
+            <h2 className="sr-only">
+              Clock In and Out for Cottage Caregivers – Access Portal
+            </h2>
 
             <ul className="list-decimal mt-2 ml-4 space-y-1 xl:text-lg font-medium dark:text-gray-100">
               <li>
@@ -113,9 +116,9 @@ const ClockInOut = () => {
             </ul>
           </div>
           <div>
-            <h1 className="text-lg lg:text-2xl  font-semibold dark:text-gray-100">
+            <p className="text-lg lg:text-2xl  font-semibold dark:text-gray-100">
               Clock-Out Instructions (Celestial):
-            </h1>
+            </p>
 
             <ul className="list-decimal mt-2 ml-4 space-y-1 xl:text-lg font-medium dark:text-gray-100">
               <li>

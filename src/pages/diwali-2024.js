@@ -27,6 +27,9 @@ const diwali2024 = () => {
                 Diwali 2024 - Liberty Avenue Celebration
               </span>
             </h1>
+            <h2 className="sr-only">
+              Diwali 2024 Celebration at Cottage Home Care
+            </h2>
           </div>
           <div className="diwali-2024  md:hidden block">
             <p className=" pt-[30vh] text-center text-white  text-2xl md:text-5xl font-semibold league-spartan">

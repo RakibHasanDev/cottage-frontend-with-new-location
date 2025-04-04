@@ -1,3 +1,4 @@
+import GalleryImage from "@/components/GalleryImage/GalleryImage";
 import Head from "next/head";
 import React from "react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -33,7 +34,7 @@ const schoolSupply = () => {
         />
         <meta
           property="og:image"
-          content="https://www.cottagehomecare.com/assets/new-school-giveaway/img11.jpg"
+          content="https://www.cottagehomecare.com/assets/new-school-giveaway/img11.webp"
         />
 
         {/* Twitter */}
@@ -48,7 +49,7 @@ const schoolSupply = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.cottagehomecare.com/assets/new-school-giveaway/img11.jpg"
+          content="https://www.cottagehomecare.com/assets/new-school-giveaway/img11.webp"
         />
         <link
           rel="canonical"
@@ -79,6 +80,10 @@ const schoolSupply = () => {
               {" "}
               School Supplies Giveaway{" "}
             </p>
+            <h2 className="sr-only">
+              Toys Giveaway Event – Cottage Home Care Community Outreach
+            </h2>
+
             <div className="flex justify-center ">
               <hr className="bg-[#00A6B2] px-5 md:mt-5 mt-2 py-[1px] w-[100px]" />
             </div>
@@ -90,60 +95,44 @@ const schoolSupply = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img11.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img11.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img11.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%]  center shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-2.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-2.jpg"}
-                      alt="img2"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    ></img>
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-2.webp"}
+                  alt="img2"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                ></GalleryImage>
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-3.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-3.jpg"}
-                      alt="img3"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-3.webp"}
+                  alt="img3"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-4.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-4.jpg"}
-                      alt="school supply"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-4.webp"}
+                  alt="school supply"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
 
@@ -153,75 +142,55 @@ const schoolSupply = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-5.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-5.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-5.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
+                />
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
                 data-aos="fade-left"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-8.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-8.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-8.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-up"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-7.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-7.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-7.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
                 data-aos="fade-down"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-6.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-6.jpg"}
-                      alt="img-1"
-                      className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-6.webp"}
+                  alt="img-1"
+                  className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-10.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-10.jpg"}
-                      alt="img-1"
-                      className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-10.webp"}
+                  alt="img-1"
+                  className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
           </div>
@@ -232,60 +201,44 @@ const schoolSupply = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img11.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img11.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img11.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-12.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-12.jpg"}
-                      alt="img2"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    ></img>
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-12.webp"}
+                  alt="img2"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                ></GalleryImage>
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-right"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-13.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-13.jpg"}
-                      alt="img3"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-13.webp"}
+                  alt="img3"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2]  object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-14.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-14.jpg"}
-                      alt="cottage school supply giveaway"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-14.webp"}
+                  alt="cottage school supply giveaway"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
 
@@ -295,75 +248,55 @@ const schoolSupply = () => {
                 data-aos="fade-down"
                 data-aos-duration="1000"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-16.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-16.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-16.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
                 data-aos="fade-left"
                 data-aos-duration="1200"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-17.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-17.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-17.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer  "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
                 data-aos="fade-up"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-15.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-15.jpg"}
-                      alt="img-1"
-                      className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-15.webp"}
+                  alt="img-1"
+                  className="w-full h-[100%] object-cover custom-zoom center shadow-md border-[1px] border-[#00A6B2] cursor-pointer "
+                />
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
                 data-aos="fade-down"
                 data-aos-duration="1400"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-13.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-13.jpg"}
-                      alt="img-1"
-                      className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-13.webp"}
+                  alt="img-1"
+                  className="w-full  h-[100%] shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
                 data-aos="fade-up"
                 data-aos-duration="1600"
               >
-                <PhotoProvider>
-                  <PhotoView src={"/assets/new-school-giveaway/img-19.jpg"}>
-                    <img
-                      src={"/assets/new-school-giveaway/img-19.jpg"}
-                      alt="img-1"
-                      className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
-                    />
-                  </PhotoView>
-                </PhotoProvider>
+                <GalleryImage
+                  src={"/assets/new-school-giveaway/img-19.webp"}
+                  alt="img-1"
+                  className=" h-[100%] w-full shadow-md border-[1px] border-[#00A6B2] cursor-pointer object-cover custom-zoom"
+                />
               </div>
             </div>
           </div>

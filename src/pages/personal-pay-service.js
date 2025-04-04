@@ -206,9 +206,9 @@ const personalPayService = () => {
             <div className="md:col-span-2  ">
               <div className="bg-[#F8F9FA]  rounded-md py-8 dark:bg-slate-800">
                 <div className="w-[90%] mx-auto">
-                  <p className="txt-lg md:text-2xl font-semibold dark:text-gray-100 league-spartan">
+                  <h2 className="txt-lg md:text-2xl font-semibold dark:text-gray-100 league-spartan">
                     All Services
-                  </p>
+                  </h2>
 
                   <div className="mt-3 nhtd-section league-spartan">
                     <ServicesComponent />

@@ -74,8 +74,9 @@ const Blog = () => {
         <title>Blog - Cottage Home Care Services</title>
         <meta
           name="description"
-          content="Stay informed with the latest news, trends, and insights in the home care industry through our Cottage Home Care blog. Explore expert tips on caregiving, health and wellness, and senior care, along with success stories from our team and clients. Our blog is your go-to resource for understanding the importance of compassionate home care and staying connected to industry developments."
+          content="Get tips on caregiving, wellness, and senior care with Cottage Home Care’s blog. Stay informed, inspired, and connected to the industry."
         />
+
         <meta
           name="keywords"
           content="home care blog, caregiving tips, senior care insights, health and wellness blog, Cottage Home Care news, home care industry updates, caregiver resources, home care trends, compassionate care stories, Cottage Home Care blog articles"
@@ -109,6 +110,9 @@ const Blog = () => {
               <h1 className="text-2xl lg:text-4xl font-bold  league-spartan ">
                 Cottage Care Blog
               </h1>
+              <h2 className="sr-only">
+                Cottage Blog – Caregiving Tips, Health & Wellness Stories
+              </h2>
 
               <div className=" flex items-center text-lg gap-1 font-semibold">
                 <Link

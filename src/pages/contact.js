@@ -172,9 +172,11 @@ const Contacts = () => {
         {/* ✅ Set Canonical to Prevent Duplicate Canonical Issues */}
 
         <h1 className="sr-only">
-          Contact Cottage Home Care Services – Locations, Phone, Email, and
-          Social Media
+          Contact Cottage Home Care Services – Locations, Phone, Email & Socials
         </h1>
+        <h2 className="sr-only">
+          Contact Cottage Home Care for Questions or Support
+        </h2>
 
         <LazyBanner />
 

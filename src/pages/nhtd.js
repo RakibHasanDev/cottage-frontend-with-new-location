@@ -255,9 +255,9 @@ const NHTD = () => {
             <div className="md:col-span-2 ">
               <div className="bg-[#F8F9FA] rounded-md py-8 dark:bg-slate-800">
                 <div className="w-[90%] mx-auto league-spartan">
-                  <h3 className="txt-lg md:text-2xl font-semibold dark:text-gray-100">
+                  <h2 className="txt-lg md:text-2xl font-semibold dark:text-gray-100">
                     All Services
-                  </h3>
+                  </h2>
 
                   <div className="mt-3 nhtd-section">
                     <ServicesComponent />
@@ -536,9 +536,8 @@ const NHTD = () => {
                   rel="nofollow"
                   className="text-blue-500 hover:underline"
                 >
-                  Regional Resource Development Center (RRDC)
+                  Regional Resource Development Center (RRDC).
                 </Link>
-                .
               </li>
               <li>
                 <strong>For Community Residents:</strong> Contact your local

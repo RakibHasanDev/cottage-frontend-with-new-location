@@ -96,6 +96,9 @@ const HelpDesk = () => {
           <h1 className="text-center w-full h-full flex justify-center items-center text-white text-3xl md:text-3xl xl:text-5xl font-bold text-shadow league-spartan">
             Help Desk
           </h1>
+          <h2 className="sr-only">
+            Help Desk – Paystubs, PTO, Clock In/Out, and Support
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-3 mx-auto w-[95%] md:w-[90%] 2xl:w-[75%]  py-6  gap-10 ">
@@ -105,13 +108,13 @@ const HelpDesk = () => {
                 style={{ boxShadow: "0 0 10px 3px rgba(0, 0, 0, 0.3)" }}
                 className=" rounded-lg py-10 bg-hov3 stuff-div dark:bg-slate-800 "
               >
-                <h1 className="text-3xl md:text-5xl flex justify-center items-center w-20 md:w-[90px] h-20 md:h-[90px]  mx-auto rounded-full bg-[#00A6B2] text-white stuff-icon">
+                <h5 className="text-3xl md:text-5xl flex justify-center items-center w-20 md:w-[90px] h-20 md:h-[90px]  mx-auto rounded-full bg-[#00A6B2] text-white stuff-icon">
                   {stuff?.icon}
-                </h1>
+                </h5>
 
-                <h1 className="text-center mt-5 font-semibold text-xl md:text-2xl dark:text-gray-100 league-spartan">
+                <h6 className="text-center mt-5 font-semibold text-xl md:text-2xl dark:text-gray-100 league-spartan">
                   {stuff?.name}
-                </h1>
+                </h6>
 
                 <p className="text-center mt-2 md:text-lg 2xl:text-xl dark:text-gray-100 league-spartan font-semibold">
                   {stuff?.description}
