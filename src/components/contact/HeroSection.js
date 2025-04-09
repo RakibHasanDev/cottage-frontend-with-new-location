@@ -2,6 +2,7 @@ import React, { Suspense, useEffect } from "react";
 import callReader from "../../assets/social-media-lottie/call.json";
 import { useInView } from "react-intersection-observer";
 import IconLoading from "../shared/IconLoading";
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 const HeroSection = () => {
   const Lottie = React.lazy(() => import("lottie-react"));
@@ -52,6 +53,7 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
+      <BannerWithBreadcrumbs title="Contact" />
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
 
@@ -258,7 +259,11 @@ const Faqs = () => {
       </Head>
 
       <main className="min-h-screen dark:bg-slate-600 bg-blue-50">
-        <div className="relative bg-cover bg-center text-center h-[40vh] md:min-h-[82vh] faqs-Banner "></div>
+        <div className="relative bg-cover bg-center text-center h-[40vh] md:min-h-[82vh] faqs-Banner ">
+          <div className="absolute bottom-5 md:bottom-10 left-4">
+            <BannerWithBreadcrumbs title="Faqs" />
+          </div>
+        </div>
 
         <div className="">
           <h1 className=" mt-5 md:mt-8 text-center font-bold text-2xl md:text-2xl  2xl:text-4xl  dark:text-gray-100 text-[#00A6B2] league-spartan">

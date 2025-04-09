@@ -415,7 +415,7 @@ focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:te
 
       {!showPopup && !minimize && (
         <div
-          className="fixed bottom-0 left-0 mb-[40vh] lg:z-50 z-30 flex items-center"
+          className="fixed bottom-0 left-0 mb-[30vh] lg:z-50 z-30 flex items-center"
           onClick={() => setShowPopup(true)}
         >
           {/* Eligibility Button */}

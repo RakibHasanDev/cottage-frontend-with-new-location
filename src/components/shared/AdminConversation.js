@@ -268,6 +268,10 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
                 rows={2}
                 placeholder="Type Your Message"
                 className="w-full px-4 py-3 border pr-16 rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-100"
+                onInput={(e) => {
+                  e.target.style.height = "auto";
+                  e.target.style.height = `${e.target.scrollHeight}px`;
+                }}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && !e.shiftKey) {
                     e.preventDefault();

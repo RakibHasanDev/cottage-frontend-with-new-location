@@ -9,6 +9,7 @@ import Link from "next/link";
 import Head from "next/head";
 import ServicesComponent from "@/components/nhtd/ServicesComponent";
 import Image from "next/image";
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 const NHTD = () => {
   const [showModal, setShowModal] = useState(false);
@@ -138,20 +139,21 @@ const NHTD = () => {
   ];
 
   // ✅ Preload Hero Images for Improved LCP Performance
-  // const preloadLinks = [
-  //   {
-  //     href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_2580/v1739904083/cvy7kdo0ixxwltvunnam.webp",
-  //     as: "image",
-  //     type: "image/webp",
-  //     fetchPriority: "high",
-  //   },
-  //   {
-  //     href: "https://res.cloudinary.com/di3wwp9s0/image/upload/q_auto:best,f_auto,w_1080/v1739904168/ayaemn0p3ldnjpq6bmau.webp",
-  //     as: "image",
-  //     type: "image/webp",
-  //     fetchPriority: "high",
-  //   },
-  // ];
+  const preloadLinks = [
+    {
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710684/Website%20Hero%20Images/Cottage-Home-Care-Slider-1.webp",
+      // ✅ Matches first large image
+      as: "image",
+      type: "image/webp",
+      fetchPriority: "high",
+    },
+    {
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710747/Website%20Hero%20Images/cottage-home-care-slider-1-sm.webp", // ✅ Matches first small image
+      as: "image",
+      type: "image/webp",
+      fetchPriority: "high",
+    },
+  ];
 
   return (
     <>
@@ -221,8 +223,8 @@ const NHTD = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-[#00A6B2]/10 to-[#00A6B2]/10"></div>
 
           {/* Text Content */}
-          <div className="relative   h-[40vh] w-full ">
-            <h1 className="ml-5 md:ml-0 text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[10vh] mb-5 font-bold text-shadow text-center md:max-w-md lg:ml-[5%]">
+          <div className="relative  h-full w-full ">
+            <h1 className="ml-5 md:ml-0 text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[10vh] mb-5 font-bold text-shadow text-center md:max-w-md lg:ml-[10%]">
               NHTD
               <br />
               <span className="mt-3 block text-3xl md:text-4xl font-bold">
@@ -233,13 +235,16 @@ const NHTD = () => {
               </span>
             </h1>
 
-            <div className="flex justify-center pl-5 my-2 md:max-w-md lg:ml-[5%]">
+            <div className="flex justify-center pl-5 my-2 md:max-w-md lg:ml-[10%]">
               <Link
                 href="/contact"
                 className="cursor-pointer md:text-lg font-medium md:font-semibold px-2.5 py-1.5 md:px-4 border-b-4 border-r-4 border-white md:py-3 bg-[#00A6B2] text-white shadow-md rounded-md text-base "
               >
                 Contact Us
               </Link>
+            </div>
+            <div className="lg:-mt-5">
+              <BannerWithBreadcrumbs title="NHTD" />
             </div>
           </div>
         </div>

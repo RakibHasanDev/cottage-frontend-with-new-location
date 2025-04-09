@@ -9,6 +9,11 @@ import OverlayLoading from "@/components/shared/OverlayLoading";
 import slugify from "slugify";
 
 const AddBlog = () => {
+  const [titleCharCount, setTitleCharCount] = useState(0);
+  const [metaDescCharCount, setMetaDescCharCount] = useState(0);
+  const [titleWarningMessage, setTitleWarningMessage] = useState("");
+  const [metaDescWarning, setMetaDescWarning] = useState(false);
+
   const [loading, setLoading] = useState(false);
   const [paragraphs, setParagraphs] = useState([
     { title: "", description: "" },
@@ -44,6 +49,11 @@ const AddBlog = () => {
 
     loadCloudinaryWidget();
   }, []);
+
+  const preserveLineBreaks = (html) => {
+    // This replaces newlines with <br/> without touching inside HTML tags
+    return html.replace(/(?<!<\/?[^>]+) *\n/g, "<br/>");
+  };
 
   // ✅ Handle Cloudinary Image Upload (EXACTLY LIKE EmployeeForm)
   const handleImageUpload = () => {
@@ -93,13 +103,14 @@ const AddBlog = () => {
     const blog = {
       title: data.title,
       slug: slug,
+      metaDescription: data.metaDescription,
       keywords: data.keywords.split(",").map((kw) => kw.trim()),
       category: data.category,
       newDate: new Date().toISOString(),
       img: imageUrl,
       description: paragraphs.map((_, index) => ({
         sub_title: data[`title${index + 1}`],
-        content: data[`description${index + 1}`].replace(/\n/g, "<br/>"),
+        content: preserveLineBreaks(data[`description${index + 1}`]),
       })),
     };
 
@@ -153,13 +164,21 @@ const AddBlog = () => {
           <div className="w-full" data-aos="fade-up" data-aos-duration="2000">
             <form
               onSubmit={handleSubmit(submitHandler)}
-              className="max-w-xl md:max-w-3xl ml-auto bg-gray-50 p-8 rounded-md shadow-xl dark:bg-slate-600"
+              className="max-w-xl md:max-w-[90%] ml-auto bg-gray-50 p-8 rounded-md shadow-xl dark:bg-slate-600"
             >
-              <h1 className="text-2xl text-gray-600 text-center Poppins font-semibold dark:text-gray-100">
+              <h1 className="text-2xl text-gray-600 text-center Poppins font-semibold dark:text-gray-100 ">
                 Add A Blog
               </h1>
+              <p className=" my-2 border-2 p-1 dark:text-gray-100">
+                Add Title:
+                {`use h3, h4, h5 for adding Title`}
+              </p>
+              <p className="my-2 border-2 p-1 dark:text-gray-100">
+                Ancor :
+                {` <a href="your herf" target="_blank" rel="noopener noreferrer" >your text</a>`}
+              </p>
 
-              <div className="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+              <div className="grid grid-cols-1 gap-6 mt-4 ">
                 <div className="space-y-0.5 text-sm">
                   <label htmlFor="title" className="block dark:text-gray-200">
                     Title
@@ -169,8 +188,41 @@ const AddBlog = () => {
                     {...register("title", { required: "Title is required" })}
                     id="title"
                     placeholder="Title"
-                    className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
+                    onChange={(e) => {
+                      const value = e.target.value;
+                      setValue("title", value);
+                      setTitleCharCount(value.length);
+
+                      if (value.length > 60 && /\btitle\b/i.test(value)) {
+                        setTitleWarningMessage(
+                          "Avoid using 'title' and stay under 60 characters."
+                        );
+                      } else if (value.length > 60) {
+                        setTitleWarningMessage(
+                          "Title must be under 60 characters."
+                        );
+                      } else if (/\btitle\b/i.test(value)) {
+                        setTitleWarningMessage(
+                          "Avoid using the word 'title' in your title."
+                        );
+                      } else {
+                        setTitleWarningMessage("");
+                      }
+                    }}
+                    className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
+                      titleWarningMessage ? "border-red-500" : ""
+                    }`}
                   />
+                  <div className="flex justify-between text-xs mt-1">
+                    <span className="text-red-500">{titleWarningMessage}</span>
+                    <span
+                      className={`${
+                        titleCharCount > 60 ? "text-red-500" : "text-gray-500"
+                      } ml-auto`}
+                    >
+                      {titleCharCount}/60
+                    </span>
+                  </div>
                   {errors.title && (
                     <p className="text-red-600">{errors.title.message}</p>
                   )}
@@ -226,6 +278,75 @@ const AddBlog = () => {
               </div>
 
               <hr className="my-3" />
+              <div className="space-y-0.5 text-sm">
+                <label
+                  htmlFor="metaDescription"
+                  className="block dark:text-gray-200"
+                >
+                  Meta Description
+                </label>
+                <textarea
+                  type="text"
+                  {...register("metaDescription", {
+                    required: "Meta description is required",
+                  })}
+                  id="metaDescription"
+                  raw={5}
+                  placeholder="Meta Description"
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setValue("metaDescription", value);
+                    setMetaDescCharCount(value.length);
+                    setMetaDescWarning(value.length > 155);
+                  }}
+                  className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
+                    metaDescWarning ? "border-red-500" : ""
+                  }`}
+                />
+                <div className="flex justify-between text-xs mt-1">
+                  <span
+                    className={`${
+                      metaDescWarning ? "text-red-500" : "text-gray-500"
+                    }`}
+                  >
+                    {metaDescWarning
+                      ? "Meta description should be 155 characters or less."
+                      : ""}
+                  </span>
+                  <span
+                    className={`${
+                      metaDescCharCount > 155 ? "text-red-500" : "text-gray-500"
+                    } ml-auto`}
+                  >
+                    {metaDescCharCount}/155
+                  </span>
+                </div>
+                {errors.metaDescription && (
+                  <p className="text-red-600">
+                    {errors.metaDescription.message}
+                  </p>
+                )}
+              </div>
+              <hr className="my-3" />
+              <div className="space-y-0.5 text-sm mt-5">
+                <label className="dark:text-gray-100 " htmlFor="keywords">
+                  Keywords (comma separated)
+                </label>
+                <textarea
+                  {...register("keywords", {
+                    required: "Keywords is required",
+                  })}
+                  id={`keywords`}
+                  rows={3}
+                  placeholder="e.g. sleep, senior care, night routine"
+                  className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
+                />
+                {errors.keywords && (
+                  <p className="text-red-600">{errors.keywords.message}</p>
+                )}
+              </div>
+
+              <hr className="my-3" />
 
               {paragraphs?.map((paragraph, index) => (
                 <div key={index} className="mb-4">
@@ -252,48 +373,21 @@ const AddBlog = () => {
                       id={`description${index + 1}`}
                       rows={5}
                       placeholder={`Paragraph-${index + 1} Description`}
-                      className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
+                      onInput={(e) => {
+                        e.target.style.height = "auto";
+                        e.target.style.height = `${e.target.scrollHeight}px`;
+                      }}
+                      className="resize-none overflow-hidden w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
                     />
+
                     {errors[`description${index + 1}`] && (
                       <p className="text-red-600">
                         {errors[`description${index + 1}`].message}
                       </p>
                     )}
                   </div>
-
-                  <button
-                    type="button"
-                    onClick={() => removeParagraph(index)}
-                    className="mt-2 bg-red-500 text-white py-1 px-3 rounded"
-                  >
-                    Remove
-                  </button>
                 </div>
               ))}
-
-              <button
-                type="button"
-                onClick={addParagraph}
-                className="mt-4 bg-blue-500 text-white py-2 px-4 rounded"
-              >
-                Add Paragraph
-              </button>
-
-              <div className="space-y-0.5 text-sm mt-5">
-                <label htmlFor="keywords">Keywords (comma separated)</label>
-                <textarea
-                  {...register("keywords", {
-                    required: "Keywords is required",
-                  })}
-                  id={`keywords`}
-                  rows={3}
-                  placeholder="e.g. sleep, senior care, night routine"
-                  className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
-                />
-                {errors.keywords && (
-                  <p className="text-red-600">{errors.keywords.message}</p>
-                )}
-              </div>
 
               <button
                 type="submit"

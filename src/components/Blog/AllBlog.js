@@ -175,19 +175,19 @@ const AllBlog = ({
               )}
 
               <select
+                value={size}
                 className="ml-1 2xl:ml-2 dark:bg-gray-400 dark:text-gray-100 bg-white text-gray-500 border-[1px]
-                   border-gray-300 rounded-md focus:outline-none px-1 text-xs 2xl:text-sm leading-tight font-medium hidden md:block"
+    border-gray-300 rounded-md focus:outline-none px-1 text-xs 2xl:text-sm leading-tight font-medium hidden md:block"
                 onChange={(event) => {
-                  setSize(event.target.value);
+                  setSize(Number(event.target.value)); // convert string to number
+                  setPage(0); // reset page to 0 when page size changes
+                  window.scrollTo(0, 0);
                 }}
               >
-                <option disabled className="hidden">
-                  {`Page Size ${size}`}
-                </option>
-                <option value="6">Page Size 6</option>
-                <option value="10">Page Size 10</option>
-                <option value="15">Page Size 15</option>
-                <option value="20">Page Size 20</option>
+                <option value={6}>Page Size 6</option>
+                <option value={10}>Page Size 10</option>
+                <option value={15}>Page Size 15</option>
+                <option value={20}>Page Size 20</option>
               </select>
 
               <button

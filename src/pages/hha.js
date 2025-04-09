@@ -8,6 +8,7 @@ import Link from "next/link";
 import HhaRequirement from "@/components/hha/HhaRequirement";
 import InsuranceCarousel from "@/components/hha/InsuranceCarousel";
 import Head from "next/head";
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 const hha = () => {
   const requirements = [
@@ -244,6 +245,7 @@ const hha = () => {
               Contact Us
             </Link>
           </div>
+          <BannerWithBreadcrumbs title="HHA" />
         </div>
 
         {/* new section start "Eligible for hha/pca"  */}

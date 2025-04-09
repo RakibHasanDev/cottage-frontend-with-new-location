@@ -4,6 +4,7 @@ import { MdOutlinePersonalInjury } from "react-icons/md";
 import Link from "next/link";
 import LazyLoadVideo from "@/components/shared/LazyLoadVideo";
 import Head from "next/head";
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 const Cdpap = () => {
   const consumer = [
@@ -207,7 +208,7 @@ const Cdpap = () => {
 
       <main className="min-h-screen dark:bg-slate-600">
         <div className="cdpapService-banner min-h-[40vh]">
-          <div className="pt-[5vh] md:pt-[50px] md:max-w-lg lg:ml-[3%] 2xl:ml-[1%] ">
+          <div className="pt-[5vh] md:pt-[50px] md:max-w-lg lg:ml-[3%] 2xl:ml-[5%] ">
             <div className="space-y-2 pl-2 md:pl-0 league-spartan ">
               <h1 className="text-center text-2xl xl:text-3xl 2xl:text-4xl text-white font-bold text-shadow">
                 CDPAP
@@ -223,7 +224,7 @@ const Cdpap = () => {
               </p>
             </div>
           </div>
-          <div className="flex justify-center md:justify-start pl-2 my-2 lg:ml-[17%] 2xl:ml-[9%] md:mt-5">
+          <div className="flex justify-center md:justify-start pl-2 my-2 lg:ml-[17%] 2xl:ml-[14%] md:mt-5">
             <Link
               href="/contact"
               className="cursor-pointer 2xl:text-lg font-medium md:font-semibold px-2.5 py-1.5 2xl:px-4 2xl:py-3 bg-[#00A6B2] border-b-4 border-r-4 border-white text-white shadow-md rounded-md text-base league-spartan"
@@ -231,6 +232,7 @@ const Cdpap = () => {
               Contact Us
             </Link>
           </div>
+          <BannerWithBreadcrumbs title="CDPAP" />
         </div>
 
         <div

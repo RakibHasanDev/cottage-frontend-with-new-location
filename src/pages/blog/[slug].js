@@ -1,12 +1,9 @@
 import Head from "next/head";
-import ReactLinkify from "react-linkify";
 import Loading from "@/components/shared/Loading";
 import Link from "next/link";
-import { FaCircleUser } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { PiLineVerticalBold } from "react-icons/pi";
-import { Suspense, useContext, useEffect, useState } from "react";
-import SkeletonLoading from "@/components/shared/SkeletonLoading";
-import dynamic from "next/dynamic";
+import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useQuery } from "@tanstack/react-query";
 import toast from "react-hot-toast";
@@ -16,6 +13,19 @@ import { encode } from "html-entities";
 import BlogSidebar from "@/components/Blog/BlogSideBar";
 import Image from "next/image";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { sanitizeAndLinkify } from "@/utils/sanitize";
+
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton,
+  WhatsappShareButton,
+  FacebookIcon,
+  LinkedinIcon,
+  WhatsappIcon,
+} from "react-share";
+import { FiCopy } from "react-icons/fi";
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 export async function getStaticPaths() {
   try {
@@ -61,14 +71,21 @@ export async function getStaticProps({ params }) {
       console.log("Blog not found, returning 404");
       return { notFound: true };
     }
+    const metaDescription =
+      blog?.metaDescription && blog?.metaDescription.length > 0
+        ? blog.metaDescription
+        : encode(
+            blog?.description?.map((desc) => desc?.content).join(" ") || ""
+          ).substring(0, 150);
 
-    // ✅ Generate metadata at build time
-    const raw = blog?.description?.map((desc) => desc?.content).join(" ");
-    const encoded = encode(raw);
-    const metaDescription = encoded.substring(0, 150);
+    const metaKeywords =
+      blog?.keywords && blog?.keywords.length > 0
+        ? Array.isArray(blog.keywords)
+          ? blog.keywords.join(", ")
+          : blog.keywords
+        : `${blog?.title}, home care blog, caregiving tips, senior care insights, health & wellness, Cottage Home Care blog, home care news`;
 
-    const metaKeywords = `${blog?.title}, home care blog, caregiving tips, senior care insights, health & wellness, Cottage Home Care blog, home care news`;
-    const metaTitle = `${blog?.title} - Cottage Home Care Services`;
+    const metaTitle = `${blog?.title}`;
 
     return {
       props: { blog, metaDescription, metaKeywords, metaTitle },
@@ -86,7 +103,7 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
   const { isAdmin, isAdminLoading } = useAdmin(user?.email);
   const [imageSrc, setImageSrc] = useState(""); // Dynamically choose image
 
-  // console.log(blog?.kywords, blog);
+  // console.log(blog?.keywords, blog);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -183,18 +200,6 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
     }
   };
 
-  const customComponentDecorator = (href, text, key) => (
-    <a
-      href={href}
-      key={key}
-      style={{ color: "blue" }}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {text}
-    </a>
-  );
-
   <p className="text-[#8c8a98] font-semibold dark:text-gray-100 text-xs md:text-base">
     {formattedDate}
   </p>;
@@ -214,7 +219,7 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
         <meta property="og:image" content={blog?.img} />
         <meta
           property="og:url"
-          content={`https://cottagehomecare.com/blogs/${blog?.slug}`}
+          content={`https://cottagehomecare.com/blog/${blog?.slug}`}
         />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={blog?.date} />
@@ -222,6 +227,11 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
         <meta name="twitter:title" content={blog?.title} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={blog?.img} />
+
+        <link
+          rel="canonical"
+          href={`https://cottagehomecare.com/blog/${blog?.slug}/`}
+        />
 
         {imageSrc && (
           <link rel="preload" href={imageSrc} as="image" fetchPriority="high" />
@@ -251,26 +261,13 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
 
           {/* Text Content */}
           <div className="relative   h-[40vh] w-full ">
-            <div className="text-white flex flex-col md:flex-row md:w-[90%] 2xl:w-[70%] lg:w-[70%] mx-auto gap-y-3 md:gap-y-0 h-full items-center md:justify-between justify-end poppins text-shadow pb-5 md:pb-0">
-              <h1 className="text-2xl lg:text-4xl font-bold  league-spartan ">
+            <div className="text-white flex h-[80%] items-center   poppins text-shadow pb-5 md:pb-0">
+              <h1 className="text-2xl lg:text-4xl font-bold  league-spartan ml-5">
                 Cottage Care Blog
               </h1>
-
-              <div className=" flex items-center text-lg gap-1 font-semibold">
-                <Link
-                  href="/"
-                  className="blog-underline-animation  league-spartan text-xl "
-                >
-                  Home
-                </Link>
-                <MdOutlineArrowForwardIos className="text-lg font-bold" />
-                <Link
-                  href="/blog"
-                  className="blog-underline-animation   league-spartan text-xl"
-                >
-                  Blog
-                </Link>
-              </div>
+            </div>
+            <div className=" absolute bottom-10  left-0">
+              <BannerWithBreadcrumbs title="NHTD" />
             </div>
           </div>
         </div>
@@ -282,20 +279,27 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
               <div className="md:grid grid-cols-8 gap-7  source-sans">
                 <div className="lg:col-span-5 md:col-span-4">
                   <div className=" border-b-[1px] border-dashed pb-2 border-gray-400 ">
-                    <h1 className=" text-lg  md:text-2xl  font-semibold  mt-5 md:mt-8 custom-font  text-gray-700 dark:text-gray-100 league-spartan">
+                    <h2 className=" text-lg  md:text-2xl  font-semibold  mt-5 md:mt-8 custom-font  text-gray-700 dark:text-gray-100 league-spartan">
                       {blog?.title}
-                    </h1>
+                    </h2>
                   </div>
 
                   <div className="mt-3 flex items-center gap-0 md:gap-3 ">
-                    <div className="flex items-center  md:gap-2 gap-1 open-sans">
-                      <p>
-                        <FaCircleUser className="text-2xl md:text-xl lg:text-2xl xl:text-4xl text-gray-400 dark:text-gray-200" />
-                      </p>
-                      <p className="text-gray-500 font-semibold dark:text-gray-100 text-xs md:text-base md:hidden block lg:block">
+                    <div className="flex items-center  md:gap-2 gap-0.5 open-sans">
+                      <div className="bg-white w-6 h-6 md:w-10 md:h-10 rounded-full border border-[#00A6B2] ">
+                        <img
+                          src="/assets/cottage-home-care-logo-blog.webp"
+                          alt="cottage home care logo"
+                          width={20}
+                          height={20}
+                          className="rounded-full p-1 w-6 h-6  md:w-10 md:h-10  "
+                        />
+                      </div>
+
+                      <p className="text-gray-500 font-semibold dark:text-gray-100 text-[11px]  md:text-base md:hidden block lg:block">
                         By{" "}
                         <span className="text-gray-800 dark:text-gray-300">
-                          Cottage Home Care
+                          Cottage Home Care Services
                         </span>{" "}
                       </p>
                     </div>
@@ -306,7 +310,7 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
 
                     <div>
                       {blog?.newDate ? (
-                        <p className="  text-[#8c8a98]  font-semibold dark:text-gray-100 text-xs md:text-base">
+                        <p className="  text-[#8c8a98]  font-semibold dark:text-gray-100 text-[11px]  md:text-base">
                           {formattedDate}
                         </p>
                       ) : (
@@ -321,7 +325,7 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
                     </p>
 
                     <div>
-                      <p className="flex font-semibold text-gray-500 gap-1 md:gap-2 md:text-base text-xs dark:text-gray-100">
+                      <p className="flex font-semibold text-gray-500 gap-1 md:gap-2 md:text-base text-[11px]  dark:text-gray-100">
                         <span>{comments?.length}</span>
                         <span>
                           {comments?.length > 1 ? "Comments" : "Comment"}
@@ -329,35 +333,83 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
                       </p>
                     </div>
                   </div>
-
-                  <div className="lg:mt-8 mt-5 overflow-hidden 2xl:h-[600px] lg:h-[450px] md:h-[400px] h-[250px]">
+                  <div className="lg:mt-8 mt-5 overflow-hidden aspect-video flex justify-center bg-[#f0f0f0] dark:bg-slate-300">
                     <img
                       src={blog?.img}
-                      alt={`${blog?.title}`}
+                      alt={blog?.title}
+                      width="1280"
+                      height="720"
                       className="w-full h-full object-cover"
                     />
                   </div>
 
                   <div className="lg:mt-10 mt-3 text-[16px] leading-relaxed open-sans">
                     {blog?.description?.map((des, index) => (
-                      <div key={index} className="mt-5  px-2 md:px-0">
-                        <h2 className="text-xl league-spartan font-semibold dark:text-gray-100">
+                      <div key={index} className="mt-5 px-2 md:px-0">
+                        <h1 className="text-xl league-spartan font-semibold dark:text-gray-100">
                           {des?.sub_title}
-                        </h2>
-                        <ReactLinkify
-                          componentDecorator={customComponentDecorator}
-                        >
-                          {des?.content?.split("<br/>").map((line, i) => (
-                            <span
-                              key={i}
-                              className="text-justify dark:text-gray-100 block"
-                            >
-                              {line}
-                            </span>
-                          ))}
-                        </ReactLinkify>
+                        </h1>
+
+                        {/* ✅ Sanitize + render raw HTML content safely */}
+                        <div
+                          className="prose dark:prose-invert max-w-none dark:text-gray-100"
+                          dangerouslySetInnerHTML={{
+                            __html: sanitizeAndLinkify(des?.content || ""),
+                          }}
+                        />
                       </div>
                     ))}
+                  </div>
+                  <div className="flex items-center gap-4 flex-wrap md:flex-nowrap my-3">
+                    <p className="font-semibold whitespace-nowrap dark:text-gray-100">
+                      Social Share:
+                    </p>
+
+                    <div className="flex items-center gap-3">
+                      <FacebookShareButton
+                        url={currentPageUrl}
+                        quote={blog?.title}
+                      >
+                        <FacebookIcon size={30} round />
+                      </FacebookShareButton>
+
+                      <TwitterShareButton url={currentPageUrl}>
+                        <div
+                          style={{
+                            backgroundColor: "#000",
+                            borderRadius: "50%",
+                            padding: "6px",
+                          }}
+                        >
+                          <FaXTwitter color="#fff" size={19} />
+                        </div>
+                      </TwitterShareButton>
+
+                      <LinkedinShareButton
+                        url={currentPageUrl}
+                        title={blog?.title}
+                      >
+                        <LinkedinIcon size={30} round />
+                      </LinkedinShareButton>
+
+                      <WhatsappShareButton
+                        url={currentPageUrl}
+                        title={blog?.title}
+                      >
+                        <WhatsappIcon size={30} round />
+                      </WhatsappShareButton>
+
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText(currentPageUrl);
+                          toast.success("Link copied!"); // optional toast
+                        }}
+                        className="w-[32px] h-[32px] rounded-full bg-gray-300 dark:bg-slate-500 flex dark:text-white items-center justify-center"
+                        title="Copy link"
+                      >
+                        <FiCopy size={14} />
+                      </button>
+                    </div>
                   </div>
                 </div>
 

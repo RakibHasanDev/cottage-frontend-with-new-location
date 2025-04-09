@@ -3056,3 +3056,28 @@ button.slick-arrow.slick-prev::before {
 }
 
 /* popup css end */
+
+/* styles/globals.css */
+.prose h1 {
+  @apply text-3xl font-bold text-gray-900 dark:text-gray-100 my-2 league-spartan;
+}
+.prose h2 {
+  @apply text-2xl font-semibold text-gray-900 dark:text-gray-100 my-2 league-spartan;
+}
+.prose h3 {
+  @apply text-xl font-semibold text-gray-900 dark:text-gray-100 my-2 league-spartan;
+}
+.prose h4 {
+  @apply text-xl font-semibold text-gray-900 dark:text-gray-100 my-2 league-spartan;
+}
+.prose h5 {
+  @apply text-xl font-semibold text-gray-900 dark:text-gray-100 my-2 league-spartan;
+}
+
+.prose a {
+  @apply text-blue-600 hover:underline font-medium;
+}
+
+.prose p {
+  @apply text-black dark:text-gray-100 my-4;
+}

@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 
-import SkeletonLoading from "@/components/shared/SkeletonLoading";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Head from "next/head";
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 const HeroBanner = dynamic(() => import("@/components/pastevent/Hero"), {
   suspense: true,
@@ -11,37 +11,6 @@ const HeroBanner = dynamic(() => import("@/components/pastevent/Hero"), {
 });
 
 const PastEvent = () => {
-  // const pictures = [
-  //   {
-  //     picture: video1,
-  //     height: "560px",
-  //     title: "Phagwah Celebrations",
-  //     link: "https://www.facebook.com/cottageHC/videos/285922064453590",
-  //     id: "little-div",
-  //   },
-  //   {
-  //     picture: video2,
-  //     height: "600px",
-  //     title: "CEO Gifts Staff Mercedes Benz",
-  //     link: "https://www.facebook.com/cottageHC/videos/337247038906085",
-  //     id: "big-div",
-  //   },
-  //   {
-  //     picture: video3,
-  //     height: "560px",
-  //     title: "Mother's Day Luncheon ",
-  //     link: "https://cottagehomecare.com/pastEvent",
-  //     id: "little-div",
-  //   },
-  //   {
-  //     picture: video4,
-  //     height: "600px",
-  //     title: "Dedicated Staff Gifted Lexus ",
-  //     link: "https://fb.watch/rQLDhBWTlY",
-  //     id: "big-div",
-  //   },
-  // ];
-
   const events = [
     {
       img: "/assets/Diwali2024/card-cover.webp",
@@ -65,7 +34,7 @@ const PastEvent = () => {
       path: "toys-giveaway",
       alt: "toys giveaway event 2024",
       width: "720",
-      window: "480",
+      height: "480",
     },
     {
       img: "/assets/christmas-party/christmas-card-cover.webp",
@@ -84,18 +53,6 @@ const PastEvent = () => {
       width: "720",
       height: "528",
     },
-    // {
-    //   img: celebrityBrunch,
-    //   title: "Cottage  Celebrity Brunch",
-    //   path: "celebrity-branch"
-
-    // },
-    // {
-    //   img: motherDay,
-    //   title: "Mother's Day luncheon",
-    //   path: 'mother-day'
-
-    // },
   ];
 
   return (
@@ -125,6 +82,10 @@ const PastEvent = () => {
               data-aos-duration="2000"
             >
               <div className="w-[90%] mx-auto ">
+                <div className="-mt-20">
+                  <BannerWithBreadcrumbs title="Past Event" />
+                </div>
+
                 <div className="rounded-md  mr-auto ">
                   <div className=" pb-8 pt-5 md:mt-0">
                     <h1

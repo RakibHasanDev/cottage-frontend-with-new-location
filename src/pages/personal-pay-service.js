@@ -5,6 +5,7 @@ import PrivatePayFaqs from "@/components/PrivatePay/PrivatePayFaqs";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 const personalPayService = () => {
   const stuffs = [
@@ -180,12 +181,12 @@ const personalPayService = () => {
 
       <main className="min-h-screen dark:bg-gray-600">
         <div className="singleService-banner min-h-[40vh] league-spartan">
-          <h1 className="ml-5 md:ml-0   text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[10vh] mb-5 font-bold text-shadow text-center md:max-w-md  lg:ml-[5%]">
+          <h1 className="ml-5 md:ml-0   text-2xl md:text-xl lg:text-2xl xl:text-4xl text-white pt-[10vh] mb-5 font-bold text-shadow text-center md:max-w-md  lg:ml-[10%]">
             Private Pay
             <p className="mt-1 md:mt-3 ">In</p>
             <p className="mt-1 md:mt-3 ">Cottage Home Care </p>
           </h1>
-          <div className="flex justify-center pl-5 my-2 md:max-w-md lg:ml-[5%]">
+          <div className="flex justify-center pl-5 my-2 md:max-w-md lg:ml-[10%]">
             <Link
               href="/contact"
               className="cursor-pointer  md:text-lg font-medium md:font-semibold px-2.5 py-1.5 md:px-4  border-b-4 border-r-4 border-white md:py-3 bg-[#00A6B2] text-white shadow-md rounded-md text-base league-spartan "
@@ -193,6 +194,7 @@ const personalPayService = () => {
               Contact Us
             </Link>
           </div>
+          <BannerWithBreadcrumbs title="Private Pay" />
         </div>
 
         {/* banner section end  */}

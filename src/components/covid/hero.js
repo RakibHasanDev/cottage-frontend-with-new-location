@@ -1,3 +1,4 @@
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 import Image from "next/image";
 import React from "react";
 
@@ -55,6 +56,9 @@ const Banner = () => {
           w="100"
           h="100"
         />
+      </div>
+      <div className="2xl:-mt-24 md:-mt-16">
+        <BannerWithBreadcrumbs title="Covid 19" />
       </div>
     </div>
   );

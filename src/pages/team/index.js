@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/shared/Loading";
 import Link from "next/link";
 import Head from "next/head";
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 const Team = () => {
   const [rotate, setRotate] = useState(false);
@@ -150,6 +151,9 @@ const Team = () => {
               The Talented People Behind the Success of the Organization
             </h1>
             <hr className="mt-3 border-t-[1px] border-[#00A6B2] w-16 mx-auto pb-6" />
+          </div>
+          <div className="absolute md:left-0 md:top-20 left-[35%] top-[10px]">
+            <BannerWithBreadcrumbs title="Team" />
           </div>
         </div>
 

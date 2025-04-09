@@ -9,6 +9,7 @@ import OverlayLoading from "@/components/shared/OverlayLoading";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
 import dynamic from "next/dynamic";
 import Head from "next/head";
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 const GeneralRequest = dynamic(
   () => import("@/components/helpdesk/generalRequest"),
@@ -93,12 +94,14 @@ const HelpDesk = () => {
         {loading && <OverlayLoading />}
 
         <div className="help-desk-cover">
-          <h1 className="text-center w-full h-full flex justify-center items-center text-white text-3xl md:text-3xl xl:text-5xl font-bold text-shadow league-spartan">
+          <h1 className="text-center w-full h-[75%] flex justify-center items-center text-white text-3xl md:text-3xl xl:text-5xl font-bold text-shadow league-spartan">
             Help Desk
           </h1>
+
           <h2 className="sr-only">
             Help Desk – Paystubs, PTO, Clock In/Out, and Support
           </h2>
+          <BannerWithBreadcrumbs title="Help Desk" />
         </div>
 
         <div className="grid md:grid-cols-3 mx-auto w-[95%] md:w-[90%] 2xl:w-[75%]  py-6  gap-10 ">

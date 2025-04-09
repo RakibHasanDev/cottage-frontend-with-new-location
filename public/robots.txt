@@ -1,49 +1,39 @@
 User-agent: *
 
-# -------------------
-# Disallowed Paths
-# -------------------
-Disallow: /team/*
-Disallow: /blog/*
+# Disallow internal + technical paths
+Disallow: /_next/
 Disallow: /dashboard/
+Disallow: /login/
+Disallow: /register/
+Disallow: /team/*
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.map$
 
-# -------------------
-# Allowed Main Pages
-# -------------------
+# Allow SEO-relevant pages
 Allow: /$
+Allow: /blog/
+Allow: /blog/*
+Allow: /team/$
 Allow: /nhtd/
 Allow: /hha/
-Allow: /personal-pay-service/
 Allow: /cdpap/
+Allow: /personal-pay-service/
 Allow: /contact/
-Allow: /hha-certification/
-Allow: /resources/
 Allow: /help-desk/
 Allow: /covid/
 Allow: /faqs/
 Allow: /past-event/
 Allow: /upcoming-event/
-Allow: /team/$
-Allow: /blog/$
+Allow: /hha-certification/
 Allow: /privacy-policy/
 Allow: /mission-vision/
 Allow: /values/
 Allow: /terms-and-conditions/
 Allow: /disclaimer/
+Allow: /clock-in-out/
 Allow: /sitemap/
 Allow: /sitemap-index.xml
-Allow: /clock-in-out/
 
-# -------------------
-# Re-Allowed Specific Blog Posts
-# -------------------
-Allow: /blog/compassionate-home-care-in-nyc-with-cottage-home-care-services/
-Allow: /blog/hhapca-services-compassionate-home-care-with-cottage-home-care-services/
-Allow: /blog/nhtd-program-personalized-home-care-with-cottage-home-care-services/
-Allow: /blog/five-tips-for-a-restful-night/
-Allow: /blog/nhtd-medicaid-waiver-eligibility-services-and-benefits-for-independent-living/
-
-# -------------------
-# Sitemap
-# -------------------
+# Sitemap for search engines
 Sitemap: https://cottagehomecare.com/sitemap-index.xml

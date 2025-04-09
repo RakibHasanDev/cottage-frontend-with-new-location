@@ -1,3 +1,4 @@
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 import Image from "next/image";
 import React from "react";
 import { FiPhone } from "react-icons/fi";
@@ -13,8 +14,8 @@ const heroSection = () => {
 
   return (
     <div className="relative  h-[82vh] hha-banner">
-      <div className="relative  max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-5/6 lg:items-center lg:px-8 justify-start ml-[3%]">
-        <div className="md:max-w-2xl w-[95%]  sm:text-left mt-[25vh] md:mt-[50vh] hha-banner-shadow md:p-6 p-3 ">
+      <div className="relative   px-4 py-32 sm:px-6 lg:flex lg:h-5/6 lg:items-center lg:px-8 justify-center ml-[3%]">
+        <div className="md:max-w-xl w-[95%]  sm:text-left mt-[25vh] md:mt-[50vh] hha-banner-shadow md:p-6 p-3 ">
           <div className="flex  items-center gap-8 mb-3">
             <h5 className="text-xl md:text-3xl w-[400px] md:w-[600px] font-extrabold sm:text-5xl text-white league-spartan text-shadow">
               <Typewriter
@@ -31,7 +32,7 @@ const heroSection = () => {
             </h5>
           </div>
 
-          <h1 className="mt-4 text-start text-2xl md:text-2xl  2xl:text-4xl sm:leading-relaxed text-white font-medium  text-shadow league-spartan">
+          <h1 className="mt-4 text-start text-2xl md:text-2xl  2xl:text-3xl sm:leading-relaxed text-white font-medium  text-shadow league-spartan">
             Brooklyn Institute of Vocational Training
           </h1>
 
@@ -39,7 +40,7 @@ const heroSection = () => {
 
           <div className="flex items-center md:gap-32 gap-14">
             <div>
-              <p className="mt-3 flex justify-start  items-center gap-2 font-semibold max-w-lg sm:text-xl md:text-3xl sm:leading-relaxed text-white custom-font text-shadow league-spartan ">
+              <p className="mt-2 flex justify-start  items-center gap-2 font-semibold max-w-lg sm:text-xl md:text-3xl sm:leading-relaxed text-white custom-font text-shadow league-spartan ">
                 <FiPhone className="text-shadow" />
                 929-386-0092
               </p>
@@ -66,6 +67,8 @@ const heroSection = () => {
           </div>
         </div>
       </div>
+
+      <BannerWithBreadcrumbs title="hha-certification" />
     </div>
   );
 };

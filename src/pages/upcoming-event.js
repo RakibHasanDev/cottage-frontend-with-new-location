@@ -1,3 +1,4 @@
+import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 import Head from "next/head";
 import React from "react";
 
@@ -64,7 +65,11 @@ const UpcomingEvent = () => {
         />
       </Head>
       <main className="min-h-screen dark:bg-slate-600 bg-[#F5F5F7]">
-        <div className="relative  bg-cover bg-center text-center h-[40vh] md:min-h-[80vh] upcoming-cover "></div>
+        <div className="relative  bg-cover bg-center text-center h-[40vh] md:min-h-[80vh] upcoming-cover ">
+          <div className="absolute bottom-0 lg:bottom-10 left-0">
+            <BannerWithBreadcrumbs title="Upcoming Event" />
+          </div>
+        </div>
 
         <h1 className="md:text-3xl text-lg text-[#00A6B2] font-bold text-center my-5">
           Grand Opening of Cottage Social Adult Day Care – Coming Soon!
