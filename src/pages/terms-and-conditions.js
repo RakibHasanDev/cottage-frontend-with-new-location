@@ -300,7 +300,7 @@ const TermsAndConditions = () => {
           contact us:
         </p>
         <ul>
-          <li>By email: info@cottagehomecare.com</li>
+          <li>By email: {`${"info"}@${"cottagehomecare.com"}`}</li>
           <li>
             By visiting this page on our website:{" "}
             <a

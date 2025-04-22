@@ -472,7 +472,7 @@ const NHTD = () => {
 
                 <Link
                   className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-[280px] rounded-md text-white shadow-md"
-                  href="https://www.health.ny.gov/facilities/long_term_care/nhtd/eligibility.htm"
+                  href="https://www.health.ny.gov/health_care/medicaid/redesign/docs/nhtd_overview.pdf"
                   target="_blank"
                   rel="nofollow"
                 >
@@ -516,7 +516,7 @@ const NHTD = () => {
 
               <Link
                 className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-[290px] rounded-md text-white shadow-md"
-                href="https://www.health.ny.gov/facilities/long_term_care/nhtd/services.htm"
+                href="https://www.health.ny.gov/facilities/long_term_care/nhtd/"
                 target="_blank"
                 rel="nofollow"
               >
@@ -536,7 +536,7 @@ const NHTD = () => {
                 <strong>For Nursing Home Residents:</strong> Speak with a
                 discharge planner who can connect you with the{" "}
                 <Link
-                  href="https://www.health.ny.gov/facilities/long_term_care/nhtd/rrdc.htm"
+                  href="https://www.health.ny.gov/funding/single_source/rrdc.htm"
                   target="_blank"
                   rel="nofollow"
                   className="text-blue-500 hover:underline"
@@ -556,7 +556,7 @@ const NHTD = () => {
 
             <Link
               className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-56 rounded-md text-white shadow-md"
-              href="https://www.health.ny.gov/facilities/long_term_care/nhtd/rrdc.htm"
+              href="https://www.health.ny.gov/facilities/long_term_care/regional_resource_development_centers.htm"
               target="_blank"
               rel="nofollow"
             >
@@ -564,7 +564,39 @@ const NHTD = () => {
               <span className="">Find an RRDC Near You</span>
             </Link>
           </div>
-          <div className="my-5">
+          <div className="">
+            <p className="sr-only">
+              If you&apos;re searching for long-term care options that support
+              independent living, understanding the NHTD meaning is a great
+              place to start. The Nursing Home Transition and Diversion (NHTD)
+              program is a Medicaid waiver initiative that helps individuals
+              with physical disabilities and seniors transition from nursing
+              homes or avoid institutional care altogether. So, what is NHTD
+              exactly? It’s a person-centered, community-based program that
+              offers support services allowing eligible participants to remain
+              in their homes or other community settings. Unlike traditional
+              care models that often place individuals in institutional
+              environments, the NHTD waiver promotes autonomy and a higher
+              quality of life. NHTD waiver services include service
+              coordination, home and community support, structured day programs,
+              and assistive technology, among others. These services are
+              customized based on each participant&apos;s unique needs and
+              goals, aiming to support health, safety, and community
+              integration. The program not only reduces the emotional and
+              financial burden of nursing home care but also empowers
+              participants to be more involved in decisions about their daily
+              lives and care routines. Families benefit too, as NHTD provides a
+              reliable framework for loved ones to receive quality care without
+              being placed in a facility. To be eligible, individuals typically
+              need to be Medicaid-eligible, at risk of institutionalization, and
+              willing to participate in community-based care planning. In short,
+              if you’re asking what is NHTD, think of it as a compassionate
+              alternative that bridges the gap between full-time facility care
+              and independent living. Understanding the NHTD meaning and the
+              value of NHTD waiver services can be the first step toward
+              achieving a more independent and empowered lifestyle for you or
+              your loved one.
+            </p>
             <p className="pt-3 playrify text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-3 league-spartan text-[#00A6B2]">
               Frequently Asked Questions
             </p>

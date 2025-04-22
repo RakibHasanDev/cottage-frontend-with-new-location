@@ -164,14 +164,14 @@ const ContactInfo = () => {
             </div>
             <h5 className="text-gray-800 text-xl font-bold mb-4">Email Us</h5>
             <a
-              href="mailto:info@cottagehomecare.com"
+              href={`mailto:${"info"}@${"cottagehomecare.com"}`}
               className="text-gray-700 text-base"
             >
-              info@cottagehomecare.com
+              {`${"info"}@${"cottagehomecare.com"}`}
             </a>
           </div>
           <div className="text-center mt-10 bg-hov2 flex justify-center">
-            <a href="mailto:info@cottagehomecare.com">
+            <a href={`mailto:${"info"}@${"cottagehomecare.com"}`}>
               <div ref={ref}>
                 {inView && (
                   <Suspense fallback={<IconLoading />}>

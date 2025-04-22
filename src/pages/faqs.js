@@ -720,10 +720,10 @@ const Faqs = () => {
                           <p className="p-3 text-gray-900 dark:text-gray-100">
                             You can email them to:{" "}
                             <a
-                              href="mailto:info@cottagehomecare.com"
+                              href={`mailto:${"info"}@${"cottagehomecare.com"}`}
                               className="text-[#00A6B2] font-semibold dark:text-[#ff1818]"
                             >
-                              info@cottagehomecare.com
+                              {`${"info"}@${"cottagehomecare.com"}`}
                             </a>{" "}
                             or fax them to:{" "}
                             <a

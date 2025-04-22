@@ -191,7 +191,7 @@ const Disclaimer = () => {
           If you have any questions about this Disclaimer, You can contact Us:
         </p>
         <ul>
-          <li>By email: info@cottagehomecare.com</li>
+          <li>By email: {`${"info"}@${"cottagehomecare.com"}`}</li>
           <li>
             By visiting this page on our website:{" "}
             <a

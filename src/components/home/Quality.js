@@ -506,7 +506,7 @@ const Quality = () => {
             <div className="lg:w-[45%] h-full">
               <img
                 src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733325400/Services/private-pay-service.webp"
-                alt=""
+                alt="private pay service image"
                 className="w-full lg:h-full h-full object-cover"
                 width={1133}
                 height={755}

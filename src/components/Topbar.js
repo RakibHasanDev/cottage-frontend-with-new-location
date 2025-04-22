@@ -39,11 +39,11 @@ const TopBar = () => {
                 <p>
                   Email{" "}
                   <a
-                    href="mailto:info@cottagehomecare.com"
+                    href={`mailto:${"info"}@${"cottagehomecare.com"}`}
                     className="text-[#00A6B2] dark:text-gray-300"
                     aria-label="Email us at info@cottagehomecare.com"
                   >
-                    info@cottagehomecare.com
+                    {`${"info"}@${"cottagehomecare.com"}`}
                   </a>
                 </p>
               </div>
@@ -57,7 +57,7 @@ const TopBar = () => {
                 <BsFillTelephoneFill />
               </a>
               <a
-                href="mailto:info@cottagehomecare.com"
+                href={`mailto:${"info"}@${"cottagehomecare.com"}`}
                 className="text-[#00A6B2] md:text-2xl bg-hov2 lg:hidden dark:text-gray-300"
                 aria-label="Email us at info@cottagehomecare.com"
               >
@@ -67,7 +67,7 @@ const TopBar = () => {
                 href="https://www.facebook.com/cottageHC"
                 target="_blank"
                 rel="noreferrer"
-                aria-label="Visit our Facebook page"
+                aria-label="Our Facebook page"
               >
                 <BsFacebook className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon" />
               </a>

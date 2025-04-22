@@ -144,11 +144,11 @@ const Footer = () => {
               <div className="space-y-3">
                 <Link
                   href="/privacy-policy"
-                  className="tracking-wide uppercase text-gray-50 hover:text-[#00A6B2]"
+                  className="tracking-wide uppercase text-gray-50 hover:text-[#00A6B2] tracking-wider"
                 >
                   Privacy Policy
                 </Link>
-                <ul className="space-y-1">
+                <ul className="space-y-1 uppercase tracking-wider">
                   <li style={{ listStyle: "none" }}>
                     <Link
                       href="/terms-and-conditions"
@@ -172,10 +172,10 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="space-y-3">
-                <p className="tracking-wide uppercase text-gray-50 hover:text-[#00A6B2]">
+                <p className=" uppercase text-gray-50 hover:text-[#00A6B2] tracking-wider">
                   About US
                 </p>
-                <ul className="space-y-1">
+                <ul className="space-y-1 uppercase tracking-wider">
                   <li style={{ listStyle: "none" }}>
                     <Link
                       href="/mission-vision"
@@ -200,8 +200,10 @@ const Footer = () => {
               </div>
               <div className="space-y-3 flex gap-10">
                 <div>
-                  <h3 className="uppercase dark:text-gray-50">Contact Info</h3>
-                  <ul className="space-y-1">
+                  <h3 className="uppercase dark:text-gray-50 tracking-wider">
+                    Contact Info
+                  </h3>
+                  <ul className="space-y-1 uppercase tracking-wider">
                     <li style={{ listStyle: "none" }}>
                       <a
                         href="tel:+1516-367-2266"
@@ -218,13 +220,12 @@ const Footer = () => {
 
                     <li>
                       <a
-                        href="mailto:info@cottagehomecare.com"
+                        href={`mailto:${"info"}@${"cottagehomecare.com"}`}
                         className="hover:text-[#00A6B2] "
                         rel="noreferrer"
                         aria-label="Email us on info@cottagehomecare.com"
                       >
-                        {" "}
-                        info@cottagehomecare.com
+                        {`${"info"}@${"cottagehomecare.com"}`}
                       </a>
                     </li>
                   </ul>
