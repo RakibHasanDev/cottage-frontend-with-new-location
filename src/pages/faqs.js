@@ -389,9 +389,9 @@ const Faqs = () => {
                         )}`}
                       >
                         {item?.answer && (
-                          <h1 className="p-3 text-gray-900 dark:text-gray-100 text-[16px] leading-relaxed open-sans">
+                          <h6 className="p-3 text-gray-900 dark:text-gray-100 text-[16px] leading-relaxed open-sans">
                             {item?.answer}
-                          </h1>
+                          </h6>
                         )}
                         {item?.answer2 && (
                           <div className="p-3 text-gray-900 dark:text-gray-100 my-1">

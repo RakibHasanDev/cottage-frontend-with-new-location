@@ -79,11 +79,7 @@ const TopBar = () => {
               >
                 <BsInstagram className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon" />
               </a>
-              <a
-                href="https://x.com/cottagecareny"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="#" target="_blank" rel="noreferrer">
                 <FaXTwitter
                   className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon"
                   aria-label="Visit our Twitter profile"

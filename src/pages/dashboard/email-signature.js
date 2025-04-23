@@ -738,7 +738,6 @@ const EmployeeSignature = () => {
                                         fontStyle: "normal",
                                         lineHeight: "17px",
                                         fontWeight: 600,
-                                        paddingBottom: "14px",
                                       }}
                                     >
                                       <p style={{ margin: "0.04px" }}>
@@ -773,6 +772,56 @@ const EmployeeSignature = () => {
                                         >
                                           103-21 98th St, Jamaica, New York
                                           11417
+                                        </a>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td
+                                      style={{
+                                        paddingTop: "1px",
+                                        borderCollapse: "collapse",
+                                        fontFamily:
+                                          "Calibri, Helvetica, sans-serif",
+                                        fontSize: "15px",
+                                        fontStyle: "normal",
+                                        lineHeight: "17px",
+                                        fontWeight: 600,
+                                        paddingBottom: "14px",
+                                      }}
+                                    >
+                                      <p style={{ margin: "0.04px" }}>
+                                        <span
+                                          style={{
+                                            fontFamily: "sans-serif",
+                                            fontSize: "15px",
+                                            fontStyle: "normal",
+                                            lineHeight: "17px",
+                                            fontWeight: 600,
+                                            color: "#1c3461",
+                                            display: "inline",
+                                          }}
+                                        >
+                                          New Jersey Office:
+                                        </span>
+                                        <a
+                                          href="https://www.google.com/maps/dir//97+Newkirk+St+%23337,+Jersey+City,+NJ+07306,+USA/@40.728946,-74.063574,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c25732f2505947:0x11683fef690efa75!2m2!1d-74.0635739!2d40.7289459?hl=en&entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          style={{
+                                            textDecoration: "none",
+                                            fontFamily: "sans-serif",
+                                            fontSize: "15px",
+                                            fontStyle: "normal",
+                                            marginLeft: "2px",
+                                            lineHeight: "17px",
+                                            fontWeight: 500,
+                                            color: "#1c3461",
+                                            display: "inline",
+                                          }}
+                                        >
+                                          97 Newkirk Street, Unit #337, Jersey
+                                          City, NJ 07306
                                         </a>
                                       </p>
                                     </td>

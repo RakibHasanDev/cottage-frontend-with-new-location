@@ -19,12 +19,12 @@ const Values = () => {
       </Head>
       <main className="dark:bg-slate-600">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20 ">
-          <h2 className="sr-only">
+          <h1 className="sr-only">
             Cottage Home Care Values – Personalized, Compassionate, Reliable
             Care
-          </h2>
+          </h1>
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <h1 className="max-w-lg mb-2 font-sans text-3xl font-bold leading-none tracking-tight text-gary-600 sm:text-4xl md:mx-auto dark:text-gray-100">
+            <h2 className="max-w-lg mb-2 font-sans text-3xl font-bold leading-none tracking-tight text-gary-600 sm:text-4xl md:mx-auto dark:text-gray-100">
               <span className="relative inline-block">
                 <svg
                   viewBox="0 0 52 24"
@@ -51,7 +51,7 @@ const Values = () => {
                 <span className="relative">The</span>
               </span>{" "}
               Values, Of Cottage Home Care Services
-            </h1>
+            </h2>
             <hr className="mt-3 border-t-[1px] border-[#00A6B2] w-16 mx-auto " />
             <p className="text-base text-gray-700 md:text-lg font-medium mt-5 py-2 dark:text-gray-200">
               “HHA/PCA & CDPAP SERVICES THROUGHOUT NEW YORK CITY, NASSAU &

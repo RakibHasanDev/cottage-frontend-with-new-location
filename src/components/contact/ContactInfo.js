@@ -209,7 +209,7 @@ const ContactInfo = () => {
            className="w-[48px] h-[48px]"
           />
         </a>
-        <a href="https://x.com/cottagecareny" target="_blank" rel="noreferrer" className="bg-hov2">
+        <a href="https://x.com" target="_blank" rel="noreferrer" className="bg-hov2">
            
             <Lottie
             animationData={twitterReader}
@@ -248,12 +248,7 @@ const ContactInfo = () => {
             >
               <FaFacebookF className="w-[40px] h-[40px] p-[6px]" />
             </a>
-            <a
-              href="https://x.com/cottagecareny"
-              target="_blank"
-              rel="noreferrer"
-              className="icon"
-            >
+            <a href="#" target="_blank" rel="noreferrer" className="icon">
               <AiOutlineTwitter className="w-[40px] h-[40px] p-[6px]" />
             </a>
             <a

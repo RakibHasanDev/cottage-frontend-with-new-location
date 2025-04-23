@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 
 const Disclaimer = () => {
   return (
@@ -22,7 +23,7 @@ const Disclaimer = () => {
         suppressHydrationWarning
       >
         <h1 className="text-xl font-semibold">Disclaimer</h1>
-        <h2>Last updated: March 27, 2025</h2>
+        <h2>Last updated: April 23, 2025</h2>
 
         <p className="text-lg font-semibold">Interpretation and Definitions</p>
         <h3 className="text-lg font-semibold">Interpretation</h3>
@@ -52,14 +53,7 @@ const Disclaimer = () => {
           </li>
           <li>
             <strong>Website</strong> refers to Cottage Home Care Services,
-            accessible from{" "}
-            <a
-              href="https://cottagehomecare.com/"
-              rel="nofollow"
-              target="_blank"
-            >
-              https://cottagehomecare.com/
-            </a>
+            accessible from <Link href="/">https://cottagehomecare.com/</Link>
           </li>
         </ul>
 
@@ -83,7 +77,7 @@ const Disclaimer = () => {
           with the help of the{" "}
           <a
             href="https://www.termsfeed.com/disclaimer-generator/"
-            rel="nofollow"
+            rel="nofollow noopener noreferrer"
             target="_blank"
           >
             Disclaimer Generator
@@ -194,13 +188,7 @@ const Disclaimer = () => {
           <li>By email: {`${"info"}@${"cottagehomecare.com"}`}</li>
           <li>
             By visiting this page on our website:{" "}
-            <a
-              href="https://cottagehomecare.com/contact/"
-              rel="nofollow"
-              target="_blank"
-            >
-              https://cottagehomecare.com/contact/
-            </a>
+            <Link href="/contact">https://cottagehomecare.com/contact/</Link>
           </li>
           <li>By phone number: 516-367-2266</li>
           <li>By mail: 25 Newbridge Rd Unit 302, Hicksville, NY 11801, USA</li>

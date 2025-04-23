@@ -78,7 +78,6 @@ const HhhaCertification = () => {
       ],
       sameAs: [
         "https://www.facebook.com/cottageHC",
-        "https://x.com/cottagecanery",
         "https://www.linkedin.com/company/cottage-homecare/",
       ],
     },

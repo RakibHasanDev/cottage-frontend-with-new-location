@@ -85,12 +85,13 @@ const AllTeamMembers = () => {
         <div className="min-h-screen dark:bg-slate-600 relative">
           <div className="md:container md:flex md:justify-center md:mx-auto pt-10 ">
             <div>
-              <h2 className="text-gray-500 text-lg text-center  pb-3 dark:text-gray-400 mt-5 md:mt-0 open-sans font-semibold">
-                Meet our Team
-              </h2>
-              <h1 className="xl:text-3xl text-2xl text-center text-gray-700 font-extrabold  sm:w-4/6 w-5/6 mx-auto playrify dark:text-gray-200 league-spartan">
-                The Talented People Behind the Success of the Organization
+              <h1 className="text-gray-500 text-lg text-center  pb-3 dark:text-gray-400 mt-5 md:mt-0 open-sans font-semibold">
+                Meet Our All Team Members
               </h1>
+              <h2 className="xl:text-3xl text-2xl text-center text-gray-700 font-extrabold  sm:w-4/6 w-5/6 mx-auto playrify dark:text-gray-200 league-spartan">
+                Meet the talented individuals who drive Cottage Home Care&apos;s
+                success.
+              </h2>
               <hr className="mt-3 border-t-[1px] border-[#00A6B2] w-16 mx-auto pb-6" />
             </div>
           </div>

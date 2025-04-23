@@ -98,7 +98,7 @@ const MissionVision = () => {
                 src={"/assets/cottage-home-care-contact-image.webp"}
                 alt="pic3"
                 className="w-full rounded-md h-auto"
-                widtht={1200}
+                width={1200}
                 height={1569}
               />
             </div>

@@ -76,12 +76,9 @@ const schoolSupply = () => {
 
         <div className="md:py-10 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8 lg:pt-12 py-5">
-            <p className=" text-center  text-xl  league-spartan font-bold md:text-xl lg:text-2xl xl:text-4xl  dark:text-gray-100 text-[#00A6B2]">
+            <h2 className=" text-center  text-xl  league-spartan font-bold md:text-xl lg:text-2xl xl:text-4xl  dark:text-gray-100 text-[#00A6B2]">
               {" "}
               School Supplies Giveaway{" "}
-            </p>
-            <h2 className="sr-only">
-              Toys Giveaway Event – Cottage Home Care Community Outreach
             </h2>
 
             <div className="flex justify-center ">

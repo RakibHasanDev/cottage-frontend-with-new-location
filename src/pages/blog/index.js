@@ -133,6 +133,155 @@ const Blog = () => {
           </div>
         </div>
 
+        <div className="sr-only">
+          <p>
+            When it comes to caring for a loved one at home, there’s no room for
+            cookie-cutter solutions. At Cottage Home Care Services, we
+            specialize in providing both unique home health care services and
+            comprehensive home care services designed around the person—not just
+            the condition.
+          </p>
+
+          <p>
+            Our mission is to bring warmth, dignity, and expert support into the
+            homes of those who need it most. Whether your loved one needs
+            post-hospital recovery, help with everyday tasks, or
+            around-the-clock medical care, we create a plan that’s just right
+            for them.
+          </p>
+
+          <p>
+            <strong>What Makes Our Home Care Services Unique?</strong>
+          </p>
+
+          <p>
+            At Cottage Home Care Services, we believe that truly unique care is
+            built around real people—not generic templates. Our care plans are
+            fully customized to reflect your loved one’s medical needs, daily
+            routines, cultural background, and personal preferences.
+          </p>
+
+          <p>Our Unique Home Health Care Services Include:</p>
+
+          <ul>
+            <li>Custom caregiver matching (language, personality, gender)</li>
+            <li>
+              Specialized care plans for chronic illnesses or memory disorders
+            </li>
+            <li>Emotional support and companionship tailored to lifestyle</li>
+            <li>Flexible care schedules (part-time, full-time, 24/7)</li>
+            <li>
+              Personalized meal preparation, mobility assistance, and more
+            </li>
+          </ul>
+
+          <p>
+            We take the time to understand each client’s story—because healing
+            and well-being start with feeling seen and heard.
+          </p>
+
+          <p>
+            <strong>Comprehensive Care That Covers Every Need</strong>
+          </p>
+
+          <p>
+            What sets Cottage Home Care Services apart is our ability to deliver
+            comprehensive home care services all under one roof. We provide a
+            full spectrum of care, so families don’t have to coordinate multiple
+            providers.
+          </p>
+
+          <p>Our Comprehensive Home Care Services Include:</p>
+
+          <ul>
+            <li>
+              Skilled Nursing: IV therapy, wound care, chronic disease
+              management
+            </li>
+            <li>
+              Certified Home Health Aides: Personal hygiene, dressing, transfers
+            </li>
+            <li>
+              Memory & Alzheimer’s Care: Specialized routines and safety
+              protocols
+            </li>
+            <li>
+              Companionship Services: Emotional support, light housekeeping,
+              errands
+            </li>
+            <li>Therapy at Home: Physical, occupational, and speech therapy</li>
+            <li>
+              Overnight & Live-In Care: For clients needing 24/7 supervision
+            </li>
+          </ul>
+
+          <p>
+            Our holistic approach ensures continuity of care—and peace of mind
+            for families.
+          </p>
+
+          <p>
+            <strong>Why Families Choose Cottage Home Care Services</strong>
+          </p>
+
+          <p>
+            We’re more than a home care agency—we’re your extended family, care
+            partner, and trusted support system. Families across [your service
+            area] choose us because:
+          </p>
+
+          <ul>
+            <li>We provide consistent, high-quality care with heart</li>
+            <li>
+              Our staff is licensed, background-checked, and extensively trained
+            </li>
+            <li>
+              We offer flexible plans that evolve with your loved one’s needs
+            </li>
+            <li>
+              You’ll always have a dedicated care coordinator just a phone call
+              away
+            </li>
+          </ul>
+
+          <p>
+            <strong>Who Can Benefit from Our Services?</strong>
+          </p>
+
+          <ul>
+            <li>Seniors aging at home who value independence</li>
+            <li>Individuals with disabilities or special needs</li>
+            <li>Patients recovering from surgery or illness</li>
+            <li>Caregivers needing respite or support</li>
+            <li>
+              Families looking for compassionate, in-home alternatives to
+              nursing facilities
+            </li>
+          </ul>
+
+          <p>
+            Whether it’s short-term help or long-term care, Cottage Home Care
+            Services is here to support your loved one’s best quality of life.
+          </p>
+
+          <p>
+            <strong>Get Started with Cottage Home Care Services Today</strong>
+          </p>
+
+          <p>
+            Looking for care that feels like family? Trust Cottage Home Care
+            Services to provide both unique and comprehensive home health care
+            that goes above expectations. We’ll meet with you to assess your
+            needs, answer questions, and create a customized care plan—at no
+            cost to you.
+          </p>
+
+          <p>
+            Call us now or schedule your free in-home consultation to see how we
+            can help your family today.
+          </p>
+        </div>
+
         {queryLoading ? (
           <div className="py-5">
             <SpinerLoading />

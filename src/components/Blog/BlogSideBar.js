@@ -77,7 +77,7 @@ const BlogSidebar = () => {
               (blog) =>
                 blog?.status !== "pending" && blog?.status !== "rejected"
             )
-            ?.slice(0, 3)
+            ?.slice(0, 5)
             ?.map((blog) => {
               return (
                 <div key={blog?._id}>

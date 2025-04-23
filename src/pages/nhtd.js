@@ -234,7 +234,7 @@ const NHTD = () => {
                 Transition and Diversion
               </span>
             </h1>
-
+            <h2 className="sr-only">NHTD Services at Cottage Home Care</h2>
             <div className="flex justify-center pl-5 my-2 md:max-w-md lg:ml-[10%]">
               <Link
                 href="/contact"
@@ -260,9 +260,9 @@ const NHTD = () => {
             <div className="md:col-span-2 ">
               <div className="bg-[#F8F9FA] rounded-md py-8 dark:bg-slate-800">
                 <div className="w-[90%] mx-auto league-spartan">
-                  <h2 className="txt-lg md:text-2xl font-semibold dark:text-gray-100">
+                  <p className="txt-lg md:text-2xl font-semibold dark:text-gray-100">
                     All Services
-                  </h2>
+                  </p>
 
                   <div className="mt-3 nhtd-section">
                     <ServicesComponent />
@@ -285,7 +285,7 @@ const NHTD = () => {
                   </a>
                   <div className="flex justify-center mt-5">
                     <Link
-                      href="/contacts"
+                      href="/contact"
                       className="bg-[#00A6B2] text-white px-4 lg:py-4 py-2 rounded-md  text-lg lg:text-2xl playrify "
                     >
                       Contact Us
@@ -366,7 +366,7 @@ const NHTD = () => {
                   <Link
                     href="https://www.health.ny.gov/facilities/long_term_care/nhtd/"
                     target="_blank"
-                    rel="nofollow"
+                    rel="nofollow noopener noreferrer"
                     className="text-blue-500 hover:underline ml-1"
                   >
                     New York State Medicaid initiative
@@ -474,7 +474,7 @@ const NHTD = () => {
                   className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-[280px] rounded-md text-white shadow-md"
                   href="https://www.health.ny.gov/health_care/medicaid/redesign/docs/nhtd_overview.pdf"
                   target="_blank"
-                  rel="nofollow"
+                  rel="nofollow noopener noreferrer"
                 >
                   <RiArrowRightDoubleFill className="text-2xl   text-white " />
                   <span className="">Official NHTD Eligibility Criteria</span>
@@ -518,7 +518,7 @@ const NHTD = () => {
                 className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-[290px] rounded-md text-white shadow-md"
                 href="https://www.health.ny.gov/facilities/long_term_care/nhtd/"
                 target="_blank"
-                rel="nofollow"
+                rel="nofollow noopener noreferrer"
               >
                 <RiArrowRightDoubleFill className="text-2xl   text-white " />
                 <span className="">Learn About the NHTD Program</span>
@@ -538,7 +538,7 @@ const NHTD = () => {
                 <Link
                   href="https://www.health.ny.gov/funding/single_source/rrdc.htm"
                   target="_blank"
-                  rel="nofollow"
+                  rel="nofollow noopener noreferrer"
                   className="text-blue-500 hover:underline"
                 >
                   Regional Resource Development Center (RRDC).
@@ -558,7 +558,7 @@ const NHTD = () => {
               className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-56 rounded-md text-white shadow-md"
               href="https://www.health.ny.gov/facilities/long_term_care/regional_resource_development_centers.htm"
               target="_blank"
-              rel="nofollow"
+              rel="nofollow noopener noreferrer"
             >
               <RiArrowRightDoubleFill className="text-2xl   text-white " />
               <span className="">Find an RRDC Near You</span>

@@ -59,7 +59,7 @@ const Footer = () => {
           {/* start twitter */}
           <a
             className="flex justify-center md:justify-center bg-[#0f0f0f] py-3 cursor-pointer"
-            href="https://x.com/cottagecareny"
+            href="#"
             target="_blank"
             rel="noreferrer noopener"
             aria-label="Visit our Twitter page"

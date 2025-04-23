@@ -129,7 +129,7 @@ const HelpDesk = () => {
                       href={stuff?.link}
                       target="_blank"
                       className="px-7 p-3.5 rounded-full font-semibold uppercase bg-[#00A6B2] text-white shadow-md stuff-button "
-                      rel="nofollow"
+                      rel="nofollow noopener noreferrer"
                     >
                       {" "}
                       view

@@ -1,20 +1,21 @@
 User-agent: *
 
-# Disallow internal + technical paths
-Disallow: /_next/
+# Disallow internal and technical paths
 Disallow: /dashboard/
 Disallow: /login/
 Disallow: /register/
-Disallow: /team/*
-Disallow: /*.js$
-Disallow: /*.css$
-Disallow: /*.map$
+Disallow: /team/
+Disallow: /_next/data/
 
 # Allow SEO-relevant pages
-Allow: /$
+Allow: /
+Allow: /_next/static/css/
+Allow: /_next/static/js/
+Allow: /_next/static/chunks/
+Allow: /_next/static/media/
 Allow: /blog/
-Allow: /blog/*
-Allow: /team/$
+Allow: /blog/
+Allow: /team/
 Allow: /nhtd/
 Allow: /hha/
 Allow: /cdpap/
