@@ -78,6 +78,57 @@ const christmasParty = () => {
           </div>
         </div>
 
+        <div className="w-[95%] mx-auto my-5 sr-only">
+          <p>
+            At Cottage Home Care Services, we cherish the opportunity to bring
+            joy and togetherness to our community during the holiday season. Our
+            Christmas Party 2023 was a heartwarming celebration that reflected
+            our commitment to fostering a sense of family and appreciation among
+            our staff, clients, and their families.
+          </p>
+          <p>
+            The event was filled with festive cheer, offering attendees a chance
+            to relax, connect, and celebrate the year&aps;s accomplishments.
+            Highlights of the celebration included:
+          </p>
+          <ul>
+            <li>
+              <strong>Festive Decorations:</strong> Transforming our venue into
+              a winter wonderland to set the holiday mood.
+            </li>
+            <li>
+              <strong>Delicious Cuisine:</strong> A variety of seasonal dishes
+              and treats that delighted everyone&apos;s taste buds.
+            </li>
+            <li>
+              <strong>Entertainment:</strong> Live music and performances that
+              kept the atmosphere lively and engaging.
+            </li>
+            <li>
+              <strong>Gift Exchange:</strong> Sharing tokens of appreciation to
+              express gratitude and strengthen bonds.
+            </li>
+            <li>
+              <strong>Community Spirit:</strong> Bringing together staff,
+              clients, and families to celebrate and create lasting memories.
+            </li>
+          </ul>
+          <p>
+            Events like our annual Christmas Party are integral to our mission
+            of not only providing exceptional home care services but also
+            building a supportive and connected community. We believe that
+            celebrating together enhances the well-being of everyone involved.
+          </p>
+          <p>
+            For more information about our community events or to learn more
+            about our home care services, please contact us at{" "}
+            <a href="mailto:info@cottagehomecare.com">
+              info@cottagehomecare.com
+            </a>{" "}
+            or call <a href="tel:516-367-2266">516-367-2266</a>.
+          </p>
+        </div>
+
         <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8  py-5">
             <p className="text-center  text-xl text-[#00A6B2] md:text-xl lg:text-2xl xl:text-4xl font-bold league-spartan dark:text-gray-100 text-shadow">

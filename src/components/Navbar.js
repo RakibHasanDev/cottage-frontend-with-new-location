@@ -110,7 +110,7 @@ const NavBar = () => {
             </Link>
 
             <ul className=" items-center hidden space-x-4 lg:flex   nav-list">
-              <li style={{ listStyle: "none" }}>
+              <li>
                 <Link
                   href="/"
                   aria-label="Home"
@@ -181,7 +181,7 @@ const NavBar = () => {
                 </div>
               </li>
 
-              <li style={{ listStyle: "none" }}>
+              <li>
                 <Link
                   href="/contact"
                   aria-label="Contact US"
@@ -195,7 +195,7 @@ const NavBar = () => {
                 </Link>
               </li>
 
-              <li style={{ listStyle: "none" }}>
+              <li>
                 <Link
                   href="/hha-certification"
                   aria-label="HHA Certification"
@@ -253,10 +253,7 @@ const NavBar = () => {
                 </div>
               </li>
 
-              <li
-                className="relative group font-semibold"
-                style={{ listStyle: "none" }}
-              >
+              <li className="relative group font-semibold">
                 {/* Community Outreach Button */}
                 <button
                   className={`dropdown-toggle font-semibold tracking-wide text-[#49465D] transition-colors duration-200  
@@ -300,7 +297,7 @@ const NavBar = () => {
                 </div>
               </li>
 
-              <li style={{ listStyle: "none" }}>
+              <li>
                 <Link
                   href="/blog"
                   aria-label="Blog"

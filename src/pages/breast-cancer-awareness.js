@@ -76,6 +76,56 @@ const breastCancerAwareness = () => {
           </div>
         </div>
 
+        <div className="w-[95%] my-5 mx-auto sr-only">
+          <p>
+            At Cottage Home Care Services, we are deeply committed to supporting
+            our community during Breast Cancer Awareness Month. This annual
+            observance is a pivotal time to highlight the importance of early
+            detection, provide education on breast health, and honor the
+            strength and resilience of those affected by breast cancer.
+          </p>
+          <p>
+            Throughout October, we engage in various initiatives aimed at
+            raising awareness and fostering a supportive environment for
+            individuals and families impacted by breast cancer. Our efforts
+            focus on education, community involvement, and providing resources
+            to promote early detection and treatment.
+          </p>
+          <p>Our Breast Cancer Awareness Month activities include:</p>
+          <ul>
+            <li>
+              Hosting informational sessions on the importance of regular
+              screenings and early detection.
+            </li>
+            <li>
+              Organizing community events to honor survivors and remember those
+              we have lost.
+            </li>
+            <li>
+              Collaborating with local organizations to distribute educational
+              materials and resources.
+            </li>
+            <li>
+              Encouraging our staff and community members to wear pink to show
+              solidarity and support.
+            </li>
+          </ul>
+          <p>
+            We believe that through education and community engagement, we can
+            make a significant impact in the fight against breast cancer. By
+            spreading awareness and providing support, we aim to empower
+            individuals to take proactive steps in managing their breast health.
+          </p>
+          <p>
+            For more information about our Breast Cancer Awareness Month
+            initiatives or to get involved, please contact us at{" "}
+            <a href="mailto:info@cottagehomecare.com">
+              info@cottagehomecare.com
+            </a>{" "}
+            or call us at <a href="tel:516-367-2266">516-367-2266</a>.
+          </p>
+        </div>
+
         <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8  py-5">
             <p className=" text-center  text-xl  md:text-xl lg:text-2xl xl:text-4xl font-bold text-[#00A6B2] dark:text-gray-100 text-shadow league-spartan">

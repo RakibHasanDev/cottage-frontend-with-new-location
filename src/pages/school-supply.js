@@ -74,6 +74,45 @@ const schoolSupply = () => {
           </div>
         </div>
 
+        <div className="w-[95%] my-5 mx-auto sr-only">
+          <p>
+            Cottage Home Care Services is dedicated to supporting our
+            community&apos;s educational needs through our annual School
+            Supplies Giveaway. This initiative aims to provide essential
+            learning materials to students, ensuring they are well-prepared for
+            the academic year ahead.
+          </p>
+          <p>Our School Supplies Giveaway event includes:</p>
+          <ul>
+            <li>
+              Distribution of backpacks filled with notebooks, pens, pencils,
+              and other necessary school items.
+            </li>
+            <li>
+              Engaging activities and games to promote a fun and educational
+              environment.
+            </li>
+            <li>
+              Opportunities for families to learn more about our home care
+              services and community programs.
+            </li>
+          </ul>
+          <p>
+            By alleviating the financial burden of purchasing school supplies,
+            we aim to empower students to focus on their studies and achieve
+            academic success. This event reflects our commitment to fostering a
+            supportive and nurturing community for all.
+          </p>
+          <p>
+            For more information about our School Supplies Giveaway or to learn
+            how you can contribute, please contact us at{" "}
+            <a href="mailto:info@cottagehomecare.com">
+              info@cottagehomecare.com
+            </a>{" "}
+            or call us at <a href="tel:516-367-2266">516-367-2266</a>.
+          </p>
+        </div>
+
         <div className="md:py-10 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8 lg:pt-12 py-5">
             <h2 className=" text-center  text-xl  league-spartan font-bold md:text-xl lg:text-2xl xl:text-4xl  dark:text-gray-100 text-[#00A6B2]">

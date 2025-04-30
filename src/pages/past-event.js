@@ -147,55 +147,60 @@ const PastEvent = () => {
           </div>
         </div>
 
-        {/* <div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 items-end -mt-[40px] relative">
-          {pictures?.map((picture, index) => (
-            <a href={picture?.link} target="_blank"
-              rel="noreferrer noopener"
-
-              key={index} className="block">
-              <div
-                key={index}
-                className={`z-10 card-zoom relative flex items-center justify-center overflow-hidden ${picture?.id}`}
-                style={{
-                  minHeight: `${picture?.height}`,
-                  position: "relative", 
-                }}
-                id="event"
-              >
-                <video
-                  src={picture?.picture}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline 
-                  className="absolute top-0 left-0 w-full h-full object-cover custom-zoom "
-                >
-          
-                </video>
-                <div
-                  className="absolute top-0 left-0 w-full h-full"
-                  style={{
-                    backgroundImage:
-                      "linear-eveient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5))",
-                  }}
-                ></div>
-
-                <div className="text-gray-100  md:h-28 w-[95%] md:w-[85%] mx-auto absolute md:bottom-12 bottom-8  ">
-                  <div className="">
-                    <h1 className="md:text-3xl text-2xl font-bold league-spartan">
-                      {picture?.title}
-                    </h1>
-                    <p className="md:mt-3  mt-2 font-semibold flex items-center gap-2 league-spartan">
-                      LEARN MORE <BsArrowRight className="text-2xl" />
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          ))}
+        <div className="my-5 sr-only">
+          <p>
+            At Cottage Home Care Services , we are committed to enriching the
+            lives of individuals and strengthening our community through
+            meaningful and impactful initiatives. Our past events showcase our
+            dedication to community engagement and support.
+          </p>
+          <p>
+            We firmly believe in the power of giving and strive to make a
+            lasting difference by focusing on initiatives that align with our
+            community&apos;s needs. Together, we can create a stronger community
+            built on compassion, empathy, and shared prosperity.
+          </p>
+          <p>Some of our notable past events include:</p>
+          <ul>
+            <li>
+              <strong>Diwali 2024 - Liberty Avenue Celebration:</strong> A
+              vibrant celebration bringing together community members to honor
+              the festival of lights.
+            </li>
+            <li>
+              <strong>Breast Cancer Awareness Month 2024:</strong> Initiatives
+              aimed at raising awareness and supporting those affected by breast
+              cancer.
+            </li>
+            <li>
+              <strong>Christmas Toys Giveaway:</strong> Spreading holiday cheer
+              by providing toys to children in need during the festive season.
+            </li>
+            <li>
+              <strong>Christmas Party 2023:</strong> A joyful gathering
+              celebrating the holiday season with our community members.
+            </li>
+            <li>
+              <strong>School Supplies Giveaway:</strong> Assisting students by
+              providing essential school supplies to support their educational
+              journey.
+            </li>
+          </ul>
+          <p>
+            These events reflect our ongoing commitment to community involvement
+            and our mission to make a positive impact in the lives of those we
+            serve. We look forward to continuing our efforts and hosting more
+            events that bring our community together.
+          </p>
+          <p>
+            For more information about our upcoming events or to get involved,
+            please contact us at{" "}
+            <a href="mailto:info@cottagehomecare.com">
+              info@cottagehomecare.com
+            </a>{" "}
+            or call us at <a href="tel:516-367-2266">516-367-2266</a>.
+          </p>
         </div>
-      </div> */}
 
         {/* event cards start */}
 

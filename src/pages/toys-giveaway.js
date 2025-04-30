@@ -77,6 +77,51 @@ const toysGiveaway = () => {
             </p>
           </div>
         </div>
+        <div className="sr-only">
+          <p>
+            At Cottage Home Care Services, we believe in the power of community
+            and the joy of giving. Our annual Christmas Toys Giveaway event is a
+            testament to our commitment to bringing smiles to children&apos;s
+            faces during the holiday season.
+          </p>
+          <p>
+            This heartwarming event is designed to support families in our
+            community by providing free toys to children, ensuring that every
+            child experiences the magic of Christmas. We collaborate with local
+            organizations and volunteers to collect and distribute a wide range
+            of toys suitable for various age groups.
+          </p>
+          <p>The Toys Giveaway event typically includes:</p>
+          <ul>
+            <li>
+              Distribution of new, age-appropriate toys to children from infants
+              to teenagers.
+            </li>
+            <li>
+              Festive activities such as holiday music, decorations, and
+              appearances by Santa Claus.
+            </li>
+            <li>
+              Opportunities for families to connect with our team and learn more
+              about our home care services and community initiatives.
+            </li>
+          </ul>
+          <p>
+            Our goal is to foster a sense of community and support among
+            families, especially during the holidays. We understand the
+            challenges that some families face, and through this event, we aim
+            to spread joy, compassion, and hope.
+          </p>
+          <p>
+            For more information about the upcoming Toys Giveaway event,
+            including dates, locations, and how to participate or contribute,
+            please contact us at{" "}
+            <a href="mailto:info@cottagehomecare.com">
+              info@cottagehomecare.com
+            </a>{" "}
+            or call <a href="tel:516-367-2266">516-367-2266</a>.
+          </p>
+        </div>
 
         <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8  py-5">

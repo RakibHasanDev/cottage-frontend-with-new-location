@@ -96,6 +96,70 @@ const AllTeamMembers = () => {
             </div>
           </div>
 
+          <div className="w-[95%] mx-auto my-5 sr-only">
+            <p>
+              At Cottage Home Care Services, our dedicated team is the
+              cornerstone of our commitment to providing exceptional home care
+              across New York. Each member brings a wealth of experience,
+              compassion, and professionalism to ensure our clients receive the
+              highest quality of care.
+            </p>
+            <p>Our team comprises:</p>
+            <ul>
+              <li>
+                <strong>Home Health Aide Coordinators:</strong> Managing
+                caregiver schedules to ensure timely and appropriate care for
+                every client.
+              </li>
+              <li>
+                <strong>CDPAP Coordinators:</strong> Assisting clients who
+                choose their caregivers, ensuring smooth enrollment and ongoing
+                support.
+              </li>
+              <li>
+                <strong>Intake Specialists:</strong> Guiding new clients through
+                the onboarding process for a seamless experience.
+              </li>
+              <li>
+                <strong>Administrative Associates:</strong> Handling essential
+                operations, from file management to communications, to keep our
+                agency running smoothly.
+              </li>
+              <li>
+                <strong>RN Assistants:</strong> Collaborating with registered
+                nurses to maintain high clinical standards through regular
+                follow-ups and support activities.
+              </li>
+              <li>
+                <strong>Billing Coordinators:</strong> Working closely with
+                insurance companies and families to ensure accurate and timely
+                processing of all financial matters.
+              </li>
+              <li>
+                <strong>Training and Development Team:</strong> Educating future
+                HHAs and caregivers through our partner schools, empowering
+                individuals with the skills needed for a rewarding career in
+                home health care.
+              </li>
+            </ul>
+            <p>
+              Our diverse workforce allows us to serve families from various
+              cultural and linguistic backgrounds, offering services in multiple
+              languages to better connect with our communities. Every team
+              member is committed to maintaining the highest standards of
+              quality, ensuring that every client feels valued, respected, and
+              well cared for at all times.
+            </p>
+            <p>
+              For more information about our team or services, please contact us
+              at{" "}
+              <a href="mailto:info@cottagehomecare.com">
+                info@cottagehomecare.com
+              </a>{" "}
+              or call <a href="tel:516-367-2266">516-367-2266</a>.
+            </p>
+          </div>
+
           <div className="absolute md:top-10 top-2 md:right-12 left-1/2 md:left-auto transform md:-translate-x-0 -translate-x-1/2">
             <div className="relative ">
               <input

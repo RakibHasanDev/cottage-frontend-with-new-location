@@ -156,6 +156,139 @@ const Team = () => {
             <BannerWithBreadcrumbs title="Team" />
           </div>
         </div>
+        <div className="py-10 w-[95%] lg:w-[85%] mx-auto dark:text-gray-100 sr-only">
+          <p>
+            <strong>
+              Meet the Dedicated Team Behind Cottage Home Care Services
+            </strong>
+          </p>
+
+          <p>
+            At <strong>Cottage Home Care Services</strong>, we believe that
+            compassionate, professional, and reliable care starts with an
+            exceptional team. Our dedicated staff members are the heart of our
+            organization, working tirelessly to ensure every client and family
+            receives the highest quality of home care services. From
+            coordinators and nurses to administrative associates and intake
+            specialists, every team member plays a crucial role in supporting
+            our mission to provide individualized, respectful, and compassionate
+            care across New York City, Nassau, Suffolk County, Westchester, and
+            Albany.
+          </p>
+
+          <p>
+            <strong>Our Commitment to Excellence</strong>
+          </p>
+
+          <p>
+            Our team is composed of highly trained professionals who bring
+            expertise, passion, and a deep understanding of home health care
+            needs. We take pride in our diverse workforce, which allows us to
+            serve families from a variety of cultural and linguistic
+            backgrounds. Every member of Cottage Home Care Services is committed
+            to maintaining the highest standards of quality, ensuring that every
+            client feels valued, respected, and well cared for at all times.
+          </p>
+
+          <p>
+            <strong>Who We Are</strong>
+          </p>
+
+          <ul className="list-disc ml-5">
+            <li>
+              <strong>Home Health Aide (HHA) Coordinators:</strong> Our
+              coordinators manage caregiver schedules, ensuring timely and
+              appropriate care for every client.
+            </li>
+            <li>
+              <strong>CDPAP Coordinators:</strong> Supporting clients who choose
+              their caregivers, our team ensures smooth enrollment and ongoing
+              assistance for those using the Consumer Directed Personal
+              Assistance Program (CDPAP).
+            </li>
+            <li>
+              <strong>Intake Specialists:</strong> Helping new clients begin
+              their journey with Cottage Home Care Services, our intake team
+              ensures a seamless onboarding experience.
+            </li>
+            <li>
+              <strong>Administrative Associates:</strong> Providing essential
+              behind-the-scenes support, from file management to payroll and
+              communications, ensuring the agency runs smoothly.
+            </li>
+            <li>
+              <strong>RN Assistants:</strong> Collaborating with registered
+              nurses, our RN assistants help maintain high clinical standards
+              through regular follow-ups and support activities.
+            </li>
+            <li>
+              <strong>Billing Coordinators:</strong> Our billing experts work
+              closely with insurance companies and families to ensure accurate
+              and timely processing of all financial matters.
+            </li>
+            <li>
+              <strong>Training and Development Team:</strong> Responsible for
+              educating future HHAs and caregivers through our partner schools,
+              empowering individuals with the skills and knowledge needed for a
+              rewarding career in home health care.
+            </li>
+          </ul>
+
+          <p>
+            <strong>Why Our Team Stands Out</strong>
+          </p>
+
+          <ul className="list-disc ml-5">
+            <li>
+              <strong>Experience:</strong> Our team brings decades of combined
+              experience across healthcare, administration, and home care
+              coordination.
+            </li>
+            <li>
+              <strong>Diversity:</strong> We proudly serve families from
+              Bengali, Spanish, Punjabi, Guyanese, Jamaican, and Gujarati
+              backgrounds, offering services in multiple languages to better
+              connect with our communities.
+            </li>
+            <li>
+              <strong>Compassionate Approach:</strong> Every interaction with
+              our clients is based on kindness, empathy, and a genuine desire to
+              improve their quality of life.
+            </li>
+            <li>
+              <strong>Continuous Improvement:</strong> Through regular training
+              and feedback, our team continually upgrades their skills to better
+              serve our clients and families.
+            </li>
+          </ul>
+
+          <p>
+            <strong>Building Relationships That Matter</strong>
+          </p>
+
+          <p>
+            At Cottage Home Care Services, we value strong relationships. Our
+            clients are more than just cases—they are members of our extended
+            family. We believe in open communication, transparency, and
+            providing personalized care plans that fit the unique needs of each
+            individual. Our team members are always ready to listen, adapt, and
+            respond to any changing needs, ensuring peace of mind for both
+            clients and their loved ones.
+          </p>
+
+          <p>
+            <strong>Join Our Family</strong>
+          </p>
+
+          <p>
+            We are proud of the incredible individuals who make Cottage Home
+            Care Services a trusted choice for home care across New York. If you
+            are passionate about making a difference and committed to
+            excellence, consider joining our growing team. Together, we can
+            continue building a future where every client receives the
+            compassionate, high-quality care they deserve.
+          </p>
+        </div>
 
         <div className="w-full  dark:bg-slate-600 ">
           <div className=" mx-auto">

@@ -73,16 +73,7 @@ const Disclaimer = () => {
           tort, arising out of or in connection with the use of the Service or
           the contents of the Service. The Company reserves the right to make
           additions, deletions, or modifications to the contents on the Service
-          at any time without prior notice. This Disclaimer has been created
-          with the help of the{" "}
-          <a
-            href="https://www.termsfeed.com/disclaimer-generator/"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
-            Disclaimer Generator
-          </a>
-          .
+          at any time without prior notice.
         </p>
         <p>
           The Company does not warrant that the Service is free of viruses or

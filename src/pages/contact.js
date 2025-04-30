@@ -178,6 +178,60 @@ const Contacts = () => {
         </h2>
 
         <LazyBanner />
+        <div className="sr-only">
+          <p>
+            At Cottage Home Care Services, we are dedicated to providing
+            compassionate and professional home care services tailored to meet
+            the unique needs of our clients. Our team of experienced caregivers
+            is committed to enhancing the quality of life for individuals and
+            families across New Jersey.
+          </p>
+          <p>
+            Whether you require assistance with daily activities, personal care,
+            or specialized medical support, our staff is here to help. We
+            understand the importance of reliable and personalized care, and we
+            strive to deliver services that promote independence and well-being.
+          </p>
+          <p>
+            For inquiries, service requests, or to learn more about our home
+            care programs, please reach out to us through the following contact
+            methods:
+          </p>
+          <ul>
+            <li>
+              <strong>Phone:</strong>{" "}
+              <a href="tel:516-367-2266">516-367-2266</a>
+            </li>
+            <li>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:info@cottagehomecare.com">
+                info@cottagehomecare.com
+              </a>
+            </li>
+            <li>
+              <strong>Office Address:</strong> 15 Clydesdale Road, Scotch
+              Plains, NJ 07076
+            </li>
+          </ul>
+          <p>
+            Our office hours are Monday through Saturday, 8:00 AM to 5:00 PM. We
+            are closed on Sundays. Feel free to contact us during these hours,
+            and our friendly staff will be happy to assist you with any
+            questions or concerns.
+          </p>
+          <p>
+            For more detailed information about our services and locations,
+            please visit our official website:{" "}
+            <a
+              href="https://cottagehomecare.com/contact/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Cottage Home Care Services Contact Page
+            </a>
+            .
+          </p>
+        </div>
 
         <Suspense fallback={<Placeholder />}>
           <ContactInfo />

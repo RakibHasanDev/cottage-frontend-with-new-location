@@ -104,6 +104,123 @@ const HelpDesk = () => {
           <BannerWithBreadcrumbs title="Help Desk" />
         </div>
 
+        <div className="py-10 w-[95%] lg:w-[80%] mx-auto dark:text-gray-100 sr-only">
+          <p>
+            <strong>Help Desk at Cottage Home Care Services</strong>
+          </p>
+
+          <p>
+            At <strong>Cottage Home Care Services</strong>, we understand the
+            importance of providing easy and reliable access to essential
+            employee resources. Our Help Desk is designed to support our
+            caregivers, staff, and employees by offering quick links to
+            important tools and information. Whether you need to clock in and
+            out, view your pay stub, or check your paid time off (PTO) balance,
+            the Cottage Home Care Help Desk is here to assist you anytime,
+            anywhere.
+          </p>
+
+          <p>
+            We are committed to ensuring that our team has the support they need
+            to manage their work efficiently and focus on what matters
+            most—delivering compassionate, high-quality care to our clients
+            across New York City, Nassau, Suffolk County, Westchester, and
+            Albany.
+          </p>
+
+          <p>
+            <strong>
+              What You Can Access Through the Cottage Home Care Help Desk
+            </strong>
+          </p>
+
+          <ul>
+            <li>
+              <strong>EVV Clock In/Out:</strong> Easily clock in and out through
+              our Electronic Visit Verification (EVV) system to ensure your work
+              hours are accurately recorded. Access clear instructions to
+              streamline your daily check-in and check-out process.
+            </li>
+            <li>
+              <strong>View PTO Balance:</strong> Stay updated on your paid time
+              off (PTO) hours by logging into our system. Track your vacation
+              time, sick leave, and personal days conveniently through a secure
+              online platform.
+            </li>
+            <li>
+              <strong>View Your Pay Stub:</strong> Instantly access your latest
+              pay stubs and payment history. Manage your earnings information
+              with ease and ensure you have accurate records for your financial
+              planning.
+            </li>
+          </ul>
+
+          <p>
+            <strong>Why Use the Cottage Home Care Help Desk?</strong>
+          </p>
+
+          <ul>
+            <li>
+              <strong>24/7 Accessibility:</strong> Access important information
+              and resources anytime, from any device, whether you are at home or
+              on the go.
+            </li>
+            <li>
+              <strong>User-Friendly Interface:</strong> Our online portal is
+              simple, fast, and secure, designed to make navigating your
+              work-related information easy and hassle-free.
+            </li>
+            <li>
+              <strong>Efficient Time Management:</strong> Quickly check your
+              schedules, PTO balances, and pay information without the need for
+              long wait times or paperwork.
+            </li>
+            <li>
+              <strong>Employee Support:</strong> Our Help Desk is part of our
+              broader commitment to supporting our employees needs, ensuring
+              that your questions and concerns are addressed promptly.
+            </li>
+          </ul>
+
+          <p>
+            <strong>How to Get Started</strong>
+          </p>
+
+          <p>
+            Using the Cottage Home Care Help Desk is simple. Visit the Help Desk
+            page, and click on the appropriate link depending on the task you
+            need to complete. For clocking in and out, following the EVV
+            instructions will guide you through the process. To view your PTO or
+            pay stubs, you can log in securely to the system and access your
+            information with just a few clicks.
+          </p>
+
+          <p>
+            If you encounter any issues or need additional support, our team is
+            always ready to assist you. You can reach out by calling{" "}
+            <strong>516-367-2266</strong> or emailing{" "}
+            <strong>info@cottagehomecare.com</strong> for help.
+          </p>
+
+          <p>
+            <strong>Stay Connected with Cottage Home Care Services</strong>
+          </p>
+
+          <p>
+            We encourage all our team members to stay connected with us through
+            our social media platforms. Follow us on Facebook, Instagram, X
+            (formerly Twitter), TikTok, and YouTube to stay updated on news,
+            announcements, and community events.
+          </p>
+
+          <p>
+            At Cottage Home Care Services, we are proud of our amazing staff and
+            are committed to making your experience as smooth, efficient, and
+            rewarding as possible. The Help Desk is just one of the many ways we
+            show our appreciation and support for everything you do.
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-3 mx-auto w-[95%] md:w-[90%] 2xl:w-[75%]  py-6  gap-10 ">
           {stuffs?.map((stuff, index) => (
             <div key={index}>

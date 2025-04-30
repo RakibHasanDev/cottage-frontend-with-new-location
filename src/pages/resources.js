@@ -187,50 +187,124 @@ const Resources = () => {
         <h2 className="sr-only">
           Access Essential Resources, Timesheets, and Forms at Cottage Home Care
         </h2>
-        <p className="sr-only">
-          If you&apos;re pursuing a career as a Home Health Aide (HHA) in New
-          York State, it&apos;s important to understand the essential tools,
-          certifications, and opportunities available to you—especially if
-          you&apos;re considering roles within the New York State Office for
-          People With Developmental Disabilities (OPWDD). This guide will walk
-          you through three key areas: HHA login, HHA online certification, and
-          job opportunities with NYS OPWDD. HHA Login: Accessing Your Training
-          and Employment Portals For HHAs in New York, various agencies and
-          training platforms require secure HHA login access. Whether
-          you&apos;re enrolled in a certification course or already employed
-          with an agency, here are a few common uses for your login credentials:
-          Training Portals: Access online lessons, exams, and certification
-          status. Employee Dashboards: View work schedules, pay stubs, and HR
-          updates. Compliance Records: Track your completed training hours and
-          certifications. Be sure to always use official links from your agency
-          or training provider. If you&apos;re unsure about the login portal you
-          need, contact your training coordinator or HR department. HHA Online
-          Certification in New York State Getting certified as a Home Health
-          Aide in New York is a crucial step. Thanks to recent updates and
-          remote learning options, you can now pursue your HHA online
-          certification more conveniently. Requirements: Completion of a 75-hour
-          training program approved by the New York State Department of Health.
-          Combination of classroom instruction and supervised practical
-          training. Successful demonstration of core skills in patient care and
-          communication. Many training programs now offer hybrid or fully online
-          options for the classroom portion, allowing greater flexibility for
-          those balancing work or family responsibilities. Where to Find Online
-          HHA Programs: Local home care agencies (often offer free training with
-          job placement) Accredited vocational schools and community colleges
-          NYS Department of Health listings of approved providers New York State
-          OPWDD Jobs for HHAs The New York State Office for People With
-          Developmental Disabilities (OPWDD) offers fulfilling career paths for
-          certified HHAs who want to support individuals with developmental
-          disabilities. Why Work with OPWDD? Stable, state-supported employment
-          Opportunities to make a meaningful impact Excellent benefits and
-          pension options Career advancement through state-sponsored training
-          Common Roles Include: Direct Support Professional (DSP): Assisting
-          individuals with daily living skills. Residential Habilitation Aide:
-          Working in group home settings. Community Support Staff: Helping
-          individuals live independently and participate in community life. To
-          qualify for OPWDD jobs, an active HHA certification, background check,
-          and in many cases, a valid NYS driver’s license are required.
-        </p>
+        <div className="sr-only">
+          <p>
+            If you&apos;re pursuing a career as a Home Health Aide (HHA) in New
+            York State, it&apos;s important to understand the essential tools,
+            certifications, and opportunities available to you—especially if
+            you&apos;re considering roles within the New York State Office for
+            People With Developmental Disabilities (OPWDD). This guide will walk
+            you through three key areas: HHA login, HHA online certification,
+            and job opportunities with NYS OPWDD.
+          </p>
+
+          <h3>HHA Login: Accessing Your Training and Employment Portals</h3>
+          <p>
+            For HHAs in New York, various agencies and training platforms
+            require secure HHA login access. Whether you&apos;re enrolled in a
+            certification course or already employed with an agency, here are a
+            few common uses for your login credentials:
+          </p>
+          <ul>
+            <li>
+              <strong>Training Portals:</strong> Access online lessons, exams,
+              and certification status.
+            </li>
+            <li>
+              <strong>Employee Dashboards:</strong> View work schedules, pay
+              stubs, and HR updates.
+            </li>
+            <li>
+              <strong>Compliance Records:</strong> Track your completed training
+              hours and certifications.
+            </li>
+          </ul>
+          <p>
+            Be sure to always use official links from your agency or training
+            provider. If you&apos;re unsure about the login portal you need,
+            contact your training coordinator or HR department.
+          </p>
+
+          <h3>HHA Online Certification in New York State</h3>
+          <p>
+            Getting certified as a Home Health Aide in New York is a crucial
+            step. Thanks to recent updates and remote learning options, you can
+            now pursue your HHA online certification more conveniently.
+          </p>
+          <p>
+            <strong>Requirements:</strong>
+          </p>
+          <ul>
+            <li>
+              Completion of a <strong>75-hour training program</strong> approved
+              by the New York State Department of Health.
+            </li>
+            <li>
+              Combination of{" "}
+              <strong>
+                classroom instruction and supervised practical training.
+              </strong>
+            </li>
+            <li>
+              Successful demonstration of{" "}
+              <strong>core skills in patient care and communication.</strong>
+            </li>
+          </ul>
+          <p>
+            Many training programs now offer hybrid or fully online options for
+            the classroom portion, allowing greater flexibility for those
+            balancing work or family responsibilities.
+          </p>
+          <p>
+            <strong>Where to Find Online HHA Programs:</strong>
+          </p>
+          <ul>
+            <li>
+              Local home care agencies (often offer free training with job
+              placement)
+            </li>
+            <li>Accredited vocational schools and community colleges</li>
+            <li>NYS Department of Health listings of approved providers</li>
+          </ul>
+
+          <h3>New York State OPWDD Jobs for HHAs</h3>
+          <p>
+            The New York State Office for People With Developmental Disabilities
+            (OPWDD) offers fulfilling career paths for certified HHAs who want
+            to support individuals with developmental disabilities.
+          </p>
+          <p>
+            <strong>Why Work with OPWDD?</strong>
+          </p>
+          <ul>
+            <li>Stable, state-supported employment</li>
+            <li>Opportunities to make a meaningful impact</li>
+            <li>Excellent benefits and pension options</li>
+            <li>Career advancement through state-sponsored training</li>
+          </ul>
+
+          <p>
+            <strong>Common Roles Include:</strong>
+          </p>
+          <ul>
+            <li>
+              <strong>Direct Support Professional (DSP):</strong> Assisting
+              individuals with daily living skills.
+            </li>
+            <li>
+              <strong>Residential Habilitation Aide:</strong> Working in group
+              home settings.
+            </li>
+            <li>
+              <strong>Community Support Staff:</strong> Helping individuals live
+              independently and participate in community life.
+            </li>
+          </ul>
+          <p>
+            To qualify for OPWDD jobs, an active HHA certification, background
+            check, and in many cases, a valid NYS driver’s license are required.
+          </p>
+        </div>
 
         <Suspense fallback={<SkeletonLoading />}>
           <LazyBanner />
@@ -238,6 +312,29 @@ const Resources = () => {
         <Suspense fallback={<SkeletonLoading />}>
           <ResourcesCard />
         </Suspense>
+
+        {/* <div className="lg:grid grid-cols-7">
+          <div className="lg:col-span-5">
+            <Suspense fallback={<SkeletonLoading />}>
+              <ResourcesCard />
+            </Suspense>
+          </div>
+
+          <div className="w-[100%] h-full  mx-auto lg:col-span-2 bg-[#3A3A3A] ">
+            <iframe
+              src="https://online.pubhtml5.com/jmohp/exol/"
+              seamless
+              scrolling="no"
+              frameBorder="0"
+              allowTransparency="true"
+              allowFullScreen
+              className="w-[100%] h-[80vh] lg:h-[80vh] mx-auto bg-white "
+            />
+            <h1 className="text-center 2xl:text-lg text-white font-semibold  lg:-mt-[65vh]">
+              HHA Handbook – Cottage Home Care Services NJ
+            </h1>
+          </div>
+        </div> */}
       </main>
     </>
   );

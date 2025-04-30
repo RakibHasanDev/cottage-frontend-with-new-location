@@ -132,7 +132,7 @@ const WeAre = () => {
                   }`}
                 >
                   <h6
-                    className={`content  ld:pr-6 md:p-4 p-3 2xl:leading-6 text-justify font-sans ${
+                    className={`content  ld:pr-6 md:p-4 p-3 2xl:leading-6 text-justify font-sans font-smooth ${
                       index === 0
                         ? "text-white"
                         : index === 1
@@ -141,12 +141,6 @@ const WeAre = () => {
                         ? "text-gray-700"
                         : "text-white"
                     }`}
-                    style={{
-                      fontSmooth: "always", // For smoother rendering
-                      WebkitFontSmoothing: "antialiased", // Optimized for macOS/iOS
-                      MozOsxFontSmoothing: "grayscale", // Optimized for macOS
-                      textRendering: "optimizeLegibility", // For better kerning and clarity
-                    }}
                   >
                     <p className="font-semibold text-base mb-1">
                       {info?.title}

@@ -74,86 +74,148 @@ const UpcomingEvent = () => {
         <h1 className="md:text-3xl text-lg text-[#00A6B2] font-bold text-center my-5">
           Grand Opening of Cottage Social Adult Day Care – Coming Soon!
         </h1>
-        <h2 className="sr-only">
-          Upcoming Events at Cottage Home Care – Social Adult Day Care Opening
-        </h2>
 
-        {/* start coutdown section  */}
+        <div className="w-[95%] lg:w-[90%] mx-auto py-8 text-gray-800 dark:text-gray-100 open-sans">
+          <h2>
+            <strong>
+              Upcoming Events at Cottage Home Care – Social Adult Day Care
+              Opening
+            </strong>
+          </h2>
 
-        {/* <div className=" py-10 ">
+          <p>
+            We are thrilled to announce the{" "}
+            <strong>Grand Opening of Cottage Social Adult Day Care</strong>—a
+            new, innovative care service designed to provide a safe, engaging,
+            and supportive environment for adults in need of daily care and
+            socialization. At <strong>Cottage Home Care</strong>, we understand
+            the importance of providing our clients with both physical care and
+            emotional well-being, and our Adult Day Care service is created to
+            support individuals who require assistance while also offering them
+            opportunities for meaningful interactions and activities.
+          </p>
 
-        
-        <div className="text-3xl lg:text-4xl relative font-bold  mb-5 text-center px-5   space-y-3 lobster text-red-600 border-[2px] border-red-600 dark:text-gray-100 dark:border-gray-100 py-5 lg:max-w-6xl mx-auto shadow-md rounded-sm">
-      
-        <h3 className="text-2xl md:text-2xl  2xl:text-4xl ">
-          <MdOutlineDateRange className="inline -mt-1  "/> Date: Saturday December 23rd, 2023 <IoMdTime className="inline -mt-1 ml-2 custom-icon   "/>  Time: 10AM - Until Supplies last 
+          <h3 className="mt-3">
+            <strong>What Is Cottage Social Adult Day Care?</strong>
           </h3>
-          <h3 className="text-2xl md:text-2xl  2xl:text-4xl">
 
-            Location: Jamaica Queens, NY
+          <p>
+            Cottage Social Adult Day Care is a specialized program that provides
+            a caring and structured environment for adults, particularly those
+            who are aging or living with chronic conditions. This service is
+            designed to allow clients to remain active, socially engaged, and
+            well-cared for, all while giving family caregivers the peace of mind
+            they need during the day. Whether it’s for those with Alzheimer’s,
+            dementia, or physical disabilities, our program is tailored to meet
+            the specific needs of every participant.
+          </p>
+
+          <h3 className="my-3">
+            <strong>Key Features of Cottage Social Adult Day Care:</strong>
           </h3>
+          <ul className="list-disc ml-5">
+            <li>
+              <strong>Personalized Care Plans:</strong> Each client’s health and
+              care needs are evaluated, and a customized care plan is created to
+              ensure the best care experience.
+            </li>
+            <li>
+              <strong>Social and Recreational Activities:</strong> We offer a
+              wide range of activities including games, arts and crafts,
+              exercise programs, and music therapy to keep clients engaged and
+              mentally stimulated.
+            </li>
+            <li>
+              <strong>Health Monitoring and Assistance:</strong> On-site
+              caregivers and medical professionals will provide assistance with
+              medication, monitoring health conditions, and ensuring overall
+              well-being.
+            </li>
+            <li>
+              <strong>Nutritional Meals:</strong> Nutritious meals are provided
+              to our clients, with dietary restrictions and preferences
+              carefully considered to support health and wellness.
+            </li>
+            <li>
+              <strong>Safe and Secure Environment:</strong> Our state-of-the-art
+              facility is designed to create a comfortable and safe space for
+              clients, including secure entry points and regular supervision by
+              our trained staff.
+            </li>
+          </ul>
+
+          <h3 className="mt-3">
+            <strong>Why Choose Cottage Social Adult Day Care?</strong>
+          </h3>
+          <ul className="list-disc ml-5">
+            <li>
+              <strong>Compassionate and Experienced Staff:</strong> Our trained
+              caregivers and health professionals bring experience, compassion,
+              and dedication to every client.
+            </li>
+            <li>
+              <strong>A Positive Social Environment:</strong> We believe in the
+              importance of socializing, and our facility is designed to foster
+              positive interactions among clients to combat loneliness and
+              isolation.
+            </li>
+            <li>
+              <strong>Relief for Caregivers:</strong> Family members and
+              caregivers can take time for themselves, knowing their loved ones
+              are in a safe, caring environment with the attention they deserve.
+            </li>
+            <li>
+              <strong>Holistic Approach to Care:</strong> Our program doesn’t
+              just focus on physical health—it promotes emotional, social, and
+              mental well-being as well.
+            </li>
+          </ul>
+
+          <h3 className="mt-3">
+            <strong>Join Us for the Grand Opening!</strong>
+          </h3>
+
+          <p>
+            We invite you to celebrate the opening of{" "}
+            <strong>Cottage Social Adult Day Care</strong> with us! Stay tuned
+            for details on our grand opening event, where we will offer tours of
+            our facility, meet-and-greets with our staff, and light
+            refreshments. It&apos;s a great opportunity to learn more about the
+            services we provide and how we can help improve the lives of your
+            loved ones.
+          </p>
+
+          <p className="mt-3">
+            <strong>Grand Opening Date: Coming soon!</strong>
+          </p>
+          <p>
+            <strong>Location:</strong> Coming soon!
+          </p>
+
+          <p>
+            To learn more about our Adult Day Care services or to RSVP for the
+            grand opening event, please contact us.
+          </p>
+
+          <h3 className="mt-3">
+            <strong>How to Get Involved:</strong>
+          </h3>
+          <ul>
+            <li>
+              <strong>Schedule a Tour:</strong> Interested in seeing our
+              facility? Schedule a tour before the grand opening.
+            </li>
+            <li>
+              <strong>RSVP for the Event:</strong> Join us for our grand opening
+              to learn about our services we offer.
+            </li>
+            <li>
+              <strong>Refer a Friend:</strong> Know someone who could benefit
+              from our Adult Day Care services? Refer them to us and help
+              improve their daily life.
+            </li>
+          </ul>
         </div>
-
-        <div className="flex justify-center mt-10">
-          <CountDown
-            targetDate={targetDate}
-          >
-          </CountDown>
-
-        </div>
-
-      </div> */}
-
-        {/* end countdown section  */}
-
-        {/* <div className="w-[80%] mx-auto pb-10" id="toy-giveaway">
-
-        <h3 className="text-xl md:text-2xl text-red-600 font-semibold mb-5 uppercase underline ">Upcoming Event</h3>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 ">
-          {
-
-            events?.map((event, index) => <div
-
-              key={index}
-
-              className="shadow-md pb-5 rounded-md dark:border-[1px]"
-
-            >
-              <img src={event?.picture} alt={event?.picture} className="w-full rounded-md h-[15rem]" />
-
-              <div className="px-4">
-                
-
-                <h3 className="text-xl font-semibold text-red-500 mt-3">Step {index + 1} : {event?.step1} </h3>
-
-                <ul className="list-disc ml-4 space-y-1 mt-2 text-justify dark:text-gray-100 " style={{hyphens:"auto"}}>
-                  <li>{event?.step2}</li>
-                  <li>{event?.step3}</li>
-                  <li>{event?.step4}</li>
-                  
-                </ul>
-
-                
-              </div>
-
-
-
-
-
-
-
-
-
-
-            </div>)
-          }
-
-        </div>
-
-      </div> */}
-
-        {/* start card section  */}
       </main>
     </>
   );

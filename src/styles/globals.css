@@ -26,6 +26,12 @@
   font-style: normal;
 }
 
+.font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 /* Hover underline Start */
 
 /* navbar css start  */

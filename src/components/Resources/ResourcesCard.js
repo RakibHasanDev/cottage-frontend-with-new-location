@@ -10,6 +10,10 @@ const ResourcesCard = () => {
   // List of all documents
   const allDocuments = [
     {
+      name: "HHA Handbook - Cottage Home Care Services NJ",
+      url: "https://online.pubhtml5.com/jmohp/exol/",
+    },
+    {
       name: "Physical Form (PDF)",
       file: "/assets/resources/PHYSICAL Form.pdf",
     },
@@ -78,7 +82,7 @@ const ResourcesCard = () => {
       <hr className="border-[#00a6b2] border-t-[1px] w-12  mb-5 mx-auto dark:border-gray-100 block md:hidden" />
 
       <div
-        className="grid md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto gap-7"
+        className="grid md:grid-cols-2 lg:grid-cols-3  mx-auto gap-7 max-w-7xl"
         id="all-resources"
       >
         {filteredDocuments?.length > 0 ? (
@@ -92,12 +96,23 @@ const ResourcesCard = () => {
                   {doc?.name}
                 </h2>
                 <div className="card-actions justify-center mt-6 text-center">
-                  <button
-                    onClick={() => window.open(doc?.file, "_blank")}
-                    className="custom-ancor bg-[#00A6B2] text-white px-5 py-2.5 open-sans rounded-md shadow-md"
-                  >
-                    Download
-                  </button>
+                  {doc?.file ? (
+                    <button
+                      onClick={() => window.open(doc?.file, "_blank")}
+                      className="custom-ancor bg-[#00A6B2] text-white px-5 py-2.5 open-sans rounded-md shadow-md"
+                    >
+                      Download
+                    </button>
+                  ) : (
+                    <a
+                      href={doc?.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="custom-ancor bg-[#00A6B2] text-white px-5 py-2.5 open-sans rounded-md shadow-md"
+                    >
+                      View
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

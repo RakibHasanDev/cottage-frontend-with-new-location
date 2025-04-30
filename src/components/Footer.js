@@ -140,16 +140,16 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 text-sm lg:text-base gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3 ">
+            <div className="grid grid-cols-2  lg:text-base gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3 ">
               <div className="space-y-3">
                 <Link
                   href="/privacy-policy"
-                  className="tracking-wide uppercase text-gray-50 hover:text-[#00A6B2] tracking-wider"
+                  className=" uppercase text-gray-50 hover:text-[#00A6B2] tracking-wider"
                 >
                   Privacy Policy
                 </Link>
                 <ul className="space-y-1 uppercase tracking-wider">
-                  <li style={{ listStyle: "none" }}>
+                  <li>
                     <Link
                       href="/terms-and-conditions"
                       rel="noopener noreferrer"
@@ -159,7 +159,7 @@ const Footer = () => {
                       Terms and Conditions
                     </Link>
                   </li>
-                  <li style={{ listStyle: "none" }}>
+                  <li>
                     <Link
                       href="/disclaimer"
                       rel="noopener noreferrer"
@@ -176,7 +176,7 @@ const Footer = () => {
                   About US
                 </p>
                 <ul className="space-y-1 uppercase tracking-wider">
-                  <li style={{ listStyle: "none" }}>
+                  <li>
                     <Link
                       href="/mission-vision"
                       className="hover:text-[#00A6B2]"
@@ -186,7 +186,7 @@ const Footer = () => {
                     </Link>
                   </li>
 
-                  <li style={{ listStyle: "none" }}>
+                  <li>
                     <Link
                       href="/sitemap"
                       rel="noopener noreferrer"
@@ -198,13 +198,13 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="space-y-3 flex gap-10">
+              <div className="space-y-3 flex lg:gap-10 gap-0 ">
                 <div>
                   <h3 className="uppercase dark:text-gray-50 tracking-wider">
                     Contact Info
                   </h3>
                   <ul className="space-y-1 uppercase tracking-wider">
-                    <li style={{ listStyle: "none" }}>
+                    <li>
                       <a
                         href="tel:+1516-367-2266"
                         rel="noreferrer"
@@ -221,7 +221,7 @@ const Footer = () => {
                     <li>
                       <a
                         href={`mailto:${"info"}@${"cottagehomecare.com"}`}
-                        className="hover:text-[#00A6B2] "
+                        className="hover:text-[#00A6B2] text-xs lg:text-base "
                         rel="noreferrer"
                         aria-label="Email us on info@cottagehomecare.com"
                       >
@@ -230,7 +230,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div>
+                <div className="">
                   <TrustpilotWidget />
                 </div>
               </div>

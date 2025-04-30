@@ -40,6 +40,57 @@ const diwali2024 = () => {
           </div>
         </div>
 
+        <div className="w-[95%] my-5 mx-auto sr-only">
+          <p>
+            Cottage Home Care Services proudly celebrated Diwali 2024 on Liberty
+            Avenue with our diverse and vibrant community. Known as the Festival
+            of Lights, Diwali brings people together in a spirit of joy,
+            gratitude, and hope.
+          </p>
+          <p>
+            This event gave us a wonderful chance to connect with families,
+            share traditions, and celebrate the strength of unity and light. We
+            were honored to take part in this meaningful celebration alongside
+            the people we care for every day.
+          </p>
+          <p>
+            Our participation included fun and thoughtful ways to spread
+            happiness:
+          </p>
+          <ul>
+            <li>
+              <strong>Community Booth:</strong> We welcomed visitors, shared
+              information about our services, and answered questions about
+              personalized home care.
+            </li>
+            <li>
+              <strong>Festive Giveaways:</strong> Over 500 people received
+              Cottage-branded hoodies, gift bags, and other merchandise to
+              remember the celebration.
+            </li>
+            <li>
+              <strong>Cultural Activities:</strong> We offered free henna,
+              traditional sweets, and warm conversations to honor the Diwali
+              spirit.
+            </li>
+          </ul>
+          <p>
+            Events like this remind us of the value of culture, community, and
+            kindness. At Cottage Home Care Services, we are committed to
+            celebrating and supporting the people and traditions that make our
+            neighborhoods strong.
+          </p>
+          <p>
+            To learn more about our community events or services, please contact
+            us at
+            <a href="mailto:info@cottagehomecare.com">
+              {" "}
+              info@cottagehomecare.com
+            </a>
+            or call <a href="tel:516-367-2266">516-367-2266</a>.
+          </p>
+        </div>
+
         <div className="md:py-5 lg:w-[80%] w-[95%] mx-auto ">
           <div className="lg:mb-8  py-5">
             <p className=" text-center  text-xl  md:text-xl lg:text-2xl xl:text-4xl font-bold text-[#00A6B2] dark:text-gray-100 text-shadow league-spartan">
