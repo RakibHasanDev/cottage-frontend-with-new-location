@@ -9,11 +9,11 @@ Disallow: /_next/data/
 
 # Allow SEO-relevant pages
 Allow: /
+Allow: /blog/
 Allow: /_next/static/css/
 Allow: /_next/static/js/
 Allow: /_next/static/chunks/
 Allow: /_next/static/media/
-Allow: /blog/
 Allow: /team/$
 Allow: /nhtd/
 Allow: /hha/

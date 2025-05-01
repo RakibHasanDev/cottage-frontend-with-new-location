@@ -159,7 +159,7 @@ const MapComponent = () => {
               {/* Text on the right */}
               <div className="flex flex-col justify-between h-full">
                 <div>
-                  <h2 className="text-lg font-bold">{office?.officeName}</h2>
+                  <p className="text-lg font-bold">{office?.officeName}</p>
                   <p className="text-[14px] font-semibold">
                     {office?.openingDays}
                   </p>
@@ -241,9 +241,9 @@ const MapComponent = () => {
               </>
             ) : (
               <>
-                <h1 className="text-center text-4xl tracking-wide h-full flex items-center justify-center leading-normal">
+                <p className="text-center text-4xl tracking-wide h-full flex items-center justify-center leading-normal">
                   Come At Our <br /> Office
-                </h1>
+                </p>
               </>
             )}
 
@@ -301,7 +301,7 @@ const MapComponent = () => {
                 }`}
                 onClick={() => handleOfficeClick(office)}
               >
-                <h1 className="font-semibold text-sm"> {office?.officeName}</h1>
+                <p className="font-semibold text-sm"> {office?.officeName}</p>
 
                 <div
                   className={`${
@@ -332,9 +332,9 @@ const MapComponent = () => {
             {selectedOffice ? (
               <>
                 <div className="">
-                  <h1 className="text-center text-lg font-semibold text-gray-600 league-spartan">
+                  <p className="text-center text-lg font-semibold text-gray-600 league-spartan">
                     {selectedOffice?.officeName}
-                  </h1>
+                  </p>
 
                   <p className="p-[2px] bg-[#ff9900] shadow-md rounded-md w-[40%] mx-auto mt-0.5"></p>
 
@@ -378,9 +378,9 @@ const MapComponent = () => {
               </>
             ) : (
               <>
-                <h1 className="text-center text-4xl tracking-wide h-fit flex items-center justify-center leading-normal">
+                <p className="text-center text-4xl tracking-wide h-fit flex items-center justify-center leading-normal">
                   Come At Our <br /> Office
-                </h1>
+                </p>
               </>
             )}
           </div>
@@ -390,9 +390,9 @@ const MapComponent = () => {
       {/* map location start  */}
 
       <div className="block lg:hidden">
-        <h1 className="text-center  text-lg text-gray-600 dark:text-white my-5 font-semibold">
+        <p className="text-center  text-lg text-gray-600 dark:text-white my-5 font-semibold">
           Map Location
-        </h1>
+        </p>
 
         <div data-aos="fade-up" data-aos-duration="1500">
           <div className=" shadow-lg rounded-lg overflow-hidden border border-gray-300 w-[98%] mx-auto ">

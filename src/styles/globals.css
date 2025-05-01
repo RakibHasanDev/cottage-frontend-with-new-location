@@ -1005,15 +1005,15 @@ button.slick-arrow.slick-prev::before {
 
 .masked-div {
   position: relative;
-  -webkit-mask-image: url("https://res.cloudinary.com/di3wwp9s0/image/upload/v1732563824/oazwgevho7aiqygqi0m8.png");
-  mask-image: url("https://res.cloudinary.com/di3wwp9s0/image/upload/v1732563824/oazwgevho7aiqygqi0m8.png");
+  -webkit-mask-image: url("https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_500/oazwgevho7aiqygqi0m8.png");
+  mask-image: url("https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_500/oazwgevho7aiqygqi0m8.png");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-size: contain;
   mask-size: contain;
-  background-color: #fff; /* Optional: Add a contrast background */
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -1356,15 +1356,15 @@ button.slick-arrow.slick-prev::before {
 
 .whyChose-div {
   position: relative;
-  -webkit-mask-image: url("https://res.cloudinary.com/di3wwp9s0/image/upload/v1733415439/ufk7lpvojkrv3iwzxbr6.png");
-  mask-image: url("https://res.cloudinary.com/di3wwp9s0/image/upload/v1733415439/ufk7lpvojkrv3iwzxbr6.png");
+  -webkit-mask-image: url("https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_500/ufk7lpvojkrv3iwzxbr6.png");
+  mask-image: url("https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_500/ufk7lpvojkrv3iwzxbr6.png");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-size: contain;
   mask-size: contain;
-  background-color: #fff; /* Optional: Add a contrast background */
+  background-color: #fff;
   overflow: hidden;
 }
 
