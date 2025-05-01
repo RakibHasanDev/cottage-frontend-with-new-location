@@ -95,12 +95,12 @@ const MedicaidApply = () => {
 
           <div className="flex flex-col md:flex-row  items-center justify-start gap-y-5 lg:gap-x-28 2xl:gap-x-48 ">
             <div className="lg:space-y-3 space-y-2">
-              <h1 className="text-2xl md:text-3xl 2xl:text-4xl font-bold league-spartan">
+              <p className="text-2xl md:text-3xl 2xl:text-4xl font-bold league-spartan">
                 Don&apos;t Have Medicaid?
-              </h1>
-              <h1 className="text-2xl md:text-3xl 2xl:text-4xl font-bold league-spartan">
+              </p>
+              <p className="text-2xl md:text-3xl 2xl:text-4xl font-bold league-spartan">
                 We&apos;ll help you apply.
-              </h1>
+              </p>
 
               <div className="pt-2 bg-hov2">
                 <a

@@ -218,10 +218,10 @@ export default function App() {
       <div className="w-[100%]">
         <div data-aos="fade-up" data-aos-duration="1500">
           <div className="w-[95%] lg:w-[80%] 2xl:w-[70%] mx-auto dark:text-white mt-[10px] md:mt-[20px] lg:mt-10 ">
-            <h1 className=" text-start text-2xl lg:text-3xl font-semibold league-spartan text-[#00A6B2] dark:text-gray-100 lg:max-w-[840px] ">
+            <p className=" text-start text-2xl lg:text-3xl font-semibold league-spartan text-[#00A6B2] dark:text-gray-100 lg:max-w-[840px] ">
               {" "}
               Our Fun Day Challenges: Where Competition Meets Community!
-            </h1>
+            </p>
             <p className="mt-1 md:mt-3 w-[95%] lg:max-w-[865px]  text-sm md:text-base  leading-loose  text-[16px] open-sans font-normal text-[#373642] dark:text-gray-100 text-justify">
               Get ready for nonstop fun, exciting challenges, and belly-aching
               laughter! Our Fun Day Challenges are packed with unique,

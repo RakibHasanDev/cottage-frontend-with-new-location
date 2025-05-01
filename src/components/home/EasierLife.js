@@ -170,9 +170,9 @@ const EasierLife = () => {
           id="schedule-calendar"
           className={`text-center max-w-xl mx-auto py-[20px] lg:py-[90px] ${showProperty} `}
         >
-          <h1 className="text-[#322e51] pb-3 text-2xl md:text-xl lg:text-2xl xl:text-4xl relative font-bold afterEffect mb-5  dark:text-gray-100 league-spartan">
+          <p className="text-[#322e51] pb-3 text-2xl md:text-xl lg:text-2xl xl:text-4xl relative font-bold afterEffect mb-5  dark:text-gray-100 league-spartan">
             You deserve an easier life, too
-          </h1>
+          </p>
           <p className="text-[#67637e] text-lg font-[Roboto] dark:text-gray-100 open-sans">
             Call us now at{" "}
             <a href="tel: +1516-367-2266" className="text-[#00a6b2]">
@@ -206,10 +206,10 @@ const EasierLife = () => {
                   onSubmit={handleSubmit(submitHandler)}
                   className="max-w-xl md:max-w-2xl dark:bg-slate-800  bg-gray-50 px-4 py-3 md:py-4 md:p-8 rounded-md shadow-xl md:ml-[7%] lg:ml-0 open-sans"
                 >
-                  <h1 className="text-2xl text-gray-600 text-center md:font-semibold league-spartan custom-font dark:text-gray-100">
+                  <p className="text-2xl text-gray-600 text-center md:font-semibold league-spartan custom-font dark:text-gray-100">
                     {" "}
                     CONTACT FORM
-                  </h1>
+                  </p>
 
                   <div className="grid  gap-3 md:gap-6 md:mt-4 grid-cols-2">
                     <div className="md:space-y-1 text-sm ">

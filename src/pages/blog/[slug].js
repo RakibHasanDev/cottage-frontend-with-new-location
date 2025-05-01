@@ -211,6 +211,8 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
         <meta name="author" content="Cottage Home Care Services" />
+
+        {/* Open Graph */}
         <meta
           property="og:title"
           content={`${blog?.title} - Cottage Home Care`}
@@ -223,19 +225,116 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
         />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={blog?.date} />
+
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={blog?.title} />
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={blog?.img} />
 
+        {/* Canonical */}
         <link
           rel="canonical"
           href={`https://cottagehomecare.com/blog/${blog?.slug}/`}
         />
-
         {imageSrc && (
           <link rel="preload" href={imageSrc} as="image" fetchPriority="high" />
         )}
+
+        {/* Breadcrumb Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Home",
+                  item: "https://cottagehomecare.com/",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: blog?.title,
+                  item: `https://cottagehomecare.com/blog/${blog?.slug}`,
+                },
+              ],
+            }),
+          }}
+        />
+
+        {/* Article Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: blog?.title,
+              description: metaDescription,
+              image: [blog?.img],
+              author: {
+                "@type": "Organization",
+                name: "Cottage Home Care Services",
+                url: "https://cottagehomecare.com",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "Cottage Home Care Services",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://cottagehomecare.com/assets/cottage-home-care-logo-blog.webp",
+                },
+              },
+              datePublished: new Date(
+                blog?.date || blog?.newDate
+              ).toISOString(),
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `https://cottagehomecare.com/blog/${blog?.slug}`,
+              },
+            }),
+          }}
+        />
+
+        {/* WebPage Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: blog?.title,
+              url: `https://cottagehomecare.com/blog/${blog?.slug}`,
+              description: metaDescription,
+            }),
+          }}
+        />
+
+        {/* Organization Schema with social media */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Cottage Home Care Services",
+              url: "https://cottagehomecare.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://cottagehomecare.com/assets/cottage-home-care-logo-blog.webp",
+              },
+              sameAs: [
+                "https://www.facebook.com/cottageHC",
+                "https://www.instagram.com/cottage.homecare/",
+                "https://www.tiktok.com/@cottage.homecare",
+              ],
+            }),
+          }}
+        />
       </Head>
 
       <div className="min-h-screen dark:bg-gray-800">

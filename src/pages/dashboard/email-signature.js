@@ -268,7 +268,10 @@ const EmployeeSignature = () => {
                                         }}
                                       >
                                         <p style={{ margin: "0.04px" }}>
-                                          <img src={imageUrl} alt="" />
+                                          <img
+                                            src={imageUrl}
+                                            alt="employee_img"
+                                          />
                                         </p>
                                       </td>
                                     </tr>

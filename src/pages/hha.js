@@ -390,7 +390,7 @@ const hha = () => {
                 <div className="h-56 overflow-hidden">
                   <img
                     src={train?.img}
-                    alt={`{train?.img}`}
+                    alt={train?.title}
                     className="h-full object-cover w-full"
                     width={1080}
                     height={620}

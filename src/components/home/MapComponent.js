@@ -113,9 +113,9 @@ const MapComponent = () => {
       id="map-location"
     >
       <div className="flex items-center gap-2 text-center justify-center   relative ">
-        <h1 className="text-xl md:text-3xl 2xl:text-4xl font-bold  dark:text-gray-300 league-spartan text-[#00A6B2]">
+        <p className="text-xl md:text-3xl 2xl:text-4xl font-bold  dark:text-gray-300 league-spartan text-[#00A6B2]">
           Cottage Home Care
-        </h1>
+        </p>
         <a
           href="https://www.google.com/maps/d/viewer?mid=1F8-owHlE5yYe1I4I4WWueTc_2zvqHSE&ll=40.72910277268202%2C-73.92877093246109&z=10"
           target="_blank"
@@ -198,13 +198,13 @@ const MapComponent = () => {
             {selectedOffice ? (
               <>
                 <div className="montserrat">
-                  <h1 className="text-center text-2xl lg:text-3xl dark:text-gray-700 font-semibold league-spartan">
+                  <p className="text-center text-2xl lg:text-3xl dark:text-gray-700 font-semibold league-spartan">
                     {selectedOffice?.officeName}
-                  </h1>
+                  </p>
 
-                  <h2 className="text-center mt-1 text-lg dark:text-gray-800 font-semibold league-spartan">
+                  <p className="text-center mt-1 text-lg dark:text-gray-800 font-semibold league-spartan">
                     {selectedOffice?.openingDays}
-                  </h2>
+                  </p>
                   <h3 className="text-center text-sm 2xl:text-base px-2 mt-2 py-1 rounded-md border-[2px] border-[#ff9900] dark:border-gray-500 w-[80%] lg:w-[90%] 2xl:w-[80%] mx-auto shadow-md dark:text-black font-medium open-sans">
                     {getTodayOpeningHours(selectedOffice?.openingHours) ===
                     "Closed"

@@ -581,8 +581,8 @@ const Team = () => {
                             src={employeesByDepartment?.OfficeManager?.[0]?.img}
                             alt={employeesByDepartment?.OfficeManager?.[0]?.img}
                             className=" w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
-                            w="48"
-                            h="48"
+                            width={48}
+                            height={48}
                             loading="lazy"
                           />
                         </PhotoView>
@@ -657,8 +657,8 @@ const Team = () => {
                               employeesByDepartment?.CdpapSuperVisor?.[0]?.img
                             }
                             className="  w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
-                            w="48"
-                            h="48"
+                            width="48"
+                            height="48"
                             loading="lazy"
                           />
                         </PhotoView>
@@ -733,8 +733,8 @@ const Team = () => {
                               employeesByDepartment?.AdminSuperVisor?.[0]?.img
                             }
                             className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
-                            w="48"
-                            h="48"
+                            width="48"
+                            height="48"
                             loading="lazy"
                           />
                         </PhotoView>
@@ -809,8 +809,8 @@ const Team = () => {
                             src={employeesByDepartment?.HHA_MANAGER?.[0]?.img}
                             alt={employeesByDepartment?.HHA_MANAGER?.[0]?.img}
                             className="  w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
-                            w="48"
-                            h="48"
+                            width="48"
+                            height="48"
                             loading="lazy"
                           />
                         </PhotoView>
@@ -883,8 +883,8 @@ const Team = () => {
                             src={employeesByDepartment?.HrSuperVisor?.[0]?.img}
                             alt={employeesByDepartment?.HrSuperVisor?.[0]?.img}
                             className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
-                            w="48"
-                            h="48"
+                            width="48"
+                            height="48"
                             loading="lazy"
                           />
                         </PhotoView>
@@ -962,8 +962,8 @@ const Team = () => {
                               employeesByDepartment?.BillingSuperVisor?.[0]?.img
                             }
                             className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
-                            w="48"
-                            h="48"
+                            width="48"
+                            height="48"
                             loading="lazy"
                           />
                         </PhotoView>
@@ -1039,8 +1039,8 @@ const Team = () => {
                               employeesByDepartment?.Administrative?.[0]?.img
                             }
                             className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
-                            w="48"
-                            h="48"
+                            width="48"
+                            height="48"
                             loading="lazy"
                           />
                         </PhotoView>
@@ -1080,8 +1080,8 @@ const Team = () => {
                                   className="w-7 h-7 md:w-8 md:h-8 rounded-full"
                                   src={employee?.img}
                                   alt={employee?.name}
-                                  w="28"
-                                  h="28"
+                                  width="28"
+                                  height="28"
                                   loading="lazy"
                                 />
                               </div>
@@ -1226,8 +1226,8 @@ const Team = () => {
                                 className="w-7 h-7 md:w-8 md:h-8 rounded-full"
                                 src={employee?.img}
                                 alt={employee?.name}
-                                w="28"
-                                h="28"
+                                width="28"
+                                height="28"
                                 loading="lazy"
                               />
                             </div>
@@ -1298,8 +1298,8 @@ const Team = () => {
                                 className="w-7 h-7 md:w-8 md:h-8 rounded-full"
                                 src={employee?.img}
                                 alt={employee?.name}
-                                w="28"
-                                h="28"
+                                width="28"
+                                height="28"
                                 loading="lazy"
                               />
                             </div>
@@ -1370,8 +1370,8 @@ const Team = () => {
                               className="w-7 h-7 rounded-full"
                               src={leader?.img}
                               alt={leader?.img}
-                              w="28"
-                              h="28"
+                              width="28"
+                              height="28"
                               loading="lazy"
                             />
                             <p className="font-medium dark:text-gray-100">
@@ -1399,8 +1399,8 @@ const Team = () => {
                                       src={tm?.img}
                                       alt={tm?.img}
                                       className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
-                                      w="64"
-                                      h="64"
+                                      width="64"
+                                      height="64"
                                       loading="lazy"
                                     />
                                   </PhotoView>

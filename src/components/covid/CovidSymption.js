@@ -49,7 +49,7 @@ const CovidSymption = () => {
                   <div>
                     <img
                       src={symptom?.img}
-                      alt=""
+                      alt="covid-symptoms"
                       className="rounded-full"
                       style={{ width: "80px", height: "80px" }}
                     />
