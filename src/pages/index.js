@@ -67,7 +67,7 @@ const CottageVideoSlider = dynamic(
 export default function Home() {
   const title = "Cottage Home Care Services – NHTD, HHA & Private Pay";
   const description =
-    "Cottage Home Care Services provides top-quality home care services in NYC, including NHTD, HHA, Private Pay, CDPAP, and senior care support. Contact us today!";
+    "Cottage Home Care provides top-quality home care services in NYC, including NHTD, HHA, Private Pay, CDPAP, and senior home care support. Contact us today!";
 
   const keywords =
     "Cottage Home Care, Cottage Agency, Cottage Home Care Services, NHTD, NHTD Program, home care agencies near me, homecare, Home Health Aide NYC, Private Pay Home Care, Senior Care NYC, Medicaid Home Care, Nursing Home Transition, Diversion Services, Independent Living Support, HHA Certification, Personal Care Services, Home Health Care, Home Care Services, Home Care Agencies, Senior Home Care, Elderly Care Services, Non-Medical Home Care, Home Care Assistance, Home Care Providers, home care for seniors, cottage home care pay rate, private home care agencies in NYC, HHA PCA services";
