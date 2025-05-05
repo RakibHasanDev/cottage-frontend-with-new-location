@@ -131,7 +131,11 @@ const ContactInfo = () => {
             <p className="text-gray-700 text-base my-0.5">Fax: 516-367-1067</p>
           </div>
           <div className=" bg-hov2  flex justify-center">
-            <a href="tel:+1516-367-2266" className=" text-white  ">
+            <a
+              href="tel:+1516-367-2266"
+              className=" text-white  "
+              aria-label="Call us at (516) 367-2266"
+            >
               {" "}
               {/* <Lottie
                 animationData={reader}

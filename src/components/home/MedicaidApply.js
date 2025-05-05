@@ -106,6 +106,7 @@ const MedicaidApply = () => {
                 <a
                   href="tel:+1516-367-2266"
                   className="flex items-center px-4 py-2.5  w-[205px] lg:w-[250px]  border border-white rounded-full text-white  bg-hov2 league-spartan overflow-hidden xl:text-xl "
+                  aria-label="Call us at (516) 367-2266"
                 >
                   {/* <FaPhone className="mr-2 " /> */}
                   <span ref={ref} className="h-[17px] ">

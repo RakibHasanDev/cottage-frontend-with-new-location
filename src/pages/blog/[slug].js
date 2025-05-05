@@ -87,8 +87,14 @@ export async function getStaticProps({ params }) {
 
     const metaTitle = `${blog?.title}`;
 
+    const rawDate = blog?.newDate || blog?.date;
+    const isoDate =
+      rawDate && !isNaN(new Date(rawDate))
+        ? new Date(rawDate).toISOString()
+        : null;
+
     return {
-      props: { blog, metaDescription, metaKeywords, metaTitle },
+      props: { blog, metaDescription, metaKeywords, metaTitle, isoDate },
     };
   } catch (error) {
     console.error("Error fetching blog:", error);
@@ -96,7 +102,13 @@ export async function getStaticProps({ params }) {
   }
 }
 
-const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
+const BlogDetails = ({
+  blog,
+  metaDescription,
+  metaKeywords,
+  metaTitle,
+  isoDate,
+}) => {
   const [currentPageUrl, setCurrentPageUrl] = useState("");
   const [formattedDate, setFormattedDate] = useState("");
   const { user } = useContext(AuthContext);
@@ -289,9 +301,7 @@ const BlogDetails = ({ blog, metaDescription, metaKeywords, metaTitle }) => {
                   url: "https://cottagehomecare.com/assets/cottage-home-care-logo-blog.webp",
                 },
               },
-              datePublished: new Date(
-                blog?.date || blog?.newDate
-              ).toISOString(),
+              datePublished: isoDate || new Date().toISOString(),
               mainEntityOfPage: {
                 "@type": "WebPage",
                 "@id": `https://cottagehomecare.com/blog/${blog?.slug}`,

@@ -24,6 +24,7 @@ const HeroSection = () => {
           <a
             href="tel:+1516-367-2266"
             className="flex items-center px-6 py-3 md:px-16 md:py-6 border border-[#00a6b2] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-xl "
+            aria-label="Call us at (516) 367-2266"
           >
             {/* <FaPhone className="mr-2 " /> */}
             <span ref={ref} className="h-[20px]">
