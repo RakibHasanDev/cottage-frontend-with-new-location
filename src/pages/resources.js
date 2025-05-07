@@ -177,6 +177,16 @@ const Resources = () => {
           property="og:image"
           content="https://cottagehomecare.com/logo.png"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/resources/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/resources/"
+          hreflang="x-default"
+        />
         <link rel="canonical" href="https://cottagehomecare.com/resources/" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>

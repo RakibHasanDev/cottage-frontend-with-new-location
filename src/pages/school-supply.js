@@ -52,6 +52,16 @@ const schoolSupply = () => {
           content="https://www.cottagehomecare.com/assets/new-school-giveaway/img11.webp"
         />
         <link
+          rel="alternate"
+          href="https://cottagehomecare.com/school-supply/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/school-supply/"
+          hreflang="x-default"
+        />
+        <link
           rel="canonical"
           href="https://cottagehomecare.com/school-supply/"
         />

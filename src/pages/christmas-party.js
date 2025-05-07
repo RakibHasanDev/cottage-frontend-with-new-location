@@ -52,6 +52,16 @@ const christmasParty = () => {
           content="https://www.cottagehomecare.com/assets/christmas-party/img1.webp"
         />
         <link
+          rel="alternate"
+          href="https://cottagehomecare.com/christmas-party/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/christmas-party/"
+          hreflang="x-default"
+        />
+        <link
           rel="canonical"
           href="https://cottagehomecare.com/christmas-party/"
         />

@@ -16,6 +16,16 @@ const Sitemap = () => {
           name="keywords"
           content="sitemap, Cottage Home Care, services, resources, community outreach, terms, privacy, CDPAP, HHA"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/sitemap/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/sitemap/"
+          hreflang="x-default"
+        />
         <link rel="canonical" href="https://cottagehomecare.com/sitemap/" />
       </Head>
 

@@ -210,6 +210,16 @@ const hha = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/assets/hha.webp"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/hha/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/hha/"
+          hreflang="x-default"
+        />
 
         <link rel="canonical" href="https://cottagehomecare.com/hha/" />
 

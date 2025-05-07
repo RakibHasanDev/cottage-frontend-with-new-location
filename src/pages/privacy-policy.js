@@ -16,6 +16,16 @@ const PrivacyPolicy = () => {
           content="Cottage Home Care Privacy Policy, data protection, personal information processing, privacy rights, SMS consent, secure data handling, information security, user privacy, data collection policy, privacy compliance"
         />
         <link
+          rel="alternate"
+          href={`https://cottagehomecare.com/privacy-policy/`}
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href={`https://cottagehomecare.com/privacy-policy/`}
+          hreflang="x-default"
+        />
+        <link
           rel="canonical"
           href="https://cottagehomecare.com/privacy-policy/"
         />

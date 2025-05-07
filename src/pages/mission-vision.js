@@ -16,6 +16,16 @@ const MissionVision = () => {
           content="Cottage Home Care mission, Cottage Home Care vision, home care core values, exceptional home care commitment, long-term goals, quality of life improvement, community impact, home care dedication, client-centered care, Cottage Home Care philosophy"
         />
         <link
+          rel="alternate"
+          href="https://cottagehomecare.com/mission-vision/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/mission-vision/"
+          hreflang="x-default"
+        />
+        <link
           rel="canonical"
           href="https://cottagehomecare.com/mission-vision/"
         />

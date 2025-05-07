@@ -182,6 +182,16 @@ export default function Home() {
         <meta name="keywords" content={keywords} />
         <meta name="author" content="Cottage Home Care Services" />
         <meta name="robots" content="index, follow" />
+        <link
+          rel="alternate"
+          href={"https://cottagehomecare.com/"}
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href={"https://cottagehomecare.com/"}
+          hreflang="x-default"
+        />
 
         {/* ✅ Open Graph Meta Tags (Facebook, LinkedIn) */}
         <meta property="og:title" content={title} />

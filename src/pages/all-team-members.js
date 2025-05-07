@@ -77,6 +77,16 @@ const AllTeamMembers = () => {
           content="Cottage Home Care team members, all team members, home care staff, experienced caregivers, healthcare professionals, dedicated team, compassionate care providers, expert home care, meet our staff, Cottage Home Care professionals"
         />
         <link
+          rel="alternate"
+          href="https://cottagehomecare.com/all-team-members/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/all-team-members/"
+          hreflang="x-default"
+        />
+        <link
           rel="canonical"
           href="https://cottagehomecare.com/all-team-members/"
         />

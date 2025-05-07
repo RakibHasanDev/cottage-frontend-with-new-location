@@ -58,6 +58,16 @@ const UpcomingEvent = () => {
           name="keywords"
           content="Cottage Home Care upcoming events, health and wellness workshops, community engagement activities, future home care events, scheduled events, community support events, learn and connect, upcoming healthcare events, Cottage Home Care activities"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/upcoming-event/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/upcoming-event/"
+          hreflang="x-default"
+        />
 
         <link
           rel="canonical"

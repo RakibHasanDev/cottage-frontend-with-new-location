@@ -255,6 +255,16 @@ const Faqs = () => {
           name="keywords"
           content="home care FAQs, Cottage Home Care services, COVID-19 safety FAQ, home care pricing questions, home care policies, senior care solutions, healthcare FAQs, Cottage Home Care information"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/faqs/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/faqs/"
+          hreflang="x-default"
+        />
         <link rel="canonical" href="https://cottagehomecare.com/faqs/" />
       </Head>
 

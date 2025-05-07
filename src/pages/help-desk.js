@@ -87,6 +87,16 @@ const HelpDesk = () => {
           name="keywords"
           content="Cottage Home Care Help Desk, employee support, clock in, clock out, PayStub access, PTO management, general requests, payroll information, request supplies, administrative help, healthcare staff support"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/help-desk/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/help-desk/"
+          hreflang="x-default"
+        />
         <link rel="canonical" href="https://cottagehomecare.com/help-desk/" />
       </Head>
 

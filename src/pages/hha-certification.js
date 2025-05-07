@@ -184,6 +184,16 @@ const HhhaCertification = () => {
           content="https://cottagehomecare.com/logo.png"
         />
         <link
+          rel="alternate"
+          href="https://cottagehomecare.com/hha-certification/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/hha-certification/"
+          hreflang="x-default"
+        />
+        <link
           rel="canonical"
           href="https://cottagehomecare.com/hha-certification/"
         />

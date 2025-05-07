@@ -16,6 +16,16 @@ const diwali2024 = () => {
           content="Diwali 2024, Diwali celebration NYC, Liberty Avenue events, Cottage Home Care, Diwali photos, Festival of Lights, Diwali party Queens, cultural celebration, Diwali community event"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/diwali-2024/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/diwali-2024/"
+          hreflang="x-default"
+        />
 
         <link rel="canonical" href="https://cottagehomecare.com/diwali-2024/" />
       </Head>

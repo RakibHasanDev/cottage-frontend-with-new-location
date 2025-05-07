@@ -15,6 +15,16 @@ const ClockInOut = () => {
           content="clock in instructions, clock out guide, Cottage Home Care, Celestial Home Care, caregiver clock in, duty codes, timekeeping, assignment ID, caregiver steps, phone dial instructions"
         />
         <link
+          rel="alternate"
+          href="https://cottagehomecare.com/clock-in-out/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/clock-in-out/"
+          hreflang="x-default"
+        />
+        <link
           rel="canonical"
           href="https://cottagehomecare.com/clock-in-out/"
         />

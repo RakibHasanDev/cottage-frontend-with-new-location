@@ -14,6 +14,16 @@ const TermsAndConditions = () => {
           name="keywords"
           content="terms, conditions, Cottage Home Care, user agreement, policy"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/terms-and-conditions/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/terms-and-conditions/"
+          hreflang="x-default"
+        />
 
         <link
           rel="canonical"
@@ -22,7 +32,7 @@ const TermsAndConditions = () => {
       </Head>
 
       <div
-        className="prose prose-sm sm:prose lg:prose-lg xl:prose-xl dark:prose-invert w-[95%] md:w-[85%] mx-auto px-4 py-8 space-y-3 dark:text-gray-100"
+        className=" w-[95%] md:w-[85%] mx-auto px-4 py-8 space-y-3 dark:text-gray-100"
         suppressHydrationWarning
       >
         <h1 className="text-xl font-semibold">Terms and Conditions</h1>

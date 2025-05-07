@@ -152,6 +152,16 @@ const personalPayService = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/assets/PrivatePay/private-pay-cover.webp"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/personal-pay-service/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/personal-pay-service/"
+          hreflang="x-default"
+        />
 
         <link
           rel="canonical"

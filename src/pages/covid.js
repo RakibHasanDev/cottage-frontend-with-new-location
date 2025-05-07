@@ -43,6 +43,17 @@ const Covid = () => {
           name="keywords"
           content="COVID-19 updates, coronavirus safety measures, Cottage Home Care COVID response, health services during COVID, community health safety, pandemic response, health and safety protocols, COVID-19 healthcare services"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/covid/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/covid/"
+          hreflang="x-default"
+        />
+
         <link rel="canonical" href="https://cottagehomecare.com/covid/" />
       </Head>
       <main className=" px-5  dark:bg-slate-600 min-h-screen">

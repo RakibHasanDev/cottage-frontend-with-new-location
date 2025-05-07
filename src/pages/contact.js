@@ -161,6 +161,16 @@ const Contacts = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/logo.png"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/contact/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/contact/"
+          hreflang="x-default"
+        />
         <link rel="canonical" href="https://cottagehomecare.com/contact/" />
 
         {/* ✅ Structured Data */}

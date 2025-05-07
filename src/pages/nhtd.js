@@ -188,6 +188,16 @@ const NHTD = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/hero.webp"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/nhtd/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/nhtd/"
+          hreflang="x-default"
+        />
 
         <link rel="canonical" href="https://cottagehomecare.com/nhtd/" />
 

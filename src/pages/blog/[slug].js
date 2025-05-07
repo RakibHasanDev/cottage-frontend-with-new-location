@@ -277,6 +277,16 @@ const BlogDetails = ({
 
         {/* Canonical */}
         <link
+          rel="alternate"
+          href={`https://cottagehomecare.com/blog/${blog?.slug}/`}
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href={`https://cottagehomecare.com/blog/${blog?.slug}/`}
+          hreflang="x-default"
+        />
+        <link
           rel="canonical"
           href={`https://cottagehomecare.com/blog/${blog?.slug}/`}
         />

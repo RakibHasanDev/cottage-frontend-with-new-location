@@ -50,6 +50,16 @@ const toysGiveaway = () => {
           name="twitter:image"
           content="https://www.cottagehomecare.com/assets/christmas-toy/img1.webp"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/toys-giveaway/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/toys-giveaway/"
+          hreflang="x-default"
+        />
 
         <link
           rel="canonical"

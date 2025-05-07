@@ -5,9 +5,8 @@ const Values = () => {
   return (
     <>
       <Head>
-        <title>
-          <title>Our Core Values | Cottage Home Care Services Inc - NY</title>
-        </title>
+        <title>Our Core Values | Cottage Home Care Services Inc - NY</title>
+
         <meta
           name="description"
           content="Discover the core values of Cottage Home Care Services — compassion, integrity, and excellence in delivering high-quality home care."
@@ -16,6 +15,16 @@ const Values = () => {
         <meta
           name="keywords"
           content="Cottage Home Care values, core values, compassion in home care, integrity in home care, respect in home care, excellence in home care, home care quality, client-centered values, home care principles, Cottage Home Care commitment"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/values/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/values/"
+          hreflang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/values/" />
       </Head>

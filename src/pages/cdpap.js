@@ -196,6 +196,16 @@ const Cdpap = () => {
           name="twitter:image"
           content="https://cottagehomecare.com/hero.webp"
         />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/cdpap/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/cdpap/"
+          hreflang="x-default"
+        />
         <link rel="canonical" href="https://cottagehomecare.com/cdpap/" />
 
         {/* ✅ Structured Data (Schema.org JSON-LD) */}
