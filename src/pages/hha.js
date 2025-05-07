@@ -80,7 +80,7 @@ const hha = () => {
     },
   ];
 
-  const title = "HHA/PCA - Cottage Home Care Services";
+  const title = "HHA & PCA Services | Cottage Home Care Services NY";
   const description =
     "Compassionate HHA & PCA care including bathing, meals, and meds. Serving NYC, Nassau, Suffolk, Westchester & Albany with professional support.";
 

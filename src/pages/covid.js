@@ -34,7 +34,7 @@ const Covid = () => {
   return (
     <>
       <Head>
-        <title>COVID-19 - Cottage Home Care Services</title>
+        <title>COVID-19 Info | Cottage Home Care Services Inc - NY</title>
         <meta
           name="description"
           content="Stay updated on COVID-19 safety and health services from Cottage Home Care. Learn how we protect our community during the coronavirus pandemic."

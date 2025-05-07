@@ -6,7 +6,8 @@ const Disclaimer = () => {
   return (
     <>
       <Head>
-        <title>Disclaimer - Cottage Home Care Services</title>
+        <title>Official Disclaimer | Cottage Home Care Services NY</title>
+
         <meta
           name="description"
           content="Read the legal disclaimer for Cottage Home Care Services. Learn about the limitations of liability, fair use, and external links."

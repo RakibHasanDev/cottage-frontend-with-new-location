@@ -12,7 +12,12 @@ import useAdmin from "@/hooks/useAdmin";
 import { encode } from "html-entities";
 import BlogSidebar from "@/components/Blog/BlogSideBar";
 import Image from "next/image";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
+import {
+  MdHome,
+  MdNavigateBefore,
+  MdNavigateNext,
+  MdOutlineArrowForwardIos,
+} from "react-icons/md";
 import { sanitizeAndLinkify } from "@/utils/sanitize";
 
 import {
@@ -54,8 +59,10 @@ export async function getStaticPaths() {
 }
 
 // ✅ Fetch blog details at build time or on demand
+
 export async function getStaticProps({ params }) {
   try {
+    // Fetch current blog
     const res = await fetch(
       `https://cottage-backend-voilerplate.vercel.app/blogs/single/${params.slug}`
     );
@@ -71,6 +78,8 @@ export async function getStaticProps({ params }) {
       console.log("Blog not found, returning 404");
       return { notFound: true };
     }
+
+    // Meta info
     const metaDescription =
       blog?.metaDescription && blog?.metaDescription.length > 0
         ? blog.metaDescription
@@ -93,8 +102,28 @@ export async function getStaticProps({ params }) {
         ? new Date(rawDate).toISOString()
         : null;
 
+    // Fetch all blogs to determine prev/next
+    const allRes = await fetch(
+      "https://cottage-backend-voilerplate.vercel.app/blogs"
+    );
+    const allData = await allRes.json();
+    const allBlogs = Array.isArray(allData.blogs) ? allData.blogs : [];
+
+    const currentIndex = allBlogs.findIndex((b) => b.slug === params.slug);
+    const previousBlog = currentIndex > 0 ? allBlogs[currentIndex - 1] : null;
+    const nextBlog =
+      currentIndex < allBlogs.length - 1 ? allBlogs[currentIndex + 1] : null;
+
     return {
-      props: { blog, metaDescription, metaKeywords, metaTitle, isoDate },
+      props: {
+        blog,
+        metaDescription,
+        metaKeywords,
+        metaTitle,
+        isoDate,
+        previousBlog,
+        nextBlog,
+      },
     };
   } catch (error) {
     console.error("Error fetching blog:", error);
@@ -108,6 +137,8 @@ const BlogDetails = ({
   metaKeywords,
   metaTitle,
   isoDate,
+  previousBlog,
+  nextBlog,
 }) => {
   const [currentPageUrl, setCurrentPageUrl] = useState("");
   const [formattedDate, setFormattedDate] = useState("");
@@ -469,11 +500,10 @@ const BlogDetails = ({
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-center gap-4 flex-wrap md:flex-nowrap my-3">
+                  <div className="flex items-center gap-4 flex-wrap md:flex-nowrap my-5">
                     <p className="font-semibold whitespace-nowrap dark:text-gray-100">
                       Social Share:
                     </p>
-
                     <div className="flex items-center gap-3">
                       <FacebookShareButton
                         url={currentPageUrl}
@@ -518,6 +548,62 @@ const BlogDetails = ({
                       >
                         <FiCopy size={14} />
                       </button>
+                    </div>
+
+                    <div className="flex items-center  gap-3 flex-wrap   text-sm md:text-base font-medium text-gray-700 dark:text-gray-200  mx-auto lg:mx-0">
+                      {/* Previous */}
+                      <p className="dark:text-gray-100 font-semibold mx-3 lg:block hidden">
+                        |
+                      </p>
+                      {previousBlog ? (
+                        <Link
+                          href={`/blog/${previousBlog.slug}`}
+                          className="flex items-center gap-1 text-blue-600 hover:underline dark:text-gray-100 font-bold"
+                        >
+                          <MdNavigateBefore size={18} />
+                          <span>Previous</span>
+                        </Link>
+                      ) : (
+                        <span className="flex items-center gap-1 text-gray-400 dark:text-gray-100 font-bold">
+                          <MdNavigateBefore size={18} />
+                          <span>Previous</span>
+                        </span>
+                      )}
+
+                      {/* Separator */}
+                      <span className="text-gray-400 dark:text-gray-100 font-bold">
+                        |
+                      </span>
+
+                      {/* Home */}
+                      <Link
+                        href="/"
+                        className="flex items-center gap-1 text-blue-600 hover:underline dark:text-gray-100 font-bold"
+                      >
+                        <MdHome size={18} />
+                        <span>Home</span>
+                      </Link>
+
+                      {/* Separator */}
+                      <span className="text-gray-400 dark:text-gray-100 font-bold">
+                        |
+                      </span>
+
+                      {/* Next */}
+                      {nextBlog ? (
+                        <Link
+                          href={`/blog/${nextBlog.slug}`}
+                          className="flex items-center gap-1 text-blue-600 hover:underline dark:text-gray-100 font-bold"
+                        >
+                          <span>Next</span>
+                          <MdNavigateNext size={18} />
+                        </Link>
+                      ) : (
+                        <span className="flex items-center gap-1 text-gray-400 dark:text-gray-100">
+                          <span>Next</span>
+                          <MdNavigateNext size={18} />
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>

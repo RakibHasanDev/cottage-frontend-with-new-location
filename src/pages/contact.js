@@ -31,7 +31,7 @@ const Placeholder = () => (
 );
 
 const Contacts = () => {
-  const title = "Contact Us - Cottage Home Care Services";
+  const title = "Contact Us | Cottage Home Care Services | NY Locations";
   const description =
     "Contact Cottage Home Care Services at 516-367-2266 or info@cottagehomecare.com. We're here to assist with your home care needs and questions.";
 

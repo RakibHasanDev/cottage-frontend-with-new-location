@@ -6,7 +6,8 @@ const Sitemap = () => {
   return (
     <>
       <Head>
-        <title>Sitemap - Cottage Home Care Services</title>
+        <title>Full Sitemap | Cottage Home Care Services New York</title>
+
         <meta
           name="description"
           content="Navigate Cottage Home Care's complete website sitemap, including services, resources, community pages, legal policies, and more."

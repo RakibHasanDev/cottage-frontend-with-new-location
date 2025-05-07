@@ -246,7 +246,7 @@ const Faqs = () => {
   return (
     <>
       <Head>
-        <title>FAQs - Cottage Home Care Services</title>
+        <title>FAQs | Cottage Home Care Services Inc - Your Questions</title>
         <meta
           name="description"
           content="Find answers to FAQs about home care, COVID-19 safety, pricing, and policies. Get the info you need to make smart decisions about your care options."

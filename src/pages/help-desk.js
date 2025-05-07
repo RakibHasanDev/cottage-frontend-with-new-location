@@ -78,7 +78,7 @@ const HelpDesk = () => {
   return (
     <>
       <Head>
-        <title>Help Desk - Cottage Home Care Services</title>
+        <title>Help Desk Support | Cottage Home Care Services Inc</title>
         <meta
           name="description"
           content="Access the Help Desk at Cottage Home Care to manage Clock In/Out, PayStubs, PTO, requests, payroll info, and supplies—all in one place."

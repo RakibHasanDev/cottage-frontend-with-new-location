@@ -16,7 +16,7 @@ const ResourcesCard = dynamic(
   }
 );
 
-const title = "Resources - Cottage Home Care Services";
+const title = "Caregiver Resources | Cottage Home Care Services Inc";
 const description =
   "Access timesheets, DOH guidelines, time-off forms, deposit and physical forms, and more at Cottage Home Care to support staff and compliance.";
 const keywords =

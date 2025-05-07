@@ -259,7 +259,7 @@ const MapComponent = () => {
           <div className="relative shadow-lg rounded-lg overflow-hidden border border-gray-300">
             <iframe
               className="w-full h-[50vh] md:h-[470px] rounded-md"
-              src="https://www.google.com/maps/d/embed?mid=1F8-owHlE5yYe1I4I4WWueTc_2zvqHSE&z=10&ehbc=2E312F&ll=40.729102772682%2C-73.92877093246109&hl=en&noprof=1"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1eD3M7Bt0Y7MBUQ7IgKMvob3iC-1etsQ&ehbc=2E312F&z=10.9&ll=40.783,-73.7"
               frameBorder="0"
               allowFullScreen
               loading="lazy"
@@ -268,7 +268,7 @@ const MapComponent = () => {
 
             <div className="absolute top-3 right-4 bg-[#2e312f] p-2 rounded-md hidden md:block">
               <a
-                href="https://www.google.com/maps/d/viewer?mid=1F8-owHlE5yYe1I4I4WWueTc_2zvqHSE&ll=40.72910277268202%2C-73.92877093246109&z=10"
+                href="https://www.google.com/maps/d/viewer?mid=1eD3M7Bt0Y7MBUQ7IgKMvob3iC-1etsQ&ll=40.72910277268202%2C-73.92877093246109&z=10"
                 rel="noreferrer"
                 className="text-white text-xs text-md font-medium hover:underline"
                 title="map in details"
@@ -398,7 +398,7 @@ const MapComponent = () => {
           <div className=" shadow-lg rounded-lg overflow-hidden border border-gray-300 w-[98%] mx-auto ">
             <iframe
               className=" h-[400px] w-full rounded-md"
-              src="https://www.google.com/maps/d/embed?mid=1F8-owHlE5yYe1I4I4WWueTc_2zvqHSE&z=9&ll=40.7,-73.9&ehbc=2E312F&hl=en&noprof=1"
+              src="https://www.google.com/maps/d/u/0/embed?mid=1eD3M7Bt0Y7MBUQ7IgKMvob3iC-1etsQ&z=9&ll=40.7,-73.9&ehbc=2E312F&hl=en&noprof=1"
               frameBorder="0"
               allowFullScreen
               title="Cottage Home Care Service Locations Map"

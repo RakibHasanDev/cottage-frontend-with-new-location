@@ -5,7 +5,7 @@ const TermsAndConditions = () => {
   return (
     <>
       <Head>
-        <title>Terms & Conditions - Cottage Home Care</title>
+        <title>Terms & Conditions | Cottage Home Care Services NY</title>
         <meta
           name="description"
           content="Review the terms and conditions for using Cottage Home Care Services. Learn about user responsibilities, service guidelines, and our privacy policies."

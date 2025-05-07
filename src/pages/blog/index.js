@@ -71,7 +71,7 @@ const Blog = () => {
   return (
     <>
       <Head>
-        <title>Blog - Cottage Home Care Services</title>
+        <title>Blog | Cottage Home Care Services Inc - News & Tips</title>
         <meta
           name="description"
           content="Get tips on caregiving, wellness, and senior care with Cottage Home Care’s blog. Stay informed, inspired, and connected to the industry."
