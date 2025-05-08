@@ -482,6 +482,17 @@ const BlogDetails = ({
                         </span>
                       </p>
                     </div>
+                    <p>
+                      <PiLineVerticalBold className=" text-lg md:text-xl text-gray-600 dark:text-gray-100" />
+                    </p>
+
+                    <Link
+                      href="/"
+                      className="flex items-center gap-1hover:underline text-gray-600 dark:text-gray-100 font-semibold"
+                    >
+                      <MdHome size={18} />
+                      <span>Home</span>
+                    </Link>
                   </div>
                   <div className="lg:mt-8 mt-5 overflow-hidden aspect-video flex justify-center bg-[#f0f0f0] dark:bg-slate-300">
                     <img

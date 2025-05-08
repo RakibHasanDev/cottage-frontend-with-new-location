@@ -56,7 +56,7 @@ const NHTD = () => {
 
   const title = "NHTD Program NYC – Cottage Home Care Services";
   const description =
-    "Looking for NHTD home care services in NYC? We help seniors transition from nursing homes to independent living with Medicaid support. Learn more!";
+    "Expert Medical Team: NHTD Medicaid waiver in NYC. Must be Medicaid-eligible, need nursing home-level care, and be 18–64 with a disability or 65+. Apply now!";
   const keywords =
     "NHTD NYC, Nursing Home Transition Services, NHTD Medicaid Benefits, Senior Home Care NYC, Independent Living NYC, Home Care Support Brooklyn, Medicaid Home Care Support";
 

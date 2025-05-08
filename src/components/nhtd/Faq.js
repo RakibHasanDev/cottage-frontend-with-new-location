@@ -20,57 +20,57 @@ const Faq = () => {
     },
     {
       id: 2,
-      question: 'Why is NHTD called a "1915(c) Medicaid Waiver" program?',
+      question: 'Why is NHTD called a "1915(c) Medicaid Waiver"?',
       answer:
-        "Section 1915(c) of the Social Security Act allows states to offer home and community-based services to Medicaid recipients who would otherwise need institutional care. New York's NHTD waiver, approved in 2007, provides alternative services to prevent institutionalization.",
+        "Section 1915(c) of the Social Security Act allows states to offer home and community-based services to Medicaid recipients who would otherwise need institutional care. New York's waiver, approved in 2007, provides alternative services to prevent institutionalization.",
     },
     {
       id: 3,
-      question: "What is the philosophy behind the NHTD program?",
+      question: "What is the philosophy behind this Medicaid waiver?",
       answer:
-        "The program is based on the belief that seniors and individuals with physical disabilities have the right to control their lives, manage risks, and learn from their experiences. The program ensures a balance between independence and safeguarding participant well-being.",
+        "This community-based initiative is rooted in the belief that seniors and individuals with disabilities should have the right to manage their own lives, take risks, and learn from experience—while being supported in a safe environment.",
     },
     {
       id: 4,
-      question: "How is the success of the NHTD program measured?",
+      question: "How is the success of this waiver measured?",
       answer:
-        "Success is measured by participant satisfaction, increased independence, self-reliance, community inclusion, and the ability to maintain a high quality of life while receiving necessary support services.",
+        "Success is evaluated by participant satisfaction, increased independence, community inclusion, and the ability to sustain a high quality of life with essential support services.",
     },
     {
       id: 5,
-      question: "What is the NHTD Waiver Program?",
+      question: "What is the Nursing Home Transition and Diversion Waiver?",
       answer:
-        "The Nursing Home Transition and Diversion (NHTD) Waiver Program is a Medicaid-funded initiative in New York that helps seniors and individuals with physical disabilities receive comprehensive services while living in the community instead of in a nursing home or institution.",
+        "This Medicaid-funded option in New York helps eligible individuals remain in their homes while receiving care, instead of moving into an institution.",
     },
     {
       id: 6,
-      question: "Who is eligible for the NHTD program?",
+      question: "Who is eligible for this community-based care option?",
       answer:
-        "To qualify, individuals must be Medicaid-eligible, require a nursing home level of care, and be able to live safely in the community with available services. Applicants must be 65 or older, or between 18-64 with a verified physical disability.",
+        "To qualify, individuals must be Medicaid-eligible, need a nursing home level of care, and be able to live safely in the community. Applicants must be 65+ or aged 18–64 with a verified physical disability.",
     },
     {
       id: 7,
-      question: "What services does the NHTD program provide?",
+      question: "What services are available through this waiver?",
       answer:
-        "The program offers a variety of home and community-based services tailored to each participant's needs, including personal care, case management, medical support, and home modifications to promote independence.",
+        "Participants may receive services such as personal care, case management, medical assistance, and home modifications—all tailored to promote independence.",
     },
     {
       id: 8,
       question: "Can participants choose their own services?",
       answer:
-        "Yes. Participants are the primary decision-makers and can choose the services they receive, the providers they work with, and the goals they want to achieve, ensuring a personalized care plan.",
+        "Yes. Individuals are empowered to make decisions about the services they receive, select their providers, and shape their personal care plans to match their goals.",
     },
     {
       id: 9,
-      question: "Is there a housing subsidy available under NHTD?",
+      question: "Is housing assistance available?",
       answer:
-        "Yes, eligible participants may receive a state-funded housing subsidy to help them live in the community. However, housing is not considered a waiver service and is subject to funding availability.",
+        "Yes, some participants may qualify for a state-funded housing subsidy to help them live in the community. However, housing itself is not classified as a waiver service and depends on funding availability.",
     },
     {
       id: 10,
-      question: "How does someone apply for the NHTD program?",
+      question: "How does someone apply for this Medicaid waiver?",
       answer:
-        "Applicants currently in a nursing home should consult their discharge planner, who can refer them to Open Doors or the Regional Resource Development Center (RRDC). Those living in the community can contact the RRDC directly for guidance on the application process.",
+        "Applicants in nursing homes can speak to their discharge planner for a referral to Open Doors or the RRDC. Those in the community can contact the RRDC directly for guidance.",
     },
   ];
 

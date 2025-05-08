@@ -197,6 +197,7 @@ export default function Home() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content="https://cottagehomecare.com/" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
