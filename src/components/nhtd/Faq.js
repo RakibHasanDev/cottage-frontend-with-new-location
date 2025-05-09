@@ -14,76 +14,76 @@ const Faq = () => {
   const paidItems = [
     {
       id: 1,
-      question: "What is the role of the Service Coordinator in NHTD?",
+      question: "How does the NHTD program support independent living?",
       answer:
-        "A Service Coordinator (case manager) assists applicants in developing an Initial Service Plan (ISP), identifying the necessary services and supports to ensure the participant's well-being in the community.",
+        "The NHTD program, short for Nursing Home Transition and Diversion, is a New York Medicaid waiver that helps seniors and people with disabilities transition from nursing homes to community-based care. It promotes independent living while offering essential support services at home.",
     },
     {
       id: 2,
-      question: 'Why is NHTD called a "1915(c) Medicaid Waiver"?',
+      question: "What is the NHTD Waiver Program?",
       answer:
-        "Section 1915(c) of the Social Security Act allows states to offer home and community-based services to Medicaid recipients who would otherwise need institutional care. New York's waiver, approved in 2007, provides alternative services to prevent institutionalization.",
+        "The NHTD waiver program allows Medicaid-eligible individuals to receive care in their own homes or communities instead of in a nursing facility. It includes services like personal care, case management, and assistive technology.",
     },
     {
       id: 3,
-      question: "What is the philosophy behind this Medicaid waiver?",
+      question: "Who is eligible for the NHTD Medicaid Waiver Program?",
       answer:
-        "This community-based initiative is rooted in the belief that seniors and individuals with disabilities should have the right to manage their own lives, take risks, and learn from experience—while being supported in a safe environment.",
+        "To qualify, you must be Medicaid-eligible, need a nursing home level of care, and be 65 or older—or between 18 and 64 with a verified physical disability. You must also be able to live safely in the community with waiver services.",
     },
     {
       id: 4,
-      question: "How is the success of this waiver measured?",
+      question: "What services does the NHTD waiver offer?",
       answer:
-        "Success is evaluated by participant satisfaction, increased independence, community inclusion, and the ability to sustain a high quality of life with essential support services.",
+        "Services include personal care assistance, service coordination, medical equipment, environmental modifications, and independent living skills training. These services aim to enhance quality of life and independence.",
     },
     {
       id: 5,
-      question: "What is the Nursing Home Transition and Diversion Waiver?",
+      question: "What is the meaning of NHTD?",
       answer:
-        "This Medicaid-funded option in New York helps eligible individuals remain in their homes while receiving care, instead of moving into an institution.",
+        "NHTD stands for Nursing Home Transition and Diversion. It reflects the program’s goal to help individuals avoid or leave nursing home settings and live more independently with Medicaid-funded support.",
     },
     {
       id: 6,
-      question: "Who is eligible for this community-based care option?",
+      question: "Why is NHTD considered a 1915(c) Medicaid waiver?",
       answer:
-        "To qualify, individuals must be Medicaid-eligible, need a nursing home level of care, and be able to live safely in the community. Applicants must be 65+ or aged 18–64 with a verified physical disability.",
+        "Under Section 1915(c) of the Social Security Act, states like New York can provide home and community-based services through Medicaid. The NHTD waiver was approved under this federal provision in 2007.",
     },
     {
       id: 7,
-      question: "What services are available through this waiver?",
+      question: "Can participants choose their own NHTD services?",
       answer:
-        "Participants may receive services such as personal care, case management, medical assistance, and home modifications—all tailored to promote independence.",
+        "Yes. Individuals have the right to select their service providers and customize their care plans. This flexibility helps ensure that support is aligned with their personal needs and goals.",
     },
     {
       id: 8,
-      question: "Can participants choose their own services?",
+      question: "Does NHTD cover housing assistance?",
       answer:
-        "Yes. Individuals are empowered to make decisions about the services they receive, select their providers, and shape their personal care plans to match their goals.",
+        "While housing is not classified as a waiver service, some participants may be eligible for a state-funded housing subsidy under the NHTD waiver to help them remain in the community.",
     },
     {
       id: 9,
-      question: "Is housing assistance available?",
+      question: "How do I apply for the NHTD Medicaid Waiver?",
       answer:
-        "Yes, some participants may qualify for a state-funded housing subsidy to help them live in the community. However, housing itself is not classified as a waiver service and depends on funding availability.",
+        "If you're in a nursing home, ask your discharge planner for a referral to the RRDC or Open Doors. Community residents can contact their local RRDC to start the application process and complete an Initial Service Plan (ISP).",
     },
     {
       id: 10,
-      question: "How does someone apply for this Medicaid waiver?",
+      question: "How is success measured in the NHTD program?",
       answer:
-        "Applicants in nursing homes can speak to their discharge planner for a referral to Open Doors or the RRDC. Those in the community can contact the RRDC directly for guidance.",
+        "Success is measured through improved quality of life, independence, participant satisfaction, and reduced reliance on institutional care.",
     },
   ];
 
   return (
     <div className="">
       <div className=" ">
-        <ul className="flex flex-col text-[16px] leading-relaxed font-sans font-normal">
+        <div className="flex flex-col text-[16px] leading-relaxed font-sans font-normal">
           {paidItems.map((item) => (
-            <li
+            <div
               key={item.id}
               className={` rounded-md dark:bg-slate-400 my-2  `}
             >
-              <button
+              <div
                 onClick={() => handleClick(item.id)}
                 className={`w-full shadow-md focus:outline-none rounded-md ${
                   tab === item.id
@@ -91,12 +91,12 @@ const Faq = () => {
                     : "text-[#00A6B2] dark:text-[#00A6B2] bg-[#F6F6F6]"
                 } `}
               >
-                <h5 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box  text-start md:text-center">
-                  <p className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+                <div className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box  text-start md:text-center">
+                  <h4 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
                     <span className="flex md:text-lg items-center gap-2 font-medium">
                       {item.question}
                     </span>
-                  </p>
+                  </h4>
                   <span>
                     <svg
                       className={` ${
@@ -111,8 +111,8 @@ const Faq = () => {
                       <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
                     </svg>
                   </span>
-                </h5>
-              </button>
+                </div>
+              </div>
               <div
                 id={`faq-answer-${item.id}`} // ✅ Links answer to the button
                 className={`transition-all duration-500 ease-in-out ${
@@ -121,14 +121,14 @@ const Faq = () => {
                 aria-hidden={tab !== item.id} // ✅ Helps screen readers know if it's hidden
               >
                 {item.answer && (
-                  <p className="p-3 text-gray-900 dark:text-gray-100">
+                  <h5 className="p-3 text-gray-900 dark:text-gray-100">
                     {item.answer}
-                  </p>
+                  </h5>
                 )}
               </div>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );

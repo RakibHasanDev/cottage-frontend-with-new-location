@@ -10,11 +10,14 @@ import Head from "next/head";
 import ServicesComponent from "@/components/nhtd/ServicesComponent";
 import Image from "next/image";
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
 const NHTD = () => {
   const [showModal, setShowModal] = useState(false);
 
   const [imageSrc, setImageSrc] = useState(""); // Dynamically choose image
+  const [showNhtdMeaning, setShowNhtdMeaning] = useState(false);
+  const toggleNhtdMeaning = () => setShowNhtdMeaning(!showNhtdMeaning);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -54,11 +57,11 @@ const NHTD = () => {
     window.open(pdf, "_blank");
   };
 
-  const title = "NHTD Program NYC – Cottage Home Care Services";
+  const title = "NHTD Waiver Program & Services – Cottage Home Care NYC";
   const description =
-    "Expert Medical Team: NHTD Medicaid waiver in NYC. Must be Medicaid-eligible, need nursing home-level care, and be 18–64 with a disability or 65+. Apply now!";
+    "Expert Medical Team: NHTD Medicaid waiver in NYC. Must be Medicaid-eligible, need nursing home-level care, age 18–64 with disability or 65+. Apply now!";
   const keywords =
-    "NHTD NYC, Nursing Home Transition Services, NHTD Medicaid Benefits, Senior Home Care NYC, Independent Living NYC, Home Care Support Brooklyn, Medicaid Home Care Support";
+    "nhtd, NHTD NYC, nhtd waiver program​, Nursing Home Transition Services, NHTD Medicaid Benefits, Senior Home Care NYC, Independent Living NYC, Home Care Support Brooklyn, Medicaid Home Care Support";
 
   // ✅ JSON-LD Schema Data
   const schemaData = [
@@ -135,23 +138,6 @@ const NHTD = () => {
           },
         },
       ],
-    },
-  ];
-
-  // ✅ Preload Hero Images for Improved LCP Performance
-  const preloadLinks = [
-    {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710684/Website%20Hero%20Images/Cottage-Home-Care-Slider-1.webp",
-      // ✅ Matches first large image
-      as: "image",
-      type: "image/webp",
-      fetchPriority: "high",
-    },
-    {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710747/Website%20Hero%20Images/cottage-home-care-slider-1-sm.webp", // ✅ Matches first small image
-      as: "image",
-      type: "image/webp",
-      fetchPriority: "high",
     },
   ];
 
@@ -515,14 +501,6 @@ const NHTD = () => {
                   through NHTD).
                 </li>
               </ul>
-              {/* <Link
-                  href="https://www.health.ny.gov/facilities/long_term_care/nhtd/services.htm"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block mt-3 text-blue-500 hover:underline"
-                >
-                  Read more about NHTD services
-                </Link> */}
 
               <Link
                 className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-[290px] rounded-md text-white shadow-md"
@@ -575,43 +553,70 @@ const NHTD = () => {
             </Link>
           </div>
           <div className="">
-            <p className="sr-only">
-              If you&apos;re searching for long-term care options that support
-              independent living, understanding the NHTD meaning is a great
-              place to start. The Nursing Home Transition and Diversion (NHTD)
-              program is a Medicaid waiver initiative that helps individuals
-              with physical disabilities and seniors transition from nursing
-              homes or avoid institutional care altogether. So, what is NHTD
-              exactly? It’s a person-centered, community-based program that
-              offers support services allowing eligible participants to remain
-              in their homes or other community settings. Unlike traditional
-              care models that often place individuals in institutional
-              environments, the NHTD waiver promotes autonomy and a higher
-              quality of life. NHTD waiver services include service
-              coordination, home and community support, structured day programs,
-              and assistive technology, among others. These services are
-              customized based on each participant&apos;s unique needs and
-              goals, aiming to support health, safety, and community
-              integration. The program not only reduces the emotional and
-              financial burden of nursing home care but also empowers
-              participants to be more involved in decisions about their daily
-              lives and care routines. Families benefit too, as NHTD provides a
-              reliable framework for loved ones to receive quality care without
-              being placed in a facility. To be eligible, individuals typically
-              need to be Medicaid-eligible, at risk of institutionalization, and
-              willing to participate in community-based care planning. In short,
-              if you’re asking what is NHTD, think of it as a compassionate
-              alternative that bridges the gap between full-time facility care
-              and independent living. Understanding the NHTD meaning and the
-              value of NHTD waiver services can be the first step toward
-              achieving a more independent and empowered lifestyle for you or
-              your loved one.
-            </p>
             <p className="pt-3 playrify text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-3 league-spartan text-[#00A6B2]">
               Frequently Asked Questions
             </p>
 
             <Faq />
+          </div>
+          <div className="mt-8 bg-[#f0f9fb] dark:bg-slate-400 rounded-md p-5 shadow-md text-gray-800 dark:text-white">
+            <button
+              className="flex items-center justify-between w-full text-left  dark:text-gray-100 text-[#00A6B2] font-semibold text-lg"
+              onClick={() => setShowNhtdMeaning((prev) => !prev)}
+              aria-expanded={showNhtdMeaning}
+            >
+              Learn More About the NHTD Program
+              {showNhtdMeaning ? (
+                <BsChevronUp className="ml-2" />
+              ) : (
+                <BsChevronDown className="ml-2" />
+              )}
+            </button>
+
+            {showNhtdMeaning && (
+              <div className="mt-4 text-base leading-relaxed open-sans">
+                <p>
+                  If you&apos;re searching for long-term care options that
+                  support independent living, understanding the NHTD meaning is
+                  a great place to start. The Nursing Home Transition and
+                  Diversion (NHTD) program is a Medicaid waiver initiative that
+                  helps individuals with physical disabilities and seniors
+                  transition from nursing homes or avoid institutional care
+                  altogether.
+                </p>
+                <p className="mt-3">
+                  It’s a person-centered, community-based program that offers
+                  support services allowing eligible participants to remain in
+                  their homes or other community settings. Unlike traditional
+                  care models that often place individuals in institutional
+                  environments, the NHTD waiver promotes autonomy and a higher
+                  quality of life.
+                </p>
+                <p className="mt-3">
+                  NHTD waiver services include service coordination, home and
+                  community support, structured day programs, and assistive
+                  technology, among others. These services are customized based
+                  on each participant&apos;s unique needs and goals, aiming to
+                  support health, safety, and community integration.
+                </p>
+                <p className="mt-3">
+                  The program not only reduces the emotional and financial
+                  burden of nursing home care but also empowers participants to
+                  be more involved in decisions about their daily lives and care
+                  routines. Families benefit too, as NHTD provides a reliable
+                  framework for loved ones to receive quality care without being
+                  placed in a facility.
+                </p>
+                <p className="mt-3">
+                  To be eligible, individuals typically need to be
+                  Medicaid-eligible, at risk of institutionalization, and
+                  willing to participate in community-based care planning. In
+                  short, if you’re asking what is NHTD, think of it as a
+                  compassionate alternative that bridges the gap between
+                  full-time facility care and independent living.
+                </p>
+              </div>
+            )}
           </div>
 
           {/* new section end */}
