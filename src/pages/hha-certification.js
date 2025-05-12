@@ -202,10 +202,10 @@ const HhhaCertification = () => {
       </Head>
 
       <main className="dark:bg-slate-600 min-h-screen">
-        <h1 className="sr-only">
+        <h1 className="seo-text-hidden ">
           Become HHA Certified at Brooklyn Institute of Vocational Training
         </h1>
-        <h2 className="sr-only">
+        <h2 className="seo-text-hidden ">
           Get Certified as a Home Health Aide at Cottage Home Care
         </h2>
 
@@ -218,7 +218,7 @@ const HhhaCertification = () => {
         <Suspense fallback={<Placeholder />}>
           <HhhaCertificationAbout></HhhaCertificationAbout>
         </Suspense>
-        <div className="w-[80%] py-10 mx-auto dark:text-gray-100 sr-only">
+        <div className="w-[80%] py-10 mx-auto dark:text-gray-100 seo-text-hidden ">
           <p>
             <strong>
               HHA Certification – Become a Certified Home Health Aide at My

@@ -131,7 +131,7 @@ const MissionVision = () => {
           </div>
         </div>
 
-        <div className="w-[95%] mx-auto py-10 dark:text-gray-100 sr-only">
+        <div className="w-[95%] mx-auto py-10 dark:text-gray-100 seo-text-hidden ">
           <p>
             At <strong>Cottage Home Care</strong>, our mission is to provide
             high-quality, personalized home health care services that enable

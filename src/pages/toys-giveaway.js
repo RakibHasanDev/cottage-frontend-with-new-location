@@ -75,7 +75,7 @@ const toysGiveaway = () => {
                 Christmas Toys Giveaway
               </span>
             </h1>
-            <h2 className="sr-only">
+            <h2 className="seo-text-hidden ">
               Toys Giveaway Event – Cottage Home Care Community Outreach
             </h2>
           </div>
@@ -87,45 +87,75 @@ const toysGiveaway = () => {
             </p>
           </div>
         </div>
-        <div className="sr-only">
+
+        <div className="seo-text-hidden ">
           <p>
-            At Cottage Home Care Services, we believe in the power of community
-            and the joy of giving. Our annual Christmas Toys Giveaway event is a
-            testament to our commitment to bringing smiles to children&apos;s
-            faces during the holiday season.
+            At Cottage Home Care Services, we believe in the power of community,
+            generosity, and the spirit of the holidays. Our annual{" "}
+            <strong>Christmas Toys Giveaway</strong> event is one of our most
+            cherished community initiatives, designed to bring joy, comfort, and
+            smiles to children during the festive season. By supporting families
+            in need and celebrating the magic of Christmas, we aim to make the
+            holiday season brighter for everyone involved.
           </p>
+
           <p>
-            This heartwarming event is designed to support families in our
-            community by providing free toys to children, ensuring that every
-            child experiences the magic of Christmas. We collaborate with local
-            organizations and volunteers to collect and distribute a wide range
-            of toys suitable for various age groups.
+            Held each December, the event is organized across our service areas
+            in New York City, including Queens, Brooklyn, and the Bronx, as well
+            as surrounding regions such as Nassau, Suffolk, Westchester, and
+            Albany. This heartwarming initiative provides families with free,
+            brand-new toys that are age-appropriate and thoughtfully selected.
+            We work with local partners, donors, and volunteers to make this
+            meaningful day a success.
           </p>
-          <p>The Toys Giveaway event typically includes:</p>
+
+          <p>
+            The <strong>Christmas Toys Giveaway</strong> event typically
+            includes:
+          </p>
+
           <ul>
             <li>
-              Distribution of new, age-appropriate toys to children from infants
-              to teenagers.
+              <strong>Toy Distribution:</strong> Brand-new toys are distributed
+              to children of all ages, from toddlers to teenagers. Items include
+              dolls, puzzles, educational games, action figures, stuffed
+              animals, and more.
             </li>
             <li>
-              Festive activities such as holiday music, decorations, and
-              appearances by Santa Claus.
+              <strong>Holiday Festivities:</strong> Children and families enjoy
+              music, decorations, holiday treats, and festive cheer. Appearances
+              by Santa Claus and his helpers add to the excitement and give kids
+              a memorable holiday experience.
             </li>
             <li>
-              Opportunities for families to connect with our team and learn more
-              about our home care services and community initiatives.
+              <strong>Family Outreach:</strong> Our staff connects with parents
+              and caregivers to share information about our{" "}
+              <strong>home care services in NYC</strong> and upcoming community
+              programs that may support their needs.
             </li>
           </ul>
+
           <p>
-            Our goal is to foster a sense of community and support among
-            families, especially during the holidays. We understand the
-            challenges that some families face, and through this event, we aim
-            to spread joy, compassion, and hope.
+            This event is about more than just giving gifts—it’s about building
+            community and letting every child feel seen, valued, and included
+            during the holiday season. We understand that the holidays can be
+            difficult for many families, especially those facing financial
+            challenges, and we are proud to play a small role in making their
+            season more joyful.
           </p>
+
           <p>
-            For more information about the upcoming Toys Giveaway event,
-            including dates, locations, and how to participate or contribute,
-            please contact us at{" "}
+            Cottage Home Care Services remains committed to giving back and
+            creating positive experiences for families we serve. We thank all
+            the volunteers and supporters who help make this annual event
+            possible.
+          </p>
+
+          <p>
+            For more information about our{" "}
+            <strong>Christmas Toys Giveaway in New York</strong>, including
+            event dates, donation opportunities, or how to get involved, please
+            contact us at{" "}
             <a href="mailto:info@cottagehomecare.com">
               info@cottagehomecare.com
             </a>{" "}

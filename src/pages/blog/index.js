@@ -120,7 +120,7 @@ const Blog = () => {
               <h1 className="text-2xl lg:text-4xl font-bold  league-spartan ">
                 Cottage Care Blog
               </h1>
-              <h2 className="sr-only">
+              <h2 className="seo-text-hidden ">
                 Cottage Blog – Caregiving Tips, Health & Wellness Stories
               </h2>
 
@@ -143,7 +143,7 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className="sr-only">
+        <div className="seo-text-hidden ">
           <p>
             When it comes to caring for a loved one at home, there’s no room for
             cookie-cutter solutions. At Cottage Home Care Services, we

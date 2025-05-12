@@ -73,6 +73,7 @@ export default function Home() {
     "Cottage Home Care, Cottage Agency, Cottage Home Care Services, private home care services, Home Health Aide NYC, NHTD program, CDPAP NYC, Private Pay Home Care, Medicaid Home Care NYC, Senior Home Care, elderly care NYC, personal care assistance, home care agencies near me, home health care services NYC, HHA services, independent living support, home care for seniors, in-home caregivers NYC, Rockaway home care, care in homes, cottagecare, Queens home care, Suffolk home care services, Nassau County home care, best home care agency NYC, personal care home, valley cottage ny, cottage inn near me, cottage st, modern cottage, cottage buy";
 
   // ✅ Optimized JSON-LD Structured Data
+
   const schemaData = [
     {
       "@context": "https://schema.org",
@@ -235,10 +236,10 @@ export default function Home() {
       </Head>
 
       <div className="dark:bg-slate-600 min-h-screen">
-        <h1 className="sr-only">
+        <h1 className="seo-text-hidden ">
           Cottage Home Care – Home Health Aide, Private Pay, and NHTD Services
         </h1>
-        <h2 className="sr-only">
+        <h2 className="seo-text-hidden ">
           Trusted NHTD, HHA, and Private Pay Services Across New York State
         </h2>
 

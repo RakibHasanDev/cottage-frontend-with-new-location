@@ -47,9 +47,80 @@ const ClockInOut = () => {
             <h1 className="text-lg lg:text-2xl  font-semibold dark:text-gray-100">
               Clock-In Instructions (Cottage):
             </h1>
-            <h2 className="sr-only">
+            <h2 className="seo-text-hidden ">
               Clock In and Out for Cottage Caregivers – Access Portal
             </h2>
+            <div className="seo-text-hidden">
+              <p>
+                At Cottage Home Care and Celestial Home Care, we are committed
+                to accuracy, compliance, and efficiency in all areas of
+                caregiver services. A vital part of our home care operations in
+                New York includes accurate timekeeping, which helps ensure
+                caregivers are properly compensated and client care is
+                well-documented. To assist caregivers, we have provided clear
+                instructions on how to clock in and out using our
+                telephone-based system.
+              </p>
+
+              <p>
+                These procedures follow the guidelines of the Electronic Visit
+                Verification (EVV) system and are required by New York State
+                Medicaid. It is essential that caregivers use the correct phone
+                numbers, follow the outlined steps, and enter duty codes when
+                prompted. Proper use of these systems helps avoid payroll delays
+                and maintains compliance with home care regulations.
+              </p>
+
+              <p>
+                For Cottage Home Care caregivers, the clock-in process begins by
+                dialing <strong>866-982-3022</strong> from the patient’s home
+                phone. Caregivers must then press 1, enter their 6-digit
+                assignment ID, and confirm the entry. The same number is used to
+                clock out by pressing 2, re-entering the assignment ID, and then
+                inputting any required duty codes. Duty codes represent specific
+                tasks performed during a visit, such as bathing, dressing,
+                feeding, or light housekeeping. Codes include:{" "}
+                <strong>103, 106, 111, 112, 206, 301, 411, 502,</strong> and{" "}
+                <strong>511</strong>. To finalize the call, caregivers must
+                enter <strong>000</strong>.
+              </p>
+
+              <p>
+                For Celestial Home Care, caregivers must call{" "}
+                <strong>866-979-3669</strong> using the patient’s phone. The
+                process is similar: press 1 to clock in or press 2 to clock out,
+                followed by entering the 6-digit caregiver assignment ID. During
+                clock-out, applicable duty codes should be entered before
+                completing the call with <strong>000</strong>.
+              </p>
+
+              <p>
+                These clock-in and clock-out procedures are critical for
+                ensuring that time records are accurate and approved for
+                payroll. They also help the agency track services performed and
+                fulfill Medicaid reporting requirements. Every caregiver must be
+                trained on these protocols and should reach out for
+                clarification if needed.
+              </p>
+
+              <p>
+                If you are a caregiver working with Cottage or Celestial and
+                need help with clocking in, duty codes, or assignment IDs,
+                please contact our administrative office at{" "}
+                <a href="tel:+1516-367-2266">516-367-2266</a> or email{" "}
+                <a href="mailto:info@cottagehomecare.com">
+                  info@cottagehomecare.com
+                </a>
+                .
+              </p>
+
+              <p>
+                Thank you for your attention to detail and for providing
+                exceptional care to our clients across New York. Accurate
+                timekeeping is essential to maintaining the high standards of
+                Cottage Home Care Services.
+              </p>
+            </div>
 
             <ul className="list-decimal mt-2 ml-4 space-y-1 xl:text-lg font-medium dark:text-gray-100">
               <li>

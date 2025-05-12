@@ -106,67 +106,86 @@ const AllTeamMembers = () => {
             </div>
           </div>
 
-          <div className="w-[95%] mx-auto my-5 sr-only">
+          <div className="w-[95%] mx-auto my-5 seo-text-hidden">
             <p>
-              At Cottage Home Care Services, our dedicated team is the
-              cornerstone of our commitment to providing exceptional home care
-              across New York. Each member brings a wealth of experience,
-              compassion, and professionalism to ensure our clients receive the
-              highest quality of care.
+              At Cottage Home Care Services, our dedicated and experienced team
+              is the heart of our mission to deliver high-quality home care
+              across New York. We believe that outstanding care begins with
+              outstanding people. Our staff brings a unique combination of
+              expertise, cultural understanding, compassion, and professionalism
+              that allows us to serve diverse communities with excellence.
             </p>
-            <p>Our team comprises:</p>
+
+            <p>
+              From intake to ongoing care coordination, every department works
+              together to ensure that our clients receive the support and
+              attention they deserve. Our staff members are trained to respond
+              promptly, communicate clearly, and deliver services that are both
+              effective and respectful of every family&apos;s preferences. We
+              serve clients throughout New York City, Nassau, Suffolk,
+              Westchester, and Albany.
+            </p>
+
+            <p>Our Cottage Home Care team includes:</p>
+
             <ul>
               <li>
-                <strong>Home Health Aide Coordinators:</strong> Managing
-                caregiver schedules to ensure timely and appropriate care for
-                every client.
+                <strong>Home Health Aide (HHA) Coordinators:</strong> Overseeing
+                caregiver schedules, ensuring clients receive on-time care that
+                matches their specific needs.
               </li>
               <li>
-                <strong>CDPAP Coordinators:</strong> Assisting clients who
-                choose their caregivers, ensuring smooth enrollment and ongoing
+                <strong>CDPAP Coordinators:</strong> Supporting patients and
+                family members who participate in New York’s Consumer Directed
+                Personal Assistance Program by guiding them through caregiver
+                selection, compliance, and enrollment.
+              </li>
+              <li>
+                <strong>Intake Specialists:</strong> Helping new clients with
+                application forms, eligibility documentation, and the overall
+                onboarding process for a seamless transition into care services.
+              </li>
+              <li>
+                <strong>Administrative Associates:</strong> Managing internal
+                operations, updating records, tracking compliance, and
+                supporting day-to-day administrative tasks.
+              </li>
+              <li>
+                <strong>RN Assistants:</strong> Working alongside Registered
+                Nurses to conduct follow-ups, coordinate care plans, and
+                maintain clinical quality across services.
+              </li>
+              <li>
+                <strong>Billing Coordinators:</strong> Handling Medicaid and
+                MLTC communications, claim submissions, and client inquiries
+                related to billing and payment processing.
+              </li>
+              <li>
+                <strong>Training and Development Team:</strong> Educating
+                aspiring caregivers through our partner school, providing
+                certified HHA training, hands-on skills, and job readiness
                 support.
               </li>
-              <li>
-                <strong>Intake Specialists:</strong> Guiding new clients through
-                the onboarding process for a seamless experience.
-              </li>
-              <li>
-                <strong>Administrative Associates:</strong> Handling essential
-                operations, from file management to communications, to keep our
-                agency running smoothly.
-              </li>
-              <li>
-                <strong>RN Assistants:</strong> Collaborating with registered
-                nurses to maintain high clinical standards through regular
-                follow-ups and support activities.
-              </li>
-              <li>
-                <strong>Billing Coordinators:</strong> Working closely with
-                insurance companies and families to ensure accurate and timely
-                processing of all financial matters.
-              </li>
-              <li>
-                <strong>Training and Development Team:</strong> Educating future
-                HHAs and caregivers through our partner schools, empowering
-                individuals with the skills needed for a rewarding career in
-                home health care.
-              </li>
             </ul>
+
             <p>
-              Our diverse workforce allows us to serve families from various
-              cultural and linguistic backgrounds, offering services in multiple
-              languages to better connect with our communities. Every team
-              member is committed to maintaining the highest standards of
-              quality, ensuring that every client feels valued, respected, and
-              well cared for at all times.
+              Our multilingual and multicultural team ensures that families from
+              all backgrounds feel heard and supported. We proudly serve
+              Bengali, Spanish, Punjabi, Jamaican, and Guyanese communities with
+              culturally aligned care. At Cottage Home Care Services, we believe
+              that trust, respect, and communication are the foundation of
+              strong care relationships.
             </p>
+
             <p>
-              For more information about our team or services, please contact us
+              To learn more about our team, training programs, or{" "}
+              <strong>home care services in New York</strong>, please contact us
               at{" "}
               <a href="mailto:info@cottagehomecare.com">
                 info@cottagehomecare.com
               </a>{" "}
-              or call <a href="tel:516-367-2266">516-367-2266</a>.
+              or call <a href="tel:516-367-2266">516-367-2266</a>. We look
+              forward to helping your family with care that feels like home.
             </p>
           </div>
 

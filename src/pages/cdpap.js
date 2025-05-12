@@ -374,6 +374,85 @@ const Cdpap = () => {
             </div>
           </div>
         </div>
+
+        <div className="seo-text-hidden">
+          <p>
+            The Consumer Directed Personal Assistance Program (CDPAP) is a New
+            York State Medicaid initiative that empowers individuals requiring
+            home care services to hire and manage their own caregivers. This
+            program offers a flexible alternative to traditional home care,
+            allowing patients to select caregivers they trust, including family
+            members and friends.
+          </p>
+          <p>
+            CDPAP provides eligible Medicaid recipients with the autonomy to
+            oversee their personal care by choosing who assists them with daily
+            activities. Unlike conventional home care services, CDPAP permits
+            caregivers to perform skilled tasks such as administering
+            medications, wound care, and other medical procedures, provided they
+            receive appropriate training.
+          </p>
+          <p>To qualify for CDPAP, individuals must:</p>
+          <ul>
+            <li>Be a resident of New York State.</li>
+            <li>Be enrolled in or eligible for Medicaid.</li>
+            <li>
+              Require assistance with activities of daily living or skilled
+              care.
+            </li>
+            <li>
+              Be capable of directing their own care or have a designated
+              representative to do so.
+            </li>
+          </ul>
+          <p>
+            One of the unique aspects of CDPAP is the ability for patients to
+            hire family members as paid caregivers. This includes adult
+            children, siblings, and other relatives. However, spouses and
+            parents of children under 21 are not eligible to be paid caregivers
+            under this program.
+          </p>
+          <p>
+            Caregivers under CDPAP are not required to have formal
+            certifications or licenses. They must, however, be legally
+            authorized to work in the United States and complete necessary
+            health assessments. This approach ensures that care is both
+            personalized and compliant with health regulations.
+          </p>
+          <p>The enrollment process for CDPAP involves several steps:</p>
+          <ul>
+            <li>
+              Assessment of the patient&apos;s medical condition and care needs.
+            </li>
+            <li>
+              Selection of a fiscal intermediary to handle administrative tasks
+              such as payroll and compliance.
+            </li>
+            <li>
+              Completion of required documentation and training for the chosen
+              caregiver.
+            </li>
+          </ul>
+          <p>
+            CDPAP is available throughout New York State, including New York
+            City, Long Island, Westchester, and Albany. This widespread
+            availability ensures that individuals across the state can access
+            personalized home care services tailored to their specific needs.
+          </p>
+          <p>
+            For more detailed information about CDPAP, including eligibility
+            criteria and enrollment procedures, please visit the official New
+            York State Department of Health website:{" "}
+            <a
+              href="https://www.health.ny.gov/health_care/medicaid/program/longterm/cdpap.htm"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              CDPAP Information Page
+            </a>
+            .
+          </p>
+        </div>
       </main>
     </>
   );

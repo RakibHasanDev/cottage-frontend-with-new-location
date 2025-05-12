@@ -86,53 +86,79 @@ const breastCancerAwareness = () => {
           </div>
         </div>
 
-        <div className="w-[95%] my-5 mx-auto sr-only">
+        <div className="w-[95%] my-5 mx-auto seo-text-hidden">
           <p>
             At Cottage Home Care Services, we are deeply committed to supporting
-            our community during Breast Cancer Awareness Month. This annual
-            observance is a pivotal time to highlight the importance of early
-            detection, provide education on breast health, and honor the
-            strength and resilience of those affected by breast cancer.
+            our community during{" "}
+            <strong>Breast Cancer Awareness Month 2024</strong>. This important
+            annual observance held every October is a time to raise awareness
+            about the impact of breast cancer, emphasize the importance of early
+            detection, and honor the strength of survivors, fighters, and those
+            we&apos;ve lost.
           </p>
+
           <p>
-            Throughout October, we engage in various initiatives aimed at
-            raising awareness and fostering a supportive environment for
-            individuals and families impacted by breast cancer. Our efforts
-            focus on education, community involvement, and providing resources
-            to promote early detection and treatment.
+            As a trusted home care provider serving New York City, Nassau,
+            Suffolk, Westchester, and Albany, we believe that compassionate care
+            extends beyond the home. Our commitment to public health includes
+            active participation in awareness campaigns and educational efforts
+            that empower individuals to take charge of their breast health.
+            Breast Cancer Awareness Month allows us to come together as a team,
+            as caregivers, and as community members to make a meaningful impact.
           </p>
-          <p>Our Breast Cancer Awareness Month activities include:</p>
+
+          <p>
+            Throughout the month of October, we organize and participate in
+            several outreach and education initiatives. Our goal is to help
+            reduce the number of breast cancer cases through awareness,
+            education, and community action.
+          </p>
+
+          <p>Our 2024 Breast Cancer Awareness Month activities include:</p>
+
           <ul>
             <li>
-              Hosting informational sessions on the importance of regular
-              screenings and early detection.
+              <strong>Educational Sessions:</strong> Hosting informative
+              workshops about the importance of routine breast exams, early
+              detection, and access to screening resources.
             </li>
             <li>
-              Organizing community events to honor survivors and remember those
-              we have lost.
+              <strong>Community Events:</strong> Honoring breast cancer
+              survivors and remembering loved ones through community walks,
+              virtual meetups, and memorial events.
             </li>
             <li>
-              Collaborating with local organizations to distribute educational
-              materials and resources.
+              <strong>Resource Distribution:</strong> Collaborating with
+              healthcare professionals and local partners to distribute flyers,
+              brochures, and support group information to families in need.
             </li>
             <li>
-              Encouraging our staff and community members to wear pink to show
-              solidarity and support.
+              <strong>Pink Day Participation:</strong> Encouraging our staff and
+              the broader community to wear pink throughout the month to promote
+              solidarity and raise awareness.
             </li>
           </ul>
+
           <p>
-            We believe that through education and community engagement, we can
-            make a significant impact in the fight against breast cancer. By
-            spreading awareness and providing support, we aim to empower
-            individuals to take proactive steps in managing their breast health.
+            We believe that through education and local engagement, we can
+            encourage more individuals to prioritize their health and seek
+            screenings early. As a home care agency, we also assist families
+            affected by breast cancer with compassionate support, personal care,
+            and assistance that helps ease daily burdens during treatment and
+            recovery.
           </p>
+
           <p>
-            For more information about our Breast Cancer Awareness Month
-            initiatives or to get involved, please contact us at{" "}
+            For more information about our{" "}
+            <strong>Breast Cancer Awareness Month 2024</strong> initiatives or
+            to find out how you can participate, please contact Cottage Home
+            Care Services at{" "}
             <a href="mailto:info@cottagehomecare.com">
               info@cottagehomecare.com
             </a>{" "}
-            or call us at <a href="tel:516-367-2266">516-367-2266</a>.
+            or call <a href="tel:516-367-2266">516-367-2266</a>. We are proud to
+            stand beside the fighters, celebrate the survivors, and honor the
+            taken.
           </p>
         </div>
 
@@ -142,7 +168,7 @@ const breastCancerAwareness = () => {
               {" "}
               Breast Cancer Awareness Month - 2024
             </p>
-            <h2 className="sr-only">
+            <h2 className="seo-text-hidden ">
               Breast Cancer Awareness with Cottage Home Care
             </h2>
 

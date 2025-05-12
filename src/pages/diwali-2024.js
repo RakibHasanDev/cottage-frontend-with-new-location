@@ -37,7 +37,7 @@ const diwali2024 = () => {
                 Diwali 2024 - Liberty Avenue Celebration
               </span>
             </h1>
-            <h2 className="sr-only">
+            <h2 className="seo-text-hidden ">
               Diwali 2024 Celebration at Cottage Home Care
             </h2>
           </div>
@@ -49,54 +49,71 @@ const diwali2024 = () => {
             </p>
           </div>
         </div>
+        <div className="w-[95%] my-5 mx-auto seo-text-hidden">
+          <p>
+            Cottage Home Care Services proudly celebrated{" "}
+            <strong>Diwali 2024</strong> on Liberty Avenue, bringing together
+            our vibrant and diverse community in a moment of unity, culture, and
+            joy. Known as the Festival of Lights, Diwali symbolizes the triumph
+            of light over darkness, good over evil, and hope over despair. For
+            us, this festival also represents the light our caregivers bring
+            into the lives of seniors and families across New York every day.
+          </p>
 
-        <div className="w-[95%] my-5 mx-auto sr-only">
           <p>
-            Cottage Home Care Services proudly celebrated Diwali 2024 on Liberty
-            Avenue with our diverse and vibrant community. Known as the Festival
-            of Lights, Diwali brings people together in a spirit of joy,
-            gratitude, and hope.
+            The event was a beautiful reflection of our mission to serve the
+            community not just through home care, but also through meaningful
+            engagement. Our team was honored to participate in this culturally
+            rich celebration, connecting with families, elders, caregivers, and
+            neighbors who stopped by to share in the festivities. It was an
+            opportunity to showcase our commitment to compassion, diversity, and
+            inclusion—values that are at the heart of Cottage Home Care
+            Services.
           </p>
+
           <p>
-            This event gave us a wonderful chance to connect with families,
-            share traditions, and celebrate the strength of unity and light. We
-            were honored to take part in this meaningful celebration alongside
-            the people we care for every day.
+            As part of the celebration, we offered the following experiences to
+            spread happiness and build relationships:
           </p>
-          <p>
-            Our participation included fun and thoughtful ways to spread
-            happiness:
-          </p>
+
           <ul>
             <li>
-              <strong>Community Booth:</strong> We welcomed visitors, shared
-              information about our services, and answered questions about
-              personalized home care.
+              <strong>Community Outreach Booth:</strong> Our staff welcomed
+              hundreds of attendees, shared educational brochures, and answered
+              questions about our <strong>home care services in NYC</strong>,
+              including HHA and PCA support options.
             </li>
             <li>
-              <strong>Festive Giveaways:</strong> Over 500 people received
-              Cottage-branded hoodies, gift bags, and other merchandise to
-              remember the celebration.
+              <strong>Festive Giveaways:</strong> Over 500 people received{" "}
+              <strong>Cottage-branded hoodies</strong>, reusable shopping bags,
+              pens, and wellness kits, creating memorable impressions and brand
+              awareness in a fun and thoughtful way.
             </li>
             <li>
-              <strong>Cultural Activities:</strong> We offered free henna,
-              traditional sweets, and warm conversations to honor the Diwali
-              spirit.
+              <strong>Cultural Engagement:</strong> Guests enjoyed free henna
+              tattoos, traditional Indian sweets, snacks, and music—bringing a
+              joyful and authentic Diwali atmosphere to Liberty Avenue.
             </li>
           </ul>
+
           <p>
-            Events like this remind us of the value of culture, community, and
-            kindness. At Cottage Home Care Services, we are committed to
-            celebrating and supporting the people and traditions that make our
-            neighborhoods strong.
+            Events like this reflect our belief that care goes beyond the home.
+            It’s about building strong relationships, celebrating traditions,
+            and showing appreciation for the people we serve. At Cottage Home
+            Care Services, we actively support and participate in multicultural
+            events throughout the year to stay connected with the heart of our
+            communities.
           </p>
+
           <p>
-            To learn more about our community events or services, please contact
-            us at
+            We look forward to more celebrations like Diwali 2024 as we continue
+            our mission of care, unity, and impact across New York. For more
+            information about our community outreach, caregiver opportunities,
+            or <strong>personalized home care services</strong>, please contact
+            us at{" "}
             <a href="mailto:info@cottagehomecare.com">
-              {" "}
               info@cottagehomecare.com
-            </a>
+            </a>{" "}
             or call <a href="tel:516-367-2266">516-367-2266</a>.
           </p>
         </div>

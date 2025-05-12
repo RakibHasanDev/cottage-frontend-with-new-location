@@ -108,13 +108,13 @@ const HelpDesk = () => {
             Help Desk
           </h1>
 
-          <h2 className="sr-only">
+          <h2 className="seo-text-hidden ">
             Help Desk – Paystubs, PTO, Clock In/Out, and Support
           </h2>
           <BannerWithBreadcrumbs title="Help Desk" />
         </div>
 
-        <div className="py-10 w-[95%] lg:w-[80%] mx-auto dark:text-gray-100 sr-only">
+        <div className="py-10 w-[95%] lg:w-[80%] mx-auto dark:text-gray-100 seo-text-hidden ">
           <p>
             <strong>Help Desk at Cottage Home Care Services</strong>
           </p>

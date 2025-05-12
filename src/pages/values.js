@@ -30,10 +30,85 @@ const Values = () => {
       </Head>
       <main className="dark:bg-slate-600">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20 ">
-          <h1 className="sr-only">
+          <h1 className="seo-text-hidden ">
             Cottage Home Care Values – Personalized, Compassionate, Reliable
             Care
           </h1>
+          <div className="seo-text-hidden">
+            <p>
+              At Cottage Home Care Services, our core values form the foundation
+              of the compassionate and high-quality care we provide to
+              individuals and families across New York. From personalized
+              service to integrity and respect, our guiding principles shape
+              every aspect of our home care approach.
+            </p>
+
+            <p>
+              We are proud to serve communities throughout New York City, Nassau
+              County, Suffolk County, Westchester, and Albany with a commitment
+              to excellence in home health aide (HHA), personal care aide (PCA),
+              and CDPAP support. Whether you are a patient, a caregiver, or a
+              family member, our values ensure your needs are met with dignity
+              and professionalism.
+            </p>
+
+            <p>Our values include:</p>
+
+            <ul>
+              <li>
+                <strong>Personalized Care:</strong> Every client is unique. Our
+                care plans are tailored to individual needs, ensuring that each
+                person receives support based on their medical, emotional, and
+                cultural preferences.
+              </li>
+              <li>
+                <strong>Comfort and Familiarity:</strong> We believe the best
+                care happens in the comfort of one’s own home. Clients often
+                feel more relaxed and secure receiving care in a familiar
+                environment, surrounded by loved ones.
+              </li>
+              <li>
+                <strong>Independence:</strong> We strive to help individuals
+                maintain their independence for as long as possible. Our
+                caregivers assist without overwhelming, empowering clients to
+                live life on their terms.
+              </li>
+              <li>
+                <strong>Cost-Effective Solutions:</strong> Home care can be more
+                affordable than facility-based options. We help families save on
+                costs while ensuring high-quality service and safety.
+              </li>
+              <li>
+                <strong>Improved Quality of Life:</strong> By assisting with
+                daily living activities, we reduce isolation, promote wellness,
+                and improve overall well-being for clients of all ages.
+              </li>
+              <li>
+                <strong>Peace of Mind:</strong> Families can feel confident
+                knowing their loved ones are in capable hands. Our trained staff
+                provide dependable support that eases stress for both clients
+                and their families.
+              </li>
+            </ul>
+
+            <p>
+              Cottage Home Care Services believes that true care comes from a
+              place of compassion, reliability, and dedication. Our values are
+              not just ideas—they are actions we take every day to build
+              meaningful relationships and deliver client-centered home care
+              throughout New York.
+            </p>
+
+            <p>
+              For more information about our values or to get started with our
+              services, please contact us at{" "}
+              <a href="mailto:info@cottagehomecare.com">
+                info@cottagehomecare.com
+              </a>{" "}
+              or call <a href="tel:516-367-2266">516-367-2266</a>.
+            </p>
+          </div>
+
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
             <h2 className="max-w-lg mb-2 font-sans text-3xl font-bold leading-none tracking-tight text-gary-600 sm:text-4xl md:mx-auto dark:text-gray-100">
               <span className="relative inline-block">

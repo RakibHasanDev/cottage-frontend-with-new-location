@@ -230,7 +230,9 @@ const NHTD = () => {
                 Transition and Diversion
               </span>
             </h1>
-            <h2 className="sr-only">NHTD Services at Cottage Home Care</h2>
+            <h2 className="seo-text-hidden ">
+              NHTD Services at Cottage Home Care
+            </h2>
             <div className="flex justify-center pl-5 my-2 md:max-w-md lg:ml-[10%]">
               <Link
                 href="/contact"

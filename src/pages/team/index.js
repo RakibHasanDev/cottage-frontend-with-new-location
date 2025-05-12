@@ -167,7 +167,7 @@ const Team = () => {
             <BannerWithBreadcrumbs title="Team" />
           </div>
         </div>
-        <div className="py-10 w-[95%] lg:w-[85%] mx-auto dark:text-gray-100 sr-only">
+        <div className="py-10 w-[95%] lg:w-[85%] mx-auto dark:text-gray-100 seo-text-hidden ">
           <p>
             <strong>
               Meet the Dedicated Team Behind Cottage Home Care Services

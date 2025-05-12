@@ -84,42 +84,76 @@ const schoolSupply = () => {
           </div>
         </div>
 
-        <div className="w-[95%] my-5 mx-auto sr-only">
+        <div className="w-[95%] my-5 mx-auto seo-text-hidden">
           <p>
-            Cottage Home Care Services is dedicated to supporting our
-            community&apos;s educational needs through our annual School
-            Supplies Giveaway. This initiative aims to provide essential
-            learning materials to students, ensuring they are well-prepared for
-            the academic year ahead.
+            Cottage Home Care Services is proud to give back to the community
+            through our annual <strong>School Supplies Giveaway</strong>. This
+            meaningful initiative is designed to support students and families
+            across New York by providing essential back-to-school materials. By
+            reducing the financial burden on families, we help students start
+            the academic year feeling confident, prepared, and motivated.
           </p>
-          <p>Our School Supplies Giveaway event includes:</p>
+
+          <p>
+            As a trusted home care agency serving New York City, Nassau,
+            Suffolk, Westchester, and Albany, our mission extends beyond health
+            care. We understand that education plays a vital role in long-term
+            community success. That’s why we are committed to empowering youth
+            and building strong relationships with local families through
+            outreach events like our back-to-school program.
+          </p>
+
+          <p>
+            Our <strong>School Supplies Giveaway</strong> is open to students of
+            all ages and backgrounds, and it provides a supportive space where
+            children can gather essential materials while enjoying a day filled
+            with excitement and encouragement.
+          </p>
+
+          <p>Highlights of the event include:</p>
+
           <ul>
             <li>
-              Distribution of backpacks filled with notebooks, pens, pencils,
-              and other necessary school items.
+              <strong>Free Backpack Distribution:</strong> Hundreds of students
+              receive backpacks filled with notebooks, pencils, pens, rulers,
+              erasers, folders, and other classroom essentials.
             </li>
             <li>
-              Engaging activities and games to promote a fun and educational
-              environment.
+              <strong>Fun & Educational Activities:</strong> Kids participate in
+              games, interactive stations, and learning-based challenges to
+              create a joyful, school-ready atmosphere.
             </li>
             <li>
-              Opportunities for families to learn more about our home care
-              services and community programs.
+              <strong>Community Engagement:</strong> Parents and caregivers
+              learn more about our home care services, CDPAP programs, and other
+              family support resources.
             </li>
           </ul>
+
           <p>
-            By alleviating the financial burden of purchasing school supplies,
-            we aim to empower students to focus on their studies and achieve
-            academic success. This event reflects our commitment to fostering a
-            supportive and nurturing community for all.
+            This event is more than a giveaway—it’s a celebration of learning
+            and an opportunity for Cottage Home Care Services to connect
+            directly with the people we proudly serve. We believe in the power
+            of education and are committed to creating a nurturing environment
+            where all children have the tools they need to thrive.
           </p>
+
           <p>
-            For more information about our School Supplies Giveaway or to learn
-            how you can contribute, please contact us at{" "}
+            Our team is grateful for the volunteers, community partners, and
+            staff members who help make this initiative a success each year.
+            Together, we create a lasting impact on the future of our youth.
+          </p>
+
+          <p>
+            For more information about our{" "}
+            <strong>School Supplies Giveaway in New York</strong>, or to find
+            out how you can contribute, volunteer, or sponsor the event, please
+            contact us at{" "}
             <a href="mailto:info@cottagehomecare.com">
               info@cottagehomecare.com
             </a>{" "}
-            or call us at <a href="tel:516-367-2266">516-367-2266</a>.
+            or call <a href="tel:516-367-2266">516-367-2266</a>. Let&apos;s
+            build brighter futures—one backpack at a time.
           </p>
         </div>
 

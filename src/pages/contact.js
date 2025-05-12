@@ -180,32 +180,52 @@ const Contacts = () => {
       <main className="dark:bg-slate-600 min-h-screen">
         {/* ✅ Set Canonical to Prevent Duplicate Canonical Issues */}
 
-        <h1 className="sr-only">
+        <h1 className="seo-text-hidden ">
           Contact Cottage Home Care Services – Locations, Phone, Email & Socials
         </h1>
-        <h2 className="sr-only">
+        <h2 className="seo-text-hidden ">
           Contact Cottage Home Care for Questions or Support
         </h2>
 
         <LazyBanner />
-        <div className="sr-only">
+        <div className="seo-text-hidden">
           <p>
-            At Cottage Home Care Services, we are dedicated to providing
-            compassionate and professional home care services tailored to meet
-            the unique needs of our clients. Our team of experienced caregivers
-            is committed to enhancing the quality of life for individuals and
-            families across New Jersey.
+            At Cottage Home Care Services, we are dedicated to delivering
+            compassionate and professional home care to individuals and families
+            across New York. Our goal is to enhance the quality of life for
+            every client by offering personalized care services in the comfort
+            of their homes. With a focus on safety, respect, and reliability, we
+            ensure that each person we serve feels supported and valued.
           </p>
           <p>
-            Whether you require assistance with daily activities, personal care,
-            or specialized medical support, our staff is here to help. We
-            understand the importance of reliable and personalized care, and we
-            strive to deliver services that promote independence and well-being.
+            We proudly offer home care services throughout New York City, Nassau
+            County, Suffolk County, Westchester, and Albany. Our team of
+            certified Home Health Aides (HHAs) and Personal Care Aides (PCAs) is
+            trained to assist with a wide range of non-medical support,
+            including bathing, dressing, meal preparation, feeding assistance,
+            medication reminders, light housekeeping, and mobility support for
+            seniors and individuals needing elderly care.
           </p>
           <p>
-            For inquiries, service requests, or to learn more about our home
-            care programs, please reach out to us through the following contact
-            methods:
+            Our caregivers are selected not only for their skills but also for
+            their empathy and cultural understanding. We serve diverse
+            communities and offer multilingual support to Bengali, Spanish,
+            Guyanese, Punjabi, Jamaican, and other families. At Cottage Home
+            Care Services, we believe that clear communication and cultural
+            sensitivity are essential to delivering care that truly meets each
+            client’s needs.
+          </p>
+          <p>
+            We understand how important it is to have someone you trust caring
+            for your loved one. That’s why we work closely with families to
+            match caregivers based on language, experience, and personality.
+            Every care plan is customized to the individual’s requirements,
+            ensuring comfort, continuity, and peace of mind with trusted in-home
+            assistance and home health support.
+          </p>
+          <p>
+            For service inquiries, caregiver support, or to learn more about how
+            we can help, please reach out using the contact information below:
           </p>
           <ul>
             <li>
@@ -220,18 +240,18 @@ const Contacts = () => {
             </li>
             <li>
               <strong>Office Address:</strong> 15 Clydesdale Road, Scotch
-              Plains, NJ 07076
+              Plains, NY 07076
             </li>
           </ul>
           <p>
-            Our office hours are Monday through Saturday, 8:00 AM to 5:00 PM. We
-            are closed on Sundays. Feel free to contact us during these hours,
-            and our friendly staff will be happy to assist you with any
-            questions or concerns.
+            Our office is open Monday through Saturday from 8:00 AM to 5:00 PM.
+            We are closed on Sundays. Whether you are a family member looking
+            for care or a caregiver seeking to join our team, our staff is here
+            to assist you with any questions or concerns.
           </p>
           <p>
-            For more detailed information about our services and locations,
-            please visit our official website:{" "}
+            To explore more about our services and service areas, please visit
+            our official contact page:{" "}
             <a
               href="https://cottagehomecare.com/contact/"
               target="_blank"

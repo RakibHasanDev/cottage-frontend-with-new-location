@@ -57,76 +57,94 @@ const Covid = () => {
         <link rel="canonical" href="https://cottagehomecare.com/covid/" />
       </Head>
       <main className=" px-5  dark:bg-slate-600 min-h-screen">
-        <h1 className="sr-only">
+        <h1 className="seo-text-hidden ">
           COVID-19 Awareness—Stay at Home, Stay Safe | Cottage Care
         </h1>
-        <h2 className="sr-only">
+        <h2 className="seo-text-hidden ">
           COVID-19 Safety and Health Updates from Cottage Home Care
         </h2>
 
-        <div className="py-10 w-[95%] lg:w-[85%] mx-auto dark:text-gray-100 sr-only">
+        <div className="seo-text-hidden">
           <p>
-            <strong>COVID-19 Safety at Cottage Home Care Services</strong>
+            <strong>COVID-19 Home Care Safety in New York City</strong>
           </p>
 
           <p>
-            At <strong>Cottage Home Care Services</strong>, the health and
-            safety of our clients, caregivers, and team members is our top
-            priority. We follow strict COVID-19 protocols to protect everyone
-            involved in our care.
+            At Cottage Home Care Services, we understand that providing reliable
+            home care during the COVID-19 pandemic requires enhanced safety and
+            vigilance. As a trusted home care agency in New York City, our top
+            priority is protecting the health of our patients, caregivers, and
+            staff while continuing to deliver high-quality, in-home support.
           </p>
 
           <p>
-            We are committed to delivering home care services with the highest
-            level of safety. Our staff is trained to follow updated health
-            guidelines and precautions during every visit.
+            We proudly offer essential home health care services across NYC,
+            including Queens, Brooklyn, Manhattan, the Bronx, and Staten Island,
+            as well as Nassau, Suffolk, Westchester, and Albany counties.
+            Whether you need a certified home health aide (HHA) or a personal
+            care aide (PCA), our team is trained to follow the latest CDC and
+            New York State Department of Health COVID-19 guidelines to ensure
+            safe and dependable care.
           </p>
 
           <p>
-            <strong>What We’re Doing to Keep You Safe:</strong>
+            Our home care services include help with bathing, dressing,
+            mobility, meal preparation, medication reminders, and other
+            non-medical support — all while maintaining the highest standards of
+            infection control. We know that seniors and medically vulnerable
+            individuals need trustworthy in-home care, especially during a
+            public health crisis.
+          </p>
+
+          <p>
+            <strong>
+              COVID-19 Safety Practices Implemented by Our Caregivers:
+            </strong>
           </p>
 
           <ul>
             <li>
-              <strong>Personal Protective Equipment (PPE):</strong> Our
-              caregivers wear masks, gloves, and carry sanitizer during each
-              home visit.
+              <strong>Use of PPE:</strong> Every caregiver wears face masks,
+              gloves, and carries hand sanitizer during each home visit.
             </li>
             <li>
-              <strong>Health Screenings:</strong> Staff and caregivers undergo
-              regular health checks to ensure they are symptom-free before each
-              assignment.
+              <strong>Daily Health Screenings:</strong> Caregivers and staff are
+              checked daily for COVID-19 symptoms to prevent exposure.
             </li>
             <li>
-              <strong>Sanitization:</strong> Frequent handwashing, disinfecting
-              of surfaces, and hygiene protocols are strictly followed.
+              <strong>Enhanced Sanitization:</strong> Surfaces, tools, and
+              personal items are disinfected regularly according to COVID-19
+              safety protocols.
             </li>
             <li>
-              <strong>Vaccination Support:</strong> We encourage all staff and
-              caregivers to stay updated with recommended vaccinations for
-              better protection.
+              <strong>Vaccination Support:</strong> We promote full vaccination
+              and boosters for all staff and caregivers to reduce risk.
             </li>
             <li>
-              <strong>Remote Services:</strong> When possible, we offer virtual
-              consultations and support to reduce in-person exposure.
+              <strong>Virtual Consultations:</strong> When appropriate, we offer
+              remote check-ins to minimize in-person contact and maintain
+              continuity of care.
             </li>
           </ul>
 
           <p>
-            <strong>Stay Informed</strong>
+            Our caregivers are trained to serve diverse communities and
+            understand the importance of COVID-19 prevention, especially in
+            senior home care. Families in NYC can rest assured that we take
+            every step to create a safe and supportive environment.
           </p>
 
           <p>
-            We recommend checking trusted health sources and following updates
-            from our team. If you have any questions about our COVID-19
-            procedures, please call <strong>516-367-2266</strong> or email{" "}
-            <strong>info@cottagehomecare.com</strong>.
+            If you have questions about our COVID-19 safety measures or need
+            in-home care in New York City, please contact us at{" "}
+            <strong>516-367-2266</strong> or email{" "}
+            <strong>info@cottagehomecare.com</strong>. We’re here to help you
+            with trusted care during uncertain times.
           </p>
 
           <p>
-            Thank you for trusting Cottage Home Care Services. Together, we will
-            continue to protect our families and community with care and
-            caution.
+            Thank you for choosing Cottage Home Care Services — your reliable
+            source for COVID-safe home health care in NYC.
           </p>
         </div>
 

@@ -3100,3 +3100,15 @@ button.slick-arrow.slick-prev::before {
 .prose blockquote {
   @apply text-black dark:text-gray-100 italic border-l-4 border-gray-300 pl-4;
 }
+
+/* SEO content fix issue start  */
+
+.seo-text-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* seo content fix issue end  */

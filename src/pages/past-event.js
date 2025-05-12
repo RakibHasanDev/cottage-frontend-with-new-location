@@ -157,58 +157,73 @@ const PastEvent = () => {
           </div>
         </div>
 
-        <div className="my-5 sr-only">
+        <div className="seo-text-hidden">
           <p>
-            At Cottage Home Care Services , we are committed to enriching the
-            lives of individuals and strengthening our community through
-            meaningful and impactful initiatives. Our past events showcase our
-            dedication to community engagement and support.
+            At Cottage Home Care Services, we are proud to be more than just a
+            home care agency — we are a community partner. Our dedication to
+            giving back is demonstrated through a variety of past events that
+            reflect our mission of compassion, cultural unity, and outreach.
+            These initiatives showcase our effort to uplift communities across
+            New York City, including Queens, Brooklyn, the Bronx, and beyond.
           </p>
+
           <p>
-            We firmly believe in the power of giving and strive to make a
-            lasting difference by focusing on initiatives that align with our
-            community&apos;s needs. Together, we can create a stronger community
-            built on compassion, empathy, and shared prosperity.
+            Each event we host is designed to support seniors, families,
+            caregivers, and children by providing moments of joy, resources, and
+            education. As a leading home care provider in NYC, we believe in
+            building strong connections beyond care by engaging with the people
+            and neighborhoods we serve. Whether it&apos;s a cultural
+            celebration, health awareness campaign, or a support drive for those
+            in need, our goal is always to make a positive difference.
           </p>
-          <p>Some of our notable past events include:</p>
+
+          <p>Here are some of our most impactful community events:</p>
+
           <ul>
             <li>
-              <strong>Diwali 2024 - Liberty Avenue Celebration:</strong> A
-              vibrant celebration bringing together community members to honor
-              the festival of lights.
+              <strong>Diwali 2024 – Liberty Avenue Celebration:</strong> A
+              colorful and festive gathering celebrating the Festival of Lights
+              with cultural performances, food, and togetherness.
             </li>
             <li>
-              <strong>Breast Cancer Awareness Month 2024:</strong> Initiatives
-              aimed at raising awareness and supporting those affected by breast
-              cancer.
+              <strong>Breast Cancer Awareness Month 2024:</strong> A month-long
+              campaign to raise awareness, educate the community, and honor
+              survivors through workshops, pink ribbon distribution, and support
+              sessions.
             </li>
             <li>
-              <strong>Christmas Toys Giveaway:</strong> Spreading holiday cheer
-              by providing toys to children in need during the festive season.
+              <strong>Christmas Toys Giveaway:</strong> An initiative to bring
+              smiles to children&aposs;s faces by distributing holiday gifts to
+              families in need across our service areas.
             </li>
             <li>
-              <strong>Christmas Party 2023:</strong> A joyful gathering
-              celebrating the holiday season with our community members.
+              <strong>Christmas Party 2023:</strong> A joyful event for clients,
+              caregivers, and local residents to gather, celebrate, and create
+              lasting holiday memories.
             </li>
             <li>
-              <strong>School Supplies Giveaway:</strong> Assisting students by
-              providing essential school supplies to support their educational
-              journey.
+              <strong>School Supplies Giveaway:</strong> A back-to-school drive
+              providing children with essential educational materials including
+              backpacks, notebooks, and stationery.
             </li>
           </ul>
+
           <p>
-            These events reflect our ongoing commitment to community involvement
-            and our mission to make a positive impact in the lives of those we
-            serve. We look forward to continuing our efforts and hosting more
-            events that bring our community together.
+            These events are a core part of our community outreach mission. We
+            are committed to continuing these efforts and planning more events
+            that uplift, unite, and empower the people we care for. Our work is
+            rooted in compassion, and our events help reinforce the values that
+            define Cottage Home Care Services.
           </p>
+
           <p>
-            For more information about our upcoming events or to get involved,
-            please contact us at{" "}
+            To learn more about our upcoming community events or explore
+            partnership opportunities, contact us at{" "}
             <a href="mailto:info@cottagehomecare.com">
               info@cottagehomecare.com
             </a>{" "}
-            or call us at <a href="tel:516-367-2266">516-367-2266</a>.
+            or call <a href="tel:516-367-2266">516-367-2266</a>. Stay connected
+            as we continue to build a better, more inclusive community—together.
           </p>
         </div>
 

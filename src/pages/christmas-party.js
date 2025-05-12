@@ -75,7 +75,7 @@ const christmasParty = () => {
                 Christmas Party 2023
               </span>
             </h1>
-            <h2 className="sr-only">
+            <h2 className="seo-text-hidden ">
               Christmas Party Celebration at Cottage Home Care
             </h2>
           </div>
@@ -88,50 +88,74 @@ const christmasParty = () => {
           </div>
         </div>
 
-        <div className="w-[95%] mx-auto my-5 sr-only">
+        <div className="w-[95%] mx-auto my-5 seo-text-hidden">
           <p>
-            At Cottage Home Care Services, we cherish the opportunity to bring
-            joy and togetherness to our community during the holiday season. Our
-            Christmas Party 2023 was a heartwarming celebration that reflected
-            our commitment to fostering a sense of family and appreciation among
-            our staff, clients, and their families.
+            At Cottage Home Care Services, we believe in the importance of
+            celebrating together as a community. Our{" "}
+            <strong>Christmas Party 2023</strong> was a joyful and meaningful
+            holiday event that brought warmth, appreciation, and connection to
+            the people we care for and work with every day. This annual
+            tradition is a reflection of our commitment to creating a strong
+            sense of unity, especially during the festive season.
           </p>
+
           <p>
-            The event was filled with festive cheer, offering attendees a chance
-            to relax, connect, and celebrate the year&aps;s accomplishments.
-            Highlights of the celebration included:
+            Held in December, the event welcomed clients, caregivers,
+            administrative staff, and family members from across New York City,
+            Nassau, Suffolk, Westchester, and Albany. We were honored to host
+            this celebration as a way to say thank you to our dedicated team and
+            the families who entrust us with their home care needs. The holiday
+            spirit was alive through thoughtful planning, vibrant decorations,
+            and heartfelt moments that left lasting memories.
           </p>
+
+          <p>
+            Highlights from our <strong>2023 Christmas Party</strong> included:
+          </p>
+
           <ul>
             <li>
-              <strong>Festive Decorations:</strong> Transforming our venue into
-              a winter wonderland to set the holiday mood.
+              <strong>Festive Decorations:</strong> Our venue was beautifully
+              transformed into a winter wonderland filled with twinkling lights,
+              ornaments, and cheerful holiday decor to spark joy for all
+              attendees.
             </li>
             <li>
-              <strong>Delicious Cuisine:</strong> A variety of seasonal dishes
-              and treats that delighted everyone&apos;s taste buds.
+              <strong>Delicious Cuisine:</strong> Guests enjoyed a buffet of
+              seasonal dishes, desserts, and beverages that added warmth and
+              flavor to the celebration.
             </li>
             <li>
-              <strong>Entertainment:</strong> Live music and performances that
-              kept the atmosphere lively and engaging.
+              <strong>Live Entertainment:</strong> The evening was filled with
+              music, dancing, and live performances that lifted spirits and
+              brought smiles to every face.
             </li>
             <li>
-              <strong>Gift Exchange:</strong> Sharing tokens of appreciation to
-              express gratitude and strengthen bonds.
+              <strong>Gift Exchange:</strong> We held a joyful gift exchange
+              where team members and guests shared meaningful presents and
+              tokens of appreciation.
             </li>
             <li>
-              <strong>Community Spirit:</strong> Bringing together staff,
-              clients, and families to celebrate and create lasting memories.
+              <strong>Community Connection:</strong> Families, caregivers, and
+              staff bonded over shared stories, laughter, and the joy of being
+              part of something greater than just work—our Cottage Home Care
+              family.
             </li>
           </ul>
+
           <p>
-            Events like our annual Christmas Party are integral to our mission
-            of not only providing exceptional home care services but also
-            building a supportive and connected community. We believe that
-            celebrating together enhances the well-being of everyone involved.
+            Events like our annual Christmas Party play an important role in
+            building a supportive and connected culture at Cottage Home Care
+            Services. We believe that community engagement and celebration go
+            hand in hand with the care we provide. By coming together outside of
+            day-to-day routines, we create meaningful relationships that enhance
+            both employee and client well-being.
           </p>
+
           <p>
-            For more information about our community events or to learn more
-            about our home care services, please contact us at{" "}
+            To learn more about our <strong>holiday celebrations in NYC</strong>{" "}
+            or upcoming community events, or to explore our personalized home
+            care programs, please reach out to us at{" "}
             <a href="mailto:info@cottagehomecare.com">
               info@cottagehomecare.com
             </a>{" "}

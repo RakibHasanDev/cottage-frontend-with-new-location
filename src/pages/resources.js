@@ -191,13 +191,13 @@ const Resources = () => {
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
       <main className="dark:bg-slate-600 min-h-screen">
-        <h1 className="sr-only">
+        <h1 className="seo-text-hidden ">
           Cottage Home Care Services – Forms, Timesheets & Internal Documents
         </h1>
-        <h2 className="sr-only">
+        <h2 className="seo-text-hidden ">
           Access Essential Resources, Timesheets, and Forms at Cottage Home Care
         </h2>
-        <div className="sr-only">
+        <div className="seo-text-hidden ">
           <p>
             If you&apos;re pursuing a career as a Home Health Aide (HHA) in New
             York State, it&apos;s important to understand the essential tools,
