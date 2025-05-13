@@ -7,6 +7,7 @@ const diwali2024 = () => {
     <>
       <Head>
         <title>Diwali 2024 - Cottage Liberty Avenue Celebration</title>
+
         <meta
           name="description"
           content="Experience Diwali 2024 on Liberty Avenue with Cottage Home Care. Enjoy colorful moments, joyful gatherings, and photos capturing the festive spirit."
@@ -16,6 +17,8 @@ const diwali2024 = () => {
           content="Diwali 2024, Diwali celebration NYC, Liberty Avenue events, Cottage Home Care, Diwali photos, Festival of Lights, Diwali party Queens, cultural celebration, Diwali community event"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/diwali-2024/"
@@ -26,9 +29,46 @@ const diwali2024 = () => {
           href="https://cottagehomecare.com/diwali-2024/"
           hreflang="x-default"
         />
-
         <link rel="canonical" href="https://cottagehomecare.com/diwali-2024/" />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Diwali 2024 - Cottage Liberty Avenue Celebration"
+        />
+        <meta
+          property="og:description"
+          content="Celebrate Diwali 2024 with Cottage Home Care on Liberty Avenue. View highlights, event photos, and joyful moments from our cultural gathering."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/diwali-2024/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Diwali 2024 - Cottage Liberty Avenue Celebration"
+        />
+        <meta
+          name="twitter:description"
+          content="Join us for the Diwali 2024 celebration hosted by Cottage Home Care. See joyful community moments and festive photos from Liberty Avenue."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
+
       <div className="min-h-screen dark:bg-slate-600">
         <div>
           <div className="diwali-2024  min-h-[80vh] hidden md:block">

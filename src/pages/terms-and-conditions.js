@@ -6,6 +6,7 @@ const TermsAndConditions = () => {
     <>
       <Head>
         <title>Terms & Conditions | Cottage Home Care Services NY</title>
+
         <meta
           name="description"
           content="Review the terms and conditions for using Cottage Home Care Services. Learn about user responsibilities, service guidelines, and our privacy policies."
@@ -14,6 +15,8 @@ const TermsAndConditions = () => {
           name="keywords"
           content="terms, conditions, Cottage Home Care, user agreement, policy"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/terms-and-conditions/"
@@ -24,10 +27,46 @@ const TermsAndConditions = () => {
           href="https://cottagehomecare.com/terms-and-conditions/"
           hreflang="x-default"
         />
-
         <link
           rel="canonical"
           href="https://cottagehomecare.com/terms-and-conditions/"
+        />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Terms & Conditions | Cottage Home Care Services NY"
+        />
+        <meta
+          property="og:description"
+          content="Understand the user agreement, responsibilities, and service policies that govern your use of Cottage Home Care Services."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/terms-and-conditions/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Terms & Conditions | Cottage Home Care Services NY"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore Cottage Home Care's service terms, privacy policies, and user obligations for using our website and home care services."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
         />
       </Head>
 

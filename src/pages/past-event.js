@@ -59,6 +59,7 @@ const PastEvent = () => {
     <>
       <Head>
         <title>Past Events - Cottage Home Care Services</title>
+
         <meta
           name="description"
           content="Discover past events at Cottage Home Care—community programs, webinars, photos, and highlights that show how we support and engage our community."
@@ -67,6 +68,8 @@ const PastEvent = () => {
           name="keywords"
           content="Cottage Home Care past events, community outreach programs, healthcare webinars, event highlights, home care activities, community support events, past event photos, event key takeaways, Cottage Home Care community engagement"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/past-event/"
@@ -78,6 +81,43 @@ const PastEvent = () => {
           hreflang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/past-event/" />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Past Events - Cottage Home Care Services"
+        />
+        <meta
+          property="og:description"
+          content="Explore community outreach, cultural programs, and healthcare webinars hosted by Cottage Home Care. See photos, stories, and takeaways from past events."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/past-event/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Past Events - Cottage Home Care Services"
+        />
+        <meta
+          name="twitter:description"
+          content="Relive our past events at Cottage Home Care—photos, programs, and highlights that reflect our commitment to community care."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
 
       <main className="dark:bg-slate-600">

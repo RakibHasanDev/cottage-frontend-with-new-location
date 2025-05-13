@@ -11,11 +11,12 @@ const Values = () => {
           name="description"
           content="Discover the core values of Cottage Home Care Services — compassion, integrity, and excellence in delivering high-quality home care."
         />
-
         <meta
           name="keywords"
           content="Cottage Home Care values, core values, compassion in home care, integrity in home care, respect in home care, excellence in home care, home care quality, client-centered values, home care principles, Cottage Home Care commitment"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/values/"
@@ -27,7 +28,42 @@ const Values = () => {
           hreflang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/values/" />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Our Core Values | Cottage Home Care Services Inc - NY"
+        />
+        <meta
+          property="og:description"
+          content="Learn how compassion, integrity, respect, and excellence guide the care we provide at Cottage Home Care Services across New York."
+        />
+        <meta property="og:url" content="https://cottagehomecare.com/values/" />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Our Core Values | Cottage Home Care Services Inc - NY"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore the values that define Cottage Home Care — compassion, integrity, and client-centered excellence across all we do."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
+
       <main className="dark:bg-slate-600">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pt-20 ">
           <h1 className="seo-text-hidden ">
@@ -35,6 +71,7 @@ const Values = () => {
             Care
           </h1>
           <div className="seo-text-hidden">
+            <h2>Compassion, Integrity, and Respect in Home Care Service</h2>
             <p>
               At Cottage Home Care Services, our core values form the foundation
               of the compassionate and high-quality care we provide to
@@ -110,7 +147,7 @@ const Values = () => {
           </div>
 
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-            <h2 className="max-w-lg mb-2 font-sans text-3xl font-bold leading-none tracking-tight text-gary-600 sm:text-4xl md:mx-auto dark:text-gray-100">
+            <div className="max-w-lg mb-2 font-sans text-3xl font-bold leading-none tracking-tight text-gary-600 sm:text-4xl md:mx-auto dark:text-gray-100">
               <span className="relative inline-block">
                 <svg
                   viewBox="0 0 52 24"
@@ -137,7 +174,7 @@ const Values = () => {
                 <span className="relative">The</span>
               </span>{" "}
               Values, Of Cottage Home Care Services
-            </h2>
+            </div>
             <hr className="mt-3 border-t-[1px] border-[#00A6B2] w-16 mx-auto " />
             <p className="text-base text-gray-700 md:text-lg font-medium mt-5 py-2 dark:text-gray-200">
               “HHA/PCA & CDPAP SERVICES THROUGHOUT NEW YORK CITY, NASSAU &

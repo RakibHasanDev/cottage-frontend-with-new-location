@@ -67,15 +67,17 @@ const AllTeamMembers = () => {
     <>
       <Head>
         <title>All Team Members - Cottage Home Care Services</title>
+
         <meta
           name="description"
           content="Meet the experienced team members of Cottage Home Care Services. Our compassionate caregivers are committed to delivering quality home care."
         />
-
         <meta
           name="keywords"
           content="Cottage Home Care team members, all team members, home care staff, experienced caregivers, healthcare professionals, dedicated team, compassionate care providers, expert home care, meet our staff, Cottage Home Care professionals"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/all-team-members/"
@@ -90,7 +92,45 @@ const AllTeamMembers = () => {
           rel="canonical"
           href="https://cottagehomecare.com/all-team-members/"
         />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="All Team Members - Cottage Home Care Services"
+        />
+        <meta
+          property="og:description"
+          content="Get to know the full team behind Cottage Home Care—caregivers and staff who bring compassion and professionalism to every home visit."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/all-team-members/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="All Team Members - Cottage Home Care Services"
+        />
+        <meta
+          name="twitter:description"
+          content="Meet the compassionate and skilled professionals who make up the Cottage Home Care team across New York."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
+
       <main id="all-team">
         <div className="min-h-screen dark:bg-slate-600 relative">
           <div className="md:container md:flex md:justify-center md:mx-auto pt-10 ">

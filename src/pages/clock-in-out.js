@@ -6,6 +6,7 @@ const ClockInOut = () => {
     <>
       <Head>
         <title>Clock In & Out Instructions - Cottage Home Care</title>
+
         <meta
           name="description"
           content="Learn how caregivers at Cottage and Celestial Home Care can accurately clock in and out with step-by-step call procedures and duty codes."
@@ -14,6 +15,8 @@ const ClockInOut = () => {
           name="keywords"
           content="clock in instructions, clock out guide, Cottage Home Care, Celestial Home Care, caregiver clock in, duty codes, timekeeping, assignment ID, caregiver steps, phone dial instructions"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/clock-in-out/"
@@ -28,7 +31,45 @@ const ClockInOut = () => {
           rel="canonical"
           href="https://cottagehomecare.com/clock-in-out/"
         />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Clock In & Out Instructions - Cottage Home Care"
+        />
+        <meta
+          property="og:description"
+          content="Step-by-step instructions for caregivers at Cottage and Celestial Home Care on how to clock in and out, including duty codes and call procedures."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/clock-in-out/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Clock In & Out Instructions - Cottage Home Care"
+        />
+        <meta
+          name="twitter:description"
+          content="Follow these clock in and out procedures using duty codes and your caregiver assignment ID at Cottage and Celestial Home Care."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
+
       <main className="min-h-screen dark:bg-slate-600">
         <div className="clockInOut-cover"></div>
 

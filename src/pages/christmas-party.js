@@ -23,6 +23,7 @@ const christmasParty = () => {
           property="og:title"
           content="Christmas Party 2023 | Cottage Home Care Services"
         />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta
           property="og:description"
           content="Explore the warm memories from our 2023 Christmas celebration hosted by Cottage Home Care Services. A night to remember!"
@@ -39,6 +40,7 @@ const christmasParty = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
         <meta
           name="twitter:title"
           content="Christmas Party 2023 | Cottage Home Care Services"

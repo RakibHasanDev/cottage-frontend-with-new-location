@@ -10,24 +10,62 @@ const PrivacyPolicy = () => {
           name="description"
           content="Read Cottage Home Care’s Privacy Policy to learn how we collect, use, and protect your personal information when you use our services."
         />
-
         <meta
           name="keywords"
           content="Cottage Home Care Privacy Policy, data protection, personal information processing, privacy rights, SMS consent, secure data handling, information security, user privacy, data collection policy, privacy compliance"
         />
+
+        {/* Alternate & Canonical Links */}
         <link
           rel="alternate"
-          href={`https://cottagehomecare.com/privacy-policy/`}
+          href="https://cottagehomecare.com/privacy-policy/"
           hreflang="en"
         />
         <link
           rel="alternate"
-          href={`https://cottagehomecare.com/privacy-policy/`}
+          href="https://cottagehomecare.com/privacy-policy/"
           hreflang="x-default"
         />
         <link
           rel="canonical"
           href="https://cottagehomecare.com/privacy-policy/"
+        />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Privacy Policy - Cottage Home Care Services"
+        />
+        <meta
+          property="og:description"
+          content="Learn how Cottage Home Care Services collects, uses, and protects your personal information under our privacy policy."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/privacy-policy/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Privacy Policy - Cottage Home Care Services"
+        />
+        <meta
+          name="twitter:description"
+          content="Understand how we handle and protect your data at Cottage Home Care Services."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
         />
       </Head>
 

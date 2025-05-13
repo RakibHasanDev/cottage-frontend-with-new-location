@@ -156,6 +156,7 @@ const NHTD = () => {
         {/* ✅ Open Graph Meta Tags (Facebook & LinkedIn) */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta
           property="og:url"
           content="https://res.cloudinary.com/di3wwp9s0/image/upload/v1742930345/Optimize%20Banner/nhtd_cover_vdei4n.webp"
@@ -168,6 +169,7 @@ const NHTD = () => {
 
         {/* ✅ Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta

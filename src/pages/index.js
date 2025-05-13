@@ -282,6 +282,26 @@ export default function Home() {
         <Suspense fallback={<SkeletonLoading />}>
           <NewsLetter />
         </Suspense>
+
+        <div class="seo-text-hidden">
+          <p>
+            Cottage Home Care Services offers a full range of home care programs
+            across New York, including CDPAP, HHA, PCA, NHTD Waiver, and Private
+            Pay services. Through the Consumer Directed Personal Assistance
+            Program (CDPAP), family members or friends can get paid to care for
+            loved ones. Our Home Health Aide (HHA) and Personal Care Aide (PCA)
+            services provide assistance with bathing, dressing, meal prep,
+            medication reminders, and daily living activities. The Nursing Home
+            Transition and Diversion (NHTD) program helps individuals safely
+            move from nursing facilities back into their communities. We also
+            provide customized Private Pay options for those who prefer
+            flexible, out-of-pocket care solutions. Cottage Home Care is
+            committed to serving multicultural communities and delivering care
+            in multiple languages. Whether you need skilled assistance or
+            non-medical support, our experienced, compassionate caregivers are
+            ready to meet your needs with professionalism, dignity, and respect.
+          </p>
+        </div>
       </div>
     </>
   );

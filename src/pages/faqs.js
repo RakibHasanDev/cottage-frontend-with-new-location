@@ -247,6 +247,7 @@ const Faqs = () => {
     <>
       <Head>
         <title>FAQs | Cottage Home Care Services Inc - Your Questions</title>
+
         <meta
           name="description"
           content="Find answers to FAQs about home care, COVID-19 safety, pricing, and policies. Get the info you need to make smart decisions about your care options."
@@ -255,6 +256,8 @@ const Faqs = () => {
           name="keywords"
           content="home care FAQs, Cottage Home Care services, COVID-19 safety FAQ, home care pricing questions, home care policies, senior care solutions, healthcare FAQs, Cottage Home Care information"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/faqs/"
@@ -266,6 +269,40 @@ const Faqs = () => {
           hreflang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/faqs/" />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="FAQs | Cottage Home Care Services Inc - Your Questions"
+        />
+        <meta
+          property="og:description"
+          content="Explore frequently asked questions about home care services, COVID-19 precautions, pricing, and Cottage Home Care policies."
+        />
+        <meta property="og:url" content="https://cottagehomecare.com/faqs/" />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="FAQs | Cottage Home Care Services Inc - Your Questions"
+        />
+        <meta
+          name="twitter:description"
+          content="Find clear answers to common questions about home care services, COVID-19 safety, costs, and policies at Cottage Home Care."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
 
       <main className="min-h-screen dark:bg-slate-600 bg-blue-50">

@@ -16,6 +16,8 @@ const Disclaimer = () => {
           name="keywords"
           content="disclaimer, Cottage Home Care, legal notice, liability, fair use, external links"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/disclaimer/"
@@ -27,6 +29,43 @@ const Disclaimer = () => {
           hreflang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/disclaimer/" />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Official Disclaimer | Cottage Home Care Services NY"
+        />
+        <meta
+          property="og:description"
+          content="Review Cottage Home Care’s disclaimer covering limitations of liability, fair use policies, and third-party links."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/disclaimer/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Official Disclaimer | Cottage Home Care Services NY"
+        />
+        <meta
+          name="twitter:description"
+          content="Understand the legal boundaries and disclaimer statements provided by Cottage Home Care Services."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
 
       <div

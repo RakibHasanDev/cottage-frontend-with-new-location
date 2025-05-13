@@ -180,7 +180,9 @@ const Cdpap = () => {
 
         {/* ✅ Open Graph Meta Tags (For Facebook & LinkedIn) */}
         <meta property="og:title" content={title} />
+        <meta name="twitter:site" content="@cottagecareny" />
         <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta property="og:url" content="https://cottagehomecare.com/cdpap/" />
         <meta property="og:type" content="website" />
         <meta
@@ -190,6 +192,7 @@ const Cdpap = () => {
 
         {/* ✅ Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta

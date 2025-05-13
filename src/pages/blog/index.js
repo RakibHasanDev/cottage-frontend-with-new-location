@@ -72,15 +72,17 @@ const Blog = () => {
     <>
       <Head>
         <title>Blog | Cottage Home Care Services Inc - News & Tips</title>
+
         <meta
           name="description"
           content="Get tips on caregiving, wellness, and senior care with Cottage Home Care’s blog. Stay informed, inspired, and connected to the industry."
         />
-
         <meta
           name="keywords"
           content="home care blog, caregiving tips, senior care insights, health and wellness blog, Cottage Home Care news, home care industry updates, caregiver resources, home care trends, compassionate care stories, Cottage Home Care blog articles"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/blog/"
@@ -92,6 +94,40 @@ const Blog = () => {
           hreflang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/blog/" />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Blog | Cottage Home Care Services Inc - News & Tips"
+        />
+        <meta
+          property="og:description"
+          content="Explore expert caregiving tips, wellness advice, senior care stories, and updates from Cottage Home Care’s blog—your source for trusted care insights."
+        />
+        <meta property="og:url" content="https://cottagehomecare.com/blog/" />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Blog | Cottage Home Care Services Inc - News & Tips"
+        />
+        <meta
+          name="twitter:description"
+          content="Read the latest blog posts from Cottage Home Care—featuring helpful tips, caregiver stories, health updates, and more."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
 
       <main className="min-h-screen dark:bg-slate-500">

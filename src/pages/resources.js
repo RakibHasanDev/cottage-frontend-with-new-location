@@ -164,10 +164,18 @@ const Resources = () => {
     <>
       <Head>
         <title>{title}</title>
+
+        {/* ✅ SEO Meta Tags */}
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Cottage Home Care Services" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* ✅ Open Graph Meta Tags */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta
           property="og:url"
           content="https://cottagehomecare.com/resources/"
@@ -175,8 +183,21 @@ const Resources = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://cottagehomecare.com/logo.png"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
         />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+
+        {/* ✅ Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/resources/"
@@ -188,8 +209,11 @@ const Resources = () => {
           hreflang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/resources/" />
+
+        {/* ✅ Structured Data */}
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Head>
+
       <main className="dark:bg-slate-600 min-h-screen">
         <h1 className="seo-text-hidden ">
           Cottage Home Care Services – Forms, Timesheets & Internal Documents

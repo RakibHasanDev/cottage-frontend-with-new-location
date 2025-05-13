@@ -50,6 +50,7 @@ const UpcomingEvent = () => {
     <>
       <Head>
         <title>Upcoming Events - Cottage Home Care Services</title>
+
         <meta
           name="description"
           content="Stay updated on events at Cottage Home Care Services—join us for workshops and activities to learn, connect, and support your community."
@@ -58,6 +59,8 @@ const UpcomingEvent = () => {
           name="keywords"
           content="Cottage Home Care upcoming events, health and wellness workshops, community engagement activities, future home care events, scheduled events, community support events, learn and connect, upcoming healthcare events, Cottage Home Care activities"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/upcoming-event/"
@@ -68,12 +71,49 @@ const UpcomingEvent = () => {
           href="https://cottagehomecare.com/upcoming-event/"
           hreflang="x-default"
         />
-
         <link
           rel="canonical"
           href="https://cottagehomecare.com/upcoming-event/"
         />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Upcoming Events - Cottage Home Care Services"
+        />
+        <meta
+          property="og:description"
+          content="Join Cottage Home Care at our upcoming events—community programs, wellness workshops, and support activities for families and caregivers."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/upcoming-event/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Upcoming Events - Cottage Home Care Services"
+        />
+        <meta
+          name="twitter:description"
+          content="Stay informed about future events hosted by Cottage Home Care—connect, learn, and participate in community-focused activities."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
+
       <main className="min-h-screen dark:bg-slate-600 bg-[#F5F5F7]">
         <div className="relative  bg-cover bg-center text-center h-[40vh] md:min-h-[80vh] upcoming-cover ">
           <div className="absolute bottom-0 lg:bottom-10 left-0">

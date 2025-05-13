@@ -23,6 +23,7 @@ const schoolSupply = () => {
           property="og:title"
           content="School Supplies Giveaway | Cottage Home Care Services"
         />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta
           property="og:description"
           content="Experience the joy and community impact of our School Supplies Giveaway. View the full event gallery and relive the smiles!"
@@ -43,6 +44,7 @@ const schoolSupply = () => {
           name="twitter:title"
           content="School Supplies Giveaway | Cottage Home Care Services"
         />
+        <meta name="twitter:site" content="@cottagecareny" />
         <meta
           name="twitter:description"
           content="Check out the highlights from our School Supplies Giveaway event — supporting families and education in our community."

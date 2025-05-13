@@ -35,6 +35,7 @@ const Covid = () => {
     <>
       <Head>
         <title>COVID-19 Info | Cottage Home Care Services Inc - NY</title>
+
         <meta
           name="description"
           content="Stay updated on COVID-19 safety and health services from Cottage Home Care. Learn how we protect our community during the coronavirus pandemic."
@@ -43,6 +44,8 @@ const Covid = () => {
           name="keywords"
           content="COVID-19 updates, coronavirus safety measures, Cottage Home Care COVID response, health services during COVID, community health safety, pandemic response, health and safety protocols, COVID-19 healthcare services"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/covid/"
@@ -53,9 +56,43 @@ const Covid = () => {
           href="https://cottagehomecare.com/covid/"
           hreflang="x-default"
         />
-
         <link rel="canonical" href="https://cottagehomecare.com/covid/" />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="COVID-19 Info | Cottage Home Care Services Inc - NY"
+        />
+        <meta
+          property="og:description"
+          content="Explore Cottage Home Care’s safety protocols and healthcare services during COVID-19. Learn how we keep our patients and staff safe during the pandemic."
+        />
+        <meta property="og:url" content="https://cottagehomecare.com/covid/" />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="COVID-19 Info | Cottage Home Care Services Inc - NY"
+        />
+        <meta
+          name="twitter:description"
+          content="Stay informed about our COVID-19 safety protocols and services designed to protect both caregivers and clients during the pandemic."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
+
       <main className=" px-5  dark:bg-slate-600 min-h-screen">
         <h1 className="seo-text-hidden ">
           COVID-19 Awareness—Stay at Home, Stay Safe | Cottage Care

@@ -144,6 +144,7 @@ const Contacts = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta
           property="og:url"
           content="https://cottagehomecare.com/contact/"
@@ -157,9 +158,11 @@ const Contacts = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        <meta name="twitter:site" content="@cottagecareny" />
+
         <meta
           name="twitter:image"
-          content="https://cottagehomecare.com/logo.png"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
         />
         <link
           rel="alternate"

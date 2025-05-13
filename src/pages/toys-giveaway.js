@@ -22,6 +22,7 @@ const toysGiveaway = () => {
           property="og:title"
           content="Christmas Toys Giveaway | Cottage Home Care Services"
         />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta
           property="og:description"
           content="Join us as we spread cheer through our Christmas Toys Giveaway. Explore photos of joyful families and happy children during the holiday season."
@@ -38,6 +39,7 @@ const toysGiveaway = () => {
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
         <meta
           name="twitter:title"
           content="Christmas Toys Giveaway | Cottage Home Care Services"

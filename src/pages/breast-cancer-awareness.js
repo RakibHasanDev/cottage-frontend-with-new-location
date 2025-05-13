@@ -23,6 +23,7 @@ const breastCancerAwareness = () => {
           property="og:title"
           content="Breast Cancer Awareness Month 2024 | Cottage Home Care Services"
         />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta
           property="og:description"
           content="Take a glimpse into our Breast Cancer Awareness Month celebration — a powerful event filled with support, love, and awareness."
@@ -39,6 +40,7 @@ const breastCancerAwareness = () => {
 
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
         <meta
           name="twitter:title"
           content="Breast Cancer Awareness Month 2024 | Cottage Home Care Services"

@@ -6,15 +6,17 @@ const MissionVision = () => {
     <>
       <Head>
         <title>Mission & Vision - Cottage Home Care Services</title>
+
         <meta
           name="description"
           content="Discover the mission and vision behind Cottage Home Care Services. Learn about our values, goals, and dedication to exceptional home care."
         />
-
         <meta
           name="keywords"
           content="Cottage Home Care mission, Cottage Home Care vision, home care core values, exceptional home care commitment, long-term goals, quality of life improvement, community impact, home care dedication, client-centered care, Cottage Home Care philosophy"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/mission-vision/"
@@ -29,7 +31,45 @@ const MissionVision = () => {
           rel="canonical"
           href="https://cottagehomecare.com/mission-vision/"
         />
+
+        {/* Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Mission & Vision - Cottage Home Care Services"
+        />
+        <meta
+          property="og:description"
+          content="Explore Cottage Home Care’s core mission and long-term vision to deliver client-centered care that improves quality of life across New York."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/mission-vision/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Mission & Vision - Cottage Home Care Services"
+        />
+        <meta
+          name="twitter:description"
+          content="Learn about the mission and vision that drive Cottage Home Care to provide exceptional and compassionate home care services."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
+
       <main className="min-h-screen dark:bg-slate-600">
         <div className="md:w-[85%] w-[95%] mx-auto pt-5 pb-20">
           <h1 className="text-center mt-5 playrify font-semibold text-gray-700 md:text-3xl text-2xl dark:text-gray-200">

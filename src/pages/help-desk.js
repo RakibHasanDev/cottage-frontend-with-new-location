@@ -79,6 +79,7 @@ const HelpDesk = () => {
     <>
       <Head>
         <title>Help Desk Support | Cottage Home Care Services Inc</title>
+
         <meta
           name="description"
           content="Access the Help Desk at Cottage Home Care to manage Clock In/Out, PayStubs, PTO, requests, payroll info, and supplies—all in one place."
@@ -87,6 +88,8 @@ const HelpDesk = () => {
           name="keywords"
           content="Cottage Home Care Help Desk, employee support, clock in, clock out, PayStub access, PTO management, general requests, payroll information, request supplies, administrative help, healthcare staff support"
         />
+
+        {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
           href="https://cottagehomecare.com/help-desk/"
@@ -98,6 +101,43 @@ const HelpDesk = () => {
           hreflang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/help-desk/" />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Help Desk Support | Cottage Home Care Services Inc"
+        />
+        <meta
+          property="og:description"
+          content="Manage Clock In/Out, view PayStubs, request PTO, submit general requests, and access payroll and supply services via our Help Desk portal."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/help-desk/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Help Desk Support | Cottage Home Care Services Inc"
+        />
+        <meta
+          name="twitter:description"
+          content="Quickly access Clock In/Out tools, PayStubs, PTO requests, payroll help, and supply requests through the Cottage Help Desk."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
       </Head>
 
       <main className="min-h-screen dark:bg-slate-600 ">
