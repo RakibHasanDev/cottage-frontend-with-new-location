@@ -91,7 +91,8 @@ const schoolSupply = () => {
             meaningful initiative is designed to support students and families
             across New York by providing essential back-to-school materials. By
             reducing the financial burden on families, we help students start
-            the academic year feeling confident, prepared, and motivated.
+            the academic year feeling confident, prepared, and motivated for
+            success.
           </p>
 
           <p>
@@ -105,9 +106,10 @@ const schoolSupply = () => {
 
           <p>
             Our <strong>School Supplies Giveaway</strong> is open to students of
-            all ages and backgrounds, and it provides a supportive space where
-            children can gather essential materials while enjoying a day filled
-            with excitement and encouragement.
+            all ages, grade levels, and cultural backgrounds. It provides a
+            safe, inclusive, and supportive space where children can receive the
+            resources they need while enjoying a memorable day filled with
+            excitement, entertainment, and encouragement.
           </p>
 
           <p>Highlights of the event include:</p>
@@ -115,18 +117,19 @@ const schoolSupply = () => {
           <ul>
             <li>
               <strong>Free Backpack Distribution:</strong> Hundreds of students
-              receive backpacks filled with notebooks, pencils, pens, rulers,
-              erasers, folders, and other classroom essentials.
+              receive backpacks filled with essential school supplies including
+              notebooks, pencils, pens, folders, rulers, crayons, glue sticks,
+              and more.
             </li>
             <li>
               <strong>Fun & Educational Activities:</strong> Kids participate in
-              games, interactive stations, and learning-based challenges to
-              create a joyful, school-ready atmosphere.
+              games, creative learning stations, and school-readiness challenges
+              that make preparing for the new year both joyful and meaningful.
             </li>
             <li>
               <strong>Community Engagement:</strong> Parents and caregivers
-              learn more about our home care services, CDPAP programs, and other
-              family support resources.
+              learn more about our home care services, CDPAP programs, and
+              family-centered resources offered throughout New York.
             </li>
           </ul>
 
@@ -135,13 +138,14 @@ const schoolSupply = () => {
             and an opportunity for Cottage Home Care Services to connect
             directly with the people we proudly serve. We believe in the power
             of education and are committed to creating a nurturing environment
-            where all children have the tools they need to thrive.
+            where all children have the tools they need to thrive and succeed.
           </p>
 
           <p>
-            Our team is grateful for the volunteers, community partners, and
-            staff members who help make this initiative a success each year.
-            Together, we create a lasting impact on the future of our youth.
+            Our team is deeply grateful to the volunteers, partners, sponsors,
+            and staff members who help make this annual event possible. Their
+            commitment makes a lasting difference in the lives of students and
+            families across New York.
           </p>
 
           <p>
@@ -152,8 +156,8 @@ const schoolSupply = () => {
             <a href="mailto:info@cottagehomecare.com">
               info@cottagehomecare.com
             </a>{" "}
-            or call <a href="tel:516-367-2266">516-367-2266</a>. Let&apos;s
-            build brighter futures—one backpack at a time.
+            or call <a href="tel:516-367-2266">516-367-2266</a>. Let’s build
+            brighter futures—one backpack at a time.
           </p>
         </div>
 

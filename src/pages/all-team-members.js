@@ -172,9 +172,9 @@ const AllTeamMembers = () => {
               Our multilingual and multicultural team ensures that families from
               all backgrounds feel heard and supported. We proudly serve
               Bengali, Spanish, Punjabi, Jamaican, and Guyanese communities with
-              culturally aligned care. At Cottage Home Care Services, we believe
-              that trust, respect, and communication are the foundation of
-              strong care relationships.
+              culturally aligned, compassionate care. At Cottage Home Care
+              Services, we believe that trust, respect, and open communication
+              are the foundation of strong care relationships.
             </p>
 
             <p>
