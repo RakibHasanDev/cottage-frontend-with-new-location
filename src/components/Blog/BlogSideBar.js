@@ -65,9 +65,9 @@ const BlogSidebar = () => {
   return (
     <div className="p-4 bg-white dark:bg-slate-700 ">
       <div className="lg:w-[95%] mx-auto mb-10 border border-[#00A6B2] p-4">
-        <h1 className="text-center text-2xl  font-semibold mt-3 dark:text-white league-spartan">
+        <p className="text-center text-2xl  font-semibold mt-3 dark:text-white league-spartan">
           Recent Posts
-        </h1>
+        </p>
         <hr className="w-[50px] border-t-[2px] border-[#00A6B2] mx-auto" />
 
         <div className="mt-3">
@@ -116,9 +116,7 @@ const BlogSidebar = () => {
       </div>
 
       <div className="lg:w-[95%] mx-auto mb-10 border border-[#00A6B2] p-4">
-        <h2 className="text-lg font-semibold mb-4 dark:text-white">
-          Categories
-        </h2>
+        <p className="text-lg font-semibold mb-4 dark:text-white">Categories</p>
         <ul className="space-y-2">
           {Object.entries(categories).map(([category, count]) => (
             <li
@@ -160,9 +158,9 @@ const BlogSidebar = () => {
                         />
                       </div>
                       <div className="w-[60%]">
-                        <h1 className="text-gray-600 font-semibold manual-hyphen leading-tight hover:text-[#00A6B2] dark:hover:text-[#00A6B2] dark:text-gray-200 league-spartan">
+                        <p className="text-gray-600 font-semibold manual-hyphen leading-tight hover:text-[#00A6B2] dark:hover:text-[#00A6B2] dark:text-gray-200 league-spartan">
                           {blog?.title}
-                        </h1>
+                        </p>
 
                         <p className="font-semibold text-sm text-gray-400 mt-1 dark:text-gray-300 open-sans">
                           {new Date(blog?.newDate).toLocaleString(

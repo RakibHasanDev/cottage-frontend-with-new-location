@@ -719,7 +719,7 @@ const Team = () => {
                           {employeesByDepartment?.CdpapSuperVisor?.[0]?.name}
                         </Link>
                         <h5 className="text-center pt-1 md:pt-2 text-xs md:text-sm font-semibold text-gray-500">
-                          CDPAP Manager
+                          PCA Manager
                         </h5>
                       </div>
                       <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 -bottom-3">

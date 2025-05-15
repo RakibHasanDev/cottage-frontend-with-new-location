@@ -412,9 +412,9 @@ const BlogDetails = ({
           {/* Text Content */}
           <div className="relative   h-[40vh] w-full ">
             <div className="text-white flex h-[80%] items-center   poppins text-shadow pb-5 md:pb-0">
-              <h1 className="text-2xl lg:text-4xl font-bold  league-spartan ml-5">
+              <p className="text-2xl lg:text-4xl font-bold  league-spartan ml-5">
                 Cottage Care Blog
-              </h1>
+              </p>
             </div>
             <div className=" absolute bottom-10  left-0">
               <BannerWithBreadcrumbs title="NHTD" />
