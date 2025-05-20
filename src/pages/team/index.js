@@ -449,38 +449,59 @@ const Team = () => {
 
                     {/* sabine section start  */}
 
-                    <div className=" z-30  h-[70px] w-40 md:w-52 bg-[#FFFFFF] md:h-24 lg:h-28 rounded-lg shadow open-sans relative mx-auto mt-8 md:mt-12">
-                      <div className="flex justify-center items-center relative">
-                        <p className=" h-12 dark:bg-gray-200 bg-[#6B7280] w-[1px] md:w-[2px] mx-auto absolute md:-top-[54px] lg:-top-[58px] -top-[35px]"></p>
-                      </div>
-                      <PhotoProvider>
-                        <PhotoView
-                          src={employeesByDepartment?.Administrator?.[0]?.img}
-                        >
-                          <img
-                            src={employeesByDepartment?.Administrator?.[0]?.img}
-                            alt={employeesByDepartment?.Administrator?.[0]?.img}
-                            className="w-9 h-9 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-5 md:-top-10 shadow cursor-pointer z-10"
-                            w="36"
-                            h="36"
-                            loading="lazy"
-                          />
-                        </PhotoView>
-                      </PhotoProvider>
+                    <div className="relative w-40 md:w-52 mx-auto mt-8 md:mt-12">
+                      {/* SVG LINE */}
+                      <svg
+                        className="absolute -top-[36px] md:-top-[54px] lg:-top-[58px] left-1/2 transform -translate-x-1/2 pointer-events-none h-[134px] md:h-[178px] lg:h-[202px] "
+                        width="2"
+                        viewBox="0 0 2 300"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <line
+                          x1="1"
+                          y1="0"
+                          x2="1"
+                          y2="300"
+                          className=" stroke-[#6B7280] dark:stroke-gray-100 stroke-[2px] lg:stroke-[4px]"
+                        />
+                      </svg>
 
-                      <div>
-                        <Link
-                          href={`/team/${employeesByDepartment?.Administrator?.[0]?._id}`}
-                          className=" hover:underline text-center block font-semibold text-gray-500 pt-6 md:pt-7 lg:pt-9 text-[10px] md:text-lg"
-                        >
-                          {employeesByDepartment?.Administrator?.[0]?.name}
-                        </Link>
-                        <h5 className="text-center pt-0.5 lg:pt-2 text-[8px] md:text-sm font-semibold text-gray-500 px-2 md:px-0 leading-3">
-                          {
-                            employeesByDepartment?.Administrator?.[0]
-                              ?.designation
-                          }
-                        </h5>
+                      {/* CARD */}
+                      <div className="relative h-[70px] w-full bg-white md:h-24 lg:h-28 rounded-lg shadow open-sans overflow-visible z-10">
+                        {/* IMAGE */}
+                        <PhotoProvider>
+                          <PhotoView
+                            src={employeesByDepartment?.Administrator?.[0]?.img}
+                          >
+                            <img
+                              src={
+                                employeesByDepartment?.Administrator?.[0]?.img
+                              }
+                              alt={
+                                employeesByDepartment?.Administrator?.[0]?.img
+                              }
+                              className="w-9 h-9 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-5 md:-top-10 shadow cursor-pointer z-10"
+                              loading="lazy"
+                            />
+                          </PhotoView>
+                        </PhotoProvider>
+
+                        {/* TEXT */}
+                        <div className="relative z-20 pt-6 md:pt-7 lg:pt-9 text-center">
+                          <Link
+                            href={`/team/${employeesByDepartment?.Administrator?.[0]?._id}`}
+                            className="hover:underline block font-semibold text-gray-500 text-[10px] md:text-lg"
+                          >
+                            {employeesByDepartment?.Administrator?.[0]?.name}
+                          </Link>
+                          <h5 className="pt-0.5 lg:pt-2 text-[8px] md:text-sm font-semibold text-gray-500 leading-3">
+                            {
+                              employeesByDepartment?.Administrator?.[0]
+                                ?.designation
+                            }
+                          </h5>
+                        </div>
                       </div>
                     </div>
 
@@ -510,24 +531,14 @@ const Team = () => {
                   </div>
 
                   <div
-                    className=" md:max-w-[730px] lg:max-w-[1000px] 2xl:max-w-[1200px]  mx-auto lg:-mt-20 2xl:-mt-24 -mt-7 md:-mt-8 mobile-line-manager"
+                    className=" md:max-w-[620px] lg:max-w-[940px] 2xl:max-w-[1050px]  mx-auto lg:-mt-20 2xl:-mt-24 -mt-7 md:-mt-8 mobile-line-manager"
                     id="manager-section"
                   >
-                    <div className="  flex  justify-evenly gap-[54px]  md:gap-3 lg:gap-[127px] 2xl:gap-[142px]  ">
+                    <div className="  flex  justify-between  gap-[54px]  md:gap-3 lg:gap-[127px] 2xl:gap-[142px]  ">
                       {employeesByDepartment?.OfficeManager?.map((employee) => (
                         <div key={employee?._id}>
                           <div>
                             <div className="w-[82px] z-20  h-[70px] md:w-40 lg:w-52 bg-[#FFFFFF] md:h-24 lg:h-28 rounded-lg shadow open-sans relative  ">
-                              {employee?._id === "65dcede2331dfddc25c80c30" && (
-                                <div className="flex justify-center items-center relative">
-                                  <p
-                                    className=" h-[80px] md:h-[70px] lg:h-[100px]  dark:bg-gray-200 bg-[#6B7280] w-[1px] md:w-[2px] mx-auto absolute 
-                                    md:-top-[94px] lg:-top-[100px] 
-                                  -top-[70px]"
-                                  ></p>
-                                </div>
-                              )}
-
                               <PhotoProvider>
                                 <PhotoView src={employee?.img}>
                                   <img
