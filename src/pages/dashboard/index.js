@@ -60,7 +60,7 @@ const Dashboard = () => {
       <div className="md:flex gap-10 items-center">
         <div className="w-[100%] mx-auto md:ml-[4%]">
           <div className="w-[95%] mx-auto grid grid-cols-2 lg:grid-cols-5 mt-5 gap-7 items-center ">
-            <Link href="/dashboard/cottageUsers">
+            <Link href="/dashboard/cottage-users">
               <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
                 <p className="flex justify-center text-4xl text-gray-100">
                   <FaUsers />
