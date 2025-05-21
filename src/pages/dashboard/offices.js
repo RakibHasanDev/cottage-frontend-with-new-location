@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { BiUserCircle } from "react-icons/bi";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -10,11 +10,20 @@ const AllOffice = () => {
   const [page, setPage] = useState(0);
   const [size, setSize] = useState(6);
   const [load, setLoad] = useState(false);
+  const [openDropdownId, setOpenDropdownId] = useState(null);
+  const [newUser, setNewUser] = useState(null);
+  const [id, setId] = useState(null);
+
+  useEffect(() => {
+    const handleClickOutside = () => setOpenDropdownId(null);
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
 
   const url = `https://cottage-backend-voilerplate.vercel.app/chats/office?page=${page}&size=${size}`;
 
   const {
-    data: { count, users } = [],
+    data: { count = 0, users = [] } = {},
     isLoading,
     refetch,
   } = useQuery({
@@ -26,8 +35,12 @@ const AllOffice = () => {
     },
   });
 
-  const [newUser, setNewUser] = useState(users?.[0]);
-  const [id, setId] = useState(users?.[0]?._id);
+  useEffect(() => {
+    if (users?.length) {
+      setNewUser(users[0]);
+      setId(users[0]?._id);
+    }
+  }, [users]);
 
   const pages = Math.ceil(count / size);
 
@@ -45,7 +58,7 @@ const AllOffice = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount) {
-            toast.success("User Delete SuccessFully");
+            toast.success("User Deleted Successfully");
             localStorage.removeItem("createUser");
             refetch();
           }
@@ -60,205 +73,121 @@ const AllOffice = () => {
 
   return (
     <div className="min-h-screen border-2 bg-[#EBF8F9] dark:bg-slate-600 relative">
-      {isLoading && <SkeletonLoading></SkeletonLoading>}
+      {isLoading && <SkeletonLoading />}
       <div className="grid grid-cols-7">
         <div className="col-span-2 border-r-4">
-          {
-            <ul className="menu p-4 w-80 text-base-content mt-5">
-              {users?.map((user) => (
-                <li key={user?._id} onClick={() => userHandler(user)}>
-                  {user?._id === id ? (
-                    <>
-                      <div className="my-2 block bg-[#79A4A8] dark:bg-neutral-700 rounded-md text-white">
-                        <div
-                          className="flex items-center justify-between 
-                                          "
-                        >
-                          <h1
-                            //  to={`/dashboard/user/${user?._id}`}
-                            className="flex items-center gap-3 py-1  px-2 dark:bg-neutral-700 rounded-md"
-                          >
-                            {user?.photoURL && (
-                              <img
-                                src={user?.photoURL}
-                                alt={user?.photoURL}
-                                className="w-10 h-10 border-2 border-primary rounded-full"
-                              />
-                            )}
-                            {!user?.photoURL && (
-                              <BiUserCircle className="w-12 h-12 rounded-full text-gray-300"></BiUserCircle>
-                            )}
+          <ul className="menu p-4 w-80 text-base-content mt-5">
+            {users?.map((user) => (
+              <li key={user?._id} onClick={() => userHandler(user)}>
+                <div
+                  className={`my-2 block rounded-md p-2 ${
+                    user?._id === id
+                      ? "bg-[#79A4A8] dark:bg-neutral-700 text-white"
+                      : "bg-[#D8E4E5] dark:bg-slate-400 dark:text-gray-100"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <h1 className="flex items-center gap-3 px-2 py-1">
+                      {user?.photoURL ? (
+                        <img
+                          src={user?.photoURL}
+                          alt={user?.photoURL}
+                          className="w-10 h-10 border-2 border-primary rounded-full"
+                        />
+                      ) : (
+                        <BiUserCircle className="w-12 h-12 text-gray-300 rounded-full" />
+                      )}
+                      <p>{user?.firstName}</p>
+                    </h1>
 
-                            <p className="dark:text-gray-100">
-                              {user?.firstName}
-                            </p>
-                          </h1>
+                    <div className="relative inline-block text-left">
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setOpenDropdownId(
+                            openDropdownId === user._id ? null : user._id
+                          );
+                        }}
+                        className="text-2xl text-gray-500 dark:text-gray-100 focus:outline-none"
+                      >
+                        <BsThreeDotsVertical />
+                      </button>
 
-                          <div>
-                            <details className="dropdown dropdown-end  ">
-                              <summary
-                                type="button"
-                                className="
-                                      bg-transparent outline-none text-gray-100 dark:text-gray-100 text-2xl -mr mt-1 cursor-pointer"
-                                style={{ listStyle: "none" }}
+                      {openDropdownId === user._id && (
+                        <div className="absolute right-0 mt-2 w-32 z-50 rounded-md shadow-lg bg-gray-200 dark:bg-slate-700">
+                          <ul className="py-2">
+                            <li>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  deleteHandler(user);
+                                  setOpenDropdownId(null);
+                                }}
+                                className="w-full text-left px-4 py-2 text-sm font-semibold text-gray-800 dark:text-white hover:bg-primary dark:hover:bg-primary hover:text-white"
                               >
-                                <BsThreeDotsVertical></BsThreeDotsVertical>
-                              </summary>
-                              <ul className="px-4 py-6  menu dropdown-content z-[1] bg-gray-200 pr-10 rounded-md shadow-lg  dark:bg-slate-700 mt-3 duration-500">
-                                <li onClick={() => deleteHandler(user)}>
-                                  <button className="text-sm w-full px-8  hover:bg-primary btn-sm border-[1px] border-primary font-semibold hover:text-white dark:bg-slate-300 dark:hover:bg-primary">
-                                    Delete
-                                  </button>
-                                </li>
-                              </ul>
-                            </details>
-                          </div>
+                                Delete
+                              </button>
+                            </li>
+                          </ul>
                         </div>
-                        <div className="flex items-center justify-between  px-2 dark:text-gray-200 text-gray-100">
-                          {user?.adminMessage && (
-                            <p className="mt-1 text-sm">
-                              You: {user?.adminMessage}
-                            </p>
-                          )}
-                          {user?.message && (
-                            <div className="mt-1">
-                              {user?.message?.length > 18 ? (
-                                <>
-                                  <p className="text-sm  ">
-                                    {user?.message?.slice(0, 16) + "..."}
-                                  </p>
-                                </>
-                              ) : (
-                                <>
-                                  <p className="text-sm ">{user?.message}</p>
-                                </>
-                              )}
-                            </div>
-                          )}
-                          {user?.time && (
-                            <p className="text-xs ">
-                              {new Date(user?.time).toLocaleTimeString(
-                                "en-us",
-                                { month: "short", day: "numeric" }
-                              )}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="bg-[#D8E4E5] my-2 block dark:text-gray-100 dark:bg-slate-400">
-                        <div className="flex items-center justify-between ">
-                          <h1
-                            //  to={`/dashboard/user/${user?._id}`}
-                            className="flex items-center gap-3 dark:hover:bg-slate-800 w-60 py-1.5 px-2 rounded-md"
-                          >
-                            {user?.photoURL && (
-                              <img
-                                src={user?.photoURL}
-                                alt={user?.photoURL}
-                                className="w-10 h-10 border-2 border-primary rounded-full"
-                              />
-                            )}
-                            {!user?.photoURL && (
-                              <BiUserCircle className="w-12 h-12 rounded-full text-gray-300"></BiUserCircle>
-                            )}
+                      )}
+                    </div>
+                  </div>
 
-                            <p className="dark:text-gray-100">
-                              {user?.firstName}
-                            </p>
-                          </h1>
-
-                          <div>
-                            <details className="dropdown dropdown-end  ">
-                              <summary
-                                type="button"
-                                className="
-                                      bg-transparent outline-none dark:text-gray-100 text-2xl -mr mt-1 cursor-pointer text-gray-500"
-                                style={{ listStyle: "none" }}
-                              >
-                                <BsThreeDotsVertical></BsThreeDotsVertical>
-                              </summary>
-                              <ul className="px-4 py-6  menu dropdown-content z-[1] bg-gray-200 pr-10 rounded-md shadow-lg  dark:bg-slate-700 mt-3 duration-500">
-                                <li onClick={() => deleteHandler(user)}>
-                                  <button className="text-sm w-full px-8  hover:bg-primary btn-sm border-[1px] border-primary font-semibold hover:text-white dark:bg-slate-300 dark:hover:bg-primary">
-                                    Delete
-                                  </button>
-                                </li>
-                              </ul>
-                            </details>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between text-gray-600  dark:text-gray-200 px-3">
-                          {user?.adminMessage && (
-                            <p className="mt-1 text-sm">
-                              You: {user?.adminMessage}
-                            </p>
-                          )}
-                          {user?.message && (
-                            <div className="mt-1">
-                              {user?.message?.length > 18 ? (
-                                <>
-                                  <p className="text-sm t">
-                                    {user?.message?.slice(0, 16) + "..."}
-                                  </p>
-                                </>
-                              ) : (
-                                <>
-                                  <p className="text-sm ">{user?.message}</p>
-                                </>
-                              )}
-                            </div>
-                          )}
-                          {user?.time && (
-                            <p className="text-xs ">
-                              {new Date(user?.time).toLocaleTimeString(
-                                "en-us",
-                                { month: "short", day: "numeric" }
-                              )}
-                            </p>
-                          )}
-                        </div>
-                      </div>
-                    </>
-                  )}
-                </li>
-              ))}
-            </ul>
-          }
+                  <div
+                    className={`flex items-center justify-between px-2 mt-1 text-sm ${
+                      user?._id === id
+                        ? "text-gray-100"
+                        : "text-gray-600 dark:text-gray-200"
+                    }`}
+                  >
+                    {user?.adminMessage && <p>You: {user?.adminMessage}</p>}
+                    {user?.message && (
+                      <p>
+                        {user?.message.length > 18
+                          ? user?.message.slice(0, 16) + "..."
+                          : user?.message}
+                      </p>
+                    )}
+                    {user?.time && (
+                      <p className="text-xs">
+                        {new Date(user?.time).toLocaleTimeString("en-us", {
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
 
           <div className="float-left">
-            <p className="text-center mt-10 text-sm font-semibold dark:text-gray-100 ">
+            <p className="text-center mt-10 text-sm font-semibold dark:text-gray-100">
               Currently Selected page:{" "}
               <span className="text-primary">{page + 1}</span>
             </p>
             <div className="pagination my-3 flex justify-center">
-              {pages &&
-                [...Array(pages).keys()].map((number) => (
-                  <button
-                    key={number}
-                    className={
-                      page === number
-                        ? "selected px-2  ml-3 cursor-pointer border-[1px] custom-shadow text-sm"
-                        : "px-3 py-1   text-gray-500 ml-3 cursor-pointer border-[1px] border-gray-300 hover:bg-[#444444] hover:text-white custom-shadow dark:text-white text-sm"
-                    }
-                    onClick={() => setPage(number)}
-                  >
-                    {number + 1}
-                  </button>
-                ))}
+              {[...Array(pages).keys()].map((number) => (
+                <button
+                  key={number}
+                  className={
+                    page === number
+                      ? "selected px-2 ml-3 cursor-pointer border-[1px] custom-shadow text-sm"
+                      : "px-3 py-1 text-gray-500 ml-3 cursor-pointer border-[1px] border-gray-300 hover:bg-[#444444] hover:text-white custom-shadow dark:text-white text-sm"
+                  }
+                  onClick={() => setPage(number)}
+                >
+                  {number + 1}
+                </button>
+              ))}
 
               <select
                 className="ml-3 dark:bg-gray-400 dark:text-gray-100 bg-white text-gray-500 border-[1px] border-gray-300 rounded-md focus:outline-none px-2 text-sm leading-tight font-medium"
-                onChange={(event) => setSize(event.target.value)}
+                onChange={(event) => setSize(Number(event.target.value))}
               >
-                <option
-                  selected
-                  disabled
-                  className="hidden"
-                >{`Page Size ${size}`}</option>
-
+                <option disabled hidden>{`Page Size ${size}`}</option>
                 <option value="6">Page Size 6</option>
                 <option value="10">Page Size 10</option>
                 <option value="15">Page Size 15</option>
@@ -274,7 +203,7 @@ const AllOffice = () => {
             users={users}
             load={load}
             setLoad={setLoad}
-          ></AdminConversation>
+          />
         </div>
       </div>
     </div>
