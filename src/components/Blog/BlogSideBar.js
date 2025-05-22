@@ -74,7 +74,6 @@ const BlogSidebar = () => {
               <div key={blog?._id}>
                 <Link
                   href={`/blog/${blog?.slug}`}
-                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex gap-5 py-5 border-b-2 border-gray-300 border-dotted cursor-pointer"
                 >
