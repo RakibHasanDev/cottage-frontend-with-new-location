@@ -68,7 +68,9 @@ const heroSection = () => {
         </div>
       </div>
 
-      <BannerWithBreadcrumbs title="hha-certification" />
+      <div className=" -mt-32 lg:mt-0">
+        <BannerWithBreadcrumbs title="hha-certification" />
+      </div>
     </div>
   );
 };
