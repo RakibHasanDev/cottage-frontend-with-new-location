@@ -62,7 +62,7 @@ const SideNav = () => {
         },
         {
           property: "PRIVATE PAY",
-          path: "personal-pay-service",
+          path: "private-pay-home-care",
         },
         {
           property: "CDPAP",

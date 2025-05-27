@@ -167,7 +167,7 @@ const NavBar = () => {
                     </p>
                   </Link>
 
-                  <Link href="/personal-pay-service">
+                  <Link href="/private-pay-home-care">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Private Pay
                     </p>

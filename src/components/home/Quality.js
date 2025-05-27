@@ -635,7 +635,7 @@ const Quality = () => {
                     </span>
                   </li>
                 </ul>
-                <Link className="mt-2 block " href="/personal-pay-service">
+                <Link className="mt-2 block " href="/private-pay-home-care">
                   <button className="animated-button cursor-pointer">
                     <RiArrowRightDoubleFill className="text-2xl arrow-icon text-white" />
                     <span className="animated-text">

@@ -106,7 +106,7 @@ const Sitemap = () => {
             </li>
             <li>
               <Link
-                href="/personal-pay-service"
+                href="/private-pay-home-care"
                 className="hover:text-[#00A6B2]"
               >
                 Private Pay

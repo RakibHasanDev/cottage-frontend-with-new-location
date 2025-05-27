@@ -22,7 +22,7 @@ const ServicesComponent = () => {
     },
     {
       servicesName: "PrivatePay",
-      path: "personal-pay-service",
+      path: "private-pay-home-care",
     },
   ];
 

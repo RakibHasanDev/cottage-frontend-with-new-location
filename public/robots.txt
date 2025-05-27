@@ -18,7 +18,7 @@ Allow: /team/$
 Allow: /nhtd/
 Allow: /hha/
 Allow: /cdpap/
-Allow: /personal-pay-service/
+Allow: /private-pay-home-care/
 Allow: /contact/
 Allow: /help-desk/
 Allow: /covid/

@@ -3,11 +3,10 @@ import { TbFileTypePdf } from "react-icons/tb";
 import ServicesComponent from "@/components/nhtd/ServicesComponent";
 import PrivatePayFaqs from "@/components/PrivatePay/PrivatePayFaqs";
 import Link from "next/link";
-import Image from "next/image";
 import Head from "next/head";
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
-const personalPayService = () => {
+const PrivatePayService = () => {
   const stuffs = [
     {
       content: "Home Care Professionals",
@@ -56,7 +55,7 @@ const personalPayService = () => {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: "Private Pay Home Care Services | Cottage Home Care",
-      url: "https://cottagehomecare.com/privatePayService",
+      url: "https://cottagehomecare.com/private-pay-home-care",
       description:
         "Private Pay Service offers personalized home care in NYC, Nassau, and Suffolk. Flexible care plans allow clients to pay directly for high-quality services without third-party involvement.",
       isPartOf: {
@@ -84,7 +83,7 @@ const personalPayService = () => {
           "@type": "ListItem",
           position: 3,
           name: "Private Pay",
-          item: "https://cottagehomecare.com/privatePayService",
+          item: "https://cottagehomecare.com/private-pay-home-care",
         },
       ],
     },
@@ -137,7 +136,7 @@ const personalPayService = () => {
         <meta property="og:site_name" content="Cottage Home Care Services" />
         <meta
           property="og:url"
-          content="https://cottagehomecare.com/privatePayService/"
+          content="https://cottagehomecare.com/private-pay-home-care/"
         />
         <meta property="og:type" content="website" />
         <meta
@@ -156,18 +155,18 @@ const personalPayService = () => {
         />
         <link
           rel="alternate"
-          href="https://cottagehomecare.com/personal-pay-service/"
+          href="https://cottagehomecare.com/private-pay-home-care/"
           hreflang="en"
         />
         <link
           rel="alternate"
-          href="https://cottagehomecare.com/personal-pay-service/"
+          href="https://cottagehomecare.com/private-pay-home-care/"
           hreflang="x-default"
         />
 
         <link
           rel="canonical"
-          href="https://cottagehomecare.com/personal-pay-service/"
+          href="https://cottagehomecare.com/private-pay-home-care/"
         />
 
         {/* ✅ Preloading Hero Images for Faster Load */}
@@ -468,4 +467,4 @@ const personalPayService = () => {
   );
 };
 
-export default personalPayService;
+export default PrivatePayService;

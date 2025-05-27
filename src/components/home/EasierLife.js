@@ -21,7 +21,7 @@ const EasierLife = () => {
       pathname === "/cdpap" ||
       pathname === "/hha" ||
       pathname === "/nhtd" ||
-      pathname === "/personal-pay-service"
+      pathname === "/private-pay-home-care"
     ) {
       setShowProperty("hidden");
     } else {
