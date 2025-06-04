@@ -77,6 +77,8 @@ const AllUsers = () => {
     setShow(true);
   };
 
+  // console.log(users);
+
   return (
     <div className="min-h-screen md:border-2 bg-[#EBF8F9] dark:bg-slate-600 relative">
       <div className="md:grid grid-cols-7 hidden h-[88vh]">

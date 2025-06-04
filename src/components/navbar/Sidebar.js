@@ -130,6 +130,12 @@ const Sidebar = () => {
           onClick={clearNotificationCount} // ✅ Fix: UI updates instantly
           activePath={pathname}
         />
+        <SidebarLink
+          href="/dashboard/user-data"
+          icon={<SiGooglemessages />}
+          label="Users Info"
+          activePath={pathname}
+        />
 
         <SidebarLink
           href="/dashboard/add-employee"
