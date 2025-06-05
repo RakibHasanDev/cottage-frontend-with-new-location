@@ -56,8 +56,15 @@ const NewsLetter = dynamic(() => import("@/components/home/NewsLetter"), {
   ssr: false,
 });
 
-const CottageVideoSlider = dynamic(
-  () => import("@/components/home/VideoSlider/CottageVideoSlider"),
+// const CottageVideoSlider = dynamic(
+//   () => import("@/components/home/VideoSlider/CottageVideoSlider"),
+//   {
+//     suspense: true,
+//     ssr: false,
+//   }
+// );
+const PromotionalVideoSlider = dynamic(
+  () => import("@/components/home/VideoSlider/PromotionalVideoSlider"),
   {
     suspense: true,
     ssr: false,
@@ -271,8 +278,11 @@ export default function Home() {
         </Suspense>
 
         <Suspense fallback={<SkeletonLoading />}>
-          <CottageVideoSlider />
+          <PromotionalVideoSlider />
         </Suspense>
+        {/* <Suspense fallback={<SkeletonLoading />}>
+          <CottageVideoSlider />
+        </Suspense> */}
         <Suspense fallback={<SkeletonLoading />}>
           <MapComponent />
         </Suspense>
