@@ -6,7 +6,6 @@ import { GrInstagram } from "react-icons/gr";
 
 import Link from "next/link";
 import Image from "next/image";
-import TrustpilotWidget from "./TrustpolotWidget/TrustpilotWidget";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
@@ -198,7 +197,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="space-y-3 flex lg:gap-10 gap-0 ">
+              <div className="space-y-3 flex  ">
                 <div>
                   <h3 className="uppercase dark:text-gray-50 tracking-wider">
                     Contact Info
@@ -229,9 +228,6 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul>
-                </div>
-                <div className="">
-                  <TrustpilotWidget />
                 </div>
               </div>
             </div>
