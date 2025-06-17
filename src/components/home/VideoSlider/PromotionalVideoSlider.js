@@ -71,14 +71,6 @@ const allVideos = [
       "https://www.youtube.com/embed/R-naoq-B5HI?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
   {
-    des: "💬 Having Trouble with PPL or Payments? | Cottage Home Care Can Help!",
-    duration: "0.39",
-    img: "https://img.youtube.com/vi/tGyiwV3YYHU/maxresdefault.jpg",
-    alt: "💬 Having Trouble with PPL or Payments? | Cottage Home Care Can Help!",
-    youtubeUrl:
-      "https://www.youtube.com/embed/tGyiwV3YYHU?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
-  },
-  {
     des: "🛏️ Reliable & Compassionate Homecare Services (Tamil Version) | Cottage Home Care Services",
     duration: "1:01",
     img: "https://img.youtube.com/vi/mkWcgLyx-I0/maxresdefault.jpg",
@@ -86,6 +78,15 @@ const allVideos = [
     youtubeUrl:
       "https://www.youtube.com/embed/mkWcgLyx-I0?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
   },
+  {
+    des: "OPWDD Navigation & Support Services | Powered by Cottage Home Care",
+    duration: "0.57",
+    img: "https://img.youtube.com/vi/Lsj_0TL_Fak/maxresdefault.jpg",
+    alt: "OPWDD Navigation & Support Services | Powered by Cottage Home Care",
+    youtubeUrl:
+      "https://www.youtube.com/embed/Lsj_0TL_Fak?rel=0&autoplay=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1",
+  },
+
   {
     des: "🛏️ Reliable & Compassionate Homecare Services (Hindi Version) | Cottage Home Care Services",
     duration: "1:13",

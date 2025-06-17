@@ -30,6 +30,7 @@ const Overwhelmed = dynamic(() => import("@/components/home/OverwHelmed"), {
 //   suspense: true,
 //   ssr: false,
 // });
+
 const Quality = dynamic(() => import("@/components/home/Quality"), {
   suspense: true,
   ssr: false,
@@ -81,6 +82,100 @@ export default function Home() {
 
   // ✅ Optimized JSON-LD Structured Data
 
+  const videos = [
+    {
+      title: "Cottage Home Care: Compassion You Can Trust, Care You Deserve",
+      description:
+        "Cottage Home Care: Compassion You Can Trust, Care You Deserve",
+      thumbnailUrl: "https://img.youtube.com/vi/7uoXudV9uas/maxresdefault.jpg",
+      uploadDate: "2024-06-16T00:00:00Z",
+      duration: "PT50S",
+      embedUrl: "https://www.youtube.com/embed/7uoXudV9uas",
+      contentUrl: "https://www.youtube.com/watch?v=7uoXudV9uas",
+    },
+    {
+      title: "Having Trouble with PPL or Payments?",
+      description:
+        "Cottage Home Care helps resolve PPL or payment issues effectively.",
+      thumbnailUrl: "https://img.youtube.com/vi/tGyiwV3YYHU/maxresdefault.jpg",
+      uploadDate: "2024-06-13T00:00:00Z",
+      duration: "PT39S",
+      embedUrl: "https://www.youtube.com/embed/tGyiwV3YYHU",
+      contentUrl: "https://www.youtube.com/watch?v=tGyiwV3YYHU",
+    },
+    {
+      title: "Reliable & Compassionate Homecare Services (Tamil Version)",
+      description:
+        "Reliable and compassionate homecare services in Tamil provided by Cottage Home Care Services.",
+      thumbnailUrl: "https://img.youtube.com/vi/mkWcgLyx-I0/maxresdefault.jpg",
+      uploadDate: "2024-06-13T00:00:00Z",
+      duration: "PT1M1S",
+      embedUrl: "https://www.youtube.com/embed/mkWcgLyx-I0",
+      contentUrl: "https://www.youtube.com/watch?v=mkWcgLyx-I0",
+    },
+    {
+      title: "Reliable & Compassionate Homecare Services (Hindi Version)",
+      description:
+        "Reliable and compassionate homecare services in Hindi by Cottage Home Care Services.",
+      thumbnailUrl: "https://img.youtube.com/vi/BYuXb_Ni9pI/maxresdefault.jpg",
+      uploadDate: "2024-06-13T00:00:00Z",
+      duration: "PT1M13S",
+      embedUrl: "https://www.youtube.com/embed/BYuXb_Ni9pI",
+      contentUrl: "https://www.youtube.com/watch?v=BYuXb_Ni9pI",
+    },
+    {
+      title: "Why Choose Cottage Home Care Services? (Spanish Version)",
+      description:
+        "Learn why Cottage Home Care Services is the best choice for compassionate home care, presented in Spanish.",
+      thumbnailUrl: "https://img.youtube.com/vi/roHmwfWgm3w/maxresdefault.jpg",
+      uploadDate: "2024-06-13T00:00:00Z",
+      duration: "PT1M17S",
+      embedUrl: "https://www.youtube.com/embed/roHmwfWgm3w",
+      contentUrl: "https://www.youtube.com/watch?v=roHmwfWgm3w",
+    },
+    {
+      title: "Compassionate, Professional Homecare Services",
+      description:
+        "Discover compassionate, professional homecare services from Cottage Homecare Services.",
+      thumbnailUrl: "https://img.youtube.com/vi/yOtPb-LVfuk/maxresdefault.jpg",
+      uploadDate: "2024-06-13T00:00:00Z",
+      duration: "PT1M18S",
+      embedUrl: "https://www.youtube.com/embed/yOtPb-LVfuk",
+      contentUrl: "https://www.youtube.com/watch?v=yOtPb-LVfuk",
+    },
+    {
+      title: "Quality Homecare You Can Trust (Punjabi version)",
+      description:
+        "Quality and trustworthy homecare services presented in Punjabi by Cottage Home Care.",
+      thumbnailUrl: "https://img.youtube.com/vi/V8DI9MCHArs/maxresdefault.jpg",
+      uploadDate: "2024-06-13T00:00:00Z",
+      duration: "PT57S",
+      embedUrl: "https://www.youtube.com/embed/V8DI9MCHArs",
+      contentUrl: "https://www.youtube.com/watch?v=V8DI9MCHArs",
+    },
+    {
+      title: "Cottage Homecare HHA registration process",
+      description:
+        "Step-by-step guide on HHA registration process at Cottage Homecare Services.",
+      thumbnailUrl:
+        "https://res.cloudinary.com/di3wwp9s0/image/upload/v1749139336/carousel%20Thumnail/hha_registration.webp",
+      uploadDate: "2024-06-13T00:00:00Z",
+      duration: "PT2M54S",
+      embedUrl: "https://www.youtube.com/embed/R-naoq-B5HI",
+      contentUrl: "https://www.youtube.com/watch?v=R-naoq-B5HI",
+    },
+    {
+      title: "OPWDD Navigation & Support Services",
+      description:
+        "Detailed information on OPWDD Navigation & Support Services offered by Cottage Home Care.",
+      thumbnailUrl: "https://img.youtube.com/vi/Lsj_0TL_Fak/maxresdefault.jpg",
+      uploadDate: "2024-06-13T00:00:00Z",
+      duration: "PT57S",
+      embedUrl: "https://www.youtube.com/embed/Lsj_0TL_Fak",
+      contentUrl: "https://www.youtube.com/watch?v=Lsj_0TL_Fak",
+    },
+  ];
+
   const schemaData = [
     {
       "@context": "https://schema.org",
@@ -107,55 +202,33 @@ export default function Home() {
       "@type": "WebPage",
       name: "Home - Cottage Home Care Services",
       url: "https://cottagehomecare.com",
-      description: description,
+      description:
+        "Cottage Home Care offers top-rated home care in NYC, including NHTD, HHA, CDPAP, Private Pay, and elder care support. Call us today for more info!",
     },
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://cottagehomecare.com/",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "NHTD",
-          item: "https://cottagehomecare.com/nhtd",
-        },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What is Cottage Home Care Services?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Cottage Home Care Services is a trusted provider of home care solutions in NYC, Nassau, and Suffolk, offering compassionate support through programs like NHTD, CDPAP, and Home Health Aide (HHA) services.",
+      "@type": "ItemList",
+      itemListElement: videos.map((video, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "VideoObject",
+          name: video.title,
+          description: video.description,
+          thumbnailUrl: video.thumbnailUrl,
+          uploadDate: video.uploadDate,
+          duration: video.duration,
+          embedUrl: video.embedUrl,
+          publisher: {
+            "@type": "Organization",
+            name: "Cottage Home Care",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://www.cottagehomecare.com/logo.png",
+            },
           },
         },
-        {
-          "@type": "Question",
-          name: "What home care services does Cottage Home Care provide?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Cottage Home Care Services offers NHTD, Home Health Aide (HHA), and Private Pay home care. We ensure high-quality, personalized care for seniors and individuals with disabilities, helping them live comfortably in their homes.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is the NHTD program at Cottage Home Care?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "The NHTD (Nursing Home Transition and Diversion) program by Cottage Home Care Services helps Medicaid-eligible seniors and individuals with disabilities transition from nursing homes to independent living, providing personalized care and support.",
-          },
-        },
-      ],
+      })),
     },
   ];
 

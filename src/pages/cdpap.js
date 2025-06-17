@@ -98,6 +98,36 @@ const Cdpap = () => {
     },
     {
       "@context": "https://schema.org",
+      "@type": "ItemList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          item: {
+            "@type": "VideoObject",
+            name: "Caring Connections: Empowering Gracey and Aemi with Cottage Home Care | CDPAP",
+            description:
+              "Caring Connections: Empowering Gracey and Aemi with Cottage Home Care | CDPAP",
+            thumbnailUrl:
+              "https://img.youtube.com/vi/q_5BEK0CS8w/maxresdefault.jpg",
+            uploadDate: "2024-06-16T00:00:00Z",
+            duration: "PT1M12S",
+            embedUrl: "https://www.youtube.com/embed/q_5BEK0CS8w",
+            contentUrl: "https://www.youtube.com/watch?v=q_5BEK0CS8w",
+            publisher: {
+              "@type": "Organization",
+              name: "Cottage Home Care",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://www.cottagehomecare.com/logo.png",
+              },
+            },
+          },
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
         {
