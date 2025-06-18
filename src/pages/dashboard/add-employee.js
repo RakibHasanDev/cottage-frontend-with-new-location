@@ -237,6 +237,7 @@ const EmployeeForm = () => {
                   <option value="MediaMarketing">Media Marketing</option>
                   <option value="FrontDesk">Front Desk</option>
                   <option value="RnDps">RN/DPS</option>
+                  <option value="none">None</option>
                 </select>
                 {errors.department && (
                   <p className="text-red-600">{errors.department.message}</p>
