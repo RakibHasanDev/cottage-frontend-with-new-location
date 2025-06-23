@@ -24,7 +24,7 @@ const AreaRechartComponent = dynamic(
 );
 
 const Dashboard = () => {
-  const { previousVisitors, visitors } = useContext(AuthContext);
+  const { previousVisitors, visitors, user } = useContext(AuthContext);
 
   let presentVisitors = 0;
   if (visitors) {
@@ -58,55 +58,71 @@ const Dashboard = () => {
   return (
     <div className="border-2 dark:border-[#E5E7EB] min-h-screen">
       <div className="md:flex gap-10 items-center">
-        <div className="w-[100%] mx-auto md:ml-[4%]">
-          <div className="w-[95%] mx-auto grid grid-cols-2 lg:grid-cols-5 mt-5 gap-7 items-center ">
-            <Link href="/dashboard/cottage-users">
-              <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
-                <p className="flex justify-center text-4xl text-gray-100">
-                  <FaUsers />
-                </p>
-                <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
-                  Total Users:{" "}
-                  <span className="text-xl">{allData?.users?.length}</span>
-                </p>
-              </div>
-            </Link>
+        {user?.email === "info@cottagehomecare.com" && (
+          <div className="w-[100%] mx-auto md:ml-[4%]">
+            <div className="w-[95%] mx-auto grid grid-cols-2 lg:grid-cols-5 mt-5 gap-7 items-center ">
+              <Link href="/dashboard/cottage-users">
+                <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
+                  <p className="flex justify-center text-4xl text-gray-100">
+                    <FaUsers />
+                  </p>
+                  <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
+                    Total Users:{" "}
+                    <span className="text-xl">{allData?.users?.length}</span>
+                  </p>
+                </div>
+              </Link>
 
-            <Link href="/dashboard/pca">
-              <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
-                <p className="flex justify-center text-4xl text-gray-100">
-                  <FaUserNurse />
-                </p>
-                <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
-                  PCA Inquiry: <span className="text-xl">{pca}</span>
-                </p>
-              </div>
-            </Link>
+              <Link href="/dashboard/pca">
+                <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
+                  <p className="flex justify-center text-4xl text-gray-100">
+                    <FaUserNurse />
+                  </p>
+                  <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
+                    PCA Inquiry: <span className="text-xl">{pca}</span>
+                  </p>
+                </div>
+              </Link>
 
-            <Link href="/dashboard/cdpap">
-              <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
-                <p className="flex justify-center text-4xl text-gray-100">
-                  <GiLovers />
-                </p>
-                <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
-                  CDPAP Inquiry: <span className="text-xl">{cdpap}</span>
-                </p>
-              </div>
-            </Link>
+              <Link href="/dashboard/cdpap">
+                <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
+                  <p className="flex justify-center text-4xl text-gray-100">
+                    <GiLovers />
+                  </p>
+                  <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
+                    CDPAP Inquiry: <span className="text-xl">{cdpap}</span>
+                  </p>
+                </div>
+              </Link>
 
-            <Link href="/dashboard/offices">
-              <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
-                <p className="flex justify-center text-4xl text-gray-100">
-                  <HiOutlineBuildingOffice2 />
-                </p>
-                <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
-                  Office Messages:{" "}
-                  <span className="text-xl">{officeMessage}</span>
-                </p>
-              </div>
-            </Link>
+              <Link href="/dashboard/offices">
+                <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
+                  <p className="flex justify-center text-4xl text-gray-100">
+                    <HiOutlineBuildingOffice2 />
+                  </p>
+                  <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
+                    Office Messages:{" "}
+                    <span className="text-xl">{officeMessage}</span>
+                  </p>
+                </div>
+              </Link>
 
-            <div className="lg:flex items-center gap-3 hidden">
+              <div className="lg:flex items-center gap-3 hidden">
+                <p className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                  <FaUsers className="text-3xl" />
+                </p>
+                <div>
+                  <p className="text-gray-500 font-medium text-sm dark:text-gray-200">
+                    Total Visitors
+                  </p>
+                  <p className="font-semibold text-gray-600 dark:text-gray-200">
+                    {previousVisitors + presentVisitors}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 lg:hidden justify-center mt-5">
               <p className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
                 <FaUsers className="text-3xl" />
               </p>
@@ -120,21 +136,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-
-          <div className="flex items-center gap-3 lg:hidden justify-center mt-5">
-            <p className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
-              <FaUsers className="text-3xl" />
-            </p>
-            <div>
-              <p className="text-gray-500 font-medium text-sm dark:text-gray-200">
-                Total Visitors
-              </p>
-              <p className="font-semibold text-gray-600 dark:text-gray-200">
-                {previousVisitors + presentVisitors}
-              </p>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
 
       <div className="lg:ml-[2%] lg:flex mt-10 gap-10">

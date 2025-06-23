@@ -1,6 +1,6 @@
 "use client"; // ✅ Ensure this runs only on the client side
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
@@ -12,9 +12,14 @@ import { LuFileSearch2 } from "react-icons/lu";
 import { FaFileSignature } from "react-icons/fa";
 import { SiGooglemessages } from "react-icons/si";
 import { ImBlog } from "react-icons/im";
+import { AuthContext } from "@/context/AuthProvider";
 
 const Sidebar = () => {
   const pathname = usePathname();
+
+  const { user } = useContext(AuthContext);
+
+  // console.log(user);
 
   // ✅ State for Unread Messages (Updates UI Immediately)
   const [unreadMessages, setUnreadMessages] = useState(() => {
@@ -108,89 +113,122 @@ const Sidebar = () => {
   return (
     <aside className="bg-[#EBF8F9] dark:bg-slate-800 text-gray-700 w-full h-full p-4 shadow-lg">
       <nav className="flex flex-col gap-y-3">
-        <SidebarLink
-          href="/"
-          icon={<AiOutlineHome />}
-          label="Home"
-          activePath={pathname}
-        />
-        <SidebarLink
-          href="/dashboard"
-          icon={<MdDashboard />}
-          label="Dashboard"
-          activePath={pathname}
-        />
+        {user?.uid && user?.email === "info@cottagehomecare.com" ? (
+          <>
+            <SidebarLink
+              href="/"
+              icon={<AiOutlineHome />}
+              label="Home"
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard"
+              icon={<MdDashboard />}
+              label="Dashboard"
+              activePath={pathname}
+            />
 
-        {/* ✅ Fix: Clicking will instantly remove the number */}
-        <SidebarLink
-          href="/dashboard/all-form-submission-message"
-          icon={<SiGooglemessages />}
-          label="All Form Submission Message"
-          count={unreadMessages}
-          onClick={clearNotificationCount} // ✅ Fix: UI updates instantly
-          activePath={pathname}
-        />
-        <SidebarLink
-          href="/dashboard/user-data"
-          icon={<SiGooglemessages />}
-          label="Users Info"
-          activePath={pathname}
-        />
+            {/* ✅ Fix: Clicking will instantly remove the number */}
+            <SidebarLink
+              href="/dashboard/all-form-submission-message"
+              icon={<SiGooglemessages />}
+              label="All Form Submission Message"
+              count={unreadMessages}
+              onClick={clearNotificationCount} // ✅ Fix: UI updates instantly
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard/user-data"
+              icon={<SiGooglemessages />}
+              label="Users Info"
+              activePath={pathname}
+            />
 
-        <SidebarLink
-          href="/dashboard/add-employee"
-          icon={<MdPersonAdd />}
-          label="Add Employee"
-          activePath={pathname}
-        />
+            <SidebarLink
+              href="/dashboard/add-employee"
+              icon={<MdPersonAdd />}
+              label="Add Employee"
+              activePath={pathname}
+            />
 
-        <SidebarLink
-          href="/dashboard/blog/add-blog"
-          icon={<ImBlog />}
-          label="Add A Blog"
-          activePath={pathname}
-        />
-        <SidebarLink
-          href="/dashboard/email-signature"
-          icon={<FaFileSignature />}
-          label="Generate Email Signature"
-          activePath={pathname}
-        />
-        <SidebarLink
-          href="/dashboard/general-request"
-          icon={<LuFileSearch2 />}
-          label="All General Request"
-          count={getRemainingCount("generalRequest")}
-          activePath={pathname}
-        />
-        <SidebarLink
-          href="/dashboard/pay-stub"
-          icon={<LuFileSearch2 />}
-          label="Pay Stub Access"
-          count={getRemainingCount("payStub")}
-          activePath={pathname}
-        />
-        <SidebarLink
-          href="/dashboard/pay-roll"
-          icon={<LuFileSearch2 />}
-          label="Pay Roll Queries"
-          count={getRemainingCount("payroll")}
-          activePath={pathname}
-        />
-        <SidebarLink
-          href="/dashboard/supplies"
-          icon={<LuFileSearch2 />}
-          label="Request Supplies"
-          count={getRemainingCount("requestSupply")}
-          activePath={pathname}
-        />
-        <SidebarLink
-          href="/dashboard/all-pto"
-          icon={<LuFileSearch2 />}
-          label="PTO Request"
-          count={getRemainingCount("requestPto")}
-          activePath={pathname}
-        />
+            <SidebarLink
+              href="/dashboard/blog/add-blog"
+              icon={<ImBlog />}
+              label="Add A Blog"
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard/email-signature"
+              icon={<FaFileSignature />}
+              label="Generate Email Signature"
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard/certificate"
+              icon={<LuFileSearch2 />}
+              label="Generate Certificate"
+              count={getRemainingCount("requestPto")}
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard/general-request"
+              icon={<LuFileSearch2 />}
+              label="All General Request"
+              count={getRemainingCount("generalRequest")}
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard/pay-stub"
+              icon={<LuFileSearch2 />}
+              label="Pay Stub Access"
+              count={getRemainingCount("payStub")}
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard/pay-roll"
+              icon={<LuFileSearch2 />}
+              label="Pay Roll Queries"
+              count={getRemainingCount("payroll")}
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard/supplies"
+              icon={<LuFileSearch2 />}
+              label="Request Supplies"
+              count={getRemainingCount("requestSupply")}
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard/all-pto"
+              icon={<LuFileSearch2 />}
+              label="PTO Request"
+              count={getRemainingCount("requestPto")}
+              activePath={pathname}
+            />
+          </>
+        ) : (
+          <>
+            <SidebarLink
+              href="/"
+              icon={<AiOutlineHome />}
+              label="Home"
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard"
+              icon={<MdDashboard />}
+              label="Dashboard"
+              activePath={pathname}
+            />
+            <SidebarLink
+              href="/dashboard/certificate"
+              icon={<LuFileSearch2 />}
+              label="Generate Certificate"
+              count={getRemainingCount("requestPto")}
+              activePath={pathname}
+            />
+          </>
+        )}
       </nav>
     </aside>
   );

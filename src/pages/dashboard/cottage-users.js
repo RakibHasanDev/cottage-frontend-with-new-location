@@ -64,7 +64,7 @@ const CottageUsers = () => {
 
   const editorHandler = (user) => {
     const proceed = window.confirm(
-      `Are you sure you want to make ${user?.name} an editor?`
+      `Are you sure you want to make ${user?.name} an Admin?`
     );
     if (proceed) {
       fetch(
@@ -80,10 +80,10 @@ const CottageUsers = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.modifiedCount > 0) {
-            toast.success(`${user?.name} is now an editor`);
+            toast.success(`${user?.name} is now an Admin`);
             refetch();
-          } else if (data.message === "User already has editor role") {
-            toast.info("User already has editor role");
+          } else if (data.message === "User already has Admin role") {
+            toast.info("User already has Admin role");
           } else {
             toast.error("Failed to update user role");
           }
@@ -110,7 +110,7 @@ const CottageUsers = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.modifiedCount > 0) {
-            toast.success(`${user?.name} is no longer an editor`);
+            toast.success(`${user?.name} is no longer an Admin`);
             refetch();
           } else {
             toast.error("Failed to update user role");
@@ -162,19 +162,19 @@ const CottageUsers = () => {
                   {user?.email || "No email"}
                 </td>
                 <td className="border border-gray-300 px-4 py-2 text-center">
-                  {user?.role === "editor" ? (
+                  {user?.role === "Admin" ? (
                     <button
                       onClick={() => removeEditorHandler(user)}
                       className=" bg-green-600 text-sm text-white  px-2 py-1 rounded-md"
                     >
-                      Remove Editor
+                      Remove Admin
                     </button>
                   ) : (
                     <button
                       onClick={() => editorHandler(user)}
                       className=" text-sm bg-blue-600 text-white px-2 py-1 rounded-md"
                     >
-                      Make Editor
+                      Make Admin
                     </button>
                   )}
                 </td>
