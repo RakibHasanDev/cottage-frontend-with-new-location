@@ -30,7 +30,7 @@ const PhoneUsers = () => {
   ];
 
   return (
-    <div className="p-4">
+    <div className="p-4 dark:text-gray-100">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Users with Phone Numbers</h2>
         <CSVLink

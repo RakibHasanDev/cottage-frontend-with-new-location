@@ -110,7 +110,7 @@ const CertificatePage = () => {
   };
 
   return (
-    <div className="flex justify-center border-2">
+    <div className="flex justify-center border-2 dark:text-gray-100">
       <div className="min-h-screen p-6 max-w-xl mx-auto">
         <h2 className="text-2xl font-bold mb-4">Certificate Generator</h2>
 
