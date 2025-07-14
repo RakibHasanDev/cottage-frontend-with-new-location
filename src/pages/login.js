@@ -186,7 +186,7 @@ const Login = () => {
 
                 <div className="-mt-1">
                   <p className="cursor-pointer text-sm font-bold text-[#00A6B2] underline ">
-                    <Link href="/passwordHandler">Forget password..?</Link>
+                    <Link href="/password-handler">Forget password..?</Link>
                   </p>
                 </div>
               </div>
