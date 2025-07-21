@@ -187,6 +187,7 @@ const hha = () => {
       <Head>
         {/* ✅ Basic SEO Meta Tags */}
         <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="author" content="Cottage Home Care Services" />

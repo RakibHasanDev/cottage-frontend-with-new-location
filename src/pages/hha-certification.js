@@ -173,6 +173,7 @@ const HhhaCertification = () => {
 
         {/* ✅ SEO Meta Tags */}
         <meta name="description" content={description} />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="keywords" content={keywords} />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Cottage Home Care Services" />

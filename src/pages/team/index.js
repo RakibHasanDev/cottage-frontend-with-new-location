@@ -130,6 +130,7 @@ const Team = () => {
     <>
       <Head>
         <title>Team Members - Cottage Home Care Services</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         <meta
           name="description"

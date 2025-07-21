@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
@@ -40,12 +41,12 @@ const WhyChoose = () => {
 
           {/* Learn More Button */}
           <div className="mt-6 lg:mt-10">
-            <a
-              href="tel:+1516-367-2266"
+            <Link
+              href="/contact"
               className="px-6 py-3 md:px-9 md:py-4 dark:bg-[#3A4256] rounded-full bg-[#00A6B2] hover:bg-hov2 text-white league-spartan md:text-[18px] capitalize font-semibold"
             >
-              Learn More
-            </a>
+              Contact Us Today
+            </Link>
           </div>
         </div>
 

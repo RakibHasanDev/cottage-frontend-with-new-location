@@ -251,6 +251,7 @@ const BlogDetails = ({
     <>
       <Head>
         <title>{metaTitle}</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="description" content={metaDescription} />
         <meta name="keywords" content={metaKeywords} />
         <meta name="author" content="Cottage Home Care Services" />

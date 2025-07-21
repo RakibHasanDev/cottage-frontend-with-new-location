@@ -60,6 +60,8 @@ const PastEvent = () => {
       <Head>
         <title>Past Events - Cottage Home Care Services</title>
 
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
         <meta
           name="description"
           content="Discover past events at Cottage Home Care—community programs, webinars, photos, and highlights that show how we support and engage our community."

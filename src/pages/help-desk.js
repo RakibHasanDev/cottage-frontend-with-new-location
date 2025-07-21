@@ -79,6 +79,7 @@ const HelpDesk = () => {
     <>
       <Head>
         <title>Help Desk Support | Cottage Home Care Services Inc</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         <meta
           name="description"
