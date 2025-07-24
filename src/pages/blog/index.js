@@ -68,6 +68,7 @@ const Blog = () => {
     window.scrollTo(0, 0); // Set the button query
   };
 
+  console.log(blogs);
   return (
     <>
       <Head>

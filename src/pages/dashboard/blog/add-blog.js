@@ -9,10 +9,12 @@ import OverlayLoading from "@/components/shared/OverlayLoading";
 import slugify from "slugify";
 
 const AddBlog = () => {
+  const [slugCount, setSlugCount] = useState(0);
   const [titleCharCount, setTitleCharCount] = useState(0);
   const [metaDescCharCount, setMetaDescCharCount] = useState(0);
   const [titleWarningMessage, setTitleWarningMessage] = useState("");
   const [metaDescWarning, setMetaDescWarning] = useState(false);
+  const [slugWarningMessage, setSlugWarningMessage] = useState("");
 
   const [loading, setLoading] = useState(false);
   const [paragraphs, setParagraphs] = useState([
@@ -98,7 +100,7 @@ const AddBlog = () => {
 
     setLoading(true);
 
-    const slug = slugify(data.title, { lower: true, strict: true });
+    const slug = slugify(data.slug, { lower: true, strict: true });
 
     const blog = {
       title: data.title,
@@ -169,62 +171,54 @@ const AddBlog = () => {
               <h1 className="text-2xl text-gray-600 text-center Poppins font-semibold dark:text-gray-100 ">
                 Add A Blog
               </h1>
-              <p className=" my-2 border-2 p-1 dark:text-gray-100">
-                Add Title:
-                {`use h3, h4, h5 for adding Title`}
-              </p>
-              <p className="my-2 border-2 p-1 dark:text-gray-100">
-                Ancor :
-                {` <a href="your herf" target="_blank" rel="noopener noreferrer" >your text</a>`}
-              </p>
 
               <div className="grid grid-cols-1 gap-6 mt-4 ">
                 <div className="space-y-0.5 text-sm">
-                  <label htmlFor="title" className="block dark:text-gray-200">
-                    Title
+                  <label htmlFor="Slug" className="block dark:text-gray-200">
+                    Slug
                   </label>
                   <input
                     type="text"
-                    {...register("title", { required: "Title is required" })}
+                    {...register("slug", { required: "slug is required" })}
                     id="title"
-                    placeholder="Title"
+                    placeholder="slug"
                     onChange={(e) => {
                       const value = e.target.value;
-                      setValue("title", value);
-                      setTitleCharCount(value.length);
+                      setValue("slug", value);
+                      setSlugCount(value.length);
 
                       if (value.length > 60 && /\btitle\b/i.test(value)) {
-                        setTitleWarningMessage(
-                          "Avoid using 'title' and stay under 60 characters."
+                        setSlugWarningMessage(
+                          "Avoid using 'slug' and stay under 60 characters."
                         );
                       } else if (value.length > 60) {
-                        setTitleWarningMessage(
-                          "Title must be under 60 characters."
+                        setSlugWarningMessage(
+                          "slug must be under 60 characters."
                         );
                       } else if (/\btitle\b/i.test(value)) {
-                        setTitleWarningMessage(
-                          "Avoid using the word 'title' in your title."
+                        setSlugWarningMessage(
+                          "Avoid using the word 'slug' in your title."
                         );
                       } else {
-                        setTitleWarningMessage("");
+                        setSlugWarningMessage("");
                       }
                     }}
                     className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
-                      titleWarningMessage ? "border-red-500" : ""
+                      slugWarningMessage ? "border-red-500" : ""
                     }`}
                   />
                   <div className="flex justify-between text-xs mt-1">
-                    <span className="text-red-500">{titleWarningMessage}</span>
+                    <span className="text-red-500">{slugWarningMessage}</span>
                     <span
                       className={`${
-                        titleCharCount > 60 ? "text-red-500" : "text-gray-500"
+                        slugCount > 60 ? "text-red-500" : "text-gray-500"
                       } ml-auto`}
                     >
-                      {titleCharCount}/60
+                      {slugCount}/60
                     </span>
                   </div>
-                  {errors.title && (
-                    <p className="text-red-600">{errors.title.message}</p>
+                  {errors.slug && (
+                    <p className="text-red-600">{errors.slug.message}</p>
                   )}
                 </div>
 
@@ -348,6 +342,55 @@ const AddBlog = () => {
 
               <hr className="my-3" />
 
+              <div className="space-y-0.5 text-sm">
+                <label htmlFor="title" className="block dark:text-gray-200">
+                  Title
+                </label>
+                <input
+                  type="text"
+                  {...register("title", { required: "title is required" })}
+                  id="title"
+                  placeholder="Title"
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setValue("title", value);
+                    setTitleCharCount(value.length);
+
+                    if (value.length > 60 && /\btitle\b/i.test(value)) {
+                      setTitleWarningMessage(
+                        "Avoid using 'title' and stay under 60 characters."
+                      );
+                    } else if (value.length > 60) {
+                      setTitleWarningMessage(
+                        "title must be under 60 characters."
+                      );
+                    } else if (/\btitle\b/i.test(value)) {
+                      setTitleWarningMessage(
+                        "Avoid using the word 'title' in your title."
+                      );
+                    } else {
+                      setTitleWarningMessage("");
+                    }
+                  }}
+                  className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
+                    titleWarningMessage ? "border-red-500" : ""
+                  }`}
+                />
+                <div className="flex justify-between text-xs mt-1">
+                  <span className="text-red-500">{titleWarningMessage}</span>
+                  <span
+                    className={`${
+                      titleCharCount > 60 ? "text-red-500" : "text-gray-500"
+                    } ml-auto`}
+                  >
+                    {titleCharCount}/60
+                  </span>
+                </div>
+                {errors.title && (
+                  <p className="text-red-600">{errors.title.message}</p>
+                )}
+              </div>
+
               {paragraphs?.map((paragraph, index) => (
                 <div key={index} className="mb-4">
                   <div className="space-y-0.5 text-sm">
@@ -355,7 +398,7 @@ const AddBlog = () => {
                       type="text"
                       {...register(`title${index + 1}`)}
                       id={`title${index + 1}`}
-                      placeholder={`Paragraph Title-${index + 1}`}
+                      placeholder={`Sub title -${index + 1}`}
                       className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
                     />
                     {errors[`title${index + 1}`] && (

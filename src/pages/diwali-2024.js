@@ -7,6 +7,7 @@ const diwali2024 = () => {
     <>
       <Head>
         <title>Diwali 2024 - Cottage Liberty Avenue Celebration</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         <meta
           name="description"

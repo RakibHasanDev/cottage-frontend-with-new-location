@@ -7,6 +7,7 @@ const toysGiveaway = () => {
     <>
       <Head>
         <title>Christmas Toys Giveaway | Cottage Home Care Services</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta
           name="description"
           content="Experience the joy of giving at Cottage Home Care's Christmas Toys Giveaway. View heartwarming moments and smiles in our festive photo gallery."

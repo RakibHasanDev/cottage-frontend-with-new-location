@@ -430,20 +430,20 @@ const BlogDetails = ({
               <div className="md:grid grid-cols-8 gap-7  source-sans">
                 <div className="lg:col-span-5 md:col-span-4">
                   <div className=" border-b-[1px] border-dashed pb-2 border-gray-400 ">
-                    <h2 className=" text-lg  md:text-2xl  font-semibold  mt-5 md:mt-8 custom-font  text-gray-700 dark:text-gray-100 league-spartan">
+                    <h1 className=" text-lg  md:text-3xl  font-semibold  mt-5 md:mt-8 custom-font  text-gray-700 dark:text-gray-100 league-spartan">
                       {blog?.title}
-                    </h2>
+                    </h1>
                   </div>
 
                   <div className="mt-3 flex items-center gap-0 md:gap-3 ">
                     <div className="flex items-center  md:gap-2 gap-0.5 open-sans">
-                      <div className="bg-white w-6 h-6 md:w-10 md:h-10 rounded-full border border-[#00A6B2] ">
+                      <div className="bg-white w-4 h-4 md:w-10 md:h-10 rounded-full border border-[#00A6B2] ">
                         <img
                           src="/assets/cottage-home-care-logo-blog.webp"
                           alt="cottage home care logo"
-                          width={20}
-                          height={20}
-                          className="rounded-full p-1 w-6 h-6  md:w-10 md:h-10  "
+                          width=""
+                          height=""
+                          className="rounded-full p-1 w-4 h-4  md:w-10 md:h-10  "
                         />
                       </div>
 
@@ -484,12 +484,12 @@ const BlogDetails = ({
                       </p>
                     </div>
                     <p>
-                      <PiLineVerticalBold className=" text-lg md:text-xl text-gray-600 dark:text-gray-100" />
+                      <PiLineVerticalBold className=" text-lg md:text-xl text-gray-600 dark:text-gray-100 hidden" />
                     </p>
 
                     <Link
                       href="/"
-                      className="flex items-center gap-1hover:underline text-gray-600 dark:text-gray-100 font-semibold"
+                      className="lg:flex items-center gap-1hover:underline text-gray-600 dark:text-gray-100 font-semibold text-[11px] md:text-base hidden"
                     >
                       <MdHome size={18} />
                       <span>Home</span>
@@ -508,9 +508,9 @@ const BlogDetails = ({
                   <div className="lg:mt-10 mt-3 text-[16px] leading-relaxed open-sans">
                     {blog?.description?.map((des, index) => (
                       <div key={index} className="mt-5 px-2 md:px-0">
-                        <h1 className="text-xl league-spartan font-semibold dark:text-gray-100">
+                        <h2 className="text-xl league-spartan font-semibold dark:text-gray-100 md:text-3xl ">
                           {des?.sub_title}
-                        </h1>
+                        </h2>
 
                         {/* ✅ Sanitize + render raw HTML content safely */}
                         <div
@@ -749,9 +749,9 @@ const BlogDetails = ({
                       </p>
                       <div className="flex items-center justify-between">
                         <div>
-                          <h1 className="text-lg font-medium dark:text-gray-100">
+                          <h5 className="text-lg font-medium dark:text-gray-100">
                             {comment?.name}
-                          </h1>
+                          </h5>
                         </div>
                         <div>
                           <i className="text-sm dark:text-gray-100">

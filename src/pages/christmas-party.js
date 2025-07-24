@@ -8,6 +8,7 @@ const christmasParty = () => {
     <>
       <Head>
         <title>Christmas Party 2023 | Cottage Home Care Services</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta
           name="description"
           content="Celebrate Christmas 2023 with Cottage Home Care Services. Enjoy highlights and photos from our joyful party filled with love and community spirit."

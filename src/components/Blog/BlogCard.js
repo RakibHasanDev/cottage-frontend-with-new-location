@@ -25,7 +25,7 @@ const cardStyle2 = {
 
 const BlogCard = ({ blog, refetch, buttonData }) => {
   const [style, setStyle] = useState(cardStyle);
-  const { title, img, _id, slug } = blog;
+  const { title, img, _id, slug, description } = blog;
 
   const { user } = useContext(AuthContext);
   const { isAdmin, isAdminLoading } = useAdmin(user?.email);
@@ -72,9 +72,9 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
         className="block w-full bg-white dark:bg-slate-200 poppins relative group rounded-md"
       >
         {/* Image section */}
-        <div className="relative h-52 overflow-hidden w-full">
+        <div className="relative aspect-[16/9] overflow-hidden w-full">
           <img
-            className="w-full h-30 object-cover"
+            className="w-full h-full object-cover"
             src={blog?.newImg || img}
             alt={`${blog?.title}`}
           />
@@ -104,7 +104,10 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
 
         {/* Admin/Editor Buttons */}
 
-        {!isAdminLoading && isAdmin && user?.uid ? (
+        {!isAdminLoading &&
+        user?.uid &&
+        isAdmin &&
+        user?.email === "info@cottagehomecare.com" ? (
           <div className="absolute bottom-0 left-0 w-full p-4 flex gap-3 justify-center opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-5 transition-all duration-300 ease-in-out">
             <Link className="" href={`/blog/${slug}`}>
               <button

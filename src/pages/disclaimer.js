@@ -7,6 +7,7 @@ const Disclaimer = () => {
     <>
       <Head>
         <title>Official Disclaimer | Cottage Home Care Services NY</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         <meta
           name="description"

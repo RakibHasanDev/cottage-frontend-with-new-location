@@ -6,6 +6,7 @@ const Values = () => {
     <>
       <Head>
         <title>Our Core Values | Cottage Home Care Services Inc - NY</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         <meta
           name="description"

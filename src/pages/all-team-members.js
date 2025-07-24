@@ -294,24 +294,27 @@ const AllTeamMembers = () => {
                           {employer?.description}
                         </p>
 
-                        {!isAdminLoading && isAdmin && user?.uid && (
-                          <div className=" mt-16">
-                            <div className="flex items-center justify-evenly  absolute w-full right-0 left-0 bottom-12">
-                              <Link href={`/employee/${employer?._id}`}>
-                                <button className="btn btn-sm bg-[#1D93AE] px-4 py-2 rounded-md  my-5 text-white font-semibold uppercase">
-                                  Update
-                                </button>
-                              </Link>
+                        {!isAdminLoading &&
+                          user?.uid &&
+                          isAdmin &&
+                          user?.email === "info@cottagehomecare.com" && (
+                            <div className=" mt-16">
+                              <div className="flex items-center justify-evenly  absolute w-full right-0 left-0 bottom-12">
+                                <Link href={`/employee/${employer?._id}`}>
+                                  <button className="btn btn-sm bg-[#1D93AE] px-4 py-2 rounded-md  my-5 text-white font-semibold uppercase">
+                                    Update
+                                  </button>
+                                </Link>
 
-                              <button
-                                onClick={() => deleteHandler(employer)}
-                                className="bg-red-500 px-4 py-2 rounded-md  my-5 text-white font-semibold uppercase btn btn-sm"
-                              >
-                                Delete
-                              </button>
+                                <button
+                                  onClick={() => deleteHandler(employer)}
+                                  className="bg-red-500 px-4 py-2 rounded-md  my-5 text-white font-semibold uppercase btn btn-sm"
+                                >
+                                  Delete
+                                </button>
+                              </div>
                             </div>
-                          </div>
-                        )}
+                          )}
                         <div className="pb-6">
                           <div className="w-full flex justify-center   absolute bottom-0  right-0 left-0 my-5">
                             {employer?.facebook == null ||

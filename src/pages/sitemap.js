@@ -7,6 +7,7 @@ const Sitemap = () => {
     <>
       <Head>
         <title>Full Sitemap | Cottage Home Care Services New York</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         <meta
           name="description"

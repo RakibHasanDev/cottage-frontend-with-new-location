@@ -6,6 +6,7 @@ const PrivacyPolicy = () => {
     <>
       <Head>
         <title>Privacy Policy - Cottage Home Care Services</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta
           name="description"
           content="Read Cottage Home Care’s Privacy Policy to learn how we collect, use, and protect your personal information when you use our services."

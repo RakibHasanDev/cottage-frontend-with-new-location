@@ -37,6 +37,7 @@ Allow: /disclaimer/
 Allow: /clock-in-out/
 Allow: /sitemap/
 Allow: /sitemap-index.xml
+Allow: /favicon.ico
 
 # Sitemap for search engines
 Sitemap: https://cottagehomecare.com/sitemap-index.xml
