@@ -7,8 +7,6 @@ Disallow: /register/
 Disallow: /password-handler/
 Disallow: /team/*
 Disallow: /_next/data/
-# Disallow careguidebd.com folder explicitly
-Disallow: /careguidebd.com/
 
 # Allow SEO-relevant pages
 Allow: /
