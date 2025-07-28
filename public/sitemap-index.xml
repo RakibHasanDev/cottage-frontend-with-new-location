@@ -30,13 +30,6 @@
   </url>
 
   <url>
-    <loc>https://cottagehomecare.com/cdpap/</loc>
-    <lastmod>2025-04-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
     <loc>https://cottagehomecare.com/contact/</loc>
     <lastmod>2025-04-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -464,6 +457,18 @@
   </url>
     <url>
     <loc>https://cottagehomecare.com/blog/info-about-in-home-care-for-special-needs-adults/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://cottagehomecare.com/blog/7-reasons-families-in-queens-trust-cottage-homecare-services/</loc>
+    <lastmod>2025-07-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+    <url>
+    <loc>https://cottagehomecare.com/blog/know-home-care-service-employment-career-guide/</loc>
     <lastmod>2025-07-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
