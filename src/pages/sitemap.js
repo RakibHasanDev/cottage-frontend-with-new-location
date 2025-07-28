@@ -113,11 +113,7 @@ const Sitemap = () => {
                 Private Pay
               </Link>
             </li>
-            <li>
-              <Link href="/cdpap" className="hover:text-[#00A6B2]">
-                CDPAP
-              </Link>
-            </li>
+            
           </ul>
         </div>
 

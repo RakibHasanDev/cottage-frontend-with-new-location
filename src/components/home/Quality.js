@@ -32,7 +32,7 @@ const Quality = () => {
         </h3>
         <hr className="border-[#00a6b2] border-t-2 w-12 mt-2 mb-8 mx-auto" />
         <h6 className="text-center md:text-2xl text-gray-700 px-4 md:px-0 league-spartan font-semibold dark:text-gray-100">
-          HHA/PCA, CDPAP, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY{" "}
+          HHA/PCA, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY{" "}
         </h6>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:w-[90%] w-[95%] mx-auto pb-14 pt-9 gap-7  ">
           {/* cdpap start  */}
@@ -67,7 +67,7 @@ const Quality = () => {
 
                 {/* Title */}
                 <p className="text-xl lg:text-2xl font-semibold text-white mb-2 md:mb-4 ">
-                  CDPAP
+                  HHA
                 </p>
 
                 {/* List */}
@@ -94,7 +94,7 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                      You can choose your own Caregivers.
+                     Enjoy compassionate support tailored just for you.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -119,7 +119,7 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                      Caregivers can be friends or family members.
+                     Get help with personal care, mobility, and hygiene.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -144,7 +144,7 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                      Allows you to receive help from your own home.
+                     Get professional care in the comfort of your home.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -169,15 +169,15 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                      Allows you to be in the company of your loved ones.
+                      Certified caregivers trained to meet your needs.
                     </span>
                   </li>
                 </ul>
-                <Link className="mt-2 block" href="/cdpap">
+                <Link className="mt-2 block" href="/hha">
                   <button className="animated-button cursor-pointer">
                     <RiArrowRightDoubleFill className="text-2xl arrow-icon text-white" />
                     <span className="animated-text">
-                      Learn More About CDPAP Services
+                      Learn More About HHA Service
                     </span>
                   </button>
                 </Link>
@@ -220,7 +220,7 @@ const Quality = () => {
 
                 {/* Title */}
                 <p className="text-xl md:text-2xl font-semibold text-white mb-2 md:mb-4 ">
-                  HHA/PCA
+                  PCA
                 </p>
 
                 {/* List */}
@@ -247,7 +247,7 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                      You receive an individualized care plan.
+                     You receive an individualized care plan.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -322,8 +322,7 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                      Allows assistance with meal preparation, light
-                      housekeeping, and more.
+                     Allows assistance with meal preparation, light housekeeping, and more.
                     </span>
                   </li>
                 </ul>
@@ -331,7 +330,7 @@ const Quality = () => {
                   <button className="animated-button cursor-pointer">
                     <RiArrowRightDoubleFill className="text-2xl arrow-icon text-white" />
                     <span className="animated-text">
-                      Explore HHA & PCA Services
+                      Explore PCA Service
                     </span>
                   </button>
                 </Link>

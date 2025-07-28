@@ -94,7 +94,7 @@ const OfficeLocation = () => {
     //     "https://www.google.com/maps/dir//103-21+98th+St,+Jamaica,+NY+11417,+USA/@40.6823889,-73.8443419,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c267589d232e07:0x58530cff1202b8d6!2m2!1d-73.841767!2d40.6823849?entry=ttu",
     // },
     {
-      recName: "Albany Office (CDPAP Services)",
+      recName: "Albany Office",
       name: "Albany Office",
       address1: "130 Washington Ave 3rd Floor Unit G, Albany, NY 12210",
       address2: "",

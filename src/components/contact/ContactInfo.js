@@ -92,8 +92,7 @@ const ContactInfo = () => {
               >
                 <IoLocationSharp className="mr-2 text-[#00A6B2] text-lg" />
                 <span className="w-[90%]">
-                  130 Washington Ave, 3rd Floor Unit G, Albany, NY 12210 (CDPAP
-                  Services)
+                  130 Washington Ave, 3rd Floor Unit G, Albany, NY 12210 
                 </span>
               </a>
 

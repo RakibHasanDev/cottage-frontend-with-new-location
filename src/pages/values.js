@@ -178,7 +178,7 @@ const Values = () => {
             </div>
             <hr className="mt-3 border-t-[1px] border-[#00A6B2] w-16 mx-auto " />
             <p className="text-base text-gray-700 md:text-lg font-medium mt-5 py-2 dark:text-gray-200">
-              “HHA/PCA & CDPAP SERVICES THROUGHOUT NEW YORK CITY, NASSAU &
+              “HHA/PCA ,NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY, NASSAU &
               SUFFOLK COUNTY, WESTCHESTER & ALBANY”
             </p>
           </div>

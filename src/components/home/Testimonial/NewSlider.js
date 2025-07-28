@@ -30,7 +30,7 @@ const NewSlider = () => {
       designation: "Patient",
       description:
         "Cottage home care is a spectacular agency with a great work environment. I can call any hour and there is always someone on the phone who will answer me and provide the help I need.",
-      caseType: "CDPAP",
+      caseType: "HHA",
       rating: 5,
     },
     { src: "https://www.youtube.com/embed/NKOzRc6sJBE?rel=0" },
@@ -52,7 +52,7 @@ const NewSlider = () => {
       designation: "Patient",
       description:
         "Excellent customer service and employee service, always with a smile. Staff is caring and loving and receptive to your needs. Great home care agency to sign up with for work, or to receive Homecare services at home.",
-      caseType: "CDPAP",
+      caseType: "NHTD",
       rating: 5,
     },
     { src: "https://www.youtube.com/embed/_6QntUW0hjg?rel=0" },

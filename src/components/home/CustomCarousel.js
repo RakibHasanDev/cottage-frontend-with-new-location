@@ -99,7 +99,7 @@ const CustomCarousel = () => {
               </p>
               <p className="w-[18px] h-[2px] bg-gray-300 rounded-md mx-auto my-2.5"></p>
               <p className="text-center md:text-xl text-[15px] font-medium md:font-semibold text-[#dbf2f4] mb-5 px-5 md:px-0 mt-2 open-sans custom-font text-shadow">
-                HHA/PCA, CDPAP, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK
+                HHA/PCA, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK
                 CITY, NASSAU & SUFFOLK COUNTY, WESTCHESTER & ALBANY.
               </p>
               <div className="flex justify-center text-white font-semibold second-text">

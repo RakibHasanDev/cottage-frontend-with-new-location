@@ -99,12 +99,7 @@ const schemaData = [
         name: "Private Pay",
         item: "https://cottagehomecare.com/private-pay-home-care",
       },
-      {
-        "@type": "ListItem",
-        position: 6,
-        name: "CDPAP",
-        item: "https://cottagehomecare.com/cdpap",
-      },
+    
       {
         "@type": "ListItem",
         position: 7,

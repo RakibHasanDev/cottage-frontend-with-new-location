@@ -8,10 +8,10 @@ const ServicesComponent = () => {
   const pathname = usePathname(); // ✅ Call hook at the top level
 
   const allServices = [
-    {
-      servicesName: "CDPAP",
-      path: "cdpap",
-    },
+    // {
+    //   servicesName: "CDPAP",
+    //   path: "cdpap",
+    // },
     {
       servicesName: "HHA/PCA",
       path: "hha",

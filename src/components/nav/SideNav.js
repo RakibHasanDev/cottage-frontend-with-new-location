@@ -64,10 +64,10 @@ const SideNav = () => {
           property: "PRIVATE PAY",
           path: "private-pay-home-care",
         },
-        {
-          property: "CDPAP",
-          path: "cdpap",
-        },
+        // {
+        //   property: "CDPAP",
+        //   path: "cdpap",
+        // },
       ],
     },
   ];

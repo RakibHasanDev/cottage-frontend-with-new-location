@@ -62,12 +62,12 @@ const Faqs = () => {
   ];
 
   const faqItems = [
-    {
-      id: 11,
-      question: "Do you have to be on Medicaid to qualify?",
-      answer:
-        "Yes. The CDPAP program is a medicaid funded program so therefore only available to those with medicaid.",
-    },
+    // {
+    //   id: 11,
+    //   question: "Do you have to be on Medicaid to qualify?",
+    //   answer:
+    //     "Yes. The CDPAP program is a medicaid funded program so therefore only available to those with medicaid.",
+    // },
     {
       id: 66,
       question: "I don’t have Medicaid, what can I do?",
@@ -102,18 +102,18 @@ const Faqs = () => {
   ];
 
   const careItems = [
-    {
-      id: 111,
-      question: "Who can be a caregiver under the CDPAP program?",
-      answer2: {
-        des1: "Your son, daughter, grandchild, relative, friend or existing home attendant — anyone except your",
-        des2: [
-          "Legal spouse",
-          "Designated representative (the person who makes home care decisions for you)",
-          " Parent (if you are under 21).",
-        ],
-      },
-    },
+    // {
+    //   id: 111,
+    //   question: "Who can be a caregiver under the CDPAP program?",
+    //   answer2: {
+    //     des1: "Your son, daughter, grandchild, relative, friend or existing home attendant — anyone except your",
+    //     des2: [
+    //       "Legal spouse",
+    //       "Designated representative (the person who makes home care decisions for you)",
+    //       " Parent (if you are under 21).",
+    //     ],
+    //   },
+    // },
     {
       id: 222,
       question:
@@ -121,25 +121,25 @@ const Faqs = () => {
       answer:
         "Parents are allowed to be the caregiver for their children but only if the child is over the age of 21 years old. If they are under 21, a parent cannot be their caregiver.",
     },
-    {
-      id: 333,
-      question:
-        "Can I be the caregiver for my neighbor/sibling/friend who qualifies for CDPAP?",
-      answer:
-        "Absolutely! As long as they are not your legally wed spouse or child under 21.",
-    },
-    {
-      id: 444,
-      question: "Can I become a CDPAP Personal Assistant if I am 18?",
-      answer: "Yes! You can be a caregiver if you are 18 years or older.",
-    },
-    {
-      id: 555,
-      question:
-        "Do I need to be a US Citizen to work as a CDPAP Personal Assistant?",
-      answer:
-        "No, as long as you are authorized to work in the United states, you may work as a CDPAP caregiver!",
-    },
+    // {
+    //   id: 333,
+    //   question:
+    //     "Can I be the caregiver for my neighbor/sibling/friend who qualifies for CDPAP?",
+    //   answer:
+    //     "Absolutely! As long as they are not your legally wed spouse or child under 21.",
+    // },
+    // {
+    //   id: 444,
+    //   question: "Can I become a CDPAP Personal Assistant if I am 18?",
+    //   answer: "Yes! You can be a caregiver if you are 18 years or older.",
+    // },
+    // {
+    //   id: 555,
+    //   question:
+    //     "Do I need to be a US Citizen to work as a CDPAP Personal Assistant?",
+    //   answer:
+    //     "No, as long as you are authorized to work in the United states, you may work as a CDPAP caregiver!",
+    // },
     {
       id: 666,
       question:
@@ -183,7 +183,7 @@ const Faqs = () => {
           "25 Newbridge Road, Suite 302, Hicksville, New York 11801, United States",
           "126-01 Liberty Avenue, South Richmond Hill Queens, New York 11419, United States",
           "391 East 149th Street, Bronx, New York 10455, United States - (Recruitment Center)",
-          "130 Washington Ave 3rd Floor Unit G, Albany, NY 12210 - (CDPAP Services)",
+          "130 Washington Ave 3rd Floor Unit G, Albany, NY 12210 ",
         ],
       },
     },

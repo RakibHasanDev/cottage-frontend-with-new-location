@@ -173,11 +173,11 @@ const NavBar = () => {
                     </p>
                   </Link>
 
-                  <Link href="/cdpap">
+                  {/* <Link href="/cdpap">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
                       CDPAP
                     </p>
-                  </Link>
+                  </Link> */}
                 </div>
               </li>
 

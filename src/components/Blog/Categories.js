@@ -30,11 +30,11 @@ const Categories = ({ handleSearch, handleButtonClick }) => {
       icon: "/assets/blogs/private-pay.webp",
       category: "PRIVATEPAY",
     },
-    {
-      serviceName: "CDPAP",
-      icon: "/assets/blogs/cdpap.webp",
-      category: "CDPAP",
-    },
+    // {
+    //   serviceName: "CDPAP",
+    //   icon: "/assets/blogs/cdpap.webp",
+    //   category: "CDPAP",
+    // },
     {
       serviceName: "News",
       icon: "/assets/blogs/news.webp",

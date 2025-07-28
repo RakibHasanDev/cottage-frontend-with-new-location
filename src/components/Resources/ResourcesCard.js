@@ -9,10 +9,10 @@ const ResourcesCard = () => {
 
   // List of all documents
   const allDocuments = [
-    {
-      name: "HHA Handbook - Cottage Home Care Services NJ",
-      url: "https://online.pubhtml5.com/jmohp/exol/",
-    },
+    // {
+    //   name: "HHA Handbook - Cottage Home Care Services NJ",
+    //   url: "https://online.pubhtml5.com/jmohp/exol/",
+    // },
     {
       name: "Physical Form (PDF)",
       file: "/assets/resources/PHYSICAL Form.pdf",
