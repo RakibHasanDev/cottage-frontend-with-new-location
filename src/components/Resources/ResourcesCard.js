@@ -21,11 +21,11 @@ const ResourcesCard = () => {
       name: "Daily Timesheet (PDF)",
       file: "/assets/resources/Daily Time sheet.pdf",
     },
-    {
-      name: "Celestial Timesheet (PDF)",
-      file: "/assets/resources/chelestial timesheet.pdf",
-    },
-    { name: "DOH (PDF)", file: "/assets/resources/DOH.pdf" },
+    // {
+    //   name: "Celestial Timesheet (PDF)",
+    //   file: "/assets/resources/chelestial timesheet.pdf",
+    // },
+    // { name: "DOH (PDF)", file: "/assets/resources/DOH.pdf" },
     {
       name: "DIRECT DEPOSIT AUTHORIZATION (PDF)",
       file: "/assets/resources/direct deposite.pdf",
@@ -35,10 +35,10 @@ const ResourcesCard = () => {
       name: "Time-off Form Fillable (PDF)",
       file: "/assets/resources/time off fillable.pdf",
     },
-    {
-      name: "Completed CDPAP Application (PDF)",
-      file: "/assets/Files/CDPAP Completed Application.pdf",
-    },
+    // {
+    //   name: "Completed CDPAP Application (PDF)",
+    //   file: "/assets/Files/CDPAP Completed Application.pdf",
+    // },
     {
       name: "Change of Address Form Fillable (PDF)",
       file: "/assets/resources/Change of Address Form Fillable.pdf",

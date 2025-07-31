@@ -8,6 +8,7 @@ import MyImageComponent from "../shared/MyImageComponent";
 import OverlayLoading from "../shared/OverlayLoading";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const EasierLife = () => {
   const [loading, setLoading] = useState(false);
@@ -190,12 +191,14 @@ const EasierLife = () => {
                 // data-aos="fade-right"
                 // data-aos-duration="2000"
               >
-                <img
-                  src={"/assets/cottage-home-care-contact-image.webp"}
-                  alt="cottage-home-care-contact-image"
-                  className="w-full shadow-lg md:md:max-w-2xl lg:max-w-[85%] rounded-lg "
+                <Image
+                  src="/assets/cottage-home-care-contact-image.webp"
+                  alt="Cottage Home Care contact section image"
                   width={800}
                   height={1046}
+                  className="w-full shadow-lg md:max-w-2xl lg:max-w-[85%] rounded-lg"
+                  loading="lazy"
+                  unoptimized // ✅ Required if you're using output: "export"
                 />
               </div>
 

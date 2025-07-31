@@ -1,75 +1,31 @@
 import Head from "next/head";
-import React, { Suspense, useEffect, useState } from "react";
-import dynamic from "next/dynamic";
-import SkeletonLoading from "@/components/shared/SkeletonLoading";
+import React from "react";
+import CustomCarousel from "@/components/home/CustomCarousel";
 import WeAre from "@/components/home/WeAre";
+import Quality from "@/components/home/Quality";
+import WhyChoose from "@/components/home/WhyChoose";
+import MedicaidApply from "@/components/home/MedicaidApply";
 
-// ✅ Import Components Dynamically
-const CustomCarousel = dynamic(
-  () => import("@/components/home/CustomCarousel"),
-  {
-    suspense: false,
-    ssr: true, // ✅ Hero Section should load immediately for better LCP
-  }
-);
-
+import dynamic from "next/dynamic";
 const UpdateTestimonial = dynamic(
   () => import("@/components/home/Testimonial/Testimonials"),
-  {
-    suspense: true,
-    ssr: false, // ✅ Client-side only (Lazy-loaded for speed)
-  }
+  { ssr: false }
 );
-
 const Overwhelmed = dynamic(() => import("@/components/home/OverwHelmed"), {
-  suspense: true,
-  ssr: false, // ✅ Lazy-loaded for better performance
-});
-
-// const WeAre = dynamic(() => import("@/components/home/WeAre"), {
-//   suspense: true,
-//   ssr: false,
-// });
-
-const Quality = dynamic(() => import("@/components/home/Quality"), {
-  suspense: true,
-  ssr: false,
-});
-const WhyChoose = dynamic(() => import("@/components/home/WhyChoose"), {
-  suspense: true,
-  ssr: false,
-});
-const MedicaidApply = dynamic(() => import("@/components/home/MedicaidApply"), {
-  suspense: true,
   ssr: false,
 });
 const MapComponent = dynamic(() => import("@/components/home/MapComponent"), {
-  suspense: true,
   ssr: false,
 });
 const EasierLife = dynamic(() => import("@/components/home/EasierLife"), {
-  suspense: true,
   ssr: false,
 });
-
 const NewsLetter = dynamic(() => import("@/components/home/NewsLetter"), {
-  suspense: true,
   ssr: false,
 });
-
-// const CottageVideoSlider = dynamic(
-//   () => import("@/components/home/VideoSlider/CottageVideoSlider"),
-//   {
-//     suspense: true,
-//     ssr: false,
-//   }
-// );
 const PromotionalVideoSlider = dynamic(
   () => import("@/components/home/VideoSlider/PromotionalVideoSlider"),
-  {
-    suspense: true,
-    ssr: false,
-  }
+  { ssr: false }
 );
 
 export default function Home() {
@@ -248,12 +204,6 @@ export default function Home() {
     },
   ];
 
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   return (
     <>
       <Head>
@@ -316,58 +266,58 @@ export default function Home() {
         <link rel="canonical" href="https://cottagehomecare.com/" />
       </Head>
 
-      <div className="dark:bg-slate-600 min-h-screen">
-        <h1 className="seo-text-hidden ">
+      <main className="dark:bg-slate-600 min-h-screen">
+        <h1 className="sr-only">
           Cottage Home Care – Home Health Aide, Private Pay, and NHTD Services
         </h1>
-        <h2 className="seo-text-hidden ">
+        <h2 className="sr-only">
           Trusted NHTD, HHA, and Private Pay Services Across New York State
         </h2>
 
-        {/* ✅ Hero Section (Fast LCP) */}
-        <CustomCarousel />
+        <section id="hero">
+          <CustomCarousel />
+        </section>
+        <section id="testimonial">
+          <UpdateTestimonial />
+        </section>
 
-        {isMounted && (
-          <Suspense fallback={<SkeletonLoading />}>
-            <UpdateTestimonial />
-          </Suspense>
-        )}
+        <section id="we-are">
+          <WeAre />
+        </section>
 
-        <Suspense fallback={<SkeletonLoading />}>
-          <Overwhelmed />
-        </Suspense>
-
-        <WeAre />
-
-        <Suspense fallback={<SkeletonLoading />}>
+        <section id="quality">
           <Quality />
-        </Suspense>
+        </section>
 
-        <Suspense fallback={<SkeletonLoading />}>
+        <section id="why-choose">
           <WhyChoose />
-        </Suspense>
+        </section>
 
-        <Suspense fallback={<SkeletonLoading />}>
+        <section id="medicaid">
           <MedicaidApply />
-        </Suspense>
+        </section>
 
-        <Suspense fallback={<SkeletonLoading />}>
+        <section id="video-slider">
           <PromotionalVideoSlider />
-        </Suspense>
-        {/* <Suspense fallback={<SkeletonLoading />}>
-          <CottageVideoSlider />
-        </Suspense> */}
-        <Suspense fallback={<SkeletonLoading />}>
-          <MapComponent />
-        </Suspense>
-        <Suspense fallback={<SkeletonLoading />}>
-          <EasierLife />
-        </Suspense>
-        <Suspense fallback={<SkeletonLoading />}>
-          <NewsLetter />
-        </Suspense>
+        </section>
 
-        <div class="seo-text-hidden">
+        <section id="overwhelmed">
+          <Overwhelmed />
+        </section>
+
+        <section id="map">
+          <MapComponent />
+        </section>
+
+        <section id="easier-life">
+          <EasierLife />
+        </section>
+
+        <section id="newsletter">
+          <NewsLetter />
+        </section>
+
+        <section id="seo-summary" className="seo-text-hidden">
           <p>
             Cottage Home Care Services offers a full range of home care programs
             across New York, including CDPAP, HHA, PCA, NHTD Waiver, and Private
@@ -385,8 +335,8 @@ export default function Home() {
             non-medical support, our experienced, compassionate caregivers are
             ready to meet your needs with professionalism, dignity, and respect.
           </p>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }

@@ -4,6 +4,7 @@ import { FaPlayCircle, FaRegCalendar } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import ModalBody from "../shared/ModalBody";
 import IconLoading from "../shared/IconLoading";
+import Image from "next/image";
 
 const optimizedImage = (url, width = 1080) =>
   url.replace("/upload/", `/upload/f_auto,q_auto,dpr_auto,w_${width}/`);
@@ -72,16 +73,17 @@ const OverwHelmed = () => {
                 )}
                 media="(max-width: 767px)"
               />
-              <img
+              <Image
                 src={optimizedImage(
                   "https://res.cloudinary.com/di3wwp9s0/image/upload/overhelmed/cottage-home-care-we-believe.webp",
                   480
                 )}
-                alt="cottage-home-care-we-believe-image"
-                width="480"
-                height="480"
+                alt="Cottage Home Care - We Believe Image"
+                width={480}
+                height={480}
                 className="masked-img"
                 loading="lazy"
+                unoptimized // ✅ Required for static hosting (cPanel)
               />
             </picture>
           </div>

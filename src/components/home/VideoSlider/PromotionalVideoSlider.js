@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 
 import { CottageVideoSliderButton } from "@/components/shared/CottageVideoSliderButton";
 import CottageVideoModal from "./CottageVideoModal";
+import Image from "next/image";
 
 const allVideos = [
   {
@@ -201,19 +202,19 @@ export default function App() {
                   key={index}
                   virtualIndex={index}
                 >
-                  <div
-                    className="cottage-video-image  h-[200px] lg:h-[180px] 2xl:h-[240px] relative"
-                    style={{
-                      backgroundImage: `url(${video?.img})`,
-                      backgroundColor: "transparent",
-                      backgroundSize: "cover",
-                      width: "100%",
-                    }}
-                  >
+                  <div className="cottage-video-image  h-[200px] lg:h-[180px] 2xl:h-[240px] relative overflow-hidden group">
+                    {" "}
+                    <Image
+                      src={video.img}
+                      alt={video.alt}
+                      fill // ⬅️ Fills the entire parent div
+                      className="object-cover w-full h-full"
+                      loading="lazy"
+                      unoptimized
+                    />
                     <p className="bg-[#000000d8] px-2 py-0.5 text-sm text-white absolute top-2 left-2">
                       {video?.duration}
                     </p>
-
                     <p className="cottage-video-description  text-[16px] leading-relaxed open-sans font-normal">
                       {video.des}
                     </p>

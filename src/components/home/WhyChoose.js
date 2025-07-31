@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaStar } from "react-icons/fa";
@@ -57,12 +58,16 @@ const WhyChoose = () => {
           data-aos-duration="2000"
         >
           {/* Background Blob Shape */}
-          <img
+          <Image
             className="absolute w-[340px] md:w-[590px] md:rotate-6 top-4 md:-top-2 z-0 -ml-2 dark:opacity-25"
             src={optimizedImage(
               "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733425449/why-chose/why-chose-background.webp"
             )}
+            width={590}
+            height={590}
             alt="why-chose-background"
+            loading="lazy"
+            unoptimized
           />
 
           {/* Masked Image */}
@@ -89,16 +94,17 @@ const WhyChoose = () => {
                 )}
                 media="(max-width: 767px)"
               />
-              <img
+              <Image
                 src={optimizedImage(
                   "https://res.cloudinary.com/di3wwp9s0/image/upload/v1733428120/why-chose/why-chose.webp",
                   480
                 )}
                 alt="why-chose-image"
-                width="480"
-                height="480"
+                width={480}
+                height={480}
                 className="whyChose-img"
                 loading="lazy"
+                unoptimized
               />
             </picture>
           </div>

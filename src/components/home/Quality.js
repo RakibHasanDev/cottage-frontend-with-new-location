@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
 import Link from "next/link";
+import Image from "next/image";
 
 const Quality = () => {
   const [imageSize, setImageSize] = useState({ width: 64, height: 64 });
@@ -43,12 +44,14 @@ const Quality = () => {
           >
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
-              <img
+              <Image
                 src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743522283/Services/cdpap-service.webp"
-                alt="cdpap-service"
-                className="w-full h-full object-cover"
+                alt="CDPAP Home Care Service"
                 width={1176}
                 height={784}
+                className="w-full h-full object-cover"
+                loading="lazy"
+                unoptimized // ✅ Required for cPanel static hosting
               />
             </div>
 
@@ -57,11 +60,14 @@ const Quality = () => {
               <div className="pl-4 lg:pl-8 p-4">
                 {/* Icon */}
                 <div className="flex mb-2 lg:mb-4">
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743522542/Services/cdpap-icon.png"
-                    alt="cdpap-icon"
-                    width={imageSize.width}
-                    height={imageSize.height}
+                    alt="hha-icon"
+                    width={80} // Max desktop size
+                    height={80}
+                    className="w-9 h-9 sm:w-16 sm:h-16 md:w-20 md:h-20"
+                    loading="lazy"
+                    unoptimized
                   />
                 </div>
 
@@ -94,7 +100,7 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                     Enjoy compassionate support tailored just for you.
+                      Enjoy compassionate support tailored just for you.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -119,7 +125,7 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                     Get help with personal care, mobility, and hygiene.
+                      Get help with personal care, mobility, and hygiene.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -144,7 +150,7 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                     Get professional care in the comfort of your home.
+                      Get professional care in the comfort of your home.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -196,12 +202,14 @@ const Quality = () => {
           >
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
-              <img
+              <Image
                 src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733323108/Services/hha-service.webp"
                 alt="hha-service"
                 className="w-full h-full object-cover"
                 width={1065}
                 height={593}
+                loading="lazy"
+                unoptimized // ✅ Required for cPanel static hosting
               />
             </div>
 
@@ -210,11 +218,14 @@ const Quality = () => {
               <div className="pl-4 lg:pl-8 p-4">
                 {/* Icon */}
                 <div className="flex mb-2 md:mb-4">
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733331399/Services/hha-icon.png"
                     alt="heart"
-                    width={imageSize.width}
-                    height={imageSize.height}
+                    width={80} // Max desktop size
+                    height={80}
+                    className="w-9 h-9 sm:w-16 sm:h-16 md:w-20 md:h-20"
+                    loading="lazy"
+                    unoptimized
                   />
                 </div>
 
@@ -247,7 +258,7 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                     You receive an individualized care plan.
+                      You receive an individualized care plan.
                     </span>
                   </li>
                   <li className="flex items-start">
@@ -322,16 +333,15 @@ const Quality = () => {
                       />
                     </svg>
                     <span className="ml-3 text-white">
-                     Allows assistance with meal preparation, light housekeeping, and more.
+                      Allows assistance with meal preparation, light
+                      housekeeping, and more.
                     </span>
                   </li>
                 </ul>
                 <Link className="mt-2 block" href="/hha">
                   <button className="animated-button cursor-pointer">
                     <RiArrowRightDoubleFill className="text-2xl arrow-icon text-white" />
-                    <span className="animated-text">
-                      Explore PCA Service
-                    </span>
+                    <span className="animated-text">Explore PCA Service</span>
                   </button>
                 </Link>
               </div>
@@ -349,12 +359,14 @@ const Quality = () => {
           >
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
-              <img
+              <Image
                 src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1743522907/Services/nhtd-service.webp"
                 alt="nhtd-service"
                 className="w-full h-full object-cover"
                 width={1344}
                 height={896}
+                loading="lazy"
+                unoptimized // ✅ Required for cPanel static hosting
               />
             </div>
 
@@ -363,11 +375,14 @@ const Quality = () => {
               <div className="pl-4 lg:pl-8 p4">
                 {/* Icon */}
                 <div className="flex mb-2 md:mb-4">
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/di3wwp9s0/image/upload/Services/nhtd-service-icon.png"
                     alt="nhtd-service-icon"
-                    width={imageSize.width}
-                    height={imageSize.height}
+                    width={80} // Max desktop size
+                    height={80}
+                    className="w-9 h-9 sm:w-16 sm:h-16 md:w-20 md:h-20"
+                    loading="lazy"
+                    unoptimized
                   />
                 </div>
 
@@ -503,12 +518,14 @@ const Quality = () => {
           >
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
-              <img
+              <Image
                 src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733325400/Services/private-pay-service.webp"
                 alt="private pay service image"
                 className="w-full lg:h-full h-full object-cover"
                 width={1133}
                 height={755}
+                loading="lazy"
+                unoptimized // ✅ Required for cPanel static hosting
               />
             </div>
 
@@ -517,11 +534,14 @@ const Quality = () => {
               <div className="pl-4 lg:pl-8 p-4">
                 {/* Icon */}
                 <div className="flex mb-2 md:mb-4">
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733330991/Services/private-pay-icon.png"
                     alt="heart"
-                    width={imageSize.width}
-                    height={imageSize.height}
+                    className="w-9 h-9 sm:w-16 sm:h-16 md:w-20 md:h-20"
+                    width={80} // Max desktop size
+                    height={80}
+                    loading="lazy"
+                    unoptimized
                   />
                 </div>
 

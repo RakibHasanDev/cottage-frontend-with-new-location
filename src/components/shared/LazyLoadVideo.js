@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
-const LazyLoadVideo = ({ src, rounded = true }) => {
+const LazyLoadVideo = ({ src, rounded = true, title = "Embedded video" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const videoRef = useRef(null);
 
@@ -15,10 +15,9 @@ const LazyLoadVideo = ({ src, rounded = true }) => {
       });
     });
 
-    const currentRef = videoRef.current; // Store the current ref value
-
+    const currentRef = videoRef.current;
     if (currentRef) {
-      observer.observe(videoRef.current);
+      observer.observe(currentRef);
     }
 
     return () => {
@@ -33,10 +32,12 @@ const LazyLoadVideo = ({ src, rounded = true }) => {
       {isVisible && (
         <iframe
           className={`w-full h-full ${rounded ? "rounded-xl" : ""}`}
-          src={src}
-          title="YouTube video player"
+          src={`${src}?rel=0`}
+          title={title}
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
+          aria-label="Care Givers and Patients Review"
         />
       )}
     </div>
@@ -45,6 +46,7 @@ const LazyLoadVideo = ({ src, rounded = true }) => {
 
 LazyLoadVideo.propTypes = {
   src: PropTypes.string.isRequired,
+  title: PropTypes.string,
   rounded: PropTypes.bool,
 };
 

@@ -132,12 +132,14 @@ const MedicaidApply = () => {
             </div>
 
             <div className="order-first sm:order-none ml-4 lg:ml-0">
-              <img
+              <Image
                 className=" w-[95%] md:w-[350px] lg:w-[550px] xl:w-[600px] image-infinity "
                 src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711429/medicaid/cottage-home-care-medicaid.webp"
                 alt="Cottage Home Care Medicaid services application process for home care assistance"
                 width={1080}
                 height={472}
+                loading="lazy"
+                unoptimized
               />
             </div>
           </div>

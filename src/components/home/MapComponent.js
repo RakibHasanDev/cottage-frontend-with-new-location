@@ -341,10 +341,14 @@ const MapComponent = () => {
                   <div className="flex justify-center my-2">
                     <PhotoProvider>
                       <PhotoView src={selectedOffice?.picture}>
-                        <img
+                        <Image
                           src={selectedOffice?.picture}
                           alt={selectedOffice?.officeName}
                           className=" w-16 h-16 rounded-full object-cover border-[2px] border-[#ff9900]"
+                          width={64}
+                          height={64}
+                          loading="lazy"
+                          unoptimized
                         />
                       </PhotoView>
                     </PhotoProvider>

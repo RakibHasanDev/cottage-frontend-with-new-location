@@ -3,6 +3,7 @@ import SkeletonLoading from "../shared/SkeletonLoading";
 // const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 // import reader2 from "../../../src/assets/Lotty File/holi.json";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const images = [
   {
@@ -99,8 +100,8 @@ const CustomCarousel = () => {
               </p>
               <p className="w-[18px] h-[2px] bg-gray-300 rounded-md mx-auto my-2.5"></p>
               <p className="text-center md:text-xl text-[15px] font-medium md:font-semibold text-[#dbf2f4] mb-5 px-5 md:px-0 mt-2 open-sans custom-font text-shadow">
-                HHA/PCA, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK
-                CITY, NASSAU & SUFFOLK COUNTY, WESTCHESTER & ALBANY.
+                HHA/PCA, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY,
+                NASSAU & SUFFOLK COUNTY, WESTCHESTER & ALBANY.
               </p>
               <div className="flex justify-center text-white font-semibold second-text">
                 <a
@@ -119,17 +120,16 @@ const CustomCarousel = () => {
         {images?.map((img, index) => (
           <div key={index} className={index === currentIndex ? "current" : ""}>
             <picture className={index === currentIndex ? "current" : ""}>
-              <source
-                media="(min-width: 768px)"
-                srcSet={img.lg} // ✅ Now matches preload
-              />
-              <img
-                src={img.sm} // ✅ Matches preload for sm
-                alt={img?.alt}
+              <source media="(min-width: 768px)" srcSet={img.lg} />
+              <Image
+                src={img.sm}
+                alt={img?.alt || "carousel image"}
                 className={index === currentIndex ? "current bg-center" : ""}
-                width="720"
-                height="405"
+                width={720}
+                height={405}
+                priority={index === 0} // eagerly load only the first
                 loading={index === 0 ? "eager" : "lazy"}
+                unoptimized // Optional if not already set in next.config.js
               />
             </picture>
           </div>
