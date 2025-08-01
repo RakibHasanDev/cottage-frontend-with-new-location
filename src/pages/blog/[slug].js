@@ -265,7 +265,7 @@ const BlogDetails = ({
         <meta property="og:image" content={blog?.img} />
         <meta
           property="og:url"
-          content={`https://cottagehomecare.com/blog/${blog?.slug}`}
+          content={`https://cottagehomecare.com/blog/${blog?.slug}/`}
         />
         <meta property="og:type" content="article" />
         <meta property="article:published_time" content={blog?.date} />
@@ -438,12 +438,13 @@ const BlogDetails = ({
                   <div className="mt-3 flex items-center gap-0 md:gap-3 ">
                     <div className="flex items-center  md:gap-2 gap-0.5 open-sans">
                       <div className="bg-white w-4 h-4 md:w-10 md:h-10 rounded-full border border-[#00A6B2] ">
-                        <img
+                        <Image
                           src="/assets/cottage-home-care-logo-blog.webp"
-                          alt="cottage home care logo"
-                          width=""
-                          height=""
-                          className="rounded-full p-1 w-4 h-4  md:w-10 md:h-10  "
+                          alt="Cottage Home Care logo"
+                          width={40}
+                          height={40}
+                          unoptimized // ✅ Required for cPanel or static export
+                          className="rounded-full p-1 w-4 h-4 md:w-10 md:h-10"
                         />
                       </div>
 
@@ -496,12 +497,14 @@ const BlogDetails = ({
                     </Link>
                   </div>
                   <div className="lg:mt-8 mt-5 overflow-hidden aspect-video flex justify-center bg-[#f0f0f0] dark:bg-slate-300">
-                    <img
-                      src={blog?.img}
-                      alt={blog?.title}
-                      width="1280"
-                      height="720"
-                      className="w-full h-full object-cover"
+                    <Image
+                      src={blog?.img || "/default-blog-image.jpg"} // ✅ Fallback image
+                      alt={blog?.title || "Blog Image"} // ✅ Fallback alt
+                      width={1280}
+                      height={720}
+                      className="w-100 h-100 object-cover" // ✅ Bootstrap-style
+                      loading="lazy"
+                      unoptimized // ✅ Required for cPanel/static export
                     />
                   </div>
 

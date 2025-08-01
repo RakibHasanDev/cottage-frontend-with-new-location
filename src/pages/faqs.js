@@ -93,59 +93,26 @@ const Faqs = () => {
       answer:
         "A- As long as you pay your medicaid spend down each month, you can be eligible.",
     },
-    {
-      id: 88,
-      question:
-        "What is the difference between a certified Home Health Aide and a CDPAP personal assistant?",
-      answer2: true,
-    },
   ];
 
   const careItems = [
-    // {
-    //   id: 111,
-    //   question: "Who can be a caregiver under the CDPAP program?",
-    //   answer2: {
-    //     des1: "Your son, daughter, grandchild, relative, friend or existing home attendant — anyone except your",
-    //     des2: [
-    //       "Legal spouse",
-    //       "Designated representative (the person who makes home care decisions for you)",
-    //       " Parent (if you are under 21).",
-    //     ],
-    //   },
-    // },
     {
-      id: 222,
-      question:
-        "My son is under 21 and needs care, am I qualified to be his caregiver?",
+      id: 999,
+      question: "What is the NHTD program?",
       answer:
-        "Parents are allowed to be the caregiver for their children but only if the child is over the age of 21 years old. If they are under 21, a parent cannot be their caregiver.",
+        "The Nursing Home Transition and Diversion (NHTD) program is a Medicaid waiver that allows individuals with disabilities or seniors to receive services at home or in the community instead of a nursing home.",
     },
-    // {
-    //   id: 333,
-    //   question:
-    //     "Can I be the caregiver for my neighbor/sibling/friend who qualifies for CDPAP?",
-    //   answer:
-    //     "Absolutely! As long as they are not your legally wed spouse or child under 21.",
-    // },
-    // {
-    //   id: 444,
-    //   question: "Can I become a CDPAP Personal Assistant if I am 18?",
-    //   answer: "Yes! You can be a caregiver if you are 18 years or older.",
-    // },
-    // {
-    //   id: 555,
-    //   question:
-    //     "Do I need to be a US Citizen to work as a CDPAP Personal Assistant?",
-    //   answer:
-    //     "No, as long as you are authorized to work in the United states, you may work as a CDPAP caregiver!",
-    // },
     {
-      id: 666,
-      question:
-        "Can I be the caregiver for someone that is also living in the same household?",
+      id: 1000,
+      question: "Am I eligible for the NHTD program?",
       answer:
-        "Yes! As long as they are not your legally wed spouse or child under 21.",
+        "You may be eligible if you are Medicaid-eligible, over 18 years of age with a physical disability, or over 65, and require a nursing home level of care.",
+    },
+    {
+      id: 1001,
+      question: "How do I apply for the NHTD waiver?",
+      answer:
+        "You can apply through the Regional Resource Development Center (RRDC). Cottage Home Care can guide you through the process.",
     },
   ];
 
@@ -215,8 +182,8 @@ const Faqs = () => {
       path: "eligible",
     },
     {
-      title: "Can I be a caregiver?",
-      description: "FAQs for prospective caregivers",
+      title: "What is NHTD?",
+      description: "FAQs about the Nursing Home Transition & Diversion program",
       path: "caregiver",
     },
   ];
@@ -582,14 +549,12 @@ const Faqs = () => {
             <div className="flex justify-center items-start my-2">
               <div className="w-full md:w-[65%] mx-auto my-1 ">
                 <p className="text-2xl md:text-2xl  2xl:text-4xl font-bold text-center mb-2 md:mb-2 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                  Can I be a caregiver?
+                  What is NHTD?
                 </p>
                 <h3 className="text-lg md:text-2xl font-semibold text-center mb-2 md:mb-3 dark:text-gray-100 text-[#00A6B2] league-spartan">
-                  Questions for caregivers
+                  FAQs about the Nursing Home Transition & Diversion program
                 </h3>
-                <h3 className="text-base md:text-xl font-bold text-center mb-2 md:mb-5 dark:text-gray-100 text-[#00A6B2] league-spartan ">
-                  Who can be a caregiver?
-                </h3>
+
                 <ul className="flex flex-col">
                   {careItems.map((item) => (
                     <li
