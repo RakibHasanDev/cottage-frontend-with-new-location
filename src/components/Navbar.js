@@ -7,6 +7,7 @@ import ToggleButton from "./shared/ToogleButton";
 import SideNav from "./nav/SideNav";
 import { AuthContext } from "@/context/AuthProvider";
 import DropdownMenu from "./nav/DropdownMenu";
+import { HiChevronDown } from "react-icons/hi";
 
 const NavBar = () => {
   const [customShadow, setCustomShadow] = useState("shadow-none");
@@ -109,7 +110,7 @@ const NavBar = () => {
               </div>
             </Link>
 
-            <ul className=" items-center hidden space-x-4 lg:flex   nav-list">
+            <ul className=" items-center hidden lg:space-x-3 xl:space-x-3 2xl:space-x-3.5 lg:flex  nav-list">
               <li>
                 <Link
                   href="/"
@@ -140,14 +141,14 @@ const NavBar = () => {
               <li className="relative group">
                 {/* Services Button */}
                 <button
-                  className={`dropdown-toggle font-semibold tracking-wide text-[#49465D] transition-colors duration-200  
+                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
       ${
         navColor ? "customWhite" : ""
-      } uppercase nav-text hover-underline-animation dark:text-gray-300 `}
+      } uppercase nav-text hover-underline-animation dark:text-gray-300`}
                 >
                   Services
+                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
                 </button>
-
                 {/* Dropdown Menu */}
                 <div
                   className="absolute left-0 top-full w-48 bg-white shadow-md border border-gray-200 rounded-md 
@@ -211,13 +212,15 @@ const NavBar = () => {
 
               <li className="relative group font-semibold">
                 {/* Resources Button */}
+
                 <button
-                  className={`dropdown-toggle font-semibold tracking-wide text-[#49465D] transition-colors duration-200  
+                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
       ${
         navColor ? "customWhite" : ""
       } uppercase nav-text hover-underline-animation dark:text-gray-300`}
                 >
                   Resources
+                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -255,13 +258,15 @@ const NavBar = () => {
 
               <li className="relative group font-semibold">
                 {/* Community Outreach Button */}
+
                 <button
-                  className={`dropdown-toggle font-semibold tracking-wide text-[#49465D] transition-colors duration-200  
+                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
       ${
         navColor ? "customWhite" : ""
       } uppercase nav-text hover-underline-animation dark:text-gray-300`}
                 >
                   Community Outreach
+                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
                 </button>
 
                 {/* Dropdown Menu */}
@@ -297,7 +302,57 @@ const NavBar = () => {
                 </div>
               </li>
 
-              <li>
+              <li className="relative group font-semibold">
+                <button
+                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
+      ${
+        navColor ? "customWhite" : ""
+      } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+                >
+                  Locations
+                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
+                </button>
+
+                {/* Dropdown Menu */}
+                <div
+                  className="absolute left-0 top-full w-[200px] bg-white shadow-md border border-gray-200 rounded-md 
+      dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+      transition-opacity duration-300 z-50"
+                >
+                  <Link href="/">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
+                      NEW YORK CITY
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Long Island
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
+                      WESTCHESTER
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Albany
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
+                      New Jersey
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Maryland
+                    </p>
+                  </Link>
+                </div>
+              </li>
+
+              {/* <li>
                 <Link
                   href="/blog"
                   aria-label="Blog"
@@ -309,7 +364,7 @@ const NavBar = () => {
                 >
                   Blog
                 </Link>
-              </li>
+              </li> */}
 
               <li>
                 <ToggleButton />
