@@ -117,9 +117,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="  px-4 np divide-y  text-white  footer-shade footer-opacity league-spartan ">
-        <div>
-          <div className="container flex flex-col justify-between pt-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-            <div className="lg:w-1/3">
+        <div className="mb-3">
+          <div className="container flex flex-col gap-10  pt-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+            <div className="lg:w-[20%]">
               <Link
                 href="/"
                 className="flex justify-center space-x-3 lg:justify-start"
@@ -134,12 +134,42 @@ const Footer = () => {
                   />
                 </div>
                 <p className="self-center text-2xl">
-                  Cottage Home Care Services
+                  Cottage Home <br /> Care Services
                 </p>
               </Link>
             </div>
 
             <div className="grid grid-cols-2  lg:text-base gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3 ">
+              {/* <div className="space-y-3">
+                <Link
+                  href="/service-areas"
+                  className=" uppercase text-gray-50 hover:text-[#00A6B2] tracking-wider"
+                >
+                  Service Areas
+                </Link>
+                <ul className="space-y-1 uppercase tracking-wider">
+                  <li>
+                    <Link
+                      href="/terms-and-conditions"
+                      rel="noopener noreferrer"
+                      className=" hover:text-[#00A6B2]"
+                    >
+                      {" "}
+                      Terms and Conditions
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/disclaimer"
+                      rel="noopener noreferrer"
+                      className=" hover:text-[#00A6B2]"
+                    >
+                      {" "}
+                      Disclaimer
+                    </Link>
+                  </li>
+                </ul>
+              </div> */}
               <div className="space-y-3">
                 <Link
                   href="/privacy-policy"

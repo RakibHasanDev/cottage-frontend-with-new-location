@@ -236,6 +236,11 @@ const NavBar = () => {
                     </p>
                   </Link>
 
+                  <Link href="/blog">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Blog
+                    </p>
+                  </Link>
                   <Link href="/help-desk">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Help Desk
@@ -302,7 +307,9 @@ const NavBar = () => {
                 </div>
               </li>
 
-              <li className="relative group font-semibold">
+              {/* location start  */}
+
+              {/* <li className="relative group font-semibold">
                 <button
                   className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
       ${
@@ -313,7 +320,6 @@ const NavBar = () => {
                   <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
                 </button>
 
-                {/* Dropdown Menu */}
                 <div
                   className="absolute left-0 top-full w-[200px] bg-white shadow-md border border-gray-200 rounded-md 
       dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
@@ -334,11 +340,7 @@ const NavBar = () => {
                       WESTCHESTER
                     </p>
                   </Link>
-                  <Link href="/">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Albany
-                    </p>
-                  </Link>
+
                   <Link href="/">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
                       New Jersey
@@ -350,9 +352,11 @@ const NavBar = () => {
                     </p>
                   </Link>
                 </div>
-              </li>
+              </li> */}
 
-              {/* <li>
+              {/* location end  */}
+
+              <li>
                 <Link
                   href="/blog"
                   aria-label="Blog"
@@ -364,7 +368,7 @@ const NavBar = () => {
                 >
                   Blog
                 </Link>
-              </li> */}
+              </li>
 
               <li>
                 <ToggleButton />

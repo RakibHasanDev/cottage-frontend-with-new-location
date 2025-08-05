@@ -31,7 +31,7 @@ const PromotionalVideoSlider = dynamic(
 export default function Home() {
   const title = "Cottage Home Care Services – NHTD, HHA & Private Pay";
   const description =
-    "Cottage Home Care offers top-rated home care in NYC, including NHTD, HHA, CDPAP, Private Pay, and elder care support. Call us today for more info!";
+    "Top-rated NYC home care services including NHTD, HHA, PCA, Private Pay, OPWDD & elder care. Call Cottage Home Care today for expert, personalized support.";
 
   const keywords =
     "Cottage Home Care, Cottage Agency, Cottage Home Care Services, private home care services, Home Health Aide NYC, NHTD program, CDPAP NYC, Private Pay Home Care, Medicaid Home Care NYC, Senior Home Care, elderly care NYC, personal care assistance, home care agencies near me, home health care services NYC, HHA services, independent living support, home care for seniors, in-home caregivers NYC, Rockaway home care, care in homes, cottagecare, Queens home care, Suffolk home care services, Nassau County home care, best home care agency NYC, personal care home, valley cottage ny, cottage inn near me, cottage st, modern cottage, cottage buy";
@@ -159,7 +159,7 @@ export default function Home() {
       name: "Home - Cottage Home Care Services",
       url: "https://cottagehomecare.com",
       description:
-        "Cottage Home Care offers top-rated home care in NYC, including NHTD, HHA, CDPAP, Private Pay, and elder care support. Call us today for more info!",
+        "Cottage Home Care offers top-rated home care in NYC, including NHTD, HHA, Private Pay, and elder care support. Call us today for more info!",
     },
     {
       "@context": "https://schema.org",
@@ -281,6 +281,10 @@ export default function Home() {
           <UpdateTestimonial />
         </section>
 
+        <section id="overwhelmed">
+          <Overwhelmed />
+        </section>
+
         <section id="we-are">
           <WeAre />
         </section>
@@ -299,10 +303,6 @@ export default function Home() {
 
         <section id="video-slider">
           <PromotionalVideoSlider />
-        </section>
-
-        <section id="overwhelmed">
-          <Overwhelmed />
         </section>
 
         <section id="map">
