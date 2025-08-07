@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
 import OverlayLoading from "../shared/OverlayLoading";
+import { validatePhoneNumber } from "../shared/validatePhoneNumber";
 
 const HhhaContactForm = () => {
   const { user } = "";
@@ -85,6 +86,7 @@ const HhhaContactForm = () => {
       email: data.email,
       messages: data.subject.replace(/<br>/g, "\n"),
       institute: "Brooklyn Institute",
+      phone: data.phone,
       time: Date.now(),
     };
 
@@ -152,7 +154,7 @@ const HhhaContactForm = () => {
                     )}
                   </div>
 
-                  <div className="space-y-1 mt-5  text-sm">
+                  <div className="space-y-5 mt-5  text-sm">
                     <input
                       type="email"
                       {...register("email", { required: "Email is required" })}
@@ -166,6 +168,28 @@ const HhhaContactForm = () => {
                     />
                     {errors.email && (
                       <p className="text-red-600">{errors.email.message}</p>
+                    )}
+
+                    <input
+                      type="tel"
+                      {...register("phone", {
+                        required: "Phone number is required",
+                        pattern: {
+                          value:
+                            /^\(?([0-9]{3})\)?[-.● ]?([0-9]{3})[-.● ]?([0-9]{4})$/,
+                          message: "Please enter a valid US phone number",
+                        },
+                        // Custom validation: stop submission if the phone number is already in the existing numbers array
+                        validate: validatePhoneNumber,
+                      })}
+                      id="phone"
+                      placeholder="Phone"
+                      className="w-full placeholder-gray-600 px-4 py-4 rounded-md border border-[#F60D23] text-gray-700 outline-[#F60D23] bg-white
+                                        focus:bg-white dark:placeholder:text-gray-100 dark:bg-gray-400 dark:text-gray-100 dark:focus:bg-gray-400"
+                    />
+
+                    {errors.phone && (
+                      <p className="text-red-600">{errors.phone.message}</p>
                     )}
                   </div>
 
