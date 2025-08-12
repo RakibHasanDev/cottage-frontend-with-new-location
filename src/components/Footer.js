@@ -118,12 +118,9 @@ const Footer = () => {
       </div>
       <div className="  px-4 np divide-y  text-white  footer-shade footer-opacity league-spartan ">
         <div className="mb-3">
-          <div className="container flex flex-col gap-10  pt-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
-            <div className="lg:w-[20%]">
-              <Link
-                href="/"
-                className="flex justify-center space-x-3 lg:justify-start"
-              >
+          <div className="container flex flex-col gap-10  pt-10 mx-auto space-y-8 lg:flex-row lg:space-y-0 ">
+            <div className="lg:w-[20%] ">
+              <Link href="/" className="flex space-x-3 justify-start">
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-xl border-2 border-[#00A6B2]">
                   <Image
                     src="/assets/Cottage-Home.webp"
@@ -139,8 +136,8 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2  lg:text-base gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-3 ">
-              {/* <div className="space-y-3">
+            <div className="grid grid-cols-1  lg:text-base gap-x-3 gap-y-8  sm:grid-cols-4  lg:w-[80%] ">
+              <div className="space-y-3">
                 <Link
                   href="/service-areas"
                   className=" uppercase text-gray-50 hover:text-[#00A6B2] tracking-wider"
@@ -150,26 +147,54 @@ const Footer = () => {
                 <ul className="space-y-1 uppercase tracking-wider">
                   <li>
                     <Link
-                      href="/terms-and-conditions"
+                      href="/disclaimer"
                       rel="noopener noreferrer"
-                      className=" hover:text-[#00A6B2]"
+                      className=" text-blue-400"
                     >
                       {" "}
-                      Terms and Conditions
+                      New York City
                     </Link>
-                  </li>
-                  <li>
+                    ;
                     <Link
                       href="/disclaimer"
                       rel="noopener noreferrer"
-                      className=" hover:text-[#00A6B2]"
+                      className=" text-blue-400"
                     >
                       {" "}
-                      Disclaimer
+                      Long Island
                     </Link>
+                    ;
+                    <br />
+                    <Link
+                      href="/disclaimer"
+                      rel="noopener noreferrer"
+                      className=" text-blue-400"
+                    >
+                      {" "}
+                      Westchester
+                    </Link>
+                    ;
+                    <Link
+                      href="/disclaimer"
+                      rel="noopener noreferrer"
+                      className=" text-blue-400"
+                    >
+                      {" "}
+                      New Jersey
+                    </Link>
+                    ;
+                    <Link
+                      href="/disclaimer"
+                      rel="noopener noreferrer"
+                      className=" text-blue-400"
+                    >
+                      {" "}
+                      Maryland
+                    </Link>
+                    ;
                   </li>
                 </ul>
-              </div> */}
+              </div>
               <div className="space-y-3">
                 <Link
                   href="/privacy-policy"
@@ -262,12 +287,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          <span className="text-center my-4 uppercase text-xs md:text-sm  border-[1px] border-[#00A6B2] flex justify-center lg:w-[550px] mx-auto p-2">
-            {" "}
-            sms consent or phone numbers for the purpose of sms aren&apos;t
-            shared
-          </span>
         </div>
 
         <div className="py-6 md:text-sm  text-xs text-center text-gray-50 open-sans">

@@ -145,9 +145,19 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
             )}
             {data?.[0]?.firstName && (
               <p className="text-lg md:text-xl font-semibold text-gray-100">
-                {data?.[0]?.firstName}
+                {data?.[0]?.firstName} -
+                {data?.[0]?.isPatient === "Yes" ? (
+                  <span className="flex items-center gap-1 text-yellow-300 text-xs">
+                    <i className="fas fa-user-injured"></i> Patient
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-1 text-yellow-300 text-xs">
+                    <i className="fas fa-user"></i> Contact Person
+                  </span>
+                )}
               </p>
             )}
+
             {data?.[0]?.institute && (
               <p className="text-base md:text-lg font-semibold text-gray-100">
                 To: {data?.[0]?.institute}
@@ -176,11 +186,17 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
                 Service Type: {data?.[0]?.service}
               </p>
             )}
-            {data?.[0]?.time && (
+            {data?.[0]?.state && (
               <p className="text-gray-200 text-sm font-semibold">
-                Date: {new Date(data?.[0]?.time).toLocaleString()}
+                State: {data?.[0]?.state}
               </p>
             )}
+            {data?.[0]?.time && (
+              <p className="text-gray-200 text-sm font-semibold">
+                Date: {new Date(data?.[0]?.time).toLocaleDateString()}
+              </p>
+            )}
+
             {data?.[0]?.email && (
               <a
                 href={`mailto:${data?.[0]?.email}`}

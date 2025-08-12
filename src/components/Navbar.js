@@ -309,7 +309,7 @@ const NavBar = () => {
 
               {/* location start  */}
 
-              {/* <li className="relative group font-semibold">
+              <li className="relative group font-semibold">
                 <button
                   className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
       ${
@@ -352,11 +352,11 @@ const NavBar = () => {
                     </p>
                   </Link>
                 </div>
-              </li> */}
+              </li>
 
               {/* location end  */}
 
-              <li>
+              {/* <li>
                 <Link
                   href="/blog"
                   aria-label="Blog"
@@ -368,7 +368,7 @@ const NavBar = () => {
                 >
                   Blog
                 </Link>
-              </li>
+              </li> */}
 
               <li>
                 <ToggleButton />
