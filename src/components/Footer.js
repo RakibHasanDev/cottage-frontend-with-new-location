@@ -161,7 +161,7 @@ const Footer = () => {
                       className=" text-blue-400"
                     >
                       {" "}
-                      Long Island
+                      New Jersey
                     </Link>
                     ;
                     <br />
@@ -171,7 +171,7 @@ const Footer = () => {
                       className=" text-blue-400"
                     >
                       {" "}
-                      Westchester
+                      Mary Land
                     </Link>
                     ;
                     <Link
@@ -180,18 +180,8 @@ const Footer = () => {
                       className=" text-blue-400"
                     >
                       {" "}
-                      New Jersey
+                      Connecticut{" "}
                     </Link>
-                    ;
-                    <Link
-                      href="/disclaimer"
-                      rel="noopener noreferrer"
-                      className=" text-blue-400"
-                    >
-                      {" "}
-                      Maryland
-                    </Link>
-                    ;
                   </li>
                 </ul>
               </div>

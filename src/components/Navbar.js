@@ -332,23 +332,18 @@ const NavBar = () => {
                   </Link>
                   <Link href="/">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Long Island
-                    </p>
-                  </Link>
-                  <Link href="/">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
-                      WESTCHESTER
-                    </p>
-                  </Link>
-
-                  <Link href="/">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
                       New Jersey
                     </p>
                   </Link>
                   <Link href="/">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
                       Maryland
+                    </p>
+                  </Link>
+
+                  <Link href="/">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Connecticut
                     </p>
                   </Link>
                 </div>
