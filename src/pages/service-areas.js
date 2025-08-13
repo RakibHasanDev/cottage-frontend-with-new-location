@@ -28,39 +28,34 @@ export default function HeroSection({
     <>
       <Head></Head>
 
-      <section className="min-h-screen">
+      <section className="min-h-screen dark:bg-slate-600">
+        {/* Hero section start */}
+
         <div className="relative isolate overflow-hidden bg-slate-900 h-[85vh] flex items-center">
           <div aria-hidden className="absolute inset-0">
             <img
               src={
-                "https://res.cloudinary.com/di3wwp9s0/image/upload/v1755092457/Services/services_area.webp"
+                "https://res.cloudinary.com/di3wwp9s0/image/upload/v1755099213/Services/new-one_uo6nez.webp"
               }
               alt=""
-              className="h-full w-full object-cover "
+              className="h-[72vh] w-full object-cover object-cover"
             />
             <div className="absolute inset-0 bg-slate-900/65" />
           </div>
 
           {/* Content */}
-          <div className="relative ml-[45%] max-w-2xl  py-6 text-center text-white bg-simple px-10  -mt-20">
+          <div className="relative lg:ml-[55%] max-w-2xl  py-6 text-center text-white bg-simple px-10  lg:-mt-28 mt-20 ">
             <p className="mb-5 text-xs sm:text-base font-semibold tracking-[0.2em] uppercase text-white/80">
               {kicker}
             </p>
-            <h1 className="text-4xl sm:text-xl lg:text-2xl font-extrabold leading-loose drop-shadow-sm open-sans tracking-wider">
+            <h1 className=" text-base lg:text-2xl font-extrabold leading-loose drop-shadow-sm open-sans tracking-wider">
               {heading}
             </h1>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              {/* <a
-                href={callHref}
-                className="inline-flex items-center rounded-full bg-[#00A6B2] px-6 py-3 text-base font-semibold text-white shadow-lg ring-1 ring-white/10 hover:bg-indigo-500 transition"
-              >
-                <span className="mr-2"></span> Call: (516) 367-2266
-              </a> */}
-
               <a
                 href="tel:+1516-367-2266"
-                className="flex items-center px-6 py-3 md:px-5 md:py-4 border border-[#00a6b2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-lg bg-[#00A6B2]"
+                className="flex items-center px-5 py-2 md:px-4 md:py-3 border border-[#00a6b2] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-lg bg-[#00A6B2]"
                 aria-label="Call us at (516) 367-2266"
               >
                 {/* <FaPhone className="mr-2 " /> */}
@@ -87,7 +82,7 @@ export default function HeroSection({
           </div>
 
           {/* Layered curved bottom (centered bowl) */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 ">
             {/* back band */}
             <svg
               className="absolute bottom-6 left-0 w-full text-white/25"
@@ -116,17 +111,25 @@ export default function HeroSection({
 
             {/* front band */}
             <svg
-              className="relative left-0 w-full text-white"
+              className="relative left-0 w-full fill-white dark:fill-slate-600"
               viewBox="0 0 1440 360"
               preserveAspectRatio="none"
               aria-hidden="true"
             >
-              <path
-                fill="currentColor"
-                d="M0,180 Q720,390 1440,180 L1480,360 H0 Z"
-              />
+              <path d="M0,180 Q720,390 1440,180 L1480,360 H0 Z" />
             </svg>
           </div>
+        </div>
+
+        {/* Hero section end */}
+
+        {/* Body section start */}
+
+        <div className="w-[95%] lg:w-[80%] mx-auto ">
+          <h2 className="text-center text-2xl lg:text-4xl font-semibold league-spartan text-gray-700 w-[80%] mx-auto leading-loose dark:text-gray-100">
+            Cottage Home Care Services is proud to announce that we provide home
+            care for elderly services for the NY, NJ, MD & CT, including:
+          </h2>
         </div>
       </section>
     </>
