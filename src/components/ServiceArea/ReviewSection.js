@@ -101,9 +101,9 @@ export default function ReviewsSection() {
   `,
           }}
         >
-          <div className=" -mt-24 lg:-mt-10 mb-5">
+          <div className=" lg:-mt-10 ">
             <img
-              className="w-20 h-20 animate-float"
+              className="lg:w-20 lg:h-20 h-12 w-12 animate-float -mt-40 lg:mt-0 "
               src="/assets/client-review-white.webp"
               alt="review_image"
             />

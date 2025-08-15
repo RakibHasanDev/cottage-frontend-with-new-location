@@ -182,7 +182,7 @@ export default function HeroSection({
 
         {/* Body */}
         <div className="w-[95%] lg:w-[80%] mx-auto ">
-          <h2 className="text-center text-2xl lg:text-4xl font-semibold league-spartan text-gray-700 w-[80%] mx-auto leading-loose dark:text-gray-100">
+          <h2 className="text-center text-lg lg:text-4xl font-semibold league-spartan text-gray-700 w-[80%] mx-auto leading-loose dark:text-gray-100">
             Cottage Home Care Services is proud to announce that we provide home
             care for elderly services for the NY, NJ, MD & CT, including:
           </h2>
@@ -230,10 +230,10 @@ export default function HeroSection({
                 </div>
               ))}
             </div>
-
-            <ReviewsSection />
           </div>
         </div>
+
+        <ReviewsSection />
       </section>
     </>
   );
