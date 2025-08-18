@@ -113,7 +113,7 @@ export default function HeroSection({
             <p className="mb-5 text-xs sm:text-base font-semibold tracking-[0.2em] uppercase text-white/80">
               {kicker}
             </p>
-            <h1 className="text-base lg:text-2xl font-extrabold leading-loose drop-shadow-sm open-sans tracking-wider">
+            <h1 className="text-base lg:text-2xl font-extrabold leading-loose drop-shadow-sm  tracking-wider league-spartan">
               {heading}
             </h1>
 
@@ -234,6 +234,14 @@ export default function HeroSection({
         </div>
 
         <ReviewsSection />
+
+        {/* why chose section  start */}
+
+        <div className="my-5">
+          <h1 className="text-center">
+            Why Choose Cottage Home Care in NY, NJ, MD & CT?
+          </h1>
+        </div>
       </section>
     </>
   );

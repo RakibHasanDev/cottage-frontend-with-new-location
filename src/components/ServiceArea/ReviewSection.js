@@ -107,7 +107,7 @@ export default function ReviewsSection() {
               src="/assets/client-review-white.webp"
               alt="review_image"
             />
-            <h2 className="text-xl md:text-4xl font-bold max-w-3xl leading-snug  -mt-24 lg:-mt-0">
+            <h2 className="text-xl md:text-3xl font-bold max-w-3xl leading-loose league-spartan">
               See Why So Many Families Needing Home Care In NY, NJ, CT & MA Look
               To Us For <span className="underline">World-Class Care</span>
             </h2>
@@ -118,15 +118,22 @@ export default function ReviewsSection() {
         <div className="absolute top-[250px] lg:top-[350px] left-1/2 -translate-x-1/2 w-full max-w-4xl px-4">
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <div className="lg:flex justify-between items-center mb-4">
-              <h3 className="lg:text-xl font-semibold">
+              <h3 className="lg:text-2xl font-semibold text-gray-700">
                 Cottage Home Care Services Reviews
               </h3>
               <div className="flex items-center gap-2 text-sm">
-                <div className="flex">{renderStars(avgRating)}</div>
-                <span className="font-bold text-lg">{avgRating}</span>
-                <span className="text-gray-500">
-                  {totalReviews} Total Reviews
-                </span>
+                <div>
+                  <p className="text-gray-500">
+                    <span className="font-bold text-base">{totalReviews}</span>{" "}
+                    Total Reviews
+                  </p>
+                  <p className="flex items-center lg:justify-end gap-1">
+                    <span className="flex text-base">
+                      {renderStars(avgRating)}
+                    </span>
+                    <span className="font-bold text-xl">{avgRating}</span>
+                  </p>
+                </div>
               </div>
             </div>
             <hr className="my-3" />
@@ -134,7 +141,10 @@ export default function ReviewsSection() {
             {/* Swiper Carousel */}
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
-              navigation
+              navigation={{
+                nextEl: ".swiper-button-next-custom",
+                prevEl: ".swiper-button-prev-custom",
+              }}
               pagination={{ clickable: true }}
               autoplay={{ delay: 5000 }}
               loop
@@ -161,6 +171,14 @@ export default function ReviewsSection() {
                   </div>
                 </SwiperSlide>
               ))}
+              {/* Custom Navigation Arrows */}
+              <div className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 cursor-pointer text-3xl lg:text-5xl text-teal-600 z-10 px-2">
+                ‹
+              </div>
+
+              <div className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer text-3xl lg:text-5xl text-teal-600 z-10 px-2">
+                ›
+              </div>
             </Swiper>
           </div>
         </div>
