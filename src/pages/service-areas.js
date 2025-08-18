@@ -1,10 +1,11 @@
 import Head from "next/head";
 import callReader from "../../src/assets/social-media-lottie/call.json";
-import { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import IconLoading from "@/components/shared/IconLoading";
 import { useInView } from "react-intersection-observer";
 import dynamic from "next/dynamic";
 import ReviewsSection from "@/components/ServiceArea/ReviewSection";
+import { FaRegCalendar } from "react-icons/fa";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 // --- inline collapsible (–/+ with smooth height) ---
@@ -89,6 +90,47 @@ export default function HeroSection({
       }
     })();
   }, []);
+
+  const leftColumn = [
+    <>
+      Expert support to maximize your <strong>LTC insurance benefits</strong>
+    </>,
+    <>
+      Flexible, <strong>personalized care plans</strong> that adapt as your
+      needs change
+    </>,
+    <>
+      A <strong>registered nurse</strong> always available for guidance
+    </>,
+    <>
+      <strong>24/7 care</strong>, including specialized support for{" "}
+      <strong>dementia and Alzheimer’s</strong>
+    </>,
+    <>
+      Customized <strong>scheduling</strong> tailored to your lifestyle and
+      needs
+    </>,
+  ];
+
+  const rightColumn = [
+    <>
+      Rigorous <strong>caregiver screening</strong> to ensure only the best
+      professionals
+    </>,
+    <>
+      <strong>Wellness checks</strong> by care managers{" "}
+      <em>monthly or twice a month</em>
+    </>,
+    <>
+      <strong>Licensed, bonded, and insured</strong> for your peace of mind
+    </>,
+    <>
+      Options available for <strong>private pay home care</strong>
+    </>,
+    <>
+      <strong>24/7 customer support</strong> to assist you anytime
+    </>,
+  ];
 
   return (
     <>
@@ -237,10 +279,120 @@ export default function HeroSection({
 
         {/* why chose section  start */}
 
-        <div className="my-5">
-          <h1 className="text-center">
+        <div
+          className="min-h-[70vh] py-10"
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/di3wwp9s0/image/upload/v1755525578/Services/BG-SquareRight2_nurcvw.webp')",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "left center",
+          }}
+        >
+          <h1 className="text-center league-spartan text-gray-700 text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-10">
             Why Choose Cottage Home Care in NY, NJ, MD & CT?
           </h1>
+
+          <div className="w-[95%] lg:w-[80%] 2xl:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-6 mt-5">
+            {/* Left Column */}
+            <ul className="space-y-4 lg:space-y-5 text-gray-500 dark:text-gray-200">
+              {leftColumn.map((item, idx) => {
+                return (
+                  <li key={idx} className="flex items-start lg:text-xl">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#03939daf] text-white flex items-center justify-center mr-2 text-sm font-bold">
+                      ✓
+                    </span>
+
+                    {/* logic to insert space if <strong> or <em> */}
+                    <span className="inline">
+                      {React.Children.map(item, (child, i) => {
+                        if (
+                          typeof child === "object" &&
+                          (child.type === "strong" || child.type === "em")
+                        ) {
+                          return <>{child} </>;
+                        }
+                        return child;
+                      })}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+
+            {/* Right Column */}
+            <ul className="space-y-4 lg:space-y-5 text-gray-500 dark:text-gray-200">
+              {rightColumn.map((item, idx) => {
+                return (
+                  <li key={idx} className="flex items-start lg:text-xl">
+                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#03939daf] text-white flex items-center justify-center mr-2 text-sm font-bold">
+                      ✓
+                    </span>
+
+                    {/* logic to insert space if <strong> or <em> */}
+                    <span className="inline">
+                      {React.Children.map(item, (child, i) => {
+                        if (
+                          typeof child === "object" &&
+                          (child.type === "strong" || child.type === "em")
+                        ) {
+                          return <>{child} </>;
+                        }
+                        return child;
+                      })}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div>
+            <div className="pt-5 pb-5 md:pb-[120px] font-[Roboto] flex justify-center items-center gap-8 md:gap-0 md:space-y-0 md:space-x-7 flex-wrap mt-10">
+              <a
+                href="tel:+1516-367-2266"
+                className="flex items-center px-6 py-3 md:px-5 md:py-4 border border-[#00a6b2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-xl bg-[#00A6B2]"
+                aria-label="Call us at (516) 367-2266"
+              >
+                {/* <FaPhone className="mr-2 " /> */}
+                <span ref={ref} className="h-[17px] ">
+                  {inView && (
+                    <Suspense fallback={<IconLoading />}>
+                      <Lottie
+                        animationData={callReader}
+                        loop={true}
+                        className="h-[32px] w-[32px] mr-4 xl:mr-5  "
+                        style={{
+                          width: "110%",
+                          height: "110%",
+                          transform: "scale(1.6)",
+                          marginTop: "-4px",
+                        }}
+                      />
+                    </Suspense>
+                  )}
+                </span>
+                Call: (516) 367-2266
+              </a>
+              <a
+                href="#contact-form"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.documentElement.style.scrollBehavior = "smooth";
+                  const targetElement = document.getElementById("contact-form");
+                  const navbarHeight = 120;
+                  if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - navbarHeight;
+                    window.scrollTo({
+                      top: offsetTop,
+                    });
+                  }
+                }}
+                className="flex gap-1 -mt-1 px-6 py-3 md:px-8 md:py-4 border border-[#3A4256] rounded-full text-white bg-[#3A4256] duration-500 bg-hov2 league-spartan xl:text-xl cursor-pointer"
+              >
+                Schedule a Call <FaRegCalendar />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>

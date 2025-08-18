@@ -103,11 +103,14 @@ export default function ReviewsSection() {
         >
           <div className=" lg:-mt-44 ">
             <img
-              className="lg:w-20 lg:h-20 h-12 w-12 animate-float -mt-40 lg:mt-0 mx-auto"
+              className="lg:w-20 lg:h-20 h-12 w-12 animate-float -mt-40 lg:-mt-0 mx-auto"
               src="/assets/client-review-white.webp"
               alt="review_image"
             />
-            <h2 className="text-xl md:text-3xl font-bold max-w-3xl leading-loose league-spartan">
+            <h2
+              className="text-xl md:text-3xl font-bold max-w-3xl  league-spartan"
+              style={{ lineHeight: "1.5" }}
+            >
               See Why So Many Families Needing Home Care In NY, NJ, CT & MA Look
               To Us For <span className="underline">World-Class Care</span>
             </h2>
