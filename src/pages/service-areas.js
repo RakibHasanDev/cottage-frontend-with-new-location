@@ -6,6 +6,8 @@ import { useInView } from "react-intersection-observer";
 import dynamic from "next/dynamic";
 import ReviewsSection from "@/components/ServiceArea/ReviewSection";
 import { FaRegCalendar } from "react-icons/fa";
+import { IoIosArrowDropdown } from "react-icons/io";
+import EasierLife from "@/components/home/EasierLife";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 // --- inline collapsible (–/+ with smooth height) ---
@@ -280,7 +282,7 @@ export default function HeroSection({
         {/* why chose section  start */}
 
         <div
-          className="min-h-[70vh] py-10"
+          className="min-h-[60vh] py-10"
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/di3wwp9s0/image/upload/v1755525578/Services/BG-SquareRight2_nurcvw.webp')",
@@ -394,6 +396,97 @@ export default function HeroSection({
             </div>
           </div>
         </div>
+
+        {/* why chose section end */}
+
+        {/* another section start  */}
+        <div
+          className="min-h-[60vh] pb-16 lg:w-[80%] mx-auto "
+          style={{
+            backgroundImage:
+              "url('https://res.cloudinary.com/di3wwp9s0/image/upload/v1755525578/Services/BG-SquareRight2_nurcvw.webp')",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right center",
+          }}
+        >
+          <div className="relative z-10 lg:w-[85%] w-[95%] mx-auto">
+            <h2
+              className="text-center text-2xl lg:text-3xl font-bold  mb-12 league-spartan text-gray-600 dark:text-gray-100 w-[70%] mx-auto "
+              style={{ lineHeight: "1.5" }}
+            >
+              3 Simple Steps to a Flourishing, Fulfilling Life at Home with a
+              Loving Caregiver Near You
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-10 text-center ">
+              {/* Step 1 */}
+              <div className="space-y-3">
+                <div className="flex justify-center">
+                  <img
+                    src="/assets/icons/call.webp"
+                    alt="Call us"
+                    className="h-12 w-12 lg:h-16 lg:w-16"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-[#00A6B2] dark:text-gray-100">
+                  1. Call (516) 367-2266
+                </h3>
+                <p className="text-gray-600 lg:text-lg dark:text-gray-100">
+                  Reach out to us to discuss your needs and concerns.
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="space-y-3 border-l-2 border-r-2 border-dotted  border-gray-400 px-6">
+                <div className="flex justify-center">
+                  <img
+                    src="/assets/icons/schedule.webp"
+                    alt="Schedule assessment"
+                    className="h-12 w-12 lg:h-16 lg:w-16"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-[#00A6B2] dark:text-gray-100">
+                  2. Schedule a Home Care Assessment
+                </h3>
+                <p className="text-gray-600 lg:text-lg dark:text-gray-100">
+                  Book a free, no-obligation in-home care assessment with our
+                  team.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="space-y-3">
+                <div className="flex justify-center">
+                  <img
+                    src="/assets/icons/match.webp"
+                    alt="Get matched"
+                    className="h-12 w-12 lg:h-16 lg:w-16"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-[#00A6B2] dark:text-gray-100">
+                  3. Get Matched to a Caregiver
+                </h3>
+                <p className="text-gray-600 lg:text-lg dark:text-gray-100">
+                  Get matched with the perfect caregiver to{" "}
+                  <span className="font-semibold">meet your needs.</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Down arrow icon */}
+            <div className="flex justify-center mt-10">
+              <IoIosArrowDropdown
+                size={42}
+                className="text-gray-600 animate-float"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* contact section start  */}
+
+        <EasierLife />
       </section>
     </>
   );

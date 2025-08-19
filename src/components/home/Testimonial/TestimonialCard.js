@@ -5,10 +5,6 @@ import { MdOutlineMedicalServices, MdOutlineStar } from "react-icons/md";
 import { TiStarHalfOutline } from "react-icons/ti";
 import PropTypes from "prop-types";
 
-// ✅ Import assets
-import cardCover from "../../../assets/testimonial/testimonial-cover.webp";
-import bluetik from "../../../assets/testimonial/download.webp";
-
 const TestimonialCard = ({
   image,
   name,
@@ -22,7 +18,7 @@ const TestimonialCard = ({
       {/* Cover Image & Profile Picture */}
       <div className="relative">
         <Image
-          src={cardCover}
+          src={"/assets/testimonial/testimonial-cover.webp"}
           alt="testimonial cover background"
           className="rounded-t-xl"
           width={1053}
@@ -61,7 +57,7 @@ const TestimonialCard = ({
 
         <div className="md:mt-2 mt-2">
           <Image
-            src={bluetik}
+            src={"/assets/testimonial/download.webp"}
             alt="verified"
             className="md:w-7 w-5 h-5 md:h-7 dark:bg-white dark:rounded-full"
             width={20}
