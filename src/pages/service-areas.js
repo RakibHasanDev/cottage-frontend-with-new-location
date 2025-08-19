@@ -8,6 +8,7 @@ import ReviewsSection from "@/components/ServiceArea/ReviewSection";
 import { FaRegCalendar } from "react-icons/fa";
 import { IoIosArrowDropdown } from "react-icons/io";
 import EasierLife from "@/components/home/EasierLife";
+import Link from "next/link";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 // --- inline collapsible (–/+ with smooth height) ---
@@ -161,19 +162,20 @@ export default function HeroSection({
               {heading}
             </h1>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <div className=" font-[Roboto] flex justify-center items-center gap-8 md:gap-0 md:space-y-0 md:space-x-7 flex-wrap mt-10">
               <a
                 href="tel:+1516-367-2266"
-                className="flex items-center px-5 py-2 md:px-4 md:py-3 border border-[#00a6b2] rounded-full text-white hover:bg-[#00a6b2] duration-500 xl:text-lg bg-[#00A6B2]"
+                className="flex items-center px-6 py-3 md:px-5 md:py-2.5 border border-[#00a6b2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-xl bg-[#00A6B2]"
                 aria-label="Call us at (516) 367-2266"
               >
+                {/* <FaPhone className="mr-2 " /> */}
                 <span ref={ref} className="h-[17px] ">
                   {inView && (
                     <Suspense fallback={<IconLoading />}>
                       <Lottie
                         animationData={callReader}
-                        loop
-                        className="h-[32px] w-[32px] mr-4 xl:mr-5"
+                        loop={true}
+                        className="h-[32px] w-[32px] mr-4 xl:mr-5  "
                         style={{
                           width: "110%",
                           height: "110%",
@@ -185,6 +187,24 @@ export default function HeroSection({
                   )}
                 </span>
                 Call: (516) 367-2266
+              </a>
+              <a
+                href="#contact-form"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.documentElement.style.scrollBehavior = "smooth";
+                  const targetElement = document.getElementById("contact-form");
+                  const navbarHeight = 120;
+                  if (targetElement) {
+                    const offsetTop = targetElement.offsetTop - navbarHeight;
+                    window.scrollTo({
+                      top: offsetTop,
+                    });
+                  }
+                }}
+                className="flex gap-1 -mt-1 px-6 py-3 md:px-8 md:py-2.5 border border-[#3A4256] rounded-full text-white bg-[#536cac] duration-500 bg-hov2 league-spartan xl:text-xl cursor-pointer"
+              >
+                Schedule a Call <FaRegCalendar />
               </a>
             </div>
           </div>
@@ -247,7 +267,10 @@ export default function HeroSection({
                   data-aos-duration="1500"
                 >
                   {/* image: 600x380 ratio (30/19) */}
-                  <div className="relative overflow-hidden rounded-xl border aspect-[30/19]">
+                  <Link
+                    href={`/${loc?.link}`}
+                    className="relative overflow-hidden rounded-xl border aspect-[30/19] block"
+                  >
                     <img
                       src={loc.img}
                       alt={loc.title}
@@ -256,12 +279,12 @@ export default function HeroSection({
                       height={380}
                       className="absolute inset-0 h-full w-full object-cover"
                     />
-                  </div>
+                  </Link>
 
                   {/* caption bar + minus; areas slide open below */}
                   <Collapsible title={loc.title} defaultOpen={false}>
                     <ul className="flex flex-wrap gap-2">
-                      {loc.serviceAreas?.map((a) => (
+                      {loc?.serviceAreas?.map((a) => (
                         <li
                           key={`${loc.slug}-${a}`}
                           className="rounded-full border px-3 py-1 text-sm bg-white"

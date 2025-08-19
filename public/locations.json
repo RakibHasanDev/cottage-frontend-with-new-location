@@ -2,6 +2,7 @@
   {
     "slug": "new-york",
     "title": "New York, NY",
+    "link": "nyc",
     "img": "/assets/optimize/new_york.webp",
     "serviceAreas": [
       "Manhattan",
@@ -17,6 +18,7 @@
     "slug": "new-jersey",
     "title": "New Jersey",
     "img": "/assets/optimize/new-jersy.webp",
+    "link": "new-jersey",
     "serviceAreas": [
       "Jersey City",
       "Bayonne",
@@ -31,6 +33,7 @@
     "slug": "maryland",
     "title": "Maryland",
     "img": "/assets/optimize/mary_land.webp",
+    "link": "maryland",
     "serviceAreas": [
       "Allegany",
       "Anne Arundel",
@@ -62,6 +65,7 @@
     "slug": "connecticut",
     "title": "Connecticut",
     "img": "/assets/optimize/connecticut.webp",
+    "link": "connecticut",
     "serviceAreas": [
       "Fairfield",
       "New Haven",

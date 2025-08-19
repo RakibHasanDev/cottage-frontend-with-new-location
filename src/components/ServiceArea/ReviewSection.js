@@ -111,7 +111,7 @@ export default function ReviewsSection() {
               className="text-xl md:text-3xl font-bold max-w-3xl  league-spartan"
               style={{ lineHeight: "1.5" }}
             >
-              See Why So Many Families Needing Home Care In NY, NJ, CT & MA Look
+              See Why So Many Families Needing Home Care In NY, NJ, CT & MD Look
               To Us For <span className="underline">World-Class Care</span>
             </h2>
           </div>

@@ -100,9 +100,9 @@ const PrivacyPolicy = () => {
           <li>
             <p>
               <strong>Company</strong> (referred to as either &quot;the
-              Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot;
-              in this Agreement) refers to Cottage Home Care Services, 25
-              Newbridge Road, Suite 302 Hicksville, New York 11801
+              Company&quot;, &quot;We&quot;, Us&quot; or &quot;Our&quot; in this
+              Agreement) refers to Cottage Home Care Services, 25 Newbridge
+              Road, Suite 302 Hicksville, New York 11801
             </p>
           </li>
           <li>
@@ -130,6 +130,7 @@ const PrivacyPolicy = () => {
               <strong>Website</strong> refers to Cottage Home Care Services,
               accessible from{" "}
               <a
+                className="text-blue-500"
                 href="https://cottagehomecare.com/"
                 rel="external nofollow noopener noreferrer"
                 target="_blank"
@@ -173,7 +174,7 @@ const PrivacyPolicy = () => {
           Your access to and use of the Service is also conditioned on Your
           acceptance of and compliance with the{" "}
           <a
-            className="text-blue-800 ml-1"
+            className="text-blue-500 ml-1"
             href="https://cottagehomecare.com/privacy-policy/"
           >
             Privacy Policy
@@ -184,7 +185,7 @@ const PrivacyPolicy = () => {
           about Your privacy rights and how the law protects You. Please read
           Our{" "}
           <a
-            className="text-blue-800 ml-1"
+            className="text-blue-500 ml-1"
             href="https://cottagehomecare.com/privacy-policy/"
           >
             Privacy Policy
@@ -216,7 +217,7 @@ const PrivacyPolicy = () => {
             If you have consented to receive text messages from Cottage Home
             Care Services, you may receive communications including:
           </p>
-          <ul>
+          <ul className="list-disc ml-5">
             <li>Appointment reminders</li>
             <li>Follow-up messages</li>
             <li>Billing/account inquiries</li>
@@ -249,7 +250,7 @@ const PrivacyPolicy = () => {
           <strong>5. Opt-In Methods</strong>
           <br />
           <p>You may opt in to receive messages via:</p>
-          <ul>
+          <ul className="list-disc ml-5">
             <li>Verbal agreement during a conversation</li>
             <li>Online form submission</li>
             <li>Paper form with SMS consent</li>
@@ -259,9 +260,14 @@ const PrivacyPolicy = () => {
           <strong>6. Opt-Out Methods</strong>
           <br />
           <p>
-            You may opt out anytime by replying <strong>"STOP"</strong> to any
-            SMS. You may also{" "}
-            <a href="https://cottagehomecare.com/contact/">contact us</a>{" "}
+            You may opt out anytime by replying{" "}
+            <strong>&quot;STOP&quot;</strong> to any SMS. You may also{" "}
+            <a
+              className="text-blue-500"
+              href="https://cottagehomecare.com/contact/"
+            >
+              contact us
+            </a>{" "}
             directly to be removed from the messaging list.
           </p>
 
@@ -269,20 +275,28 @@ const PrivacyPolicy = () => {
           <strong>7. Help & Support</strong>
           <br />
           <p>
-            If you are experiencing issues, reply <strong>"HELP"</strong> to any
-            message or contact us at:
+            If you are experiencing issues, reply{" "}
+            <strong>&quot;HELP&quot;</strong> to any message or contact us at:
           </p>
-          <ul>
+          <ul className="list-disc ml-5">
             <li>
               Email:{" "}
-              <a href="info@mcottagehomecare.com">info@cottagehomecare.com</a>
+              <a
+                className="text-blue-500"
+                href="mailto:info@mcottagehomecare.com"
+              >
+                info@cottagehomecare.com
+              </a>
             </li>
             <li>
               Phone: <a href="tel:5163672266">(516) 367-2266</a>
             </li>
             <li>
               Website:{" "}
-              <a href="https://cottagehomecare.com/contact/">
+              <a
+                className="text-blue-500"
+                href="https://cottagehomecare.com/contact/"
+              >
                 cottagehomecare.com/contact/
               </a>
             </li>
@@ -291,20 +305,20 @@ const PrivacyPolicy = () => {
           <br />
           <strong>8. Standard Messaging Disclosures</strong>
           <br />
-          <ul>
+          <ul className="list-disc ml-5">
             <li>Message and data rates may apply.</li>
-            <li>You may opt out at any time by texting "STOP".</li>
+            <li>You may opt out at any time by texting &quot;STOP&quot;.</li>
             <li>
-              For help, text "HELP" or visit our
+              For help, text &quot;HELP&quot; or visit our
               <a
-                className="text-blue-800 ml-1"
+                className="text-blue-500 ml-1"
                 href="https://cottagehomecare.com/privacy-policy/"
               >
                 Privacy Policy
               </a>{" "}
               and
               <a
-                className="text-blue-800 ml-1"
+                className="text-blue-500 ml-1"
                 href="https://cottagehomecare.com/terms-and-conditions/"
               >
                 Terms and Conditions
@@ -323,7 +337,7 @@ const PrivacyPolicy = () => {
           The Company has no control over, and assumes no responsibility for,
           the content,{" "}
           <a
-            className="text-blue-800 ml-1"
+            className="text-blue-500 ml-1"
             href="https://cottagehomecare.com/privacy-policy/"
           >
             Privacy Policies
@@ -338,7 +352,7 @@ const PrivacyPolicy = () => {
         <p>
           We strongly advise You to read the terms and conditions and{" "}
           <a
-            className="text-blue-800 ml-1"
+            className="text-blue-500 ml-1"
             href="https://cottagehomecare.com/privacy-policy/"
           >
             Privacy Policies
@@ -478,9 +492,9 @@ const PrivacyPolicy = () => {
           <br />
           <strong>Phone:</strong> <a href="tel:5163672266">(516) 367-2266</a>
           <br />
-          <strong>Website:</strong>
+          <strong>Website: </strong>
           <a
-            className="text-blue-800"
+            className="text-blue-500"
             href="https://cottagehomecare.com/contact/"
             target="_blank"
             rel="noopener noreferrer"
