@@ -1,3 +1,4 @@
+"use client";
 import React, { Suspense } from "react";
 import { BsFacebook, BsFillTelephoneFill, BsInstagram } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
@@ -5,6 +6,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { FaXTwitter } from "react-icons/fa6";
 import Loading from "./shared/Loading";
 import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
 
 const GoogleTranslate = dynamic(
   () => import("@/components/nav/GoogleTranslate"),
@@ -15,6 +17,21 @@ const GoogleTranslate = dynamic(
 );
 
 const TopBar = () => {
+  const pathname = usePathname();
+
+  // Default contact info
+  let phone = "516-367-2266";
+  let email = "info@cottagehomecare.com";
+
+  // Conditional override based on route
+  if (pathname.includes("new-jersey")) {
+    phone = "(201) 633-8481"; // NJ phone
+    email = "nj@cottagehomecare.com"; // NJ email
+  } else if (pathname.includes("maryland")) {
+    phone = "(667) 400-0648"; // MD phone
+    email = "maryland@cottagehomecare.com"; // MD email
+  }
+
   return (
     <div className="dark:bg-slate-800">
       <div className="block w-[95%] mx-auto league-spartan font-semibold dark:text-gray-200">
@@ -26,11 +43,11 @@ const TopBar = () => {
                 <p>
                   Call{" "}
                   <a
-                    href="tel:+1516-367-2266"
+                    href={`tel:+1${phone}`}
                     className="text-[#00A6B2] dark:text-gray-300"
                     aria-label="Call us at 516-367-2266"
                   >
-                    516-367-2266
+                    {phone}
                   </a>
                 </p>
               </div>
@@ -39,11 +56,11 @@ const TopBar = () => {
                 <p>
                   Email{" "}
                   <a
-                    href={`mailto:${"info"}@${"cottagehomecare.com"}`}
+                    href={`mailto:${email}`}
                     className="text-[#00A6B2] dark:text-gray-300"
                     aria-label="Email us at info@cottagehomecare.com"
                   >
-                    {`${"info"}@${"cottagehomecare.com"}`}
+                    {email}
                   </a>
                 </p>
               </div>

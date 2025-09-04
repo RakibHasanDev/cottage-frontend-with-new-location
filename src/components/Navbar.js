@@ -1,13 +1,14 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
-
 import { ThemeContext, ThemeProvider } from "@/context/ThemeContext";
 import ToggleButton from "./shared/ToogleButton";
 import SideNav from "./nav/SideNav";
 import { AuthContext } from "@/context/AuthProvider";
 import DropdownMenu from "./nav/DropdownMenu";
 import { HiChevronDown } from "react-icons/hi";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [customShadow, setCustomShadow] = useState("shadow-none");
@@ -50,6 +51,18 @@ const NavBar = () => {
       : "-top-20 transition-all duration-1500 "
   } `;
 
+  const pathname = usePathname();
+
+  // Default contact info
+  let companyName = "Cottage Home Care Services";
+
+  // Conditional override based on route
+  if (pathname.includes("new-jersey")) {
+    companyName = "Cottage Homecare NJ, LLC"; // NJ phone
+  } else if (pathname.includes("maryland")) {
+    companyName = "Cottage Home Care, Maryland, LLC"; // MD phone
+  }
+
   return (
     <ThemeProvider>
       <nav
@@ -78,9 +91,7 @@ const NavBar = () => {
                   <h5
                     className={` ml-4   text-[#00a6b2]  nav-font league-spartan font-bold`}
                   >
-                    <span className="text-shadow ">
-                      Cottage Home Care Services
-                    </span>
+                    <span className="text-shadow ">{companyName}</span>
                     <hr className="border-[1px] -mt-0.5 border-[#00A6B2] dark:border-gray-100 md:w-full w-[85%]" />
                     <p className="font-semibold top-title md:text-center text-[#49465D] tracking-tighter md:tracking-normal dark:text-gray-300 md:ml-0 ml-2 ">
                       THE RIGHT HOME CARE FOR YOU
@@ -110,7 +121,7 @@ const NavBar = () => {
               </div>
             </Link>
 
-            <ul className=" items-center hidden lg:space-x-3 xl:space-x-3 2xl:space-x-3.5 lg:flex  nav-list">
+            <ul className=" items-center hidden lg:space-x-4 xl:space-x-4 2xl:space-x-4.5 lg:flex  nav-list">
               <li>
                 <Link
                   href="/"
@@ -123,6 +134,51 @@ const NavBar = () => {
                 >
                   Home
                 </Link>
+              </li>
+
+              <li className="relative group font-semibold">
+                <button
+                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
+      ${
+        navColor ? "customWhite" : ""
+      } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+                >
+                  Select Your State
+                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
+                </button>
+
+                <div
+                  className="absolute left-0 top-full w-[200px] bg-white shadow-md border border-gray-200 rounded-md 
+      dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+      transition-opacity duration-300 z-50"
+                >
+                  <Link href="/service-areas">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Services Areas
+                    </p>
+                  </Link>
+                  <Link href="/">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
+                      NEW YORK CITY
+                    </p>
+                  </Link>
+                  <Link href="/new-jersey">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
+                      New Jersey
+                    </p>
+                  </Link>
+                  <Link href="/maryland">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Maryland
+                    </p>
+                  </Link>
+
+                  {/* <Link href="/">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Connecticut
+                    </p>
+                  </Link> */}
+                </div>
               </li>
               {/* <li>
               <NavLink
@@ -156,11 +212,7 @@ const NavBar = () => {
       transition-opacity duration-300 z-50 font-semibold "
                 >
                   {/* Services Links */}
-                  <Link href="/service-areas">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Services Areas
-                    </p>
-                  </Link>
+
                   <Link href="/nhtd">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       NHTD
@@ -230,7 +282,7 @@ const NavBar = () => {
 
                 {/* Dropdown Menu */}
                 <div
-                  className="absolute left-0 top-full w-48 bg-white shadow-md border border-gray-200 rounded-md 
+                  className="absolute left-0 top-full w-44 bg-white shadow-md border border-gray-200 rounded-md 
       dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
       transition-opacity duration-300 z-50"
                 >
@@ -246,6 +298,7 @@ const NavBar = () => {
                       Blog
                     </p>
                   </Link>
+
                   <Link href="/help-desk">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Help Desk
@@ -263,44 +316,9 @@ const NavBar = () => {
                       FAQs
                     </p>
                   </Link>
-                </div>
-              </li>
-
-              <li className="relative group font-semibold">
-                {/* Community Outreach Button */}
-
-                <button
-                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
-      ${
-        navColor ? "customWhite" : ""
-      } uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                >
-                  Community Outreach
-                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
-                </button>
-
-                {/* Dropdown Menu */}
-                <div
-                  className="absolute left-0 top-full w-[200px] bg-white shadow-md border border-gray-200 rounded-md 
-      dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-      transition-opacity duration-300 z-50"
-                >
-                  {/* Community Outreach Links */}
-                  {/* <Link href="/videos">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Video Gallery
-                    </p>
-                  </Link> */}
-
                   <Link href="/past-event">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
                       Past Events
-                    </p>
-                  </Link>
-
-                  <Link href="/upcoming-event">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Upcoming Events
                     </p>
                   </Link>
 
@@ -312,47 +330,36 @@ const NavBar = () => {
                 </div>
               </li>
 
-              {/* location start  */}
+              {/* <li className="relative group font-semibold">
+              
 
-              <li className="relative group font-semibold">
                 <button
                   className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
       ${
         navColor ? "customWhite" : ""
       } uppercase nav-text hover-underline-animation dark:text-gray-300`}
                 >
-                  Locations
+                  Community Outreach
                   <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
                 </button>
 
+            
                 <div
                   className="absolute left-0 top-full w-[200px] bg-white shadow-md border border-gray-200 rounded-md 
       dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
       transition-opacity duration-300 z-50"
                 >
-                  <Link href="/">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      NEW YORK CITY
-                    </p>
-                  </Link>
-                  <Link href="/">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      New Jersey
-                    </p>
-                  </Link>
-                  <Link href="/">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Maryland
-                    </p>
-                  </Link>
+                 
 
-                  <Link href="/">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Connecticut
+                  <Link href="/past-event">
+                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
+                      Past Events
                     </p>
                   </Link>
                 </div>
-              </li>
+              </li> */}
+
+              {/* location start  */}
 
               {/* location end  */}
 
