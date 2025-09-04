@@ -9,7 +9,7 @@ function VideoWithCustomThumb({
 }) {
   const [play, setPlay] = useState(false);
   return (
-    <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+    <div className="w-full aspect-video  overflow-hidden shadow-lg">
       {play ? (
         <iframe
           className="w-full h-full"
@@ -38,8 +38,8 @@ function VideoWithCustomThumb({
               </svg>
             </span>
           </span>
-          <span className="absolute bottom-4 left-4 right-4">
-            <span className="block bg-[#E53935]/95 text-white text-sm md:text-base font-semibold tracking-wide text-center py-2">
+          <span className="absolute bottom-12 left-4 right-4">
+            <span className="block bg-[#009EA9]/90 text-white text-sm md:text-base font-semibold tracking-wide text-center py-2 text-shadow">
               {caption}
             </span>
           </span>
