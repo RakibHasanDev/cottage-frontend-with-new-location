@@ -101,7 +101,7 @@ export default function ReviewsSection() {
   `,
           }}
         >
-          <div className=" lg:-mt-44 ">
+          <div className=" lg:-mt-56 ">
             <img
               className="lg:w-20 lg:h-20 h-12 w-12 animate-float -mt-40 lg:-mt-0 mx-auto"
               src="/assets/client-review-white.webp"
@@ -118,7 +118,7 @@ export default function ReviewsSection() {
         </div>
 
         {/* Card Section */}
-        <div className="absolute top-[250px] lg:top-[350px] left-1/2 -translate-x-1/2 w-full max-w-4xl px-4">
+        <div className="absolute top-[250px] lg:top-[320px] left-1/2 -translate-x-1/2 w-full max-w-4xl px-4">
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <div className="lg:flex justify-between items-center mb-4">
               <h3 className="lg:text-2xl font-semibold text-gray-700">

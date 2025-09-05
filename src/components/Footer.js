@@ -147,40 +147,32 @@ const Footer = () => {
                 <ul className="space-y-1 uppercase tracking-wider">
                   <li>
                     <Link
-                      href="/disclaimer"
+                      href="/"
                       rel="noopener noreferrer"
-                      className=" text-blue-400"
+                      className=" hover:text-[#00A6B2]"
                     >
                       {" "}
                       New York City
                     </Link>
-                    ;
+                  </li>
+                  <li>
                     <Link
-                      href="/disclaimer"
+                      href="/new-jersey"
                       rel="noopener noreferrer"
-                      className=" text-blue-400"
+                      className=" hover:text-[#00A6B2]"
                     >
                       {" "}
                       New Jersey
                     </Link>
-                    ;
-                    <br />
+                  </li>
+                  <li>
                     <Link
-                      href="/disclaimer"
+                      href="/maryland"
                       rel="noopener noreferrer"
-                      className=" text-blue-400"
+                      className=" hover:text-[#00A6B2]"
                     >
                       {" "}
-                      Mary Land
-                    </Link>
-                    ;
-                    <Link
-                      href="/disclaimer"
-                      rel="noopener noreferrer"
-                      className=" text-blue-400"
-                    >
-                      {" "}
-                      Connecticut{" "}
+                      Maryland
                     </Link>
                   </li>
                 </ul>

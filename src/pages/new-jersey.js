@@ -7,6 +7,8 @@ import { FaRegCalendar } from "react-icons/fa";
 import IconLoading from "@/components/shared/IconLoading";
 import { useInView } from "react-intersection-observer";
 import ReviewsSection from "@/components/ServiceArea/ReviewSection";
+import MapComponent from "@/components/home/MapComponent";
+import { MapContainer } from "react-leaflet";
 
 /* --- Optional reusable video with custom thumbnail --- */
 function VideoWithCustomThumb({
@@ -97,7 +99,7 @@ export default function NewJersey() {
       </div>
       <section className="bg-[#F5F5F7] dark:bg-slate-700 py-16">
         <h2 className="text-xl md:text-3xl font-extrabold text-gray-600 dark:text-gray-100 mb-8 text-center league-spartan">
-          Cottage Homecare NJ Makes Private Pay Care Simple with the Following
+          Cottage Homecare NJ, Makes Private Pay Care Simple with the Following
           Steps
         </h2>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -214,16 +216,6 @@ export default function NewJersey() {
         </h2>
 
         <div className="lg:max-w-7xl 2xl:max-w-[1400px] mx-auto px-6  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 ">
-          {/* Left Side: Text + Video */}
-          <div>
-            <div className="">
-              <VideoWithCustomThumb
-                videoId="7uoXudV9uas"
-                caption="YOU CHOOSE WHO PROVIDES YOUR HOME CARE"
-              />
-            </div>
-          </div>
-
           {/* Right Side: Empty Column */}
           <div className="mx-auto">
             <h3 className="text-2xl font-bold text-[#00A6B2] dark:text-gray-100 mb-3">
@@ -277,12 +269,22 @@ export default function NewJersey() {
               </ul>
             </div>
           </div>
+          {/* Left Side: Text + Video */}
+          <div>
+            <div className="">
+              <VideoWithCustomThumb
+                videoId="7uoXudV9uas"
+                caption="YOU CHOOSE WHO PROVIDES YOUR HOME CARE"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       <div className="-mt-10">
         <ReviewsSection />
       </div>
+      <MapContainer />
     </section>
   );
 }
