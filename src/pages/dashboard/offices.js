@@ -5,6 +5,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { toast } from "react-hot-toast";
 import AdminConversation from "@/components/shared/AdminConversation";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
+import Image from "next/image";
 
 const AllOffice = () => {
   const [page, setPage] = useState(0);
@@ -89,10 +90,12 @@ const AllOffice = () => {
                   <div className="flex items-center justify-between">
                     <h1 className="flex items-center gap-3 px-2 py-1">
                       {user?.photoURL ? (
-                        <img
+                        <Image
                           src={user?.photoURL}
                           alt={user?.photoURL}
                           className="w-10 h-10 border-2 border-primary rounded-full"
+                          width={40}
+                          height={40}
                         />
                       ) : (
                         <BiUserCircle className="w-12 h-12 text-gray-300 rounded-full" />

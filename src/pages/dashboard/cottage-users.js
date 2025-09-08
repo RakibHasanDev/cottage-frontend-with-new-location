@@ -3,6 +3,7 @@ import { toast } from "react-hot-toast";
 import { FaUser } from "react-icons/fa";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/shared/Loading";
+import Image from "next/image";
 
 const CottageUsers = () => {
   const [page, setPage] = useState(0);
@@ -151,7 +152,12 @@ const CottageUsers = () => {
                   <div className="avatar">
                     <div className="w-10 h-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                       {user?.photoURL ? (
-                        <img src={user.photoURL} alt={user.name} />
+                        <Image
+                          src={user.photoURL}
+                          alt={user.name}
+                          width={40}
+                          height={40}
+                        />
                       ) : (
                         <FaUser className="w-full h-full p-2" />
                       )}

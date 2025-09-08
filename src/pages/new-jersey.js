@@ -7,8 +7,39 @@ import { FaRegCalendar } from "react-icons/fa";
 import IconLoading from "@/components/shared/IconLoading";
 import { useInView } from "react-intersection-observer";
 import ReviewsSection from "@/components/ServiceArea/ReviewSection";
-import MapComponent from "@/components/home/MapComponent";
-import { MapContainer } from "react-leaflet";
+
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import EasierLife from "@/components/home/EasierLife";
+// ...
+const NJMapClient = dynamic(
+  () => import("@/components/NjComponent/NJMapClient"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[500px] w-full rounded-2xl bg-gray-100 animate-pulse" />
+    ),
+  }
+);
+const LocationsList = dynamic(
+  () => import("@/components/NjComponent/LocationsList"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[500px] w-full rounded-2xl bg-gray-100 animate-pulse" />
+    ),
+  }
+);
+
+const LOCATIONS = [
+  { name: "Jersey City", lat: 40.7178, lng: -74.0431 },
+  { name: "Bayonne", lat: 40.6687, lng: -74.1143 },
+  { name: "Union", lat: 40.6976, lng: -74.2632 },
+  { name: "Newark", lat: 40.7357, lng: -74.1724 },
+  { name: "Fairfield", lat: 40.8837, lng: -74.304 },
+  { name: "East Orange", lat: 40.7673, lng: -74.2049 },
+  { name: "Linden", lat: 40.622, lng: -74.2446 },
+];
 
 /* --- Optional reusable video with custom thumbnail --- */
 function VideoWithCustomThumb({
@@ -35,10 +66,12 @@ function VideoWithCustomThumb({
           className="relative w-full h-full group"
           aria-label="Play video"
         >
-          <img
+          <Image
             src={thumb}
             alt="Video thumbnail"
             className="w-full h-full object-cover"
+            width={1280}
+            height={720}
           />
           <span className="absolute inset-0 grid place-items-center">
             <span className="rounded-full p-5 bg-white/90 shadow-md transition group-hover:scale-105">
@@ -62,23 +95,101 @@ function VideoWithCustomThumb({
 export default function NewJersey() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
   const Lottie = React.lazy(() => import("lottie-react"));
+  const [selectedLoc, setSelectedLoc] = useState(null);
+
+  const [tab, setTab] = useState(1);
+
+  const handleClick = (id) => {
+    setTab((prevTab) => (prevTab === id ? 0 : id));
+  };
+
+  const handleRotate = (id) => (tab === id ? "rotate-180" : "");
+  const handleToggle = (id) =>
+    `transition-max-height ${tab === id ? "open" : ""}`;
+
+  const faqItems = [
+    {
+      id: 1,
+      question: "What services does Cottage Homecare NJ, LLC provide?",
+      answer:
+        "We offer a wide range of homecare services, including personal care, companion care, respite care, medication reminders, light housekeeping, and customized care plans tailored to each client’s needs.",
+    },
+    {
+      id: 2,
+      question: "How do I know if homecare is right for my loved one?",
+      answer:
+        "Homecare is perfect for individuals who want to remain in the comfort of their own home but need help with daily activities such as bathing, dressing, mobility, meal preparation, or companionship.",
+    },
+    {
+      id: 3,
+      question: "Are your caregivers trained and certified?",
+      answer:
+        "Yes. Every caregiver goes through a thorough background check, professional training, and certification to ensure they provide safe, reliable, and compassionate care.",
+    },
+    {
+      id: 4,
+      question: "Do you create personalized care plans?",
+      answer:
+        "Absolutely. We collaborate with each family to create a personalized care plan that reflects your loved one’s health needs, preferences, and schedule.",
+    },
+    {
+      id: 5,
+      question: "Can I choose the caregiver for my loved one?",
+      answer:
+        "Yes. We carefully match caregivers to clients based on skills, experience, and personality. Families also have the flexibility to request a caregiver change if needed.",
+    },
+    {
+      id: 6,
+      question: "Is Cottage Homecare NJ, LLC available 24/7?",
+      answer:
+        "Yes. We offer flexible scheduling with caregivers available days, nights, weekends, and holidays to ensure your loved one always has the support they need.",
+    },
+    {
+      id: 7,
+      question: "Do you accept private pay or insurance?",
+      answer:
+        "We offer private pay services and can also guide families through long-term care insurance options. Our team provides clear, upfront information about all payment methods.",
+    },
+    {
+      id: 8,
+      question: "How quickly can services begin?",
+      answer:
+        "In most cases, we can start services within 24–48 hours of your consultation, so care is available without long delays.",
+    },
+    {
+      id: 9,
+      question: "What areas do you serve in New Jersey?",
+      answer:
+        "Cottage Homecare NJ, LLC proudly serves families throughout NJ service areas – Bergen, Essex, Middlesex, Monmouth, and surrounding counties.",
+    },
+    {
+      id: 10,
+      question: "How do I get started with Cottage Homecare NJ, LLC?",
+      answer:
+        "Getting started is simple! Call us to schedule your free in-home consultation. Together, we’ll create a customized care plan that best supports your loved one.",
+    },
+  ];
+
   return (
     <section>
       <div className="relative bg-white min-h-[68vh]">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
+          <Image
             className="w-full h-full object-cover"
             src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1757013616/state_images/her_banner_rqcnvc.webp"
             alt="Caregiver with patient"
+            width={1920}
+            height={1097}
+            priority
           />
           <div className="absolute inset-0 bg-black/10" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-4xl mx-auto px-6 pb-20 lg:flex lg:items-end lg:justify-between min-h-[68vh]">
+        <div className="relative  max-w-4xl mx-auto px-6 pb-20 lg:flex lg:items-end lg:justify-between min-h-[68vh]">
           <div className="max-w-xl bg-black/70 rounded-2xl shadow-lg p-6 mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-100 mb-4">
+            <h2 className="text-2xl font-bold text-gray-100 mb-4 league-spartan">
               BEST PRIVATE PAY HOME CARE IN <br /> NEW JERSEY
             </h2>
             <p className="text-lg text-gray-100 font-medium">
@@ -89,7 +200,7 @@ export default function NewJersey() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="relative z-10 bg-[#00A6B2] py-10 text-center text-white font-semibold xl:text-2xl text-xl">
+        <div className="relative  bg-[#00A6B2] py-10 text-center text-white font-semibold xl:text-2xl text-xl league-spartan">
           Residents of NY, NJ, MD
           <br />
           <span className="text-sm font-normal lg:text-xl">
@@ -105,12 +216,13 @@ export default function NewJersey() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side: Image */}
           <div className="flex justify-center">
-            <img
+            <Image
               src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1757080745/nj_private_pay_ucvx5z.jpg"
               alt="Private Pay Services"
               className=""
               width={600}
               height={400}
+              property
             />
           </div>
 
@@ -152,7 +264,7 @@ export default function NewJersey() {
             <div className="my-6 font-[Roboto] flex  items-center gap-8 md:gap-0 md:space-y-0 md:space-x-7 flex-wrap">
               <a
                 href="tel:+1(201) 633-8481"
-                className="flex items-center px-6 py-3 md:px-5 md:py-3 border border-[#00a6b2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-lg bg-[#00A6B2]"
+                className="flex items-center px-6 py-3 md:px-5 md:py-3 border border-[#00a6b2] dark:border-[#3A4256]  rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-lg bg-[#00A6B2]"
                 aria-label="Call us at (516) 367-2266"
               >
                 {/* <FaPhone className="mr-2 " /> */}
@@ -189,7 +301,7 @@ export default function NewJersey() {
                     });
                   }
                 }}
-                className="flex gap-1 -mt-1 px-6 py-3 md:px-8 md:py-3 border border-[#3A4256] rounded-full text-white bg-[#3A4256] duration-500 bg-hov2 league-spartan xl:text-lg cursor-pointer"
+                className="flex gap-1 -mt-1 px-6 py-3 md:px-8 md:py-3 border border-[#3A4256] rounded-full text-white bg-[#3A4256] dark:bg-[#838896] duration-500 bg-hov2 league-spartan xl:text-lg cursor-pointer"
               >
                 Schedule a Call <FaRegCalendar />
               </a>
@@ -284,7 +396,96 @@ export default function NewJersey() {
       <div className="-mt-10">
         <ReviewsSection />
       </div>
-      <MapContainer />
+
+      {/* map location  */}
+      <div className="flex flex-col text-[16px] leading-relaxed font-sans font-normal lg:w-[80%] mx-auto mb-10 w-[95%]">
+        <p className="pt-3 playrify text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-3 league-spartan text-[#00A6B2] text-center">
+          Frequently Asked Questions
+        </p>
+        {faqItems?.map((item) => (
+          <div key={item.id} className={` rounded-md dark:bg-slate-400 my-2  `}>
+            <div
+              onClick={() => handleClick(item.id)}
+              className={`w-full shadow-md focus:outline-none rounded-md ${
+                tab === item.id
+                  ? "text-white bg-[#00A6B2] dark:text-gray-100"
+                  : "text-[#00A6B2] dark:text-[#00A6B2] bg-[#F6F6F6]"
+              } `}
+            >
+              <div className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer mother-box  text-start md:text-center">
+                <h4 className="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+                  <span className="flex md:text-lg items-center gap-2 font-medium">
+                    {item.question}
+                  </span>
+                </h4>
+                <span>
+                  <svg
+                    className={` ${
+                      tab === item.id
+                        ? "text-white  "
+                        : "text-[#00A6B2] dark:text-[#00A6B2]"
+                    } fill-current  h-6 w-6 transform transition-transform duration-100 ${handleRotate(
+                      item.id
+                    )}`}
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div
+              id={`faq-answer-${item.id}`} // ✅ Links answer to the button
+              className={`transition-all duration-500 ease-in-out ${
+                tab === item.id ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+              } overflow-hidden`}
+              aria-hidden={tab !== item.id} // ✅ Helps screen readers know if it's hidden
+            >
+              {item.answer && (
+                <h5 className="p-3 text-gray-900 dark:text-gray-100">
+                  {item.answer}
+                </h5>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-6 gap-6">
+        <div className="col-span-4">
+          <NJMapClient
+            locations={LOCATIONS}
+            selected={selectedLoc} // <- drives flyTo
+            heightClass="h-[520px]"
+            pinColor="#1c3461"
+            halo="rgba(160, 32, 240, 0.3)"
+          />
+        </div>
+
+        <div className="col-span-2">
+          <LocationsList
+            items={LOCATIONS}
+            active={selectedLoc}
+            onPick={(loc) => {
+              setSelectedLoc(loc);
+              document
+                .querySelector(".col-span-4")
+                ?.scrollIntoView({ behavior: "smooth", block: "center" });
+            }}
+          />
+        </div>
+      </div>
+
+      {/* map location end */}
+
+      {/* faq section start  */}
+
+      {/* faq section end  */}
+
+      {/* contact section start  */}
+      <EasierLife />
+
+      {/* contact section end  */}
     </section>
   );
 }

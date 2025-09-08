@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 
 const MissionVision = () => {
@@ -103,12 +104,13 @@ const MissionVision = () => {
               data-aos="fade-down"
               data-aos-duration="2000"
             >
-              <img
+              <Image
                 src={"/assets/mission-vision/sova.webp"}
                 alt="pic1"
                 className="w-full  rounded-md h-auto"
                 width={694}
                 height={810}
+                priority
               />
             </div>
             <div
@@ -116,12 +118,13 @@ const MissionVision = () => {
               data-aos="fade-left"
               data-aos-duration="2000"
             >
-              <img
+              <Image
                 src={"/assets/mission-vision/group-photo.webp"}
                 alt="pic2"
                 className="w-full  rounded-md h-auto"
                 width={1080}
                 height={686}
+                priority
               />
             </div>
           </div>
@@ -132,12 +135,13 @@ const MissionVision = () => {
               data-aos="fade-right"
               data-aos-duration="2000"
             >
-              <img
+              <Image
                 src={"/assets/mission-vision/group-cover2.webp"}
                 alt="pic4"
                 className="w-full h-auto rounded-md"
                 width={1001}
                 height={561}
+                priority
               />
             </div>
             <div
@@ -145,12 +149,13 @@ const MissionVision = () => {
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              <img
+              <Image
                 src={"/assets/cottage-home-care-contact-image.webp"}
                 alt="pic3"
                 className="w-full rounded-md h-auto"
                 width={1200}
                 height={1569}
+                priority
               />
             </div>
             <div

@@ -3,6 +3,7 @@
 import React, { useState, useRef } from "react";
 import toast from "react-hot-toast";
 import Script from "next/script"; // ✅ Load Cloudinary properly
+import Image from "next/image";
 
 const EmployeeSignature = () => {
   const [imageUrl, setImageUrl] = useState("");
@@ -210,7 +211,7 @@ const EmployeeSignature = () => {
                                       }}
                                     >
                                       <p style={{ margin: "0.04px" }}>
-                                        <img
+                                        <Image
                                           height={70}
                                           width={200}
                                           alt="employee_img"
@@ -268,9 +269,11 @@ const EmployeeSignature = () => {
                                         }}
                                       >
                                         <p style={{ margin: "0.04px" }}>
-                                          <img
+                                          <Image
                                             src={imageUrl}
                                             alt="employee_img"
+                                            width={210}
+                                            height={40}
                                           />
                                         </p>
                                       </td>
@@ -854,7 +857,7 @@ const EmployeeSignature = () => {
                                         rel="noreferrer"
                                         style={{ margin: "0.04px" }}
                                       >
-                                        <img
+                                        <Image
                                           height={24}
                                           width={24}
                                           alt="facebook"
@@ -870,7 +873,7 @@ const EmployeeSignature = () => {
                                         rel="noreferrer"
                                         style={{ margin: "0.04px" }}
                                       >
-                                        <img
+                                        <Image
                                           height={24}
                                           width={24}
                                           alt="instagram"
@@ -886,7 +889,7 @@ const EmployeeSignature = () => {
                                         rel="noreferrer"
                                         style={{ margin: "0.04px" }}
                                       >
-                                        <img
+                                        <Image
                                           height={24}
                                           width={24}
                                           alt="linkedin"

@@ -9,6 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import { AuthContext } from "@/context/AuthProvider";
 import Linkify from "react-linkify";
+import Image from "next/image";
 
 const AdminConversation = ({ newUser, users, setLoad, load }) => {
   const chatDivRef = useRef();
@@ -132,12 +133,13 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
         {user?.email && data && (
           <div className=" flex items-center gap-4 sticky top-0 bg-[#79a4a8] dark:bg-neutral-700 px-4 py-2 text-center">
             {data?.[0]?.photoURL && (
-              <img
+              <Image
                 src={data?.[0]?.photoURL}
                 alt={data?.[0]?.displayName}
                 className="w-12 h-12 rounded-full"
-                w="48px"
-                h="48px"
+                width="48px"
+                height="48px"
+                priority
               />
             )}
             {!data?.[0]?.photoURL && (
@@ -229,12 +231,12 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
               {!message?.role && (
                 <p className="flex items-center gap-3">
                   {message?.photoURL && (
-                    <img
+                    <Image
                       src={message?.photoURL}
                       alt={`${message?.photoURL}`}
                       className="w-6 h-6 rounded-full"
-                      w="24"
-                      h="24"
+                      width="24"
+                      height="24"
                     />
                   )}
                   {!message?.photoURL && (
@@ -262,12 +264,12 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
                       {message?.messages}
                     </Linkify>{" "}
                   </span>
-                  <img
+                  <Image
                     src={message?.photoURL}
                     alt={`${message?.photoURL}`}
                     className="w-6 h-6 rounded-full"
-                    w="24"
-                    h="24"
+                    width="24"
+                    height="24"
                   />
                 </h1>
               )}

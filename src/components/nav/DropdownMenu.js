@@ -5,6 +5,7 @@ import Link from "next/link";
 import useAdmin from "@/hooks/useAdmin";
 import { AuthContext } from "@/context/AuthProvider";
 import { RiDashboardLine } from "react-icons/ri";
+import Image from "next/image";
 
 const DropdownMenu = ({ handleLogOut }) => {
   const [isOpen, setIsOpen] = useState(false); // Dropdown state
@@ -46,11 +47,14 @@ const DropdownMenu = ({ handleLogOut }) => {
               <>
                 {/* ✅ User Info */}
                 <div className="flex items-center gap-2 pl-2">
-                  <img
+                  <Image
                     src={user?.photoURL}
                     title={user?.displayName}
                     className="rounded-full w-10 h-10 object-cover border-[#00A6B2] border-[2px] p-[1px] dark:border-gray-100"
                     alt="user"
+                    width={40}
+                    height={40}
+                    priority
                   />
                   <p className="text-[#49465D] text-lg dark:text-gray-100">
                     {user?.displayName}

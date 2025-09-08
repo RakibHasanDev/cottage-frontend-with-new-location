@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { FaPlayCircle } from "react-icons/fa";
 import { BsPauseCircleFill } from "react-icons/bs";
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
+import Image from "next/image";
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -26,7 +27,7 @@ const Hero = () => {
     <div className="w-[100%] md:h-[82vh] relative block h-[40vh] ">
       <div className="overlay-past"></div>
       {!isVideoPlaying ? (
-        <img
+        <Image
           src={"/assets/past-event-cover.webp"} // Replace with the path to your thumbnail image
           alt="Thumbnail"
           style={{
@@ -38,6 +39,7 @@ const Hero = () => {
           className="md:h-[83vh] h-[40vh]"
           width={1500}
           height={735}
+          priority
         />
       ) : null}
 

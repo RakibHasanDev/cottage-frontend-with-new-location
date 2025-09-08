@@ -5,6 +5,7 @@ import PrivatePayFaqs from "@/components/PrivatePay/PrivatePayFaqs";
 import Link from "next/link";
 import Head from "next/head";
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
+import Image from "next/image";
 
 const PrivatePayService = () => {
   const stuffs = [
@@ -315,12 +316,13 @@ const PrivatePayService = () => {
                 {/* banner start  */}
 
                 <div className="lg:h-[500px] 2xl:h-[550px] overflow-hidden ">
-                  <img
+                  <Image
                     className=" h-fit w-full object-cover"
                     src={"/assets/PrivatePay/private-pay-cover.webp"}
                     alt={"private-pay-cover-image"}
                     width={1600}
                     height={1067}
+                    priority
                   />
                 </div>
 

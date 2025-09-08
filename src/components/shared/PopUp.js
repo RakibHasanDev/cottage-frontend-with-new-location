@@ -5,6 +5,7 @@ import { FaTimes } from "react-icons/fa";
 import Link from "next/link";
 import { validatePhoneNumber } from "./validatePhoneNumber";
 import SpinerLoading from "./SpinerLoading";
+import Image from "next/image";
 
 const PopUp = () => {
   const [loading, setLoading] = useState(false);
@@ -424,10 +425,13 @@ focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:te
               minimize ? "minimize" : ""
             }`}
           >
-            <img
+            <Image
               className="rounded-full"
               src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1733952336/zprizfk73ikzhkded5gb.jpg"
               alt="customer-support"
+              width={100}
+              height={100}
+              priority
             />
           </div>
 

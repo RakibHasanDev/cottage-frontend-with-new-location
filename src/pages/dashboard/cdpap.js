@@ -5,6 +5,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { toast } from "react-hot-toast";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
 import AdminConversation from "@/components/shared/AdminConversation";
+import Image from "next/image";
 
 const Cdpaps = () => {
   const [page, setPage] = useState(0);
@@ -85,9 +86,11 @@ const Cdpaps = () => {
                   <div className="flex items-center justify-between">
                     <h1 className="flex items-center gap-3 px-2 py-1">
                       {user?.photoURL ? (
-                        <img
+                        <Image
                           src={user?.photoURL}
                           alt={user?.photoURL}
+                          width={40}
+                          height={40}
                           className="w-10 h-10 border-2 border-primary rounded-full"
                         />
                       ) : (

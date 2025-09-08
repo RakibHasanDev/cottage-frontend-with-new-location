@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { QRCodeCanvas } from "qrcode.react";
 import React, { useEffect, useState } from "react";
@@ -102,12 +103,13 @@ const EmployeeDetails = ({ employee }) => {
                 <div>
                   <PhotoProvider>
                     <PhotoView src={employee?.img}>
-                      <img
+                      <Image
                         className="w-[55px] h-[55px] md:w-20 md:h-20 rounded-full shadow-md cursor-pointer"
                         src={employee?.img}
                         alt={employee?.name}
                         width="55"
                         height="55"
+                        priority // ✅ LCP Fix: Boost Loading Priority
                       />
                     </PhotoView>
                   </PhotoProvider>

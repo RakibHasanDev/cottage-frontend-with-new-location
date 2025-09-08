@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import Image from "next/image";
 
 export default function ReviewsSection() {
   const reviews = [
@@ -102,10 +103,12 @@ export default function ReviewsSection() {
           }}
         >
           <div className=" lg:-mt-56 ">
-            <img
+            <Image
               className="lg:w-20 lg:h-20 h-12 w-12 animate-float -mt-40 lg:-mt-0 mx-auto"
               src="/assets/client-review-white.webp"
               alt="review_image"
+              width={48}
+              height={48}
             />
             <h2
               className="text-xl md:text-3xl font-bold max-w-3xl  league-spartan"
@@ -165,11 +168,12 @@ export default function ReviewsSection() {
                     {rev.date}
                   </p>
                   <div className="text-center text-2xl mt-2 flex justify-center">
-                    <img
+                    <Image
                       src="/assets/google.png"
                       alt="google_icon"
                       height={32}
                       width={32}
+                      priority
                     />
                   </div>
                 </SwiperSlide>

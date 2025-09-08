@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import Head from "next/head";
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
+import Image from "next/image";
 
 const HeroBanner = dynamic(() => import("@/components/pastevent/Hero"), {
   suspense: true,
@@ -189,11 +190,12 @@ const PastEvent = () => {
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              <img
+              <Image
                 src="/assets/pst_event-cover.webp"
                 alt="past_event-cover"
                 width={918}
                 height={612}
+                priority
               />
             </div>
           </div>
@@ -281,13 +283,13 @@ const PastEvent = () => {
               <Link key={index} href={`/${eve?.path}`}>
                 <div data-aos="zoom-in" data-aos-duration="1000">
                   <div className="relative overflow-hidden h-64 md:h-48 xl:h-64">
-                    <img
+                    <Image
                       src={eve?.img}
                       alt={eve?.alt}
                       className="w-full object-cover h-fit transition duration-500 transform hover:scale-105"
                       width={eve?.width}
                       height={eve?.height}
-                      loading="lazy"
+                      priority
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-black opacity-0 hover:opacity-50 transition duration-300 flex items-center justify-center">
                       <p className="text-white text-center text-lg font-semibold">

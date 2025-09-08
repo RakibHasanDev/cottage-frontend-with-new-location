@@ -9,6 +9,7 @@ import { FaRegCalendar } from "react-icons/fa";
 import { IoIosArrowDropdown } from "react-icons/io";
 import EasierLife from "@/components/home/EasierLife";
 import Link from "next/link";
+import Image from "next/image";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 // --- inline collapsible (–/+ with smooth height) ---
@@ -143,12 +144,15 @@ export default function HeroSection({
         {/* Hero section start */}
         <div className="relative isolate overflow-hidden bg-slate-900 h-[85vh] flex items-center">
           <div aria-hidden className="absolute inset-0">
-            <img
+            <Image
               src={
                 "https://res.cloudinary.com/di3wwp9s0/image/upload/v1755099213/Services/new-one_uo6nez.webp"
               }
-              alt=""
+              alt="service_area"
               className="h-[72vh] w-full object-cover"
+              width={2580}
+              height={886}
+              priority // ✅ LCP Fix: Boost Loading Priority
             />
             <div className="absolute inset-0 bg-slate-900/65" />
           </div>
@@ -271,13 +275,13 @@ export default function HeroSection({
                     href={`/${loc?.link}`}
                     className="relative overflow-hidden rounded-xl border aspect-[30/19] block"
                   >
-                    <img
+                    <Image
                       src={loc.img}
                       alt={loc.title}
-                      loading="lazy"
                       width={600}
                       height={380}
                       className="absolute inset-0 h-full w-full object-cover"
+                      priority
                     />
                   </Link>
 
@@ -446,10 +450,13 @@ export default function HeroSection({
               {/* Step 1 */}
               <div className="space-y-3">
                 <div className="flex justify-center">
-                  <img
+                  <Image
                     src="/assets/icons/call.webp"
                     alt="Call us"
                     className="h-12 w-12 lg:h-16 lg:w-16"
+                    width={48}
+                    height={48}
+                    priority // ✅ LCP Fix: Boost Loading Priority
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-[#00A6B2] dark:text-gray-100">
@@ -463,10 +470,13 @@ export default function HeroSection({
               {/* Step 2 */}
               <div className="space-y-3 border-l-2 border-r-2 border-dotted  border-gray-400 px-6">
                 <div className="flex justify-center">
-                  <img
+                  <Image
                     src="/assets/icons/schedule.webp"
                     alt="Schedule assessment"
                     className="h-12 w-12 lg:h-16 lg:w-16"
+                    width={48}
+                    height={48}
+                    priority
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-[#00A6B2] dark:text-gray-100">
@@ -481,10 +491,13 @@ export default function HeroSection({
               {/* Step 3 */}
               <div className="space-y-3">
                 <div className="flex justify-center">
-                  <img
+                  <Image
                     src="/assets/icons/match.webp"
                     alt="Get matched"
                     className="h-12 w-12 lg:h-16 lg:w-16"
+                    width={48}
+                    height={48}
+                    priority // ✅ LCP Fix: Boost Loading Priority
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-[#00A6B2] dark:text-gray-100">

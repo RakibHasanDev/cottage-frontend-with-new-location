@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 function VideoWithCustomThumb({
@@ -27,10 +28,12 @@ function VideoWithCustomThumb({
           aria-label="Play video"
         >
           {/* Thumbnail */}
-          <img
+          <Image
             src={thumb}
             alt="Video thumbnail"
             className="w-full h-full object-cover"
+            width={1280}
+            height={720}
           />
 
           {/* Play button */}

@@ -73,6 +73,14 @@ const EasierLife = () => {
   const pathname = usePathname();
   const apiKey = process.env.NEXT_PUBLIC_secureApiKey;
 
+  let phoneNumber = "(516) 367-2266";
+
+  if (pathname?.includes("new-jersey")) {
+    phoneNumber = "(201) 633-8481";
+  } else if (pathname?.includes("maryland")) {
+    phoneNumber = "(667) 400-0648";
+  }
+
   useEffect(() => {
     if (
       pathname === "/cdpap" ||
@@ -211,8 +219,8 @@ const EasierLife = () => {
           </p>
           <p className="text-[#67637e] text-lg font-[Roboto] dark:text-gray-100 open-sans">
             Call us now at{" "}
-            <a href="tel: +1516-367-2266" className="text-[#00a6b2]">
-              516-367-2266
+            <a href={`tel: +1${phoneNumber}`} className="text-[#00a6b2]">
+              {phoneNumber}
             </a>
             , or fill out this form and a member of our team will contact you
             within 24 business hours.

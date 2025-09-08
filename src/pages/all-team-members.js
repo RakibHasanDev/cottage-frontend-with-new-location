@@ -11,6 +11,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { AuthContext } from "@/context/AuthProvider";
 import useAdmin from "@/hooks/useAdmin";
+import Image from "next/image";
 
 const AllTeamMembers = () => {
   const apiKey = process.env.NEXT_PUBLIC_secureApiKey;
@@ -267,7 +268,7 @@ const AllTeamMembers = () => {
                         <div className="h-32 w-32 relative overflow-hidden hover:rounded-full cursor-pointer duration-500">
                           <PhotoProvider>
                             <PhotoView src={employer?.img}>
-                              <img
+                              <Image
                                 src={employer?.img}
                                 alt={employer?.img}
                                 className="rounded-full object-cover h-full w-full shadow-md  transition-transform transform scale-100  custom-zoom  hover:rounded-full"

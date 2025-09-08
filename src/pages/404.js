@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -23,7 +24,7 @@ const ErrorPage = () => {
             </div>
           </div>
           <div>
-            <img
+            <Image
               src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711636/404/404_ydze7z.png"
               alt="404-first"
               style={{ width: "100%", height: "auto" }}
@@ -32,10 +33,11 @@ const ErrorPage = () => {
         </div>
       </div>
       <div>
-        <img
+        <Image
           src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711663/404/404-1_czfgmz.png"
           alt="404-second"
-          style={{ width: "100%", height: "auto" }}
+          width={516}
+          height={190}
         />
       </div>
     </div>

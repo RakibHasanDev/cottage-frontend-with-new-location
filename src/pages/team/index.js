@@ -8,6 +8,7 @@ import Loading from "@/components/shared/Loading";
 import Link from "next/link";
 import Head from "next/head";
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
+import Image from "next/image";
 
 const Team = () => {
   const [rotate, setRotate] = useState(false);
@@ -359,13 +360,13 @@ const Team = () => {
                             <div className=" w-32 h-[85px] md:w-64 mt-8 md:mt-0 bg-[#FFFFFF]  md:h-32 rounded-lg shadow open-sans relative ">
                               <PhotoProvider>
                                 <PhotoView src={employee?.img}>
-                                  <img
+                                  <Image
                                     src={employee?.img}
                                     alt={employee?.img}
                                     className="w-10 h-10 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
-                                    w="64"
-                                    h="64"
-                                    loading="lazy"
+                                    width="64"
+                                    height="64"
+                                    priority // ✅ LCP Fix: Boost Loading Priority
                                   />
                                 </PhotoView>
                               </PhotoProvider>
@@ -475,7 +476,7 @@ const Team = () => {
                           <PhotoView
                             src={employeesByDepartment?.Administrator?.[0]?.img}
                           >
-                            <img
+                            <Image
                               src={
                                 employeesByDepartment?.Administrator?.[0]?.img
                               }
@@ -483,7 +484,9 @@ const Team = () => {
                                 employeesByDepartment?.Administrator?.[0]?.img
                               }
                               className="w-9 h-9 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-5 md:-top-10 shadow cursor-pointer z-10"
-                              loading="lazy"
+                              width={64}
+                              height={64}
+                              priority // ✅ LCP Fix: Boost Loading Priority
                             />
                           </PhotoView>
                         </PhotoProvider>
@@ -542,13 +545,13 @@ const Team = () => {
                             <div className="w-[82px] z-20  h-[70px] md:w-40 lg:w-52 bg-[#FFFFFF] md:h-24 lg:h-28 rounded-lg shadow open-sans relative  ">
                               <PhotoProvider>
                                 <PhotoView src={employee?.img}>
-                                  <img
+                                  <Image
                                     src={employee?.img}
                                     alt={employee?.img}
                                     className="w-9 h-9 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-5 md:-top-10 shadow cursor-pointer z-10"
-                                    w="36"
-                                    h="36"
-                                    loading="lazy"
+                                    width="36"
+                                    height="36"
+                                    priority // ✅ LCP Fix: Boost Loading Priority
                                   />
                                 </PhotoView>
                               </PhotoProvider>
@@ -636,13 +639,13 @@ const Team = () => {
                         <PhotoView
                           src={employeesByDepartment?.OfficeManager?.[0]?.img}
                         >
-                          <img
+                          <Image
                             src={employeesByDepartment?.OfficeManager?.[0]?.img}
                             alt={employeesByDepartment?.OfficeManager?.[0]?.img}
                             className=" w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                             width={48}
                             height={48}
-                            loading="lazy"
+                            priority // ✅ LCP Fix: Boost Loading Priority
                           />
                         </PhotoView>
                       </PhotoProvider>
@@ -708,7 +711,7 @@ const Team = () => {
                         <PhotoView
                           src={employeesByDepartment?.CdpapSuperVisor?.[0]?.img}
                         >
-                          <img
+                          <Image
                             src={
                               employeesByDepartment?.CdpapSuperVisor?.[0]?.img
                             }
@@ -718,7 +721,7 @@ const Team = () => {
                             className="  w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                             width="48"
                             height="48"
-                            loading="lazy"
+                            priority // ✅ LCP Fix: Boost Loading Priority
                           />
                         </PhotoView>
                       </PhotoProvider>
@@ -784,7 +787,7 @@ const Team = () => {
                         <PhotoView
                           src={employeesByDepartment?.AdminSuperVisor?.[0]?.img}
                         >
-                          <img
+                          <Image
                             src={
                               employeesByDepartment?.AdminSuperVisor?.[0]?.img
                             }
@@ -794,7 +797,7 @@ const Team = () => {
                             className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                             width="48"
                             height="48"
-                            loading="lazy"
+                            priority // ✅ LCP Fix: Boost Loading Priority
                           />
                         </PhotoView>
                       </PhotoProvider>
@@ -864,13 +867,13 @@ const Team = () => {
                         <PhotoView
                           src={employeesByDepartment?.HHA_MANAGER?.[0]?.img}
                         >
-                          <img
+                          <Image
                             src={employeesByDepartment?.HHA_MANAGER?.[0]?.img}
                             alt={employeesByDepartment?.HHA_MANAGER?.[0]?.img}
                             className="  w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                             width="48"
                             height="48"
-                            loading="lazy"
+                            priority // ✅ LCP Fix: Boost Loading Priority
                           />
                         </PhotoView>
                       </PhotoProvider>
@@ -938,13 +941,13 @@ const Team = () => {
                         <PhotoView
                           src={employeesByDepartment?.HrSuperVisor?.[0]?.img}
                         >
-                          <img
+                          <Image
                             src={employeesByDepartment?.HrSuperVisor?.[0]?.img}
                             alt={employeesByDepartment?.HrSuperVisor?.[0]?.img}
                             className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                             width="48"
                             height="48"
-                            loading="lazy"
+                            priority // ✅ LCP Fix: Boost Loading Priority
                           />
                         </PhotoView>
                       </PhotoProvider>
@@ -1013,7 +1016,7 @@ const Team = () => {
                             employeesByDepartment?.BillingSuperVisor?.[0]?.img
                           }
                         >
-                          <img
+                          <Image
                             src={
                               employeesByDepartment?.BillingSuperVisor?.[0]?.img
                             }
@@ -1023,7 +1026,7 @@ const Team = () => {
                             className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                             width="48"
                             height="48"
-                            loading="lazy"
+                            priority // ✅ LCP Fix: Boost Loading Priority
                           />
                         </PhotoView>
                       </PhotoProvider>
@@ -1090,7 +1093,7 @@ const Team = () => {
                         <PhotoView
                           src={employeesByDepartment?.Administrative?.[0]?.img}
                         >
-                          <img
+                          <Image
                             src={
                               employeesByDepartment?.Administrative?.[0]?.img
                             }
@@ -1100,7 +1103,7 @@ const Team = () => {
                             className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                             width="48"
                             height="48"
-                            loading="lazy"
+                            priority // ✅ LCP Fix: Boost Loading Priority
                           />
                         </PhotoView>
                       </PhotoProvider>
@@ -1135,13 +1138,13 @@ const Team = () => {
                           {employeesByDepartment?.ItSoftware?.map(
                             (employee) => (
                               <div key={employee?._id}>
-                                <img
+                                <Image
                                   className="w-7 h-7 md:w-8 md:h-8 rounded-full"
                                   src={employee?.img}
                                   alt={employee?.name}
                                   width="28"
                                   height="28"
-                                  loading="lazy"
+                                  priority // ✅ LCP Fix: Boost Loading Priority
                                 />
                               </div>
                             )
@@ -1281,13 +1284,13 @@ const Team = () => {
                         <div className="flex gap-2 items-center pt-2 md:pt-4">
                           {employeesByDepartment?.FrontDesk?.map((employee) => (
                             <div key={employee?._id}>
-                              <img
+                              <Image
                                 className="w-7 h-7 md:w-8 md:h-8 rounded-full"
                                 src={employee?.img}
                                 alt={employee?.name}
                                 width="28"
                                 height="28"
-                                loading="lazy"
+                                priority // ✅ LCP Fix: Boost Loading Priority
                               />
                             </div>
                           ))}
@@ -1353,13 +1356,13 @@ const Team = () => {
                         <div className="flex gap-2 items-center pt-2 md:pt-4">
                           {employeesByDepartment?.RnDps?.map((employee) => (
                             <div key={employee?._id}>
-                              <img
+                              <Image
                                 className="w-7 h-7 md:w-8 md:h-8 rounded-full"
                                 src={employee?.img}
                                 alt={employee?.name}
                                 width="28"
                                 height="28"
-                                loading="lazy"
+                                priority // ✅ LCP Fix: Boost Loading Priority
                               />
                             </div>
                           ))}
@@ -1425,13 +1428,13 @@ const Team = () => {
                       >
                         {leader && (
                           <div className="flex justify-center items-center gap-2">
-                            <img
+                            <Image
                               className="w-7 h-7 rounded-full"
                               src={leader?.img}
                               alt={leader?.img}
                               width="28"
                               height="28"
-                              loading="lazy"
+                              priority // ✅ LCP Fix: Boost Loading Priority
                             />
                             <p className="font-medium dark:text-gray-100">
                               {leader?.name}
@@ -1454,13 +1457,13 @@ const Team = () => {
                               <div className="w-40 md:w-64 mt-8 md:mt-0 bg-[#F5F5F6] h-24 md:h-32 rounded-lg shadow open-sans relative ">
                                 <PhotoProvider>
                                   <PhotoView src={tm?.img}>
-                                    <img
+                                    <Image
                                       src={tm?.img}
                                       alt={tm?.img}
                                       className="w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                                       width="64"
                                       height="64"
-                                      loading="lazy"
+                                      priority // ✅ LCP Fix: Boost Loading Priority
                                     />
                                   </PhotoView>
                                 </PhotoProvider>

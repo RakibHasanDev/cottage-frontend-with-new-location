@@ -2,13 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
-import { ThemeContext, ThemeProvider } from "@/context/ThemeContext";
 import ToggleButton from "./shared/ToogleButton";
 import SideNav from "./nav/SideNav";
 import { AuthContext } from "@/context/AuthProvider";
 import DropdownMenu from "./nav/DropdownMenu";
 import { HiChevronDown } from "react-icons/hi";
 import { usePathname } from "next/navigation";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const NavBar = () => {
   const [customShadow, setCustomShadow] = useState("shadow-none");
@@ -16,6 +16,15 @@ const NavBar = () => {
   const [navColor] = useState(false);
   const [mounted, setMounted] = useState(false); // ✅ Fix: Define mounted state
   const { user, logOut } = useContext(AuthContext);
+
+  const pathname = usePathname(); // ✅ always at top level
+
+  let companyName = "Cottage Home Care Services";
+  if (pathname?.includes("new-jersey")) {
+    companyName = "Cottage Homecare NJ, LLC";
+  } else if (pathname?.includes("maryland")) {
+    companyName = "Cottage Home Care, Maryland, LLC";
+  }
 
   const handleLogOut = () => {
     logOut()
@@ -50,18 +59,6 @@ const NavBar = () => {
       ? "top-0 transition-all duration-1000"
       : "-top-20 transition-all duration-1500 "
   } `;
-
-  const pathname = usePathname();
-
-  // Default contact info
-  let companyName = "Cottage Home Care Services";
-
-  // Conditional override based on route
-  if (pathname.includes("new-jersey")) {
-    companyName = "Cottage Homecare NJ, LLC"; // NJ phone
-  } else if (pathname.includes("maryland")) {
-    companyName = "Cottage Home Care, Maryland, LLC"; // MD phone
-  }
 
   return (
     <ThemeProvider>

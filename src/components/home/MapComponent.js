@@ -146,11 +146,12 @@ const MapComponent = () => {
               <div className="bg-white w-20 h-20 rounded-full mr-5">
                 <PhotoProvider>
                   <PhotoView src={office?.picture}>
-                    <img
+                    <Image
                       src={office?.picture}
                       alt={office?.officeName}
                       className="w-full h-full rounded-full object-cover border-[2px] border-white"
-                      loading="lazy"
+                      width={400}
+                      height={311}
                     />
                   </PhotoView>
                 </PhotoProvider>

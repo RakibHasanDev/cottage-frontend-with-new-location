@@ -41,12 +41,14 @@ const OverwHelmed = () => {
           </div>
 
           {/* 🔹 Background Shape */}
-          <img
+          <Image
             className="absolute w-[400px] md:w-[530px] md:h-[530px] top-2 md:top-4 z-0 rotate-3 md:-left-[10px] -left-[10px] dark:opacity-75"
             src={optimizedImage(
               "https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711490/overhelmed/cottage-home-care-we-believe-bg.png"
             )}
             alt="cottage-home-care-we-believe-background"
+            width={1080}
+            height={1080}
           />
 
           {/* 🔹 Masked Image - Responsive */}

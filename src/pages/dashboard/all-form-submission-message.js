@@ -9,6 +9,7 @@ import { MdOutlineNavigateNext, MdArrowBackIosNew } from "react-icons/md";
 import Link from "next/link";
 import SpinerLoading from "@/components/shared/SpinerLoading";
 import AdminConversation from "@/components/shared/AdminConversation";
+import Image from "next/image";
 
 const AllUsers = () => {
   const [page, setPage] = useState(0);
@@ -100,12 +101,12 @@ const AllUsers = () => {
                                 className="flex items-center gap-3   w-full  px-2 "
                               >
                                 {user?.photoURL && (
-                                  <img
+                                  <width
                                     src={user?.photoURL}
                                     alt={user?.photoURL}
                                     className=" w-8 2xl:w-10  h-8 2xl:h-10 border-2 border-[#00A6B2] rounded-full"
-                                    w="32"
-                                    h="32"
+                                    width="40"
+                                    height="40"
                                   />
                                 )}
                                 {!user?.photoURL && (
@@ -208,9 +209,11 @@ const AllUsers = () => {
                                 className="flex items-center gap-3   w-full  px-2 rounded-md"
                               >
                                 {user?.photoURL && (
-                                  <img
+                                  <Image
                                     src={user?.photoURL}
                                     alt={user?.photoURL}
+                                    width={40}
+                                    height={40}
                                     className=" w-8 h-8 2xl:w-10 2xl:h-10 border-2 border-[#00A6B2] rounded-full"
                                   />
                                 )}
