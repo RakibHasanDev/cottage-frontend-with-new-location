@@ -109,26 +109,21 @@ const HhhaCertification = () => {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Services",
-          item: "https://cottagehomecare.com/services",
+          name: "Service Area",
+          item: "https://cottagehomecare.com/service-areas/",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "NHTD",
-          item: "https://cottagehomecare.com/nhtd",
+          item: "https://cottagehomecare.com/new-jersey/",
         },
-        {
-          "@type": "ListItem",
-          position: 4,
-          name: "HHA/PCA",
-          item: "https://cottagehomecare.com/hha",
-        },
+
         {
           "@type": "ListItem",
           position: 5,
           name: "HHA Certification",
-          item: "https://cottagehomecare.com/hha-certification",
+          item: "https://cottagehomecare.com/hha-certification/",
         },
       ],
     },

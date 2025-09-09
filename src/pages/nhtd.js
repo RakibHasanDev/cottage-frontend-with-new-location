@@ -75,15 +75,10 @@ const NHTD = () => {
           name: "Home",
           item: "https://cottagehomecare.com/",
         },
+
         {
           "@type": "ListItem",
           position: 2,
-          name: "Services",
-          item: "https://cottagehomecare.com/services",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
           name: "NHTD Program",
           item: "https://cottagehomecare.com/nhtd",
         },

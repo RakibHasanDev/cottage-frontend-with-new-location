@@ -91,7 +91,11 @@ export default function ReviewsSection() {
 
   return (
     <section className="mt-8">
-      <div className="relative mt-16 min-h-[800px]">
+      <div
+        className="relative mt-16 min-h-[800px]"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
         {/* Background Section */}
         <div
           className="bg-cover bg-center h-[400px] lg:h-[550px] flex flex-col items-center justify-center text-center text-white px-4"

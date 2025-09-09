@@ -74,15 +74,10 @@ const PrivatePayService = () => {
           name: "Home",
           item: "https://cottagehomecare.com/",
         },
+
         {
           "@type": "ListItem",
           position: 2,
-          name: "Services",
-          item: "https://cottagehomecare.com/services",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
           name: "Private Pay",
           item: "https://cottagehomecare.com/private-pay-home-care",
         },

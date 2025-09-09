@@ -28,51 +28,5 @@
       "East Orange",
       "Linden"
     ]
-  },
-  {
-    "slug": "maryland",
-    "title": "Maryland",
-    "img": "/assets/optimize/mary_land.webp",
-    "link": "maryland",
-    "serviceAreas": [
-      "Allegany",
-      "Anne Arundel",
-      "Baltimore City",
-      "Baltimore County",
-      "Calvert",
-      "Caroline",
-      "Carroll",
-      "Cecil",
-      "Charles",
-      "Dorchester",
-      "Frederick",
-      "Garrett",
-      "Harford",
-      "Howard",
-      "Kent",
-      "Montgomery",
-      "Prince George's",
-      "Queen Anne's",
-      "Somerset",
-      "St. Mary's",
-      "Talbot",
-      "Washington",
-      "Wicomico",
-      "Worcester"
-    ]
-  },
-  {
-    "slug": "connecticut",
-    "title": "Connecticut",
-    "img": "/assets/optimize/connecticut.webp",
-    "link": "connecticut",
-    "serviceAreas": [
-      "Fairfield",
-      "New Haven",
-      "Hartford",
-      "Stamford",
-      "Bridgeport",
-      "Norwalk"
-    ]
   }
 ]

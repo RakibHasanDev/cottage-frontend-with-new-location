@@ -20,10 +20,16 @@ const NavBar = () => {
   const pathname = usePathname(); // ✅ always at top level
 
   let companyName = "Cottage Home Care Services";
+  let companyLogo =
+    "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757434710/cottage_logo/cottage-home-care-logo_n8fskh.webp";
   if (pathname?.includes("new-jersey")) {
     companyName = "Cottage Homecare NJ, LLC";
+    companyLogo =
+      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757435478/cottage_logo/new_jersey_logo_a1pexa.webp";
   } else if (pathname?.includes("maryland")) {
     companyName = "Cottage Home Care, Maryland, LLC";
+    companyLogo =
+      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757434710/cottage_logo/cottage-home-care-logo_n8fskh.webp";
   }
 
   const handleLogOut = () => {
@@ -79,7 +85,7 @@ const NavBar = () => {
               <div>
                 <div className="md:flex items-center hidden ">
                   <Image
-                    src={"/assets/cottage-home-care-logo.webp"}
+                    src={companyLogo}
                     className="nav-img shadow-2xl p-2 border-2 border-[#00A6B2] rounded-full dark:bg-gray-300"
                     alt="cottage-home-care-logo"
                     width="100" // Set an appropriate width
@@ -98,7 +104,7 @@ const NavBar = () => {
 
                 <div className="header-container flex items-center md:hidden  ">
                   <Image
-                    src={"/assets/cottage-home-care-logo.webp"}
+                    src={companyLogo}
                     className="logo shadow-2xl border-2 border-[#00A6B2] rounded-full dark:bg-gray-300"
                     alt="Cottage Home Care Services Logo"
                     width="70"
@@ -106,9 +112,12 @@ const NavBar = () => {
                   />
 
                   <div className="text-container ml-3 league-spartan">
-                    <h5 className="title  text-[#00A6B2] tracking-wide  font-bold uppercase ">
-                      Cottage Home <br /> Care Services
+                    <h5 className="title text-[#00A6B2] tracking-wide font-bold uppercase">
+                      {companyName.slice(0, 12)}
+                      {<br />}
+                      {companyName.slice(12)}
                     </h5>
+
                     <p className="  dark:border-gray-100 mb-[1px] border-t-[1px] border-gray-700" />
                     <p className="tagline  font-semibold text-[#49465D] dark:text-gray-100 mt-[1px]">
                       THE RIGHT HOME CARE FOR YOU
@@ -164,11 +173,11 @@ const NavBar = () => {
                       New Jersey
                     </p>
                   </Link>
-                  <Link href="/maryland">
+                  {/* <Link href="/maryland">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
                       Maryland
                     </p>
-                  </Link>
+                  </Link> */}
 
                   {/* <Link href="/">
                     <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -360,7 +369,7 @@ const NavBar = () => {
 
               {/* location end  */}
 
-              {/* <li>
+              <li>
                 <Link
                   href="/blog"
                   aria-label="Blog"
@@ -372,7 +381,7 @@ const NavBar = () => {
                 >
                   Blog
                 </Link>
-              </li> */}
+              </li>
 
               <li>
                 <ToggleButton />

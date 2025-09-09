@@ -138,7 +138,73 @@ export default function HeroSection({
 
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>
+          Top Home Care Services in NY, NJ, MD | Trusted & Affordable Care
+        </title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta
+          name="description"
+          content="Looking for reliable home care services in NY, NJ, or MD? Our compassionate team offers personalized care, including home health aides and Medicaid options in your area."
+        />
+        <meta
+          name="keywords"
+          content="Cottage home care services Queens NY, Private pay home care Brooklyn NY, Alzheimer's care NJ home care, Non-medical home care NJ, Affordable home care Maryland, Cottage home care services Maryland, Cottage home care services New Haven County CT, Private pay home care CT, Cottage home care services Michigan, Elder home care Michigan"
+        />
+
+        {/* Alternate & Canonical Links */}
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/service-areas/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/service-areas/"
+          hreflang="x-default"
+        />
+        <link
+          rel="canonical"
+          href="https://cottagehomecare.com/service-areas/"
+        />
+
+        {/* ✅ Open Graph Meta Tags */}
+        <meta
+          property="og:title"
+          content="Top Home Care Services in NY, NJ, MD | Trusted & Affordable Care"
+        />
+        <meta
+          property="og:description"
+          content="Looking for reliable home care services in NY, NJ, or MD? Our compassionate team offers personalized care, including home health aides and Medicaid options in your area."
+        />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/service-areas/"
+        />
+        <meta
+          property="og:image"
+          content="https://cottagehomecare.com/hero.webp"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+
+        {/* ✅ Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:creator" content="@cottagecareny" />
+        <meta
+          name="twitter:title"
+          content="Privacy Policy - Cottage Home Care Services"
+        />
+        <meta
+          name="twitter:description"
+          content="Understand how we handle and protect your data at Cottage Home Care Services."
+        />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
+        />
+      </Head>
 
       <section className="min-h-screen dark:bg-slate-600">
         {/* Hero section start */}
@@ -158,7 +224,7 @@ export default function HeroSection({
           </div>
 
           {/* Content */}
-          <div className="relative lg:ml-[55%] max-w-2xl py-6 text-center text-white bg-simple px-10 lg:-mt-28 mt-20 ">
+          <div className="relative lg:ml-[55%] lg:max-w-2xl w-full py-6 text-center text-white bg-simple lg:px-10 px-2 lg:-mt-28 mt-52 ">
             <p className="mb-5 text-xs sm:text-base font-semibold tracking-[0.2em] uppercase text-white/80">
               {kicker}
             </p>
@@ -166,20 +232,23 @@ export default function HeroSection({
               {heading}
             </h1>
 
-            <div className=" font-[Roboto] flex justify-center items-center gap-8 md:gap-0 md:space-y-0 md:space-x-7 flex-wrap mt-10">
+            <div
+              className=" font-[Roboto] flex justify-center items-center gap-2 lg:gap-8 md:gap-0 md:space-y-0 md:space-x-7 lg:flex-wrap mt-3 lg:mt-10 "
+              style={{ width: "100%" }}
+            >
               <a
                 href="tel:+1516-367-2266"
-                className="flex items-center px-6 py-3 md:px-5 md:py-2.5 border border-[#00a6b2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-xl bg-[#00A6B2]"
+                className="flex items-center px-6 py-3 md:px-5 md:py-2.5 border border-[#00a6b2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden text-sm xl:text-xl bg-[#00A6B2]"
                 aria-label="Call us at (516) 367-2266"
               >
                 {/* <FaPhone className="mr-2 " /> */}
-                <span ref={ref} className="h-[17px] ">
+                <span ref={ref} className="h-[17px]    ">
                   {inView && (
                     <Suspense fallback={<IconLoading />}>
                       <Lottie
                         animationData={callReader}
                         loop={true}
-                        className="h-[32px] w-[32px] mr-4 xl:mr-5  "
+                        className="lg:h-[32px] h-[20px] w-[20px] lg:w-[32px] mr-4 xl:mr-5"
                         style={{
                           width: "110%",
                           height: "110%",
@@ -206,7 +275,7 @@ export default function HeroSection({
                     });
                   }
                 }}
-                className="flex gap-1 -mt-1 px-6 py-3 md:px-8 md:py-2.5 border border-[#3A4256] rounded-full text-white bg-[#536cac] duration-500 bg-hov2 league-spartan xl:text-xl cursor-pointer"
+                className="flex gap-1 -mt-1 px-6 py-3 md:px-8 md:py-2.5 border border-[#3A4256] rounded-full text-white bg-[#536cac] duration-500 bg-hov2 league-spartan xl:text-xl cursor-pointer text-sm"
               >
                 Schedule a Call <FaRegCalendar />
               </a>
@@ -250,10 +319,10 @@ export default function HeroSection({
 
         {/* Body */}
         <div className="w-[95%] lg:w-[80%] mx-auto ">
-          <h2 className="text-center text-lg lg:text-4xl font-semibold league-spartan text-gray-700 w-[80%] mx-auto leading-loose dark:text-gray-100">
+          <h4 className="text-center text-lg lg:text-4xl font-semibold league-spartan text-gray-700 w-[80%] mx-auto leading-loose dark:text-gray-100">
             Cottage Home Care Services is proud to announce that we provide home
             care for elderly services for the NY, NJ, MD & CT, including:
-          </h2>
+          </h4>
 
           {/* mapped from /public/assets/locations.json */}
           <div className="mx-auto mt-8  space-y-4">
@@ -318,9 +387,9 @@ export default function HeroSection({
             backgroundPosition: "left center",
           }}
         >
-          <h1 className="text-center league-spartan text-gray-700 text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-10">
+          <h5 className="text-center league-spartan text-gray-700 text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-10">
             Why Choose Cottage Home Care in NY, NJ, MD & CT?
-          </h1>
+          </h5>
 
           <div className="w-[95%] lg:w-[80%] 2xl:w-[75%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-6 mt-5">
             {/* Left Column */}

@@ -11,6 +11,7 @@ import ReviewsSection from "@/components/ServiceArea/ReviewSection";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import EasierLife from "@/components/home/EasierLife";
+import Head from "next/head";
 // ...
 const NJMapClient = dynamic(
   () => import("@/components/NjComponent/NJMapClient"),
@@ -160,7 +161,7 @@ export default function NewJersey() {
       id: 9,
       question: "What areas do you serve in New Jersey?",
       answer:
-        "Cottage Homecare NJ, LLC proudly serves families throughout NJ service areas – Bergen, Essex, Middlesex, Monmouth, and surrounding counties.",
+        "Cottage Homecare NJ, LLC proudly serves families throughout NJ service areas – Jersey City, Bayonne, Union, Newark, Fairfield, East Orange, Linden",
     },
     {
       id: 10,
@@ -170,8 +171,148 @@ export default function NewJersey() {
     },
   ];
 
+  const title = "Top Homecare Services in New Jersey – Quality Care at Home";
+  const description =
+    "Discover reliable homecare services in New Jersey. Our expert caregivers provide personalized care for your loved ones, ensuring comfort and safety at home";
+  const keywords =
+    "home care agency in new jersey, new jersey home care jobs, senior home care in new jersey, home care agencies in new jersey, homecare agencies in nj, new jersey home care agencies, home care agencies in new jersey, new jersey home health, best home care agency nj, best home care agency jersey city, nj";
+
+  // ✅ JSON-LD Schema Data
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://cottagehomecare.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Service Area",
+          item: "https://cottagehomecare.com/service-areas/",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "NHTD",
+          item: "https://cottagehomecare.com/new-jersey/",
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Top Homecare Services in New Jersey – Quality Care at Home",
+      url: "https://cottagehomecare.com/new-jersey/",
+      description:
+        "Discover reliable homecare services in New Jersey. Our expert caregivers provide personalized care for your loved ones, ensuring comfort and safety at home",
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757013616/state_images/her_banner_rqcnvc.webp",
+        width: "2580",
+        height: "795",
+      },
+      datePublished: "2025-09-10",
+      dateModified: "2025-09-10",
+      author: {
+        "@type": "Organization",
+        name: "Cottage Homecare NJ, LLC",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is the NHTD Program?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The NHTD (Nursing Home Transition and Diversion) program is designed to help Medicaid-eligible individuals transition from a nursing home to independent living with home care services. It provides personal care assistance, medical support, and home modifications.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Who qualifies for NHTD in NYC?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "To qualify for NHTD in NYC, individuals must be Medicaid-eligible, require nursing home-level care, and be able to live safely at home with support. Those under 65 must have a physical disability.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does NHTD cover home modifications?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, the NHTD program can include home modifications such as wheelchair ramps, bathroom safety installations, and other adjustments to help individuals live independently.",
+          },
+        },
+      ],
+    },
+  ];
+  const imageSrc =
+    "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757013616/state_images/her_banner_rqcnvc.webp";
   return (
     <section>
+      <Head>
+        {/* ✅ Basic SEO Meta Tags */}
+        <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content="Cottage Home Care Services" />
+        <meta name="robots" content="index, follow" />
+
+        {/* ✅ Open Graph Meta Tags (Facebook & LinkedIn) */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="Cottage Home Care Services" />
+        <meta
+          property="og:url"
+          content="https://res.cloudinary.com/di3wwp9s0/image/upload/v1757080745/nj_private_pay_ucvx5z.jpg"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/di3wwp9s0/image/upload/v1757080745/nj_private_pay_ucvx5z.jpg"
+        />
+
+        {/* ✅ Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cottagecareny" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta
+          name="twitter:image"
+          content="https://cottagehomecare.com/hero.webp"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/new-jersey/"
+          hreflang="en"
+        />
+        <link
+          rel="alternate"
+          href="https://cottagehomecare.com/new-jersey/"
+          hreflang="x-default"
+        />
+
+        <link rel="canonical" href="https://cottagehomecare.com/new-jersey/" />
+
+        {/* ✅ Preloading Images for Faster Load Times */}
+        {imageSrc && (
+          <link rel="preload" href={imageSrc} as="image" fetchPriority="high" />
+        )}
+        {/* ✅ Structured Data (Schema.org JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </Head>
       <div className="relative bg-white min-h-[68vh]">
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -187,12 +328,12 @@ export default function NewJersey() {
         </div>
 
         {/* Content */}
-        <div className="relative  max-w-4xl mx-auto px-6 pb-20 lg:flex lg:items-end lg:justify-between min-h-[68vh]">
-          <div className="max-w-xl bg-black/70 rounded-2xl shadow-lg p-6 mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-100 mb-4 league-spartan">
+        <div className="relative  max-w-4xl mx-auto px-6 lg:pb-20 pb-5 flex items-end justify-between min-h-[68vh]">
+          <div className="max-w-xl bg-black/70 rounded-2xl shadow-lg p-3 lg:p-6 mx-auto text-center">
+            <h1 className="text-lg lg:text-2xl font-bold text-gray-100 lg:mb-4 league-spartan">
               BEST PRIVATE PAY HOME CARE IN <br /> NEW JERSEY
-            </h2>
-            <p className="text-lg text-gray-100 font-medium">
+            </h1>
+            <p className="lg:text-lg text-gray-100 font-medium">
               Compassionate home support — choose your caregiver with Medicaid
               or Private Pay.
             </p>
@@ -209,13 +350,21 @@ export default function NewJersey() {
         </div>
       </div>
       <section className="bg-[#F5F5F7] dark:bg-slate-700 py-16">
-        <h2 className="text-xl md:text-3xl font-extrabold text-gray-600 dark:text-gray-100 mb-8 text-center league-spartan">
+        <h2
+          className="text-xl md:text-3xl font-extrabold text-gray-600 dark:text-gray-100 mb-8 text-center league-spartan"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
           Cottage Homecare NJ, Makes Private Pay Care Simple with the Following
           Steps
         </h2>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side: Image */}
-          <div className="flex justify-center">
+          <div
+            className="flex justify-center"
+            data-aos="fade-right"
+            data-aos-duration="3000"
+          >
             <Image
               src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1757080745/nj_private_pay_ucvx5z.jpg"
               alt="Private Pay Services"
@@ -227,7 +376,7 @@ export default function NewJersey() {
           </div>
 
           {/* Right Side: Steps */}
-          <div>
+          <div data-aos="fade-left" data-aos-duration="3000">
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-200">
               <div>
                 <h3 className="font-bold text-xl text-gray-700 dark:text-gray-100">
@@ -313,7 +462,11 @@ export default function NewJersey() {
       {/* Optional: custom-thumb YouTube section (remove if not needed) */}
 
       <section className="pt-12 ">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-600 leading-snug dark:text-gray-100 league-spartan w-[95%] lg:w-[80%] 2xl:w-[65%] mx-auto text-center">
+        <h3
+          className="text-2xl md:text-3xl font-bold text-gray-600 leading-snug dark:text-gray-100 league-spartan w-[95%] lg:w-[80%] 2xl:w-[65%] mx-auto text-center"
+          data-aos="fade-down"
+          data-aos-duration="2000"
+        >
           Over{" "}
           <span className="text-[#00A6B2] dark:text-gray-100">
             10,000 Customers
@@ -325,11 +478,15 @@ export default function NewJersey() {
           family where a family or friend gets{" "}
           <span className="font-extrabold">paid to care</span> for their loved
           ones in need.
-        </h2>
+        </h3>
 
         <div className="lg:max-w-7xl 2xl:max-w-[1400px] mx-auto px-6  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 ">
           {/* Right Side: Empty Column */}
-          <div className="mx-auto">
+          <div
+            className="mx-auto"
+            data-aos="fade-right"
+            data-aos-duration="3000"
+          >
             <h3 className="text-2xl font-bold text-[#00A6B2] dark:text-gray-100 mb-3">
               Private Pay Services Include
             </h3>
@@ -382,13 +539,12 @@ export default function NewJersey() {
             </div>
           </div>
           {/* Left Side: Text + Video */}
-          <div>
-            <div className="">
-              <VideoWithCustomThumb
-                videoId="7uoXudV9uas"
-                caption="YOU CHOOSE WHO PROVIDES YOUR HOME CARE"
-              />
-            </div>
+
+          <div className="" data-aos="fade-left" data-aos-duration="3000">
+            <VideoWithCustomThumb
+              videoId="7uoXudV9uas"
+              caption="YOU CHOOSE WHO PROVIDES YOUR HOME CARE"
+            />
           </div>
         </div>
       </section>
@@ -451,8 +607,8 @@ export default function NewJersey() {
         ))}
       </div>
 
-      <div className="grid grid-cols-6 gap-6">
-        <div className="col-span-4">
+      <div className="grid grid-cols-1 lg:grid-cols-6 lg:gap-6">
+        <div className="lg:col-span-4 ">
           <NJMapClient
             locations={LOCATIONS}
             selected={selectedLoc} // <- drives flyTo
@@ -462,7 +618,7 @@ export default function NewJersey() {
           />
         </div>
 
-        <div className="col-span-2">
+        <div className="col-span-2 order-first sm:order-none">
           <LocationsList
             items={LOCATIONS}
             active={selectedLoc}

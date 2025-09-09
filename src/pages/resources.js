@@ -77,46 +77,40 @@ const schemaData = [
       },
       {
         "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://cottagehomecare.com/services",
-      },
-      {
-        "@type": "ListItem",
         position: 3,
         name: "NHTD",
-        item: "https://cottagehomecare.com/nhtd",
+        item: "https://cottagehomecare.com/nhtd/",
       },
       {
         "@type": "ListItem",
         position: 4,
         name: "HHA/PCA",
-        item: "https://cottagehomecare.com/hha",
+        item: "https://cottagehomecare.com/hha/",
       },
       {
         "@type": "ListItem",
         position: 5,
         name: "Private Pay",
-        item: "https://cottagehomecare.com/private-pay-home-care",
+        item: "https://cottagehomecare.com/private-pay-home-care/",
       },
-    
+
       {
         "@type": "ListItem",
         position: 7,
         name: "Contact Us",
-        item: "https://cottagehomecare.com/contact",
+        item: "https://cottagehomecare.com/contact/",
       },
       {
         "@type": "ListItem",
         position: 8,
         name: "HHA Certification",
-        item: "https://cottagehomecare.com/hha-certification",
+        item: "https://cottagehomecare.com/hha-certification/",
       },
       {
         "@type": "ListItem",
         position: 9,
         name: "Resources",
-        item: "https://cottagehomecare.com/resources",
+        item: "https://cottagehomecare.com/resources/",
       },
     ],
   },

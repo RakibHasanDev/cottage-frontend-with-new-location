@@ -215,7 +215,7 @@ const EasierLife = () => {
           className={`text-center max-w-xl mx-auto py-[20px] lg:py-[90px] ${showProperty}`}
         >
           <p className="text-[#322e51] pb-3 text-2xl md:text-xl lg:text-2xl xl:text-4xl relative font-bold afterEffect mb-5  dark:text-gray-100 league-spartan">
-            You deserve an easier life, too
+            Trusted Home Care Services Near You-Quality Care Right at Your Door
           </p>
           <p className="text-[#67637e] text-lg font-[Roboto] dark:text-gray-100 open-sans">
             Call us now at{" "}

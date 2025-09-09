@@ -103,12 +103,6 @@ const hha = () => {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Services",
-          item: "https://cottagehomecare.com/services",
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
           name: "HHA/PCA",
           item: "https://cottagehomecare.com/hha",
         },

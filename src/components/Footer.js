@@ -7,9 +7,25 @@ import { GrInstagram } from "react-icons/gr";
 import Link from "next/link";
 import Image from "next/image";
 import { FaXTwitter } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+  const pathname = usePathname(); // ✅ always at top level
+
+  let companyName = "Cottage Home Care Services";
+  let companyLogo =
+    "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757434710/cottage_logo/cottage-home-care-logo_n8fskh.webp";
+  if (pathname?.includes("new-jersey")) {
+    companyName = "Cottage Homecare NJ, LLC";
+    companyLogo =
+      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757435478/cottage_logo/new_jersey_logo_a1pexa.webp";
+  } else if (pathname?.includes("maryland")) {
+    companyName = "Cottage Home Care, Maryland, LLC";
+    companyLogo =
+      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757434710/cottage_logo/cottage-home-care-logo_n8fskh.webp";
+  }
 
   return (
     <div className="footer-bg relative">
@@ -120,19 +136,17 @@ const Footer = () => {
         <div className="mb-3">
           <div className="container flex flex-col gap-10  pt-10 mx-auto space-y-8 lg:flex-row lg:space-y-0 ">
             <div className="lg:w-[20%] ">
-              <Link href="/" className="flex space-x-3 justify-start">
-                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-xl border-2 border-[#00A6B2]">
+              <Link href="/" className="">
+                <div className="flex items-center justify-center  ">
                   <Image
-                    src="/assets/Cottage-Home.webp"
+                    src={companyLogo}
                     alt="Cottage Home Care Services Logo"
-                    className="p-2"
+                    className="p-2 bg-white flex justify-center rounded-full  shadow-xl border-2 border-[#00A6B2] w-16 h-16 "
                     width="64"
                     height="64"
                   />
                 </div>
-                <p className="self-center text-2xl">
-                  Cottage Home <br /> Care Services
-                </p>
+                <p className="text-center text-2xl">{companyName}</p>
               </Link>
             </div>
 
@@ -165,7 +179,7 @@ const Footer = () => {
                       New Jersey
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/maryland"
                       rel="noopener noreferrer"
@@ -174,7 +188,7 @@ const Footer = () => {
                       {" "}
                       Maryland
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="space-y-3">
