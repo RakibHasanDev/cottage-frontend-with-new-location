@@ -1,10 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ImBlog, ImHome } from "react-icons/im";
-import {
-  MdDashboard,
-  MdLightMode,
-  MdOutlineMedicalServices,
-} from "react-icons/md";
+import { SlLocationPin } from "react-icons/sl";
+import { MdLightMode, MdOutlineMedicalServices } from "react-icons/md";
 import { TbCertificate } from "react-icons/tb";
 import { BsFiles, BsFillTelephoneFill, BsVirus } from "react-icons/bs";
 import { RiCommunityFill } from "react-icons/ri";
@@ -64,10 +61,26 @@ const SideNav = () => {
           property: "PRIVATE PAY",
           path: "private-pay-home-care",
         },
-        // {
-        //   property: "CDPAP",
-        //   path: "cdpap",
-        // },
+      ],
+    },
+  ];
+  const serviceArea = [
+    {
+      id: 1,
+      question: "Select Your State",
+      answer: [
+        {
+          property: "Services Areas",
+          path: "service-areas",
+        },
+        {
+          property: "New York City",
+          path: "/",
+        },
+        {
+          property: "New Jersey",
+          path: "new-jersey",
+        },
       ],
     },
   ];
@@ -161,6 +174,62 @@ const SideNav = () => {
               <span>Home</span>
             </Link>
           </li>
+          {serviceArea?.map((item) => (
+            <li
+              key={item.id}
+              className={`py-1  list-none ${
+                tab === item.id
+                  ? "bg-[#435670f5] px-4 -ml-4 -mr-4"
+                  : "bg-transparent"
+              }`}
+            >
+              <button
+                onClick={() => handleClick(item.id)}
+                className="w-full focus:outline-none flex justify-between items-center "
+              >
+                <div className="flex items-center gap-3">
+                  <SlLocationPin className="text-base flex-shrink-0" />
+                  <span className="uppercase tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
+                    {item?.question}
+                  </span>
+                </div>
+
+                {/* ✅ Dropdown button only appears if there are sub-items */}
+                {item?.answer?.length > 0 && (
+                  <svg
+                    className={`fill-current h-6 w-6 transform transition-transform duration-500 ${
+                      tab === item.id
+                        ? "rotate-180 text-[#00A6B2]"
+                        : "text-gray-300"
+                    }`}
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                  </svg>
+                )}
+              </button>
+
+              {/* ✅ Only show dropdown content if item has answers */}
+              {item?.answer?.length > 0 && (
+                <div
+                  className={`overflow-hidden transition-all duration-500 ${
+                    tab === item.id ? "max-h-screen " : "max-h-0"
+                  }`}
+                >
+                  {item?.answer?.map((ans, index) => (
+                    <Link
+                      key={index}
+                      onClick={toggleCloser}
+                      href={`/${ans?.path}`}
+                      className="block  tracking-wide transition-colors duration-200 uppercase text-gray-100 hover:text-[#00A6B2] py-2.5"
+                    >
+                      {ans?.property}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </li>
+          ))}
 
           {/* Contact Us */}
           <li className="list-none">

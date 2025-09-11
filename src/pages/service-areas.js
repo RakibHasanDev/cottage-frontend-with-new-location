@@ -140,12 +140,12 @@ export default function HeroSection({
     <>
       <Head>
         <title>
-          Top Home Care Services in NY, NJ, MD | Trusted & Affordable Care
+          Trusted Home Care Services in NY, NJ, MD | Affordable Care
         </title>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta
           name="description"
-          content="Looking for reliable home care services in NY, NJ, or MD? Our compassionate team offers personalized care, including home health aides and Medicaid options in your area."
+          content="Looking for reliable home care in NY, N.J., or MD? Our compassionate team provides personalized support with home health aides and Medicaid care options."
         />
         <meta
           name="keywords"
@@ -225,12 +225,12 @@ export default function HeroSection({
 
           {/* Content */}
           <div className="relative lg:ml-[55%] lg:max-w-2xl w-full py-6 text-center text-white bg-simple lg:px-10 px-2 lg:-mt-28 mt-52 ">
-            <p className="mb-5 text-xs sm:text-base font-semibold tracking-[0.2em] uppercase text-white/80">
+            <h1 className="mb-5 text-xs sm:text-base font-semibold tracking-[0.2em] uppercase text-white/80">
               {kicker}
-            </p>
-            <h1 className="text-base lg:text-2xl font-extrabold leading-loose drop-shadow-sm  tracking-wider league-spartan">
-              {heading}
             </h1>
+            <h2 className="text-base lg:text-2xl font-extrabold leading-loose drop-shadow-sm  tracking-wider league-spartan">
+              {heading}
+            </h2>
 
             <div
               className=" font-[Roboto] flex justify-center items-center gap-2 lg:gap-8 md:gap-0 md:space-y-0 md:space-x-7 lg:flex-wrap mt-3 lg:mt-10 "
@@ -507,20 +507,20 @@ export default function HeroSection({
           }}
         >
           <div className="relative z-10 lg:w-[85%] w-[95%] mx-auto">
-            <h2
+            <h6
               className="text-center text-2xl lg:text-3xl font-bold  mb-12 league-spartan text-gray-600 dark:text-gray-100 w-[70%] mx-auto "
               style={{ lineHeight: "1.5" }}
             >
               3 Simple Steps to a Flourishing, Fulfilling Life at Home with a
               Loving Caregiver Near You
-            </h2>
+            </h6>
 
             <div className="grid md:grid-cols-3 gap-10 text-center ">
               {/* Step 1 */}
               <div className="space-y-3">
                 <div className="flex justify-center">
                   <Image
-                    src="/assets/icons/call.webp"
+                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1757506714/Icons/call_yqrbcg.webp"
                     alt="Call us"
                     className="h-12 w-12 lg:h-16 lg:w-16"
                     width={48}
@@ -540,7 +540,7 @@ export default function HeroSection({
               <div className="space-y-3 border-l-2 border-r-2 border-dotted  border-gray-400 px-6">
                 <div className="flex justify-center">
                   <Image
-                    src="/assets/icons/schedule.webp"
+                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1757506769/Icons/schedule_dk1por.webp"
                     alt="Schedule assessment"
                     className="h-12 w-12 lg:h-16 lg:w-16"
                     width={48}
@@ -561,7 +561,7 @@ export default function HeroSection({
               <div className="space-y-3">
                 <div className="flex justify-center">
                   <Image
-                    src="/assets/icons/match.webp"
+                    src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1757506741/Icons/match_bpe1d6.webp"
                     alt="Get matched"
                     className="h-12 w-12 lg:h-16 lg:w-16"
                     width={48}

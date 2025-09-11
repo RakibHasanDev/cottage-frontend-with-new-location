@@ -71,7 +71,9 @@ const PrivacyPolicy = () => {
       </Head>
 
       <section className="lg:w-[85%] w-[95%] mx-auto pb-5 space-y-3 dark:text-gray-100">
-        <h1 className="text-center pt-5 font-semibold">Terms and Conditions</h1>
+        <h1 className="text-center text-lg pt-5 font-semibold">
+          Privacy Policy{" "}
+        </h1>
         <p className="text-center font-semibold">
           Last updated: August 18, 2025
         </p>
@@ -100,9 +102,9 @@ const PrivacyPolicy = () => {
           <li>
             <p>
               <strong>Company</strong> (referred to as either &quot;the
-              Company&quot;, &quot;We&quot;, Us&quot; or &quot;Our&quot; in this
-              Agreement) refers to Cottage Home Care Services, 25 Newbridge
-              Road, Suite 302 Hicksville, New York 11801
+              Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot;
+              in this Agreement) refers to Cottage Home Care Services, 25
+              Newbridge Road, Suite 302 Hicksville, New York 11801
             </p>
           </li>
           <li>
@@ -121,10 +123,9 @@ const PrivacyPolicy = () => {
               <strong>Terms and Conditions</strong> (also referred as
               &quot;Terms&quot;) mean these Terms and Conditions that form the
               entire agreement between You and the Company regarding the use of
-              the Service.{" "}
+              the Service.
             </p>
           </li>
-
           <li>
             <p>
               <strong>Website</strong> refers to Cottage Home Care Services,
@@ -132,7 +133,6 @@ const PrivacyPolicy = () => {
               <a
                 className="text-blue-500"
                 href="https://cottagehomecare.com/"
-                rel="external nofollow noopener noreferrer"
                 target="_blank"
               >
                 https://cottagehomecare.com/
@@ -148,7 +148,7 @@ const PrivacyPolicy = () => {
           </li>
         </ul>
 
-        <h2 className="text-lg font-semibold">Acknowledgment</h2>
+        <h4 className="text-lg font-semibold">Acknowledgment</h4>
         <p>
           These are the Terms and Conditions governing the use of this Service
           and the agreement that operates between You and the Company. These
@@ -192,6 +192,7 @@ const PrivacyPolicy = () => {
           </a>{" "}
           carefully before using Our Service.
         </p>
+
         <div>
           <strong>SMS Terms & Conditions</strong>
           <br />
@@ -206,8 +207,10 @@ const PrivacyPolicy = () => {
           <br />
           <p>
             Phone numbers collected during the SMS opt-in process will{" "}
-            <strong>not</strong> be shared with third parties for marketing
-            purposes. Your data stays with us—safe and secure.
+            <strong>never</strong> be sold, rented, or shared with third parties
+            or affiliates <u>under any circumstances</u>. Your data stays with
+            us—safe and secure—and will only be used to deliver Cottage Home
+            Care Services communications you have consented to receive.
           </p>
 
           <br />
@@ -283,7 +286,7 @@ const PrivacyPolicy = () => {
               Email:{" "}
               <a
                 className="text-blue-500"
-                href="mailto:info@mcottagehomecare.com"
+                href="mailto:info@cottagehomecare.com"
               >
                 info@cottagehomecare.com
               </a>
@@ -328,7 +331,43 @@ const PrivacyPolicy = () => {
             <li>Message frequency may vary.</li>
           </ul>
         </div>
-        <h2 className="text-lg font-semibold">Links to Other Websites</h2>
+
+        {/* ✅ Inserted Mobile SMS Privacy block here */}
+        <h3 className="text-lg font-semibold">Mobile SMS Privacy</h3>
+        <p>
+          When you provide your mobile phone number and opt in to receive
+          SMS/text messages from Cottage Home Care Services, we will only use
+          your number to deliver the information and services you have
+          requested, such as appointment reminders, follow-up communications, or
+          account-related updates.
+        </p>
+        <p>
+          <strong>
+            We do not sell, rent, or share your mobile opt-in information with
+            third parties or affiliates under any circumstances.
+          </strong>{" "}
+          Your mobile phone number and SMS consent details will remain
+          confidential and will only be used by Cottage Home Care Services to
+          provide the services you have explicitly agreed to receive.
+        </p>
+        <p>
+          You may opt out of receiving SMS messages at any time by replying
+          &quot;STOP&quot; to any message or by contacting us directly through
+          our{" "}
+          <a
+            className="text-blue-500"
+            href="https://cottagehomecare.com/contact/"
+          >
+            Contact Page
+          </a>
+          . For help, reply &quot;HELP&quot; to any SMS or reach us at{" "}
+          <a className="text-blue-500" href="mailto:info@cottagehomecare.com">
+            info@cottagehomecare.com
+          </a>{" "}
+          or call us at <a href="tel:5163672266">(516) 367-2266</a>.
+        </p>
+
+        <h4 className="text-lg font-semibold">Links to Other Websites</h4>
         <p>
           Our Service may contain links to third-party web sites or services
           that are not owned or controlled by the Company.
@@ -359,7 +398,7 @@ const PrivacyPolicy = () => {
           </a>{" "}
           of any third-party web sites or services that You visit.
         </p>
-        <h2 className="text-lg font-semibold">Termination</h2>
+        <h5 className="text-lg font-semibold">Termination</h5>
         <p>
           We may terminate or suspend Your access immediately, without prior
           notice or liability, for any reason whatsoever, including without
@@ -369,7 +408,7 @@ const PrivacyPolicy = () => {
           Upon termination, Your right to use the Service will cease
           immediately.
         </p>
-        <h2 className="text-lg font-semibold">Limitation of Liability</h2>
+        <h3 className="text-lg font-semibold">Limitation of Liability</h3>
         <p>
           Not with standing any damages that You might incur, the entire
           liability of the Company and any of its suppliers under any provision
@@ -397,9 +436,9 @@ const PrivacyPolicy = () => {
           states, each party&apos;s liability will be limited to the greatest
           extent permitted by law.
         </p>
-        <h2 className="text-lg font-semibold">
+        <h6 className="text-lg font-semibold">
           &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; Disclaimer
-        </h2>
+        </h6>
         <p>
           The Service is provided to You &quot;AS IS&quot; and &quot;AS
           AVAILABLE&quot; and with all faults and defects without warranty of
@@ -437,27 +476,25 @@ const PrivacyPolicy = () => {
           set forth in this section shall be applied to the greatest extent
           enforceable under applicable law.
         </p>
-        <h2 className="text-lg font-semibold">Governing Law</h2>
+        <p className="text-lg font-semibold">Governing Law</p>
         <p>
           The laws of the Country, excluding its conflicts of law rules, shall
           govern this Terms and Your use of the Service. Your use of the
           Application may also be subject to other local, state, national, or
           international laws.
         </p>
-        <h2 className="text-lg font-semibold">Disputes Resolution</h2>
+        <p className="text-lg font-semibold">Disputes Resolution</p>
         <p>
           If You have any concern or dispute about the Service, You agree to
           first try to resolve the dispute informally by contacting the Company.
         </p>
-        <h2 className="text-lg font-semibold">For European Union (EU) Users</h2>
+        <p className="text-lg font-semibold">For European Union (EU) Users</p>
         <p>
           If You are a European Union consumer, you will benefit from any
           mandatory prov isions of the law of the country in which You are
           resident.
         </p>
-        <h2 className="text-lg font-semibold">
-          United States Legal Compliance
-        </h2>
+        <p className="text-lg font-semibold">United States Legal Compliance</p>
         <p>
           You represent and warrant that (i) You are not located in a country
           that is subject to the United States government embargo, or that has
@@ -465,8 +502,8 @@ const PrivacyPolicy = () => {
           supporting&quot; country, and (ii) You are not listed on any United
           States government list of prohibited or restricted parties.
         </p>
-        <h2 className="text-lg font-semibold">Severability and Waiver</h2>
-        <h3 className="text-lg font-semibold">Severability</h3>
+        <p className="text-lg font-semibold">Severability and Waiver</p>
+        <h5 className="text-lg font-semibold">Severability</h5>
         <p>
           If any provision of these Terms is held to be unenforceable or
           invalid, such provision will be changed and interpreted to accomplish
@@ -497,7 +534,6 @@ const PrivacyPolicy = () => {
             className="text-blue-500"
             href="https://cottagehomecare.com/contact/"
             target="_blank"
-            rel="noopener noreferrer"
           >
             cottagehomecare.com/contact/
           </a>

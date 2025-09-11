@@ -92,13 +92,13 @@ export default function ReviewsSection() {
   return (
     <section className="mt-8">
       <div
-        className="relative mt-16 min-h-[800px]"
+        className="relative mt-16 lg:min-h-[800px] h-[650px]"
         data-aos="fade-up"
         data-aos-duration="3000"
       >
         {/* Background Section */}
         <div
-          className="bg-cover bg-center h-[400px] lg:h-[550px] flex flex-col items-center justify-center text-center text-white px-4"
+          className="bg-cover bg-center h-[400px] lg:h-[550px] flex flex-col items-center justify-center text-center text-white px-4 "
           style={{
             backgroundImage: `
     linear-gradient(rgba(0, 166, 178, 0.85), rgba(0, 166, 178, 0.85)),
@@ -114,18 +114,18 @@ export default function ReviewsSection() {
               width={48}
               height={48}
             />
-            <h2
+            <p
               className="text-xl md:text-3xl font-bold max-w-3xl  league-spartan"
               style={{ lineHeight: "1.5" }}
             >
               See Why So Many Families Needing Home Care In NY, NJ, CT & MD Look
               To Us For <span className="underline">World-Class Care</span>
-            </h2>
+            </p>
           </div>
         </div>
 
         {/* Card Section */}
-        <div className="absolute top-[250px] lg:top-[320px] left-1/2 -translate-x-1/2 w-full max-w-4xl px-4">
+        <div className="absolute top-[250px] lg:top-[320px] left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 ">
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <div className="lg:flex justify-between items-center mb-4">
               <h3 className="lg:text-2xl font-semibold text-gray-700">

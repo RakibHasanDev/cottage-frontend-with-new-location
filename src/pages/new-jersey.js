@@ -355,8 +355,7 @@ export default function NewJersey() {
           data-aos="fade-down"
           data-aos-duration="2000"
         >
-          Cottage Homecare NJ, Makes Private Pay Care Simple with the Following
-          Steps
+          Cottage Homecare NJ, Makes Private Pay Care Simple: Following Steps
         </h2>
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Side: Image */}
