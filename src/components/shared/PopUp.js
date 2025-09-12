@@ -179,7 +179,9 @@ const PopUp = () => {
                       Eligibility Check
                     </h1>
                     <p className="mt-2 mb-1 text-center md:text-base text-sm">
-                      If you want to get service please fill up the form.
+                      <b> You Need Homecare Services?</b> <br />
+                      Then Fill out the form below to see how fast you can get
+                      started with your opportunities and benefits
                     </p>
 
                     <div className="grid grid-cols-2 gap-3 md:gap-6 mt-2 md:mt-4 w-full">

@@ -16,9 +16,10 @@ Allow: /_next/static/js/
 Allow: /_next/static/chunks/
 Allow: /_next/static/media/
 Allow: /team/$
+Allow: /service-areas/
+Allow: /new-jersey/
 Allow: /nhtd/
 Allow: /hha/
-Allow: /cdpap/
 Allow: /private-pay-home-care/
 Allow: /contact/
 Allow: /help-desk/

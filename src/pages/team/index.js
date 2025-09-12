@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { AiOutlineTeam } from "react-icons/ai";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
-
 import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/shared/Loading";
 import Link from "next/link";
@@ -92,36 +91,52 @@ const Team = () => {
     },
   });
 
-  // console.log(employees);
-
+  // Build groupings (de-duped) and then mirror HR into Office Manager
   const employeesByDepartment = {};
   const employeesByOffice = {};
 
   // Iterate through the employees array
-  employees.forEach((employee) => {
-    // Group by department (ensure no duplication)
-    if (!(employee.department in employeesByDepartment)) {
-      employeesByDepartment[employee.department] = [];
+  for (const employee of employees) {
+    // --- Department grouping with de-dupe ---
+    const dept = employee.department; // keep your existing keys as-is
+    if (!(dept in employeesByDepartment)) {
+      employeesByDepartment[dept] = [];
+    }
+    if (!employeesByDepartment[dept].some((e) => e._id === employee._id)) {
+      employeesByDepartment[dept].push(employee);
     }
 
-    // Add the employee to the department
-    const alreadyInDepartment = employeesByDepartment[employee.department].some(
-      (emp) => emp._id === employee._id
-    );
-    if (!alreadyInDepartment) {
-      employeesByDepartment[employee.department].push(employee);
-    }
-
-    // Group by office
+    // --- Office grouping with de-dupe (was missing before) ---
     if (employee.office) {
-      if (!(employee.office in employeesByOffice)) {
-        employeesByOffice[employee.office] = [];
+      const office = employee.office;
+      if (!(office in employeesByOffice)) {
+        employeesByOffice[office] = [];
       }
-
-      // Add the employee to the office group
-      employeesByOffice[employee.office].push(employee);
+      if (!employeesByOffice[office].some((e) => e._id === employee._id)) {
+        employeesByOffice[office].push(employee);
+      }
     }
-  });
+  }
+
+  // --- Mirror HrSuperVisor into OfficeManager (non-destructive + idempotent) ---
+  {
+    const hr = employeesByDepartment?.HrSuperVisor ?? [];
+    // ensure OfficeManager exists
+    employeesByDepartment.OfficeManager =
+      employeesByDepartment.OfficeManager ?? [];
+
+    const omIds = new Set(
+      employeesByDepartment.OfficeManager.map((emp) => emp._id)
+    );
+
+    // push shallow copies so HR remains pristine even if OfficeManager changes later
+    hr.forEach((emp) => {
+      if (!omIds.has(emp._id)) {
+        employeesByDepartment.OfficeManager.push({ ...emp });
+        omIds.add(emp._id);
+      }
+    });
+  }
 
   // Log the final groups
   // console.log("Employees by Department:", employeesByDepartment);

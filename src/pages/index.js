@@ -1,12 +1,12 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 import CustomCarousel from "@/components/home/CustomCarousel";
 import WeAre from "@/components/home/WeAre";
 import Quality from "@/components/home/Quality";
 import WhyChoose from "@/components/home/WhyChoose";
 import MedicaidApply from "@/components/home/MedicaidApply";
-
 import dynamic from "next/dynamic";
+import CareRequestModal from "@/components/shared/CareRequestModal";
 const UpdateTestimonial = dynamic(
   () => import("@/components/home/Testimonial/Testimonials"),
   { ssr: false }
@@ -29,6 +29,8 @@ const PromotionalVideoSlider = dynamic(
 );
 
 export default function Home() {
+  const [open, setOpen] = useState(false);
+
   const title = "Cottage Home Care Services – NHTD, HHA & Private Pay";
   const description =
     "Top-rated NYC home care services including NHTD, HHA, PCA, Private Pay, OPWDD & elder care. Call Cottage Home Care today for expert, personalized support.";
@@ -275,7 +277,7 @@ export default function Home() {
         </h2>
 
         <section id="hero">
-          <CustomCarousel />
+          <CustomCarousel onRequestCare={() => setOpen(true)} />
         </section>
         <section id="testimonial">
           <UpdateTestimonial />
@@ -336,6 +338,8 @@ export default function Home() {
             ready to meet your needs with professionalism, dignity, and respect.
           </p>
         </section>
+
+        <CareRequestModal open={open} setOpen={setOpen} />
       </main>
     </>
   );

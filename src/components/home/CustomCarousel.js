@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import SkeletonLoading from "../shared/SkeletonLoading";
 // const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 // import reader2 from "../../../src/assets/Lotty File/holi.json";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 
 const images = [
@@ -23,8 +22,9 @@ const images = [
   },
 ];
 
-const CustomCarousel = () => {
+const CustomCarousel = ({ onRequestCare = () => {} }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   // const [shouldDisplay, setShouldDisplay] = useState(false);
   // const [isClient, setIsClient] = useState(false);
@@ -62,7 +62,7 @@ const CustomCarousel = () => {
   // console.log(shouldDisplay, today);
 
   return (
-    <div className="custom-wave-section h-[84.04vh] relative">
+    <div className="custom-wave-section relative overflow-hidden isolate  h-[84vh]">
       {/* {isClient && shouldDisplay && (
         <div className="w-36 h-36 md:h-52 md:w-52 absolute -top-7 md:-top-10 right-3 md:right-8 z-20">
           <Lottie
@@ -76,16 +76,18 @@ const CustomCarousel = () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        className="absolute bottom-0 left-0 w-full z-10 hidden md:block"
+        preserveAspectRatio="none"
+        className="pointer-events-none  h-[100px]  z-20 hidden lg:block -mb-1"
       >
         <path
           d="M0,224C480,400,960,150,1440,256L1440,320L0,320Z"
           className="fill-white dark:fill-slate-600"
-        ></path>
+        />
       </svg>
 
+      {/* md:top-[35vh] lg:top-[10vh] 2xl:top-[27vh] */}
       <div
-        className="banner-text absolute z-20 bottom-0 md:top-[35vh] lg:top-[28vh] w-full"
+        className=" absolute z-20 bottom-0  w-full  2xl:bottom-[120px] lg:bottom-[200px] "
         id="main-banner-text"
       >
         <div className="mx-auto">
@@ -103,13 +105,19 @@ const CustomCarousel = () => {
                 HHA/PCA, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY,
                 NASSAU & SUFFOLK COUNTY, WESTCHESTER & ALBANY.
               </p>
-              <div className="flex justify-center text-white font-semibold second-text">
+              <div className="flex justify-center items-center text-white font-semibold second-text gap-3">
                 <a
                   href="tel:+1516-367-2266"
-                  className="px-8 py-3 rounded-full text-lg bg-[#00A6B2] uppercase bg-hov2 coco-gothic"
+                  className="md:px-8 md:py-3 px-5 py-2 rounded-full text-base bg-[#00A6B2] uppercase bg-hov2 coco-gothic"
                 >
                   Contact Us
                 </a>
+                <button
+                  onClick={onRequestCare} // ✅ opens modal
+                  className="md:px-8 md:py-3 px-5 py-2 rounded-full text-base bg-[#687699] uppercase bg-hov2 coco-gothic"
+                >
+                  Request CARE
+                </button>
               </div>
             </div>
           </div>
