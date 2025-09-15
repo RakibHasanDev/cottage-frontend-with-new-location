@@ -229,26 +229,82 @@ export default function NewJersey() {
       mainEntity: [
         {
           "@type": "Question",
-          name: "What is the NHTD Program?",
+          name: "What services does Cottage Homecare NJ, LLC provide?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "The NHTD (Nursing Home Transition and Diversion) program is designed to help Medicaid-eligible individuals transition from a nursing home to independent living with home care services. It provides personal care assistance, medical support, and home modifications.",
+            text: "We offer a wide range of homecare services, including personal care, companion care, respite care, medication reminders, light housekeeping, and customized care plans tailored to each client’s needs.",
           },
         },
         {
           "@type": "Question",
-          name: "Who qualifies for NHTD in NYC?",
+          name: "How do I know if homecare is right for my loved one?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "To qualify for NHTD in NYC, individuals must be Medicaid-eligible, require nursing home-level care, and be able to live safely at home with support. Those under 65 must have a physical disability.",
+            text: "Homecare is perfect for individuals who want to remain in the comfort of their own home but need help with daily activities such as bathing, dressing, mobility, meal preparation, or companionship.",
           },
         },
         {
           "@type": "Question",
-          name: "Does NHTD cover home modifications?",
+          name: "Are your caregivers trained and certified?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes, the NHTD program can include home modifications such as wheelchair ramps, bathroom safety installations, and other adjustments to help individuals live independently.",
+            text: "Yes. Every caregiver goes through a thorough background check, professional training, and certification to ensure they provide safe, reliable, and compassionate care.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you create personalized care plans?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Absolutely. We collaborate with each family to create a personalized care plan that reflects your loved one’s health needs, preferences, and schedule.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Can I choose the caregiver for my loved one?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. We carefully match caregivers to clients based on skills, experience, and personality. Families also have the flexibility to request a caregiver change if needed.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Is Cottage Homecare NJ, LLC available 24/7?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes. We offer flexible scheduling with caregivers available days, nights, weekends, and holidays to ensure your loved one always has the support they need.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do you accept private pay or insurance?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We offer private pay services and can also guide families through long-term care insurance options. Our team provides clear, upfront information about all payment methods.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How quickly can services begin?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "In most cases, we can start services within 24–48 hours of your consultation, so care is available without long delays.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What areas do you serve in New Jersey?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Cottage Homecare NJ, LLC proudly serves families throughout NJ service areas – Jersey City, Bayonne, Union, Newark, Fairfield, East Orange, Linden.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I get started with Cottage Homecare NJ, LLC?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Getting started is simple! Call us to schedule your free in-home consultation. Together, we’ll create a customized care plan that best supports your loved one.",
           },
         },
       ],
