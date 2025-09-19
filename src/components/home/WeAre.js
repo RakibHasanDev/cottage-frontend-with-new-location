@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import { Icon } from "@iconify/react";
 import Image from "next/image";
 
 const WeAre = () => {
@@ -19,24 +19,23 @@ const WeAre = () => {
 
   const informations = [
     {
-  img: "/assets/we-are/caregiver_you_can_trust.webp",
-  title: "Caregivers You Can Trust",
-  description:
-    "At Cottage Home Care Services, we provide daily or weekly assistance tailored to your needs, whether due to aging, illness, recovery, or rehabilitation. Our certified caregivers offer professional support to ensure your comfort and wellbeing. Our in-house Registered Nurse conducts regular visits to monitor your health, providing peace of mind for you and your loved ones. Dedicated to quality care and support, we’re always here to answer your questions—just give us a call!",
-},
-{
-  img: "/assets/we-are/Experienced_and_Supportive.webp",
-  title: "Experienced and Supportive",
-  description:
-    "We understand that not one care plan fits all, whether it’s through HHA or NHTD services. Daily services can include anything from meal preparation, hygiene, cleaning, and supervision. We at Cottage Home Care Services will take the time to get to know you and develop an individualized care plan that fits your specific needs.",
-},
-{
-  img: "/assets/we-are/Experienced Home Health Aids.webp",
-  title: "Experienced Home Health Aids",
-  description:
-    "Companionship is key to a trusted relationship with our caregivers at Cottage Home Care Services. We not only strive to help you with everyday tasks but want to develop a caring relationship with you. We provide one-on-one attention and care that cannot compare in other settings for both patients in Home Health Care and HHA or NHTD programs. All our Home Health Aides are strictly trained under New York City guidelines, and all have Certification from a specialized training school.",
-}
-
+      img: "/assets/we-are/caregiver_you_can_trust.webp",
+      title: "Caregivers You Can Trust",
+      description:
+        "At Cottage Home Care Services, we provide daily or weekly assistance tailored to your needs, whether due to aging, illness, recovery, or rehabilitation. Our certified caregivers offer professional support to ensure your comfort and wellbeing. Our in-house Registered Nurse conducts regular visits to monitor your health, providing peace of mind for you and your loved ones. Dedicated to quality care and support, we’re always here to answer your questions—just give us a call!",
+    },
+    {
+      img: "/assets/we-are/Experienced_and_Supportive.webp",
+      title: "Experienced and Supportive",
+      description:
+        "We understand that not one care plan fits all, whether it’s through HHA or NHTD services. Daily services can include anything from meal preparation, hygiene, cleaning, and supervision. We at Cottage Home Care Services will take the time to get to know you and develop an individualized care plan that fits your specific needs.",
+    },
+    {
+      img: "/assets/we-are/Experienced Home Health Aids.webp",
+      title: "Experienced Home Health Aids",
+      description:
+        "Companionship is key to a trusted relationship with our caregivers at Cottage Home Care Services. We not only strive to help you with everyday tasks but want to develop a caring relationship with you. We provide one-on-one attention and care that cannot compare in other settings for both patients in Home Health Care and HHA or NHTD programs. All our Home Health Aides are strictly trained under New York City guidelines, and all have Certification from a specialized training school.",
+    },
   ];
   return (
     <div className="bg-[#F5F5F7] pb-16 dark:bg-slate-600">
@@ -44,15 +43,15 @@ const WeAre = () => {
         <p className=" text-2xl xl:text-4xl font-bold text-center league-spartan  dark:text-gray-200 text-[#00A6B2]">
           Who We Are
         </p>
-        <hr className="border-[#00a6b2] border-t-2 w-12 mt-2 mx-auto mb-5  " />
+        <hr className="border-[#00A6B2] border-t-2 w-12 mt-2 mx-auto mb-5  " />
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 shadow-xl ">
           {informations?.map((info, index) => (
             <div
               key={index}
               className="cube-container"
-              data-aos="zoom-in"
-              data-aos-duration="1000"
+              // data-aos="zoom-in"
+              // data-aos-duration="1000"
             >
               <div
                 onMouseEnter={() => handleMouseEnter(index)}
@@ -103,7 +102,10 @@ const WeAre = () => {
                             : "bg-[#00A6B2]" // Default background
                         } font-bold`}
                       >
-                        <IoIosArrowRoundForward className="text-3xl flex justify-center items-center arrow-animation" />
+                        <Icon
+                          icon="ion:ios-arrow-round-forward"
+                          className="text-3xl flex justify-center items-center arrow-animation"
+                        />
                       </p>
                     </h5>
                   </div>

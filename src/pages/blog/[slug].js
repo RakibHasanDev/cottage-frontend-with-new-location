@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Loading from "@/components/shared/Loading";
 import Link from "next/link";
-import { FaXTwitter } from "react-icons/fa6";
-import { PiLineVerticalBold } from "react-icons/pi";
+import { Icon } from "@iconify/react";
 import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useQuery } from "@tanstack/react-query";
@@ -12,12 +11,6 @@ import useAdmin from "@/hooks/useAdmin";
 import { encode } from "html-entities";
 import BlogSidebar from "@/components/Blog/BlogSideBar";
 import Image from "next/image";
-import {
-  MdHome,
-  MdNavigateBefore,
-  MdNavigateNext,
-  MdOutlineArrowForwardIos,
-} from "react-icons/md";
 import { sanitizeAndLinkify } from "@/utils/sanitize";
 
 import {
@@ -29,7 +22,7 @@ import {
   LinkedinIcon,
   WhatsappIcon,
 } from "react-share";
-import { FiCopy } from "react-icons/fi";
+
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 
 export async function getStaticPaths() {
@@ -280,12 +273,12 @@ const BlogDetails = ({
         <link
           rel="alternate"
           href={`https://cottagehomecare.com/blog/${blog?.slug}/`}
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href={`https://cottagehomecare.com/blog/${blog?.slug}/`}
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"
@@ -457,7 +450,10 @@ const BlogDetails = ({
                     </div>
 
                     <p>
-                      <PiLineVerticalBold className=" text-lg md:text-xl text-gray-600 dark:text-gray-100" />
+                      <Icon
+                        icon="ph:line-vertical-bold"
+                        className=" text-lg md:text-xl text-gray-600 dark:text-gray-100"
+                      />
                     </p>
 
                     <div>
@@ -473,7 +469,10 @@ const BlogDetails = ({
                     </div>
 
                     <p>
-                      <PiLineVerticalBold className=" text-lg md:text-xl text-gray-600 dark:text-gray-100" />
+                      <Icon
+                        icon="ph:line-vertical-bold"
+                        className=" text-lg md:text-xl text-gray-600 dark:text-gray-100"
+                      />
                     </p>
 
                     <div>
@@ -485,14 +484,17 @@ const BlogDetails = ({
                       </p>
                     </div>
                     <p>
-                      <PiLineVerticalBold className=" text-lg md:text-xl text-gray-600 dark:text-gray-100 hidden" />
+                      <Icon
+                        icon="ph:line-vertical-bold"
+                        className=" text-lg md:text-xl text-gray-600 dark:text-gray-100 hidden"
+                      />
                     </p>
 
                     <Link
                       href="/"
                       className="lg:flex items-center gap-1hover:underline text-gray-600 dark:text-gray-100 font-semibold text-[11px] md:text-base hidden"
                     >
-                      <MdHome size={18} />
+                      <Icon icon="material-symbols:home" size={18} />
                       <span>Home</span>
                     </Link>
                   </div>
@@ -545,7 +547,11 @@ const BlogDetails = ({
                             padding: "6px",
                           }}
                         >
-                          <FaXTwitter color="#fff" size={19} />
+                          <Icon
+                            icon="fa6-brands:x-twitter"
+                            color="#fff"
+                            size={19}
+                          />
                         </div>
                       </TwitterShareButton>
 
@@ -571,7 +577,7 @@ const BlogDetails = ({
                         className="w-[32px] h-[32px] rounded-full bg-gray-300 dark:bg-slate-500 flex dark:text-white items-center justify-center"
                         title="Copy link"
                       >
-                        <FiCopy size={14} />
+                        <Icon icon="feather:copy" size={14} />
                       </button>
                     </div>
 
@@ -585,12 +591,18 @@ const BlogDetails = ({
                           href={`/blog/${previousBlog.slug}`}
                           className="flex items-center gap-1 text-blue-600 hover:underline dark:text-gray-100 font-bold"
                         >
-                          <MdNavigateBefore size={18} />
+                          <Icon
+                            icon="material-symbols:navigate-before"
+                            size={18}
+                          />
                           <span>Previous</span>
                         </Link>
                       ) : (
                         <span className="flex items-center gap-1 text-gray-400 dark:text-gray-100 font-bold">
-                          <MdNavigateBefore size={18} />
+                          <Icon
+                            icon="material-symbols:navigate-before"
+                            size={18}
+                          />
                           <span>Previous</span>
                         </span>
                       )}
@@ -605,7 +617,7 @@ const BlogDetails = ({
                         href="/"
                         className="flex items-center gap-1 text-blue-600 hover:underline dark:text-gray-100 font-bold"
                       >
-                        <MdHome size={18} />
+                        <Icon icon="material-symbols:home" size={18} />
                         <span>Home</span>
                       </Link>
 
@@ -621,12 +633,18 @@ const BlogDetails = ({
                           className="flex items-center gap-1 text-blue-600 hover:underline dark:text-gray-100 font-bold"
                         >
                           <span>Next</span>
-                          <MdNavigateNext size={18} />
+                          <Icon
+                            icon="material-symbols:navigate-next"
+                            size={18}
+                          />
                         </Link>
                       ) : (
                         <span className="flex items-center gap-1 text-gray-400 dark:text-gray-100">
                           <span>Next</span>
-                          <MdNavigateNext size={18} />
+                          <Icon
+                            icon="material-symbols:navigate-next"
+                            size={18}
+                          />
                         </span>
                       )}
                     </div>
@@ -641,7 +659,7 @@ const BlogDetails = ({
                       <p className="text-center font-semibold mt-8 text-lg   dark:text-gray-100  league-spartan">
                         Related Topic
                       </p>
-                      <hr className="border-[#00a6b2] border-t-[1.5px] w-12 mt-1 mx-auto" />
+                      <hr className="border-[#00A6B2] border-t-[1.5px] w-12 mt-1 mx-auto" />
                       <p className="p-3 px-5">
                         {blog?.keywords?.map((keyword, index) => (
                           <span
@@ -680,7 +698,7 @@ const BlogDetails = ({
                   <p className="text-center font-semibold mt-8 text-lg   dark:text-gray-100  league-spartan">
                     COMMENT SECTION
                   </p>
-                  <hr className="border-[#00a6b2] border-t-[1.5px] w-12 mt-1 mx-auto" />
+                  <hr className="border-[#00A6B2] border-t-[1.5px] w-12 mt-1 mx-auto" />
 
                   <div className="w-[90%] mx-auto mt-10 open-sans">
                     <form onSubmit={handleSubmit(commentHandler)}>

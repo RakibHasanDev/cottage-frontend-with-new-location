@@ -76,12 +76,12 @@ const PastEvent = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/past-event/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/past-event/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/past-event/" />
 
@@ -131,8 +131,8 @@ const PastEvent = () => {
           <div className="md:flex justify-between  items-center dark:bg-slate-800 ">
             <div
               className="md:w-[50%]  mx-auto "
-              data-aos="fade-right"
-              data-aos-duration="2000"
+              // data-aos="fade-right"
+              // data-aos-duration="2000"
             >
               <div className="w-[90%] mx-auto ">
                 <div className="-mt-20">
@@ -187,8 +187,8 @@ const PastEvent = () => {
             </div>
             <div
               className="z-10 md:-mt-8 "
-              data-aos="fade-up"
-              data-aos-duration="2000"
+              // data-aos="fade-up"
+              // data-aos-duration="2000"
             >
               <Image
                 src="/assets/pst_event-cover.webp"
@@ -276,12 +276,14 @@ const PastEvent = () => {
         <p className="text-center  text-xl  league-spartan md:text-xl lg:text-2xl xl:text-4xl font-semibold dark:text-gray-100 mt-12 text-[#00A6B2] ">
           Cottage Photo Album
         </p>
-        <hr className="border-[#00a6b2] border-t-2 w-12 mt-2 md:mb-3  mx-auto mb-3 " />
+        <hr className="border-[#00A6B2] border-t-2 w-12 mt-2 md:mb-3  mx-auto mb-3 " />
         <div className="lg:w-[75%] mx-auto py-8 w-[95%] " id="event-card">
           <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 md:gap-10 gap-7 ">
             {events?.map((eve, index) => (
               <Link key={index} href={`/${eve?.path}`}>
-                <div data-aos="zoom-in" data-aos-duration="1000">
+                <div
+                // data-aos="zoom-in" data-aos-duration="1000"
+                >
                   <div className="relative overflow-hidden h-64 md:h-48 xl:h-64">
                     <Image
                       src={eve?.img}

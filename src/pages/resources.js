@@ -191,12 +191,12 @@ const Resources = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/resources/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/resources/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/resources/" />
 

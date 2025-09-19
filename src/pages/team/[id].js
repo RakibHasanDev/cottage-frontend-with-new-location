@@ -3,9 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { QRCodeCanvas } from "qrcode.react";
 import React, { useEffect, useState } from "react";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { FaSquareFacebook, FaXTwitter } from "react-icons/fa6";
+import { Icon } from "@iconify/react";
 import ReactLinkify from "react-linkify";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
@@ -221,13 +219,19 @@ const EmployeeDetails = ({ employee }) => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      <FaSquareFacebook className="bg-hov2" />
+                      <Icon
+                        icon="fa6-brands:square-facebook"
+                        className="bg-hov2"
+                      />
                     </a>
                   </>
                 ) : (
                   <>
                     <button className="bg-hov2 cursor-default" disabled>
-                      <FaSquareFacebook className="bg-hov2" />
+                      <Icon
+                        icon="fa6-brands:square-facebook"
+                        className="bg-hov2"
+                      />
                     </button>
                   </>
                 )}
@@ -238,13 +242,13 @@ const EmployeeDetails = ({ employee }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaInstagramSquare className="bg-hov2" />
+                      <Icon icon="fa6-brands:instagram" className="bg-hov2" />
                     </a>
                   </>
                 ) : (
                   <>
                     <button className="bg-hov2 cursor-default" disabled>
-                      <FaInstagramSquare className="bg-hov2" />
+                      <Icon icon="fa6-brands:instagram" className="bg-hov2" />
                     </button>
                   </>
                 )}
@@ -256,13 +260,13 @@ const EmployeeDetails = ({ employee }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaXTwitter className="bg-hov2" />
+                      <Icon icon="fa6-brands:x-twitter" className="bg-hov2" />
                     </a>
                   </>
                 ) : (
                   <>
                     <button className="bg-hov2 cursor-default" disabled>
-                      <FaXTwitter className="bg-hov2" />
+                      <Icon icon="fa6-brands:x-twitter" className="bg-hov2" />
                     </button>
                   </>
                 )}
@@ -273,13 +277,13 @@ const EmployeeDetails = ({ employee }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <FaLinkedin className="bg-hov2" />
+                      <Icon icon="fa6-brands:linkedin" className="bg-hov2" />
                     </a>
                   </>
                 ) : (
                   <>
                     <button className="bg-hov2 cursor-default" disabled>
-                      <FaLinkedin className="bg-hov2" />
+                      <Icon icon="fa6-brands:linkedin" className="bg-hov2" />
                     </button>
                   </>
                 )}
@@ -291,7 +295,10 @@ const EmployeeDetails = ({ employee }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <AiOutlineGlobal className="bg-hov2" />
+                      <Icon
+                        icon="ant-design:global-outlined"
+                        className="bg-hov2"
+                      />
                     </a>
                   </>
                 )}

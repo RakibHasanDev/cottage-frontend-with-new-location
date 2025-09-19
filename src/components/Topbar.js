@@ -1,12 +1,9 @@
 "use client";
 import React, { Suspense } from "react";
-import { BsFacebook, BsFillTelephoneFill, BsInstagram } from "react-icons/bs";
-import { FaTiktok } from "react-icons/fa";
-import { TfiEmail } from "react-icons/tfi";
-import { FaXTwitter } from "react-icons/fa6";
-import Loading from "./shared/Loading";
 import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
+import Loading from "./shared/Loading";
+import { Icon } from "@iconify/react"; // one library for system + brand icons
 
 const GoogleTranslate = dynamic(
   () => import("@/components/nav/GoogleTranslate"),
@@ -15,6 +12,9 @@ const GoogleTranslate = dynamic(
     ssr: false,
   }
 );
+
+// sanitize phone for tel: links
+const digitsOnly = (s) => s.replace(/\D+/g, "");
 
 const TopBar = () => {
   const pathname = usePathname();
@@ -32,84 +32,113 @@ const TopBar = () => {
     email = "maryland@cottagehomecare.com"; // MD email
   }
 
+  const telHref = `tel:+1${digitsOnly(phone)}`;
+  const mailHref = `mailto:${email}`;
+
   return (
     <div className="dark:bg-slate-800">
       <div className="block w-[95%] mx-auto league-spartan font-semibold dark:text-gray-200">
         <div className="flex md:justify-center justify-between items-center">
           <div className="roboto px-4 md:px-8 py-3 lg:flex items-center lg:justify-between lg:w-[95%]">
+            {/* Left: Phone + Email (desktop) */}
             <div className="lg:flex gap-8 hidden">
               <div className="flex gap-4 items-center md:text-lg topbar-text">
-                <BsFillTelephoneFill />
+                <Icon
+                  icon="lucide:phone"
+                  className="lg:w-6 lg:h-6 w-4 h-4"
+                  aria-hidden
+                />
                 <p>
                   Call{" "}
                   <a
-                    href={`tel:+1${phone}`}
-                    className="text-[#00A6B2] dark:text-gray-300"
-                    aria-label="Call us at 516-367-2266"
+                    href={telHref}
+                    className="text-[#005f6b] dark:text-gray-100 font-semibold"
+                    aria-label={`Call us at ${phone}`}
                   >
                     {phone}
                   </a>
                 </p>
               </div>
               <div className="flex gap-4 items-center md:text-lg topbar-text">
-                <TfiEmail />
+                <Icon
+                  icon="lucide:mail"
+                  className="lg:w-6 lg:h-6 w-4 h-4"
+                  aria-hidden
+                />
                 <p>
                   Email{" "}
                   <a
-                    href={`mailto:${email}`}
-                    className="text-[#00A6B2] dark:text-gray-300"
-                    aria-label="Email us at info@cottagehomecare.com"
+                    href={mailHref}
+                    className="text-[#005f6b] dark:text-gray-100 font-semibold"
+                    aria-label={`Email us at ${email}`}
                   >
                     {email}
                   </a>
                 </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 md:gap-5 md:text-lg font-medium text-[#00A6B2]">
+
+            {/* Right: quick actions + socials */}
+            <div className="flex items-center gap-4 md:gap-5 md:text-lg font-medium text-[#005f6b]">
+              {/* Mobile quick actions */}
               <a
-                href="tel:+1516-367-2266"
-                className="text-[#00A6B2] lg:hidden md:text-2xl bg-hov2 dark:text-gray-300"
-                aria-label="Call us at 516-367-2266"
+                href={telHref}
+                className="text-[#005f6b] lg:hidden md:text-2xl bg-hov2 dark:text-gray-300"
+                aria-label={`Call us at ${phone}`}
               >
-                <BsFillTelephoneFill />
+                <Icon icon="lucide:phone" className="w-4 lg:w-6 h-4 lg:h-6" />
               </a>
               <a
-                href={`mailto:${"info"}@${"cottagehomecare.com"}`}
-                className="text-[#00A6B2] md:text-2xl bg-hov2 lg:hidden dark:text-gray-300"
-                aria-label="Email us at info@cottagehomecare.com"
+                href={mailHref}
+                className="text-[#005f6b] md:text-2xl bg-hov2 lg:hidden dark:text-gray-300"
+                aria-label={`Email us at ${email}`}
               >
-                <TfiEmail />
+                <Icon icon="lucide:mail" className="w-4 lg:w-6 h-4 lg:h-6" />
               </a>
+
+              {/* Social icons */}
               <a
                 href="https://www.facebook.com/cottageHC"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="Our Facebook page"
               >
-                <BsFacebook className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon" />
+                <Icon
+                  icon="simple-icons:facebook"
+                  className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon w-4 lg:w-6 h-4 lg:h-6"
+                />
               </a>
               <a
                 href="https://www.instagram.com/cottage.homecare/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label="Visit our Instagram profile"
               >
-                <BsInstagram className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon" />
+                <Icon
+                  icon="simple-icons:instagram"
+                  className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon w-4 lg:w-6 h-4 lg:h-6"
+                />
               </a>
-              <a href="#" target="_blank" rel="noreferrer">
-                <FaXTwitter
-                  className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon"
-                  aria-label="Visit our Twitter profile"
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Twitter (X) profile"
+              >
+                <Icon
+                  icon="simple-icons:x"
+                  className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon w-4 lg:w-6 h-4 lg:h-6"
                 />
               </a>
               <a
                 href="https://www.tiktok.com/@cottage.homecare"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="Visit our TikTok profile"
               >
-                <FaTiktok
-                  className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon"
-                  aria-label="Visit our Tiktok profile"
+                <Icon
+                  icon="simple-icons:tiktok"
+                  className="md:text-2xl bg-hov2 dark:text-gray-300 topbar-icon w-4 lg:w-6 h-4 lg:h-6"
                 />
               </a>
             </div>

@@ -192,14 +192,8 @@ export default function Home() {
 
   const preloadLinks = [
     {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_1920/v1741710684/Website%20Hero%20Images/Cottage-Home-Care-Slider-1.webp",
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1758131541/main_banner/Cottage-Home-Care.webp",
       // ✅ Matches first large image
-      as: "image",
-      type: "image/webp",
-      fetchPriority: "high",
-    },
-    {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710747/Website%20Hero%20Images/cottage-home-care-slider-1-sm.webp", // ✅ Matches first small image
       as: "image",
       type: "image/webp",
       fetchPriority: "high",
@@ -219,12 +213,12 @@ export default function Home() {
         <link
           rel="alternate"
           href={"https://cottagehomecare.com/"}
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href={"https://cottagehomecare.com/"}
-          hreflang="x-default"
+          hrefLang="x-default"
         />
 
         {/* ✅ Open Graph Meta Tags (Facebook, LinkedIn) */}

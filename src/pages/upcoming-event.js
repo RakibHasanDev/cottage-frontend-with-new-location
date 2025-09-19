@@ -65,12 +65,12 @@ const UpcomingEvent = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/upcoming-event/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/upcoming-event/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"

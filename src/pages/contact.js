@@ -168,12 +168,12 @@ const Contacts = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/contact/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/contact/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/contact/" />
 

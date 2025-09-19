@@ -56,12 +56,12 @@ const schoolSupply = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/school-supply/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/school-supply/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"
@@ -178,8 +178,8 @@ const schoolSupply = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img11.webp"}
@@ -189,8 +189,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-2.webp"}
@@ -200,8 +200,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-3.webp"}
@@ -211,8 +211,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-4.webp"}
@@ -225,8 +225,8 @@ const schoolSupply = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-5.webp"}
@@ -236,8 +236,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-8.webp"}
@@ -247,8 +247,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-7.webp"}
@@ -258,8 +258,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-6.webp"}
@@ -269,8 +269,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-10.webp"}
@@ -284,8 +284,8 @@ const schoolSupply = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img11.webp"}
@@ -295,8 +295,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-12.webp"}
@@ -306,8 +306,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-13.webp"}
@@ -317,8 +317,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-14.webp"}
@@ -331,8 +331,8 @@ const schoolSupply = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-16.webp"}
@@ -342,8 +342,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-17.webp"}
@@ -353,8 +353,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-15.webp"}
@@ -364,8 +364,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-13.webp"}
@@ -375,8 +375,8 @@ const schoolSupply = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/new-school-giveaway/img-19.webp"}

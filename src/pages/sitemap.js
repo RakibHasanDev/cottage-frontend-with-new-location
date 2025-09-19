@@ -22,12 +22,12 @@ const Sitemap = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/sitemap/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/sitemap/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/sitemap/" />
 
@@ -113,7 +113,6 @@ const Sitemap = () => {
                 Private Pay
               </Link>
             </li>
-            
           </ul>
         </div>
 

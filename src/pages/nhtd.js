@@ -1,8 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { TbFileTypePdf } from "react-icons/tb";
-import { FaPlayCircle } from "react-icons/fa";
-import { RiArrowRightDoubleFill } from "react-icons/ri";
+import { Icon } from "@iconify/react";
 import Faq from "@/components/nhtd/Faq";
 import ModalBody from "@/components/shared/ModalBody";
 import Link from "next/link";
@@ -10,7 +8,6 @@ import Head from "next/head";
 import ServicesComponent from "@/components/nhtd/ServicesComponent";
 import Image from "next/image";
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
-import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
 const NHTD = () => {
   const [showModal, setShowModal] = useState(false);
@@ -175,12 +172,12 @@ const NHTD = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/nhtd/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/nhtd/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
 
         <link rel="canonical" href="https://cottagehomecare.com/nhtd/" />
@@ -307,7 +304,8 @@ const NHTD = () => {
                       }
                       className=" my-3 bg-[#00A6B2] text-white px-4 py-2 rounded-md flex gap-1 items-center"
                     >
-                      <TbFileTypePdf className="text-xl" /> NHTD Brochures
+                      <Icon icon="tabler:file-type-pdf" className="text-xl" />{" "}
+                      NHTD Brochures
                     </button>
 
                     <button
@@ -318,7 +316,10 @@ const NHTD = () => {
                       }
                       className=" my-3 bg-[#00A6B2] text-white px-4 py-2 rounded-md flex gap-1 items-center"
                     >
-                      <TbFileTypePdf className="text-xl md:text-base lg:text-xl" />{" "}
+                      <Icon
+                        icon="tabler:file-type-pdf"
+                        className="text-xl md:text-base lg:text-xl"
+                      />{" "}
                       Company Details
                     </button>
                   </div>
@@ -439,7 +440,10 @@ const NHTD = () => {
                     onClick={openModal}
                     className="play-btn cursor-pointer"
                   >
-                    <FaPlayCircle className="text-3xl lg:text-4xl" />
+                    <Icon
+                      icon="fa6-regular:circle-play"
+                      className="text-3xl lg:text-4xl"
+                    />
                   </button>
 
                   {showModal ? (
@@ -472,7 +476,10 @@ const NHTD = () => {
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >
-                  <RiArrowRightDoubleFill className="text-2xl   text-white " />
+                  <Icon
+                    icon="ri:arrow-right-double-fill"
+                    className="text-2xl   text-white "
+                  />
                   <span className="">Official NHTD Eligibility Criteria</span>
                 </Link>
               </div>
@@ -508,7 +515,10 @@ const NHTD = () => {
                 target="_blank"
                 rel="nofollow noopener noreferrer"
               >
-                <RiArrowRightDoubleFill className="text-2xl   text-white " />
+                <Icon
+                  icon="ri:arrow-right-double-fill"
+                  className="text-2xl   text-white "
+                />
                 <span className="">Learn About the NHTD Program</span>
               </Link>
             </div>
@@ -548,7 +558,10 @@ const NHTD = () => {
               target="_blank"
               rel="nofollow noopener noreferrer"
             >
-              <RiArrowRightDoubleFill className="text-2xl   text-white " />
+              <Icon
+                icon="ri:arrow-right-double-fill"
+                className="text-2xl   text-white "
+              />
               <span className="">Find an RRDC Near You</span>
             </Link>
           </div>
@@ -567,9 +580,9 @@ const NHTD = () => {
             >
               Learn More About the NHTD Program
               {showNhtdMeaning ? (
-                <BsChevronUp className="ml-2" />
+                <Icon icon="bi:chevron-up" className="ml-2" />
               ) : (
-                <BsChevronDown className="ml-2" />
+                <Icon icon="bi:chevron-down" className="ml-2" />
               )}
             </button>
 

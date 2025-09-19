@@ -1,9 +1,5 @@
 import React, { Suspense, useState } from "react";
-
-import { GiSandsOfTime } from "react-icons/gi";
-import { BsTable } from "react-icons/bs";
-import { AiOutlineFileSearch } from "react-icons/ai";
-
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import OverlayLoading from "@/components/shared/OverlayLoading";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
@@ -56,19 +52,19 @@ const HelpDesk = () => {
 
   const stuffs = [
     {
-      icon: <GiSandsOfTime />,
+      icon: <Icon icon="game-icons:sands-of-time" />,
       name: "EVV Clock In/Out",
       description: "Instructions to clock in and out of EVV",
       path: "clock-in-out",
     },
     {
-      icon: <BsTable />,
+      icon: <Icon icon="bi:table" />,
       name: "View Your PTO",
       description: "Click here to view your paid time off",
       link: "https://hcm.viventium.com/apps/account/viventium/login",
     },
     {
-      icon: <AiOutlineFileSearch />,
+      icon: <Icon icon="ant-design:file-search-outlined" />,
       name: "View Your Pay Stub",
       description: "View your latest pay stub",
       link: "https://hcm.viventium.com/apps/account/viventium/login",
@@ -94,12 +90,12 @@ const HelpDesk = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/help-desk/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/help-desk/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/help-desk/" />
 

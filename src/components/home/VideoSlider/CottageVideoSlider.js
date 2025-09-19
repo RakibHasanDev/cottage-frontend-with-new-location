@@ -216,7 +216,9 @@ export default function App() {
   return (
     <div className="carousel-bg  py-5">
       <div className="w-[100%]">
-        <div data-aos="fade-up" data-aos-duration="1500">
+        <div
+        // data-aos="fade-up" data-aos-duration="1500"
+        >
           <div className="w-[95%] lg:w-[80%] 2xl:w-[70%] mx-auto dark:text-white mt-[10px] md:mt-[20px] lg:mt-10 ">
             <p className=" text-start text-2xl lg:text-3xl font-semibold league-spartan text-[#00A6B2] dark:text-gray-100 lg:max-w-[840px] ">
               {" "}

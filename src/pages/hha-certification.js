@@ -203,12 +203,12 @@ const HhhaCertification = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/hha-certification/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/hha-certification/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"

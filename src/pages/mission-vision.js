@@ -22,12 +22,12 @@ const MissionVision = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/mission-vision/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/mission-vision/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"
@@ -82,8 +82,8 @@ const MissionVision = () => {
           <div className="grid md:grid-cols-8  gap-8 items-center mt-2">
             <div
               className="md:col-span-4 lg:col-span-2 text-gray-600 mt-5"
-              data-aos="fade-right"
-              data-aos-duration="2000"
+              // data-aos="fade-right"
+              // data-aos-duration="2000"
             >
               <p className="text-justify dark:text-gray-100">
                 Our mission is to provide personalized, compassionate, and
@@ -101,8 +101,8 @@ const MissionVision = () => {
             </div>
             <div
               className="lg:col-span-2 md:col-span-4  mt-5 order-first sm:order-none md:h-96 overflow-hidden"
-              data-aos="fade-down"
-              data-aos-duration="2000"
+              // data-aos="fade-down"
+              // data-aos-duration="2000"
             >
               <Image
                 src={"/assets/mission-vision/sova.webp"}
@@ -115,8 +115,8 @@ const MissionVision = () => {
             </div>
             <div
               className="lg:col-span-4 mt-5 hidden lg:block md:h-96 overflow-hidden"
-              data-aos="fade-left"
-              data-aos-duration="2000"
+              // data-aos="fade-left"
+              // data-aos-duration="2000"
             >
               <Image
                 src={"/assets/mission-vision/group-photo.webp"}
@@ -132,8 +132,8 @@ const MissionVision = () => {
           <div className="grid md:grid-cols-8  gap-8 items-center mt-3">
             <div
               className="lg:col-span-4 mt-5 hidden lg:block md:h-96 overflow-hidden"
-              data-aos="fade-right"
-              data-aos-duration="2000"
+              // data-aos="fade-right"
+              // data-aos-duration="2000"
             >
               <Image
                 src={"/assets/mission-vision/group-cover2.webp"}
@@ -146,8 +146,8 @@ const MissionVision = () => {
             </div>
             <div
               className="lg:col-span-2 md:col-span-4  mt-5 md:h-96 overflow-hidden"
-              data-aos="fade-up"
-              data-aos-duration="2000"
+              // data-aos="fade-up"
+              // data-aos-duration="2000"
             >
               <Image
                 src={"/assets/cottage-home-care-contact-image.webp"}
@@ -160,8 +160,8 @@ const MissionVision = () => {
             </div>
             <div
               className="md:col-span-4 lg:col-span-2 text-gray-600 mt-5"
-              data-aos="fade-left"
-              data-aos-duration="2000"
+              // data-aos="fade-left"
+              // data-aos-duration="2000"
             >
               <h2 className=" mt-5 mb-2 playrify font-semibold text-gray-700 md:text-xl text-xl dark:text-gray-200">
                 {" "}

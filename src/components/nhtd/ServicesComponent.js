@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
+import { Icon } from "@iconify/react";
 
 const ServicesComponent = () => {
   const pathname = usePathname(); // ✅ Call hook at the top level
@@ -38,7 +38,10 @@ const ServicesComponent = () => {
               : "bg-white hover:bg-[#00A6B2] hover:text-white"
           }`}
         >
-          <IoIosArrowForward className="font-semibold text-xl" />{" "}
+          <Icon
+            icon="ion:ios-arrow-forward"
+            className="font-semibold text-xl"
+          />{" "}
           {service?.servicesName}
         </Link>
       ))}

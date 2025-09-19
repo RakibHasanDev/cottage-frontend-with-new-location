@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
-import { BsSearch } from "react-icons/bs";
-
+import { Icon } from "@iconify/react";
 // Import PDF files
 
 const ResourcesCard = () => {
@@ -59,7 +57,7 @@ const ResourcesCard = () => {
       <h1 className="text-center league-spartan md:text-xl lg:text-2xl xl:text-4xl text-xl font-bold text-[#00A6B2] dark:text-gray-100 hidden md:block">
         Downloads
       </h1>
-      <hr className="border-[#00a6b2] border-t-[1px] w-12 mt-2 mb-5 mx-auto dark:border-gray-100 hidden md:block" />
+      <hr className="border-[#00A6B2] border-t-[1px] w-12 mt-2 mb-5 mx-auto dark:border-gray-100 hidden md:block" />
 
       {/* Search Input */}
       <div className="absolute top-4 rig right-[20%] md:right-[10%] lg:top-5 lg:right-[24%]">
@@ -71,7 +69,10 @@ const ResourcesCard = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <BsSearch className="absolute top-2.5 left-3 text-[#00A6B2]" />
+          <Icon
+            icon="bi:search"
+            className="absolute top-2.5 left-3 text-[#00A6B2]"
+          />
         </div>
       </div>
 
@@ -79,7 +80,7 @@ const ResourcesCard = () => {
       <h1 className="text-center league-spartan md:text-xl lg:text-2xl xl:text-4xl text-xl font-bold text-[#00A6B2] dark:text-gray-100  pt-12  block md:hidden">
         Downloads
       </h1>
-      <hr className="border-[#00a6b2] border-t-[1px] w-12  mb-5 mx-auto dark:border-gray-100 block md:hidden" />
+      <hr className="border-[#00A6B2] border-t-[1px] w-12  mb-5 mx-auto dark:border-gray-100 block md:hidden" />
 
       <div
         className="grid md:grid-cols-2 lg:grid-cols-3  mx-auto gap-7 max-w-7xl"

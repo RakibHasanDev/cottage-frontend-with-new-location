@@ -6,7 +6,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import React, { useEffect, useMemo, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { FaLocationDot } from "react-icons/fa6";
+import { Icon } from "@iconify/react";
 
 /** optional: share the same default list from the parent or pass via props */
 const DEFAULT_LOCATIONS = [
@@ -20,7 +20,9 @@ const DEFAULT_LOCATIONS = [
 ];
 
 function createReactIconDivIcon({ size = 28, color = "#A020F0" } = {}) {
-  const svg = renderToStaticMarkup(<FaLocationDot size={size} color={color} />);
+  const svg = renderToStaticMarkup(
+    <Icon icon="fa6-solid:location-dot" size={size} color={color} />
+  );
   return L.divIcon({
     className: "react-leaflet-pin",
     html: `

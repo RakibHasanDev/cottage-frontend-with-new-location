@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { FaTimes } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { validatePhoneNumber } from "./validatePhoneNumber";
 import SpinerLoading from "./SpinerLoading";
@@ -151,7 +151,9 @@ const PopUp = () => {
       {showPopup && (
         <div>
           <div className={`popup-overlay z-50 ${minimize ? "minimize" : ""}`}>
-            <div data-aos="fade-up" data-aos-duration="3000">
+            <div
+            // data-aos="fade-up" data-aos-duration="3000"
+            >
               <div
                 ref={popupRef}
                 className={`popup w-[95%] mx-auto md:w-full z-50 relative text-white ${
@@ -162,7 +164,7 @@ const PopUp = () => {
                   onClick={handleMinimize}
                   className="absolute top-3 right-3 bg-red-600 p-2 rounded-full text-white"
                 >
-                  <FaTimes className="text-2xl" />
+                  <Icon icon="fa6-solid:xmark" className="text-2xl" />
                 </button>
                 <div className="Poppins">
                   <form
@@ -199,7 +201,7 @@ const PopUp = () => {
                           })}
                           id="firstName"
                           placeholder="First Name"
-                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                         />
                         {errors.firstName && (
@@ -223,7 +225,7 @@ focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:te
                           })}
                           id="LastName"
                           placeholder="Last Name"
-                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                         />
                         {errors.lastName && (
@@ -246,7 +248,7 @@ focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:te
                           name="birthday"
                           placeholder="DOB"
                           {...register("dob", { required: "DOB is required" })}
-                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                         />
                         {errors.dob && (
@@ -267,7 +269,7 @@ focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:te
                           name="MedicateNo"
                           placeholder="Ex:AB12345C"
                           {...register("medicate")}
-                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100 placeholder:tracking-widest placeholder:"
                         />
                       </div>
@@ -284,7 +286,7 @@ focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:te
                           {...register("email")}
                           id="email"
                           placeholder="E-mail"
-                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                         />
                       </div>
@@ -329,7 +331,7 @@ focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:te
                               // Custom validation: stop submission if the phone number is already in the existing numbers array
                               validate: validatePhoneNumber, // Custom function to check existing numbers
                             })}
-                            className="w-full pl-10 md:pl-12 px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
+                            className="w-full pl-10 md:pl-12 px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                           />
                         </div>
                         {errors.phoneNumber && (
@@ -352,7 +354,7 @@ focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:te
                             required: "Time is required",
                           })}
                           placeholder="Preferred time to Call"
-                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                          className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                         />
                         {errors.time && (
@@ -371,7 +373,7 @@ focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:te
                           type="file"
                           {...register("file")}
                           id="file"
-                          className="md:w-[215px] w-[155px] px-4 md:py-1  rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                          className="md:w-[215px] w-[155px] px-4 md:py-1  rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                         />
                       </div>

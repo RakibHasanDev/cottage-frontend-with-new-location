@@ -4,10 +4,8 @@ import { GoogleAuthProvider } from "firebase/auth";
 import React, { Suspense, useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-
+import { Icon } from "@iconify/react";
 import callReader from "../../src/assets/106680-login-and-sign-up";
-
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/router";
@@ -176,9 +174,12 @@ const Login = () => {
                     onClick={() => setShowPass(!showPass)}
                   >
                     {showPass ? (
-                      <AiFillEyeInvisible className="h-6 w-6" />
+                      <Icon icon="ant-design:eye-filled" className="h-6 w-6" />
                     ) : (
-                      <AiFillEye className="h-6 w-6" />
+                      <Icon
+                        icon="ant-design:eye-invisible-filled"
+                        className="h-6 w-6"
+                      />
                     )}
                   </div>
                 </div>

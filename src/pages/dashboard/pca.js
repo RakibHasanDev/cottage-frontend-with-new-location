@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
-import { BiUserCircle } from "react-icons/bi";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { Icon } from "@iconify/react";
 import AdminConversation from "@/components/shared/AdminConversation";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
 import Image from "next/image";
@@ -94,7 +93,10 @@ const Pca = () => {
                           priority
                         />
                       ) : (
-                        <BiUserCircle className="w-12 h-12 text-gray-300 rounded-full" />
+                        <Icon
+                          icon="bx:user-circle"
+                          className="w-12 h-12 text-gray-300 rounded-full"
+                        />
                       )}
                       <p>{user?.firstName}</p>
                     </h1>
@@ -109,7 +111,7 @@ const Pca = () => {
                         }}
                         className="text-2xl text-gray-500 dark:text-gray-100 focus:outline-none"
                       >
-                        <BsThreeDotsVertical />
+                        <Icon icon="bi:three-dots-vertical" />
                       </button>
 
                       {openDropdownId === user._id && (

@@ -1,7 +1,5 @@
 import React, { useRef, useState } from "react";
-import { FaPlayCircle } from "react-icons/fa";
-import { BsPauseCircleFill } from "react-icons/bs";
-import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
+import { Icon } from "@iconify/react";
 import Image from "next/image";
 
 const Hero = () => {
@@ -59,7 +57,10 @@ const Hero = () => {
           }}
         >
           <div className="play-btn2">
-            <FaPlayCircle className="text-3xl lg:text-5xl" />
+            <Icon
+              icon="fa6-regular:circle-play"
+              className="text-3xl lg:text-5xl"
+            />
           </div>
         </button>
       ) : null}
@@ -92,7 +93,10 @@ const Hero = () => {
             color: "white",
           }}
         >
-          <BsPauseCircleFill className="md:text-6xl text-5xl  text-[#e0e5eb86]" />
+          <Icon
+            icon="fa6-solid:circle-pause"
+            className="md:text-6xl text-5xl  text-[#e0e5eb86]"
+          />
         </button>
       ) : null}
     </div>

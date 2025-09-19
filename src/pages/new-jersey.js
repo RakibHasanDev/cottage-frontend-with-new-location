@@ -1,9 +1,7 @@
 "use client";
 import React, { Suspense, useState } from "react";
-import { FaAward, FaHospital, FaSmile } from "react-icons/fa";
-import { LuHeart } from "react-icons/lu";
+import { Icon } from "@iconify/react";
 import callReader from "../../src/assets/social-media-lottie/call.json";
-import { FaRegCalendar } from "react-icons/fa";
 import IconLoading from "@/components/shared/IconLoading";
 import { useInView } from "react-intersection-observer";
 import ReviewsSection from "@/components/ServiceArea/ReviewSection";
@@ -349,12 +347,12 @@ export default function NewJersey() {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/new-jersey/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/new-jersey/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
 
         <link rel="canonical" href="https://cottagehomecare.com/new-jersey/" />
@@ -408,8 +406,8 @@ export default function NewJersey() {
       <section className="bg-[#F5F5F7] dark:bg-slate-700 py-16">
         <h2
           className="text-xl md:text-3xl font-extrabold text-gray-600 dark:text-gray-100 mb-8 text-center league-spartan"
-          data-aos="fade-down"
-          data-aos-duration="2000"
+          // data-aos="fade-down"
+          // data-aos-duration="2000"
         >
           Cottage Homecare NJ, Makes Private Pay Care Simple: Following Steps
         </h2>
@@ -417,8 +415,8 @@ export default function NewJersey() {
           {/* Left Side: Image */}
           <div
             className="flex justify-center"
-            data-aos="fade-right"
-            data-aos-duration="3000"
+            // data-aos="fade-right"
+            // data-aos-duration="3000"
           >
             <Image
               src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1757080745/nj_private_pay_ucvx5z.jpg"
@@ -431,7 +429,9 @@ export default function NewJersey() {
           </div>
 
           {/* Right Side: Steps */}
-          <div data-aos="fade-left" data-aos-duration="3000">
+          <div
+          // data-aos="fade-left" data-aos-duration="3000"
+          >
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-200">
               <div>
                 <h3 className="font-bold text-xl text-gray-700 dark:text-gray-100">
@@ -468,7 +468,7 @@ export default function NewJersey() {
             <div className="my-6 font-[Roboto] flex  items-center gap-8 md:gap-0 md:space-y-0 md:space-x-7 flex-wrap">
               <a
                 href="tel:+1(201) 633-8481"
-                className="flex items-center px-6 py-3 md:px-5 md:py-3 border border-[#00a6b2] dark:border-[#3A4256]  rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-lg bg-[#00A6B2]"
+                className="flex items-center px-6 py-3 md:px-5 md:py-3 border border-[#00A6B2] dark:border-[#3A4256]  rounded-full text-white hover:bg-[#00A6B2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-lg bg-[#00A6B2]"
                 aria-label="Call us at (516) 367-2266"
               >
                 {/* <FaPhone className="mr-2 " /> */}
@@ -507,7 +507,7 @@ export default function NewJersey() {
                 }}
                 className="flex gap-1 -mt-1 px-6 py-3 md:px-8 md:py-3 border border-[#3A4256] rounded-full text-white bg-[#3A4256] dark:bg-[#838896] duration-500 bg-hov2 league-spartan xl:text-lg cursor-pointer"
               >
-                Schedule a Call <FaRegCalendar />
+                Schedule a Call <Icon icon="fa6-regular:calendar" />
               </a>
             </div>
           </div>
@@ -519,8 +519,8 @@ export default function NewJersey() {
       <section className="pt-12 ">
         <h3
           className="text-2xl md:text-3xl font-bold text-gray-600 leading-snug dark:text-gray-100 league-spartan w-[95%] lg:w-[80%] 2xl:w-[65%] mx-auto text-center"
-          data-aos="fade-down"
-          data-aos-duration="2000"
+          // data-aos="fade-down"
+          // data-aos-duration="2000"
         >
           Over{" "}
           <span className="text-[#00A6B2] dark:text-gray-100">
@@ -539,8 +539,8 @@ export default function NewJersey() {
           {/* Right Side: Empty Column */}
           <div
             className="mx-auto"
-            data-aos="fade-right"
-            data-aos-duration="3000"
+            // data-aos="fade-right"
+            // data-aos-duration="3000"
           >
             <h3 className="text-2xl font-bold text-[#00A6B2] dark:text-gray-100 mb-3">
               Private Pay Services Include
@@ -550,7 +550,7 @@ export default function NewJersey() {
                 {" "}
                 <span className="w-7 h-7 rounded-full bg-[#00A6B2] flex justify-center items-center p-1 ">
                   {" "}
-                  <LuHeart className="text-white" />{" "}
+                  <Icon icon="lucide:heart" className="text-white" />{" "}
                 </span>
                 Medication Reminders
               </li>
@@ -558,7 +558,7 @@ export default function NewJersey() {
                 {" "}
                 <span className="w-7 h-7 rounded-full bg-[#00A6B2] flex justify-center items-center p-1 ">
                   {" "}
-                  <LuHeart className="text-white" />{" "}
+                  <Icon icon="lucide:heart" className="text-white" />{" "}
                 </span>
                 Light Housekeeping & Laundry
               </li>
@@ -566,7 +566,7 @@ export default function NewJersey() {
                 {" "}
                 <span className="w-7 h-7 rounded-full bg-[#00A6B2] flex justify-center items-center p-1 ">
                   {" "}
-                  <LuHeart className="text-white" />{" "}
+                  <Icon icon="lucide:heart" className="text-white" />{" "}
                 </span>
                 Personal Care (Bathing, grooming, toileting)
               </li>
@@ -578,15 +578,24 @@ export default function NewJersey() {
               <ul className=" space-y-3 text-lg font-semibold text-gray-800 dark:text-gray-100 mt-3">
                 <ul className="space-y-4 text-lg font-semibold text-gray-800 dark:text-gray-100 mt-3">
                   <li className="flex items-center gap-3">
-                    <FaHospital className="text-[#00A6B2] w-6 h-6" />
+                    <Icon
+                      icon="fa6-solid:hospital"
+                      className="text-[#00A6B2] w-6 h-6"
+                    />
                     21% Lower Hospitalization Rate
                   </li>
                   <li className="flex items-center gap-3">
-                    <FaSmile className="text-[#00A6B2] w-6 h-6" />
+                    <Icon
+                      icon="fa6-solid:smile"
+                      className="text-[#00A6B2] w-6 h-6"
+                    />
                     99% Customer Satisfaction
                   </li>
                   <li className="flex items-center gap-3">
-                    <FaAward className="text-[#00A6B2] w-6 h-6" />
+                    <Icon
+                      icon="fa6-solid:award"
+                      className="text-[#00A6B2] w-6 h-6"
+                    />
                     7,000+ 5-star reviews
                   </li>
                 </ul>
@@ -595,7 +604,10 @@ export default function NewJersey() {
           </div>
           {/* Left Side: Text + Video */}
 
-          <div className="" data-aos="fade-left" data-aos-duration="3000">
+          <div
+            className=""
+            // data-aos="fade-left" data-aos-duration="3000"
+          >
             <VideoWithCustomThumb
               videoId="7uoXudV9uas"
               caption="YOU CHOOSE WHO PROVIDES YOUR HOME CARE"

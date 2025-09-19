@@ -1,8 +1,7 @@
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 import Head from "next/head";
 import React, { useEffect, useState } from "react";
-
-import { FaRegQuestionCircle } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 
 const Faqs = () => {
   const [tab, setTab] = useState(0);
@@ -229,12 +228,12 @@ const Faqs = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/faqs/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/faqs/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/faqs/" />
 
@@ -380,7 +379,10 @@ const Faqs = () => {
                           <p className="flex md:text-lg items-center gap-2 font-medium question dark:text-gray-100 ">
                             {" "}
                             <span>
-                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
+                              <Icon
+                                icon="fa6-regular:circle-question"
+                                className="text-[#00A6B2] font-bold text-xl dark:text-gray-100"
+                              />
                             </span>
                             <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] leading-relaxed open-sans font-semibold">
                               {item.question}
@@ -464,7 +466,10 @@ const Faqs = () => {
                           <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
                             {" "}
                             <span>
-                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
+                              <Icon
+                                icon="fa6-regular:circle-question"
+                                className="text-[#00A6B2] font-bold text-xl dark:text-gray-100"
+                              />
                             </span>{" "}
                             <span className="w-[95%] md:w-full font-semibold mx-auto px-2 md:px-0 text-[16px] leading-relaxed open-sans">
                               {item.question}
@@ -573,7 +578,10 @@ const Faqs = () => {
                           <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
                             {" "}
                             <span>
-                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
+                              <Icon
+                                icon="fa6-regular:circle-question"
+                                className="text-[#00A6B2] font-bold text-xl dark:text-gray-100"
+                              />
                             </span>{" "}
                             <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] font-semibold leading-relaxed open-sans">
                               {item.question}
@@ -671,7 +679,10 @@ const Faqs = () => {
                           <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
                             {" "}
                             <span>
-                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />{" "}
+                              <Icon
+                                icon="fa6-regular:circle-question"
+                                className="text-[#00A6B2] font-bold text-xl dark:text-gray-100"
+                              />{" "}
                             </span>
                             <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] leading-relaxed font-sans font-semibold">
                               {item.question}
@@ -785,7 +796,10 @@ const Faqs = () => {
                           <p className="flex items-center gap-2 question dark:text-gray-100 md:text-lg font-medium">
                             {" "}
                             <span>
-                              <FaRegQuestionCircle className="text-[#00A6B2] font-bold text-xl dark:text-gray-100" />
+                              <Icon
+                                icon="fa6-regular:circle-question"
+                                className="text-[#00A6B2] font-bold text-xl dark:text-gray-100"
+                              />
                             </span>{" "}
                             <span className="w-[95%] md:w-full mx-auto px-2 md:px-0 text-[16px] leading-relaxed open-sans font-semibold">
                               {item.question}

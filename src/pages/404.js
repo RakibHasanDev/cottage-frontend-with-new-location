@@ -27,7 +27,11 @@ const ErrorPage = () => {
             <Image
               src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1741711636/404/404_ydze7z.png"
               alt="404-first"
-              style={{ width: "100%", height: "auto" }}
+              width={800} // pick a sensible default width
+              height={600} // keep correct aspect ratio
+              sizes="100vw" // responsive scaling
+              style={{ height: "auto", width: "100%" }} // ensures responsiveness
+              priority // optional: preload if this is a critical asset
             />
           </div>
         </div>

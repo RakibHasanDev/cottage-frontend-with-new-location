@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { toast } from "react-hot-toast";
-import { HiOutlineArrowSmRight } from "react-icons/hi";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { AuthContext } from "@/context/AuthProvider";
 import useAdmin from "@/hooks/useAdmin";
@@ -62,8 +62,8 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
   return (
     <div
       className="flex justify-center "
-      data-aos="zoom-in"
-      data-aos-duration="2000"
+      // data-aos="zoom-in"
+      // data-aos-duration="2000"
     >
       <div
         style={style}
@@ -140,7 +140,10 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
                 type="button"
                 className="rounded-full bg-[#00A6B2] w-[55px] h-[55px] text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg flex justify-center items-center play-btn3"
               >
-                <HiOutlineArrowSmRight className="text-2xl" />
+                <Icon
+                  icon="heroicons-outline:arrow-sm-right"
+                  className="text-2xl"
+                />
               </button>
             </Link>
           </div>

@@ -23,7 +23,7 @@ const HeroSection = () => {
         <div className="pt-11 pb-[120px] font-[Roboto] flex justify-center items-center gap-8 md:gap-0 md:space-y-0 md:space-x-7 flex-wrap">
           <a
             href="tel:+1516-367-2266"
-            className="flex items-center px-6 py-3 md:px-16 md:py-6 border border-[#00a6b2] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-xl "
+            className="flex items-center px-6 py-3 md:px-16 md:py-6 border border-[#00A6B2] rounded-full text-white hover:bg-[#00A6B2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-xl "
             aria-label="Call us at (516) 367-2266"
           >
             {/* <FaPhone className="mr-2 " /> */}
@@ -48,7 +48,7 @@ const HeroSection = () => {
           </a>
           <a
             href="#contact-info"
-            className="flex items-center px-6 py-3 md:px-16 md:py-6 border border-[#00a6b2] rounded-full text-white bg-[#00A6B2] duration-500 bg-hov2 league-spartan xl:text-xl"
+            className="flex items-center px-6 py-3 md:px-16 md:py-6 border border-[#00A6B2] rounded-full text-white bg-[#00A6B2] duration-500 bg-hov2 league-spartan xl:text-xl"
           >
             Get Care
           </a>

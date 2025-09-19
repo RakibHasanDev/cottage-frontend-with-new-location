@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { BiUserCircle } from "react-icons/bi";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { Icon } from "@iconify/react";
 import { toast } from "react-hot-toast";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
 import AdminConversation from "@/components/shared/AdminConversation";
@@ -94,7 +93,10 @@ const Cdpaps = () => {
                           className="w-10 h-10 border-2 border-primary rounded-full"
                         />
                       ) : (
-                        <BiUserCircle className="w-12 h-12 text-gray-300 rounded-full" />
+                        <Icon
+                          icon="bx:user-circle"
+                          className="w-12 h-12 text-gray-300 rounded-full"
+                        />
                       )}
                       <p>{user?.firstName}</p>
                     </h1>
@@ -109,7 +111,7 @@ const Cdpaps = () => {
                         }}
                         className="text-2xl text-gray-500 dark:text-gray-100 focus:outline-none"
                       >
-                        <BsThreeDotsVertical />
+                        <Icon icon="bi:three-dots-vertical" />
                       </button>
 
                       {openDropdownId === user._id && (

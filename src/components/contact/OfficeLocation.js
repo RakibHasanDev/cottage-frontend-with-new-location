@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { Icon } from "@iconify/react";
 import Queens from "./OfficeLocation/Queens";
 import Bronx from "./OfficeLocation/Bronx";
 import OfficeModal from "../shared/OfficeModal";
@@ -131,8 +131,8 @@ const OfficeLocation = () => {
             <div
               key={index}
               className="mt-5 md:mt-0 border-2 py-8 md:py-0 border-[#00A6B2] rounded-md md:border-0"
-              data-aos="zoom-in"
-              data-aos-duration="2000"
+              // data-aos="zoom-in"
+              // data-aos-duration="2000"
             >
               {office?.recName ? (
                 <>
@@ -179,7 +179,7 @@ const OfficeLocation = () => {
                 rel="noreferrer"
               >
                 {" "}
-                <AiOutlineArrowRight /> Get Direction
+                <Icon icon="ant-design:arrow-right-outlined" /> Get Direction
               </a>
               <div className="mt-5 bg-hov2">
                 <label

@@ -5,7 +5,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 import Image from "next/image";
 
 export default function ReviewsSection() {
@@ -79,11 +79,21 @@ export default function ReviewsSection() {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       if (rating >= i) {
-        stars.push(<FaStar key={i} className="text-orange-500" />);
+        stars.push(
+          <Icon icon="fa6-solid:star" key={i} className="text-orange-500" />
+        );
       } else if (rating >= i - 0.5) {
-        stars.push(<FaStarHalfAlt key={i} className="text-orange-500" />);
+        stars.push(
+          <Icon
+            icon="fa6-solid:star-half-stroke"
+            key={i}
+            className="text-orange-500"
+          />
+        );
       } else {
-        stars.push(<FaStar key={i} className="text-gray-300" />);
+        stars.push(
+          <Icon icon="fa6-solid:star" key={i} className="text-gray-300" />
+        );
       }
     }
     return stars;
@@ -93,8 +103,8 @@ export default function ReviewsSection() {
     <section className="mt-8">
       <div
         className="relative mt-16 lg:min-h-[800px] h-[650px]"
-        data-aos="fade-up"
-        data-aos-duration="3000"
+        // data-aos="fade-up"
+        // data-aos-duration="3000"
       >
         {/* Background Section */}
         <div

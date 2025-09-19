@@ -50,12 +50,12 @@ const Covid = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/covid/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/covid/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/covid/" />
 

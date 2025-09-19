@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback } from "react";
 import dynamic from "next/dynamic";
-import { FaLocationDot } from "react-icons/fa6";
+import { Icon } from "@iconify/react";
 import Image from "next/image";
 
 // ✅ Dynamically Import react-photo-view for Next.js Optimization
@@ -119,9 +119,8 @@ const MapComponent = () => {
         <a
           href="https://www.google.com/maps/d/viewer?mid=1F8-owHlE5yYe1I4I4WWueTc_2zvqHSE&ll=40.72910277268202%2C-73.92877093246109&z=10"
           target="_blank"
-          loading="lazy"
           rel="noreferrer"
-          className=" text-xl md:text-2xl 2xl:text-3xl font-semibold text-[#ff9900] block dark:text-gray-300"
+          className="text-xl md:text-2xl 2xl:text-3xl font-semibold text-yellow-700  hover:text-yellow-800 block dark:text-gray-300"
           aria-label="View all Cottage Home Care offices on Google Maps"
         >
           All Offices
@@ -129,11 +128,14 @@ const MapComponent = () => {
 
         {/* The underline added using after pseudo-element */}
       </div>
-      <hr className="border-[#00a6b2] border-t-2 w-12 md:mb-10  mx-auto mb-5 mt-2 " />
+      <hr className="border-[#00A6B2] border-t-2 w-12 md:mb-10  mx-auto mb-5 mt-2 " />
 
       <div className="lg:flex flex-wrap lg:gap-x-5 2xl:gap-x-10 gap-y-6 items-center justify-center mt-5 w-full lg:max-w-[1200px] 2xl:max-w-[1500px] mx-auto hidden ">
         {offices?.map((office, index) => (
-          <div key={index} data-aos="zoom-in" data-aos-duration="2000">
+          <div
+            key={index}
+            // data-aos="zoom-in" data-aos-duration="2000"
+          >
             <div
               onClick={() => handleOfficeClick(office)}
               className={`${
@@ -193,8 +195,8 @@ const MapComponent = () => {
             style={{
               boxShadow: "0px 0px 15px rgba(0, 0, 0, 0.2)",
             }}
-            data-aos="fade-up"
-            data-aos-duration="2000"
+            // data-aos="fade-up"
+            // data-aos-duration="2000"
           >
             {selectedOffice ? (
               <>
@@ -233,7 +235,10 @@ const MapComponent = () => {
                     rel="noreferrer"
                     className="flex items-center gap-2 open-sans text-gray-800 dark:text-black ml-3 mt-1 text-base  lg:text-sm 2xl:text-base hover:text-[#ff9900] dark:hover:text-[#ff9900]"
                   >
-                    <FaLocationDot className="text-3xl text-[#ff9900] dark:text-gray-600" />{" "}
+                    <Icon
+                      icon="fa6-solid:location-dot"
+                      className="text-3xl text-[#ff9900] dark:text-gray-600"
+                    />{" "}
                     <span className="w-[80%]">
                       {selectedOffice?.locationName}
                     </span>
@@ -254,8 +259,8 @@ const MapComponent = () => {
 
         <div
           className="lg:col-span-4 "
-          data-aos="fade-left"
-          data-aos-duration="2500"
+          // data-aos="fade-left"
+          // data-aos-duration="2500"
         >
           <div className="relative shadow-lg rounded-lg overflow-hidden border border-gray-300">
             <iframe
@@ -290,8 +295,8 @@ const MapComponent = () => {
           {offices?.map((office, index) => (
             <div
               key={index}
-              data-aos="fade-up"
-              data-aos-duration={`${index * 500}`}
+              // data-aos="fade-up"
+              // data-aos-duration={`${index * 500}`}
             >
               <div
                 className={`
@@ -327,8 +332,8 @@ const MapComponent = () => {
               boxShadow:
                 "inset 0 6px 12px rgba(0, 0, 0, 0.1), inset 0 2px 6px rgba(0, 0, 0, 0.08)",
             }}
-            data-aos="fade-left"
-            data-aos-duration="2000"
+            // data-aos="fade-left"
+            // data-aos-duration="2000"
           >
             {selectedOffice ? (
               <>
@@ -375,7 +380,7 @@ const MapComponent = () => {
                       rel="noreferrer"
                       className="text-center flex gap-1 items-center justify-center text-[#ff9900] whitespace-nowrap text-base"
                     >
-                      <FaLocationDot />
+                      <Icon icon="fa6-solid:location-dot" />
                       <span className="font-semibold ">View Location</span>
                     </a>
                   </p>
@@ -399,7 +404,9 @@ const MapComponent = () => {
           Map Location
         </p>
 
-        <div data-aos="fade-up" data-aos-duration="1500">
+        <div
+        // data-aos="fade-up" data-aos-duration="1500"
+        >
           <div className=" shadow-lg rounded-lg overflow-hidden border border-gray-300 w-[98%] mx-auto ">
             <iframe
               className=" h-[400px] w-full rounded-md"

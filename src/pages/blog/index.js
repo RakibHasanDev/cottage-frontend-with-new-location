@@ -6,7 +6,7 @@ import SpinerLoading from "@/components/shared/SpinerLoading";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { Icon } from "@iconify/react";
 
 const AllBlog = dynamic(() => import("@/components/Blog/AllBlog"), {
   suspense: true,
@@ -88,12 +88,12 @@ const Blog = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/blog/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/blog/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/blog/" />
 
@@ -169,7 +169,10 @@ const Blog = () => {
                 >
                   Home
                 </Link>
-                <MdOutlineArrowForwardIos className="text-lg font-bold" />
+                <Icon
+                  icon="material-symbols:arrow-forward-ios"
+                  className="text-lg font-bold"
+                />
                 <Link
                   href="/blog"
                   className="blog-underline-animation   league-spartan text-xl"

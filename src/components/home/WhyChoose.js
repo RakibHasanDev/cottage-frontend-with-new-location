@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaStar } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 
 const optimizedImage = (url, width = 1080) =>
   url.replace("/upload/", `/upload/f_auto,q_auto,dpr_auto,w_${width}/`);
@@ -13,8 +13,8 @@ const WhyChoose = () => {
         {/* Left Content */}
         <div
           className="px-5 lg:px-0 mt-5 md:mt-0 open-sans w-[95%] lg:w-[48%]"
-          data-aos="fade-left"
-          data-aos-duration="2000"
+          // data-aos="fade-left"
+          // data-aos-duration="2000"
         >
           <p className="text-2xl md:text-2xl 2xl:text-4xl font-bold mb-4 dark:text-gray-100 text-[#00A6B2]">
             Why choose Cottage Home Care Services?
@@ -33,7 +33,10 @@ const WhyChoose = () => {
             },
           ].map((item, index) => (
             <div key={index} className="flex items-start mt-5 space-x-3">
-              <FaStar className="text-[#00A6B2] text-2xl flex-shrink-0 dark:text-gray-100" />
+              <Icon
+                icon="fa6-solid:star"
+                className="text-[#00A6B2] text-2xl flex-shrink-0 dark:text-gray-100"
+              />
               <p className="text-[#67637e] text-base leading-relaxed text-justify dark:text-gray-100">
                 {item.text}
               </p>
@@ -44,7 +47,7 @@ const WhyChoose = () => {
           <div className="mt-6 lg:mt-10">
             <Link
               href="/contact"
-              className="px-6 py-3 md:px-9 md:py-4 dark:bg-[#3A4256] rounded-full bg-[#00A6B2] hover:bg-hov2 text-white league-spartan md:text-[18px] capitalize font-semibold"
+              className="px-6 py-3 md:px-9 md:py-4 dark:bg-[#3A4256] rounded-full bg-[#005f6b] hover:bg-hov2 text-white league-spartan md:text-[18px] capitalize font-semibold"
             >
               Contact Us Today
             </Link>
@@ -54,8 +57,8 @@ const WhyChoose = () => {
         {/* Right Image & SVG Section */}
         <div
           className="relative lg:w-[650px] md:w-[530px] w-[340px] mx-auto md:mx-0 order-first sm:order-none"
-          data-aos="fade-right"
-          data-aos-duration="2000"
+          // data-aos="fade-right"
+          // data-aos-duration="2000"
         >
           {/* Background Blob Shape */}
           <Image

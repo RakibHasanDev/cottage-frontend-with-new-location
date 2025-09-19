@@ -1,6 +1,5 @@
 import React from "react";
-import { FiPhone } from "react-icons/fi";
-import { IoLocationOutline, IoSchool } from "react-icons/io5";
+import { Icon } from "@iconify/react";
 
 const HhhaSchoolMap = () => {
   return (
@@ -8,8 +7,8 @@ const HhhaSchoolMap = () => {
       <div className="grid lg:grid-cols-2 gap-7 items-center">
         <div
           className="  bg-[#f02f39d8] rounded-md shadow-lg  md:h-[420px]"
-          data-aos="fade-right"
-          data-aos-duration="2000"
+          // data-aos="fade-right"
+          // data-aos-duration="2000"
         >
           <div className="py-[10px]">
             <iframe
@@ -24,17 +23,20 @@ const HhhaSchoolMap = () => {
         <div className="ml-5 ">
           <h3
             className="text-2xl md:font-semibold font-medium text-[#f02f39d8]  league-spartan "
-            data-aos="fade-up"
-            data-aos-duration="500"
+            // data-aos="fade-up"
+            // data-aos-duration="500"
           >
             Better yet, see us in person!
           </h3>
           <div
             className="mt-4 flex items-center gap-2"
-            data-aos="fade-up"
-            data-aos-duration="1000"
+            // data-aos="fade-up"
+            // data-aos-duration="1000"
           >
-            <IoLocationOutline className="text-[#f02f39d8] text-2xl font-bold" />
+            <Icon
+              icon="ion:location-outline"
+              className="text-[#f02f39d8] text-2xl font-bold"
+            />
 
             <a
               href="https://www.google.com/maps/dir//110-05+Liberty+Ave+Queens,+NY+11419/@40.6847005,-73.8317289,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c26750729d3653:0x592e70afeb742348!2m2!1d-73.8317289!2d40.6847005"
@@ -48,10 +50,13 @@ const HhhaSchoolMap = () => {
           </div>
           <div
             className="mt-4 flex items-center gap-2"
-            data-aos="fade-up"
-            data-aos-duration="1500"
+            // data-aos="fade-up"
+            // data-aos-duration="1500"
           >
-            <IoSchool className="text-[#f02f39d8] text-2xl font-bold" />
+            <Icon
+              icon="ion:school-outline"
+              className="text-[#f02f39d8] text-2xl font-bold"
+            />
 
             <p className="text-2xl  md:font-semibold font-medium text-[#f02f39d8] league-spartan">
               Brooklyn Institute of Vocational Training
@@ -60,10 +65,13 @@ const HhhaSchoolMap = () => {
 
           <div
             className="mt-4 flex items-center gap-2"
-            data-aos="fade-up"
-            data-aos-duration="1700"
+            // data-aos="fade-up"
+            // data-aos-duration="1700"
           >
-            <FiPhone className="text-[#f02f39d8] text-2xl font-bold" />
+            <Icon
+              icon="feather:phone"
+              className="text-[#f02f39d8] text-2xl font-bold"
+            />
 
             <a
               href="tel:929-386-0092"

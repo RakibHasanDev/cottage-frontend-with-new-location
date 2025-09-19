@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect, useContext } from "react";
-import { BiMenu } from "react-icons/bi"; // Menu icon
-import { MdLogin, MdLogout } from "react-icons/md";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import useAdmin from "@/hooks/useAdmin";
 import { AuthContext } from "@/context/AuthProvider";
-import { RiDashboardLine } from "react-icons/ri";
 import Image from "next/image";
 
 const DropdownMenu = ({ handleLogOut }) => {
@@ -35,8 +33,9 @@ const DropdownMenu = ({ handleLogOut }) => {
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
         className="text-4xl z-50 tracking-wide text-[#00A6B2] font-bold duration-200 bg-transparent outline-none cursor-pointer dark:text-gray-300 mt-1"
+        aria-label="Toggle navigation menu"
       >
-        <BiMenu />
+        <Icon icon="bx:menu" />
       </button>
 
       {/* ✅ Fix: Proper positioning for dropdown */}
@@ -66,7 +65,7 @@ const DropdownMenu = ({ handleLogOut }) => {
                   className="w-full flex items-center gap-5 p-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-md text-[#49465D] dark:text-gray-100"
                   onClick={handleLogOut}
                 >
-                  <MdLogout />
+                  <Icon icon="material-symbols:logout" />
                   Sign Out
                 </button>
               </>
@@ -75,7 +74,7 @@ const DropdownMenu = ({ handleLogOut }) => {
                 {/* ✅ Sign In Button */}
                 <Link href="/login">
                   <button className="w-full flex items-center gap-5 p-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-md text-[#49465D] dark:text-gray-100">
-                    <MdLogin />
+                    <Icon icon="material-symbols:login" />
                     Sign In
                   </button>
                 </Link>
@@ -87,7 +86,7 @@ const DropdownMenu = ({ handleLogOut }) => {
                 <li>
                   <Link href="/dashboard">
                     <button className="w-full flex items-center gap-5 p-2 hover:bg-gray-300 dark:hover:bg-gray-700 rounded-md text-[#49465D] dark:text-gray-100">
-                      <RiDashboardLine className="text-2xl" />
+                      <Icon icon="ri:dashboard-fill" className="text-2xl" />
                       Dashboard
                     </button>
                   </Link>

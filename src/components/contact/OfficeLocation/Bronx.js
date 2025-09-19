@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { Icon } from "@iconify/react";
 
 const Bronx = ({ officeHandler }) => {
   //   console.log(now);
@@ -76,8 +76,8 @@ const Bronx = ({ officeHandler }) => {
     <div>
       <div
         className="md:mt-0 border-2 py-8 md:py-0 border-[#00A6B2] rounded-md md:border-0"
-        data-aos="zoom-in"
-        data-aos-duration="2000"
+        // data-aos="zoom-in"
+        // data-aos-duration="2000"
       >
         <h5 className="2xl:text-xl  font-semibold text-[#00A6B2] league-spartan text-2xl lg:text-base ">
           {bronx?.recName}
@@ -115,7 +115,7 @@ const Bronx = ({ officeHandler }) => {
             rel="noreferrer"
           >
             {" "}
-            <AiOutlineArrowRight /> Get Direction
+            <Icon icon="ant-design:arrow-right-outlined" /> Get Direction
           </a>
 
           <a
@@ -125,7 +125,7 @@ const Bronx = ({ officeHandler }) => {
             rel="noreferrer"
           >
             {" "}
-            <AiOutlineArrowRight /> Apply Job
+            <Icon icon="ant-design:arrow-right-outlined" /> Apply Job
           </a>
         </div>
 

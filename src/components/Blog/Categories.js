@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { IoSearch } from "react-icons/io5";
+import { Icon } from "@iconify/react";
+
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import SpinerLoading from "../shared/SpinerLoading";
@@ -133,7 +134,7 @@ const Categories = ({ handleSearch, handleButtonClick }) => {
               handleSearch(inputValue);
             }}
           >
-            <IoSearch />
+            <Icon icon="ion:search" />
           </button>
         </div>
       </div>

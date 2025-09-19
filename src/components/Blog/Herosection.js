@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { Icon } from "@iconify/react";
 
 const Herosection = () => {
   return (
@@ -17,7 +17,10 @@ const Herosection = () => {
           >
             Home
           </Link>
-          <MdOutlineArrowForwardIos className="text-lg font-bold" />
+          <Icon
+            icon="material-symbols:arrow-forward-ios"
+            className="text-lg font-bold"
+          />
           <Link
             href="/blog"
             className="blog-underline-animation   league-spartan text-xl"

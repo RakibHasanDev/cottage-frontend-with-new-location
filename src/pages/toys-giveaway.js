@@ -56,12 +56,12 @@ const toysGiveaway = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/toys-giveaway/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/toys-giveaway/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
 
         <link
@@ -180,8 +180,8 @@ const toysGiveaway = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img1.webp"}
@@ -191,8 +191,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img2.webp"}
@@ -202,8 +202,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img3.webp"}
@@ -213,8 +213,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img4.webp"}
@@ -227,8 +227,8 @@ const toysGiveaway = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img5.webp"}
@@ -238,8 +238,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img1.webp"}
@@ -249,8 +249,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img7.webp"}
@@ -260,8 +260,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img8.webp"}
@@ -271,8 +271,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img9.webp"}
@@ -286,8 +286,8 @@ const toysGiveaway = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img11.webp"}
@@ -297,8 +297,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img10.webp"}
@@ -308,8 +308,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img12.webp"}
@@ -319,8 +319,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img13.webp"}
@@ -333,8 +333,8 @@ const toysGiveaway = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img15.webp"}
@@ -344,8 +344,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img1.webp"}
@@ -355,8 +355,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img16.webp"}
@@ -366,8 +366,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img17.webp"}
@@ -377,8 +377,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img18.webp"}
@@ -392,8 +392,8 @@ const toysGiveaway = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img19.webp"}
@@ -403,8 +403,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img20.webp"}
@@ -414,8 +414,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img21.webp"}
@@ -425,8 +425,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img22.webp"}
@@ -439,8 +439,8 @@ const toysGiveaway = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img23.webp"}
@@ -450,8 +450,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img25.webp"}
@@ -461,8 +461,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img2.webp"}
@@ -472,8 +472,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img26.webp"}
@@ -483,8 +483,8 @@ const toysGiveaway = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-toy/img27.webp"}

@@ -1,8 +1,6 @@
 import React, { memo } from "react";
 import Image from "next/image";
-import { LiaUserNurseSolid } from "react-icons/lia";
-import { MdOutlineMedicalServices, MdOutlineStar } from "react-icons/md";
-import { TiStarHalfOutline } from "react-icons/ti";
+import { Icon } from "@iconify/react";
 import PropTypes from "prop-types";
 
 const TestimonialCard = ({
@@ -45,13 +43,16 @@ const TestimonialCard = ({
         </h3>
 
         <p className="flex items-center md:text-base text-sm md:mt-1 gap-1 font-medium dark:text-gray-100 league-spartan">
-          <LiaUserNurseSolid className="md:text-2xl text-base" />
+          <Icon icon="la:user-nurse" className="md:text-2xl text-base" />
           <span className="font-semibold">Profession</span> <span>:</span>{" "}
           <span className="font-semibold">{designation}</span>
         </p>
 
         <p className="flex md:mt-1.5 items-center font-semibold gap-1 dark:text-gray-100 text-sm md:text-base league-spartan">
-          <MdOutlineMedicalServices className="md:text-xl" />
+          <Icon
+            icon="material-symbols:medical-services-outline"
+            className="md:text-xl"
+          />
           <span>Service:</span> <span>{caseType}</span>
         </p>
 
@@ -71,14 +72,25 @@ const TestimonialCard = ({
         </div>
 
         {/* Star Ratings */}
-        <p
-          className="flex items-center mt-2 text-yellow-500"
-          aria-label={`Rated ${rating} out of 5`}
-        >
-          {[...Array(Math.floor(rating))].map((_, i) => (
-            <MdOutlineStar className="md:text-xl" key={i} />
-          ))}
-          {rating % 1 !== 0 && <TiStarHalfOutline className="md:text-xl" />}
+        <p className="flex items-center mt-2 text-yellow-500">
+          <span aria-hidden="true" className="flex">
+            {[...Array(Math.floor(rating))].map((_, i) => (
+              <Icon
+                icon="material-symbols:star-outline"
+                key={i}
+                className="md:text-xl"
+                aria-hidden="true"
+              />
+            ))}
+            {rating % 1 !== 0 && (
+              <Icon
+                icon="typcn:star-half-outline"
+                className="md:text-xl"
+                aria-hidden="true"
+              />
+            )}
+          </span>
+          <span className="sr-only">{`Rated ${rating} out of 5`}</span>
         </p>
 
         <p className="w-20 text-center font-bold mt-1 dark:text-gray-100 md:text-xl">

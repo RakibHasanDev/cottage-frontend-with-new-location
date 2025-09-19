@@ -113,8 +113,8 @@ const HhhaContactForm = () => {
       <div
         className="w-[90%]  lg:w-[75%] mx-auto dark:bg-slate-600 bg-[#F4F4F4] opacity-90    
             lg:my-[50px] contact-adjustment lg:pb-3 rounded-md shadow-lg my-10 "
-        data-aos="fade-up"
-        data-aos-duration="2000"
+        // data-aos="fade-up"
+        // data-aos-duration="2000"
       >
         <div>
           <div>

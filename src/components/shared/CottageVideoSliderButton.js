@@ -1,7 +1,6 @@
 import React from "react";
 import { useSwiper } from "swiper/react";
-import { BiSolidLeftArrow } from "react-icons/bi";
-import { BiSolidRightArrow } from "react-icons/bi";
+import { Icon } from "@iconify/react";
 
 export const CottageVideoSliderButton = () => {
   const swiper = useSwiper();
@@ -12,13 +11,13 @@ export const CottageVideoSliderButton = () => {
         onClick={() => swiper.slidePrev()}
         className=" z-50 text-[#00A6B2] dark:text-white text-2xl font-semibold"
       >
-        <BiSolidLeftArrow />
+        <Icon icon="bx:solid-left-arrow" />
       </button>
       <button
         onClick={() => swiper.slideNext()}
         className="z-50 text-[#00A6B2] dark:text-white text-2xl font-semibold"
       >
-        <BiSolidRightArrow />
+        <Icon icon="bx:solid-right-arrow" />
       </button>
     </div>
   );

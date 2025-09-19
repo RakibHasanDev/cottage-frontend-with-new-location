@@ -20,7 +20,7 @@ const StateSelect = ({ value, onChange, error }) => {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+        className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                    focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100 text-left"
       >
         {value || "Select Your State"}
@@ -181,8 +181,8 @@ const ContactForm = () => {
       <section className="flex justify-center items-center pb-8 mt-3 mb-12 rounded w-11/12  md:w-[80%] mx-auto">
         <div
           className="w-full md:mt-[10vh] "
-          data-aos="fade-up"
-          data-aos-duration="2000"
+          // data-aos="fade-up"
+          // data-aos-duration="2000"
         >
           <form
             onSubmit={handleSubmit(submitHandler)}
@@ -218,7 +218,7 @@ const ContactForm = () => {
                   {...register("firstName", { required: "Name is required" })}
                   id="firstName"
                   placeholder="Full Name"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                     focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                 />
                 {errors.firstName && (
@@ -243,7 +243,7 @@ const ContactForm = () => {
                   })}
                   id="phone"
                   placeholder="Phone"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                     focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                 />
                 {errors.phone && (
@@ -259,7 +259,7 @@ const ContactForm = () => {
                   type="email"
                   {...register("email", { required: "email is required" })}
                   placeholder="E-mail "
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                     focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                 />
                 {errors.email && (
@@ -275,7 +275,7 @@ const ContactForm = () => {
                   id="service"
                   defaultValue=""
                   {...register("service", { required: "service is required" })}
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                     focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                 >
                   <option value="" disabled>
@@ -303,7 +303,7 @@ const ContactForm = () => {
                 id="inquiry"
                 defaultValue=""
                 {...register("inquiry", { required: "inquiry is required" })}
-                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                   focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
               >
                 <option value="" disabled>
@@ -326,7 +326,7 @@ const ContactForm = () => {
                 rows={5}
                 placeholder="Subject"
                 {...register("subject", { required: "subject is required" })}
-                className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                   focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
               />
               {errors.subject && (

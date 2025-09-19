@@ -2,10 +2,8 @@
 
 import { useState } from "react";
 import { toast } from "react-hot-toast";
-import { BiUserCircle } from "react-icons/bi";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { Icon } from "@iconify/react";
 import { useQuery } from "@tanstack/react-query";
-import { MdOutlineNavigateNext, MdArrowBackIosNew } from "react-icons/md";
 import Link from "next/link";
 import SpinerLoading from "@/components/shared/SpinerLoading";
 import AdminConversation from "@/components/shared/AdminConversation";
@@ -110,7 +108,10 @@ const AllUsers = () => {
                                   />
                                 )}
                                 {!user?.photoURL && (
-                                  <BiUserCircle className="w-8 h-8 2xl:w-12 2xl:h-12 rounded-full text-gray-300"></BiUserCircle>
+                                  <Icon
+                                    icon="bx:user-circle"
+                                    className="w-8 h-8 2xl:w-12 2xl:h-12 rounded-full text-gray-300"
+                                  />
                                 )}
 
                                 <p className="dark:text-gray-100 text-xs 2xl:text-base">
@@ -123,7 +124,7 @@ const AllUsers = () => {
                                   onClick={() => setIsOpen(!isOpen)}
                                   className="bg-transparent outline-none text-gray-200 dark:text-gray-100 text-2xl cursor-pointer"
                                 >
-                                  <BsThreeDotsVertical />
+                                  <Icon icon="bi:three-dots-vertical" />
                                 </button>
 
                                 {/* Dropdown Menu */}
@@ -209,16 +210,21 @@ const AllUsers = () => {
                                 className="flex items-center gap-3   w-full  px-2 rounded-md"
                               >
                                 {user?.photoURL && (
-                                  <Image
-                                    src={user?.photoURL}
-                                    alt={user?.photoURL}
-                                    width={40}
-                                    height={40}
-                                    className=" w-8 h-8 2xl:w-10 2xl:h-10 border-2 border-[#00A6B2] rounded-full"
-                                  />
+                                  <div className="relative w-8 h-8 2xl:w-10 2xl:h-10 border-2 border-[#00A6B2] rounded-full overflow-hidden">
+                                    <Image
+                                      src={user.photoURL}
+                                      alt={`${user.name || "User"} avatar`}
+                                      fill
+                                      className="object-cover"
+                                      sizes="(min-width:1536px) 40px, 32px"
+                                    />
+                                  </div>
                                 )}
                                 {!user?.photoURL && (
-                                  <BiUserCircle className="w-8 h-8 2xl:w-12 2xl:h-12 rounded-full text-gray-300"></BiUserCircle>
+                                  <Icon
+                                    icon="bx:user-circle"
+                                    className="w-8 h-8 2xl:w-12 2xl:h-12 rounded-full text-gray-300"
+                                  />
                                 )}
 
                                 <p className="dark:text-gray-100 2xl:text-base text-xs">
@@ -234,7 +240,7 @@ const AllUsers = () => {
                                         bg-transparent outline-none text-gray-500 dark:text-gray-100 text-2xl -mr mt-1 cursor-pointer"
                                     style={{ listStyle: "none" }}
                                   >
-                                    <BsThreeDotsVertical></BsThreeDotsVertical>
+                                    <Icon icon="bi:three-dots-vertical" />
                                   </summary>
                                   <ul className="px-4 py-6  menu dropdown-content z-[1] bg-gray-200 pr-10 rounded-md shadow-lg  dark:bg-slate-700 mt-3 duration-500">
                                     <li onClick={() => deleteHandler(user)}>
@@ -314,14 +320,19 @@ const AllUsers = () => {
               onClick={prevPage}
               disabled={page === 0}
             >
-              <MdArrowBackIosNew className="text-xs font-bold" /> Prev
+              <Icon
+                icon="material-symbols:arrow-back-ios-new"
+                className="text-xs font-bold"
+              />{" "}
+              Prev
             </button>
             <button
               className="flex items-center pl-2 py-1 text-gray-500 ml-2 border border-gray-300 hover:bg-[#00A6B2] hover:text-white custom-shadow text-sm"
               onClick={nextPage}
               disabled={page === pages - 1}
             >
-              Next <MdOutlineNavigateNext className="text-xl" />
+              Next{" "}
+              <Icon icon="material-symbols:navigate-next" className="text-xl" />
             </button>
 
             <select

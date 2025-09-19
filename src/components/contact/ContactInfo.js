@@ -1,17 +1,8 @@
 import React, { Suspense } from "react";
-
 import { useInView } from "react-intersection-observer";
-import { AiOutlineMail, AiOutlineTwitter } from "react-icons/ai";
-import { FaFacebookF, FaTiktok } from "react-icons/fa";
-
-import { IoLocationOutline } from "react-icons/io5";
-import { MdPhoneAndroid } from "react-icons/md";
-import { RiUserFollowLine } from "react-icons/ri";
+import { Icon } from "@iconify/react";
 import reader from "../../assets/button-lottie/call.json";
 import emailReader from "../../assets/button-lottie/email.json";
-import { IoLocationSharp } from "react-icons/io5";
-import { GrInstagram } from "react-icons/gr";
-import Loading from "../shared/Loading";
 import IconLoading from "../shared/IconLoading";
 
 const Lottie = React.lazy(() => import("lottie-react"));
@@ -30,8 +21,8 @@ const ContactInfo = () => {
       <div>
         <div
           className="w-[95%] lg:w-[50%] mx-auto text-center"
-          data-aos="fade-up"
-          data-aos-duration="2000"
+          // data-aos="fade-up"
+          // data-aos-duration="2000"
         >
           <p className="league-spartan my-5 text-2xl md:text-xl lg:text-2xl xl:text-4xl font-bold dark:text-gray-100 text-[#00A6B2]">
             Cottage Home Care Services
@@ -49,12 +40,12 @@ const ContactInfo = () => {
       <div className="w-[95%] lg:w-[90%] 2xl:w-[85%] mx-auto grid md:grid-cols-2 lg:grid-cols-4 mt-8 gap-6 lg:gap-5 2xl:gap-8">
         <div
           className="bg-[#E0F4F6] px-4 py-6 rounded-xl border border-gray-300 cart"
-          data-aos="zoom-in"
-          data-aos-duration="500"
+          // data-aos="zoom-in"
+          // data-aos-duration="500"
         >
           <div className="flex flex-col items-center">
             <div className="bg-[#00A6B2] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-4 logo">
-              <IoLocationOutline />
+              <Icon icon="ion:location-outline" />
             </div>
             <h5 className="text-gray-800 text-xl font-bold mb-4">Visit Us</h5>
 
@@ -65,7 +56,10 @@ const ContactInfo = () => {
                 rel="noreferrer"
                 className="flex items-start hover:underline hover:text-[#00A6B2] text-base lg:text-sm 2xl:text-base"
               >
-                <IoLocationSharp className="mr-2 text-[#00A6B2] text-lg" />
+                <Icon
+                  icon="ion:location-sharp"
+                  className="mr-2 text-[#00A6B2] text-lg"
+                />
                 <span className="w-[90%]">
                   25 Newbridge Road, Suite 302, Hicksville, NY 11801, USA
                 </span>
@@ -77,7 +71,10 @@ const ContactInfo = () => {
                 rel="noreferrer"
                 className="flex items-start hover:underline hover:text-[#00A6B2] text-base lg:text-sm 2xl:text-base"
               >
-                <IoLocationSharp className="mr-2 text-[#00A6B2] text-lg" />
+                <Icon
+                  icon="ion:location-sharp"
+                  className="mr-2 text-[#00A6B2] text-lg"
+                />
                 <span className="w-[90%]">
                   126-01 Liberty Avenue, South Richmond Hill, Queens, NY 11419,
                   USA
@@ -90,9 +87,12 @@ const ContactInfo = () => {
                 rel="noreferrer"
                 className="flex items-start hover:underline hover:text-[#00A6B2] text-base lg:text-sm 2xl:text-base"
               >
-                <IoLocationSharp className="mr-2 text-[#00A6B2] text-lg" />
+                <Icon
+                  icon="ion:location-sharp"
+                  className="mr-2 text-[#00A6B2] text-lg"
+                />
                 <span className="w-[90%]">
-                  130 Washington Ave, 3rd Floor Unit G, Albany, NY 12210 
+                  130 Washington Ave, 3rd Floor Unit G, Albany, NY 12210
                 </span>
               </a>
 
@@ -102,7 +102,10 @@ const ContactInfo = () => {
                 rel="noreferrer"
                 className="flex items-start hover:underline hover:text-[#00A6B2] text-base lg:text-sm 2xl:text-base"
               >
-                <IoLocationSharp className="mr-2 text-[#00A6B2] text-lg" />
+                <Icon
+                  icon="ion:location-sharp"
+                  className="mr-2 text-[#00A6B2] text-lg"
+                />
                 <span className="w-[90%]">
                   391 East 149th Street, Bronx, NY 10455
                 </span>
@@ -113,12 +116,12 @@ const ContactInfo = () => {
 
         <div
           className="bg-[#E0F4F6] p-6 rounded-xl border border-gray-300 cart"
-          data-aos="zoom-in"
-          data-aos-duration="800"
+          // data-aos="zoom-in"
+          // data-aos-duration="800"
         >
           <div className="flex flex-col items-center">
             <div className="bg-[#00A6B2] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-4 logo">
-              <MdPhoneAndroid />
+              <Icon icon="material-symbols:phone-android" />
             </div>
             <h5 className="text-gray-800 text-xl font-bold mb-4">Call Us</h5>
             <a
@@ -158,12 +161,12 @@ const ContactInfo = () => {
 
         <div
           className="bg-[#E0F4F6] p-6 rounded-xl border border-gray-300 cart"
-          data-aos="zoom-in"
-          data-aos-duration="1200"
+          // data-aos="zoom-in"
+          // data-aos-duration="1200"
         >
           <div className="flex flex-col items-center">
             <div className="bg-[#00A6B2] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl mb-4 logo">
-              <AiOutlineMail />
+              <Icon icon="ant-design:mail-outlined" />
             </div>
             <h5 className="text-gray-800 text-xl font-bold mb-4">Email Us</h5>
             <a
@@ -192,11 +195,11 @@ const ContactInfo = () => {
 
         <div
           className="bg-[#E0F4F6] p-6 rounded-lg shadow-lg border border-gray-200 text-center flex flex-col items-center space-y-4 cart"
-          data-aos="zoom-in"
-          data-aos-duration="1500"
+          // data-aos="zoom-in"
+          // data-aos-duration="1500"
         >
           <div className="bg-[#00A6B2] text-white w-16 h-16 rounded-full flex items-center justify-center mb-2 logo">
-            <RiUserFollowLine className="text-3xl" />
+            <Icon icon="ri:user-follow-line" className="text-3xl" />
           </div>
           <h5 className="text-xl font-semibold text-gray-800">Follow Us</h5>
           <p className="text-gray-600 text-base mb-4">
@@ -249,10 +252,16 @@ const ContactInfo = () => {
               rel="noreferrer"
               className="icon"
             >
-              <FaFacebookF className="w-[40px] h-[40px] p-[6px]" />
+              <Icon
+                icon="fa6-brands:facebook-f"
+                className="w-[40px] h-[40px] p-[6px]"
+              />
             </a>
             <a href="#" target="_blank" rel="noreferrer" className="icon">
-              <AiOutlineTwitter className="w-[40px] h-[40px] p-[6px]" />
+              <Icon
+                icon="ant-design:twitter-outlined"
+                className="w-[40px] h-[40px] p-[6px]"
+              />
             </a>
             <a
               href="https://www.instagram.com/cottage.homecare"
@@ -260,7 +269,10 @@ const ContactInfo = () => {
               rel="noreferrer"
               className="icon"
             >
-              <GrInstagram className="w-[40px] h-[40px] p-[6px]" />
+              <Icon
+                icon="gridicons:instagram"
+                className="w-[40px] h-[40px] p-[6px]"
+              />
             </a>
             <a
               href="https://www.tiktok.com/@cottage.homecare"
@@ -268,7 +280,10 @@ const ContactInfo = () => {
               rel="noreferrer"
               className="icon"
             >
-              <FaTiktok className="w-[40px] h-[40px] p-[6px]" />
+              <Icon
+                icon="fa6-brands:tiktok"
+                className="w-[40px] h-[40px] p-[6px]"
+              />
             </a>
           </div>
         </div>

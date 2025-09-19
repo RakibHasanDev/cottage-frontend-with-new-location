@@ -1,14 +1,5 @@
 import React, { useContext, useState } from "react";
-import { ImBlog, ImHome } from "react-icons/im";
-import { SlLocationPin } from "react-icons/sl";
-import { MdLightMode, MdOutlineMedicalServices } from "react-icons/md";
-import { TbCertificate } from "react-icons/tb";
-import { BsFiles, BsFillTelephoneFill, BsVirus } from "react-icons/bs";
-import { RiCommunityFill } from "react-icons/ri";
-import { FaQuestionCircle } from "react-icons/fa";
-import { RxCross2 } from "react-icons/rx";
-import { GoDesktopDownload } from "react-icons/go";
-import { IoDesktopOutline, IoMoonSharp } from "react-icons/io5";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { ThemeContext } from "@/context/ThemeContext";
 
@@ -26,9 +17,9 @@ const SideNav = () => {
   };
 
   const options = [
-    { icon: <MdLightMode />, text: "light" },
-    { icon: <IoMoonSharp />, text: "dark" },
-    { icon: <IoDesktopOutline />, text: "system" },
+    { icon: <Icon icon="material-symbols:light-mode" />, text: "light" },
+    { icon: <Icon icon="ion:moon-sharp" />, text: "dark" },
+    { icon: <Icon icon="ion:desktop-outline" />, text: "system" },
   ];
 
   const handleThemeChange = (selectedTheme) => {
@@ -66,7 +57,7 @@ const SideNav = () => {
   ];
   const serviceArea = [
     {
-      id: 1,
+      id: 2,
       question: "Select Your State",
       answer: [
         {
@@ -75,7 +66,7 @@ const SideNav = () => {
         },
         {
           property: "New York City",
-          path: "/",
+          path: " ",
         },
         {
           property: "New Jersey",
@@ -157,7 +148,7 @@ const SideNav = () => {
               className="bg-[#00A6B2] w-10 h-10 shadow-xl rounded-full text-white flex justify-center items-center text-2xl"
               onClick={toggleCloser}
             >
-              <RxCross2 />
+              <Icon icon="radix-icons:cross-2" />
             </button>
           </li>
 
@@ -170,7 +161,10 @@ const SideNav = () => {
               title="Home"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <ImHome className="text-base flex-shrink-0" />
+              <Icon
+                icon="icomoon-free:home"
+                className="text-base flex-shrink-0"
+              />
               <span>Home</span>
             </Link>
           </li>
@@ -188,7 +182,10 @@ const SideNav = () => {
                 className="w-full focus:outline-none flex justify-between items-center "
               >
                 <div className="flex items-center gap-3">
-                  <SlLocationPin className="text-base flex-shrink-0" />
+                  <Icon
+                    icon="simple-line-icons:location-pin"
+                    className="text-base flex-shrink-0"
+                  />
                   <span className="uppercase tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
                     {item?.question}
                   </span>
@@ -240,7 +237,10 @@ const SideNav = () => {
               title="Contact Us"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <BsFillTelephoneFill className="text-base flex-shrink-0" />
+              <Icon
+                icon="bi:telephone-fill"
+                className="text-base flex-shrink-0"
+              />
               <span>Contact Us</span>
             </Link>
           </li>
@@ -260,7 +260,10 @@ const SideNav = () => {
                 className="w-full focus:outline-none flex justify-between items-center "
               >
                 <div className="flex items-center gap-3">
-                  <MdOutlineMedicalServices className="text-sm flex-shrink-0" />
+                  <Icon
+                    icon="material-symbols:medical-services-outline"
+                    className="text-sm flex-shrink-0"
+                  />
                   <span className="uppercase tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
                     {item?.question}
                   </span>
@@ -318,7 +321,10 @@ const SideNav = () => {
                 className="w-full flex justify-between items-center  focus:outline-none"
               >
                 <div className="flex items-center gap-3">
-                  <RiCommunityFill className="text-sm flex-shrink-0" />
+                  <Icon
+                    icon="ri:community-fill"
+                    className="text-sm flex-shrink-0"
+                  />
                   <span className="uppercase  tracking-wide transition-colors duration-200 hover:text-[#00A6B2]">
                     {item?.question}
                   </span>
@@ -368,7 +374,10 @@ const SideNav = () => {
               href="/hha-certification"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <TbCertificate className="text-lg flex-shrink-0" />
+              <Icon
+                icon="tabler:certificate"
+                className="text-lg flex-shrink-0"
+              />
               <span>HHA Certification</span>
             </Link>
           </li>
@@ -379,7 +388,7 @@ const SideNav = () => {
               href="/covid"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <BsVirus className="text-lg flex-shrink-0" />
+              <Icon icon="bi:virus" className="text-lg flex-shrink-0" />
               <span>Covid-19</span>
             </Link>
           </li>
@@ -390,7 +399,7 @@ const SideNav = () => {
               href="/resources"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <BsFiles className="text-lg flex-shrink-0" />
+              <Icon icon="bi:files" className="text-lg flex-shrink-0" />
               <span>Resources</span>
             </Link>
           </li>
@@ -401,7 +410,10 @@ const SideNav = () => {
               href="/help-desk"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <GoDesktopDownload className="text-lg flex-shrink-0" />
+              <Icon
+                icon="octicon:desktop-download-24"
+                className="text-lg flex-shrink-0"
+              />
               <span>Help Desk</span>
             </Link>
           </li>
@@ -412,7 +424,10 @@ const SideNav = () => {
               href="/faqs"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <FaQuestionCircle className="text-lg flex-shrink-0" />
+              <Icon
+                icon="fa6-regular:circle-question"
+                className="text-lg flex-shrink-0"
+              />
               <span>FAQs</span>
             </Link>
           </li>
@@ -423,7 +438,10 @@ const SideNav = () => {
               href="/blog"
               className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
             >
-              <ImBlog className="text-lg flex-shrink-0" />
+              <Icon
+                icon="icomoon-free:blog"
+                className="text-lg flex-shrink-0"
+              />
               <span>Blog</span>
             </Link>
           </li>

@@ -118,7 +118,10 @@ const EmployeeForm = () => {
         )}
 
         <section className="flex justify-center items-center pb-8 mt-3 mb-12 rounded w-11/12 md:w-[80%] mx-auto">
-          <div className="w-full" data-aos="fade-up" data-aos-duration="2000">
+          <div
+            className="w-full"
+            // data-aos="fade-up" data-aos-duration="2000"
+          >
             <form
               onSubmit={handleSubmit(submitHandler)}
               className="max-w-xl md:max-w-3xl ml-auto bg-gray-50 p-8 rounded-md shadow-xl dark:bg-slate-600"
@@ -141,7 +144,7 @@ const EmployeeForm = () => {
                     {...register("name", { required: "Name is required" })}
                     id="Employee-Name"
                     placeholder="Employee Name"
-                    className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                    className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                   />
                   {errors.name && (
                     <p className="text-red-600">{errors.name.message}</p>
@@ -164,7 +167,7 @@ const EmployeeForm = () => {
                   <button
                     type="button"
                     onClick={openCloudinaryWidget}
-                    className="file-input file-input-[#1D93AE]  text-gray-700 w-full px-4 py-3 rounded-md border focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                    className="file-input file-input-[#1D93AE]  text-gray-700 w-full px-4 py-3 rounded-md border focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                   >
                     Upload an Image
                   </button>
@@ -191,7 +194,7 @@ const EmployeeForm = () => {
                   })}
                   id="Employee-Designation"
                   placeholder="Employee Designation"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
                 {errors.designation && (
                   <p className="text-red-600">{errors.designation.message}</p>
@@ -208,7 +211,7 @@ const EmployeeForm = () => {
                     required: "Department is required",
                   })}
                   id="option"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                   required
                 >
                   <option value="" disabled hidden selected>
@@ -251,7 +254,7 @@ const EmployeeForm = () => {
                 <select
                   {...register("office")}
                   id="option"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                 >
                   <option value="" disabled hidden>
                     Select One
@@ -274,7 +277,7 @@ const EmployeeForm = () => {
                   id="description"
                   rows={5}
                   placeholder="Employee Details"
-                  className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 
@@ -293,7 +296,7 @@ const EmployeeForm = () => {
                   {...register("primaryNumber")}
                   id="primaryNumber"
                   placeholder="Primary Number"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 
@@ -310,7 +313,7 @@ const EmployeeForm = () => {
                   {...register("directNumber")}
                   id="directNumber"
                   placeholder="Direct Number"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 
@@ -324,7 +327,7 @@ const EmployeeForm = () => {
                   {...register("extension")}
                   id="extension"
                   placeholder="Extension"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 
@@ -338,7 +341,7 @@ const EmployeeForm = () => {
                   {...register("email")}
                   id="email"
                   placeholder="Email Address"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 
@@ -352,7 +355,7 @@ const EmployeeForm = () => {
                   {...register("facebook")}
                   id="facebook"
                   placeholder="Facebook URL"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 
@@ -365,7 +368,7 @@ const EmployeeForm = () => {
                   {...register("twitter")}
                   id="twitter"
                   placeholder="Twitter URL"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 
@@ -378,7 +381,7 @@ const EmployeeForm = () => {
                   {...register("instagram")}
                   id="instagram"
                   placeholder="Instagram URL"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 
@@ -391,7 +394,7 @@ const EmployeeForm = () => {
                   {...register("linkEdin")}
                   id="linkEdin"
                   placeholder="LinkedIn URL"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 
@@ -404,7 +407,7 @@ const EmployeeForm = () => {
                   {...register("web")}
                   id="web"
                   placeholder="Web URL"
-                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
+                  className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-200"
                 />
               </div>
 

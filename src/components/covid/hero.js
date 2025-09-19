@@ -1,17 +1,15 @@
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 import Image from "next/image";
 import React from "react";
-
-import { AiOutlineArrowRight } from "react-icons/ai";
-import { BsShieldShaded } from "react-icons/bs";
+import { Icon } from "@iconify/react";
 
 const Banner = () => {
   return (
     <div className="lg:grid grid-cols-2 gap-5 items-center flex flex-col-reverse">
       <div
         className="font-[Roboto]"
-        data-aos="fade-right"
-        data-aos-duration="2000"
+        // data-aos="fade-right"
+        // data-aos-duration="2000"
       >
         <div className="flex gap-3 items-center">
           <p className="bg-[#F86168] league-spartan text-white uppercase px-2 py-[2px] w-[100px] rounded-sm font-semibold">
@@ -36,19 +34,22 @@ const Banner = () => {
             href="#actions-section"
             className="bg-[#00A6B2] px-5 py-3 bg-hov2 text-white shadow-md rounded-md  flex items-center gap-3 open-sans"
           >
-            How to Protect <BsShieldShaded />
+            How to Protect <Icon icon="bi:shield-shaded" />
           </a>
 
           <a
             href="#about-covid"
             className="flex gap-2 items-center text-[#00A6B2] font-semibold cursor-pointer bg-hov2 lg:mt-0 mt-3 open-sans"
           >
-            About COVID-19 <AiOutlineArrowRight />
+            About COVID-19 <Icon icon="ant-design:arrow-right-outlined" />
           </a>
         </div>
       </div>
 
-      <div className=" " data-aos="fade-left" data-aos-duration="2000">
+      <div
+        className=" "
+        // data-aos="fade-left" data-aos-duration="2000"
+      >
         <Image
           src={"/assets/Covid-19/header-b.png"}
           className="md:h-[30vh] lg:h-[75vh] mx-auto"

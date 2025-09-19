@@ -5,8 +5,7 @@ import IconLoading from "@/components/shared/IconLoading";
 import { useInView } from "react-intersection-observer";
 import dynamic from "next/dynamic";
 import ReviewsSection from "@/components/ServiceArea/ReviewSection";
-import { FaRegCalendar } from "react-icons/fa";
-import { IoIosArrowDropdown } from "react-icons/io";
+import { Icon } from "@iconify/react";
 import EasierLife from "@/components/home/EasierLife";
 import Link from "next/link";
 import Image from "next/image";
@@ -156,12 +155,12 @@ export default function HeroSection({
         <link
           rel="alternate"
           href="https://cottagehomecare.com/service-areas/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/service-areas/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"
@@ -220,7 +219,7 @@ export default function HeroSection({
               height={886}
               priority // ✅ LCP Fix: Boost Loading Priority
             />
-            <div className="absolute inset-0 bg-slate-900/65" />
+            <div className="absolute inset-0 bg-slate-900/10" />
           </div>
 
           {/* Content */}
@@ -238,7 +237,7 @@ export default function HeroSection({
             >
               <a
                 href="tel:+1516-367-2266"
-                className="flex items-center px-6 py-3 md:px-5 md:py-2.5 border border-[#00a6b2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden text-sm xl:text-xl bg-[#00A6B2]"
+                className="flex items-center px-6 py-3 md:px-5 md:py-2.5 border border-[#00A6B2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00A6B2] duration-500 bg-hov2 league-spartan overflow-hidden text-sm xl:text-xl bg-[#00A6B2]"
                 aria-label="Call us at (516) 367-2266"
               >
                 {/* <FaPhone className="mr-2 " /> */}
@@ -277,7 +276,7 @@ export default function HeroSection({
                 }}
                 className="flex gap-1 -mt-1 px-6 py-3 md:px-8 md:py-2.5 border border-[#3A4256] rounded-full text-white bg-[#536cac] duration-500 bg-hov2 league-spartan xl:text-xl cursor-pointer text-sm"
               >
-                Schedule a Call <FaRegCalendar />
+                Schedule a Call <Icon icon="fa6-regular:calendar" />
               </a>
             </div>
           </div>
@@ -336,8 +335,8 @@ export default function HeroSection({
                 <div
                   key={loc.slug}
                   className="space-y-3"
-                  data-aos="zoom-in"
-                  data-aos-duration="1500"
+                  // data-aos="zoom-in"
+                  // data-aos-duration="1500"
                 >
                   {/* image: 600x380 ratio (30/19) */}
                   <Link
@@ -448,7 +447,7 @@ export default function HeroSection({
             <div className="pt-5 pb-5 md:pb-[120px] font-[Roboto] flex justify-center items-center gap-8 md:gap-0 md:space-y-0 md:space-x-7 flex-wrap mt-10">
               <a
                 href="tel:+1516-367-2266"
-                className="flex items-center px-6 py-3 md:px-5 md:py-4 border border-[#00a6b2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00a6b2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-xl bg-[#00A6B2]"
+                className="flex items-center px-6 py-3 md:px-5 md:py-4 border border-[#00A6B2] dark:border-[#3A4256] dark:bg-[#3A4256] rounded-full text-white hover:bg-[#00A6B2] duration-500 bg-hov2 league-spartan overflow-hidden xl:text-xl bg-[#00A6B2]"
                 aria-label="Call us at (516) 367-2266"
               >
                 {/* <FaPhone className="mr-2 " /> */}
@@ -487,7 +486,7 @@ export default function HeroSection({
                 }}
                 className="flex gap-1 -mt-1 px-6 py-3 md:px-8 md:py-4 border border-[#3A4256] rounded-full text-white bg-[#3A4256] duration-500 bg-hov2 league-spartan xl:text-xl cursor-pointer"
               >
-                Schedule a Call <FaRegCalendar />
+                Schedule a Call <Icon icon="fa6-regular:calendar" />
               </a>
             </div>
           </div>
@@ -581,7 +580,8 @@ export default function HeroSection({
 
             {/* Down arrow icon */}
             <div className="flex justify-center mt-10">
-              <IoIosArrowDropdown
+              <Icon
+                icon="ion:ios-arrow-dropdown"
                 size={42}
                 className="text-gray-600 animate-float"
               />

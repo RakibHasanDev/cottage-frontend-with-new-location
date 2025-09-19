@@ -22,12 +22,12 @@ const Disclaimer = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/disclaimer/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/disclaimer/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/disclaimer/" />
 

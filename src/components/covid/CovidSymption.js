@@ -25,7 +25,9 @@ const CovidSymption = () => {
   return (
     <div className="my-20 lg:w-[80%] mx-auto font-[Roboto] " id="symtom-covid">
       <div className="lg:grid md:grid-cols-2 gap-7 items-center flex flex-col-reverse">
-        <div data-aos-duration="2000" data-aos="fade-right">
+        <div
+        // data-aos-duration="2000" data-aos="fade-right"
+        >
           <p className="text-[#F65858] text-lg font-semibold league-spartan">
             What are the symptoms of COVID-19?
           </p>
@@ -68,7 +70,9 @@ const CovidSymption = () => {
           </div>
         </div>
 
-        <div data-aos-duration="2000" data-aos="fade-left">
+        <div
+        // data-aos-duration="2000" data-aos="fade-left"
+        >
           <img
             src={"/assets/Covid-19/gfx-b.png"}
             alt="COVID-19 Symptoms Graphic"

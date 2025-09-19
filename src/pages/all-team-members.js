@@ -1,11 +1,9 @@
 import React, { useContext, useState } from "react";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { FiFacebook } from "react-icons/fi";
+import { Icon } from "@iconify/react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { toast } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
-import { BsSearch } from "react-icons/bs";
 import Loading from "@/components/shared/Loading";
 import Link from "next/link";
 import Head from "next/head";
@@ -82,12 +80,12 @@ const AllTeamMembers = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/all-team-members/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/all-team-members/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"
@@ -240,7 +238,10 @@ const AllTeamMembers = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
 
-              <BsSearch className="absolute top-2.5 left-3  text-[#00A6B2]" />
+              <Icon
+                icon="bi:search"
+                className="absolute top-2.5 left-3  text-[#00A6B2]"
+              />
             </div>
           </div>
 
@@ -260,8 +261,8 @@ const AllTeamMembers = () => {
                   <div
                     key={index}
                     className=" relative mt-16   mb-10 md:w-full  bg-white  shadow-md rounded-md lg:min-h-[22rem] dark:bg-slate-800 "
-                    data-aos="zoom-in"
-                    data-aos-duration="2000"
+                    // data-aos="zoom-in"
+                    // data-aos-duration="2000"
                   >
                     <div className="rounded overflow-hidden  ">
                       <div className="absolute -mt-20 w-full flex justify-center">
@@ -323,7 +324,10 @@ const AllTeamMembers = () => {
                               <>
                                 <button className="mx-5 bg-hov2">
                                   <div>
-                                    <FiFacebook className="text-[#828FA3] text-2xl " />
+                                    <Icon
+                                      icon="feather:facebook"
+                                      className="text-[#828FA3] text-2xl "
+                                    />
                                   </div>
                                 </button>
                               </>
@@ -336,7 +340,10 @@ const AllTeamMembers = () => {
                                   rel="noreferrer"
                                 >
                                   <div>
-                                    <FiFacebook className="text-[#828FA3] text-2xl " />
+                                    <Icon
+                                      icon="feather:facebook"
+                                      className="text-[#828FA3] text-2xl "
+                                    />
                                   </div>
                                 </a>
                               </>
@@ -476,7 +483,10 @@ const AllTeamMembers = () => {
                                 rel="noreferrer"
                               >
                                 <div>
-                                  <AiOutlineGlobal className="text-[#828FA3] text-2xl " />
+                                  <Icon
+                                    icon="ant-design:global-outlined"
+                                    className="text-[#828FA3] text-2xl "
+                                  />
                                 </div>
                               </a>
                             )}

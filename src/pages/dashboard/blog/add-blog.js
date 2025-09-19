@@ -163,7 +163,10 @@ const AddBlog = () => {
           </div>
         )}
         <section className="flex justify-center items-center pb-8 mt-3 mb-12 rounded w-11/12 md:w-[80%] mx-auto">
-          <div className="w-full" data-aos="fade-up" data-aos-duration="2000">
+          <div
+            className="w-full"
+            // data-aos="fade-up" data-aos-duration="2000"
+          >
             <form
               onSubmit={handleSubmit(submitHandler)}
               className="max-w-xl md:max-w-[90%] ml-auto bg-gray-50 p-8 rounded-md shadow-xl dark:bg-slate-600"
@@ -203,7 +206,7 @@ const AddBlog = () => {
                         setSlugWarningMessage("");
                       }
                     }}
-                    className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
+                    className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
                       slugWarningMessage ? "border-red-500" : ""
                     }`}
                   />
@@ -231,7 +234,7 @@ const AddBlog = () => {
                   <button
                     type="button"
                     onClick={handleImageUpload}
-                    className="file-input file-input-[#1D93AE] border-0 w-full text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 py-3"
+                    className="file-input file-input-[#1D93AE] border-0 w-full text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 py-3"
                   >
                     Upload Image
                   </button>
@@ -252,7 +255,7 @@ const AddBlog = () => {
                       required: "Category is required",
                     })}
                     id="category"
-                    className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
+                    className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
                   >
                     <option value="">Select Category</option>
                     <option value="HHA">HHA</option>
@@ -293,7 +296,7 @@ const AddBlog = () => {
                     setMetaDescCharCount(value.length);
                     setMetaDescWarning(value.length > 155);
                   }}
-                  className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
+                  className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
                     metaDescWarning ? "border-red-500" : ""
                   }`}
                 />
@@ -333,7 +336,7 @@ const AddBlog = () => {
                   id={`keywords`}
                   rows={3}
                   placeholder="e.g. sleep, senior care, night routine"
-                  className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
+                  className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
                 />
                 {errors.keywords && (
                   <p className="text-red-600">{errors.keywords.message}</p>
@@ -372,7 +375,7 @@ const AddBlog = () => {
                       setTitleWarningMessage("");
                     }
                   }}
-                  className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
+                  className={`w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100 ${
                     titleWarningMessage ? "border-red-500" : ""
                   }`}
                 />
@@ -399,7 +402,7 @@ const AddBlog = () => {
                       {...register(`title${index + 1}`)}
                       id={`title${index + 1}`}
                       placeholder={`Sub title -${index + 1}`}
-                      className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
+                      className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
                     />
                     {errors[`title${index + 1}`] && (
                       <p className="text-red-600">
@@ -420,7 +423,7 @@ const AddBlog = () => {
                         e.target.style.height = "auto";
                         e.target.style.height = `${e.target.scrollHeight}px`;
                       }}
-                      className="resize-none overflow-hidden w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
+                      className="resize-none overflow-hidden w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
                     />
 
                     {errors[`description${index + 1}`] && (

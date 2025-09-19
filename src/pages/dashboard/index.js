@@ -3,9 +3,7 @@ import React, { useContext, Suspense } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
-import { FaUserNurse, FaUsers } from "react-icons/fa";
-import { GiLovers } from "react-icons/gi";
-import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
+import { Icon } from "@iconify/react";
 import { AuthContext } from "@/context/AuthProvider";
 import Loading from "@/components/shared/Loading";
 import SkeletonLoading from "@/components/shared/SkeletonLoading";
@@ -64,7 +62,7 @@ const Dashboard = () => {
               <Link href="/dashboard/cottage-users">
                 <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
                   <p className="flex justify-center text-4xl text-gray-100">
-                    <FaUsers />
+                    <Icon icon="fa6-solid:users" />
                   </p>
                   <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
                     Total Users:{" "}
@@ -76,7 +74,7 @@ const Dashboard = () => {
               <Link href="/dashboard/pca">
                 <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
                   <p className="flex justify-center text-4xl text-gray-100">
-                    <FaUserNurse />
+                    <Icon icon="fa6-solid:user-nurse" />
                   </p>
                   <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
                     PCA Inquiry: <span className="text-xl">{pca}</span>
@@ -87,7 +85,7 @@ const Dashboard = () => {
               <Link href="/dashboard/cdpap">
                 <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
                   <p className="flex justify-center text-4xl text-gray-100">
-                    <GiLovers />
+                    <Icon icon="game-icons:lovers" />
                   </p>
                   <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
                     CDPAP Inquiry: <span className="text-xl">{cdpap}</span>
@@ -98,7 +96,7 @@ const Dashboard = () => {
               <Link href="/dashboard/offices">
                 <div className="bg-gradient-to-r from-sky-500 to-indigo-500 text-primary-content rounded-xl py-4 shadow-md">
                   <p className="flex justify-center text-4xl text-gray-100">
-                    <HiOutlineBuildingOffice2 />
+                    <Icon icon="heroicons-outline:building-office-2" />
                   </p>
                   <p className="flex justify-center font-semibold text-gray-100 gap-2 items-center">
                     Office Messages:{" "}
@@ -109,7 +107,7 @@ const Dashboard = () => {
 
               <div className="lg:flex items-center gap-3 hidden">
                 <p className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
-                  <FaUsers className="text-3xl" />
+                  <Icon icon="fa6-solid:users" className="text-3xl" />
                 </p>
                 <div>
                   <p className="text-gray-500 font-medium text-sm dark:text-gray-200">
@@ -124,7 +122,7 @@ const Dashboard = () => {
 
             <div className="flex items-center gap-3 lg:hidden justify-center mt-5">
               <p className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
-                <FaUsers className="text-3xl" />
+                <Icon icon="fa6-solid:users" className="text-3xl" />
               </p>
               <div>
                 <p className="text-gray-500 font-medium text-sm dark:text-gray-200">

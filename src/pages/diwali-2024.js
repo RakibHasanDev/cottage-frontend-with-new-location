@@ -23,12 +23,12 @@ const diwali2024 = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/diwali-2024/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/diwali-2024/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/diwali-2024/" />
 
@@ -173,8 +173,8 @@ const diwali2024 = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img1.webp"}
@@ -184,8 +184,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img2.webp"}
@@ -195,8 +195,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img2.webp"}
@@ -206,8 +206,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img4.webp"}
@@ -220,8 +220,8 @@ const diwali2024 = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img5.webp"}
@@ -231,8 +231,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img6.webp"}
@@ -242,8 +242,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img7.webp"}
@@ -253,8 +253,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img8.webp"}
@@ -264,8 +264,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img9.webp"}
@@ -279,8 +279,8 @@ const diwali2024 = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img10.webp"}
@@ -290,8 +290,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img11.webp"}
@@ -301,8 +301,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img12.webp"}
@@ -312,8 +312,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img10.webp"}
@@ -326,8 +326,8 @@ const diwali2024 = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img14.webp"}
@@ -337,8 +337,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img17.webp"}
@@ -348,8 +348,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img16.webp"}
@@ -359,8 +359,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img18.webp"}
@@ -370,8 +370,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img19.webp"}
@@ -385,8 +385,8 @@ const diwali2024 = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img20.webp"}
@@ -396,8 +396,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img21.webp"}
@@ -407,8 +407,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img22.webp"}
@@ -418,8 +418,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img23.webp"}
@@ -432,8 +432,8 @@ const diwali2024 = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img24.webp"}
@@ -443,8 +443,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img10.webp"}
@@ -454,8 +454,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img26.webp"}
@@ -465,8 +465,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img27.webp"}
@@ -476,8 +476,8 @@ const diwali2024 = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Diwali2024/img28.webp"}

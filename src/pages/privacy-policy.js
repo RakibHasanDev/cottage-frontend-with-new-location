@@ -20,12 +20,12 @@ const PrivacyPolicy = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/privacy-policy/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/privacy-policy/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"

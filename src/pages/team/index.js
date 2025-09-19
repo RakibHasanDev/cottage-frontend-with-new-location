@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineTeam } from "react-icons/ai";
+import { Icon } from "@iconify/react";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { useQuery } from "@tanstack/react-query";
@@ -161,12 +161,12 @@ const Team = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/team/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/team/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/team/" />
 
@@ -643,7 +643,7 @@ const Team = () => {
                   Departments
                 </h3>
 
-                <hr className="border-[#00a6b2] border-t-[2px] w-16 mt-0.5  mx-auto  " />
+                <hr className="border-[#00A6B2] border-t-[2px] w-16 mt-0.5  mx-auto  " />
 
                 <div className="flex gap-3 md:gap-14 mt-3 md:mt-12 justify-evenly md:justify-center items-center flex-wrap ">
                   {/* div start Intake */}
@@ -1554,7 +1554,10 @@ const Team = () => {
               <p className=" w-[200px] md:w-[240px] mx-auto bg-[#00A6B2] flex justify-center items-center gap-1 py-2 rounded-lg shadow-lg">
                 <span>
                   {" "}
-                  <AiOutlineTeam className="font-semibold text-shadow" />
+                  <Icon
+                    icon="ant-design:team-outlined"
+                    className="font-semibold text-shadow"
+                  />
                 </span>{" "}
                 <span className="hover-underline-animation league-spartan ">
                   View All Team Members

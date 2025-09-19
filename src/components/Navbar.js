@@ -6,7 +6,7 @@ import ToggleButton from "./shared/ToogleButton";
 import SideNav from "./nav/SideNav";
 import { AuthContext } from "@/context/AuthProvider";
 import DropdownMenu from "./nav/DropdownMenu";
-import { HiChevronDown } from "react-icons/hi";
+import { Icon } from "@iconify/react";
 import { usePathname } from "next/navigation";
 import { ThemeProvider } from "@/context/ThemeContext";
 
@@ -92,7 +92,7 @@ const NavBar = () => {
                     height="100" // Set an appropriate height
                   />
                   <h5
-                    className={` ml-4   text-[#00a6b2]  nav-font league-spartan font-bold`}
+                    className={` ml-4   text-[#00A6B2]  nav-font league-spartan font-bold`}
                   >
                     <span className="text-shadow ">{companyName}</span>
                     <hr className="border-[1px] -mt-0.5 border-[#00A6B2] dark:border-gray-100 md:w-full w-[85%]" />
@@ -127,268 +127,230 @@ const NavBar = () => {
               </div>
             </Link>
 
-            <ul className=" items-center hidden lg:space-x-4 xl:space-x-4 2xl:space-x-4.5 lg:flex  nav-list">
-              <li>
-                <Link
-                  href="/"
-                  aria-label="Home"
-                  title="Home"
-                  className={`font-semibold    tracking-wide text-[#49465D] transition-colors duration-200  
-                                ${
-                                  navColor && "customWhite"
-                                } white   uppercase nav-text hover-underline-animation  dark:text-gray-300`}
-                >
-                  Home
-                </Link>
-              </li>
-
-              <li className="relative group font-semibold">
-                <button
-                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
-      ${
-        navColor ? "customWhite" : ""
-      } uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                >
-                  Select Your State
-                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
-                </button>
-
-                <div
-                  className="absolute left-0 top-full w-[200px] bg-white shadow-md border border-gray-200 rounded-md 
-      dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-      transition-opacity duration-300 z-50"
-                >
-                  <Link href="/service-areas">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Services Areas
-                    </p>
+            <nav aria-label="Primary navigation">
+              <ul className="nav-list lg:flex items-center hidden lg:space-x-4 xl:space-x-4 2xl:space-x-4.5">
+                {/* Home */}
+                <li>
+                  <Link
+                    href="/"
+                    aria-label="Home"
+                    title="Home"
+                    className={`font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
+                      navColor && "customWhite"
+                    } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+                  >
+                    Home
                   </Link>
-                  <Link href="/">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      NEW YORK CITY
-                    </p>
+                </li>
+
+                {/* Select Your State */}
+                <li className="relative group font-semibold focus-within:block">
+                  <button
+                    type="button"
+                    className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
+                      navColor ? "customWhite" : ""
+                    } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+                    aria-haspopup="menu"
+                    aria-expanded="false"
+                    aria-controls="nav-state-menu"
+                  >
+                    Select Your State
+                    <Icon
+                      icon="heroicons-outline:chevron-down"
+                      className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline"
+                    />
+                  </button>
+
+                  <ul
+                    id="nav-state-menu"
+                    role="menu"
+                    className="absolute left-0 top-full w-[200px] bg-white shadow-md border border-gray-200 rounded-md
+                   dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                   focus-within:opacity-100 focus-within:visible transition-opacity duration-300 z-50"
+                  >
+                    <li role="none">
+                      <Link
+                        role="menuitem"
+                        href="/service-areas"
+                        className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        Services Areas
+                      </Link>
+                    </li>
+                    <li role="none">
+                      <Link
+                        role="menuitem"
+                        href="/"
+                        className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        New York City
+                      </Link>
+                    </li>
+                    <li role="none">
+                      <Link
+                        role="menuitem"
+                        href="/new-jersey"
+                        className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        New Jersey
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+
+                {/* Services */}
+                <li className="relative group font-semibold focus-within:block">
+                  <button
+                    type="button"
+                    className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
+                      navColor ? "customWhite" : ""
+                    } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+                    aria-haspopup="menu"
+                    aria-expanded="false"
+                    aria-controls="nav-services-menu"
+                  >
+                    Services
+                    <Icon
+                      icon="heroicons-outline:chevron-down"
+                      className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline"
+                    />
+                  </button>
+
+                  <ul
+                    id="nav-services-menu"
+                    role="menu"
+                    className="absolute left-0 top-full w-48 bg-white shadow-md border border-gray-200 rounded-md
+                   dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                   focus-within:opacity-100 focus-within:visible transition-opacity duration-300 z-50 font-semibold"
+                  >
+                    <li role="none">
+                      <Link
+                        role="menuitem"
+                        href="/nhtd"
+                        className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        NHTD
+                      </Link>
+                    </li>
+                    <li role="none">
+                      <Link
+                        role="menuitem"
+                        href="/hha"
+                        className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        HHA/PCA
+                      </Link>
+                    </li>
+                    <li role="none">
+                      <Link
+                        role="menuitem"
+                        href="/private-pay-home-care"
+                        className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700"
+                      >
+                        Private Pay
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+
+                {/* Contact */}
+                <li>
+                  <Link
+                    href="/contact"
+                    aria-label="Contact Us"
+                    title="Contact Us"
+                    className={`font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
+                      navColor && "customWhite"
+                    } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+                  >
+                    Contact Us
                   </Link>
-                  <Link href="/new-jersey">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      New Jersey
-                    </p>
+                </li>
+
+                {/* HHA Certification */}
+                <li>
+                  <Link
+                    href="/hha-certification"
+                    aria-label="HHA Certification"
+                    title="HHA Certification"
+                    className={`font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
+                      navColor && "customWhite"
+                    } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+                  >
+                    HHA Certification
                   </Link>
-                  {/* <Link href="/maryland">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Maryland
-                    </p>
-                  </Link> */}
+                </li>
 
-                  {/* <Link href="/">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Connecticut
-                    </p>
-                  </Link> */}
-                </div>
-              </li>
-              {/* <li>
-              <NavLink
-                href="/services"
-                aria-label="services"
-                title="services"
-                className={`font-semibold    tracking-wide text-[#49465D] transition-colors duration-200  
-                                ${
-                                  navColor && "customWhite"
-                                } white   uppercase nav-text hover-underline-animation dark:text-gray-300`}
-              >
-                Services
-              </NavLink>
-            </li> */}
+                {/* Resources */}
+                <li className="relative group font-semibold focus-within:block">
+                  <button
+                    type="button"
+                    className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
+                      navColor ? "customWhite" : ""
+                    } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+                    aria-haspopup="menu"
+                    aria-expanded="false"
+                    aria-controls="nav-resources-menu"
+                  >
+                    Resources
+                    <Icon
+                      icon="heroicons-outline:chevron-down"
+                      className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline"
+                    />
+                  </button>
 
-              <li className="relative group">
-                {/* Services Button */}
-                <button
-                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
-      ${
-        navColor ? "customWhite" : ""
-      } uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                >
-                  Services
-                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
-                </button>
-                {/* Dropdown Menu */}
-                <div
-                  className="absolute left-0 top-full w-48 bg-white shadow-md border border-gray-200 rounded-md 
-      dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-      transition-opacity duration-300 z-50 font-semibold "
-                >
-                  {/* Services Links */}
+                  <ul
+                    id="nav-resources-menu"
+                    role="menu"
+                    className="absolute left-0 top-full w-44 bg-white shadow-md border border-gray-200 rounded-md
+                   dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                   focus-within:opacity-100 focus-within:visible transition-opacity duration-300 z-50"
+                  >
+                    {[
+                      { href: "/resources", label: "Resources" },
+                      { href: "/blog", label: "Blog" },
+                      { href: "/help-desk", label: "Help Desk" },
+                      { href: "/covid", label: "Covid-19" },
+                      { href: "/faqs", label: "FAQs" },
+                      { href: "/past-event", label: "Past Events" },
+                      { href: "/team", label: "Team Members" },
+                    ].map((it) => (
+                      <li key={it.href} role="none">
+                        <Link
+                          role="menuitem"
+                          href={it.href}
+                          className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b last:border-b-0 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        >
+                          {it.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
 
-                  <Link href="/nhtd">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      NHTD
-                    </p>
+                {/* Blog */}
+                <li>
+                  <Link
+                    href="/blog"
+                    aria-label="Blog"
+                    title="Blog"
+                    className={`font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
+                      navColor && "customWhite"
+                    } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+                  >
+                    Blog
                   </Link>
+                </li>
 
-                  <Link href="/hha">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      HHA/PCA
-                    </p>
-                  </Link>
-
-                  <Link href="/private-pay-home-care">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Private Pay
-                    </p>
-                  </Link>
-
-                  {/* <Link href="/cdpap">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
-                      CDPAP
-                    </p>
-                  </Link> */}
-                </div>
-              </li>
-
-              <li>
-                <Link
-                  href="/contact"
-                  aria-label="Contact US"
-                  title="Contact US"
-                  className={`font-semibold    tracking-wide text-[#49465D] transition-colors duration-200  
-                                ${
-                                  navColor && "customWhite"
-                                } white   uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                >
-                  Contact US
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/hha-certification"
-                  aria-label="HHA Certification"
-                  title="HHA Certification"
-                  className={`font-semibold    tracking-wide text-[#49465D] transition-colors duration-200  
-                                ${
-                                  navColor && "customWhite"
-                                } white   uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                >
-                  HHA Certification
-                </Link>
-              </li>
-
-              <li className="relative group font-semibold">
-                {/* Resources Button */}
-
-                <button
-                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
-      ${
-        navColor ? "customWhite" : ""
-      } uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                >
-                  Resources
-                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
-                </button>
-
-                {/* Dropdown Menu */}
-                <div
-                  className="absolute left-0 top-full w-44 bg-white shadow-md border border-gray-200 rounded-md 
-      dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-      transition-opacity duration-300 z-50"
-                >
-                  {/* Resources Links */}
-                  <Link href="/resources">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Resources
-                    </p>
-                  </Link>
-
-                  <Link href="/blog">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Blog
-                    </p>
-                  </Link>
-
-                  <Link href="/help-desk">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Help Desk
-                    </p>
-                  </Link>
-
-                  <Link href="/covid">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Covid-19
-                    </p>
-                  </Link>
-
-                  <Link href="/faqs">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
-                      FAQs
-                    </p>
-                  </Link>
-                  <Link href="/past-event">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Past Events
-                    </p>
-                  </Link>
-
-                  <Link href="/team">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Team Members
-                    </p>
-                  </Link>
-                </div>
-              </li>
-
-              {/* <li className="relative group font-semibold">
-              
-
-                <button
-                  className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200
-      ${
-        navColor ? "customWhite" : ""
-      } uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                >
-                  Community Outreach
-                  <HiChevronDown className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline" />
-                </button>
-
-            
-                <div
-                  className="absolute left-0 top-full w-[200px] bg-white shadow-md border border-gray-200 rounded-md 
-      dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-      transition-opacity duration-300 z-50"
-                >
-                 
-
-                  <Link href="/past-event">
-                    <p className="px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">
-                      Past Events
-                    </p>
-                  </Link>
-                </div>
-              </li> */}
-
-              {/* location start  */}
-
-              {/* location end  */}
-
-              <li>
-                <Link
-                  href="/blog"
-                  aria-label="Blog"
-                  title="Blog"
-                  className={`font-semibold    tracking-wide text-[#49465D] transition-colors duration-200  
-                                ${
-                                  navColor && "customWhite"
-                                } white   uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                >
-                  Blog
-                </Link>
-              </li>
-
-              <li>
-                <ToggleButton />
-              </li>
-
-              <DropdownMenu user={user} handleLogOut={handleLogOut} />
-            </ul>
+                {/* Theme toggle + user menu must be inside <li> */}
+                <li>
+                  <ToggleButton />
+                </li>
+                <li>
+                  <DropdownMenu user={user} handleLogOut={handleLogOut} />
+                </li>
+              </ul>
+            </nav>
 
             <div className="lg:hidden">
               <div className="  transition duration-200 rounded focus:outline-none focus:shadow-outline z-50 absolute right-5 top-5 ">

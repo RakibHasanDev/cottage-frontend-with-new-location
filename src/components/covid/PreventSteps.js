@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { BsCheck } from "react-icons/bs";
-import { RxCross2 } from "react-icons/rx";
+import { Icon } from "@iconify/react";
 
 const PreventSteps = () => {
   const wrongThings = [
@@ -61,8 +60,8 @@ const PreventSteps = () => {
               key={index}
               className="shadow-md my-5 px-6 py-5 bg-hov2 cursor-pointer hover:bg-[#00A6B2] hover:text-white 
                             top-div rounded-md open-sans"
-              data-aos-duration="2000"
-              data-aos="zoom-in"
+              // data-aos-duration="2000"
+              // data-aos="zoom-in"
             >
               <div className="flex gap-4 items-center dark:text-gray-100  ">
                 <div className="relative w-24 md:w-fit ">
@@ -73,7 +72,10 @@ const PreventSteps = () => {
                     width="64"
                     height="64"
                   />
-                  <BsCheck className="bg-green-500 text-white  h-4 w-4 text-lg rounded-full absolute top-3 -right-1" />
+                  <Icon
+                    icon="bi:check"
+                    className="bg-green-500 text-white  h-4 w-4 text-lg rounded-full absolute top-3 -right-1"
+                  />
                 </div>
                 <div>
                   <h5 className="text-lg font-semibold mb-2">{right.title}</h5>
@@ -89,8 +91,8 @@ const PreventSteps = () => {
             <div
               key={index}
               className="shadow-md my-5 px-6 py-5 bg-hov2 cursor-pointer hover:bg-[#00A6B2] hover:text-white top-div rounded-md open-sans"
-              data-aos-duration="2000"
-              data-aos="zoom-in"
+              // data-aos-duration="2000"
+              // data-aos="zoom-in"
             >
               <div className="flex gap-4 items-center dark:text-gray-100  ">
                 <div className="relative w-24 md:w-fit ">
@@ -101,7 +103,10 @@ const PreventSteps = () => {
                     width="64"
                     height="64"
                   />
-                  <RxCross2 className="bg-red-600 p-0.5 text-white  h-4 w-4 text-lg rounded-full absolute top-3 -right-1 font-semibold " />
+                  <Icon
+                    icon="radix-icons:cross-2"
+                    className="bg-red-600 p-0.5 text-white  h-4 w-4 text-lg rounded-full absolute top-3 -right-1 font-semibold "
+                  />
                 </div>
                 <div>
                   <h5 className="text-lg font-semibold mb-2">{wrong.title}</h5>

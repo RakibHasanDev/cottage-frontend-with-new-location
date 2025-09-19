@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { IoKeyOutline } from "react-icons/io5";
+import { Icon } from "@iconify/react";
 
 const PayStubAccess = ({ loading, setLoading }) => {
   const {
@@ -54,7 +54,7 @@ const PayStubAccess = ({ loading, setLoading }) => {
           className="w-full  dark:bg-slate-800  bg-gray-50 px-3 py-3 md:py-6 md:p-8 rounded-md shadow-xl   lg:ml-0"
         >
           <h1 className="text-3xl md:text-5xl flex justify-center items-center w-20 md:w-[90px] h-20 md:h-[90px]  mx-auto rounded-full bg-[#00A6B2] text-white stuff-icon">
-            <IoKeyOutline />{" "}
+            <Icon icon="ion:key-outline" />{" "}
           </h1>
 
           <h1 className="text-lg  xl:text-2xl text-gray-600 text-center font-semibold my-3  dark:text-gray-100 league-spartan">
@@ -74,7 +74,7 @@ const PayStubAccess = ({ loading, setLoading }) => {
                 })}
                 id="name"
                 placeholder="Name"
-                className="w-full px-4  py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                className="w-full px-4  py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                   focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
               />
 
@@ -94,7 +94,7 @@ const PayStubAccess = ({ loading, setLoading }) => {
                 })}
                 id="employeeId"
                 placeholder="Last 4 digits of SSN / DOB"
-                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                   focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
               />
 
@@ -112,7 +112,7 @@ const PayStubAccess = ({ loading, setLoading }) => {
                 {...register("phone", { required: "Phone is required" })}
                 id="phone"
                 placeholder="Phone"
-                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                   focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
               />
               {errors.phone && (
@@ -128,7 +128,7 @@ const PayStubAccess = ({ loading, setLoading }) => {
                 {...register("email", { required: "email is required" })}
                 id="email"
                 placeholder="E-mail "
-                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                   focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
               />
               {errors.email && (
@@ -150,7 +150,7 @@ const PayStubAccess = ({ loading, setLoading }) => {
               id="subject"
               rows={5}
               placeholder="Comments Or Questions"
-              className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+              className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                               focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
             />
             {errors.subject && (

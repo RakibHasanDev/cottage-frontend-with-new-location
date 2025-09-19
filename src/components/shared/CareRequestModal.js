@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { FaTimes } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { validatePhoneNumber } from "./validatePhoneNumber";
 import SpinerLoading from "./SpinerLoading";
@@ -77,14 +77,6 @@ const CareRequestModal = ({ open, setOpen }) => {
 
   return (
     <>
-      {/* Trigger button – place wherever you need */}
-      <button
-        onClick={() => setOpen(true)}
-        className="md:px-8 md:py-3 px-5 py-2 rounded-full text-base  uppercase bg-hov2 coco-gothic text-white"
-      >
-        Request CARE
-      </button>
-
       {/* Modal */}
       {open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
@@ -98,7 +90,7 @@ const CareRequestModal = ({ open, setOpen }) => {
               className="absolute top-3 right-3 bg-red-600 hover:bg-red-700 p-2 rounded-full text-white"
               aria-label="Close"
             >
-              <FaTimes className="text-2xl" />
+              <Icon icon="fa6-solid:xmark" className="text-2xl" />
             </button>
 
             <form
@@ -135,7 +127,7 @@ const CareRequestModal = ({ open, setOpen }) => {
                     {...register("firstName", {
                       required: "First Name is required",
                     })}
-                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md"
+                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md"
                   />
                   {errors.firstName && (
                     <p className="text-red-600">{errors.firstName.message}</p>
@@ -156,7 +148,7 @@ const CareRequestModal = ({ open, setOpen }) => {
                     {...register("lastName", {
                       required: "Last Name is required",
                     })}
-                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md"
+                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md"
                   />
                   {errors.lastName && (
                     <p className="text-red-600">{errors.lastName.message}</p>
@@ -175,7 +167,7 @@ const CareRequestModal = ({ open, setOpen }) => {
                     id="birthday"
                     placeholder="DOB"
                     {...register("dob", { required: "DOB is required" })}
-                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md"
+                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md"
                   />
                   {errors.dob && (
                     <p className="text-red-600">{errors.dob.message}</p>
@@ -194,7 +186,7 @@ const CareRequestModal = ({ open, setOpen }) => {
                     id="MedicateNo"
                     placeholder="Ex:AB12345C"
                     {...register("medicate")}
-                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md placeholder:tracking-widest"
+                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md placeholder:tracking-widest"
                   />
                 </div>
 
@@ -207,7 +199,7 @@ const CareRequestModal = ({ open, setOpen }) => {
                     id="email"
                     placeholder="E-mail"
                     {...register("email")}
-                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md"
+                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md"
                   />
                 </div>
 
@@ -249,7 +241,7 @@ const CareRequestModal = ({ open, setOpen }) => {
                           message: "Please enter a valid US phone number",
                         },
                       })}
-                      className="w-full pl-10 md:pl-12 px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md"
+                      className="w-full pl-10 md:pl-12 px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md"
                     />
                   </div>
                   {errors.phoneNumber && (
@@ -267,7 +259,7 @@ const CareRequestModal = ({ open, setOpen }) => {
                     type="text"
                     placeholder="Preferred time to Call"
                     {...register("time", { required: "Time is required" })}
-                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md"
+                    className="w-full px-4 md:py-2.5 py-1.5 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md"
                   />
                   {errors.time && (
                     <p className="text-red-600">{errors.time.message}</p>
@@ -285,7 +277,7 @@ const CareRequestModal = ({ open, setOpen }) => {
                     type="file"
                     id="file"
                     {...register("file")}
-                    className="md:w-[215px] w-[155px] px-4 md:py-1 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md"
+                    className="md:w-[215px] w-[155px] px-4 md:py-1 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md"
                   />
                 </div>
               </div>

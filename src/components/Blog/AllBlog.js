@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-import { IoSearch } from "react-icons/io5";
-import {
-  MdKeyboardArrowLeft,
-  MdKeyboardArrowRight,
-  MdKeyboardDoubleArrowRight,
-} from "react-icons/md";
+
+import { Icon } from "@iconify/react";
 
 import BlogCard from "./BlogCard";
 import SpinerLoading from "../shared/SpinerLoading";
@@ -116,7 +112,7 @@ const AllBlog = ({
                         handleSearch(inputValue);
                       }}
                     >
-                      <IoSearch />
+                      <Icon icon="ion:search" />
                     </button>
                   </div>
                 </div>
@@ -133,7 +129,10 @@ const AllBlog = ({
                 }}
               >
                 View All Blogs{" "}
-                <MdKeyboardDoubleArrowRight className="text-xl" />
+                <Icon
+                  icon="material-symbols:keyboard-double-arrow-right"
+                  className="text-xl"
+                />
               </button>
             </div>
           ) : (
@@ -158,7 +157,11 @@ const AllBlog = ({
                   className="flex items-center pr-2 pl-1 py-1 text-gray-500 ml-1 2xl:ml-2 cursor-pointer hover:font-bold dark:text-white text-sm mr-1 font-medium"
                   onClick={prevPage}
                 >
-                  <MdKeyboardArrowLeft className="text-2xl font-bold " /> PREV
+                  <Icon
+                    icon="material-symbols:keyboard-arrow-left"
+                    className="text-2xl font-bold "
+                  />{" "}
+                  PREV
                 </button>
               )}
 
@@ -170,7 +173,11 @@ const AllBlog = ({
                   className="flex items-center py-1 text-gray-500 ml-1 2xl:ml-2 cursor-pointer hover:font-bold dark:text-white text-sm font-medium"
                   onClick={nextPage}
                 >
-                  NEXT <MdKeyboardArrowRight className="text-2xl" />
+                  NEXT{" "}
+                  <Icon
+                    icon="material-symbols:keyboard-arrow-right"
+                    className="text-2xl"
+                  />
                 </button>
               )}
 
@@ -200,7 +207,11 @@ const AllBlog = ({
                   window.scrollTo(0, 0);
                 }}
               >
-                View All <MdKeyboardDoubleArrowRight className="text-xl" />
+                View All{" "}
+                <Icon
+                  icon="material-symbols:keyboard-arrow-right"
+                  className="text-xl"
+                />
               </button>
             </div>
           )}

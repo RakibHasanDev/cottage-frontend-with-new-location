@@ -12,8 +12,8 @@ const CottageVideoModal = ({ onClose, youtubeUrl }) => {
       onClick={onClose}
     >
       <div
-        data-aos="fade-down"
-        data-aos-duration="1000"
+        // data-aos="fade-down"
+        // data-aos-duration="1000"
         className="relative dark:bg-slate-600 w-[95%] md:max-w-2xl 2xl:max-w-4xl top-[35%] md:top-[30%] lg:top-[25%]"
         onClick={handleModalClick}
         id="food-video"

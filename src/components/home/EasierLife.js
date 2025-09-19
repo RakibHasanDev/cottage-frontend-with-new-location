@@ -23,7 +23,7 @@ const StateSelect = ({ value, onChange, error }) => {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+        className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                    focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100 text-left"
       >
         {value || "Select Your State"}
@@ -219,7 +219,7 @@ const EasierLife = () => {
           </p>
           <p className="text-[#67637e] text-lg font-[Roboto] dark:text-gray-100 open-sans">
             Call us now at{" "}
-            <a href={`tel: +1${phoneNumber}`} className="text-[#00a6b2]">
+            <a href={`tel: +1${phoneNumber}`} className="text-[#005f6b]">
               {phoneNumber}
             </a>
             , or fill out this form and a member of our team will contact you
@@ -283,7 +283,7 @@ const EasierLife = () => {
                       })}
                       id="firstName"
                       placeholder="Full Name"
-                      className="w-full px-4  py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                      className="w-full px-4  py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                     />
                     {errors.firstName && (
@@ -308,7 +308,7 @@ const EasierLife = () => {
                       })}
                       id="phone"
                       placeholder="Phone"
-                      className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                      className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                     />
                     {errors.phone && (
@@ -325,7 +325,7 @@ const EasierLife = () => {
                       {...register("email", { required: "email is required" })}
                       id="email"
                       placeholder="E-mail "
-                      className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                      className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                 focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                     />
                     {errors.email && (
@@ -345,7 +345,7 @@ const EasierLife = () => {
                         required: "service is required",
                       })}
                       id="option"
-                      className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                      className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                             focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                       defaultValue=""
                     >
@@ -375,7 +375,7 @@ const EasierLife = () => {
                       required: "inquiry is required",
                     })}
                     id="option"
-                    className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                    className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                     focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                     defaultValue=""
                   >
@@ -404,7 +404,7 @@ const EasierLife = () => {
                     id="subject"
                     rows={5}
                     placeholder="Subject"
-                    className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                    className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                             focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
                   />
                   {errors.subject && (

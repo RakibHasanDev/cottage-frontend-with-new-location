@@ -1,5 +1,5 @@
 import React from "react";
-import { TbFileTypePdf } from "react-icons/tb";
+import { Icon } from "@iconify/react";
 import ServicesComponent from "@/components/nhtd/ServicesComponent";
 import PrivatePayFaqs from "@/components/PrivatePay/PrivatePayFaqs";
 import Link from "next/link";
@@ -153,12 +153,12 @@ const PrivatePayService = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/private-pay-home-care/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/private-pay-home-care/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
 
         <link
@@ -280,7 +280,10 @@ const PrivatePayService = () => {
                       }
                       className=" my-3 bg-[#00A6B2] text-white  px-4 md:px-2  py-2 md:text-sm  rounded-md flex gap-1 items-center"
                     >
-                      <TbFileTypePdf className="lg:text-xl text-xl md:text-base" />{" "}
+                      <Icon
+                        icon="tabler:file-type-pdf"
+                        className="lg:text-xl text-xl md:text-base"
+                      />{" "}
                       Private Pay Brochures
                     </button>
 
@@ -292,7 +295,10 @@ const PrivatePayService = () => {
                       }
                       className=" my-3 bg-[#00A6B2] text-white px-4 py-2 rounded-md flex gap-1 items-center"
                     >
-                      <TbFileTypePdf className="text-xl md:text-base lg:text-xl" />{" "}
+                      <Icon
+                        icon="tabler:file-type-pdf"
+                        className="text-xl md:text-base lg:text-xl"
+                      />{" "}
                       Company Details
                     </button>
                   </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { RiArrowRightDoubleFill } from "react-icons/ri";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -31,16 +31,16 @@ const Quality = () => {
         <h3 className="] text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-10 league-spartan text-gray-700 dark:text-gray-100">
           The Service We Provide <br /> in Home Care
         </h3>
-        <hr className="border-[#00a6b2] border-t-2 w-12 mt-2 mb-8 mx-auto" />
-        <h6 className="text-center md:text-2xl text-gray-700 px-4 md:px-0 league-spartan font-semibold dark:text-gray-100">
+        <hr className="border-[#00A6B2] border-t-2 w-12 mt-2 mb-8 mx-auto" />
+        <h5 className="text-center md:text-2xl text-gray-700 px-4 md:px-0 league-spartan font-semibold dark:text-gray-100">
           HHA/PCA, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY{" "}
-        </h6>
+        </h5>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:w-[90%] w-[95%] mx-auto pb-14 pt-9 gap-7  ">
           {/* cdpap start  */}
           <div
             className="flex flex-col lg:flex-row  h-full w-full"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
+            // data-aos="zoom-in"
+            // data-aos-duration="2000"
           >
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
@@ -180,8 +180,16 @@ const Quality = () => {
                   </li>
                 </ul>
                 <Link className="mt-2 block" href="/hha">
-                  <button className="animated-button cursor-pointer">
-                    <RiArrowRightDoubleFill className="text-2xl arrow-icon text-white" />
+                  <button
+                    type="button"
+                    className="animated-button cursor-pointer inline-flex items-center gap-2 px-5 py-3 min-h-[44px] min-w-[44px] rounded-md 
+             focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00A6B2]"
+                  >
+                    <Icon
+                      icon="ri:arrow-right-double-fill"
+                      className="text-2xl arrow-icon text-white"
+                      aria-hidden="true"
+                    />
                     <span className="animated-text">
                       Learn More About HHA Service
                     </span>
@@ -197,8 +205,8 @@ const Quality = () => {
 
           <div
             className="flex flex-col lg:flex-row  h-full w-full"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
+            // data-aos="zoom-in"
+            // data-aos-duration="2000"
           >
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
@@ -340,7 +348,10 @@ const Quality = () => {
                 </ul>
                 <Link className="mt-2 block" href="/hha">
                   <button className="animated-button cursor-pointer">
-                    <RiArrowRightDoubleFill className="text-2xl arrow-icon text-white" />
+                    <Icon
+                      icon="ri:arrow-right-double-fill"
+                      className="text-2xl arrow-icon text-white"
+                    />
                     <span className="animated-text">Explore PCA Service</span>
                   </button>
                 </Link>
@@ -354,8 +365,8 @@ const Quality = () => {
 
           <div
             className="flex flex-col lg:flex-row h-full w-full"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
+            // data-aos="zoom-in"
+            // data-aos-duration="2000"
           >
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
@@ -496,8 +507,16 @@ const Quality = () => {
                   </li>
                 </ul>
                 <Link className="mt-2 block" href="/nhtd">
-                  <button className="animated-button cursor-pointer">
-                    <RiArrowRightDoubleFill className="text-2xl arrow-icon text-white" />
+                  <button
+                    type="button"
+                    className="animated-button inline-flex items-center gap-2 px-5 py-3 min-h-[44px] min-w-[44px] rounded-md cursor-pointer
+             focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00A6B2]"
+                  >
+                    <Icon
+                      icon="ri:arrow-right-double-fill"
+                      className="text-2xl arrow-icon text-white"
+                      aria-hidden="true"
+                    />
                     <span className="animated-text">
                       Learn More About the NHTD Program
                     </span>
@@ -513,8 +532,8 @@ const Quality = () => {
 
           <div
             className="flex flex-col lg:flex-row h-full w-full"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
+            // data-aos="zoom-in"
+            // data-aos-duration="2000"
           >
             {/* Left Section: Image */}
             <div className="lg:w-[45%] h-full">
@@ -655,8 +674,16 @@ const Quality = () => {
                   </li>
                 </ul>
                 <Link className="mt-2 block " href="/private-pay-home-care">
-                  <button className="animated-button cursor-pointer">
-                    <RiArrowRightDoubleFill className="text-2xl arrow-icon text-white" />
+                  <button
+                    type="button"
+                    className="animated-button inline-flex items-center gap-2 px-5 py-3 min-h-[44px] min-w-[44px] rounded-md cursor-pointer
+             focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00A6B2]"
+                  >
+                    <Icon
+                      icon="ri:arrow-right-double-fill"
+                      className="text-2xl arrow-icon text-white"
+                      aria-hidden="true"
+                    />
                     <span className="animated-text">
                       See How Private Pay Works
                     </span>

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
-import { MdBrightnessAuto, MdLightMode } from "react-icons/md";
-import { IoMoonSharp } from "react-icons/io5";
 import { ThemeContext } from "@/context/ThemeContext";
+import { Icon } from "@iconify/react";
 
 const ToggleButton = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -9,9 +8,9 @@ const ToggleButton = () => {
   if (theme === null) return null; // Prevent rendering until theme is loaded
 
   const options = [
-    { icon: <MdLightMode />, text: "light" },
-    { icon: <IoMoonSharp />, text: "dark" },
-    { icon: <MdBrightnessAuto />, text: "system" },
+    { icon: <Icon icon="material-symbols:light-mode" />, text: "light" },
+    { icon: <Icon icon="ion:moon-sharp" />, text: "dark" },
+    { icon: <Icon icon="material-symbols:brightness-auto" />, text: "system" },
   ];
 
   const toggleTheme = () => {
@@ -26,6 +25,13 @@ const ToggleButton = () => {
   return (
     <button
       onClick={toggleTheme}
+      aria-label={
+        theme === "dark"
+          ? "Switch to light mode"
+          : theme === "light"
+          ? "Switch to dark mode"
+          : "Switch theme"
+      }
       className="relative w-16 h-8 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center px-1 py-2 transition-all"
     >
       {/* Dynamic Circle */}
@@ -34,8 +40,8 @@ const ToggleButton = () => {
           theme === "dark"
             ? "translate-x-8"
             : theme === "system"
-              ? "translate-x-4"
-              : "translate-x-0"
+            ? "translate-x-4"
+            : "translate-x-0"
         }`}
       >
         {options.find((opt) => opt.text === theme)?.icon}

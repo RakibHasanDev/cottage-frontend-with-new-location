@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from "react";
 import { useForm } from "react-hook-form";
-import { RxDotFilled } from "react-icons/rx";
+import { Icon } from "@iconify/react";
 import callReader from "../../../src/assets/social-media-lottie/call.json";
 import OverlayLoading from "../shared/OverlayLoading";
 
@@ -87,8 +87,8 @@ const MedicaidApply = () => {
       {loading && <OverlayLoading />}
       <div
         className="py-10  mt-[50px]"
-        data-aos="fade-up"
-        data-aos-duration="1000"
+        // data-aos="fade-up"
+        // data-aos-duration="1000"
       >
         <div className="w-[95%] md:w-[90%] lg:w-[1000px] xl:w-[1100px]  2xl:w-[1350px] mx-auto text-white ">
           {/* start medicaid section  */}
@@ -151,7 +151,7 @@ const MedicaidApply = () => {
           <div className="lg:flex lg:justify-start  open-sans">
             <div>
               <div className="flex items-center  mb-5 lg:mt-2 mt-5">
-                <RxDotFilled className="text-3xl" />
+                <Icon icon="radix-icons:dot-filled" className="text-3xl" />
                 <p>Or drop in your info and we&apos;ll be in touch.</p>
               </div>
 

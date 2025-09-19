@@ -68,7 +68,7 @@ const RequestSupplies = ({ loading, setLoading }) => {
                 })}
                 id="name"
                 placeholder="Name"
-                className="w-full px-4  py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                className="w-full px-4  py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                   focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
               />
 
@@ -88,7 +88,7 @@ const RequestSupplies = ({ loading, setLoading }) => {
                 })}
                 id="phone"
                 placeholder=" Phone"
-                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+                className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                   focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100 s"
               />
 
@@ -109,7 +109,7 @@ const RequestSupplies = ({ loading, setLoading }) => {
               })}
               id="employeeId"
               placeholder="Last 4 digits of SSN / DOB"
-              className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+              className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                                   focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100 text-sm"
             />
 
@@ -131,7 +131,7 @@ const RequestSupplies = ({ loading, setLoading }) => {
               id="subject"
               rows={5}
               placeholder="Comments Or Questions"
-              className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+              className="w-full px-4 py-3 border rounded-md text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
                               focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
             />
             {errors.subject && (

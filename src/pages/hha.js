@@ -1,9 +1,5 @@
 import React from "react";
-
-import { FaCreditCard } from "react-icons/fa";
-import { RiHospitalLine } from "react-icons/ri";
-import { HiBuildingLibrary } from "react-icons/hi2";
-import { FaLocationDot } from "react-icons/fa6";
+import { Icon } from "@iconify/react";
 import Link from "next/link";
 import HhaRequirement from "@/components/hha/HhaRequirement";
 import InsuranceCarousel from "@/components/hha/InsuranceCarousel";
@@ -16,23 +12,23 @@ const hha = () => {
     {
       title: "Medicaid Need",
       des: "Make sure, you are eligible for Medicaid",
-      icon: <FaCreditCard />,
+      icon: <Icon icon="fa6-solid:credit-card" />,
     },
 
     {
       title: "Insurance Coverage",
       des: "Eligibility depends on insurance, including Medicaid and Medicare.",
-      icon: <RiHospitalLine />,
+      icon: <Icon icon="fa6-solid:location-dot" />,
     },
     {
       title: "Assessment by Agency",
       des: "Initial assessment by the home health agency to determine eligibility.",
-      icon: <HiBuildingLibrary />,
+      icon: <Icon icon="ri:hospital-line" />,
     },
     {
       title: "Service Area",
       des: "Our service is available in New York city, Nassau, Suffolk County, Westchester and Albany",
-      icon: <FaLocationDot />,
+      icon: <Icon icon="heroicons:building-library" />,
     },
   ];
 
@@ -211,12 +207,12 @@ const hha = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/hha/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/hha/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
 
         <link rel="canonical" href="https://cottagehomecare.com/hha/" />
@@ -280,7 +276,9 @@ const hha = () => {
           className="grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-7 w-[95%] md:w-[80%] mx-auto md:py-10 py-3 items-center"
           id="hha-pca"
         >
-          <div data-aos="fade-up" data-aos-duration="2000">
+          <div
+          // data-aos="fade-up" data-aos-duration="2000"
+          >
             {requirements?.map((req, index) => (
               <div
                 key={index}
@@ -299,8 +297,8 @@ const hha = () => {
 
           <div
             className="lg:order-none order-first"
-            data-aos="fade-down"
-            data-aos-duration="2000"
+            // data-aos="fade-down"
+            // data-aos-duration="2000"
           >
             <Image
               src={"/assets/hha.webp"}
@@ -354,8 +352,8 @@ const hha = () => {
             <div
               key={index}
               className="shadow-md dark:border-[1px] dark:border-white"
-              data-aos="zoom-in"
-              data-aos-duration="1000"
+              // data-aos="zoom-in"
+              // data-aos-duration="1000"
             >
               <div>
                 <div className="h-56 overflow-hidden">
@@ -393,8 +391,8 @@ const hha = () => {
             <div
               key={index}
               className="shadow-md dark:border-[1px] dark:border-white"
-              data-aos="zoom-in"
-              data-aos-duration="1000"
+              // data-aos="zoom-in"
+              // data-aos-duration="1000"
             >
               <div>
                 <div className="h-56 overflow-hidden">

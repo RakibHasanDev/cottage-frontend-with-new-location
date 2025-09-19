@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
-import { FaUser } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "@/components/shared/Loading";
 import Image from "next/image";
@@ -159,7 +159,10 @@ const CottageUsers = () => {
                           height={40}
                         />
                       ) : (
-                        <FaUser className="w-full h-full p-2" />
+                        <Icon
+                          icon="fa6-solid:user"
+                          className="w-full h-full p-2"
+                        />
                       )}
                     </div>
                   </div>

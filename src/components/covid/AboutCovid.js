@@ -1,12 +1,14 @@
 import Image from "next/image";
 import React from "react";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { Icon } from "@iconify/react";
 
 const AboutCovid = () => {
   return (
     <div className="my-16 lg:w-[80%] mx-auto" id="about-covid">
       <div className="grid lg:grid-cols-2 items-center gap-7">
-        <div data-aos-duration="2000" data-aos="fade-right">
+        <div
+        //  data-aos-duration="2000" data-aos="fade-right"
+        >
           <img
             src={"/assets/Covid-19/gfx-a.png"}
             alt={"covid-banner"}
@@ -18,8 +20,8 @@ const AboutCovid = () => {
 
         <div
           className="font-[Roboto]"
-          data-aos-duration="2000"
-          data-aos="fade-left"
+          // data-aos-duration="2000"
+          // data-aos="fade-left"
         >
           <h5 className="text-[#F65858] text-lg font-semibold league-spartan">
             {" "}
@@ -62,13 +64,14 @@ const AboutCovid = () => {
               href="#symtom-covid"
               className="flex gap-3 items-center text-[#00A6B2] mt-3 league-spartan"
             >
-              Symptoms of coronavirus <AiOutlineArrowRight />
+              Symptoms of coronavirus <Icon icon="ant-design:arrow-right" />
             </a>
             <a
               href="#actions-section"
               className="flex gap-3 items-center text-[#00A6B2] mt-3 league-spartan"
             >
-              How to Prevent & Protect <AiOutlineArrowRight />
+              How to Prevent & Protect{" "}
+              <Icon icon="ant-design:arrow-right-outlined" />
             </a>
           </div>
         </div>

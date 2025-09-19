@@ -1,13 +1,9 @@
 import React from "react";
-import { FaFacebookF, FaTiktok } from "react-icons/fa";
-
-import { BsTwitter, BsYoutube } from "react-icons/bs";
-import { GrInstagram } from "react-icons/gr";
-
 import Link from "next/link";
 import Image from "next/image";
-import { FaXTwitter } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+
+import { Icon } from "@iconify/react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -41,7 +37,10 @@ const Footer = () => {
           >
             <div className="flex items-center gap-3 md:gap-5">
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-[#46619A] border-[1px] border-[#40598d] shadow-md">
-                <FaFacebookF className="text-white md:text-2xl"></FaFacebookF>
+                <Icon
+                  icon="simple-icons:facebook"
+                  className="text-white md:text-2xl"
+                />
               </div>
               <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>Facebook</p>
@@ -61,7 +60,10 @@ const Footer = () => {
           >
             <div className="flex items-center gap-3 md:gap-5">
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-gradient-to-t from-[#F08535] via-[#D63573] to-[#7135B0] border-[1px] border-[#7135B0] shadow-md">
-                <GrInstagram className="text-white md:text-2xl"></GrInstagram>
+                <Icon
+                  icon="simple-icons:instagram"
+                  className="text-white md:text-2xl"
+                />
               </div>
               <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>Instagram</p>
@@ -81,7 +83,10 @@ const Footer = () => {
           >
             <div className="flex items-center gap-3 md:gap-5">
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-[#0f0f0f] border-[1px] border-white shadow-md">
-                <FaXTwitter className="text-white md:text-2xl" />
+                <Icon
+                  icon="simple-icons:x"
+                  className="text-white md:text-2xl"
+                />
               </div>
               <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>X</p>
@@ -101,7 +106,10 @@ const Footer = () => {
           >
             <div className="flex items-center gap-3 md:gap-5">
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-gradient-to-t from-pink-400 via-[#65C7CD] to-gray-800 border-[1px] border-pink-300 shadow-md">
-                <FaTiktok className="text-white md:text-2xl"></FaTiktok>
+                <Icon
+                  icon="simple-icons:tiktok"
+                  className="text-white md:text-2xl"
+                />
               </div>
               <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>TikTok</p>
@@ -121,7 +129,10 @@ const Footer = () => {
           >
             <div className="flex items-center gap-3 md:gap-5">
               <div className="flex justify-center items-center w-8 h-8 md:w-14 md:h-14 bg-[#b008] border-[1px] border-[#880000b7] shadow-md">
-                <BsYoutube className="text-white md:text-2xl"></BsYoutube>
+                <Icon
+                  icon="simple-icons:youtube"
+                  className="text-white md:text-2xl"
+                />
               </div>
               <div className="text-white text-sm lg:text-base md:text-base hidden lg:block">
                 <p>YouTube</p>

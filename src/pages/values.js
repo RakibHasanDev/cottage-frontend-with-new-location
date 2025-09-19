@@ -21,12 +21,12 @@ const Values = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/values/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/values/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link rel="canonical" href="https://cottagehomecare.com/values/" />
 
@@ -178,8 +178,8 @@ const Values = () => {
             </div>
             <hr className="mt-3 border-t-[1px] border-[#00A6B2] w-16 mx-auto " />
             <p className="text-base text-gray-700 md:text-lg font-medium mt-5 py-2 dark:text-gray-200">
-              “HHA/PCA ,NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY, NASSAU &
-              SUFFOLK COUNTY, WESTCHESTER & ALBANY”
+              “HHA/PCA ,NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY,
+              NASSAU & SUFFOLK COUNTY, WESTCHESTER & ALBANY”
             </p>
           </div>
           <div className="grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x">

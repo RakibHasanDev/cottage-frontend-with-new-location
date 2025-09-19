@@ -1,7 +1,7 @@
 import React, { Suspense, useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { Icon } from "@iconify/react";
 import reader from "../../src/assets/63787-secure-login.json";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
@@ -222,9 +222,15 @@ const Register = () => {
                       onClick={() => setShowPass(!showPass)}
                     >
                       {showPass ? (
-                        <AiFillEyeInvisible className="h-6 w-6" />
+                        <Icon
+                          icon="ant-design:eye-invisible-filled"
+                          className="h-6 w-6"
+                        />
                       ) : (
-                        <AiFillEye className="h-6 w-6" />
+                        <Icon
+                          icon="ant-design:eye-filled"
+                          className="h-6 w-6"
+                        />
                       )}
                     </div>
                   </div>

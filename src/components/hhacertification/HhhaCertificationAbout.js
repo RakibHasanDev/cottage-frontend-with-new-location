@@ -1,5 +1,5 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 
 import HhaCarousel from "./HhaCarousel";
 
@@ -11,10 +11,13 @@ const HhhaCertificationAbout = () => {
           <div className="flex flex-col justify-center lg:p-6 text-start rounded-sm lg:max-w-md xl:max-w-lg lg:text-left ">
             <div
               className="flex items-center "
-              data-aos="fade-up"
-              data-aos-duration="500"
+              // data-aos="fade-up"
+              // data-aos-duration="500"
             >
-              <FaStar className="mr-3 text-[#f02f39d8] text-2xl"></FaStar>
+              <Icon
+                icon="fa6-solid:star"
+                className="mr-3 text-[#f02f39d8] text-2xl"
+              />
               <h3 className="font-semibold text-lg lg:w-80 text-justify w-[98%]">
                 <h5 className="text-[#f02f39d8] font-semibold text-lg league-spartan">
                   Dedicated Educators{" "}
@@ -28,10 +31,13 @@ const HhhaCertificationAbout = () => {
             </div>
             <div
               className="flex items-center mt-5 "
-              data-aos="fade-up"
-              data-aos-duration="1500"
+              // data-aos="fade-up"
+              // data-aos-duration="1500"
             >
-              <FaStar className="mr-3 text-[#f02f39d8] text-2xl"></FaStar>
+              <Icon
+                icon="fa6-solid:star"
+                className="mr-3 text-[#f02f39d8] text-2xl"
+              />
               <h3 className="font-semibold text-lg lg:w-80 text-justify w-[98%]">
                 <h5 className="text-[#f02f39d8] font-semibold text-lg league-spartan">
                   {" "}
@@ -47,10 +53,13 @@ const HhhaCertificationAbout = () => {
             </div>
             <div
               className="flex items-center mt-5 "
-              data-aos="fade-up"
-              data-aos-duration="2000"
+              // data-aos="fade-up"
+              // data-aos-duration="2000"
             >
-              <FaStar className="mr-3 text-[#f02f39d8] text-2xl"></FaStar>
+              <Icon
+                icon="fa6-solid:star"
+                className="mr-3 text-[#f02f39d8] text-2xl"
+              />
               <h3 className="font-semibold text-lg lg:w-80 text-justify w-[98%]">
                 <h5 className="text-[#f02f39d8] font-semibold text-lg league-spartan">
                   {" "}

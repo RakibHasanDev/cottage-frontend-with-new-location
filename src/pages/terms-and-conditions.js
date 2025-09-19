@@ -21,12 +21,12 @@ const TermsAndConditions = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/terms-and-conditions/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/terms-and-conditions/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"

@@ -57,12 +57,12 @@ const christmasParty = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/christmas-party/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/christmas-party/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"
@@ -181,8 +181,8 @@ const christmasParty = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img1.webp"}
@@ -192,8 +192,8 @@ const christmasParty = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img6.webp"}
@@ -203,8 +203,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img3.webp"}
@@ -214,8 +214,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img22.webp"}
@@ -228,8 +228,8 @@ const christmasParty = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img5.webp"}
@@ -239,8 +239,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img7.webp"}
@@ -250,8 +250,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img6.webp"}
@@ -261,8 +261,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img8.webp"}
@@ -272,8 +272,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img9.webp"}
@@ -287,8 +287,8 @@ const christmasParty = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img1.webp"}
@@ -298,8 +298,8 @@ const christmasParty = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img3.webp"}
@@ -309,8 +309,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img12.webp"}
@@ -320,8 +320,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img13.webp"}
@@ -334,8 +334,8 @@ const christmasParty = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img14.webp"}
@@ -345,8 +345,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img16.webp"}
@@ -356,8 +356,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img15.webp"}
@@ -367,8 +367,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img17.webp"}
@@ -378,8 +378,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img5.webp"}
@@ -393,8 +393,8 @@ const christmasParty = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img19.webp"}
@@ -404,8 +404,8 @@ const christmasParty = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img20.webp"}
@@ -415,8 +415,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img21.webp"}
@@ -426,8 +426,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img22.webp"}
@@ -440,8 +440,8 @@ const christmasParty = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img23.webp"}
@@ -451,8 +451,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img24.webp"}
@@ -462,8 +462,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img12.webp"}
@@ -473,8 +473,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img26.webp"}
@@ -484,8 +484,8 @@ const christmasParty = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/christmas-party/img27.webp"}

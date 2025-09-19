@@ -56,12 +56,12 @@ const breastCancerAwareness = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/breast-cancer-awareness/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/breast-cancer-awareness/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
 
         <link
@@ -182,8 +182,8 @@ const breastCancerAwareness = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer hidden md:block"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img1.webp"}
@@ -193,8 +193,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer block md:hidden"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/mobile.webp"}
@@ -204,8 +204,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img3.webp"}
@@ -215,8 +215,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img4.webp"}
@@ -226,8 +226,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img15.webp"}
@@ -240,8 +240,8 @@ const breastCancerAwareness = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img9.webp"}
@@ -251,8 +251,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img2.webp"}
@@ -262,8 +262,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img5.webp"}
@@ -273,8 +273,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img8.webp"}
@@ -284,8 +284,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img13.webp"}
@@ -299,8 +299,8 @@ const breastCancerAwareness = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/cover.webp"}
@@ -310,8 +310,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img14.webp"}
@@ -321,8 +321,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img11.webp"}
@@ -332,8 +332,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img17.webp"}
@@ -346,8 +346,8 @@ const breastCancerAwareness = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img10.webp"}
@@ -357,8 +357,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img8.webp"}
@@ -368,8 +368,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img6.webp"}
@@ -379,8 +379,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img12.webp"}
@@ -390,8 +390,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img18.webp"}
@@ -405,8 +405,8 @@ const breastCancerAwareness = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img27.webp"}
@@ -416,8 +416,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className=" row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1200"
+                // data-aos="fade-right"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img24.webp"}
@@ -427,8 +427,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-right"
-                data-aos-duration="1400"
+                // data-aos="fade-right"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img21.webp"}
@@ -438,8 +438,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-2 col-span-2 lg:h-[628px] h-[428px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img19.webp"}
@@ -452,8 +452,8 @@ const breastCancerAwareness = () => {
             <div className="grid grid-rows-3 grid-flow-col gap-7">
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-down"
-                data-aos-duration="1000"
+                // data-aos="fade-down"
+                // data-aos-duration="1000"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img25.webp"}
@@ -463,8 +463,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-4 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer"
-                data-aos="fade-left"
-                data-aos-duration="1200"
+                // data-aos="fade-left"
+                // data-aos-duration="1200"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img28.webp"}
@@ -474,8 +474,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer "
-                data-aos="fade-up"
-                data-aos-duration="1400"
+                // data-aos="fade-up"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img26.webp"}
@@ -485,8 +485,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2 lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointe "
-                data-aos="fade-down"
-                data-aos-duration="1400"
+                // data-aos="fade-down"
+                // data-aos-duration="1400"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img20.webp"}
@@ -496,8 +496,8 @@ const breastCancerAwareness = () => {
               </div>
               <div
                 className="row-span-1 col-span-2  lg:h-[300px] h-[200px]  overflow-hidden w-full cursor-pointer  "
-                data-aos="fade-up"
-                data-aos-duration="1600"
+                // data-aos="fade-up"
+                // data-aos-duration="1600"
               >
                 <GalleryImage
                   src={"/assets/Breast_Cancer_Awarencess/img29.webp"}

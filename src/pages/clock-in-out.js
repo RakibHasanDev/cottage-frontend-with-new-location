@@ -21,12 +21,12 @@ const ClockInOut = () => {
         <link
           rel="alternate"
           href="https://cottagehomecare.com/clock-in-out/"
-          hreflang="en"
+          hrefLang="en"
         />
         <link
           rel="alternate"
           href="https://cottagehomecare.com/clock-in-out/"
-          hreflang="x-default"
+          hrefLang="x-default"
         />
         <link
           rel="canonical"

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
+import { Icon } from "@iconify/react";
 
 const ScrollButton = () => {
   const [visible, setVisible] = useState(false);
@@ -26,7 +26,10 @@ const ScrollButton = () => {
         visible ? "block" : "hidden"
       }`}
     >
-      <MdOutlineKeyboardDoubleArrowUp className="h-7 w-7 md:h-9 md:w-10 md:p-2 text-white bg-[#00A6B2] shadow-lg cursor-pointer" />
+      <Icon
+        icon="material-symbols:keyboard-double-arrow-up-outline"
+        className="h-7 w-7 md:h-9 md:w-10 md:p-2 text-white bg-[#00A6B2] shadow-lg cursor-pointer"
+      />
     </div>
   );
 };

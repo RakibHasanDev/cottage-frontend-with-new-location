@@ -4,9 +4,8 @@ import axios from "axios";
 import { useEffect, useRef, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
-import { BiUserCircle } from "react-icons/bi";
+import { Icon } from "@iconify/react";
 import { useQuery } from "@tanstack/react-query";
-import { IoMdArrowRoundUp } from "react-icons/io";
 import { AuthContext } from "@/context/AuthProvider";
 import Linkify from "react-linkify";
 import Image from "next/image";
@@ -134,16 +133,20 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
           <div className=" flex items-center gap-4 sticky top-0 bg-[#79a4a8] dark:bg-neutral-700 px-4 py-2 text-center">
             {data?.[0]?.photoURL && (
               <Image
-                src={data?.[0]?.photoURL}
-                alt={data?.[0]?.displayName}
-                className="w-12 h-12 rounded-full"
-                width="48px"
-                height="48px"
+                src={data?.[0]?.photoURL ?? "/avatar-fallback.png"}
+                alt={data?.[0]?.displayName || "User avatar"}
+                className="w-12 h-12 rounded-full object-cover"
+                width={48} // ✅ number, not "48px"
+                height={48} // ✅ number, not "48px"
+                sizes="48px" // optional hint; helps perf
                 priority
               />
             )}
             {!data?.[0]?.photoURL && (
-              <BiUserCircle className="w-12 h-12 rounded-full text-gray-300"></BiUserCircle>
+              <Icon
+                icon="bx:user-circle"
+                className="w-12 h-12 rounded-full text-gray-300"
+              />
             )}
             {data?.[0]?.firstName && (
               <p className="text-lg md:text-xl font-semibold text-gray-100">
@@ -240,7 +243,10 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
                     />
                   )}
                   {!message?.photoURL && (
-                    <BiUserCircle className="w-6 h-6 rounded-full text-gray-400"></BiUserCircle>
+                    <Icon
+                      icon="bx:user-circle"
+                      className="w-6 h-6 rounded-full text-gray-400"
+                    />
                   )}
                   <span
                     className="bg-gray-400 text-white px-3 py-1.5 rounded-md shadow-md  "
@@ -285,7 +291,7 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
                 {...register("message", { required: "Message is required" })}
                 rows={2}
                 placeholder="Type Your Message"
-                className="w-full px-4 py-3 border pr-16 rounded-md text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-100"
+                className="w-full px-4 py-3 border pr-16 rounded-md text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-100"
                 onInput={(e) => {
                   e.target.style.height = "auto";
                   e.target.style.height = `${e.target.scrollHeight}px`;
@@ -298,7 +304,10 @@ const AdminConversation = ({ newUser, users, setLoad, load }) => {
                 }}
               />
               <button type="submit">
-                <IoMdArrowRoundUp className="bg-black p-1 absolute right-4 bottom-6 text-white text-4xl rounded-md" />
+                <Icon
+                  icon="ion:arrow-round-up"
+                  className="bg-black p-1 absolute right-4 bottom-6 text-white text-4xl rounded-md"
+                />
               </button>
             </div>
             {errors.message && (

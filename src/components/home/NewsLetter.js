@@ -10,17 +10,17 @@ const NewsLetter = () => {
   const SimpleForm = () => <MailchimpSubscribe url={url} />;
 
   return (
-    <div id="contact" className="mx-auto  roboto ">
+    <div id="contact" className="mx-auto  roboto  ">
       <div className=" bg-contact ">
-        <div className="h-full w-full news-bg-contrast py-16 md:py-32  ">
+        <div className="h-full w-full news-bg-contrast  md:py-32  ">
           <div className="md:w-[85%] lg:w-[50%] w-[95%] mx-auto mt-3 block p-5 rounded ">
             <p className=" text-[22px] md:text-xl lg:text-2xl xl:text-4xl mt-5 form-top font-bold  text-white  text-center text-shadow league-spartan">
               Stay Connected with Our Newsletter!
             </p>
-            <h5 className=" text-white  text-center mt-2 tracking-wide text-shadow open-sans">
+            <h6 className=" text-white  text-center mt-2 tracking-wide text-shadow open-sans">
               Get the latest newsletter on home care tips, news, and exclusive
               offers.
-            </h5>
+            </h6>
             <div className="flex justify-center items-center mt-5 gap-5">
               <div className="w-full open-sans ">
                 <MailchimpSubscribe

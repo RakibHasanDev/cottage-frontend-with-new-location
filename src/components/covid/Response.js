@@ -3,7 +3,9 @@ import React from "react";
 const Response = () => {
   return (
     <div className="mt-5 bg-[#EBF8F9] py-16 dark:bg-slate-800">
-      <div data-aos="fade-up" data-aos-duration="2000">
+      <div
+      //  data-aos="fade-up" data-aos-duration="2000"
+      >
         <h1 className="text-center dark:text-gray-100 league-spartan text-2xl md:text-2xl  2xl:text-4xl font-semibold text-[#00A6B2]">
           Our Response
         </h1>

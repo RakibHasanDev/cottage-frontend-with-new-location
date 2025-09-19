@@ -6,12 +6,7 @@ import { usePathname } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { AiOutlineHome } from "react-icons/ai";
-import { MdDashboard, MdPersonAdd } from "react-icons/md";
-import { LuFileSearch2 } from "react-icons/lu";
-import { FaFileSignature } from "react-icons/fa";
-import { SiGooglemessages } from "react-icons/si";
-import { ImBlog } from "react-icons/im";
+import { Icon } from "@iconify/react";
 import { AuthContext } from "@/context/AuthProvider";
 
 const Sidebar = () => {
@@ -121,19 +116,19 @@ const Sidebar = () => {
                 {/* FULL ACCESS LINKS */}
                 <SidebarLink
                   href="/"
-                  icon={<AiOutlineHome />}
+                  icon={<Icon icon="ant-design:home-outlined" />}
                   label="Home"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard"
-                  icon={<MdDashboard />}
+                  icon={<Icon icon="material-symbols:dashboard" />}
                   label="Dashboard"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/all-form-submission-message"
-                  icon={<SiGooglemessages />}
+                  icon={<Icon icon="simple-icons:googlemessages" />}
                   label="All Form Submission Message"
                   count={unreadMessages}
                   onClick={clearNotificationCount}
@@ -141,66 +136,60 @@ const Sidebar = () => {
                 />
                 <SidebarLink
                   href="/dashboard/user-data"
-                  icon={<SiGooglemessages />}
+                  icon={<Icon icon="simple-icons:googlemessages" />}
                   label="Users Info"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/add-employee"
-                  icon={<MdPersonAdd />}
+                  icon={<Icon icon="material-symbols:person-add" />}
                   label="Add Employee"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/blog/add-blog"
-                  icon={<ImBlog />}
+                  icon={<Icon icon="icomoon-free:blog" />}
                   label="Add A Blog"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/email-signature"
-                  icon={<FaFileSignature />}
+                  icon={<Icon icon="fa6-solid:file-signature" />}
                   label="Generate Email Signature"
                   activePath={pathname}
                 />
-                <SidebarLink
-                  href="/dashboard/certificate"
-                  icon={<LuFileSearch2 />}
-                  label="Generate Certificate"
-                  count={getRemainingCount("requestPto")}
-                  activePath={pathname}
-                />
+
                 <SidebarLink
                   href="/dashboard/general-request"
-                  icon={<LuFileSearch2 />}
+                  icon={<Icon icon="lucide:file-search-2" />}
                   label="All General Request"
                   count={getRemainingCount("generalRequest")}
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/pay-stub"
-                  icon={<LuFileSearch2 />}
+                  icon={<Icon icon="lucide:file-search-2" />}
                   label="Pay Stub Access"
                   count={getRemainingCount("payStub")}
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/pay-roll"
-                  icon={<LuFileSearch2 />}
+                  icon={<Icon icon="lucide:file-search-2" />}
                   label="Pay Roll Queries"
                   count={getRemainingCount("payroll")}
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/supplies"
-                  icon={<LuFileSearch2 />}
+                  icon={<Icon icon="lucide:file-search-2" />}
                   label="Request Supplies"
                   count={getRemainingCount("requestSupply")}
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/all-pto"
-                  icon={<LuFileSearch2 />}
+                  icon={<Icon icon="lucide:file-search-2" />}
                   label="PTO Request"
                   count={getRemainingCount("requestPto")}
                   activePath={pathname}
@@ -214,19 +203,19 @@ const Sidebar = () => {
               <>
                 <SidebarLink
                   href="/"
-                  icon={<AiOutlineHome />}
+                  icon={<Icon icon="ant-design:home-outlined" />}
                   label="Home"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard"
-                  icon={<MdDashboard />}
+                  icon={<Icon icon="material-symbols:dashboard" />}
                   label="Dashboard"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/all-form-submission-message"
-                  icon={<SiGooglemessages />}
+                  icon={<Icon icon="simple-icons:googlemessages" />}
                   label="All Form Submission Message"
                   count={unreadMessages}
                   onClick={clearNotificationCount}
@@ -234,7 +223,7 @@ const Sidebar = () => {
                 />
                 <SidebarLink
                   href="/dashboard/user-data"
-                  icon={<SiGooglemessages />}
+                  icon={<Icon icon="simple-icons:googlemessages" />}
                   label="Users Info"
                   activePath={pathname}
                 />
@@ -246,19 +235,19 @@ const Sidebar = () => {
               <>
                 <SidebarLink
                   href="/"
-                  icon={<AiOutlineHome />}
+                  icon={<Icon icon="ant-design:home-outlined" />}
                   label="Home"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard"
-                  icon={<MdDashboard />}
+                  icon={<Icon icon="material-symbols:dashboard" />}
                   label="Dashboard"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard/certificate"
-                  icon={<LuFileSearch2 />}
+                  icon={<Icon icon="lucide:file-search-2" />}
                   label="Generate Certificate"
                   count={getRemainingCount("requestPto")}
                   activePath={pathname}
@@ -276,13 +265,13 @@ const Sidebar = () => {
               <>
                 <SidebarLink
                   href="/"
-                  icon={<AiOutlineHome />}
+                  icon={<Icon icon="ant-design:home-outlined" />}
                   label="Home"
                   activePath={pathname}
                 />
                 <SidebarLink
                   href="/dashboard"
-                  icon={<MdDashboard />}
+                  icon={<Icon icon="material-symbols:dashboard" />}
                   label="Dashboard"
                   activePath={pathname}
                 />

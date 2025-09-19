@@ -1,5 +1,5 @@
 import React from "react";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import { Icon } from "@iconify/react";
 
 const WelcomeMessage = () => {
   return (
@@ -9,8 +9,8 @@ const WelcomeMessage = () => {
           <div className="lg:grid grid-cols-4 items-center md:gap-7 lg:gap-0">
             <div
               className="col-span-1 mt-5 md:mt-0 mb-8 lg:mb-0"
-              data-aos="fade-up"
-              data-aos-duration="500"
+              // data-aos="fade-up"
+              // data-aos-duration="500"
             >
               <h1 className="md:text-2xl font-semibold text-center md:text-start league-spartan custom-font">
                 {" "}
@@ -29,8 +29,8 @@ const WelcomeMessage = () => {
             </div>
             <div
               className="lg:col-span-2 md:col-span-3  mt-5 md:mt-0"
-              data-aos="fade-up"
-              data-aos-duration="1000"
+              // data-aos="fade-up"
+              // data-aos-duration="1000"
             >
               <h4 className="mt-1 text-xl font-semibold league-spartan custom-font">
                 A Message From Our Directors, Navin and Arvin Shivpal
@@ -50,7 +50,7 @@ const WelcomeMessage = () => {
                       href="tel:+1347-975-2525"
                       className="hover:text-red-800  flex items-center gap-2"
                     >
-                      <BsFillTelephoneFill /> 347-975-2525{" "}
+                      <Icon icon="bi:telephone-fill" /> 347-975-2525{" "}
                     </a>
                   </p>
                   <p className="  font-semibold mt-2 flex gap-2 items-center league-spartan">
@@ -59,7 +59,7 @@ const WelcomeMessage = () => {
                       href="tel:+1347-969-1626"
                       className="hover:text-red-800 dark:hover:text-white  flex items-center gap-2 "
                     >
-                      <BsFillTelephoneFill /> 347-969-1626{" "}
+                      <Icon icon="bi:telephone-fill" /> 347-969-1626{" "}
                     </a>
                   </p>
                 </div>
@@ -67,8 +67,8 @@ const WelcomeMessage = () => {
             </div>
             <div
               className="lg:flex flex justify-center md:justify-end col-span-1 mt-1 md:mt-0 md:hidden "
-              data-aos="fade-up"
-              data-aos-duration="1500"
+              // data-aos="fade-up"
+              // data-aos-duration="1500"
             >
               <div>
                 <p className="mt-1  font-semibold flex gap-2 items-center league-spartan">
@@ -77,7 +77,7 @@ const WelcomeMessage = () => {
                     href="tel:+1347-975-2525"
                     className="hover:text-gray-200 flex items-center gap-2 "
                   >
-                    <BsFillTelephoneFill /> 347-975-2525{" "}
+                    <Icon icon="bi:telephone-fill" /> 347-975-2525{" "}
                   </a>
                 </p>
                 <p className="  font-semibold mt-2 flex gap-2 items-center">
@@ -86,7 +86,7 @@ const WelcomeMessage = () => {
                     href="tel:+1347-969-1626"
                     className="hover:text-gray-200 flex items-center gap-2 ml-[5px] league-spartan"
                   >
-                    <BsFillTelephoneFill /> 347-969-1626{" "}
+                    <Icon icon="bi:telephone-fill" /> 347-969-1626{" "}
                   </a>
                 </p>
               </div>

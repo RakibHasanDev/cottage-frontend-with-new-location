@@ -1,7 +1,7 @@
 import BannerWithBreadcrumbs from "@/utils/BannerWithBreadcrumbs";
 import Image from "next/image";
 import React from "react";
-import { FiPhone } from "react-icons/fi";
+import { Icon } from "@iconify/react";
 import { Typewriter } from "react-simple-typewriter";
 
 const heroSection = () => {
@@ -41,7 +41,7 @@ const heroSection = () => {
           <div className="flex items-center md:gap-32 gap-14">
             <div>
               <p className="mt-2 flex justify-start  items-center gap-2 font-semibold max-w-lg sm:text-xl md:text-3xl sm:leading-relaxed text-white custom-font text-shadow league-spartan ">
-                <FiPhone className="text-shadow" />
+                <Icon icon="feather:phone" className="text-shadow" />
                 929-386-0092
               </p>
               <div className="mt-8 flex flex-wrap  text-center">
