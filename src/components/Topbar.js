@@ -18,11 +18,9 @@ const digitsOnly = (s) => s.replace(/\D+/g, "");
 
 const TopBar = () => {
   const pathname = usePathname();
-
   // Default contact info
   let phone = "516-367-2266";
   let email = "info@cottagehomecare.com";
-
   // Conditional override based on route
   if (pathname.includes("new-jersey")) {
     phone = "(201) 633-8481"; // NJ phone
@@ -36,7 +34,7 @@ const TopBar = () => {
   const mailHref = `mailto:${email}`;
 
   return (
-    <div className="dark:bg-slate-800">
+    <div className="dark:bg-slate-800 dark:from-transparent dark:via-transparent dark:to-transparent   bg-gradient-to-r from-[#00A6B2]/20 via-white to-[#00A6B2]/20 ">
       <div className="block w-[95%] mx-auto league-spartan font-semibold dark:text-gray-200">
         <div className="flex md:justify-center justify-between items-center">
           <div className="roboto px-4 md:px-8 py-3 lg:flex items-center lg:justify-between lg:w-[95%]">

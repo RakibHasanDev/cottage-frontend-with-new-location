@@ -69,7 +69,9 @@ const NavBar = () => {
   return (
     <ThemeProvider>
       <nav
-        className={`  ${navbarClasses}  md:z-50 dark:bg-slate-800  ${customShadow}  `}
+        className={`  ${navbarClasses} md:z-50 ${customShadow} 
+bg-gradient-to-r from-[#00A6B2]/20 via-white to-[#00A6B2]/20 
+dark:bg-slate-800 dark:from-transparent dark:via-transparent dark:to-transparent`}
       >
         <div
           className="px-4 pt-2 pb-4 md:mx-auto nav-size ml-auto roboto-regular"
@@ -86,16 +88,16 @@ const NavBar = () => {
                 <div className="md:flex items-center hidden ">
                   <Image
                     src={companyLogo}
-                    className="nav-img shadow-2xl p-2 border-2 border-[#00A6B2] rounded-full dark:bg-gray-300"
+                    className="nav-img shadow-2xl p-2 border-2 border-[#005f6b] dark:border-[#00b3ca] rounded-full dark:bg-gray-300"
                     alt="cottage-home-care-logo"
                     width="100" // Set an appropriate width
                     height="100" // Set an appropriate height
                   />
                   <h5
-                    className={` ml-4   text-[#00A6B2]  nav-font league-spartan font-bold`}
+                    className={` ml-4  dark:text-gray-100 text-[#005f6b]  nav-font league-spartan font-bold`}
                   >
                     <span className="text-shadow ">{companyName}</span>
-                    <hr className="border-[1px] -mt-0.5 border-[#00A6B2] dark:border-gray-100 md:w-full w-[85%]" />
+                    <hr className="border-[1px] -mt-0.5 border-[#005f6b] dark:border-gray-100 md:w-full w-[85%]" />
                     <p className="font-semibold top-title md:text-center text-[#49465D] tracking-tighter md:tracking-normal dark:text-gray-300 md:ml-0 ml-2 ">
                       THE RIGHT HOME CARE FOR YOU
                     </p>

@@ -192,18 +192,10 @@ export default function Home() {
 
   const preloadLinks = [
     {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1758131541/main_banner/Cottage-Home-Care.webp",
+      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1758561989/main_banner/hero_Section_bynmal.webp",
       as: "image",
       type: "image/webp",
       fetchPriority: "high",
-      media: "(min-width: 1024px)", // ✅ preload only when large screens
-    },
-    {
-      href: "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710747/Website%20Hero%20Images/cottage-home-care-slider-1-sm.webp",
-      as: "image",
-      type: "image/webp",
-      fetchPriority: "high",
-      media: "(max-width: 1023px)", // ✅ preload only when small screens
     },
   ];
 
@@ -258,7 +250,6 @@ export default function Home() {
             as={link.as}
             type={link.type}
             fetchPriority={link.fetchPriority}
-            media={link.media} // ✅ critical for correct preload behavior
           />
         ))}
 

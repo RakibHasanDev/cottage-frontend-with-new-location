@@ -31,7 +31,11 @@ const LocationsList = dynamic(
 );
 
 const LOCATIONS = [
-  { name: "Jersey City", lat: 40.7178, lng: -74.0431 },
+  {
+    name: "97 Newkirk St STE 337, Jersey City, NJ 07306",
+    lat: 40.7178,
+    lng: -74.0431,
+  },
   { name: "Bayonne", lat: 40.6687, lng: -74.1143 },
   { name: "Union", lat: 40.6976, lng: -74.2632 },
   { name: "Newark", lat: 40.7357, lng: -74.1724 },

@@ -1,91 +1,128 @@
-// CustomCarousel.tsx
+"use client";
+import { Icon } from "@iconify/react";
+import Image from "next/image";
 
-const LG_IMAGE =
-  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1758131541/main_banner/Cottage-Home-Care.webp";
-
-const SM_IMAGE =
-  "https://res.cloudinary.com/di3wwp9s0/image/upload/f_auto,q_auto,w_720/v1741710747/Website%20Hero%20Images/cottage-home-care-slider-1-sm.webp";
-
-export default function CustomCarousel({ onRequestCare = () => {} }) {
+export default function HeroSection({ onRequestCare = () => {} }) {
   return (
-    <section className="relative isolate overflow-hidden h-[80vh] sm:h-[80vh] md:h-[56vh] lg:h-[81vh]">
-      {/* Small handshake win for image origin */}
+    <section className="relative  bg-gradient-to-br from-[#00A6B2]/30 via-white to-[#00A6B2]/40 overflow-hidden ">
+      {/* Decorative SVG Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Healthcare-related decorative shapes */}
+        <div className="absolute top-20 left-10 opacity-20">
+          <Icon
+            icon="lucide:heart"
+            className="text-2xl md:text-3xl lg:text-6xl"
+          />
+        </div>
+        <div className="absolute top-40 right-20 opacity-15">
+          <Icon
+            icon="lucide:users"
+            className="text-2xl md:text-3xl lg:text-6xl"
+          />
+        </div>
+        <div className="absolute bottom-40 left-20 opacity-20">
+          <Icon
+            icon="lucide:shield"
+            className="text-2xl md:text-3xl lg:text-6xl"
+          />
+        </div>
 
-      {/* LCP candidate: desktop vs. mobile assets via <picture> */}
-      <picture>
-        {/* Desktop / large viewports */}
-        <source srcSet={LG_IMAGE} media="(min-width: 1024px)" />
+        {/* curved shapes */}
+        <svg
+          className="absolute top-0 right-0 w-1/2 h-full opacity-5"
+          viewBox="0 0 400 800"
+          fill="none"
+        >
+          <path
+            d="M400 0C350 100 300 200 320 300C340 400 380 500 360 600C340 700 300 750 400 800V0Z"
+            fill="url(#gradient1)"
+          />
+          <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#00A6B2" />
+              <stop offset="100%" stopColor="#00A6B2" />
+            </linearGradient>
+          </defs>
+        </svg>
 
-        {/* Mobile / tablet */}
-        <source srcSet={SM_IMAGE} media="(max-width: 1023px)" />
+        <svg
+          className="absolute bottom-0 left-0 w-1/3 h-1/2 opacity-5"
+          viewBox="0 0 300 400"
+          fill="none"
+        >
+          <path
+            d="M0 400C50 350 100 300 80 250C60 200 20 150 40 100C60 50 100 25 0 0V400Z"
+            fill="url(#gradient2)"
+          />
+          <defs>
+            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#00A6B2" />
+              <stop offset="100%" stopColor="#00A6B2" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
 
-        {/* Fallback (required): also used for preload priority & sizing */}
-        <img
-          src={LG_IMAGE}
-          alt="Cottage Home Care Services"
-          width={1920} // reserves space (CLS guardrail)
-          height={1080}
-          decoding="async"
-          fetchPriority="high"
-          loading="eager"
-          className="absolute inset-0 h-full w-full object-cover"
-          style={{ objectPosition: "center 35%" }}
-        />
-      </picture>
-
-      {/* Optional dark scrim for text readability */}
-      <div
-        className="absolute inset-0 bg-black/10 md:bg-black/10 "
-        aria-hidden="true"
-      />
-
-      {/* Wave (unchanged) */}
-      {/* <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-        preserveAspectRatio="none"
-        className="pointer-events-none h-[100px] z-50 hidden lg:block -mb-1 border-2 border-red-600 relative "
-      >
-        <path
-          d="M0,224C480,400,960,150,1440,256L1440,320L0,320Z"
-          className="fill-white dark:fill-slate-600"
-        />
-      </svg> */}
-
-      {/* Copy & CTAs (unchanged) */}
-      <div
-        className="absolute z-20 bottom-0 w-full 2xl:bottom-[20px] lg:bottom-[20px]"
-        id="main-banner-text"
-      >
-        <div className="mx-auto">
-          <div
-            className="rounded-md bg-contact-2 md:max-w-3xl lg:max-w-3xl mx-auto"
-            id="lower-medium-device"
-          >
-            <div className="bg-simple px-5 pt-4 pb-8">
-              <p className="text-white text-sm md:text-base text-center font-medium text-shadow open-sans">
+      <div className="relative z-10 container mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[60vh]">
+          {/* Left Content */}
+          <div className="space-y-8 order-2 md:order-1">
+            <div className="space-y-6">
+              <h1 className="text-xl lg:text-3xl font-bold text-balance leading-tight text-gray-800">
                 Cottage Home Care Services provides care to seniors in need and
                 has taken on some of the most challenging cases in New York.
-              </p>
-              <p className="w-[18px] h-[2px] bg-gray-300 rounded-md mx-auto my-2.5" />
-              <p className="text-center md:text-xl text-[15px] font-medium md:font-semibold text-[#dbf2f4] mb-5 px-5 md:px-0 mt-2 open-sans custom-font text-shadow">
-                HHA/PCA, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY,
-                NASSAU & SUFFOLK COUNTY, WESTCHESTER & ALBANY.
-              </p>
-              <div className="flex justify-center items-center text-white font-semibold gap-3">
-                <a
-                  href="tel:+1516-367-2266"
-                  className="md:px-8 md:py-3 px-5 py-2 rounded-full text-base bg-[#005f6b] uppercase bg-hov2 coco-gothic"
-                >
-                  Contact Us
-                </a>
-                <button
-                  onClick={onRequestCare}
-                  className="md:px-8 md:py-3 px-5 py-2 rounded-full text-base bg-[#687699] uppercase bg-hov2 coco-gothic"
-                >
-                  Request CARE
-                </button>
+              </h1>
+
+              <div className="text-lg text-muted-foreground font-medium tracking-wide uppercase text-gray-00">
+                HHA/PCA, NHTD & Private Pay Services Throughout New York City,
+                Nassau & Suffolk County, Westchester & Albany
               </div>
+            </div>
+
+            {/* Call-to-Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="tel:+1(516) 367-2266"
+                className="bg-[#005f6b] text-center hover:bg-[#005f6b]/80 text-white px-8 py-2 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                Contact Us
+              </a>
+              <button
+                onClick={onRequestCare}
+                className="border-2 border-[#005f6b] text-black hover:bg-[#005f6b] hover:text-white px-8 py-2 text-lg font-semibold rounded-xl transition-all duration-300 bg-transparent cursor-pointer"
+              >
+                Request Care
+              </button>
+            </div>
+          </div>
+
+          {/* Right Image with Curved Shape */}
+          <div className="relative  order-1 md:order-2 lg:-[60%] 2xl:w-[85%] mx-auto">
+            {/* Curved background shape */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/20 rounded-[3rem] transform rotate-3 scale-105"></div>
+
+            {/* Main image container with curved mask */}
+            <div className="relative bg-card rounded-[2.5rem] overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+              <Image
+                src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1758561989/main_banner/hero_Section_bynmal.webp"
+                alt="Compassionate caregiver with elderly client"
+                className="w-full   object-cover min-h-[400px] lg:min-h-[600px] "
+                width={600}
+                height={600}
+              />
+
+              {/* Overlay with subtle gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+            </div>
+
+            {/* Floating elements */}
+
+            <div className="absolute -top-6 -right-6 bg-card rounded-full p-4 shadow-lg">
+              {/* <Heart className="w-8 h-8 text-primary" /> */}
+              <Icon
+                icon="lucide:heart"
+                className="text-2xl md:text-3xl lg:text-3xl"
+              />
             </div>
           </div>
         </div>

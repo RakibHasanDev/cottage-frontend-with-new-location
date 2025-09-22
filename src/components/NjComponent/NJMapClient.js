@@ -6,11 +6,15 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import L from "leaflet";
 import React, { useEffect, useMemo, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { Icon } from "@iconify/react";
+import { MapPin } from "lucide-react";
 
 /** optional: share the same default list from the parent or pass via props */
 const DEFAULT_LOCATIONS = [
-  { name: "Jersey City", lat: 40.7178, lng: -74.0431 },
+  {
+    name: "97 Newkirk St STE 337, Jersey City, NJ 07306",
+    lat: 40.7336,
+    lng: -74.0657,
+  },
   { name: "Bayonne", lat: 40.6687, lng: -74.1143 },
   { name: "Union", lat: 40.6976, lng: -74.2632 },
   { name: "Newark", lat: 40.7357, lng: -74.1724 },
@@ -19,9 +23,9 @@ const DEFAULT_LOCATIONS = [
   { name: "Linden", lat: 40.622, lng: -74.2446 },
 ];
 
-function createReactIconDivIcon({ size = 28, color = "#A020F0" } = {}) {
+function createReactIconDivIcon({ size = 28 } = {}) {
   const svg = renderToStaticMarkup(
-    <Icon icon="fa6-solid:location-dot" size={size} color={color} />
+    <MapPin fill="#1c3461" color="#ffffff" size={32} />
   );
   return L.divIcon({
     className: "react-leaflet-pin",
