@@ -36,11 +36,11 @@ const OverwHelmed = () => {
             <button
               onClick={openModal}
               aria-label="Play demo video"
-              className="demoVideo-btn cursor-pointer"
+              className="demoVideo-btn cursor-pointer p-3"
             >
               <Icon
                 icon="lucide:play-circle"
-                className="text-2xl md:text-3xl lg:text-3xl"
+                className="text-2xl md:text-3xl lg:text-3xl "
               />
             </button>
           </div>

@@ -1846,7 +1846,7 @@ button.slick-arrow.slick-prev::before {
       rgba(0, 0, 0, 0.171) 0%,
       rgba(0, 0, 0, 0.268) 100%
     ),
-    url("/assets/Main Banner/another-contact.webp");
+    url("/assets/another-contact.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

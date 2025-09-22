@@ -9,11 +9,11 @@ import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import dynamic from "next/dynamic";
 import Script from "next/script";
+import Head from "next/head";
 
 // ✅ Self-host fonts via next/font (not in _document)
 import { League_Spartan, Open_Sans, Roboto } from "next/font/google";
 
-// expose as CSS variables so you can use them in Tailwind/CSS
 const heading = League_Spartan({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -59,6 +59,13 @@ export default function App({ Component, pageProps }) {
   const [isClient, setIsClient] = useState(false);
   const [mountChat, setMountChat] = useState(false);
 
+  // Derive route buckets once
+  const isDashboard = router.pathname.startsWith("/dashboard");
+  const isAuthRoute =
+    router.pathname.startsWith("/login") ||
+    router.pathname.startsWith("/signup") ||
+    router.pathname.startsWith("/auth");
+
   useEffect(() => {
     setIsClient(true);
 
@@ -68,7 +75,7 @@ export default function App({ Component, pageProps }) {
         ? window.requestIdleCallback(() => setMountChat(true))
         : setTimeout(() => setMountChat(true), 4000);
 
-    // one-time session metric
+    // one-time session metric (kept as-is)
     const localCount = sessionStorage.getItem("count");
     if (!localCount) {
       fetch("https://cottage-backend-voilerplate.vercel.app/count", {
@@ -98,11 +105,28 @@ export default function App({ Component, pageProps }) {
     };
   }, [router]);
 
-  const isDashboard = router.pathname.startsWith("/dashboard");
   const LayoutComponent = isDashboard ? DashboardLayout : Layout;
 
   return (
     <QueryClientProvider client={queryClient}>
+      {/* --- NETWORK HINTS (micro wins for hero + CDNs) --- */}
+      <Head>
+        {/* Helps LCP when hero comes from Cloudinary */}
+        <link
+          rel="preconnect"
+          href="https://res.cloudinary.com"
+          crossOrigin=""
+        />
+        {/* General Google CDN hint (maps/fonts/images that you lazy-load later) */}
+        <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://maps.googleapis.com"
+          crossOrigin=""
+        />
+      </Head>
+
+      {/* --- ANALYTICS --- */}
       {/* ✅ GA loads lazily; then a 3s delay—keeps GA off the LCP path */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-X3W2KFKTS2"
@@ -119,6 +143,51 @@ export default function App({ Component, pageProps }) {
         `}
       </Script>
 
+      {/* --- 3P UTILITIES (NON-BLOCKING) --- */}
+      {/* GoDaddy: Lighthouse showed it as render-blocking. Fix by deferring. */}
+      <Script
+        src="https://img1.wsimg.com/scc-c2/scc-c2.min.js"
+        strategy="afterInteractive" // ✅ off the render path
+        onError={(e) => {
+          console.warn("GoDaddy script failed", e);
+        }}
+      />
+
+      {/* <Script id="godaddy-scc" strategy="afterInteractive">
+        {`
+          (function loadGD(){
+            var run = function(){
+              var s = document.createElement('script');
+              s.src = 'https://img1.wsimg.com/scc-c2/scc-c2.min.js';
+              s.async = true;
+              document.head.appendChild(s);
+            };
+            if ('requestIdleCallback' in window) {
+              requestIdleCallback(run, { timeout: 3000 });
+            } else {
+              setTimeout(run, 3000);
+            }
+          })();
+        `}
+      </Script> */}
+
+      {/* Firebase/Auth iframe.js was in your network waterfall.
+          Load ONLY where needed (auth/dashboard), never on the home page. */}
+      {(isDashboard || isAuthRoute) && (
+        <Script
+          id="firebase-app"
+          src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"
+          strategy="lazyOnload"
+        />
+      )}
+      {(isDashboard || isAuthRoute) && (
+        <Script
+          id="firebase-auth"
+          src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"
+          strategy="lazyOnload"
+        />
+      )}
+
       <AuthProvider>
         {/* Expose font variables at the app root */}
         <div
@@ -127,7 +196,10 @@ export default function App({ Component, pageProps }) {
           <LayoutComponent>
             <Toaster />
             {loading && <LoadingScreen />}
+
+            {/* Tawk chat: mounted on idle, outside LCP */}
             {mountChat && <TawkTo />}
+
             <Component {...pageProps} />
           </LayoutComponent>
         </div>
