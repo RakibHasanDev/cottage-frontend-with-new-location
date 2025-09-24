@@ -4,7 +4,7 @@ import NewSlider from "./NewSlider";
 const Testimonials = () => {
   return (
     <div className="lg:pt-16 pt-7 dark:bg-slate-600">
-      <h3 className="w-[90%] md:w-full mx-auto text-center league-spartan font-bold text-2xl  md:text-3xl 2xl:text-4xl dark:text-gray-100 text-[#00A6B2]">
+      <h3 className="w-[90%] md:w-full mx-auto text-center league-spartan font-bold text-2xl  md:text-3xl 2xl:text-4xl dark:text-gray-100 text-[#21565D]">
         Testimonials From Our Patients <br /> and CareGivers
       </h3>
       <hr className="border-[#00A6B2] border-t-2 w-12 mt-3 md:mb-8  mx-auto mb-5 " />

@@ -296,9 +296,30 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="py-6 md:text-sm  text-xs text-center text-gray-50 open-sans">
-          Copyright © {currentYear} Cottage Home Care - All Rights Reserved.{" "}
-          <br></br>
+        <div className="py-6 md:text-sm text-xs text-gray-50 open-sans ">
+          <div className="flex flex-col md:grid md:grid-cols-3 items-center lg:w-[80%]  mx-auto">
+            {/* Left: RSS Badge */}
+            <div className="mb-2 md:mb-0 md:flex md:items-center">
+              <a href="http://www.rssboard.org/rss-validator/check.cgi?url=https%3A//cottagehomecare.com/feed.xml">
+                <img
+                  src="https://www.rssboard.org/rss-validator/images/valid-rss-rogers.png"
+                  alt="[Valid RSS]"
+                  title="Validate my RSS feed"
+                  className="h-6 mx-auto md:mx-0 2xl:ml-[80px]"
+                  width={68}
+                  height={24}
+                />
+              </a>
+            </div>
+
+            {/* Middle: Copyright */}
+            <p className="text-center">
+              Copyright © {currentYear} Cottage Home Care - All Rights Reserved.
+            </p>
+
+            {/* Right column left blank so copyright stays centered */}
+            <div></div>
+          </div>
         </div>
       </div>
     </div>

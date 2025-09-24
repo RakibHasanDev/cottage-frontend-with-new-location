@@ -308,8 +308,8 @@ const PastEvent = () => {
                   <p
                     className={`${
                       eve?.title?.length > 32
-                        ? "uppercase text-center mt-1 font-medium tracking-widest dark:text-gray-100 text-gray-600 text-base open-sans font-semibold"
-                        : "uppercase text-center mt-1 font-medium tracking-widest dark:text-gray-100 text-gray-600 text-lg open-sans font-semibold"
+                        ? "uppercase text-center mt-1  tracking-widest dark:text-gray-100 text-gray-600 text-base open-sans font-semibold"
+                        : "uppercase text-center mt-1  tracking-widest dark:text-gray-100 text-gray-600 text-lg open-sans font-semibold"
                     }`}
                   >
                     {eve?.title || "Default Title"}

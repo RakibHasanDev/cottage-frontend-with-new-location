@@ -40,7 +40,7 @@ const WeAre = () => {
   return (
     <div className="bg-[#F5F5F7] pb-16 dark:bg-slate-600">
       <div className=" pt-10 2xl:w-[80%] md:w-[90%] w-[95%] mx-auto">
-        <p className=" text-2xl xl:text-4xl font-bold text-center league-spartan  dark:text-gray-200 text-[#00A6B2]">
+        <p className=" text-2xl xl:text-4xl font-bold text-center league-spartan  dark:text-gray-200 text-[#005F6B]">
           Who We Are
         </p>
         <hr className="border-[#00A6B2] border-t-2 w-12 mt-2 mx-auto mb-5  " />
@@ -79,35 +79,51 @@ const WeAre = () => {
                       width="80"
                       height="80"
                     />
-                    <h5
-                      className={`lg:text-xl md:text-lg text-[19px] ${
-                        index === 0
-                          ? "text-white border-white"
-                          : index === 1
-                          ? "text-gray-700 border-gray-700"
-                          : index === 2
-                          ? "text-gray-700"
-                          : "bg-[#00A6B2]" // Default background
-                      } font-medium md:font-semibold mt-5 league-spartan   flex items-center justify-between  w-[95%]`}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setHoveredIndex(hoveredIndex === index ? null : index)
+                      }
+                      aria-expanded={hoveredIndex === index}
+                      aria-controls={`panel-${index}`}
+                      className={`mt-5 flex items-center justify-between w-[95%] rounded-md
+                                  focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2
+                                  ${
+                                    index === 0
+                                      ? "text-white"
+                                      : index === 1
+                                      ? "text-gray-700"
+                                      : "text-gray-700"
+                                  }`}
                     >
-                      {info.title}{" "}
-                      <p
-                        className={`w-8 h-8  rounded-full border-[1px] ${
+                      <span
+                        className={`lg:text-xl md:text-lg text-[19px] font-medium md:font-semibold league-spartan
+                                       ${
+                                         index === 0
+                                           ? "text-white"
+                                           : "text-gray-700"
+                                       }`}
+                      >
+                        {info.title}
+                      </span>
+                      <span
+                        className={`w-8 h-8 rounded-full border ${
                           index === 0
                             ? "text-white border-white"
-                            : index === 1
-                            ? "text-gray-700 border-gray-700"
-                            : index === 2
-                            ? " text-gray-700 border-gray-700"
-                            : "bg-[#00A6B2]" // Default background
-                        } font-bold`}
+                            : "text-gray-700 border-gray-700"
+                        } inline-flex items-center justify-center`}
                       >
                         <Icon
-                          icon="ion:ios-arrow-round-forward"
-                          className="text-3xl flex justify-center items-center arrow-animation"
+                          icon={
+                            hoveredIndex === index
+                              ? "lucide:chevron-up"
+                              : "ion:ios-arrow-round-forward"
+                          }
+                          className="text-3xl arrow-animation"
+                          aria-hidden="true"
                         />
-                      </p>
-                    </h5>
+                      </span>
+                    </button>
                   </div>
                 </div>
                 <div
@@ -135,7 +151,8 @@ const WeAre = () => {
                   }`}
                 >
                   <h6
-                    className={`content  ld:pr-6 md:p-4 p-3 2xl:leading-6 text-justify font-sans font-smooth ${
+                    id={`panel-${index}`}
+                    className={`content  lg:pr-6 md:p-4 p-3 2xl:leading-6 text-justify font-sans font-smooth  ${
                       index === 0
                         ? "text-white"
                         : index === 1

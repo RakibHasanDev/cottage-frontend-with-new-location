@@ -86,10 +86,6 @@ const SideNav = () => {
           path: "past-event",
         },
         {
-          property: "Upcoming Events",
-          path: "UpcomingEvent",
-        },
-        {
           property: "Team Members",
           path: "team",
         },
@@ -103,6 +99,7 @@ const SideNav = () => {
       <button
         onClick={toggleSidebar}
         className=" p-2 rounded-md bg-[#00A6B2] text-white  focus:outline-none "
+        aria-label="Toggle navigation menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

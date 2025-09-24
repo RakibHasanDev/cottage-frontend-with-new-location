@@ -28,11 +28,11 @@ const Quality = () => {
   return (
     <div className=" dark:bg-slate-600 services-bg bg-transparent ">
       <div>
-        <h3 className="] text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-10 league-spartan text-gray-700 dark:text-gray-100">
+        <h3 className=" text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-10 league-spartan text-[#005F6B] dark:text-gray-100">
           The Service We Provide <br /> in Home Care
         </h3>
         <hr className="border-[#00A6B2] border-t-2 w-12 mt-2 mb-8 mx-auto" />
-        <h5 className="text-center md:text-2xl text-gray-700 px-4 md:px-0 league-spartan font-semibold dark:text-gray-100">
+        <h5 className="text-center md:text-2xl text-[#005F6B] px-4 md:px-0 league-spartan font-semibold dark:text-gray-100">
           HHA/PCA, NHTD & PRIVATE PAY SERVICES THROUGHOUT NEW YORK CITY{" "}
         </h5>
         <div className="grid grid-cols-1 md:grid-cols-2  lg:w-[90%] w-[95%] mx-auto pb-14 pt-9 gap-7  ">
