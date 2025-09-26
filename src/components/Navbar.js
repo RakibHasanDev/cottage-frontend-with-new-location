@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+
 import ToggleButton from "./shared/ToogleButton";
 import SideNav from "./nav/SideNav";
 import { AuthContext } from "@/context/AuthProvider";
@@ -9,6 +10,98 @@ import DropdownMenu from "./nav/DropdownMenu";
 import { Icon } from "@iconify/react";
 import { usePathname } from "next/navigation";
 import { ThemeProvider } from "@/context/ThemeContext";
+
+// put this ABOVE NavDropdown
+function useClickOutside(ref, onClose) {
+  useEffect(() => {
+    const handler = (e) => {
+      if (!ref.current) return;
+      if (!ref.current.contains(e.target)) onClose();
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [onClose, ref]);
+}
+
+// hover-only dropdown
+function NavDropdown({
+  label,
+  items,
+  widthClass = "w-48",
+  navColor = false,
+  menuId,
+}) {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const liRef = useRef(null);
+
+  useEffect(() => setOpen(false), [pathname]); // close on route change
+  useClickOutside(liRef, () => setOpen(false)); // defensive: close on outside click
+
+  const onFocus = () => setOpen(true); // keyboard: open on focus
+  const onBlur = (e) => {
+    // keyboard: close when focus leaves menu
+    if (!liRef.current?.contains(e.relatedTarget)) setOpen(false);
+  };
+
+  return (
+    <li
+      ref={liRef}
+      className="relative font-semibold  "
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      onFocus={onFocus}
+      onBlur={onBlur}
+    >
+      <button
+        type="button"
+        className={`d-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200  ${
+          navColor ? "customWhite" : ""
+        } uppercase nav-text hover-underline-animation dark:text-gray-300`}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-controls={menuId}
+      >
+        {label}
+        <Icon
+          icon="heroicons-outline:chevron-down"
+          className={`w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 inline ${
+            open ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      <ul
+        id={menuId}
+        role="menu"
+        className={`absolute left-0 top-full ${widthClass} bg-white shadow-md border border-gray-200 rounded-md
+          dark:bg-slate-800 dark:border-gray-700 transition-opacity duration-200 z-50 font-semibold
+          ${open ? "opacity-100 visible" : "opacity-0 invisible"}`}
+      >
+        {items.map((it, idx) => (
+          <li
+            key={it.href}
+            role="none"
+            className={
+              idx < items.length - 1
+                ? "border-b border-gray-200 dark:border-gray-700"
+                : ""
+            }
+          >
+            <Link
+              role="menuitem"
+              href={it.href}
+              className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700"
+              onClick={() => setOpen(false)}
+            >
+              {it.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
 
 const NavBar = () => {
   const [customShadow, setCustomShadow] = useState("shadow-none");
@@ -146,62 +239,20 @@ dark:bg-slate-800 dark:from-transparent dark:via-transparent dark:to-transparent
                 </li>
 
                 {/* Select Your State */}
-                <li className="relative group font-semibold focus-within:block">
-                  <button
-                    type="button"
-                    className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
-                      navColor ? "customWhite" : ""
-                    } uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                    aria-haspopup="menu"
-                    aria-expanded="false"
-                    aria-controls="nav-state-menu"
-                  >
-                    Select Your State
-                    <Icon
-                      icon="heroicons-outline:chevron-down"
-                      className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline"
-                    />
-                  </button>
 
-                  <ul
-                    id="nav-state-menu"
-                    role="menu"
-                    className="absolute left-0 top-full w-[200px] bg-white shadow-md border border-gray-200 rounded-md
-                   dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                   focus-within:opacity-100 focus-within:visible transition-opacity duration-300 z-50"
-                  >
-                    <li role="none">
-                      <Link
-                        role="menuitem"
-                        href="/service-areas"
-                        className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
-                      >
-                        Services Areas
-                      </Link>
-                    </li>
-                    <li role="none">
-                      <Link
-                        role="menuitem"
-                        href="/"
-                        className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
-                      >
-                        New York City
-                      </Link>
-                    </li>
-                    <li role="none">
-                      <Link
-                        role="menuitem"
-                        href="/new-jersey"
-                        className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase hover:bg-gray-100 dark:hover:bg-gray-700"
-                      >
-                        New Jersey
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+                <NavDropdown
+                  label=" Select Your State"
+                  navColor={navColor}
+                  menuId="nav-services-menu"
+                  items={[
+                    { href: "/service-areas", label: "Services Areas" },
+                    { href: "/", label: "New York City" },
+                    { href: "/new-jersey", label: "New Jersey" },
+                  ]}
+                />
 
                 {/* Services */}
-                <li className="relative group font-semibold focus-within:block">
+                {/* <li className="relative group font-semibold focus-within:block">
                   <button
                     type="button"
                     className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
@@ -253,7 +304,19 @@ dark:bg-slate-800 dark:from-transparent dark:via-transparent dark:to-transparent
                       </Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
+
+                {/* Services */}
+                <NavDropdown
+                  label="Services"
+                  navColor={navColor}
+                  menuId="nav-services-menu"
+                  items={[
+                    { href: "/nhtd", label: "NHTD" },
+                    { href: "/hha", label: "HHA/PCA" },
+                    { href: "/private-pay-home-care", label: "Private Pay" },
+                  ]}
+                />
 
                 {/* Contact */}
                 <li>
@@ -282,53 +345,20 @@ dark:bg-slate-800 dark:from-transparent dark:via-transparent dark:to-transparent
                     HHA Certification
                   </Link>
                 </li>
-
-                {/* Resources */}
-                <li className="relative group font-semibold focus-within:block">
-                  <button
-                    type="button"
-                    className={`group inline-flex items-center gap-1 font-semibold tracking-wide text-[#49465D] transition-colors duration-200 ${
-                      navColor ? "customWhite" : ""
-                    } uppercase nav-text hover-underline-animation dark:text-gray-300`}
-                    aria-haspopup="menu"
-                    aria-expanded="false"
-                    aria-controls="nav-resources-menu"
-                  >
-                    Resources
-                    <Icon
-                      icon="heroicons-outline:chevron-down"
-                      className="w-5 h-5 text-[#49465D] dark:text-gray-300 transition-transform duration-200 group-hover:rotate-180 inline"
-                    />
-                  </button>
-
-                  <ul
-                    id="nav-resources-menu"
-                    role="menu"
-                    className="absolute left-0 top-full w-44 bg-white shadow-md border border-gray-200 rounded-md
-                   dark:bg-slate-800 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                   focus-within:opacity-100 focus-within:visible transition-opacity duration-300 z-50"
-                  >
-                    {[
-                      { href: "/resources", label: "Resources" },
-                      { href: "/blog", label: "Blog" },
-                      { href: "/help-desk", label: "Help Desk" },
-                      { href: "/covid", label: "Covid-19" },
-                      { href: "/faqs", label: "FAQs" },
-                      { href: "/past-event", label: "Past Events" },
-                      { href: "/team", label: "Team Members" },
-                    ].map((it) => (
-                      <li key={it.href} role="none">
-                        <Link
-                          role="menuitem"
-                          href={it.href}
-                          className="block px-6 py-3 text-gray-800 dark:text-gray-100 uppercase border-b last:border-b-0 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700"
-                        >
-                          {it.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
+                <NavDropdown
+                  label=" Resources"
+                  navColor={navColor}
+                  menuId="nav-services-menu"
+                  items={[
+                    { href: "/resources", label: "Resources" },
+                    { href: "/blog", label: "Blog" },
+                    { href: "/help-desk", label: "Help Desk" },
+                    { href: "/covid", label: "Covid-19" },
+                    { href: "/faqs", label: "FAQs" },
+                    { href: "/past-event", label: "Past Events" },
+                    { href: "/team", label: "Team Members" },
+                  ]}
+                />
 
                 {/* Blog */}
                 <li>
