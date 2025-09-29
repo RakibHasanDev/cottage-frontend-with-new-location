@@ -1,0 +1,81 @@
+# LLMs.txt
+
+> Policy for Cottage Home Care Services — Governing AI / LLM use of site content.  
+> Owner: Cottage Home Care Services — https://cottagehomecare.com  
+> Contact: support@cottagehomecare.com  
+> Version: 1.0  
+
+## Project Details
+- Owner: Cottage Home Care Services  
+- Domain: cottagehomecare.com  
+- Contact: support@cottagehomecare.com  
+- Version: 1.0  
+
+## Policy
+- Training: disallow  
+- Fine-tuning: disallow  
+- Derivative datasets: disallow  
+- Storage: limited (retain <= 24 hours)  
+- Attribution: require URL citation  
+- PII / sensitive content: prohibit  
+- Compliance: honor robots.txt  
+
+## Usage
+- Inference preview: allow on listed paths  
+
+### Allowed paths
+* /
+* /blog/
+* /service-areas/
+* /new-jersey/
+* /nhtd/
+* /hha/
+* /private-pay-home-care/
+* /contact/
+* /help-desk/
+* /covid/
+* /faqs/
+* /past-event/
+* /upcoming-event/
+* /hha-certification/
+* /privacy-policy/
+* /mission-vision/
+* /values/
+* /terms-and-conditions/
+* /disclaimer/
+* /sitemap/
+* /sitemap-index.xml
+* /team/
+* /clock-in-out/
+* /favicon.ico
+
+### Disallowed paths
+* /dashboard/
+* /login/
+* /register/
+* /password-handler/
+* /_next/
+
+## Rate Limits
+- Crawl delay: 5 seconds  
+- Max requests: 30 per minute  
+
+## Agents & Rules (examples)
+- GPTBot — training: disallow; inference: allow  
+- ChatGPT-User — training: disallow; inference: allow  
+- OAI-SearchBot — training: disallow; inference: allow  
+- Google-Extended — training: disallow; inference: allow  
+- GoogleOther — training: disallow; inference: disallow  
+- CCBot — training: disallow; inference: disallow  
+- ClaudeBot — training: disallow; inference: allow  
+- anthropic-ai — training: disallow; inference: allow  
+- PerplexityBot — training: disallow; inference: allow  
+- Applebot-Extended — training: disallow; inference: allow  
+- Meta-External-Agent — training: disallow; inference: disallow  
+- Amazonbot — training: disallow; inference: disallow  
+- Bytespider — training: disallow; inference: disallow  
+- cohere-ai — training: disallow; inference: allow  
+
+## Licensing
+- Commercial use: by negotiation  
+- Non-commercial use: by link & attribution  

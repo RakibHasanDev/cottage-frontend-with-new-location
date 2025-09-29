@@ -248,6 +248,7 @@ dark:bg-slate-800 dark:from-transparent dark:via-transparent dark:to-transparent
                     { href: "/service-areas", label: "Services Areas" },
                     { href: "/", label: "New York City" },
                     { href: "/new-jersey", label: "New Jersey" },
+                    { href: "/maryland", label: "Maryland" },
                   ]}
                 />
 

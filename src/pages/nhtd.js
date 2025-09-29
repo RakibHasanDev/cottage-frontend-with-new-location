@@ -360,14 +360,14 @@ const NHTD = () => {
                     Nursing Home Transition and Diversion (NHTD) Waiver Program
                   </strong>{" "}
                   is a
-                  <Link
+                  <a
                     href="https://www.health.ny.gov/facilities/long_term_care/nhtd/"
                     target="_blank"
-                    rel="nofollow noopener noreferrer"
+                    rel="nofollow"
                     className="text-blue-500 hover:underline ml-1"
                   >
                     New York State Medicaid initiative
-                  </Link>{" "}
+                  </a>{" "}
                   designed to help eligible seniors and individuals with
                   physical disabilities live independently instead of in a
                   nursing home. The program provides personalized home care
@@ -533,14 +533,14 @@ const NHTD = () => {
               <li>
                 <strong>For Nursing Home Residents:</strong> Speak with a
                 discharge planner who can connect you with the{" "}
-                <Link
+                <a
                   href="https://www.health.ny.gov/funding/single_source/rrdc.htm"
                   target="_blank"
-                  rel="nofollow noopener noreferrer"
+                  rel="nofollow"
                   className="text-blue-500 hover:underline"
                 >
                   Regional Resource Development Center (RRDC).
-                </Link>
+                </a>
               </li>
               <li>
                 <strong>For Community Residents:</strong> Contact your local
@@ -556,7 +556,7 @@ const NHTD = () => {
               className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-56 rounded-md text-white shadow-md"
               href="https://www.health.ny.gov/facilities/long_term_care/regional_resource_development_centers.htm"
               target="_blank"
-              rel="nofollow noopener noreferrer"
+              rel="nofollow"
             >
               <Icon
                 icon="ri:arrow-right-double-fill"

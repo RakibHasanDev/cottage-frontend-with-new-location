@@ -1,0 +1,660 @@
+import { useState } from "react";
+import {
+  Star,
+  ChevronLeft,
+  ChevronRight,
+  MessageSquare,
+  Quote,
+  Users,
+  Phone,
+  Calendar,
+  CheckCircle,
+  ClipboardCheck,
+  TrendingUp,
+  Award,
+  CheckCircle2,
+  BarChart3,
+} from "lucide-react";
+
+const reviews = [
+  {
+    name: "Devika Dwarka",
+    date: "2 weeks ago",
+    rating: 5,
+    text: "Lovely people to work with. It was amazing! I also love those lovely ladies and gents I spoke to and handled the classes. It’s great to be here with Cottage, they are the best.",
+  },
+  {
+    name: "Rajestha Chathura",
+    date: "3 weeks ago",
+    rating: 5,
+    text: "I would like to congratulate miss nadia on a wonderful job she’s done on teaching other students the process of care.",
+  },
+  {
+    name: "Brenda 'sunny'",
+    date: "2 weeks ago",
+    rating: 5,
+    text: "Excellent experience with this agency. The staff is very helpful and friendly. I highly recommend anyone.",
+  },
+  {
+    name: "Judith Allen",
+    date: "2 weeks ago",
+    rating: 5,
+    text: "An excellent experience with front desk clerk. I will give recommended any one to cottage home care.",
+  },
+  {
+    name: "Nadia Allen",
+    date: "3 weeks ago",
+    rating: 5,
+    text: "Absolutely love working with this agency and my awesome coordinator Ayala. Very compassionate young lady, very understanding and hardworking coordinator. I highly recommend working here.",
+  },
+  {
+    name: "Sabrina Brewlam",
+    date: "2 months ago",
+    rating: 5,
+    text: "All the team members of Cottage Homecare are friendly, caring, helpful all the time. Orientation was great, very quick and smooth.",
+  },
+  {
+    name: "Kiran Champasriya",
+    date: "3 weeks ago",
+    rating: 5,
+    text: "I am happy for sure, always it is with this company for the second time. I love it here.",
+  },
+  {
+    name: "Nadia Oriental",
+    date: "3 weeks ago",
+    rating: 5,
+    text: "The service is excellent and they are very helpful at all times.",
+  },
+  {
+    name: "Roshni Ockurum",
+    date: "2 months ago",
+    rating: 5,
+    text: "I recently completed my HHA orientation, and I found it to be a highly informative and valuable experience.",
+  },
+  {
+    name: "Fanny Perez",
+    date: "3 weeks ago",
+    rating: 5,
+    text: "Great company to work with. The staff and coordinator are great.",
+  },
+];
+
+const faqs = [
+  {
+    question: "What services does Cottage Homecare Maryland, LLC provide?",
+    answer:
+      "We provide a full range of in-home care services including personal care assistance, medication reminders, companionship, light housekeeping, laundry, meal preparation, and mobility support.",
+  },
+  {
+    question: "What is the Community First Choice (CFC) program?",
+    answer:
+      "The CFC program is a Medicaid-funded service that allows individuals to receive personal care and support services in their homes rather than in institutional settings. It is ideal for those who need help with activities of daily living such as bathing, dressing, or mobility.",
+  },
+  {
+    question: "Who is eligible for the CFC program?",
+    answer:
+      "Eligibility for the CFC program is determined by Medicaid and includes individuals who require assistance with daily activities and meet specific income and health criteria. We can help guide you through the application and assessment process.",
+  },
+  {
+    question: "Do you accept private pay clients?",
+    answer:
+      "Yes, Cottage Homecare Maryland, LLC offers flexible private pay options for individuals who prefer or need to pay out of pocket for their care services. We work with families to develop a personalized care plan that fits their budget and needs.",
+  },
+  {
+    question: "Are your caregivers trained and certified?",
+    answer:
+      "Yes, all of our caregivers are trained, certified, and background-checked. We prioritize safety, professionalism, and compassionate care in every home we serve.",
+  },
+  {
+    question: "Can I choose the caregiver for my loved one?",
+    answer:
+      "Absolutely. We believe in matching the right caregiver to each client. You'll have the opportunity to meet potential caregivers and choose the one who best fits your loved one's needs and personality.",
+  },
+  {
+    question: "Is Cottage Homecare Maryland, LLC available 24/7?",
+    answer:
+      "Yes, we offer 24/7 care options and flexible scheduling to meet your specific needs, whether you need part-time, full-time, or around-the-clock assistance.",
+  },
+];
+
+import { MapPin, ChevronDown, Sparkles, Heart, Shield } from "lucide-react";
+
+function Maryland() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextReview = () => {
+    setCurrentIndex((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <div>
+      {/* <HeroSection />
+      <ProcessSection />
+      <ServicesSection />
+      <LocationSection />
+      <ReviewsSection />
+      <FAQSection /> */}
+
+      <section className="relative overflow-hidden gradient-mesh min-h-[82vh] flex items-center ">
+        {/* Animated decorative shapes */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-pink-400/30 shape-blob blur-3xl animate-float" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-cyan-300/30 shape-blob-2 blur-3xl animate-float-slow " />
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/10 shape-circle blur-2xl animate-pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-pink-300/20 shape-rounded-blob blur-2xl animate-float" />
+
+        <div className="container mx-auto px-4 relative z-10 py-20 grid grid-cols-1 md:grid-cols-2 gap-10 ">
+          <div className="text-center text-white  col-span-1 ">
+            {/* Decorative badge */}
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 glass-effect">
+              <Sparkles className="h-5 w-5 text-yellow-300" />
+              <span className="text-sm font-semibold">
+                Trusted by 10,000+ Families
+              </span>
+            </div>
+
+            {/* Main heading with gradient text */}
+            <h1 className="text-5xl md:text-5xl font-bold mb-6 text-balance  leading-[200px]">
+              COTTAGE HOME CARE,
+              <br />
+              <span className="inline-block bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
+                MARYLAND LLC
+              </span>
+            </h1>
+
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="h-1 w-20 bg-gradient-to-r from-transparent via-white to-transparent rounded-full" />
+              <Heart className="h-8 w-8 text-pink-300 fill-pink-300" />
+              <div className="h-1 w-20 bg-gradient-to-r from-transparent via-white to-transparent rounded-full" />
+            </div>
+
+            <p className="text-2xl md:text-3xl lg:text-4xl font-light mb-8 text-cyan-50">
+              Your #1 Choice for Home Care
+            </p>
+
+            {/* Feature pills */}
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-12">
+              <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-6 py-3 glass-effect hover:bg-white/25 transition-all">
+                <Shield className="h-5 w-5 text-green-300" />
+                <span className="text-sm font-medium">Licensed & Insured</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-6 py-3 glass-effect hover:bg-white/25 transition-all">
+                <Heart className="h-5 w-5 text-pink-300" />
+                <span className="text-sm font-medium">Compassionate Care</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-6 py-3 glass-effect hover:bg-white/25 transition-all">
+                <Sparkles className="h-5 w-5 text-yellow-300" />
+                <span className="text-sm font-medium">24/7 Support</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1">
+            <img
+              src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1759179058/Mary_Land_LLC/process_image_ylb7cm.jpg"
+              alt=""
+              className="w-[90%] h-auto rotate-6 rounded-xl"
+            />
+          </div>
+        </div>
+
+        {/* Bottom wave decoration */}
+        <div className="absolute -bottom-2 left-0 right-0 ">
+          <svg
+            viewBox="0 0 1440 120"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full "
+          >
+            <path
+              d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
+              fill="white"
+              className="-mt-2"
+            />
+          </svg>
+        </div>
+      </section>
+      <section className="py-20 bg-gradient-to-b from-white via-cyan-50/30 to-white relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-cyan-200/20 shape-blob blur-3xl" />
+        <div className="absolute bottom-20 left-0 w-96 h-96 bg-pink-200/20 shape-blob-2 blur-3xl" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-gray-800 text-balance">
+            COTTAGE HOME CARE MARYLAND,LLC, Makes Private Pay Care Simple
+          </p>
+          <p className="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
+            Following these simple steps to get started with compassionate care
+          </p>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center ">
+            {/* Image with decorative frame */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-3xl blur-2xl opacity-20 animate-pulse-glow" />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+                <img
+                  src={
+                    "https://res.cloudinary.com/di3wwp9s0/image/upload/v1759179058/Mary_Land_LLC/process_image_ylb7cm.jpg"
+                  }
+                  alt="Caregiver with elderly patient"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+
+            {/* Steps with enhanced design */}
+            <div className="space-y-6">
+              {/* Step 1 */}
+              <div className="group relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300" />
+                <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-cyan-100">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <ClipboardCheck className="h-7 w-7 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                        1. Select the Services You Need
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed text-lg">
+                        Choose from hourly support, live-in care, skilled
+                        nursing visits, or companionship services tailored to
+                        your needs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="group relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 to-rose-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300" />
+                <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-pink-100">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-pink-400 to-rose-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <Users className="h-7 w-7 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-gray-800 mb-3">
+                        2. Create a Custom Plan
+                      </p>
+                      <p className="text-gray-600 leading-relaxed text-lg">
+                        We'll help you design a personalized schedule and care
+                        plan that fits your lifestyle, preferences, and budget.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="group relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300" />
+                <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-cyan-100">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                      <CheckCircle className="h-7 w-7 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-2xl font-bold text-gray-800 mb-3">
+                        3. Receive Care with Peace of Mind
+                      </p>
+                      <p className="text-gray-600 leading-relaxed text-lg">
+                        Enjoy professional, reliable care with flexible payment
+                        options, giving your family peace of mind.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Buttons with enhanced styling */}
+              <div className="flex flex-wrap gap-4 pt-6">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full px-10 py-3 text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 flex gap-2 items-center">
+                  <Phone className="mr-2 h-6 w-6" />
+                  Call: (667) 400-0648
+                </button>
+                <button className="bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-black text-white rounded-full px-10 py-3 text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105  flex gap-2 items-center">
+                  <Calendar className="mr-2 h-6 w-6" />
+                  Schedule a Call
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-200/30 shape-circle blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-200/30 shape-blob blur-3xl" />
+
+        <div className="container mx-auto px-4 relative z-10 ">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full px-6 py-2 mb-6 shadow-lg">
+              <Award className="h-5 w-5" />
+              <span className="font-semibold">Trusted by Thousands</span>
+            </div>
+            <p className="text-xl md:text-2xl text-gray-700 mb-2 leading-relaxed max-w-4xl mx-auto">
+              Over{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 font-bold text-3xl">
+                10,000 Customers
+              </span>{" "}
+              have joined the{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 font-bold">
+                Cottage Homecare
+              </span>{" "}
+              family where a family or friend gets paid to care for their loved
+              ones in need.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 ">
+            {/* Services List with enhanced gradient */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition duration-300" />
+              <div className="relative bg-gradient-to-br from-cyan-50 via-blue-50 to-cyan-50 rounded-3xl p-10 shadow-2xl border border-cyan-100">
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <CheckCircle2 className="h-6 w-6 text-white" />
+                  </div>
+                  <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">
+                    Private Pay
+                  </p>
+                </div>
+                <ul className="space-y-5">
+                  {[
+                    "Personal Care",
+                    "Emergency response",
+                    "Choose Your Own Caregiver",
+                  ].map((service, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-4 group/item"
+                    >
+                      <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center shadow-md group-hover/item:scale-110 transition-transform">
+                        <CheckCircle2 className="h-5 w-5 text-white" />
+                      </div>
+                      <span className="text-gray-700 text-lg font-medium pt-0.5">
+                        {service}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex items-center gap-3 my-8 border-t">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <TrendingUp className="h-6 w-6 text-white" />
+                  </div>
+                  <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-600">
+                    Community First Choice (CFC) Program
+                  </p>
+                </div>
+                <ul className="space-y-5">
+                  {[
+                    "Covered under Maryland Medicaid",
+                    "Self-direct your care even hire family as caregivers",
+                    "personal care, emergency response, assistive tech, home modifications & training",
+                  ].map((service, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-4 group/item"
+                    >
+                      <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-pink-400 to-blue-500 rounded-lg flex items-center justify-center shadow-md group-hover/item:scale-110 transition-transform">
+                        <CheckCircle2 className="h-5 w-5 text-white" />
+                      </div>
+                      <span className="text-gray-700 text-lg font-medium pt-0.5">
+                        {service}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Video with enhanced frame */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-cyan-900 to-cyan-400 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition duration-300" />
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-900 to-gray-800 p-2">
+                <div className="aspect-video relative rounded-2xl overflow-hidden">
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Cottage Home Care Video"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 ">
+            {/* Map */}
+            <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <div className="aspect-video relative bg-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.9604814631602!2d-76.8531371!3d39.198346699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7dfb69ed0139d%3A0x6dec8e5f6f17d6fd!2s6310%20Stevens%20Forest%20Rd%20STE%20100%2C%20Columbia%2C%20MD%20210463208%2C%20USA!5e0!3m2!1sen!2sbd!4v1759174979633!5m2!1sen!2sbd"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Location Info */}
+            <div className="space-y-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <p className="text-2xl font-bold text-primary mb-4 flex items-center gap-2">
+                  <MapPin className="h-6 w-6" />
+                  Corporate Office Location
+                </p>
+                <p className="text-gray-700 text-lg">
+                  6310 Stevens Forest Rd, Suite 100, Columbia, MD 21046
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-24 overflow-hidden gradient-mesh">
+        {/* Enhanced decorative shapes */}
+        <div className="absolute top-10 left-10 w-80 h-80 bg-white/10 shape-blob blur-3xl animate-float" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-pink-300/20 shape-blob-2 blur-3xl animate-float-slow" />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-300/20 shape-circle blur-2xl animate-pulse-glow" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl mb-6 shadow-xl">
+              <MessageSquare className="h-10 w-10 text-white" />
+            </div>
+            <p className="text-2xl md:text-4xl font-bold text-white mb-6 text-balance max-w-4xl mx-auto leading-tight">
+              See Why So Many Families Needing Home Care In LLC Look To Us For{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10">World-Class Care</span>
+                <span className="absolute bottom-2 left-0 right-0 h-3 bg-pink-400/50 -rotate-1" />
+              </span>
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="relative">
+              <div className="absolute -inset-2 bg-gradient-to-r from-white/20 to-cyan-200/20 rounded-3xl blur-2xl" />
+              <div className="relative bg-white rounded-3xl p-10 md:p-14 shadow-2xl">
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-4">
+                  <p className="text-3xl font-bold text-gray-800">
+                    Cottage Home Care Services Reviews
+                  </p>
+                  <div className="flex items-center gap-3 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl px-6 py-3 shadow-md">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="h-6 w-6 fill-yellow-400 text-yellow-400"
+                        />
+                      ))}
+                    </div>
+                    <span className="text-gray-800 font-bold text-2xl">
+                      5.0
+                    </span>
+                  </div>
+                </div>
+
+                <div className="text-right mb-8">
+                  <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full px-6 py-2 shadow-lg">
+                    <Users className="h-5 w-5" />
+                    <span className="font-semibold">
+                      <strong className="text-xl">147</strong> Total Reviews
+                    </span>
+                  </div>
+                </div>
+
+                {/* Enhanced Review Card */}
+                <div className="relative bg-gradient-to-br from-gray-50 to-cyan-50/30 rounded-2xl p-10 mb-10 min-h-[240px] flex flex-col justify-center shadow-lg border border-cyan-100">
+                  <Quote className="absolute top-6 left-6 h-12 w-12 text-cyan-200" />
+                  <div className="flex mb-5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-6 w-6 fill-yellow-400 text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 text-xl mb-6 leading-relaxed relative z-10">
+                    {reviews[currentIndex].text}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-bold text-gray-800 text-lg">
+                        {reviews[currentIndex].name}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        {reviews[currentIndex].time}
+                      </p>
+                    </div>
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center shadow-lg text-white font-bold text-xl">
+                      G
+                    </div>
+                  </div>
+                </div>
+
+                {/* Enhanced Navigation */}
+                <div className="flex items-center justify-center gap-6">
+                  <button
+                    onClick={prevReview}
+                    className="rounded-full w-12 h-12 border-2 border-cyan-200 hover:border-cyan-400 hover:bg-cyan-50 transition-all shadow-md bg-transparent flex justify-center items-center"
+                  >
+                    <ChevronLeft className="h-6 w-6 text-cyan-600" />
+                  </button>
+
+                  <div className="flex gap-3">
+                    {reviews.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentIndex(index)}
+                        className={`h-3 rounded-full transition-all shadow-sm ${
+                          index === currentIndex
+                            ? "bg-gradient-to-r from-cyan-500 to-blue-600 w-12"
+                            : "bg-gray-300 w-3 hover:bg-gray-400"
+                        }`}
+                        aria-label={`Go to review ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+
+                  <button
+                    onClick={nextReview}
+                    className="rounded-full w-12 h-12 border-2 border-cyan-200 hover:border-cyan-400 hover:bg-cyan-50 transition-all shadow-md bg-transparent flex justify-center items-center"
+                  >
+                    <ChevronRight className="h-6 w-6 text-cyan-600" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-primary">
+            Frequently Asked Questions
+          </p>
+
+          <div className="max-w-4xl mx-auto space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow overflow-hidden border border-gray-100"
+              >
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className={`w-full px-6 py-5 flex items-center justify-between text-left transition-colors ${
+                    openIndex === index
+                      ? "bg-cyan-500 text-white"
+                      : "bg-white text-gray-800 hover:bg-gray-50"
+                  }`}
+                >
+                  <span className="font-semibold text-lg pr-4">
+                    {faq.question}
+                  </span>
+                  <ChevronDown
+                    className={`h-5 w-5 flex-shrink-0 transition-transform ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {openIndex === index && (
+                  <div className="px-6 py-5 bg-gray-50 border-t border-gray-100">
+                    <p className="text-gray-700 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 text-lg">
+              Have more questions?{" "}
+              <a
+                href="tel:2016338481"
+                className="text-primary font-semibold hover:underline"
+              >
+                Call us at (667) 400-0648
+              </a>
+              <br />
+              <span>EMAIL us at </span>
+              <a
+                href="tel:2016338481"
+                className="text-primary font-semibold hover:underline"
+              >
+                maryland@cottagehomecare.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+export default Maryland;

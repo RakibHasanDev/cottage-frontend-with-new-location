@@ -331,7 +331,7 @@ export default function HeroSection({
 
             {/* CARD GRID — 600x380 image ratio, 2 cols on lg */}
             <div className="mx-auto mt-10 max-w-6xl grid gap-10 md:grid-cols-2 lg:grid-cols-2 my-6">
-              {locations.map((loc) => (
+              {locations?.map((loc) => (
                 <div
                   key={loc.slug}
                   className="space-y-3"
