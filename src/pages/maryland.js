@@ -13,7 +13,7 @@ import {
   TrendingUp,
   Award,
   CheckCircle2,
-  BarChart3,
+  Mail,
 } from "lucide-react";
 
 const reviews = [
@@ -118,6 +118,7 @@ const faqs = [
 ];
 
 import { MapPin, ChevronDown, Sparkles, Heart, Shield } from "lucide-react";
+import EasierLife from "@/components/home/EasierLife";
 
 function Maryland() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -152,10 +153,10 @@ function Maryland() {
         <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/10 shape-circle blur-2xl animate-pulse-glow" />
         <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-pink-300/20 shape-rounded-blob blur-2xl animate-float" />
 
-        <div className="container mx-auto px-4 relative z-10 py-20 grid grid-cols-1 md:grid-cols-2 gap-10 ">
+        <div className="container mx-auto px-4 relative z-10 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 ">
           <div className="text-center text-white  col-span-1 ">
             {/* Decorative badge */}
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-8 glass-effect">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6  mb-8 glass-effect">
               <Sparkles className="h-5 w-5 text-yellow-300" />
               <span className="text-sm font-semibold">
                 Trusted by 10,000+ Families
@@ -163,15 +164,11 @@ function Maryland() {
             </div>
 
             {/* Main heading with gradient text */}
-            <h1 className="text-5xl md:text-5xl font-bold mb-6 text-balance  leading-[200px]">
-              COTTAGE HOME CARE,
-              <br />
-              <span className="inline-block bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
-                MARYLAND LLC
-              </span>
+            <h1 className="text-3xl md:text-5xl font-bold mb-3 leading-snug lg:leading-[60px]">
+              COTTAGE HOME CARE <br /> MARYLAND, LLC
             </h1>
 
-            <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="flex items-center justify-center gap-4 lg:mb-8 mb-3">
               <div className="h-1 w-20 bg-gradient-to-r from-transparent via-white to-transparent rounded-full" />
               <Heart className="h-8 w-8 text-pink-300 fill-pink-300" />
               <div className="h-1 w-20 bg-gradient-to-r from-transparent via-white to-transparent rounded-full" />
@@ -182,25 +179,22 @@ function Maryland() {
             </p>
 
             {/* Feature pills */}
-            <div className="flex flex-wrap items-center justify-center gap-4 mt-12">
-              <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-6 py-3 glass-effect hover:bg-white/25 transition-all">
-                <Shield className="h-5 w-5 text-green-300" />
-                <span className="text-sm font-medium">Licensed & Insured</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-6 py-3 glass-effect hover:bg-white/25 transition-all">
-                <Heart className="h-5 w-5 text-pink-300" />
-                <span className="text-sm font-medium">Compassionate Care</span>
-              </div>
-              <div className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-6 py-3 glass-effect hover:bg-white/25 transition-all">
-                <Sparkles className="h-5 w-5 text-yellow-300" />
-                <span className="text-sm font-medium">24/7 Support</span>
-              </div>
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-5">
+              <a
+                href="tel:+1(667) 400-0648"
+                className="flex items-center gap-2 bg-white/15 backdrop-blur-sm rounded-full px-6 py-3 glass-effect hover:bg-white/25 transition-all"
+              >
+                <Phone className="h-5 w-5 text-green-300" />
+                <span className="text-sm font-medium uppercase">
+                  Contact Us
+                </span>
+              </a>
             </div>
           </div>
 
           <div className="col-span-1">
             <img
-              src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1759179058/Mary_Land_LLC/process_image_ylb7cm.jpg"
+              src="https://res.cloudinary.com/di3wwp9s0/image/upload/v1759255232/Mary_Land_LLC/maryland_2_aksv8y.webp"
               alt=""
               className="w-[90%] h-auto rotate-6 rounded-xl"
             />
@@ -223,15 +217,20 @@ function Maryland() {
           </svg>
         </div>
       </section>
-      <section className="py-20 bg-gradient-to-b from-white via-cyan-50/30 to-white relative overflow-hidden">
+      <section className="pb-20 bg-gradient-to-b from-white via-cyan-50/30 to-white relative overflow-hidden">
         {/* Decorative background elements */}
         <div className="absolute top-20 right-0 w-96 h-96 bg-cyan-200/20 shape-blob blur-3xl" />
         <div className="absolute bottom-20 left-0 w-96 h-96 bg-pink-200/20 shape-blob-2 blur-3xl" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <p className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-gray-800 text-balance">
-            COTTAGE HOME CARE MARYLAND,LLC, Makes Private Pay Care Simple
+          <p className="text-2xl md:text-4xl lg:text-4xl 2xl:text-4xl font-bold text-center mb-4 text-gray-800  uppercase">
+            COTTAGE HOME CARE MARYLAND, LLC <br />
+            <span className="pt-3 inline-block">
+              {" "}
+              Simplifying the Community First Choice (CFC) Program
+            </span>
           </p>
+
           <p className="text-center text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
             Following these simple steps to get started with compassionate care
           </p>
@@ -239,11 +238,11 @@ function Maryland() {
           <div className="grid lg:grid-cols-2 gap-16 items-center ">
             {/* Image with decorative frame */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-3xl blur-2xl opacity-20 animate-pulse-glow" />
+              <div className="absolute inset-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-3xl blur-md opacity-20 animate-pulse-glow" />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
                 <img
                   src={
-                    "https://res.cloudinary.com/di3wwp9s0/image/upload/v1759179058/Mary_Land_LLC/process_image_ylb7cm.jpg"
+                    "https://res.cloudinary.com/di3wwp9s0/image/upload/v1759255378/Mary_Land_LLC/cfc_wv3myv.webp"
                   }
                   alt="Caregiver with elderly patient"
                   width={600}
@@ -257,7 +256,7 @@ function Maryland() {
             <div className="space-y-6">
               {/* Step 1 */}
               <div className="group relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#005F6B] to-[#027b8b] rounded-2xl blur opacity-25 group-hover:opacity-40" />
                 <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-cyan-100">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
@@ -265,12 +264,12 @@ function Maryland() {
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-gray-800 mb-3">
-                        1. Select the Services You Need
+                        1. Covered Under Maryland Medicaid
                       </h3>
                       <p className="text-gray-600 leading-relaxed text-lg">
-                        Choose from hourly support, live-in care, skilled
-                        nursing visits, or companionship services tailored to
-                        your needs.
+                        Get access to care services fully covered by Maryland
+                        Medicaid, ensuring affordability and support without
+                        added stress.
                       </p>
                     </div>
                   </div>
@@ -287,11 +286,12 @@ function Maryland() {
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-gray-800 mb-3">
-                        2. Create a Custom Plan
+                        2. Self-Direct Your Care
                       </p>
                       <p className="text-gray-600 leading-relaxed text-lg">
-                        We'll help you design a personalized schedule and care
-                        plan that fits your lifestyle, preferences, and budget.
+                        Enjoy the freedom to choose and even hire family members
+                        as caregivers, giving you comfort and flexibility with
+                        people you trust.
                       </p>
                     </div>
                   </div>
@@ -308,11 +308,12 @@ function Maryland() {
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-gray-800 mb-3">
-                        3. Receive Care with Peace of Mind
+                        3. Comprehensive Support Services
                       </p>
                       <p className="text-gray-600 leading-relaxed text-lg">
-                        Enjoy professional, reliable care with flexible payment
-                        options, giving your family peace of mind.
+                        Receive personal care, emergency response, assistive
+                        technology, home modifications, and training — all
+                        designed to keep you safe, independent, and supported.
                       </p>
                     </div>
                   </div>
@@ -321,14 +322,33 @@ function Maryland() {
 
               {/* CTA Buttons with enhanced styling */}
               <div className="flex flex-wrap gap-4 pt-6">
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full px-10 py-3 text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 flex gap-2 items-center">
+                <a
+                  href="tel:+1(667) 400-0648"
+                  className="bg-gradient-to-r from-[#005F6B] to-[#0aa3b8] hover:from-cyan-600 hover:to-blue-700 text-white rounded-full px-10 py-3 text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105 flex gap-2 items-center"
+                >
                   <Phone className="mr-2 h-6 w-6" />
                   Call: (667) 400-0648
-                </button>
-                <button className="bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-black text-white rounded-full px-10 py-3 text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105  flex gap-2 items-center">
+                </a>
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.documentElement.style.scrollBehavior = "smooth";
+                    const targetElement =
+                      document.getElementById("contact-form");
+                    const navbarHeight = 120;
+                    if (targetElement) {
+                      const offsetTop = targetElement.offsetTop - navbarHeight;
+                      window.scrollTo({
+                        top: offsetTop,
+                      });
+                    }
+                  }}
+                  href="#contact-form"
+                  className="bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-black text-white rounded-full px-10 py-3 text-lg shadow-xl hover:shadow-2xl transition-all transform hover:scale-105  flex gap-2 items-center"
+                >
                   <Calendar className="mr-2 h-6 w-6" />
                   Schedule a Call
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -341,7 +361,7 @@ function Maryland() {
 
         <div className="container mx-auto px-4 relative z-10 ">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full px-6 py-2 mb-6 shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#005F6B] to-[#0aa3b8] text-white rounded-full px-6 py-2 mb-6 shadow-lg">
               <Award className="h-5 w-5" />
               <span className="font-semibold">Trusted by Thousands</span>
             </div>
@@ -359,7 +379,7 @@ function Maryland() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 ">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Services List with enhanced gradient */}
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition duration-300" />
@@ -392,7 +412,7 @@ function Maryland() {
                   ))}
                 </ul>
 
-                <div className="flex items-center gap-3 my-8 border-t">
+                <div className="flex items-center gap-3 my-8 border-t pt-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
                     <TrendingUp className="h-6 w-6 text-white" />
                   </div>
@@ -429,7 +449,7 @@ function Maryland() {
                 <div className="aspect-video relative rounded-2xl overflow-hidden">
                   <iframe
                     className="w-full h-full"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.youtube.com/embed/B-hpC0dEJ5I?rel=0"
                     title="Cottage Home Care Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -442,7 +462,7 @@ function Maryland() {
       </section>
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 ">
+          <div className="grid lg:grid-cols-2 gap-12 items-center ">
             {/* Map */}
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <div className="aspect-video relative bg-gray-200">
@@ -459,14 +479,38 @@ function Maryland() {
             </div>
 
             {/* Location Info */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className=" ">
+              <div className="bg-white rounded-2xl p-8 py-20 shadow-lg space-y-5">
                 <p className="text-2xl font-bold text-primary mb-4 flex items-center gap-2">
                   <MapPin className="h-6 w-6" />
                   Corporate Office Location
                 </p>
-                <p className="text-gray-700 text-lg">
+                <a
+                  target="_blank"
+                  href="https://www.google.com/maps/dir//6310+Stevens+Forest+Rd+STE+100,+Columbia,+MD+210463208,+USA/@39.1983508,-76.855712,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89b7dfb69ed0139d:0x6dec8e5f6f17d6fd!2m2!1d-76.8531371!2d39.1983467?entry=ttu&g_ep=EgoyMDI1MDkyOC4wIKXMDSoASAFQAw%3D%3D"
+                  className="text-gray-700 text-lg"
+                >
                   6310 Stevens Forest Rd, Suite 100, Columbia, MD 21046
+                </a>
+                <p className="text-2xl font-bold text-primary mb-4  items-center gap-2 flex">
+                  <Phone className="h-6 w-6" />
+                  <a
+                    target="_blank"
+                    href="tel:+1(667) 400-0648"
+                    className="text-gray-700 text-lg"
+                  >
+                    (667) 400-0648
+                  </a>
+                </p>
+                <p className="text-2xl font-bold text-primary mb-4  items-center gap-2 flex">
+                  <Mail className="h-6 w-6" />
+                  <a
+                    target="_blank"
+                    href="mailto:maryland@cottagehomecare.com"
+                    className="text-gray-700 text-lg"
+                  >
+                    maryland@cottagehomecare.com
+                  </a>
                 </p>
               </div>
             </div>
@@ -593,11 +637,11 @@ function Maryland() {
       </section>
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 text-primary">
+          <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 text-primary">
             Frequently Asked Questions
           </p>
 
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="max-w-5xl 2xl:max-w-7xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -631,28 +675,9 @@ function Maryland() {
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 text-lg">
-              Have more questions?{" "}
-              <a
-                href="tel:2016338481"
-                className="text-primary font-semibold hover:underline"
-              >
-                Call us at (667) 400-0648
-              </a>
-              <br />
-              <span>EMAIL us at </span>
-              <a
-                href="tel:2016338481"
-                className="text-primary font-semibold hover:underline"
-              >
-                maryland@cottagehomecare.com
-              </a>
-            </p>
-          </div>
         </div>
       </section>
+      <EasierLife />
     </div>
   );
 }
