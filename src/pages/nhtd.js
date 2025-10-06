@@ -552,7 +552,7 @@ const NHTD = () => {
               </li>
             </ul>
 
-            <Link
+            <a
               className="mt-3   bg-[#00A6B2] px-4 py-1.5  flex w-56 rounded-md text-white shadow-md"
               href="https://www.health.ny.gov/facilities/long_term_care/regional_resource_development_centers.htm"
               target="_blank"
@@ -563,7 +563,7 @@ const NHTD = () => {
                 className="text-2xl   text-white "
               />
               <span className="">Find an RRDC Near You</span>
-            </Link>
+            </a>
           </div>
           <div className="">
             <p className="pt-3 playrify text-xl lg:text-4xl font-semibold dark:text-gray-100 mb-3 league-spartan text-[#00A6B2]">

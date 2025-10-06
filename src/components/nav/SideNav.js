@@ -72,6 +72,10 @@ const SideNav = () => {
           property: "New Jersey",
           path: "new-jersey",
         },
+        {
+          property: "Maryland",
+          path: "maryland",
+        },
       ],
     },
   ];

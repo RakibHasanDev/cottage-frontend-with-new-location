@@ -782,6 +782,105 @@ const EmployeeSignature = () => {
                                       </p>
                                     </td>
                                   </tr>
+                                  <tr>
+                                    <td
+                                      style={{
+                                        paddingTop: "1px",
+                                        borderCollapse: "collapse",
+                                        fontFamily:
+                                          "Calibri, Helvetica, sans-serif",
+                                        fontSize: "15px",
+                                        fontStyle: "normal",
+                                        lineHeight: "17px",
+                                        fontWeight: 600,
+                                      }}
+                                    >
+                                      <p style={{ margin: "0.04px" }}>
+                                        <span
+                                          style={{
+                                            fontFamily: "sans-serif",
+                                            fontSize: "15px",
+                                            fontStyle: "normal",
+                                            lineHeight: "17px",
+                                            fontWeight: 600,
+                                            color: "#1c3461",
+                                            display: "inline",
+                                          }}
+                                        >
+                                          New Jersey Office:
+                                        </span>
+                                        <a
+                                          href="https://www.google.com/maps/place/97+Newkirk+St+STE+337,+Jersey+City,+NJ+07306,+USA/@40.7290857,-74.0661629,17z/data=!3m1!4b1!4m6!3m5!1s0x89c25732f39c7355:0x473436e3784a74c4!8m2!3d40.7290817!4d-74.063588!16s%2Fg%2F11zhlywl37?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          style={{
+                                            textDecoration: "none",
+                                            fontFamily: "sans-serif",
+                                            fontSize: "15px",
+                                            fontStyle: "normal",
+                                            marginLeft: "2px",
+                                            lineHeight: "17px",
+                                            fontWeight: 500,
+                                            color: "#1c3461",
+                                            display: "inline",
+                                          }}
+                                        >
+                                          97 Newkirk St STE 337, Jersey City, NJ
+                                          07306
+                                        </a>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td
+                                      style={{
+                                        paddingTop: "1px",
+                                        paddingBottom: "14px",
+                                        borderCollapse: "collapse",
+                                        fontFamily:
+                                          "Calibri, Helvetica, sans-serif",
+                                        fontSize: "15px",
+                                        fontStyle: "normal",
+                                        lineHeight: "17px",
+                                        fontWeight: 600,
+                                      }}
+                                    >
+                                      <p style={{ margin: "0.04px" }}>
+                                        <span
+                                          style={{
+                                            fontFamily: "sans-serif",
+                                            fontSize: "15px",
+                                            fontStyle: "normal",
+                                            lineHeight: "17px",
+                                            fontWeight: 600,
+                                            color: "#1c3461",
+                                            display: "inline",
+                                          }}
+                                        >
+                                          Maryland Office:
+                                        </span>
+                                        <a
+                                          href="https://www.google.com/maps/dir//6310+Stevens+Forest+Rd+STE+100,+Columbia,+MD+210463208,+USA/@39.1983508,-76.855712,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89b7dfb69ed0139d:0x6dec8e5f6f17d6fd!2m2!1d-76.8531371!2d39.1983467?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          style={{
+                                            textDecoration: "none",
+                                            fontFamily: "sans-serif",
+                                            fontSize: "15px",
+                                            fontStyle: "normal",
+                                            marginLeft: "2px",
+                                            lineHeight: "17px",
+                                            fontWeight: 500,
+                                            color: "#1c3461",
+                                            display: "inline",
+                                          }}
+                                        >
+                                          6310 Stevens Forest Rd, Suite 100,
+                                          Columbia, MD 21046
+                                        </a>
+                                      </p>
+                                    </td>
+                                  </tr>
                                 </tbody>
                               </table>
                               <table

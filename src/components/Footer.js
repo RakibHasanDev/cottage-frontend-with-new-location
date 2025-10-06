@@ -18,9 +18,9 @@ const Footer = () => {
     companyLogo =
       "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757435478/cottage_logo/new_jersey_logo_a1pexa.webp";
   } else if (pathname?.includes("maryland")) {
-    companyName = "Cottage Home Care, Maryland, LLC";
+    companyName = "Cottage Home Care Maryland, LLC";
     companyLogo =
-      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757434710/cottage_logo/cottage-home-care-logo_n8fskh.webp";
+      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1759419105/Mary_Land_LLC/maryland-logo_mbwqtp.webp";
   }
 
   return (
@@ -233,9 +233,12 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="space-y-3">
-                <p className=" uppercase text-gray-50 hover:text-[#00A6B2] tracking-wider">
+                <Link
+                  href="/about-us"
+                  className=" uppercase text-gray-50 hover:text-[#00A6B2] tracking-wider"
+                >
                   About US
-                </p>
+                </Link>
                 <ul className="space-y-1 uppercase tracking-wider">
                   <li>
                     <Link

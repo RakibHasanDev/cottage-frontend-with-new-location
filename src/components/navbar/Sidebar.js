@@ -158,6 +158,18 @@ const Sidebar = () => {
                   label="Generate Email Signature"
                   activePath={pathname}
                 />
+                <SidebarLink
+                  href="/dashboard/job-post"
+                  icon={<Icon icon="fa6-solid:briefcase" />}
+                  label="Add Job Post"
+                  activePath={pathname}
+                />
+                <SidebarLink
+                  href="/dashboard/all-job-post"
+                  icon={<Icon icon="fa6-solid:briefcase" />}
+                  label="All Job Post"
+                  activePath={pathname}
+                />
 
                 <SidebarLink
                   href="/dashboard/general-request"

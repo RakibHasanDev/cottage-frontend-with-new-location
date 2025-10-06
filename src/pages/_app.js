@@ -152,24 +152,21 @@ export default function App({ Component, pageProps }) {
           console.warn("GoDaddy script failed", e);
         }}
       />
-
-      {/* <Script id="godaddy-scc" strategy="afterInteractive">
+      {/* ✅ Meta Pixel Code */}
+      <Script id="meta-pixel" strategy="afterInteractive">
         {`
-          (function loadGD(){
-            var run = function(){
-              var s = document.createElement('script');
-              s.src = 'https://img1.wsimg.com/scc-c2/scc-c2.min.js';
-              s.async = true;
-              document.head.appendChild(s);
-            };
-            if ('requestIdleCallback' in window) {
-              requestIdleCallback(run, { timeout: 3000 });
-            } else {
-              setTimeout(run, 3000);
-            }
-          })();
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1288701326249992');
+          fbq('track', 'PageView');
         `}
-      </Script> */}
+      </Script>
 
       {/* Firebase/Auth iframe.js was in your network waterfall.
           Load ONLY where needed (auth/dashboard), never on the home page. */}

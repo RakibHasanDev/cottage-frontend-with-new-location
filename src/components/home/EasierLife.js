@@ -220,7 +220,7 @@ const EasierLife = () => {
     <div>
       {loading && <OverlayLoading />}
       <div
-        className="bg-[#F5F5F7] md:pb-16 pb-5 dark:bg-slate-700"
+        className="bg-[#F5F5F7] md:pb-16 pb-5 dark:bg-slate-700 p-2 "
         id="contact-form"
       >
         <div
@@ -232,7 +232,10 @@ const EasierLife = () => {
           </p>
           <p className="text-[#67637e] text-lg font-[Roboto] dark:text-gray-100 open-sans">
             Call us now at{" "}
-            <a href={`tel: +1${phoneNumber}`} className="text-[#005f6b]">
+            <a
+              href={`tel: +1${phoneNumber}`}
+              className="text-[#005f6b] dark:text-gray-100"
+            >
               {phoneNumber}
             </a>
             , or fill out this form and a member of our team will contact you

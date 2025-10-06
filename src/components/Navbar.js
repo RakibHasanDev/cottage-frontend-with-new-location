@@ -120,9 +120,9 @@ const NavBar = () => {
     companyLogo =
       "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757435478/cottage_logo/new_jersey_logo_a1pexa.webp";
   } else if (pathname?.includes("maryland")) {
-    companyName = "Cottage Home Care, Maryland, LLC";
+    companyName = "Cottage Home Care Maryland, LLC";
     companyLogo =
-      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757434710/cottage_logo/cottage-home-care-logo_n8fskh.webp";
+      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1759419105/Mary_Land_LLC/maryland-logo_mbwqtp.webp";
   }
 
   const handleLogOut = () => {
@@ -319,8 +319,19 @@ dark:bg-slate-800 dark:from-transparent dark:via-transparent dark:to-transparent
                   ]}
                 />
 
+                {/* Connect us*/}
+                <NavDropdown
+                  label="Connect Us"
+                  navColor={navColor}
+                  menuId="connect-us"
+                  items={[
+                    { href: "/contact", label: "Contact Us" },
+                    { href: "/career", label: "career" },
+                  ]}
+                />
+
                 {/* Contact */}
-                <li>
+                {/* <li>
                   <Link
                     href="/contact"
                     aria-label="Contact Us"
@@ -331,7 +342,7 @@ dark:bg-slate-800 dark:from-transparent dark:via-transparent dark:to-transparent
                   >
                     Contact Us
                   </Link>
-                </li>
+                </li> */}
 
                 {/* HHA Certification */}
                 <li>
@@ -352,7 +363,6 @@ dark:bg-slate-800 dark:from-transparent dark:via-transparent dark:to-transparent
                   menuId="nav-services-menu"
                   items={[
                     { href: "/resources", label: "Resources" },
-                    { href: "/blog", label: "Blog" },
                     { href: "/help-desk", label: "Help Desk" },
                     { href: "/covid", label: "Covid-19" },
                     { href: "/faqs", label: "FAQs" },

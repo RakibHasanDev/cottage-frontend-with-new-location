@@ -262,9 +262,6 @@ export default function Home() {
       </Head>
 
       <main className="dark:bg-slate-600 min-h-screen">
-        <h1 className="sr-only">
-          Cottage Home Care – Home Health Aide, Private Pay, and NHTD Services
-        </h1>
         <h2 className="sr-only">
           Trusted NHTD, HHA, and Private Pay Services Across New York State
         </h2>

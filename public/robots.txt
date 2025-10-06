@@ -16,8 +16,10 @@ Allow: /_next/static/js/
 Allow: /_next/static/chunks/
 Allow: /_next/static/media/
 Allow: /team/$
+Allow: /about-us/
 Allow: /service-areas/
 Allow: /new-jersey/
+Allow: /maryland/
 Allow: /nhtd/
 Allow: /hha/
 Allow: /private-pay-home-care/
