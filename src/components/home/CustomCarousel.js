@@ -73,10 +73,10 @@ export default function HeroSection({ onRequestCare = () => {} }) {
                 has taken on some of the most challenging cases in New York.
               </h1>
 
-              <div className="text-lg text-muted-foreground font-medium tracking-wide uppercase text-gray-00">
+              <h2 className="text-lg text-muted-foreground font-medium tracking-wide uppercase text-gray-00">
                 HHA/PCA, NHTD & Private Pay Services Throughout New York City,
                 Nassau & Suffolk County, Westchester & Albany
-              </div>
+              </h2>
             </div>
 
             {/* Call-to-Action Buttons */}

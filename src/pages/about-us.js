@@ -412,12 +412,12 @@ export default function App() {
                   OUR VISION
                 </div>
 
-                <h2 className="text-xl md:text-4xl font-bold tracking-tight text-balance leading-tight text-[#005f6b] dark:text-gray-100">
+                <h3 className="text-xl md:text-4xl font-bold tracking-tight text-balance leading-tight text-[#005f6b] dark:text-gray-100">
                   Building a Future of Accessible and{" "}
                   <span className="text-accent">
                     Compassionate Home Care Services
                   </span>
-                </h2>
+                </h3>
 
                 <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
                   <p className="text-xl  text-foreground dark:text-gray-100">
@@ -492,10 +492,10 @@ export default function App() {
                 Our Core Services
               </div>
 
-              <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-[#005f6b] dark:text-white">
+              <h4 className="text-2xl md:text-4xl font-bold tracking-tight text-[#005f6b] dark:text-white">
                 Expert Care Solutions to Foster Independence and Enhance Quality
                 of Life at Home
-              </h2>
+              </h4>
 
               <p className="text-lg text-muted-foreground leading-relaxed dark:text-white">
                 We specialize in providing high-quality, tailored in-home care

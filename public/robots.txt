@@ -17,6 +17,7 @@ Allow: /_next/static/chunks/
 Allow: /_next/static/media/
 Allow: /team/$
 Allow: /about-us/
+Allow: /career/
 Allow: /service-areas/
 Allow: /new-jersey/
 Allow: /maryland/

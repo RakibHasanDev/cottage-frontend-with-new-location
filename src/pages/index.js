@@ -262,10 +262,6 @@ export default function Home() {
       </Head>
 
       <main className="dark:bg-slate-600 min-h-screen">
-        <h2 className="sr-only">
-          Trusted NHTD, HHA, and Private Pay Services Across New York State
-        </h2>
-
         <section id="hero">
           <CustomCarousel onRequestCare={() => setOpen(true)} />
         </section>

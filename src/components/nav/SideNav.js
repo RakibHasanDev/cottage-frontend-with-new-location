@@ -146,7 +146,7 @@ const SideNav = () => {
               ))}
             </div>
             <button
-              className="bg-[#00A6B2] w-10 h-10 shadow-xl rounded-full text-white flex justify-center items-center text-2xl"
+              className="bg-[#005F6B] w-10 h-10 shadow-xl rounded-full text-white flex justify-center items-center text-2xl"
               onClick={toggleCloser}
             >
               <Icon icon="radix-icons:cross-2" />
@@ -402,6 +402,16 @@ const SideNav = () => {
             >
               <Icon icon="bi:files" className="text-lg flex-shrink-0" />
               <span>Resources</span>
+            </Link>
+          </li>
+          <li className="list-none">
+            <Link
+              onClick={toggleCloser}
+              href="/career"
+              className="flex items-center gap-3 text-white text-sm tracking-wide transition-colors duration-200 uppercase hover:text-[#00A6B2] "
+            >
+              <Icon icon="bi:briefcase" className="text-lg flex-shrink-0" />
+              <span>Career</span>
             </Link>
           </li>
 

@@ -222,6 +222,9 @@ const EmployeeForm = () => {
                   <option value="Administrator">Administrator</option>
                   <option value="Leadership">Leadership</option>
                   <option value="OfficeManager">Office Manager</option>
+                  <option value="QA_M">Quality Assurance Manager </option>
+                  <option value="QA">Quality Assurance</option>
+                  <option value="Intake_Manager">Intake Manager</option>
                   <option value="INTAKE">Intake</option>
                   <option value="CdpapSuperVisor">CDPAP Supervisor</option>
                   <option value="CDPAP">CDPAP</option>

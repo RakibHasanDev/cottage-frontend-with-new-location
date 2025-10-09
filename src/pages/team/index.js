@@ -19,7 +19,7 @@ const Team = () => {
 
   const marketing = {
     img: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1724690186/i5s7nmpqrrnisafsnacn.jpg",
-    name: "Marketing Team",
+    name: "Digital Marketing Team",
   };
   const itTeam = {
     img: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1724690186/i5s7nmpqrrnisafsnacn.jpg",
@@ -396,7 +396,7 @@ const Team = () => {
                                 {employee?.designation}
                               </h5>
 
-                              {employee?._id === "65dcede2331dfddc25c80c26" && (
+                              {employee?._id === "68e6610126a92ec5240d0a73" && (
                                 <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 -bottom-[14px] md:-bottom-3 ">
                                   <a
                                     href="#EXECUTIVE"
@@ -582,7 +582,7 @@ const Team = () => {
                                   {employee?.designation}
                                 </h5>
                               </div>
-                              {employee?._id === "65dcede2331dfddc25c80c2a" && (
+                              {employee?._id === "68e6610126a92ec5240d0a76" && (
                                 <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 -bottom-3 ">
                                   <a
                                     href="#BD"
@@ -645,18 +645,22 @@ const Team = () => {
 
                 <hr className="border-[#00A6B2] border-t-[2px] w-16 mt-0.5  mx-auto  " />
 
-                <div className="flex gap-3 md:gap-14 mt-3 md:mt-12 justify-evenly md:justify-center items-center flex-wrap ">
+                <div className="flex gap-3 md:gap-14 mt-3 md:mt-12 justify-evenly md:justify-center items-center flex-wrap md:gap-y-20">
                   {/* div start Intake */}
 
                   <div>
                     <div className=" w-40 md:w-64 mt-8 md:mt-0 bg-[#F5F5F6] h-24 md:h-32 rounded-lg shadow open-sans relative  ">
                       <PhotoProvider>
                         <PhotoView
-                          src={employeesByDepartment?.OfficeManager?.[0]?.img}
+                          src={employeesByDepartment?.Intake_Manager?.[0]?.img}
                         >
                           <Image
-                            src={employeesByDepartment?.OfficeManager?.[0]?.img}
-                            alt={employeesByDepartment?.OfficeManager?.[0]?.img}
+                            src={
+                              employeesByDepartment?.Intake_Manager?.[0]?.img
+                            }
+                            alt={
+                              employeesByDepartment?.Intake_Manager?.[0]?.img
+                            }
                             className=" w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                             width={48}
                             height={48}
@@ -667,10 +671,10 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`/team/${employeesByDepartment?.OfficeManager?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.Intake_Manager?._id}`}
                           className=" hover:underline block text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                         >
-                          {employeesByDepartment?.OfficeManager?.[0]?.name}
+                          {employeesByDepartment?.Intake_Manager?.[0]?.name}
                         </Link>
                         <h5 className="text-center pt-1 md:pt-2 text-xs md:text-sm font-semibold text-gray-500">
                           Intake Manager
@@ -684,7 +688,7 @@ const Team = () => {
                             handleRotate(
                               employeesByDepartment?.INTAKE,
                               "INTAKE",
-                              employeesByDepartment?.OfficeManager?.[0],
+                              employeesByDepartment?.Intake_Manager?.[0],
                               "uniqueId1"
                             )
                           }
@@ -718,21 +722,15 @@ const Team = () => {
 
                   {/* div end Intake */}
 
-                  {/* div start CDPAP  */}
+                  {/* QA TEAM START */}
 
                   <div>
                     <div className="w-40 md:w-64 mt-8 md:mt-0 bg-[#F5F5F6] h-24 md:h-32 rounded-lg shadow open-sans relative ">
                       <PhotoProvider>
-                        <PhotoView
-                          src={employeesByDepartment?.CdpapSuperVisor?.[0]?.img}
-                        >
+                        <PhotoView src={employeesByDepartment?.QA_M?.[0]?.img}>
                           <Image
-                            src={
-                              employeesByDepartment?.CdpapSuperVisor?.[0]?.img
-                            }
-                            alt={
-                              employeesByDepartment?.CdpapSuperVisor?.[0]?.img
-                            }
+                            src={employeesByDepartment?.QA_M?.[0]?.img}
+                            alt={employeesByDepartment?.QA_M?.[0]?.img}
                             className="  w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
                             width="48"
                             height="48"
@@ -743,13 +741,13 @@ const Team = () => {
 
                       <div>
                         <Link
-                          href={`/team/${employeesByDepartment?.CdpapSuperVisor?.[0]?._id}`}
+                          href={`/team/${employeesByDepartment?.QA_M?.[0]?._id}`}
                           className=" hover:underline block text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
                         >
-                          {employeesByDepartment?.CdpapSuperVisor?.[0]?.name}
+                          {employeesByDepartment?.QA_M?.[0]?.name}
                         </Link>
                         <h5 className="text-center pt-1 md:pt-2 text-xs md:text-sm font-semibold text-gray-500">
-                          PCA Manager
+                          {employeesByDepartment?.QA_M?.[0]?.designation}
                         </h5>
                       </div>
                       <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 -bottom-3">
@@ -757,20 +755,20 @@ const Team = () => {
                           href="#CDPAP"
                           onClick={() =>
                             handleRotate(
-                              employeesByDepartment?.CDPAP,
+                              employeesByDepartment?.QA,
                               "CDPAP",
-                              employeesByDepartment?.CdpapSuperVisor?.[0],
-                              "uniqueId2"
+                              employeesByDepartment?.QA_M?.[0],
+                              "uniqueId222"
                             )
                           }
                           style={{
-                            backgroundColor: rotations["uniqueId2"]
+                            backgroundColor: rotations["uniqueId222"]
                               ? "black"
                               : "#6B7280",
                           }}
                           className={` w-10 h-6 md:w-12 md:h-7  rounded-3xl font-semibold text-gray-100 text-xs md:text-base  flex items-center justify-center gap-0.5  }`}
                         >
-                          <span>{employeesByDepartment?.CDPAP?.length}</span>
+                          <span>{employeesByDepartment?.QA?.length}</span>
 
                           <span>
                             <svg
@@ -792,7 +790,7 @@ const Team = () => {
                     </div>
                   </div>
 
-                  {/* div end CDPAP */}
+                  {/* QA TEAM END */}
 
                   {/* div start Admin */}
 
@@ -873,6 +871,81 @@ const Team = () => {
                   </div>
 
                   {/* div end Admin */}
+                  {/* div start CDPAP  */}
+
+                  <div>
+                    <div className="w-40 md:w-64 mt-8 md:mt-0 bg-[#F5F5F6] h-24 md:h-32 rounded-lg shadow open-sans relative ">
+                      <PhotoProvider>
+                        <PhotoView
+                          src={employeesByDepartment?.CdpapSuperVisor?.[0]?.img}
+                        >
+                          <Image
+                            src={
+                              employeesByDepartment?.CdpapSuperVisor?.[0]?.img
+                            }
+                            alt={
+                              employeesByDepartment?.CdpapSuperVisor?.[0]?.img
+                            }
+                            className="  w-12 h-12 md:w-16 md:h-16 rounded-full mx-auto absolute left-1/2 transform -translate-x-1/2 -top-6 md:-top-10 shadow cursor-pointer"
+                            width="48"
+                            height="48"
+                            priority // ✅ LCP Fix: Boost Loading Priority
+                          />
+                        </PhotoView>
+                      </PhotoProvider>
+
+                      <div>
+                        <Link
+                          href={`/team/${employeesByDepartment?.CdpapSuperVisor?.[0]?._id}`}
+                          className=" hover:underline block text-center font-semibold text-gray-500 pt-8 md:pt-9 text-sm md:text-lg"
+                        >
+                          {employeesByDepartment?.CdpapSuperVisor?.[0]?.name}
+                        </Link>
+                        <h5 className="text-center pt-1 md:pt-2 text-xs md:text-sm font-semibold text-gray-500">
+                          PCA Manager
+                        </h5>
+                      </div>
+                      <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 -bottom-3">
+                        <a
+                          href="#CDPAP"
+                          onClick={() =>
+                            handleRotate(
+                              employeesByDepartment?.CDPAP,
+                              "CDPAP",
+                              employeesByDepartment?.CdpapSuperVisor?.[0],
+                              "uniqueId2"
+                            )
+                          }
+                          style={{
+                            backgroundColor: rotations["uniqueId2"]
+                              ? "black"
+                              : "#6B7280",
+                          }}
+                          className={` w-10 h-6 md:w-12 md:h-7  rounded-3xl font-semibold text-gray-100 text-xs md:text-base  flex items-center justify-center gap-0.5  }`}
+                        >
+                          <span>{employeesByDepartment?.CDPAP?.length}</span>
+
+                          <span>
+                            <svg
+                              className={`fill-current font-semibold w-4 h-4 md:h-5 md:w-5 transform transition-transform ${
+                                rotations["uniqueId2"] ? "rotate-180" : ""
+                              }`}
+                              viewBox="0 0 20 20"
+                            >
+                              <path
+                                strokeWidth="1"
+                                stroke="currentColor"
+                                fill="none"
+                                d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"
+                              ></path>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* div end CDPAP */}
 
                   {/* div start HHA  */}
 
@@ -944,11 +1017,6 @@ const Team = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* div end HHA  */}
-                </div>
-                <div className="flex gap-3 md:gap-14  justify-evenly md:justify-center items-center flex-wrap  mt-6 md:mt-[70px] ">
-                  {/* div start HR */}
 
                   <div>
                     <div className="w-40 md:w-64 mt-8 md:mt-0 bg-[#F5F5F6] h-24 md:h-32 rounded-lg shadow open-sans relative">
@@ -1139,6 +1207,10 @@ const Team = () => {
                       </div>
                     </div>
                   </div>
+                  {/* div end HHA  */}
+                </div>
+                <div className="flex gap-3 md:gap-14  justify-evenly md:justify-center items-center flex-wrap  mt-6 md:mt-[70px] ">
+                  {/* div start HR */}
 
                   {/* div end  Administrative  */}
                 </div>
@@ -1219,7 +1291,7 @@ const Team = () => {
 
                   {/* Marketing DEPARTMENT START*/}
 
-                  {/* <div>
+                  <div>
                     <div className="w-40 md:w-64 mt-8 md:mt-0 bg-[#F5F5F6] h-24 md:h-32 rounded-lg shadow open-sans relative ">
                       <div className="px-4">
                         <div className="flex gap-2 items-center pt-2 md:pt-4">
@@ -1239,7 +1311,7 @@ const Team = () => {
                           )}
                         </div>
                         <h1 className="text-start  font-semibold text-gray-500 text-xs md:text-lg pt-1 md:pt-2">
-                          Marketing Team
+                          Digital Marketing Team
                         </h1>
                         <h5 className="text-start  pt-1 text-xs md:text-sm font-semibold text-gray-500">
                           {employeesByDepartment?.MediaMarketing?.length}{" "}
@@ -1287,7 +1359,7 @@ const Team = () => {
                         </a>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
 
                   {/* marketing DEPARTMENT END*/}
 
@@ -1493,7 +1565,7 @@ const Team = () => {
                                     {tm?.designation}
                                   </h5>
                                 </div>
-                                {tm?._id === "65dcede2331dfddc25c80c35" && (
+                                {tm?._id === "68e6610126a92ec5240d0a80" && (
                                   <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 -bottom-3">
                                     <a
                                       href="#ADMIN"

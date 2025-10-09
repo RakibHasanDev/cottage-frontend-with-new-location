@@ -236,9 +236,9 @@ const Sitemap = () => {
           </ul>
         </div>
         <div>
-          <h2 className="text-xl font-semibold text-[#00A6B2] mb-3">
+          <h3 className="text-xl font-semibold text-[#00A6B2] mb-3">
             About Company
-          </h2>
+          </h3>
           <ul className="space-y-1 text-gray-800 dark:text-gray-100">
             <li>
               <Link href="/about-us" className="hover:text-[#00A6B2]">
@@ -406,9 +406,9 @@ const Sitemap = () => {
 
       {/* Blog section: all /blog/... statically listed */}
       <div className="max-w-6xl mx-auto px-4 pb-16">
-        <h2 className="text-2xl font-semibold text-[#00A6B2] mb-4 text-center md:text-left">
+        <h4 className="text-2xl font-semibold text-[#00A6B2] mb-4 text-center md:text-left">
           Blog
-        </h2>
+        </h4>
         {BLOG_POSTS.length === 0 ? (
           <p className="text-gray-600 dark:text-gray-100">
             No blog posts listed.

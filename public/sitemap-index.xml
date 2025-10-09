@@ -1011,6 +1011,25 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+        <url>
+    <loc>https://cottagehomecare.com/blog/nursing-home-transition-diversion-nhtd/</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+      <url>
+    <loc>https://cottagehomecare.com/blog/personal-care-aides-cottage/</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+      <url>
+    <loc>https://cottagehomecare.com/career/</loc>
+    <lastmod>2025-10-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 
    
 </urlset>

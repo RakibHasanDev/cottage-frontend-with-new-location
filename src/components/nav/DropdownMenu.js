@@ -32,7 +32,7 @@ const DropdownMenu = ({ handleLogOut }) => {
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="text-4xl z-50 tracking-wide text-[#00A6B2] font-bold duration-200 bg-transparent outline-none cursor-pointer dark:text-gray-300 mt-1"
+        className="text-4xl z-50 tracking-wide text-[#005F6B] font-bold duration-200 bg-transparent outline-none cursor-pointer dark:text-gray-300 mt-1"
         aria-label="Toggle navigation menu"
       >
         <Icon icon="bx:menu" />

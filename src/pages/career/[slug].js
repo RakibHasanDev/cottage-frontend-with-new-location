@@ -43,14 +43,14 @@ const JobDetails = ({ job }) => {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content={`${job.title || "Job Opportunity"} | Care Guide`}
+          content={`${job.title || "Job Opportunity"} | Cottage Homecare`}
         />
         <meta
           property="og:description"
           content={
             job.description
               ? job.description.replace(/<[^>]+>/g, "").slice(0, 150)
-              : "Join the Care Guide team and make a difference in home care services."
+              : "Join the Cottage Homecare team and make a difference in home care services."
           }
         />
         <meta property="og:type" content="website" />
@@ -67,14 +67,14 @@ const JobDetails = ({ job }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content={`${job.title || "Job Opportunity"} | Care Guide`}
+          content={`${job.title || "Job Opportunity"} | Cottage Homecare`}
         />
         <meta
           name="twitter:description"
           content={
             job.description
               ? job.description.replace(/<[^>]+>/g, "").slice(0, 150)
-              : "Join the Care Guide team and make a difference in home care services."
+              : "Join the Cottage Homecare team and make a difference in home care services."
           }
         />
         <meta
