@@ -526,17 +526,13 @@ export default function NewJersey() {
           // data-aos="fade-down"
           // data-aos-duration="2000"
         >
-          Over{" "}
-          <span className="text-[#00A6B2] dark:text-gray-100">
-            10,000 Customers
-          </span>{" "}
-          have joined the{" "}
-          <span className="text-[#00A6B2] dark:text-gray-100">
+          Trusted by{" "}
+          <span className="text-[#00A6B2] dark:text-gray-100">thousands</span>{" "}
+          of clients and patients in the
+          <span className="text-[#00A6B2] dark:text-gray-100 ml-1">
             Cottage Homecare
           </span>{" "}
-          family where a family or friend gets{" "}
-          <span className="font-extrabold">paid to care</span> for their loved
-          ones in need.
+          family!
         </h3>
 
         <div className="lg:max-w-7xl 2xl:max-w-[1400px] mx-auto px-6  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-12 ">

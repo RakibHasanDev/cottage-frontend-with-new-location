@@ -560,29 +560,28 @@ function Maryland() {
               <Award className="h-5 w-5" />
               <span className="font-semibold">Trusted by Thousands</span>
             </div>
-            <p className="text-xl md:text-2xl text-gray-700 mb-2 leading-relaxed max-w-4xl mx-auto dark:text-gray-100">
-              Over{" "}
+            <p className="text-xl md:text-2xl text-gray-700 mb-2 leading-relaxed max-w-4xl lg:max-w-5xl mx-auto dark:text-gray-100">
+              Trusted by
               <span
                 className="
     text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 
     dark:bg-none dark:text-white
-    font-bold text-3xl
+    font-bold text-3xl ml-1
   "
               >
-                10,000 Customers
+                thousands
               </span>{" "}
-              have joined the{" "}
+              of clients and patients in the
               <span
                 className="
     text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600 
     dark:bg-none dark:text-white
-    font-bold
+    font-bold ml-1
   "
               >
                 Cottage Homecare
               </span>{" "}
-              family where a family or friend gets paid to care for their loved
-              ones in need.
+              family!
             </p>
           </div>
 

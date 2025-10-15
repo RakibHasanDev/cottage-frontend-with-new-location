@@ -14,11 +14,11 @@ const Footer = () => {
   let companyLogo =
     "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757434710/cottage_logo/cottage-home-care-logo_n8fskh.webp";
   if (pathname?.includes("new-jersey")) {
-    companyName = "Cottage Homecare NJ, LLC";
+    companyName = "Cottage Homecare NJ LLC";
     companyLogo =
       "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757435478/cottage_logo/new_jersey_logo_a1pexa.webp";
   } else if (pathname?.includes("maryland")) {
-    companyName = "Cottage Home Care Maryland, LLC";
+    companyName = "Cottage Home Care Maryland LLC";
     companyLogo =
       "https://res.cloudinary.com/di3wwp9s0/image/upload/v1759419105/Mary_Land_LLC/maryland-logo_mbwqtp.webp";
   }

@@ -207,12 +207,13 @@ const UploadForm = ({ jobId, jobTitle, setShowModal }) => {
         </div>
 
         <div>
-          <label className={labelCls}>Apt / Ste / Unit (optional)</label>
+          <label className={labelCls}>Apt / Ste / Unit</label>
           <input
             className={inputCls}
             placeholder="Apt 4B"
-            {...register("unit")}
+            {...register("unit", { required: true })}
           />
+          {errors.unit && <p className={errorTextCls}>unit is required.</p>}
         </div>
 
         {/* CV Upload */}

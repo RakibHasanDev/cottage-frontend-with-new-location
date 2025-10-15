@@ -13,6 +13,8 @@ const AddBlog = () => {
   const [titleCharCount, setTitleCharCount] = useState(0);
   const [metaDescCharCount, setMetaDescCharCount] = useState(0);
   const [titleWarningMessage, setTitleWarningMessage] = useState("");
+  const [subtitleCharCount, setSubtitleCharCount] = useState(0);
+  const [subtitleWarningMessage, setSubtitleWarningMessage] = useState("");
   const [metaDescWarning, setMetaDescWarning] = useState(false);
   const [slugWarningMessage, setSlugWarningMessage] = useState("");
 
@@ -402,8 +404,40 @@ const AddBlog = () => {
                       {...register(`title${index + 1}`)}
                       id={`title${index + 1}`}
                       placeholder={`Sub title -${index + 1}`}
+                      onChange={(e) => {
+                        const value = e.target.value;
+                        setValue(`title${index + 1}`, value);
+                        setSubtitleCharCount(value.length); // Update character count
+
+                        // Title validation logic
+                        if (value.length > 60) {
+                          setSubtitleWarningMessage(
+                            " subtitle must be under 60 characters."
+                          );
+                        } else if (/\bsubtitle\b/i.test(value)) {
+                          setSubtitleWarningMessage(
+                            "Avoid using the word 'subtitle' in your subtitle "
+                          );
+                        } else {
+                          setSubtitleWarningMessage(""); // Clear warning if valid
+                        }
+                      }}
                       className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9] focus:bg-white shadow-md dark:bg-gray-400 dark:text-gray-200 dark:placeholder:text-gray-100"
                     />
+                    <div className="flex justify-between text-xs mt-1">
+                      <span className="text-red-500">
+                        {subtitleWarningMessage}
+                      </span>
+                      <span
+                        className={`${
+                          subtitleCharCount > 60
+                            ? "text-red-500"
+                            : "text-gray-500"
+                        } ml-auto`}
+                      >
+                        {subtitleCharCount}/60
+                      </span>
+                    </div>
                     {errors[`title${index + 1}`] && (
                       <p className="text-red-600">
                         {errors[`title${index + 1}`].message}

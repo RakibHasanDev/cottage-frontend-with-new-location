@@ -239,6 +239,12 @@ const Sidebar = () => {
                   label="Users Info"
                   activePath={pathname}
                 />
+                <SidebarLink
+                  href="/dashboard/all-job-post"
+                  icon={<Icon icon="fa6-solid:briefcase" />}
+                  label="All Job Post"
+                  activePath={pathname}
+                />
               </>
             )}
 
@@ -255,13 +261,6 @@ const Sidebar = () => {
                   href="/dashboard"
                   icon={<Icon icon="material-symbols:dashboard" />}
                   label="Dashboard"
-                  activePath={pathname}
-                />
-                <SidebarLink
-                  href="/dashboard/certificate"
-                  icon={<Icon icon="lucide:file-search-2" />}
-                  label="Generate Certificate"
-                  count={getRemainingCount("requestPto")}
                   activePath={pathname}
                 />
               </>
@@ -285,6 +284,12 @@ const Sidebar = () => {
                   href="/dashboard"
                   icon={<Icon icon="material-symbols:dashboard" />}
                   label="Dashboard"
+                  activePath={pathname}
+                />
+                <SidebarLink
+                  href="/dashboard/all-job-post"
+                  icon={<Icon icon="fa6-solid:briefcase" />}
+                  label="All Job Post"
                   activePath={pathname}
                 />
               </>

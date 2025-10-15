@@ -196,7 +196,17 @@ const ApplicantsByJob = () => {
                   {applicants?.map((app, idx) => {
                     const checked = !!app.reviewed;
                     // Correct address format: street, unit, city, state
-                    const presentAddress = `${app.address.street}, ${app.address.unit}, ${app.address.city}, ${app.address.state}`;
+                    const addressParts = [
+                      app?.address?.street,
+                      app?.address?.unit,
+                      app?.address?.city,
+                      app?.address?.state,
+                    ];
+
+                    const presentAddress = addressParts
+                      .filter((part) => part) // removes null, undefined, or empty strings
+                      .join(", ");
+
                     return (
                       <tr key={app._id} className="hover:bg-gray-50">
                         <td className="px-4 py-3 text-sm text-gray-700">
@@ -204,24 +214,24 @@ const ApplicantsByJob = () => {
                         </td>
 
                         <td className="px-4 py-3 text-sm font-medium text-gray-900">
-                          {app.name}
+                          {app?.name}
                         </td>
 
                         <td className="px-4 py-3 text-sm">
                           <a
-                            href={`mailto:${app.email}`}
+                            href={`mailto:${app?.email}`}
                             className="text-blue-600 hover:underline"
                           >
-                            {app.email}
+                            {app?.email}
                           </a>
                         </td>
 
                         <td className="px-4 py-3 text-sm">
                           <a
-                            href={`tel:+${app.phone}`}
+                            href={`tel:${app?.phone}`}
                             className="text-blue-600 hover:underline"
                           >
-                            +{app.phone}
+                            {app?.phone}
                           </a>
                         </td>
 
@@ -230,20 +240,23 @@ const ApplicantsByJob = () => {
                         </td>
 
                         <td className="px-4 py-3 text-sm text-gray-700">
-                          {app.jobTitle}
+                          {app?.jobTitle}
                         </td>
 
                         <td className="px-4 py-3 text-sm text-gray-700">
-                          {new Date(app.createdAt).toLocaleDateString("en-US", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                          })}
+                          {new Date(app?.createdAt).toLocaleDateString(
+                            "en-US",
+                            {
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                            }
+                          )}
                         </td>
 
                         <td className="px-4 py-3">
                           <button
-                            onClick={() => cvHandler(app.fileId)}
+                            onClick={() => cvHandler(app?.fileId)}
                             className="inline-flex items-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
                           >
                             View
@@ -252,7 +265,7 @@ const ApplicantsByJob = () => {
 
                         <td className="px-4 py-3">
                           <label
-                            htmlFor={`review-${app._id}`}
+                            htmlFor={`review-${app?._id}`}
                             className="inline-flex cursor-pointer items-center"
                           >
                             <input
@@ -294,7 +307,7 @@ const ApplicantsByJob = () => {
 
             {totalPages > 0 && (
               <div className="mt-4 flex flex-wrap gap-2">
-                {Array.from({ length: totalPages }, (_, i) => (
+                {Array?.from({ length: totalPages }, (_, i) => (
                   <button
                     key={i}
                     className={`inline-flex items-center rounded-md px-3 py-1.5 text-sm font-medium focus:outline-none focus:ring-2

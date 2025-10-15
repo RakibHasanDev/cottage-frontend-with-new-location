@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import Loading from "@/components/shared/Loading";
+import { AuthContext } from "@/context/AuthProvider";
+import useAdmin from "@/hooks/useAdmin";
 
 const JobPostTable = () => {
   const [page, setPage] = useState(0);
   const [size] = useState(10);
   const apiKey = process.env.NEXT_PUBLIC_secureApiKey;
+  const { user } = useContext(AuthContext);
+  const { isAdmin, isAdminLoading } = useAdmin(user?.email);
 
   const url = `https://cottage-backend-voilerplate.vercel.app/job-post?page=${page}&size=${size}`;
 
@@ -120,17 +124,26 @@ const JobPostTable = () => {
                       Created At
                     </th>
                     <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-white">
-                      Status
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-white">
                       Total Applicants
                     </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-white">
-                      Edit
-                    </th>
-                    <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-white">
-                      Delete
-                    </th>
+
+                    {!isAdminLoading &&
+                      isAdmin &&
+                      user?.uid &&
+                      user?.email === "info@cottagehomecare.com" && (
+                        <>
+                          <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-white">
+                            Status
+                          </th>
+
+                          <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-white">
+                            Edit
+                          </th>
+                          <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-white">
+                            Delete
+                          </th>
+                        </>
+                      )}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100 bg-white">
@@ -158,18 +171,6 @@ const JobPostTable = () => {
                         {new Date(post.createdAt).toLocaleString()}
                       </td>
 
-                      {/* Toggle Status Button Column */}
-                      <td className="px-4 py-3">
-                        <button
-                          className="inline-flex items-center rounded-md border border-amber-300 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-800 hover:bg-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-400"
-                          onClick={() =>
-                            handleStatusToggle(post._id, post.status)
-                          }
-                        >
-                          Change
-                        </button>
-                      </td>
-
                       {/* Total Applicants + View */}
                       <td className="px-4 py-3">
                         <div className="flex flex-wrap items-center gap-2">
@@ -187,26 +188,45 @@ const JobPostTable = () => {
                           </small>
                         </div>
                       </td>
+                      {/* Toggle Status Button Column */}
 
                       {/* Edit */}
-                      <td className="px-4 py-3">
-                        <Link
-                          href={`all-job-post/${post._id}/edit`}
-                          className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-1 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-                        >
-                          Edit
-                        </Link>
-                      </td>
 
-                      {/* Delete */}
-                      <td className="px-4 py-3">
-                        <button
-                          className="inline-flex items-center rounded-md bg-red-600 px-3 py-1 text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400"
-                          onClick={() => handleDelete(post._id)}
-                        >
-                          Delete
-                        </button>
-                      </td>
+                      {!isAdminLoading &&
+                        isAdmin &&
+                        user?.uid &&
+                        user?.email === "info@cottagehomecare.com" && (
+                          <>
+                            <td className="px-4 py-3">
+                              <button
+                                className="inline-flex items-center rounded-md border border-amber-300 bg-amber-50 px-3 py-1 text-sm font-medium text-amber-800 hover:bg-amber-100 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                                onClick={() =>
+                                  handleStatusToggle(post._id, post.status)
+                                }
+                              >
+                                Change
+                              </button>
+                            </td>
+                            <td className="px-4 py-3">
+                              <Link
+                                href={`all-job-post/${post._id}/edit`}
+                                className="inline-flex items-center rounded-md bg-indigo-600 px-3 py-1 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                              >
+                                Edit
+                              </Link>
+                            </td>
+
+                            {/* Delete */}
+                            <td className="px-4 py-3">
+                              <button
+                                className="inline-flex items-center rounded-md bg-red-600 px-3 py-1 text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400"
+                                onClick={() => handleDelete(post._id)}
+                              >
+                                Delete
+                              </button>
+                            </td>
+                          </>
+                        )}
                     </tr>
                   ))}
 
