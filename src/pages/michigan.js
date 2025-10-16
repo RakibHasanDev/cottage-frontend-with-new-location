@@ -1,6 +1,7 @@
 import EasierLife from "@/components/home/EasierLife";
 import CareRequestModal from "@/components/shared/CareRequestModal";
 import { CircleCheck } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function App() {
@@ -267,7 +268,7 @@ export default function App() {
       </section>
 
       {/* Caregiver Enrollment & CHAMPS Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden dark:bg-gradient-to-br dark:from-slate-500 dark:to-slate-500 ">
+      <section className=" bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden dark:bg-gradient-to-br dark:from-slate-500 dark:to-slate-500 ">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -278,8 +279,77 @@ export default function App() {
             }}
           />
         </div>
+        <section className="py-16 lg:py-40 bg-[#005F6B]  relative ">
+          <div className="container mx-auto px-4 text-center">
+            <p className="text-2xl lg:text-4xl font-bold text-white mb-4">
+              Check Your Eligibility
+            </p>
+            <p className="text-white text-lg mb-8">
+              See if you qualify in just a few minutes.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="tel:+(347) 975-2525"
+                className="bg-white hover:bg-gray-100 text-[#005F6B] font-semibold py-3 px-8 rounded-full transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                Call Now
+              </a>
+              <button
+                onClick={() => setOpen(true)}
+                className="bg-transparent hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-full border-2 border-white transition-colors duration-200 flex items-center gap-2"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                Apply Online
+              </button>
+              <Link
+                href="/career"
+                className="bg-transparent hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-full border-2 border-white transition-colors duration-200 flex items-center gap-2 "
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+                Find Vacancies
+              </Link>
+            </div>
+          </div>
+        </section>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 relative z-10 mt-10">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-16">
@@ -455,108 +525,114 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 mt-20 gap-10">
-              {/* Square Card - Multiple Agencies */}
-              <div className="bg-white rounded-3xl p-8    shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-orange-100 hover:border-orange-300 relative overflow-hidden group">
-                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-to-br from-orange-500 to-red-500 rounded-full blur-3xl opacity-20 group-hover:scale-150 transition-transform duration-500" />
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Multiple Agencies
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Caregivers can work for multiple agencies
-                  </p>
-                  <div className="bg-orange-50 rounded-xl p-4 border border-orange-200">
-                    <p className="text-orange-900 text-sm font-semibold mb-1">
-                      ⚠️ Important:
+
+            <div className="mt-20">
+              <h5 className="text-center text-4xl font-bold my-16 text-[#0A5760] dark:text-gray-100">
+                Heads up—important to remember!
+              </h5>
+              <div className="grid grid-cols-1 lg:grid-cols-3  gap-10">
+                {/* Square Card - Multiple Agencies */}
+                <div className="bg-white rounded-3xl p-8    shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-orange-100 hover:border-orange-300 relative overflow-hidden group">
+                  <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-to-br from-orange-500 to-red-500 rounded-full blur-3xl opacity-20 group-hover:scale-150 transition-transform duration-500" />
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      Multiple Agencies
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Caregivers can work for multiple agencies
                     </p>
-                    <p className="text-orange-800 text-sm">
-                      Agencies must pay overtime, even if state doesn&apos;t
-                      reimburse
-                    </p>
+                    <div className="bg-orange-50 rounded-xl p-4 border border-orange-200">
+                      <p className="text-orange-900 text-sm font-semibold mb-1">
+                        ⚠️ Important:
+                      </p>
+                      <p className="text-orange-800 text-sm">
+                        Agencies must pay overtime, even if state doesn&apos;t
+                        reimburse
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Square Card - W2 Employees */}
-              <div className="bg-green-700 rounded-3xl   p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 relative overflow-hidden group">
-                <div className="absolute top-0 left-0 w-full h-full bg-white/5 group-hover:bg-white/10 transition-colors duration-300" />
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                        clipRule="evenodd"
-                      />
-                      <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">
-                    W2 Employment
-                  </h3>
-                  <p className="text-white/90 leading-relaxed mb-4">
-                    All caregivers must be W2 employees
-                  </p>
-                  <div className="bg-white/20 backdrop-blur-md rounded-xl p-4 border border-white/30">
-                    <p className="text-white font-semibold mb-1">
-                      ✓ Benefits Include:
+                {/* Square Card - W2 Employees */}
+                <div className="bg-green-700 rounded-3xl   p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 relative overflow-hidden group">
+                  <div className="absolute top-0 left-0 w-full h-full bg-white/5 group-hover:bg-white/10 transition-colors duration-300" />
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                          clipRule="evenodd"
+                        />
+                        <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">
+                      W2 Employment
+                    </h3>
+                    <p className="text-white/90 leading-relaxed mb-4">
+                      All caregivers must be W2 employees
                     </p>
-                    <p className="text-white/90 text-sm">
-                      Eligible for sick time and standard employee protections
-                    </p>
+                    <div className="bg-white/20 backdrop-blur-md rounded-xl p-4 border border-white/30">
+                      <p className="text-white font-semibold mb-1">
+                        ✓ Benefits Include:
+                      </p>
+                      <p className="text-white/90 text-sm">
+                        Eligible for sick time and standard employee protections
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Square Card - CHAMPS System */}
-              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 relative overflow-hidden group">
-                <div className="absolute -top-10 -left-10 w-32 h-32 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full blur-3xl opacity-20 group-hover:scale-150 transition-transform duration-500" />
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    CHAMPS System
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    Automated verification system
-                  </p>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-gray-700">
-                      <div className="w-2 h-2 bg-green-500 rounded-full" />
-                      <span className="text-sm">Background checks</span>
+                {/* Square Card - CHAMPS System */}
+                <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 relative overflow-hidden group">
+                  <div className="absolute -top-10 -left-10 w-32 h-32 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full blur-3xl opacity-20 group-hover:scale-150 transition-transform duration-500" />
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
                     </div>
-                    <div className="flex items-center gap-2 text-gray-700">
-                      <div className="w-2 h-2 bg-green-500 rounded-full" />
-                      <span className="text-sm">Exclusion verification</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-700">
-                      <div className="w-2 h-2 bg-green-500 rounded-full" />
-                      <span className="text-sm">Automatic processing</span>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      CHAMPS System
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                      Automated verification system
+                    </p>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-gray-700">
+                        <div className="w-2 h-2 bg-green-500 rounded-full" />
+                        <span className="text-sm">Background checks</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-700">
+                        <div className="w-2 h-2 bg-green-500 rounded-full" />
+                        <span className="text-sm">Exclusion verification</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-700">
+                        <div className="w-2 h-2 bg-green-500 rounded-full" />
+                        <span className="text-sm">Automatic processing</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -572,14 +648,14 @@ export default function App() {
           <p className="text-2xl lg:text-4xl font-medium text-[#005F6B] mb-6 dark:text-gray-100">
             Independence with Trusted,
             <br />
-            Compassionate Care from Cottage Home Care Services
+            Compassionate Care from Cottage Home Care MI LLC
           </p>
-          <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto dark:text-gray-100">
-            ’At Cottage Home Care Services, we believe that everyone deserves to
-            live independently and comfortably in their own home. That’s why we
-            are proud to offer the Michigan Home Help Program, a service funded
-            by Michigan Medicaid that provides essential non-medical personal
-            care and chore services for those who qualify.
+          <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto dark:text-gray-100 lg:text-lg">
+            Cottage Home Care MI LLC, we believe that everyone deserves to live
+            independently and comfortably in their own home. That’s why we are
+            proud to offer the Michigan Home Help Program, a service funded by
+            Michigan Medicaid that provides essential non-medical personal care
+            and chore services for those who qualify.
           </p>
         </div>
       </div>
@@ -628,9 +704,9 @@ export default function App() {
               {/* Review 1 */}
               <div className="bg-white rounded-xl p-6">
                 <p className="text-gray-700 mb-4 md:leading-relaxed">
-                  I can&apos;t say how much I appreciate Cottage Home Care
-                  Services. The personnel went above and above to make sure my
-                  mom was properly cared for. They truly took the time to learn
+                  I can&apos;t say how much I appreciate Cottage Home Care MI
+                  LLC. The personnel went above and above to make sure my mom
+                  was properly cared for. They truly took the time to learn
                   about her requirements and always treated her with respect and
                   decency. I highly recommend their services!
                 </p>
@@ -659,7 +735,7 @@ export default function App() {
               {/* Review 2 */}
               <div className="bg-white rounded-xl p-6">
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  We&apos;ve been using Cottage Home Care Services for over a
+                  We&apos;ve been using Cottage Home Care MI LLC for over a
                   year, and it&apos;s been great. The people who look after you
                   are professional, caring, and reliable. My dad is like family
                   to them, and they have made things so much easier for him and
@@ -690,7 +766,7 @@ export default function App() {
               {/* Review 3 */}
               <div className="col-span-1 bg-white rounded-xl p-6">
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  “Cottage Home Care Services is by far the best in the area.
+                  “Cottage Home Care MI LLC is by far the best in the area.
                   During my father&apos;s recovery, the caregivers were very
                   professional and caring. I&apos;ve worked with other agencies
                   before, but none of them give as much care and attention as
@@ -722,7 +798,7 @@ export default function App() {
               <div className="col-span-1 bg-white rounded-xl p-6">
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Great service! I was worried about getting help for my elderly
-                  grandmother, but Cottage Home Care Services has made me feel
+                  grandmother, but Cottage Home Care MI LLC has made me feel
                   completely at ease. They were so nice and patient, and my
                   grandma really looks forward to seeing them. Thank you so much
                   for your help!
@@ -767,9 +843,11 @@ export default function App() {
             {/* Left Side - Image */}
             <div>
               <img
-                src={"/assets/map.avif"}
-                alt="Elderly man reading"
-                className="w-full h-auto rounded-xl shadow-lg"
+                src={
+                  "https://res.cloudinary.com/di3wwp9s0/image/upload/v1760648463/Faq/faq_2_x5ibom.webp"
+                }
+                alt="Cottage Home Care Maryland"
+                className="w-full h-auto "
               />
             </div>
 
@@ -784,7 +862,7 @@ export default function App() {
                 <details className="group border-b border-gray-200 pb-4" open>
                   <summary className="flex justify-between items-center cursor-pointer list-none">
                     <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                      Can I trust Cottage Home Care Services with my loved one’s
+                      Can I trust Cottage Home Care MI LLC with my loved one’s
                       care?
                     </span>
                     <span className="text-[#005F6B] text-2xl group-open:rotate-45 transition-transform dark:text-gray-100">
@@ -792,7 +870,7 @@ export default function App() {
                     </span>
                   </summary>
                   <div className="mt-4 text-gray-700 leading-relaxed dark:text-gray-100">
-                    Absolutely! At Cottage Home Care Services, trust is at the
+                    Absolutely! At Cottage Home Care MI LLC, trust is at the
                     core of everything we do. All our caregivers undergo
                     thorough background checks, extensive training, and are
                     fully certified to ensure that they are not only skilled but
@@ -808,7 +886,7 @@ export default function App() {
                 <details className="group border-b border-gray-200 pb-4">
                   <summary className="flex justify-between items-center cursor-pointer list-none">
                     <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                      Will Cottage Home Care Services be available if my loved
+                      Will Cottage Home Care MI LLC be available if my loved
                       one’s care needs increase over time?
                     </span>
                     <span className="text-[#005F6B] text-2xl group-open:rotate-45 transition-transform dark:text-gray-100">
@@ -854,7 +932,7 @@ export default function App() {
                 <details className="group border-b border-gray-200 pb-4">
                   <summary className="flex justify-between items-center cursor-pointer list-none">
                     <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                      How can Cottage Home Care Services help my family during
+                      How can Cottage Home Care MI LLC help my family during
                       times of stress or emergency?
                     </span>
                     <span className="text-[#005F6B] text-2xl group-open:rotate-45 transition-transform dark:text-gray-100">
@@ -862,7 +940,7 @@ export default function App() {
                     </span>
                   </summary>
                   <div className="mt-4 leading-relaxed dark:text-gray-100 dark:text-gray-100">
-                    At Cottage Home Care Services, we understand that family
+                    At Cottage Home Care MI LLC, we understand that family
                     members may need assistance during times of stress or
                     emergency. Whether your loved one is recovering from a
                     surgery, experiencing a health crisis, or you simply need
@@ -878,8 +956,8 @@ export default function App() {
                 <details className="group border-b border-gray-200 pb-4">
                   <summary className="flex justify-between items-center cursor-pointer list-none">
                     <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                      Can Cottage Home Care Services help with both short-term
-                      and long-term care?
+                      Can Cottage Home Care MI LLC help with both short-term and
+                      long-term care?
                     </span>
                     <span className="text-[#005F6B] text-2xl group-open:rotate-45 transition-transform dark:text-gray-100">
                       +
@@ -903,7 +981,7 @@ export default function App() {
                 <details className="group border-b border-gray-200 pb-4">
                   <summary className="flex justify-between items-center cursor-pointer list-none">
                     <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                      Is Cottage Home Care Services affordable for families on a
+                      Is Cottage Home Care MI LLC affordable for families on a
                       budget?
                     </span>
                     <span className="text-[#005F6B] text-2xl group-open:rotate-45 transition-transform dark:text-gray-100">
@@ -927,7 +1005,7 @@ export default function App() {
                 <details className="group border-b border-gray-200 pb-4">
                   <summary className="flex justify-between items-center cursor-pointer list-none">
                     <span className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                      Can Cottage Home Care Services help in all areas of
+                      Can Cottage Home Care MI LLC help in all areas of
                       Michigan?
                     </span>
                     <span className="text-[#005F6B] text-2xl group-open:rotate-45 transition-transform dark:text-gray-100">
@@ -979,15 +1057,15 @@ export default function App() {
                     </span>
                   </summary>
                   <div className="mt-4 text-gray-700 leading-relaxed dark:text-gray-100">
-                    Absolutely! At Cottage Home Care Services, we believe in
-                    only the highest standards of care. Our caregivers are
-                    thoroughly trained, background-checked, and
-                    Medicaid-certified. We take pride in our team’s dedication
-                    and expertise. Each caregiver is selected not just for their
-                    skill but for their compassion and commitment to making a
-                    positive impact in the lives of those they care for. With
-                    over 25 years of experience, we’ve built a reputation for
-                    providing trusted care that families can count on.
+                    Absolutely! At Cottage Home Care MI LLC, we believe in only
+                    the highest standards of care. Our caregivers are thoroughly
+                    trained, background-checked, and Medicaid-certified. We take
+                    pride in our team’s dedication and expertise. Each caregiver
+                    is selected not just for their skill but for their
+                    compassion and commitment to making a positive impact in the
+                    lives of those they care for. With over 25 years of
+                    experience, we’ve built a reputation for providing trusted
+                    care that families can count on.
                   </div>
                 </details>
 
@@ -1023,68 +1101,24 @@ export default function App() {
       </section>
 
       {/* Check Your Eligibility Section */}
-      <section className="py-16 lg:py-40 bg-[#005F6B]">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-2xl lg:text-4xl font-bold text-white mb-4">
-            Check Your Eligibility
-          </p>
-          <p className="text-white text-lg mb-8">
-            See if you qualify in just a few minutes.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+(347) 975-2525"
-              className="bg-white hover:bg-gray-100 text-[#005F6B] font-semibold py-3 px-8 rounded-full transition-colors duration-200 flex items-center gap-2"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                />
-              </svg>
-              Call Now
-            </a>
-            <button
-              onClick={() => setOpen(true)}
-              className="bg-transparent hover:bg-white/10 text-white font-semibold py-3 px-8 rounded-full border-2 border-white transition-colors duration-200 flex items-center gap-2"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                />
-              </svg>
-              Apply Online
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* Serving Most Counties Section */}
       <section className="py-16 lg:py-24 bg-white dark:bg-slate-500">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Map */}
-            <div>
-              <img
-                src={"/assets/map.avif"}
-                alt="Michigan service area map"
-                className="w-full h-auto"
-              />
+            <div className="rounded-3xl overflow-hidden shadow-2xl  ">
+              <div className="lg:aspect-video relative bg-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.628548186937!2d-83.04266842352298!3d42.32912083705518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d263e3e510d%3A0x2f8f9650c1b95211!2s400%20Renaissance%20Center%20Suite%202600%2C%20Detroit%2C%20MI%2048243%2C%20USA!5e0!3m2!1sen!2sbd!4v1760648126439!5m2!1sen!2sbd"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
 
             {/* Right Side - Content */}
@@ -1095,7 +1129,7 @@ export default function App() {
                 in Michigan
               </p>
               <p className="text-gray-700 leading-relaxed mb-12 dark:text-gray-100">
-                Cottage Home Care Services is proud to offer compassionate,
+                Cottage Home Care MI LLC is proud to offer compassionate,
                 professional, and personalized care across Michigan, covering
                 most counties. With our dedicated caregivers, we are committed
                 to providing non-medical home care services that help

@@ -1083,6 +1083,18 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+      <url>
+    <loc>https://cottagehomecare.com/blog/in-home-care-michigan/</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+      <url>
+    <loc>https://cottagehomecare.com/blog/home-health-care-michigan/</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
 
 
