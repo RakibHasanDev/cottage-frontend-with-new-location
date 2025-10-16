@@ -1,15 +1,480 @@
 export default function App() {
   return (
     <main className="min-h-screen">
-      <div className="bg-[#005F6B] py-30 px-4">
-        <div className="container mx-auto">
-          <h1 className="text-2xl lg:text-4xl font-bold text-white leading-tight text-center">
-            Cottage Home Care MI LLC:
-            <br />
-            Compassionate Home Care for Over 25 Years
-          </h1>
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#005F6B] via-cyan-800 to-[#005F6B] py-20 lg:py-32">
+        {/* Animated Background Shapes */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-1/2 -left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-float" />
+          <div className="absolute top-1/3 -right-1/4 w-[500px] h-[500px] bg-pink-500/20 rounded-full blur-3xl animate-float-delayed" />
+          <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl animate-pulse" />
         </div>
-      </div>
+
+        {/* Decorative Grid Pattern */}
+        <div className="absolute inset-0 bg-[url('/repeating-geometric-pattern.png')] opacity-5" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/30 rounded-full px-6 py-2 mb-6 animate-fade-in">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <span className="text-white font-medium text-sm">
+                Michigan Home Health Program
+              </span>
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="text-3xl lg:text-5xl font-bold text-white mb-6 leading-tight animate-fade-in-up">
+              Cottage Home Care MI LLC: Compassionate Home Care for Over 25
+              Years
+            </h1>
+
+            {/* Subheading */}
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 animate-fade-in-up shadow-2xl">
+              <p className="text-white/90 text-lg leading-relaxed">
+                {/* <strong className="text-yellow-300">Meeting Overview:</strong>{" "} */}
+                At Cottage Home Care MI LLC, we believe every person deserves to
+                live with dignity and comfort in their own home. With over 25
+                years of experience, our team provides personalized care
+                tailored to your needs, backed by trust, compassion, and
+                unwavering dedication. We take pride in our role as Michigan’s
+                trusted provider of non-medical home care services, ensuring
+                every client receives the support they deserve.
+              </p>
+            </div>
+
+            {/* Stats Row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 animate-fade-in-up">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">
+                  2+ Hours
+                </div>
+                <div className="text-white/80 text-sm">Training Duration</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">
+                  5 Members
+                </div>
+                <div className="text-white/80 text-sm">Team Participants</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+                <div className="text-3xl font-bold text-white mb-2">100%</div>
+                <div className="text-white/80 text-sm">Compliance Focus</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 relative overflow-hidden">
+        {/* Background Decorations */}
+        <div className="absolute top-20 right-0 w-72 h-72 bg-gradient-to-br from-cyan-200 to-blue-200 rounded-full blur-3xl opacity-30 animate-float" />
+        <div className="absolute bottom-20 left-0 w-96 h-96 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full blur-3xl opacity-30 animate-float-delayed" />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full px-6 py-2 mb-4 shadow-lg">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <span className="font-semibold">Benefits</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-4">
+                Caregiver Benefits
+              </h2>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+                Comprehensive overview of Michigan's Caregiver benefits
+              </p>
+            </div>
+
+            {/* Content Cards */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Card 1 */}
+              <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-cyan-200 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500 to-blue-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
+
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg
+                      className="w-7 h-7 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                      <path
+                        fillRule="evenodd"
+                        d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Convenient Pay Options
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Enjoy flexible, weekly pay straight to your bank or on a
+                    convenient pay card.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-purple-200 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
+
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg
+                      className="w-7 h-7 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Free Resource Tools
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Access emergency funds, credit solutions, and tools to help
+                    you achieve your financial goals.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500 to-cyan-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
+
+                <div className="relative z-10">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <svg
+                      className="w-7 h-7 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Affordable Benefits and Discounts
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Access valuable benefits, deals, and discounts that can help
+                    you live a happier, healthier life.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Caregiver Enrollment & CHAMPS Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, rgb(59, 130, 246) 1px, transparent 0)`,
+              backgroundSize: "40px 40px",
+            }}
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-cyan-500 text-white rounded-full px-6 py-2 mb-4 shadow-lg">
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                </svg>
+                <span className="font-semibold">Caregiver Requirements</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-4">
+                Caregiver Enrollment & CHAMPS
+              </h2>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+                Complete requirements and system details for Personal Care
+                Assistants
+              </p>
+            </div>
+
+            {/* Bento Grid Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Large Card - Classification */}
+              <div className="md:col-span-2 bg-cyan-600 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
+                <div className="relative z-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-bold text-white">
+                        Personal Care Assistants (PCAs)
+                      </h3>
+                      <p className="text-white/80">
+                        No license or certification required
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-white/90 text-lg leading-relaxed mb-6">
+                    Caregivers are classified as Personal Care Assistants (PCAs)
+                    and do not require professional licenses or certifications
+                    to provide care services.
+                  </p>
+                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                    <p className="text-white font-semibold mb-2">
+                      ✨ Key Benefit:
+                    </p>
+                    <p className="text-white/90">
+                      Faster onboarding process with simplified requirements
+                      while maintaining quality care standards.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tall Card - Age Requirement */}
+              <div className="md:row-span-2 bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300 relative overflow-hidden group">
+                <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full blur-3xl opacity-20 group-hover:scale-150 transition-transform duration-500" />
+                <div className="relative z-10 h-full flex flex-col">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <svg
+                      className="w-10 h-10 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    Age Requirement
+                  </h3>
+                  <div className="flex-grow flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-7xl font-bold bg-gradient-to-br from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2">
+                        18+
+                      </div>
+                      <p className="text-gray-600 font-medium">Years Old</p>
+                    </div>
+                  </div>
+                  <div className="mt-6 bg-blue-50 rounded-xl p-4">
+                    <p className="text-blue-900 text-sm font-medium">
+                      Must be at least 18 years of age to qualify as a PCA
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Wide Card - Background Checks */}
+              <div className="md:col-span-2 bg-cyan-600 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 relative overflow-hidden group">
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-500" />
+                <div className="relative z-10">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+                          <svg
+                            className="w-7 h-7 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </div>
+                        <h3 className="text-2xl font-bold text-white">
+                          Background & Exclusion Checks
+                        </h3>
+                      </div>
+                      <p className="text-white/90 leading-relaxed mb-4">
+                        Clean background required. CHAMPS system runs automatic
+                        background and exclusion checks. Caregivers must not be
+                        excluded from state or federal programs.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm font-medium">
+                          Clean Background
+                        </span>
+                        <span className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm font-medium">
+                          CHAMPS Approved
+                        </span>
+                        <span className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white text-sm font-medium">
+                          No Exclusions
+                        </span>
+                      </div>
+                    </div>
+                    <div className="w-32 h-32 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center border-4 border-white/20">
+                      <svg
+                        className="w-16 h-16 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Square Card - Multiple Agencies */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-orange-100 hover:border-orange-300 relative overflow-hidden group">
+                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-to-br from-orange-500 to-red-500 rounded-full blur-3xl opacity-20 group-hover:scale-150 transition-transform duration-500" />
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    Multiple Agencies
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Caregivers can work for multiple agencies
+                  </p>
+                  <div className="bg-orange-50 rounded-xl p-4 border border-orange-200">
+                    <p className="text-orange-900 text-sm font-semibold mb-1">
+                      ⚠️ Important:
+                    </p>
+                    <p className="text-orange-800 text-sm">
+                      Agencies must pay overtime, even if state doesn't
+                      reimburse
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Square Card - W2 Employees */}
+              <div className="bg-green-700 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 relative overflow-hidden group">
+                <div className="absolute top-0 left-0 w-full h-full bg-white/5 group-hover:bg-white/10 transition-colors duration-300" />
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                        clipRule="evenodd"
+                      />
+                      <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    W2 Employment
+                  </h3>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    All caregivers must be W2 employees
+                  </p>
+                  <div className="bg-white/20 backdrop-blur-md rounded-xl p-4 border border-white/30">
+                    <p className="text-white font-semibold mb-1">
+                      ✓ Benefits Include:
+                    </p>
+                    <p className="text-white/90 text-sm">
+                      Eligible for sick time and standard employee protections
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Square Card - CHAMPS System */}
+              <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-green-100 hover:border-green-300 relative overflow-hidden group">
+                <div className="absolute -top-10 -left-10 w-32 h-32 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full blur-3xl opacity-20 group-hover:scale-150 transition-transform duration-500" />
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    CHAMPS System
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Automated verification system
+                  </p>
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <div className="w-2 h-2 bg-green-500 rounded-full" />
+                      <span className="text-sm">Background checks</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <div className="w-2 h-2 bg-green-500 rounded-full" />
+                      <span className="text-sm">Exclusion verification</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-700">
+                      <div className="w-2 h-2 bg-green-500 rounded-full" />
+                      <span className="text-sm">Automatic processing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
