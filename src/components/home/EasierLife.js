@@ -8,7 +8,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-const US_STATES = ["New York", "New Jersey", "Maryland"];
+const US_STATES = ["New York", "New Jersey", "Maryland", "Michigan"];
 
 const StateSelect = ({ value, onChange, error }) => {
   const [open, setOpen] = useState(false);
@@ -23,10 +23,12 @@ const StateSelect = ({ value, onChange, error }) => {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00a6b265] bg-[#EBF8F9]
+        className="w-full px-4 py-3 rounded-md border text-gray-700  focus:outline-[#00a6b265] bg-[#EBF8F9]
              focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100 flex justify-between items-center"
       >
-        <span>{value || "Select Your State"}</span>
+        <span className="dark:text-gray-100">
+          {value || "Select Your State"}
+        </span>
         <svg
           className="w-5 h-5 text-gray-500"
           fill="none"
@@ -90,6 +92,9 @@ const EasierLife = () => {
 
   if (pathname?.includes("new-jersey")) {
     phoneNumber = "(201) 633-8481";
+  }
+  if (pathname?.includes("michigan")) {
+    phoneNumber = "(347) 975-2525";
   } else if (pathname?.includes("maryland")) {
     phoneNumber = "(667) 400-0648";
   }
@@ -361,8 +366,8 @@ const EasierLife = () => {
                         required: "service is required",
                       })}
                       id="option"
-                      className="w-full px-4 py-3 rounded-md border text-gray-700 focus:outline-[#00A6B265] bg-[#EBF8F9]
-                            focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 dark:text-gray-100"
+                      className="w-full px-4 py-3 rounded-md border text-gray-700 dark:text-gray-100 focus:outline-[#00A6B265] bg-[#EBF8F9]
+                            focus:bg-white shadow-md dark:bg-gray-400 dark:placeholder:text-gray-100 "
                       defaultValue=""
                     >
                       <option value="" disabled hidden>

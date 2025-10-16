@@ -17,6 +17,11 @@ const Footer = () => {
     companyName = "Cottage Homecare NJ LLC";
     companyLogo =
       "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757435478/cottage_logo/new_jersey_logo_a1pexa.webp";
+  }
+  if (pathname?.includes("michigan")) {
+    companyName = "Cottage Home Care MI LLC";
+    companyLogo =
+      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1760640433/cottage_logo/mi_bcbgbh.webp";
   } else if (pathname?.includes("maryland")) {
     companyName = "Cottage Home Care Maryland LLC";
     companyLogo =

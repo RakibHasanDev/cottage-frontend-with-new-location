@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 import { validatePhoneNumber } from "../shared/validatePhoneNumber";
 import OverlayLoading from "../shared/OverlayLoading";
 
-const US_STATES = ["New York", "New Jersey", "Maryland"];
+const US_STATES = ["New York", "New Jersey", "Maryland", "Michigan"];
 
 const StateSelect = ({ value, onChange, error }) => {
   const [open, setOpen] = useState(false);

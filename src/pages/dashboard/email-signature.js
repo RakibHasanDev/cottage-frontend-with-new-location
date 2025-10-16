@@ -835,7 +835,6 @@ const EmployeeSignature = () => {
                                     <td
                                       style={{
                                         paddingTop: "1px",
-                                        paddingBottom: "14px",
                                         borderCollapse: "collapse",
                                         fontFamily:
                                           "Calibri, Helvetica, sans-serif",
@@ -877,6 +876,56 @@ const EmployeeSignature = () => {
                                         >
                                           6310 Stevens Forest Rd, Suite 100,
                                           Columbia, MD 21046
+                                        </a>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td
+                                      style={{
+                                        paddingTop: "1px",
+                                        paddingBottom: "14px",
+                                        borderCollapse: "collapse",
+                                        fontFamily:
+                                          "Calibri, Helvetica, sans-serif",
+                                        fontSize: "15px",
+                                        fontStyle: "normal",
+                                        lineHeight: "17px",
+                                        fontWeight: 600,
+                                      }}
+                                    >
+                                      <p style={{ margin: "0.04px" }}>
+                                        <span
+                                          style={{
+                                            fontFamily: "sans-serif",
+                                            fontSize: "15px",
+                                            fontStyle: "normal",
+                                            lineHeight: "17px",
+                                            fontWeight: 600,
+                                            color: "#1c3461",
+                                            display: "inline",
+                                          }}
+                                        >
+                                          Michigan Office
+                                        </span>
+                                        <a
+                                          href="https://www.google.com/maps/place/400+Renaissance+Center+Suite+2600,+Detroit,+MI+48243,+USA/@42.3291169,-83.0400935,17z/data=!3m2!4b1!5s0x883b2d262341fc3b:0x881f184436b272d0!4m6!3m5!1s0x883b2d263e3e510d:0x2f8f9650c1b95211!8m2!3d42.3291169!4d-83.0400935!16s%2Fg%2F11svfk4s37?entry=ttu&g_ep=EgoyMDI1MTAxMy4wIKXMDSoASAFQAw%3D%3D"
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          style={{
+                                            textDecoration: "none",
+                                            fontFamily: "sans-serif",
+                                            fontSize: "15px",
+                                            fontStyle: "normal",
+                                            marginLeft: "2px",
+                                            lineHeight: "17px",
+                                            fontWeight: 500,
+                                            color: "#1c3461",
+                                            display: "inline",
+                                          }}
+                                        >
+                                          400 Renaissance Ctr Ste 2600 Detroit,
+                                          MI 48243-1599 United States
                                         </a>
                                       </p>
                                     </td>

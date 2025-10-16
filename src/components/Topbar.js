@@ -25,6 +25,10 @@ const TopBar = () => {
   if (pathname.includes("new-jersey")) {
     phone = "(201) 633-8481"; // NJ phone
     email = "nj@cottagehomecare.com"; // NJ email
+  }
+  if (pathname.includes("michigan")) {
+    phone = "(347) 975-2525"; // NJ phone
+    email = "michigan@cottagehomecare.com"; // NJ email
   } else if (pathname.includes("maryland")) {
     phone = "(667) 400-0648"; // MD phone
     email = "maryland@cottagehomecare.com"; // MD email

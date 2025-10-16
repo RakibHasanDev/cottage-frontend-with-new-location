@@ -131,11 +131,11 @@ const OverwHelmed = () => {
           </h4>
 
           <div className="text-[16px] leading-relaxed open-sans w-full font-medium mt-5">
-            <p className="text-2xl lg:text-4xl font-bold mb-4 dark:text-gray-100 league-spartan text-[#005F6B]">
+            <p className="text-2xl lg:text-4xl font-bold mb-4 dark:text-gray-100 league-spartan text-[#005F6B] ">
               We Believe...
             </p>
 
-            <ul className="space-y-4">
+            <ul className="space-y-4 ">
               {[
                 {
                   title: "Exceptional patient care",
@@ -151,9 +151,11 @@ const OverwHelmed = () => {
                 },
               ].map((item, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <span className="text-[#005F6B] text-xl">&#9733;</span>
+                  <span className="text-[#005F6B] text-xl dark:text-gray-100">
+                    &#9733;
+                  </span>
                   <p className="dark:text-gray-100">
-                    <span className="text-[#005F6B] font-semibold">
+                    <span className="text-[#005F6B] font-semibold dark:text-gray-100">
                       {item.title}:
                     </span>{" "}
                     {item.text}
