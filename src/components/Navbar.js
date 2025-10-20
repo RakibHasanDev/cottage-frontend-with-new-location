@@ -112,23 +112,41 @@ const NavBar = () => {
 
   const pathname = usePathname(); // ✅ always at top level
 
-  let companyName = "Cottage Home Care Services";
-  let companyLogo =
-    "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757434710/cottage_logo/cottage-home-care-logo_n8fskh.webp";
-  if (pathname?.includes("new-jersey")) {
-    companyName = "Cottage Homecare NJ LLC";
-    companyLogo =
-      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757435478/cottage_logo/new_jersey_logo_a1pexa.webp";
+  const homeNameLogo = {
+    name: "Cottage Home Care Services",
+    logo: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757434710/cottage_logo/cottage-home-care-logo_n8fskh.webp",
+  };
+
+  const otherNameLogo = {
+    ["new-jersey"]: {
+      name: "Cottage Homecare NJ LLC",
+      logo: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1757435478/cottage_logo/new_jersey_logo_a1pexa.webp",
+    },
+    ["michigan"]: {
+      name: "Cottage Home Care MI LLC",
+      logo: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1760640433/cottage_logo/mi_bcbgbh.webp",
+    },
+    ["maryland"]: {
+      name: "Cottage Home Care Maryland LLC",
+      logo: "https://res.cloudinary.com/di3wwp9s0/image/upload/v1759419105/Mary_Land_LLC/maryland-logo_mbwqtp.webp",
+    },
+  };
+
+  function getNameAndLogo(pathname) {
+    const key = Object.keys(otherNameLogo).find((key) =>
+      pathname.includes(key)
+    );
+    return key ? otherNameLogo[key] : homeNameLogo;
   }
-  if (pathname?.includes("michigan")) {
-    companyName = "Cottage Home Care MI LLC";
-    companyLogo =
-      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1760640433/cottage_logo/mi_bcbgbh.webp";
-  } else if (pathname?.includes("maryland")) {
-    companyName = "Cottage Home Care Maryland LLC";
-    companyLogo =
-      "https://res.cloudinary.com/di3wwp9s0/image/upload/v1759419105/Mary_Land_LLC/maryland-logo_mbwqtp.webp";
-  }
+
+  const [companyName, setCompanyName] = useState("");
+  const [companyLogo, setCompanyLogo] = useState("");
+
+  useEffect(() => {
+    const { name, logo } = getNameAndLogo(pathname);
+    setCompanyName(name);
+    setCompanyLogo(logo);
+  }, [pathname]);
 
   const handleLogOut = () => {
     logOut()

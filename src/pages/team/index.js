@@ -145,41 +145,45 @@ const Team = () => {
   return (
     <>
       <Head>
-        <title>Team Members - Cottage Home Care Services</title>
+        <title>Home Care Services in Michigan – Cottage Home Care</title>
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
+        {/* SEO Meta Tags */}
         <meta
           name="description"
-          content="Meet the team at Cottage Home Care Services—compassionate, professional staff dedicated to delivering exceptional care and support across New York."
+          content="Get reliable, compassionate home care services in Michigan through the Medicaid Home Help Program. Personalized support from caregivers you choose."
         />
         <meta
           name="keywords"
-          content="Cottage Home Care team, home care staff, dedicated caregivers, professional healthcare team, compassionate home care providers, team member qualifications, home care experts, meet our team, Cottage Home Care professionals, healthcare staff profiles"
+          content="Michigan home care, Cottage Home Care Michigan, Medicaid Home Help Program, in-home care Michigan, personalized caregiver services, senior care Michigan, MI home support, Michigan Medicaid caregiver"
         />
 
         {/* Canonical & Alternate URLs */}
         <link
           rel="alternate"
-          href="https://cottagehomecare.com/team/"
+          href="https://cottagehomecare.com/michigan/"
           hrefLang="en"
         />
         <link
           rel="alternate"
-          href="https://cottagehomecare.com/team/"
+          href="https://cottagehomecare.com/michigan/"
           hrefLang="x-default"
         />
-        <link rel="canonical" href="https://cottagehomecare.com/team/" />
+        <link rel="canonical" href="https://cottagehomecare.com/michigan/" />
 
         {/* ✅ Open Graph Meta Tags */}
         <meta
           property="og:title"
-          content="Team Members - Cottage Home Care Services"
+          content="Home Care Services in Michigan – Cottage Home Care"
         />
         <meta
           property="og:description"
-          content="Get to know the professionals behind Cottage Home Care. Our compassionate team members work to ensure the highest quality of care across New York."
+          content="Expert in-home care through Michigan's Medicaid Home Help Program. Choose your own caregiver and get the help you need at home."
         />
-        <meta property="og:url" content="https://cottagehomecare.com/team/" />
+        <meta
+          property="og:url"
+          content="https://cottagehomecare.com/michigan/"
+        />
         <meta
           property="og:image"
           content="https://cottagehomecare.com/assets/cottage-home-care-logo.webp"
@@ -193,11 +197,11 @@ const Team = () => {
         <meta name="twitter:creator" content="@cottagecareny" />
         <meta
           name="twitter:title"
-          content="Team Members - Cottage Home Care Services"
+          content="Home Care Services in Michigan – Cottage Home Care"
         />
         <meta
           name="twitter:description"
-          content="Discover the dedicated staff behind Cottage Home Care—trained professionals committed to compassionate care throughout New York."
+          content="Get trusted in-home care in Michigan via the Medicaid Home Help Program. Compassionate, professional, and personalized service."
         />
         <meta
           name="twitter:image"
@@ -591,7 +595,7 @@ const Team = () => {
                                         employeesByOffice?.BD,
                                         "BD",
                                         employeesByDepartment
-                                          ?.OfficeManager?.[1],
+                                          ?.OfficeManager?.[0],
                                         "uniqueId2222"
                                       )
                                     }

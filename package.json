@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@iconify/react": "^6.0.2",
+    "@n8n/chat": "^0.61.0",
     "@tailwindcss/typography": "^0.5.16",
     "@tanstack/react-query": "^5.67.1",
     "@tiptap/extension-image": "^2.11.7",

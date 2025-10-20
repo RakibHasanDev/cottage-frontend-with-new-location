@@ -21,6 +21,7 @@ Allow: /career/
 Allow: /service-areas/
 Allow: /new-jersey/
 Allow: /maryland/
+Allow: /michigan/
 Allow: /nhtd/
 Allow: /hha/
 Allow: /private-pay-home-care/
