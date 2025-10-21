@@ -1,58 +1,18 @@
-// next.config.mjs
 /** @type {import('next').NextConfig} */
-
-// Initialize plugins first (vetted for Next 15)
-import createPWA from "next-pwa";
-import createAnalyzer from "@next/bundle-analyzer";
-
-// Configure next-pwa
-const withPWA = createPWA({
-  dest: "public",
-  register: true,
-  skipWaiting: true,
-  disable: process.env.NODE_ENV === "development",
-  runtimeCaching: [
-    {
-      urlPattern: /^https:\/\/maps\.googleapis\.com\/.*/i,
-      handler: "CacheFirst",
-      options: {
-        cacheName: "google-maps",
-        expiration: { maxAgeSeconds: 60 * 60 * 24 * 30 },
+const nextConfig = {
+  reactStrictMode: true,
+  trailingSlash: false, // Optional: Remove if not needed
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https", // or 'http'
+        hostname: "res.cloudinary.com", // Replace with your domain
+        // port: '', // Optional: if your domain uses a specific port
+        // pathname: '/path/to/images/**', // Optional: restrict to specific paths
       },
-    },
-    {
-      urlPattern: /^https:\/\/(?:www\.)?gstatic\.com\/.*/i,
-      handler: "CacheFirst",
-      options: {
-        cacheName: "gstatic",
-        expiration: { maxAgeSeconds: 60 * 60 * 24 * 30 },
-      },
-    },
-    {
-      urlPattern: /^https:\/\/.*firebaseapp\.com\/.*/i,
-      handler: "StaleWhileRevalidate",
-      options: { cacheName: "firebaseapp" },
-    },
-    {
-      urlPattern: /^https:\/\/img1\.wsimg\.com\/.*/i,
-      handler: "StaleWhileRevalidate",
-      options: { cacheName: "godaddy" },
-    },
-  ],
-});
-
-// Toggle analyzer via ANALYZE=true
-const withAnalyzer = createAnalyzer({
-  enabled: process.env.ANALYZE === "true",
-});
-
-// Base Next.js config
-const baseConfig = {
-  reactStrictMode: false,
-  output: "export",
-  trailingSlash: true,
-  images: { unoptimized: true }, // cPanel-friendly
+    ], // Enable Next.js image optimization
+  },
 };
 
-// Compose plugins and export a single config
-export default withAnalyzer(withPWA(baseConfig));
+export default nextConfig;
