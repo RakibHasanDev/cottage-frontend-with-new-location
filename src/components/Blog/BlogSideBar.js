@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import SpinerLoading from "../shared/SpinerLoading";
 import { useQuery } from "@tanstack/react-query";
+import Image from "next/image";
 
 const BlogSidebar = () => {
   const [categories, setCategories] = useState({});
@@ -78,7 +79,7 @@ const BlogSidebar = () => {
                   className="flex gap-5 py-5 border-b-2 border-gray-300 border-dotted cursor-pointer"
                 >
                   <div className="w-[30%]">
-                    <img
+                    <Image
                       src={blog?.img}
                       alt={blog?.title}
                       className="w-28 h-20"
@@ -137,10 +138,12 @@ const BlogSidebar = () => {
                     className="flex gap-5 py-5 border-b-2 border-gray-300 border-dotted cursor-pointer"
                   >
                     <div className="w-[30%]">
-                      <img
+                      <Image
                         src={blog?.img}
                         alt={blog?.title}
                         className="w-28 h-20"
+                        width={120}
+                        height={80}
                       />
                     </div>
                     <div className="w-[60%]">

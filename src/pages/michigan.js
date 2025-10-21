@@ -2,6 +2,7 @@ import EasierLife from "@/components/home/EasierLife";
 import CareRequestModal from "@/components/shared/CareRequestModal";
 import { CircleCheck } from "lucide-react";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -127,30 +128,36 @@ export default function App() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 animate-fade-in-up">
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
                   <div className="flex gap-3 flex-col justify-center items-center">
-                    <img
+                    <Image
                       src={"/assets/michigan_icon/independence.png"}
                       alt="Independence"
                       className="w-16 h-16"
+                      width={64}
+                      height={64}
                     />
                     <div className="text-white/80 text-xl">Independence</div>
                   </div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
                   <div className="flex gap-3 flex-col justify-center items-center">
-                    <img
+                    <Image
                       src={"/assets/michigan_icon/choice.png"}
                       alt="Independence"
                       className="w-16 h-16"
+                      width={64}
+                      height={64}
                     />
                     <div className="text-white/80 text-xl">Choice</div>
                   </div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
                   <div className="flex gap-3 flex-col justify-center items-center">
-                    <img
+                    <Image
                       src={"/assets/michigan_icon/control.png"}
                       alt="Independence"
                       className="w-16 h-16"
+                      width={64}
+                      height={64}
                     />
                     <div className="text-white/80 text-xl">Control</div>
                   </div>
@@ -1149,12 +1156,14 @@ export default function App() {
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               {/* Left Side - Image */}
               <div>
-                <img
+                <Image
                   src={
                     "https://res.cloudinary.com/di3wwp9s0/image/upload/v1760648463/Faq/faq_2_x5ibom.webp"
                   }
                   alt="Cottage Home Care Maryland"
                   className="w-full h-auto "
+                  width={1080}
+                  height={1350}
                 />
               </div>
 

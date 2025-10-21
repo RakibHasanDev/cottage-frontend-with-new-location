@@ -147,11 +147,11 @@ const TopBar = () => {
           </div>
 
           {/* Lazy Load Google Translate */}
-          <div className="md:w-[260px] w-[140px]">
+          {/* <div className="md:w-[260px] w-[140px]">
             <Suspense fallback={<Loading />}>
               <GoogleTranslate />
             </Suspense>
-          </div>
+          </div> */}
         </div>
       </div>
       <hr className="border-0 h-[1px] bg-gray-200" />

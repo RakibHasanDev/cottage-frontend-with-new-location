@@ -1302,12 +1302,12 @@ const Team = () => {
                           {employeesByDepartment?.MediaMarketing?.map(
                             (employee) => (
                               <div key={employee?._id}>
-                                <img
+                                <Image
                                   className="w-7 h-7 md:w-8 md:h-8 rounded-full"
                                   src={employee?.img}
                                   alt={employee?.name}
-                                  w="32"
-                                  h="32"
+                                  width={32}
+                                  height={32}
                                   loading="lazy"
                                 />
                               </div>

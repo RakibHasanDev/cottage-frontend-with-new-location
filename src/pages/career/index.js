@@ -2,6 +2,7 @@ import SpinerLoading from "@/components/shared/SpinerLoading";
 import { useQuery } from "@tanstack/react-query";
 import { MapPin, Clock, DollarSign, Send, ChevronDown } from "lucide-react";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useMemo } from "react";
 
@@ -142,10 +143,12 @@ export default function App() {
         {/* Hero Section (unchanged) */}
         <div className="relative h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0">
-            <img
+            <Image
               src={"/assets/job.webp"}
               alt="Career opportunities"
               className="w-full h-full object-cover"
+              width={1920}
+              height={883}
             />
             <div className="absolute inset-0" />
           </div>
@@ -329,10 +332,12 @@ export default function App() {
                   {/* Left Side - Image */}
                   <div className="relative group">
                     <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                      <img
+                      <Image
                         src={"/assets/carrer.webp"}
                         alt="Caregiver with elderly person"
                         className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                        width={600}
+                        height={400}
                       />
                     </div>
                     {/* Decorative floating badge */}

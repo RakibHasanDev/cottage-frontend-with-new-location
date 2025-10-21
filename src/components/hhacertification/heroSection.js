@@ -58,10 +58,12 @@ const heroSection = () => {
               </div>
             </div>
             <div className="mt-5">
-              <img
+              <Image
                 src={"/assets/hhalogo.webp"}
                 alt={"cottage-logo"}
                 className="md:w-36 md:h-36 w-20 h-20 "
+                width={144}
+                height={144}
               />
             </div>
           </div>

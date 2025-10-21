@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 const values = [
   {
@@ -335,7 +336,7 @@ export default function App() {
                   {/* Decorative background card */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary/70 rounded-[3rem] rotate-6 opacity-20 blur-sm" />
                   <div>
-                    <img
+                    <Image
                       src={"/assets/about-hero.webp"}
                       alt="About us Hero Image"
                       className="rounded-xl"
@@ -471,7 +472,7 @@ export default function App() {
                   {/* Main card */}
 
                   <div>
-                    <img
+                    <Image
                       src={"/assets/process_image.webp"}
                       alt="About us article image"
                       className="rounded-xl"

@@ -9,12 +9,12 @@ const AboutCovid = () => {
         <div
         //  data-aos-duration="2000" data-aos="fade-right"
         >
-          <img
+          <Image
             src={"/assets/Covid-19/gfx-a.png"}
             alt={"covid-banner"}
             className="h-96 md:h-[450px] md:ml-auto mr-10 hidden lg:block"
-            w="100"
-            h="384"
+            width={1010}
+            height={1074}
           />
         </div>
 

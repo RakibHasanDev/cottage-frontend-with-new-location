@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
 import ApplyModal from "@/components/ApplyModal";
+import Image from "next/image";
 
 const JobDetails = ({ job }) => {
   const [showModal, setShowModal] = useState(false);
@@ -85,10 +86,12 @@ const JobDetails = ({ job }) => {
       <section>
         <div className="relative h-[60vh] flex items-center justify-center overflow-hidden dark:bg-slate-600">
           <div className="absolute inset-0">
-            <img
+            <Image
               src={"/assets/job.webp"}
               alt="Career opportunities"
               className="w-full h-full object-cover"
+              width={1920}
+              height={883}
             />
             <div className="absolute inset-0" />
           </div>

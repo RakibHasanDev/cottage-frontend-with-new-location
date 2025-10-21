@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { AuthContext } from "@/context/AuthProvider";
 import useAdmin from "@/hooks/useAdmin";
+import Image from "next/image";
 
 const cardStyle = {
   padding: "20px",
@@ -73,10 +74,12 @@ const BlogCard = ({ blog, refetch, buttonData }) => {
       >
         {/* Image section */}
         <div className="relative aspect-[16/9] overflow-hidden w-full">
-          <img
+          <Image
             className="w-full h-full object-cover"
             src={blog?.newImg || img}
             alt={`${blog?.title}`}
+            width={1920}
+            height={1080}
           />
         </div>
 

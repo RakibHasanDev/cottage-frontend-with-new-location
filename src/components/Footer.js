@@ -309,7 +309,7 @@ const Footer = () => {
             {/* Left: RSS Badge */}
             <div className="mb-2 md:mb-0 md:flex md:items-center">
               <a href="http://www.rssboard.org/rss-validator/check.cgi?url=https%3A//cottagehomecare.com/feed.xml">
-                <img
+                <Image
                   src="https://www.rssboard.org/rss-validator/images/valid-rss-rogers.png"
                   alt="[Valid RSS]"
                   title="Validate my RSS feed"

@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react";
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import SpinerLoading from "../shared/SpinerLoading";
+import Image from "next/image";
 
 const cardStyle = {
   boxShadow:
@@ -95,7 +96,7 @@ const Categories = ({ handleSearch, handleButtonClick }) => {
           >
             <div>
               <div>
-                <img
+                <Image
                   className="w-16 h-16 rounded-full border-[1px] p-4"
                   src={category?.icon}
                   alt={category?.serviceName}
@@ -164,10 +165,12 @@ const Categories = ({ handleSearch, handleButtonClick }) => {
                     className="flex gap-5 py-5 border-b-2 border-gray-300 border-dotted"
                   >
                     <div className="w-[30%]">
-                      <img
+                      <Image
                         src={blog?.img}
                         alt={blog?.title}
                         className="w-28 h-20 "
+                        width={120}
+                        height={80}
                       />
                     </div>
                     <div className="w-[60%]">
